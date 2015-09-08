@@ -10,9 +10,11 @@ app.get('/', function (req, res) {
 
 
 app.post('/upload', function(req, res) {
-  var job = spawn('node', ['app/upload_job.js'], {
-    detached: true,
-    stdio: [process.stdin, process.stdout, process.stderr]
+  var job = spawn('node', ['app/upload_job.js']);
+  job.stdin.write("I am data for the job");
+
+  job.stdout.on('data', function (data) {
+    console.log('We received a reply: ' + data);
   });
 
   job.on('close', function(code) {
