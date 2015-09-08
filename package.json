@@ -1,20 +1,23 @@
 {
-  "name" : "parity-server",
-  "version" : "0.0.1",
-  "description" : "Job processing background for parity league stats",
+  "name": "parity-server",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Job processing background for parity league stats",
   "author": "Kevin Hughes <kevinhughes27@gmail.com>",
   "contributors": [],
   "homepage": "http://github.com/kevinhughes27/parity-server",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/kevinhughes27/parity-server"
-  },
-  "engine" : {
-    "node": ">=0.9.0"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/kevinhughes27/parity-server"
   },
   "dependencies": {
-    "express": "~4.13.1"
+    "express": "^4.13.3",
+    "request": "^2.61.0",
+    "mocha": "^2.3.2",
+    "chai": "^3.2.0"
   },
-  "devDependencies": {},
-  "license": "MIT"
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  }
 }
