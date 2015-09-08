@@ -16,18 +16,35 @@ describe("Server", function() {
 
   describe("GET /", function() {
     it("returns status code 200", function(done) {
-      request(base_url, function(error, response, body) {
+      request.get(base_url, function(error, response, body) {
         expect(response.statusCode).to.equal(200);
         done();
       });
     });
 
     it("returns ParityServer!", function(done) {
-      request(base_url, function(error, response, body) {
+      request.get(base_url, function(error, response, body) {
         expect(body).to.equal("ParityServer!");
         done();
       });
     });
   });
 
+  describe("POST /upload", function() {
+    var url = base_url + 'upload';
+
+    it("returns status code 200", function(done) {
+      request.post(url, function(error, response, body) {
+        expect(response.statusCode).to.equal(201);
+        done();
+      });
+    });
+
+    it("returns done.", function(done) {
+      request.post(url, function(error, response, body) {
+        expect(body).to.equal("done.");
+        done();
+      });
+    });
+  });
 });
