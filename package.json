@@ -11,13 +11,14 @@
     "url": "http://github.com/kevinhughes27/parity-server"
   },
   "dependencies": {
+    "body-parser": "^1.13.3",
+    "chai": "^3.2.0",
     "express": "^4.13.3",
-    "request": "^2.61.0",
     "mocha": "^2.3.2",
-    "chai": "^3.2.0"
+    "request": "^2.61.0"
   },
   "scripts": {
     "start": "node app/server.js",
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "mocha --reporter spec"
   }
 }

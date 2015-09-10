@@ -32,17 +32,18 @@ describe("Server", function() {
 
   describe("POST /upload", function() {
     var url = base_url + 'upload';
+    var str = 'event_string';
 
     it("returns status code 200", function(done) {
-      request.post(url, function(error, response, body) {
+      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
         expect(response.statusCode).to.equal(201);
         done();
       });
     });
 
-    it("returns done.", function(done) {
-      request.post(url, function(error, response, body) {
-        expect(body).to.equal("done.");
+    it("returns the event string ('job' communication works!)", function(done) {
+      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
+        expect(body).to.equal(str+"\n");
         done();
       });
     });
