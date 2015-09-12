@@ -1,16 +1,14 @@
 var express = require('express');
-var app = express();
-
 var bodyParser = require('body-parser')
 var spawn = require('child_process').spawn;
 
-app.use(bodyParser.json())
+var app = express();
 
+app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
   res.send('ParityServer!');
 });
-
 
 app.post('/upload', function(req, res) {
   var job = spawn('node', ['app/upload_job.js']);
