@@ -1,5 +1,12 @@
-var request = require("request");
-var expect  = require("chai").expect;
+var request       = require('request')
+  , child_process = require('child_process')
+  , events        = require('events')
+  , chai          = require('chai')
+  , expect        = chai.expect
+;
+
+chai.use(require('sinon-chai'));
+require('mocha-sinon');
 
 var server = require('../app/server');
 var base_url = "http://localhost:3000/";
@@ -41,9 +48,18 @@ describe("Server", function() {
       });
     });
 
+    it("spawns a job with args", function(done) {
+      this.sinon.stub(child_process, 'spawn', child_process.spawn);
+
+      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
+        expect(child_process.spawn).to.have.been.calledWith('node', ['app/parse_job.js', str]);
+        done();
+      });
+    });
+
     it("returns the event string ('job' communication works!)", function(done) {
       request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
-        expect(body).to.equal(str+"\n");
+        expect(body).to.equal(str);
         done();
       });
     });

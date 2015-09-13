@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser')
-var spawn = require('child_process').spawn;
+var child_process = require('child_process');
 
 var app = express();
 
@@ -11,9 +11,8 @@ app.get('/', function (req, res) {
 });
 
 app.post('/upload', function(req, res) {
-  var job = spawn('node', ['app/upload_job.js']);
   var eventString = req.body.event_string;
-  job.stdin.write(eventString);
+  var job = child_process.spawn('node', ['app/parse_job.js', eventString]);
 
   var result;
   job.stdout.on('data', function (data) {
