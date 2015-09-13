@@ -1,6 +1,5 @@
 var request       = require('request')
   , child_process = require('child_process')
-  , events        = require('events')
   , chai          = require('chai')
   , expect        = chai.expect
 ;
