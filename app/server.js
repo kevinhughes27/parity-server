@@ -7,6 +7,8 @@ app.use(bodyParser.json())
 
 // index route
 app.get('/', function (req, res) {
+  // display all job records
+  // open a socket to auto refresh with new records
   res.send('ParityServer!');
 });
 
@@ -24,7 +26,7 @@ app.post('/upload', function(req, res) {
 
   job.on('close', function(code) {
     res.status(201);
-    res.send(result);
+    res.send(result); // any way to combine these 2 lines?
   });
 });
 
