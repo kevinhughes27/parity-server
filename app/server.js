@@ -2,18 +2,30 @@ var express = require('express');
 var bodyParser = require('body-parser')
 var child_process = require('child_process');
 
+require('dotenv').load();
+
+var redis = require('redis');
+var client = redis.createClient(
+  process.env.REDISCLOUD_URL,
+  {no_ready_check: true}
+);
+
 var app = express();
 app.use(bodyParser.json())
 
 // index route
 app.get('/', function (req, res) {
-  // display all job records
-  // open a socket to auto refresh with new records
-  res.send('ParityServer!');
+  console.log('GET /');
+
+  client.lrange('results', 0, -1, function(error, items) {
+    res.send(items);
+  });
 });
 
 // upload event string route
 app.post('/upload', function(req, res) {
+  console.log('POST /upload');
+
   var eventString = req.body.event_string;
   var job = child_process.spawn('node',
     ['app/parse_job.js', eventString]

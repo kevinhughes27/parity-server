@@ -1,27 +1,37 @@
 var parser = require('../app/parser').parser;
 
+require('dotenv').load();
+
+var redis = require('redis');
+var client = redis.createClient(
+  process.env.REDISCLOUD_URL,
+  {no_ready_check: true}
+);
+
 // parseJob function
 var parseJob = exports.parseJob = function(eventString) {
-  initJobRecord();
   result = parser(eventString);
-  completeJobRecord(result);
-  pushToGoogleSheet();
+  saveResult(eventString, result);
+  process.stdout.write(result);
 };
 
-var initJobRecord = function() {
-  return;
-}
+var saveResult = function(eventString, result) {
+  record = JSON.stringify({
+    input: eventString,
+    output: result,
+    time: new Date()
+  });
 
-var completeJobRecord = function(result) {
-  process.stdout.write(result);
-}
+  client.lpush('results', record, function(err, reply) {
+    process.stdout.write(reply)
+  });
+};
 
-var pushToGoogleSheet = function() {
-  return;
-}
-
+// after the redis connection is established
 // collect args and call the main function
 // before terminating the process
-var eventString = process.argv[2];
-parseJob(eventString);
-process.exit(0);
+client.on('ready', function() {
+  var eventString = process.argv[2];
+  parseJob(eventString);
+  process.exit(0);
+});

@@ -1,4 +1,5 @@
 var request       = require('request')
+  , redis         = require('redis')
   , child_process = require('child_process')
   , chai          = require('chai')
   , expect        = chai.expect
@@ -10,13 +11,17 @@ require('mocha-sinon');
 var server = require('../app/server');
 var base_url = "http://localhost:3000/";
 
+var client = redis.createClient();
+
 describe("Server", function() {
 
   before(function () {
     server.listen(3000);
+    client.flushdb();
   });
 
   after(function () {
+    client.flushdb();
     server.close();
   });
 
@@ -28,9 +33,9 @@ describe("Server", function() {
       });
     });
 
-    it("returns ParityServer!", function(done) {
+    it("returns contents of the results list", function(done) {
       request.get(base_url, function(error, response, body) {
-        expect(body).to.equal("ParityServer!");
+        expect(body).to.equal("[]");
         done();
       });
     });
