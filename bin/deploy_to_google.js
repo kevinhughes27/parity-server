@@ -54,8 +54,18 @@ function fetchProject(auth) {
  */
 function updateProject(project) {
   console.log('Updating project ...');
-  parserFileIdx = _.findIndex(project.files, function(file){ return file.name == remoteFileName });
-  project.files[parserFileIdx].source = fs.readFileSync(localFilePath).toString();
+
+  var parserFileIdx = _.findIndex(project.files, function(file){ return file.name == remoteFileName });
+
+  var disclaimer = "/** \n\
+ * Disclaimer! \n\
+ * \n\
+ * This file is managed externally any edits here will be overriden \n\
+ */ \n\
+  \n"
+
+  var newSource = disclaimer + fs.readFileSync(localFilePath).toString()
+  project.files[parserFileIdx].source = newSource;
   return project;
 }
 
