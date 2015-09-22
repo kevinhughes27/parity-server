@@ -32,13 +32,6 @@ describe("Server", function() {
         done();
       });
     });
-
-    it("returns contents of the results list", function(done) {
-      request.get(base_url, function(error, response, body) {
-        expect(body).to.equal("[]");
-        done();
-      });
-    });
   });
 
   describe("POST /upload", function() {

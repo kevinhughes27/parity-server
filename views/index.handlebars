@@ -1,0 +1,13 @@
+<ul>
+  {{#each results}}
+    <li>{{input}}</li>
+  {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io({{host}}{{port}});
+  socket.on('new_result', function(date){
+    window.location.reload();
+  });
+</script>

@@ -1,26 +1,44 @@
-var express = require('express');
-var bodyParser = require('body-parser')
-var child_process = require('child_process');
+var express = require('express'),
+    exphbs = require('express-handlebars'),
+    bodyParser = require('body-parser'),
+    child_process = require('child_process');
 
+// load any environment vars in a .env file
 require('dotenv').load();
 
+// connect to Redis
 var redis = require('redis');
 var client = redis.createClient(
   process.env.REDISCLOUD_URL,
   {no_ready_check: true}
 );
 
+// create an express instance
 var app = express();
+var host = process.env.HOST || 'http://localhost';
+var port = process.env.PORT || 3000;
+
+// parse the json of incoming requests
 app.use(bodyParser.json())
+
+// set handlebars as the templating engine
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 
 // index route
 app.get('/', function (req, res) {
   console.log('GET /');
 
   client.lrange('results', 0, -1, function(error, items) {
-    res.send(items);
+    items = items.map(function(item){ return JSON.parse(item) });
+
+    res.render('index', {
+      results: items
+    });
   });
 });
+
 
 // upload event string route
 app.post('/upload', function(req, res) {
@@ -37,20 +55,21 @@ app.post('/upload', function(req, res) {
   });
 
   job.on('close', function(code) {
-    res.status(201);
-    res.send(result); // any way to combine these 2 lines?
+    res.status(201).send(result);
+    io.emit('new_result', result);
   });
 });
 
-// Start the server
-var server = app.listen(3000, function () {
-  host = server.address().address;
-  port = server.address().port;
 
-  console.log('Server listening at http://%s:%s', host, port);
+// start the server
+var server = app.listen(port, function () {
+  console.log('Express server listening on port ' + port);
 });
 
-// Export for testing
+// initialize socket.io
+var io = require('socket.io').listen(server);
+
+// export for testing
 exports.listen = function () {
   server.listen.apply(server, arguments);
 };
