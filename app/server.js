@@ -9,7 +9,7 @@ require('dotenv').load();
 // connect to Redis
 var redis = require('redis');
 var client = redis.createClient(
-  process.env.REDISCLOUD_URL,
+  process.env.REDISCLOUD_URL || 'https://localhost:6379',
   {no_ready_check: true}
 );
 
