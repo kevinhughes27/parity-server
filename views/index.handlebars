@@ -1,21 +1,23 @@
 <div class="container">
   <h3>Parity Server v0.0.1</h3>
   <hr>
-  <h4>Jobs Processed:</h4>
-  <table class="table table-bordered table-striped table-hover">
-    <tr>
-      <th>time</th>
-      <th>input</th>
-      <th>output</th>
-    </tr>
-    {{#each results}}
+  {{#if results}}
+    <h4>Jobs Processed:</h4>
+    <table class="table table-bordered table-striped table-hover">
       <tr>
-        <td>{{time}}</td>
-        <td>{{input}}</td>
-        <td>{{output}}</td>
+        <th>time</th>
+        <th>input</th>
+        <th>output</th>
       </tr>
-    {{/each}}
-  </table>
+      {{#each results}}
+        <tr>
+          <td>{{time}}</td>
+          <td>{{input}}</td>
+          <td>{{output}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  {{/if}}
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
