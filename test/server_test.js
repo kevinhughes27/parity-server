@@ -36,10 +36,9 @@ describe("Server", function() {
 
   describe("POST /upload", function() {
     var url = base_url + 'upload';
-    var str = 'event_string';
 
     it("returns status code 200", function(done) {
-      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
+      request.post({url: url, json: true, body: {}}, function(error, response, body) {
         expect(response.statusCode).to.equal(201);
         done();
       });
@@ -48,15 +47,18 @@ describe("Server", function() {
     it("spawns a job with args", function(done) {
       this.sinon.stub(child_process, 'spawn', child_process.spawn);
 
-      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
-        expect(child_process.spawn).to.have.been.calledWith('node', ['app/parse_job.js', str]);
+      request.post({url: url, json: true, body: {}}, function(error, response, body) {
+        expect(child_process.spawn).to.have.been.calledWith('node', ['app/parse_job.js', "{}"]);
         done();
       });
     });
 
-    it("returns the event string ('job' communication works!)", function(done) {
-      request.post({url: url, json: true, body: {event_string: str}}, function(error, response, body) {
-        expect(body).to.equal(str);
+    it("returns the parsed result", function(done) {
+      var jobRequest = require('./cases/week1_events.json');
+      var result = require('./cases/week1_stats.json');
+
+      request.post({url: url, json: true, body: jobRequest}, function(error, response, body) {
+        expect(body).to.deep.equal(result);
         done();
       });
     });

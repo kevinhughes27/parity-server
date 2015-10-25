@@ -40,18 +40,17 @@ app.get('/', function (req, res) {
 });
 
 
-// upload event string route
+// upload games raw events
 app.post('/upload', function(req, res) {
   console.log('POST /upload');
 
-  var eventString = req.body.event_string;
   var job = child_process.spawn('node',
-    ['app/parse_job.js', eventString]
+    ['app/parse_job.js', JSON.stringify(req.body)]
   );
 
   var result;
   job.stdout.on('data', function (data) {
-    result = data;
+    result = JSON.parse(data);
   });
 
   job.on('close', function(code) {

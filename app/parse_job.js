@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var parser = require('../app/parser').parser;
 
 require('dotenv').load();
@@ -9,15 +10,21 @@ var client = redis.createClient(
 );
 
 // parseJob function
-var parseJob = exports.parseJob = function(eventString) {
-  result = parser(eventString);
-  saveResult(eventString, result);
-  process.stdout.write(result);
+var parseJob = exports.parseJob = function(jobRequest) {
+  jobRequest = JSON.parse(jobRequest);
+
+  var result = {};
+  jobRequest.games.forEach(function(game) {
+    result = _.extend(result, parser(game.events));
+  });
+
+  saveResult(jobRequest, result);
+  process.stdout.write(JSON.stringify(result));
 };
 
-var saveResult = function(eventString, result) {
+var saveResult = function(jobRequest, result) {
   record = JSON.stringify({
-    input: eventString,
+    input: jobRequest,
     output: result,
     time: new Date()
   });
