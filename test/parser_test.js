@@ -1,4 +1,5 @@
 var chai   = require('chai'),
+    fs     = require('fs'),
     expect = chai.expect;
 
 var parser = require('../app/parser').parser;
@@ -6,12 +7,14 @@ var parser = require('../app/parser').parser;
 describe("Parser", function() {
 
   it("parses the input and returns the result", function() {
-    input = "eventString";
+    testCase = require('./cases/week1_events.json');
+    input = testCase.games[0].events;
 
     output = parser(input);
 
-    expectedOutput = "eventString";
-    expect(output).to.equal(expectedOutput);
+    expectedOutput = require('./cases/week1_stats.json');
+    expect(output[0]).to.equal(expectedOutput[0]);
+    expect(output).to.deep.equal(expectedOutput);
   });
 
 });
