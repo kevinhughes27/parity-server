@@ -13,7 +13,6 @@ describe("Parser", function() {
     output = parser(input);
 
     expectedOutput = require('./cases/week1_stats.json');
-    expect(output[0]).to.equal(expectedOutput[0]);
     expect(output).to.deep.equal(expectedOutput);
   });
 
