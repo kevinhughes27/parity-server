@@ -10,10 +10,7 @@ var parser = function(events) {
   var passingEvents = [];
 
   events.forEach(function(e) {
-    if(typeof e === 'string') {
-      e = e.trim();
-      e = e.split('\t');
-    }
+    e = _prepareEvent(e);
 
     if( e[0] == 'Direction' || e[0] == 'D' || e[0] == 'Pull') {
       switchingDirectionEvents.push(e);
@@ -27,10 +24,10 @@ var parser = function(events) {
   for ( var i in switchingDirectionEvents ) {
     switch (switchingDirectionEvents[i][0]) {
       case "Pull":
-        addEvent(switchingDirectionEvents[i][1],"Pulls",1, stats);
+        _addEvent(switchingDirectionEvents[i][1],"Pulls",1, stats);
         break;
       case "D":
-        addEvent(switchingDirectionEvents[i][1],"D-Blocks",1, stats);
+        _addEvent(switchingDirectionEvents[i][1],"D-Blocks",1, stats);
         break;
     }
   }
@@ -39,32 +36,32 @@ var parser = function(events) {
   for ( var i in endOfDirectionEvents ) {
     switch (endOfDirectionEvents[i][0]) {
       case "POINT":  //on point +1 POINT +1 Catch +1 Assist +1 Throw +1 2nd-5th Assist +1 possible Calihan
-        addEvent(endOfDirectionEvents[i][1],"Goals", 1, stats);
-        addEvent(endOfDirectionEvents[i][1],"Catches", 1, stats);
+        _addEvent(endOfDirectionEvents[i][1],"Goals", 1, stats);
+        _addEvent(endOfDirectionEvents[i][1],"Catches", 1, stats);
         if (passingEvents[i][1] != "") {
-          addEvent(passingEvents[i][1],"Assists", 1, stats);
-          addEvent(passingEvents[i][1],"Completions", 1, stats);
+          _addEvent(passingEvents[i][1],"Assists", 1, stats);
+          _addEvent(passingEvents[i][1],"Completions", 1, stats);
         }else{
-          addEvent(endOfDirectionEvents[i][1],"Calihan", 1, stats);
+          _addEvent(endOfDirectionEvents[i][1],"Calihan", 1, stats);
         }
-        addEvent(passingEvents[i][3],"2nd Assist", 1, stats);
-        addEvent(passingEvents[i][5],"3rd Assist", 1, stats);
-        addEvent(passingEvents[i][7],"4th Assist", 1, stats);
-        addEvent(passingEvents[i][9],"5th Assist", 1, stats);
+        _addEvent(passingEvents[i][3],"2nd Assist", 1, stats);
+        _addEvent(passingEvents[i][5],"3rd Assist", 1, stats);
+        _addEvent(passingEvents[i][7],"4th Assist", 1, stats);
+        _addEvent(passingEvents[i][9],"5th Assist", 1, stats);
 
         break;
       case "Throw Away": // on Throw Away +1 Throw Away +1 Catch
-        addEvent(endOfDirectionEvents[i][1],"Throwaways", 1, stats);
+        _addEvent(endOfDirectionEvents[i][1],"Throwaways", 1, stats);
         if (passingEvents[i][1] != "") {
-          addEvent(endOfDirectionEvents[i][1],"Catches", 1, stats);
-          addEvent(passingEvents[i][1],"Completions", 1, stats);
+          _addEvent(endOfDirectionEvents[i][1],"Catches", 1, stats);
+          _addEvent(passingEvents[i][1],"Completions", 1, stats);
         }else{
-          addEvent(endOfDirectionEvents[i][1],"Pick-Ups", 1, stats);
+          _addEvent(endOfDirectionEvents[i][1],"Pick-Ups", 1, stats);
         }
         break;
       case "Drop":  // on Drop +1 Drop +1 Throw Drop
-        addEvent(endOfDirectionEvents[i][1],"Drops", 1, stats);
-        addEvent(passingEvents[i][1],"ThrewDrop", 1, stats);
+        _addEvent(endOfDirectionEvents[i][1],"Drops", 1, stats);
+        _addEvent(passingEvents[i][1],"ThrewDrop", 1, stats);
         break;
     }
   }
@@ -75,10 +72,10 @@ var parser = function(events) {
       switch (passingEvents[i][j]) {
         case "Pass":
           if (passingEvents[i][j+2] == "" || passingEvents[i][j+2] === undefined) {
-            addEvent(passingEvents[i][j+1],"Pick-Ups", 1, stats);
+            _addEvent(passingEvents[i][j+1],"Pick-Ups", 1, stats);
           }else{
-            addEvent(passingEvents[i][j+1],"Catches", 1, stats);
-            addEvent(passingEvents[i][j+3],"Completions", 1, stats);
+            _addEvent(passingEvents[i][j+1],"Catches", 1, stats);
+            _addEvent(passingEvents[i][j+3],"Completions", 1, stats);
           }
           break;
       }
@@ -88,17 +85,29 @@ var parser = function(events) {
   return stats;
 };
 
-function addEvent(player, event, number, stats) {
+function _prepareEvent(e) {
+  if(typeof e === 'string') {
+    e = e.trim();
+    e = e.split('\t');
+    return e;
+  };
+
+  if(typeof e === 'array') {
+    return e.filter(function(c){ return c != "" });
+  };
+};
+
+function _addEvent(player, event, number, stats) {
   if (player == "" || player === undefined || player === null) return;
 
   if ( !(player in stats) ) {
-    stats[player] = initializePlayer();
+    stats[player] = _initializePlayer();
   };
 
   stats[player][event] = stats[player][event] + number;
 };
 
-function initializePlayer() {
+function _initializePlayer() {
   var player = {};
 
   player["Goals"] = 0;
