@@ -1,7 +1,9 @@
 var express = require('express'),
     exphbs = require('express-handlebars'),
     bodyParser = require('body-parser'),
-    child_process = require('child_process');
+    child_process = require('child_process'),
+    jsonMarkup = require('json-markup');
+
 
 // load any environment vars in a .env file
 require('dotenv').load();
@@ -21,8 +23,12 @@ var port = process.env.PORT || 3000;
 // parse the json of incoming requests
 app.use(bodyParser.json())
 
+hbs = exphbs.create({
+  defaultLayout: 'main',
+});
+
 // set handlebars as the templating engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 
@@ -31,7 +37,12 @@ app.get('/', function (req, res) {
   console.log('GET /');
 
   client.lrange('results', 0, -1, function(error, items) {
-    items = items.map(function(item){ return JSON.parse(item) });
+    items = items.map(function(item){
+      item = JSON.parse(item);
+      item.input_json = jsonMarkup(item.input, 2);
+      item.output_json = jsonMarkup(item.output, 2);
+      return item;
+    });
 
     res.render('index', {
       results: items

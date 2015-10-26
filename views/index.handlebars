@@ -5,15 +5,22 @@
     <h4>Jobs Processed:</h4>
     <table class="table table-bordered table-striped table-hover">
       <tr>
-        <th>time</th>
+        <th class="col-md-2">time</th>
         <th>input</th>
         <th>output</th>
       </tr>
       {{#each results}}
         <tr>
-          <td>{{time}}</td>
-          <td>{{input}}</td>
-          <td>{{output}}</td>
+          <td>{{ time }}</td>
+          <td>
+            <div style="max-height: 200px; max-width: 800px; overflow:auto;">
+              {{{ input_json }}}
+            </div>
+          </td>
+          <td>
+            <div style="max-height: 200px; overflow:auto;">
+              {{{ output_json }}}</td>
+            </div>
         </tr>
       {{/each}}
     </table>
