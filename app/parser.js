@@ -16,7 +16,7 @@ exports.parser = function(events) {
 
     if( e[0] == 'Direction' || e[0] == 'D' || e[0] == 'Pull') {
       switchingDirectionEvents.push(e);
-    } else {
+    } else if ( e[0] == 'POINT' || e[0] == 'Drop' || e[0] == 'Throw Away' ) {
       endOfDirectionEvents.push(e.slice(0, 2));
       passingEvents.push(e.slice(2, -1));
     };
