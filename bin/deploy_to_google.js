@@ -77,7 +77,7 @@ function saveProject(auth, project) {
   var service = google.drive('v2');
   var options = {
     auth: auth,
-    fileId: '1IcYrOWSUW8pYM0cRLx_ZAkHnWw9rzXqcPyOkgMGoLrmlDVfjcsCfSUF4',
+    fileId: fileId,
     newRevision: true,
     media: {
       mimeType: 'application/vnd.google-apps.script+json',
