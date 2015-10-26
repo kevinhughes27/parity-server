@@ -1,5 +1,5 @@
 var _ = require('underscore');
-var parser = require('../app/parser').parser;
+var parser = require('../app/parser');
 
 require('dotenv').load();
 

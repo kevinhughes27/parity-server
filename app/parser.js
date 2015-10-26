@@ -2,8 +2,7 @@
  *  Parity League Event String Parser
  */
 
-exports.parser = function(events) {
-
+var parser = function(events) {
   var stats = {};
 
   var switchingDirectionEvents = [];
@@ -11,8 +10,10 @@ exports.parser = function(events) {
   var passingEvents = [];
 
   events.forEach(function(e) {
-    e = e.trim();
-    e = e.split('\t');
+    if(typeof e === 'string') {
+      e = e.trim();
+      e = e.split('\t');
+    }
 
     if( e[0] == 'Direction' || e[0] == 'D' || e[0] == 'Pull') {
       switchingDirectionEvents.push(e);
@@ -120,3 +121,8 @@ function initializePlayer() {
 
   return player;
 };
+
+// Export if we're in a CommonJS env (e.g. Node).
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = parser;
+}

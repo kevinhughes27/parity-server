@@ -2,7 +2,7 @@ var chai   = require('chai'),
     fs     = require('fs'),
     expect = chai.expect;
 
-var parser = require('../app/parser').parser;
+var parser = require('../app/parser');
 
 describe("Parser", function() {
 
