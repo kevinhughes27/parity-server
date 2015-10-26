@@ -23,7 +23,6 @@ function deploy(auth) {
   project = fetchProject(auth);
   project = updateProject(project);
   saveProject(auth, project);
-  console.log('Deploy successful.');
 }
 
 /**
@@ -90,5 +89,8 @@ function saveProject(auth, project) {
       console.log('The API returned an error: ' + err);
       return;
     }
+
+    console.log('Deploy successful.');
+    return;
   });
 }

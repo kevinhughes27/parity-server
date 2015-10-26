@@ -30,7 +30,8 @@
   },
   "scripts": {
     "start": "node app/server.js",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "deploy": "node bin/deploy_to_google.js"
   },
   "browersify": {
     "transform": [
