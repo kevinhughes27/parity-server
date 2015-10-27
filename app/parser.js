@@ -96,7 +96,7 @@ function prepareEvent_(e) {
     return e;
   };
 
-  if(typeof e === 'array') {
+  if(Object.prototype.toString.call(e) === '[object Array]') {
     return e.filter(function(c){ return c != "" });
   };
 };
