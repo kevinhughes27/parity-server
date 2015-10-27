@@ -94,9 +94,7 @@ function prepareEvent_(e) {
     e = e.trim();
     e = e.split('\t');
     return e;
-  };
-
-  if(Object.prototype.toString.call(e) === '[object Array]') {
+  } else /* isArray */ {
     return e.filter(function(c){ return c != "" });
   };
 };
