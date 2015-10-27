@@ -16,4 +16,8 @@ describe("Parser", function() {
     expect(output).to.deep.equal(expectedOutput);
   });
 
+  it("handles input from google apps script", function() {
+    input = require('./cases/apps_script_getrange.json');
+    output = parser(input);
+  });
 });

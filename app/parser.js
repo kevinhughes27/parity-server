@@ -12,6 +12,10 @@ var parser = function(events) {
   events.forEach(function(e) {
     e = prepareEvent_(e);
 
+    if(e === undefined || e === []) {
+      return;
+    };
+
     if( e[0] == 'Direction' || e[0] == 'D' || e[0] == 'Pull') {
       switchingDirectionEvents.push(e);
     } else if ( e[0] == 'POINT' || e[0] == 'Drop' || e[0] == 'Throw Away' ) {
