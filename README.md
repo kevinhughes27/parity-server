@@ -31,6 +31,15 @@ Dependencies:
 
 Then run `npm install` to get the required modules.
 
+
 Testing
 -------
 run `npm test`
+
+
+Deploying
+---------
+
+run `npm run deploy`
+
+If you get errors try removing the `.credentials/credentials.json`
