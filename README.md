@@ -1,4 +1,4 @@
-parity-server
+parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
 `events => stats` parser and job processing microservice for parity league stats.
