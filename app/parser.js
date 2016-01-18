@@ -2,6 +2,11 @@
  *  Parity League Event String Parser
  */
 
+
+/**
+ * Receive the events and calculate the stats for each player
+ * @param {Array} events Can be an array of strings (will be split on \t) or arrays
+ */
 var parser = function(events) {
   var stats = {};
 
@@ -78,7 +83,7 @@ var parser = function(events) {
         case "Pass":
           if (passingEvents[i][j+2] == "" || passingEvents[i][j+2] === undefined) {
             addEvent_(passingEvents[i][j+1],"Pick-Ups", 1, stats);
-          }else{
+          } else {
             addEvent_(passingEvents[i][j+1],"Catches", 1, stats);
             addEvent_(passingEvents[i][j+3],"Completions", 1, stats);
           }
