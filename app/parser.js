@@ -42,27 +42,28 @@ var parser = function(events) {
       case "POINT":  //on point +1 POINT +1 Catch +1 Assist +1 Throw +1 2nd-5th Assist +1 possible Calihan
         addEvent_(endOfDirectionEvents[i][1],"Goals", 1, stats);
         addEvent_(endOfDirectionEvents[i][1],"Catches", 1, stats);
-        if (passingEvents[i][1] != "") {
+        if (passingEvents[i][1] && passingEvents[i][1] != "") {
           addEvent_(passingEvents[i][1],"Assists", 1, stats);
           addEvent_(passingEvents[i][1],"Completions", 1, stats);
-        }else{
+        } else {
           addEvent_(endOfDirectionEvents[i][1],"Calihan", 1, stats);
         }
         addEvent_(passingEvents[i][3],"2nd Assist", 1, stats);
         addEvent_(passingEvents[i][5],"3rd Assist", 1, stats);
         addEvent_(passingEvents[i][7],"4th Assist", 1, stats);
         addEvent_(passingEvents[i][9],"5th Assist", 1, stats);
-
         break;
+
       case "Throw Away": // on Throw Away +1 Throw Away +1 Catch
         addEvent_(endOfDirectionEvents[i][1],"Throwaways", 1, stats);
         if (passingEvents[i][1] != "") {
           addEvent_(endOfDirectionEvents[i][1],"Catches", 1, stats);
           addEvent_(passingEvents[i][1],"Completions", 1, stats);
-        }else{
+        } else {
           addEvent_(endOfDirectionEvents[i][1],"Pick-Ups", 1, stats);
         }
         break;
+
       case "Drop":  // on Drop +1 Drop +1 Throw Drop
         addEvent_(endOfDirectionEvents[i][1],"Drops", 1, stats);
         addEvent_(passingEvents[i][1],"ThrewDrop", 1, stats);
