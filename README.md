@@ -76,6 +76,8 @@ Testing
 -------
 run `npm test`
 
+also you can run a single test with `mocha <path_to_test> --grep <something unique in the test name>`
+
 
 Deploying
 ---------
