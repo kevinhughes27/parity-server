@@ -20,7 +20,7 @@ var parser = function(events) {
       switchingDirectionEvents.push(e);
     } else if ( e[0] == 'POINT' || e[0] == 'Drop' || e[0] == 'Throw Away' ) {
       endOfDirectionEvents.push(e.slice(0, 2));
-      passingEvents.push(e.slice(2, -1));
+      passingEvents.push(e.slice(2, e.length));
     };
   });
 
