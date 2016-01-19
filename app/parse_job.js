@@ -12,11 +12,7 @@ var client = redis.createClient(
 // parseJob function
 var parseJob = exports.parseJob = function(jobRequest) {
   jobRequest = JSON.parse(jobRequest);
-
-  var result = {};
-  jobRequest.games.forEach(function(game) {
-    result = _.extend(result, parser(game.events));
-  });
+  result = parser(jobRequest.events);
 
   saveResult(jobRequest, result);
   process.stdout.write(JSON.stringify(result));

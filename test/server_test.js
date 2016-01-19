@@ -54,11 +54,25 @@ describe("Server", function() {
     });
 
     it("returns the parsed result", function(done) {
-      var jobRequest = require('./cases/week1_events.json');
-      var result = require('./cases/week1_stats.json');
+      var jobRequest = {
+        "events": [
+          "Pull\tMike",
+          "Direction\t<<<<<<",
+          "Drop\tJill\tPass\tBob",
+          "Direction\t>>>>>>",
+          "POINT\tMike\tPass\tJane",
+          "-1\tJill",
+          "-1\tBob",
+          "+1\tMike",
+          "+1\tJane",
+          "Direction\t<<<<<<",
+        ]
+      }
 
       request.post({url: url, json: true, body: jobRequest}, function(error, response, body) {
-        expect(body).to.deep.equal(result);
+        expect(body['Mike']['Pulls']).to.equal(1);
+        expect(body['Mike']['Goals']).to.equal(1);
+        expect(body['Jill']['Drops']).to.equal(1);
         done();
       });
     });
