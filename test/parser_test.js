@@ -294,6 +294,50 @@ describe("Parser", function() {
     expect(output['Mike']['DPointsFor']).to.equal(1);
   });
 
+  it("parses test game A", function() {
+    input = [
+      "Pull\tMike",
+      "Direction\t<<<<<<",
+      "DROP\tJill\tPass\tBob",
+      "Direction\t>>>>>>",
+      "POINT\tMike\tPass\tJane",
+      "-1\tJill",
+      "-1\tBob",
+      "+1\tMike",
+      "+1\tJane",
+      "Direction\t<<<<<<",
+      "POINT\tJill\tPass\tBob\tJill",
+      "+1\tJill",
+      "+1\tBob",
+      "-1\tMike",
+      "-1\tJane",
+      "Direction\t>>>>>>",
+      "Throw Away\tJane",
+      "Direction\t<<<<<<"
+    ];
+
+    output = parser(input);
+
+    expect(output['Jane']['DPointsFor']).to.equal(1);
+    expect(output['Mike']['DPointsFor']).to.equal(1);
+    expect(output['Jane']['DPointsAgainst']).to.equal(1);
+    expect(output['Mike']['DPointsAgainst']).to.equal(1);
+
+    expect(output['Bob']['OPointsAgainst']).to.equal(1);
+    expect(output['Jill']['OPointsAgainst']).to.equal(1);
+    expect(output['Bob']['OPointsFor']).to.equal(1);
+    expect(output['Jill']['OPointsFor']).to.equal(1);
+
+    expect(output['Mike']['Goals']).to.equal(1);
+    expect(output['Jill']['Goals']).to.equal(1);
+
+    expect(output['Jane']['Assists']).to.equal(1);
+    expect(output['Bob']['Assists']).to.equal(1);
+
+    expect(output['Jane']['Throwaways']).to.equal(1);
+    expect(output['Mike']['Pulls']).to.equal(1);
+  });
+
   it("empty array cells are ignored", function() {
     input = [["", "", "POINT", "Jill"]];
     output = parser(input);
