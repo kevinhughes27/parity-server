@@ -10,6 +10,10 @@
 var parser = function(events) {
   var stats = {};
 
+  var isDirectionLeft = false;
+  var isLastPointLeft = false;
+  var isLastEventPoint = false;
+
   var switchingDirectionEvents = [];
   var endOfDirectionEvents = [];
   var passingEvents = [];
@@ -21,9 +25,9 @@ var parser = function(events) {
       return;
     };
 
-    if( e[0] == 'Direction' || e[0] == 'D' || e[0] == 'Pull') {
+    if(isSwitchingDirectionEvent(e[0])) {
       switchingDirectionEvents.push(e);
-    } else if ( e[0] == 'POINT' || e[0] == 'Drop' || e[0] == 'Throw Away' ) {
+    } else if (isEndOfDirectionEvent(e[0])) {
       endOfDirectionEvents.push(e.slice(0, 2));
       passingEvents.push(e.slice(2, e.length));
     };
@@ -31,13 +35,40 @@ var parser = function(events) {
 
   // switchingDirectionEvents
   for ( var i in switchingDirectionEvents ) {
-    switch (switchingDirectionEvents[i][0]) {
+    switch (switchingDirectionEvents[i][0].toString()) {
       case "Pull":
-        addEvent_(switchingDirectionEvents[i][1],"Pulls",1, stats);
+        addEvent_(switchingDirectionEvents[i][1], "Pulls", 1, stats);
+        isLastPointLeft = (switchingDirectionEvents[parseInt(i)+1][1] == ">>>>>>");
         break;
+
       case "D":
-        addEvent_(switchingDirectionEvents[i][1],"D-Blocks",1, stats);
+        addEvent_(switchingDirectionEvents[i][1], "D-Blocks", 1, stats);
         break;
+
+      // for Points for and Against
+      case '1':
+      case '+1':
+        if (isLastPointLeft == isDirectionLeft)
+          addEvent_(switchingDirectionEvents[i][1], "DPointsFor", 1, stats);
+        else
+          addEvent_(switchingDirectionEvents[i][1], "OPointsFor", 1, stats);
+        isLastEventPoint = true;
+        break;
+
+      case '-1':
+        if (isLastPointLeft == isDirectionLeft)
+          addEvent_(switchingDirectionEvents[i][1],"OPointsAgainst", 1, stats);
+        else
+          addEvent_(switchingDirectionEvents[i][1],"DPointsAgainst", 1, stats);
+        isLastEventPoint = true;
+        break;
+
+      case "Direction":
+        if (isLastEventPoint) {
+          isLastEventPoint = false;
+          isLastPointLeft = isDirectionLeft;
+        }
+        isDirectionLeft = (switchingDirectionEvents[i][1] == "<<<<<<");
     }
   }
 
@@ -95,6 +126,21 @@ var parser = function(events) {
   return stats;
 };
 
+function isSwitchingDirectionEvent(token) {
+  return token == 'Direction' ||
+         token == 'D' ||
+         token == 'Pull' ||
+         token == "1" ||
+         token == "+1" ||
+         token == "-1"
+}
+
+function isEndOfDirectionEvent(token) {
+  return token == 'POINT' ||
+         token == 'Drop' ||
+         token == 'Throw Away'
+}
+
 function prepareEvent_(e) {
   if(typeof e === 'string') {
     e = e.trim();
@@ -133,8 +179,10 @@ function initializePlayer_() {
   player["Pick-Ups"] = 0;
   player["Pulls"] = 0;
   player["Calihan"] = 0;
-  player["PointsFor"] = 0;
-  player["PointsAgainst"] = 0;
+  player["OPointsFor"] = 0;
+  player["OPointsAgainst"] = 0;
+  player["DPointsFor"] = 0;
+  player["DPointsAgainst"] = 0;
 
   return player;
 };

@@ -202,6 +202,98 @@ describe("Parser", function() {
     expect(output['Jill']['Calihan']).to.equal(1);
   });
 
+  it("parses stat: OPointsFor (array)", function() {
+    input = [["Direction", "<<<<<<"], ["POINT", "Jill"], ["1", "Jill"]];
+    output = parser(input);
+    expect(output['Jill']['OPointsFor']).to.equal(1);
+  });
+
+  it("parses stat: OPointsFor (string)", function() {
+    input = ["Direction\t<<<<<<", "POINT\tJill", "1\tJill"];
+    output = parser(input);
+    expect(output['Jill']['OPointsFor']).to.equal(1);
+  });
+
+  it("parses stat: DPointsAgainst (array)", function() {
+    input = [["Direction", "<<<<<<"], ["POINT", "Jill"], ["1", "Jill"], ['-1', 'Jane']];
+    output = parser(input);
+    expect(output['Jane']['DPointsAgainst']).to.equal(1);
+  });
+
+  it("parses stat: DPointsAgainst (string)", function() {
+    input = ["Direction\t<<<<<<", "POINT\tJill", "1\tJill", "-1\tJane"];
+    output = parser(input);
+    expect(output['Jane']['DPointsAgainst']).to.equal(1);
+  });
+
+  it("parses stat: OPointsAgainst (array)", function() {
+    input = [
+      ["Direction", "<<<<<<"],
+      ["DROP", "Jill", 'Pass', 'Bob'],
+      ["Direction", ">>>>>>"],
+      ["POINT", 'Mike', 'Pass', 'Jane'],
+      ["-1", "Jill"],
+      ["-1", "Bob"],
+      ["+1", "Mike"],
+      ["+1", "Jane"],
+    ];
+
+    output = parser(input);
+    expect(output['Bob']['OPointsAgainst']).to.equal(1);
+    expect(output['Jill']['OPointsAgainst']).to.equal(1);
+  });
+
+  it("parses stat: OPointsAgainst (string)", function() {
+    input = [
+      "Direction\t<<<<<<",
+      "DROP\tJill\tPass\tBob",
+      "Direction\t>>>>>>",
+      "POINT\tMike\tPass\tJane",
+      "-1\tJill",
+      "-1\tBob",
+      "+1\tMike",
+      "+1\tJane",
+    ];
+
+    output = parser(input);
+    expect(output['Bob']['OPointsAgainst']).to.equal(1);
+    expect(output['Jill']['OPointsAgainst']).to.equal(1);
+  });
+
+  it("parses stat: DPointsFor (array)", function() {
+    input = [
+      ["Direction", "<<<<<<"],
+      ["DROP", "Jill", 'Pass', 'Bob'],
+      ["Direction", ">>>>>>"],
+      ["POINT", 'Mike', 'Pass', 'Jane'],
+      ["-1", "Jill"],
+      ["-1", "Bob"],
+      ["+1", "Mike"],
+      ["+1", "Jane"],
+    ];
+
+    output = parser(input);
+    expect(output['Jane']['DPointsFor']).to.equal(1);
+    expect(output['Mike']['DPointsFor']).to.equal(1);
+  });
+
+  it("parses stat: DPointsFor (string)", function() {
+    input = [
+      "Direction\t<<<<<<",
+      "DROP\tJill\tPass\tBob",
+      "Direction\t>>>>>>",
+      "POINT\tMike\tPass\tJane",
+      "-1\tJill",
+      "-1\tBob",
+      "+1\tMike",
+      "+1\tJane",
+    ];
+
+    output = parser(input);
+    expect(output['Jane']['DPointsFor']).to.equal(1);
+    expect(output['Mike']['DPointsFor']).to.equal(1);
+  });
+
   it("empty array cells are ignored", function() {
     input = [["", "", "POINT", "Jill"]];
     output = parser(input);
