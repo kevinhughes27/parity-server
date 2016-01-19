@@ -229,7 +229,7 @@ describe("Parser", function() {
   it("parses stat: OPointsAgainst (array)", function() {
     input = [
       ["Direction", "<<<<<<"],
-      ["DROP", "Jill", 'Pass', 'Bob'],
+      ["Drop", "Jill", 'Pass', 'Bob'],
       ["Direction", ">>>>>>"],
       ["POINT", 'Mike', 'Pass', 'Jane'],
       ["-1", "Jill"],
@@ -246,7 +246,7 @@ describe("Parser", function() {
   it("parses stat: OPointsAgainst (string)", function() {
     input = [
       "Direction\t<<<<<<",
-      "DROP\tJill\tPass\tBob",
+      "Drop\tJill\tPass\tBob",
       "Direction\t>>>>>>",
       "POINT\tMike\tPass\tJane",
       "-1\tJill",
@@ -263,7 +263,7 @@ describe("Parser", function() {
   it("parses stat: DPointsFor (array)", function() {
     input = [
       ["Direction", "<<<<<<"],
-      ["DROP", "Jill", 'Pass', 'Bob'],
+      ["Drop", "Jill", 'Pass', 'Bob'],
       ["Direction", ">>>>>>"],
       ["POINT", 'Mike', 'Pass', 'Jane'],
       ["-1", "Jill"],
@@ -280,7 +280,7 @@ describe("Parser", function() {
   it("parses stat: DPointsFor (string)", function() {
     input = [
       "Direction\t<<<<<<",
-      "DROP\tJill\tPass\tBob",
+      "Drop\tJill\tPass\tBob",
       "Direction\t>>>>>>",
       "POINT\tMike\tPass\tJane",
       "-1\tJill",
@@ -298,7 +298,7 @@ describe("Parser", function() {
     input = [
       "Pull\tMike",
       "Direction\t<<<<<<",
-      "DROP\tJill\tPass\tBob",
+      "Drop\tJill\tPass\tBob",
       "Direction\t>>>>>>",
       "POINT\tMike\tPass\tJane",
       "-1\tJill",
@@ -336,6 +336,7 @@ describe("Parser", function() {
 
     expect(output['Jane']['Throwaways']).to.equal(1);
     expect(output['Mike']['Pulls']).to.equal(1);
+    expect(output['Jill']['Drops']).to.equal(1);
   });
 
   it("empty array cells are ignored", function() {
