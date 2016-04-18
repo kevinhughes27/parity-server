@@ -11,10 +11,15 @@ The parse is a standalone javascript module that can be used in any js environme
 ParityServer
 ------------
   **Flow**:
+  
     1. Stats Keeping Client `POSTs` a JSON object to the server.
+  
     2. Node server receives the request and spawns a process to parse the events
+  
     3. The input and output is saved in Redis and a `201` is returned to the original client
+  
     4. (Not implemented) Node sends the data to another data source (Google Sheets)
+  
     5. All requests processed by the app are visible at `/` (with live reloading!)
 
   Screenshot:
