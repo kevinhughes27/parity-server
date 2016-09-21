@@ -23,7 +23,7 @@ ParityServer
     5. All requests processed by the app are visible at `/` (with live reloading!)
 
   Screenshot:
-    ![parity-server screenshot](https://raw.githubusercontent.com/kevinhughes27/parity-server/master/server_screenshot.png)
+    ![parity-server screenshot](http://imgur.com/dNjBxNz.png?raw=true)
 
 Development Setup
 -----------------
