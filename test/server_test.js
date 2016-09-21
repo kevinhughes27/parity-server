@@ -8,7 +8,7 @@ var request       = require('request')
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
-var server = require('../app/server');
+var server = require('../server');
 var base_url = "http://localhost:3000/";
 
 var client = redis.createClient();
@@ -48,7 +48,7 @@ describe("Server", function() {
       this.sinon.stub(child_process, 'spawn', child_process.spawn);
 
       request.post({url: url, json: true, body: {}}, function(error, response, body) {
-        expect(child_process.spawn).to.have.been.calledWith('node', ['app/parse_job.js', "{}"]);
+        expect(child_process.spawn).to.have.been.calledWith('node', ['jobs/parse_job.js', "{}"]);
         done();
       });
     });

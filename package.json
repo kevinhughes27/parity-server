@@ -32,7 +32,7 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
-    "start": "node app/server.js",
+    "start": "node server.js",
     "test": "mocha --reporter spec"
   }
 }
