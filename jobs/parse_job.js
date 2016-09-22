@@ -1,33 +1,26 @@
+require('dotenv').load();
 var _ = require('underscore');
+var db = require('mongoskin').db(process.env.MONGODB_URI);
+    db.bind('games');
 var parser = require('parity-parser');
 
-require('dotenv').load();
+var execute = function(params) {
+  result = parser(params.events);
 
-var redis = require('redis');
-var client = redis.createClient(
-  process.env.REDISCLOUD_URL || 'https://localhost:6379',
-  {no_ready_check: true}
-);
-
-// parseJob function
-var parseJob = function(jobRequest) {
-  result = parser(jobRequest.events);
-  saveResult(jobRequest, result);
-  return result;
-};
-
-var saveResult = function(jobRequest, result) {
-  client.lpush('results', JSON.stringify({
-    input: jobRequest,
+  db.games.insert({
+    input: params,
     output: result,
     time: new Date()
-  }));
+  });
+
+  return result;
 };
 
 var background = require('background-process');
 background.ready(function(err, options) {
-  parseJob(options);
+  execute(options);
+  db.close()
 });
 
 // export for testing
-module.exports = parseJob;
+module.exports = execute;

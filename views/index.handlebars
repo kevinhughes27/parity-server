@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Parity Server v0.0.1</h3>
   <hr>
-  {{#if results}}
+  {{#if games}}
     <h4>Jobs Processed:</h4>
     <table class="table table-bordered table-striped table-hover">
       <tr>
@@ -9,7 +9,7 @@
         <th>input</th>
         <th>output</th>
       </tr>
-      {{#each results}}
+      {{#each games}}
         <tr>
           <td>{{ time }}</td>
           <td>

@@ -16,28 +16,27 @@ ParityServer
 
     2. Node server receives the request and spawns a process to parse the events
 
-    3. The input and output is saved in Redis and a `201` is returned to the original client
+    3. The input and output is saved in Redis and a `202` is returned to the original client
 
     4. (Not implemented) Node sends the data to another data source (Google Sheets)
 
-    5. All requests processed by the app are visible at `/` (with live reloading!)
+    5. All `games` processed by the app are visible at `/`
 
   Screenshot:
     ![parity-server screenshot](http://imgur.com/dNjBxNz.png?raw=true)
 
-Development Setup
------------------
+
+Setup
+-----
   Dependencies:
     * node / npm
-    * redis
+    * mongodb
 
   Then run `npm install` to get the required modules.
 
-  Before running the server make sure you have a redis instance running. You can start redis by running `redis-server`
 
-
-Development:
-------------
+Running:
+--------
   To run the server locally by starting it with `npm start`
 
   Then run the following command to send a job to the server:
