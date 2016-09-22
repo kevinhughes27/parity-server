@@ -1,5 +1,4 @@
 require('dotenv').load();
-var _ = require('underscore');
 var db = require('mongoskin').db(process.env.MONGODB_URI);
     db.bind('games');
 var parser = require('parity-parser');
