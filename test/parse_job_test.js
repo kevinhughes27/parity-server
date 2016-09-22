@@ -4,7 +4,8 @@ var chai   = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
-var db = require('mongoskin').db('mongodb://localhost:27017/development');
+process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
+var db = require('mongoskin').db(process.env.MONGODB_URI);
     db.bind('games');
 
 var parseJob = require('../jobs/parse_job');

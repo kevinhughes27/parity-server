@@ -1,27 +1,21 @@
-var request       = require('request')
-  , redis         = require('redis')
-  , chai          = require('chai')
-  , expect        = chai.expect
-;
+var chai    = require('chai'),
+    expect  = chai.expect;
 
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
+var request = require('request');
 var server = require('../server');
 var base_url = "http://localhost:3000/";
 var background = require('background-process');
-
-var client = redis.createClient();
 
 describe("server", function() {
 
   before(function () {
     server.listen(3000);
-    client.flushdb();
   });
 
   after(function () {
-    client.flushdb();
     server.close();
   });
 
