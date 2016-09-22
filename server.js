@@ -40,10 +40,6 @@ var server = app.listen(port, function () {
   console.log('Express server listening on port ' + port);
 });
 
-// initialize socket.io
-var io = require('socket.io').listen(server);
-app.set('socketio', io);
-
 // export for testing
 exports.listen = function () {
   server.listen.apply(server, arguments);

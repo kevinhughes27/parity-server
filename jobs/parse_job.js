@@ -9,32 +9,25 @@ var client = redis.createClient(
   {no_ready_check: true}
 );
 
-// after the redis connection is established
-// collect args and call the main function
-// before terminating the process
-client.on('ready', function() {
-  var eventString = process.argv[2];
-  parseJob(eventString);
-  process.exit(0);
-});
-
 // parseJob function
 var parseJob = function(jobRequest) {
-  jobRequest = JSON.parse(jobRequest);
   result = parser(jobRequest.events);
-
   saveResult(jobRequest, result);
-  process.stdout.write(JSON.stringify(result));
+  return result;
 };
 
 var saveResult = function(jobRequest, result) {
-  record = JSON.stringify({
+  client.lpush('results', JSON.stringify({
     input: jobRequest,
     output: result,
     time: new Date()
-  });
-
-  client.lpush('results', record, function(err, reply) {
-    process.stdout.write(reply)
-  });
+  }));
 };
+
+var background = require('background-process');
+background.ready(function(err, options) {
+  parseJob(options);
+});
+
+// export for testing
+module.exports = parseJob;
