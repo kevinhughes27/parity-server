@@ -9,10 +9,10 @@ var jsonMarkup = require('json-markup');
 // index route
 router.get('/', function (req, res) {
   db.games.find().toArray(function(err, items) {
-    items = items.map(function(item) {
-      item.input_json = jsonMarkup(item.input, 2);
-      item.output_json = jsonMarkup(item.output, 2);
-      return item;
+    items = items.map(function(game) {
+      game.input_json = jsonMarkup(game.events, 2);
+      game.output_json = jsonMarkup(game.stats, 2);
+      return game;
     });
 
     res.render('index', { games: items });

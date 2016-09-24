@@ -3,16 +3,10 @@ var db = require('mongoskin').db(process.env.MONGODB_URI);
     db.bind('games');
 var parser = require('parity-parser');
 
-var execute = function(params) {
-  result = parser(params.events);
-
-  db.games.insert({
-    input: params,
-    output: result,
-    time: new Date()
-  });
-
-  return result;
+var execute = function(game) {
+  stats = parser(game.events);
+  db.games.updateById(game._id, {'$set': {'stats': stats}});
+  return stats;
 };
 
 var background = require('background-process');

@@ -12,48 +12,50 @@ var parseJob = require('../jobs/parse_job');
 
 describe("parseJob", function() {
 
-  before(function () {
+  var game = {events: [
+    "Pull\tMike",
+    "Direction\t<<<<<<",
+    "Drop\tJill\tPass\tBob",
+    "Direction\t>>>>>>",
+    "POINT\tMike\tPass\tJane",
+    "-1\tJill",
+    "-1\tBob",
+    "+1\tMike",
+    "+1\tJane",
+    "Direction\t<<<<<<",
+  ]};
+
+  beforeEach(function(){
     db.dropDatabase();
   });
 
-  after(function () {
+  after(function() {
     db.dropDatabase();
   });
-
-  var params = {
-    events: [
-      "Pull\tMike",
-      "Direction\t<<<<<<",
-      "Drop\tJill\tPass\tBob",
-      "Direction\t>>>>>>",
-      "POINT\tMike\tPass\tJane",
-      "-1\tJill",
-      "-1\tBob",
-      "+1\tMike",
-      "+1\tJane",
-      "Direction\t<<<<<<",
-    ]
-  };
 
   it("returns the result", function(done) {
-    result = parseJob(params);
+    db.games.insert(game, function(err, res) {
+      stats = parseJob(game);
 
-    expect(result['Mike']['Pulls']).to.equal(1);
-    expect(result['Mike']['Goals']).to.equal(1);
-    expect(result['Jill']['Drops']).to.equal(1);
-    done();
+      expect(stats['Mike']['Pulls']).to.equal(1);
+      expect(stats['Mike']['Goals']).to.equal(1);
+      expect(stats['Jill']['Drops']).to.equal(1);
+      done();
+    });
   });
 
   it("saves the result to mongodb", function(done) {
-    parseJob(params);
+    db.games.insert(game, function(err, res) {
+      parseJob(game);
 
-    db.games.find().toArray(function(err, items) {
-      game = items[0];
-      result = game.output;
-      expect(result['Mike']['Pulls']).to.equal(1);
-      expect(result['Mike']['Goals']).to.equal(1);
-      expect(result['Jill']['Drops']).to.equal(1);
-      done();
+      db.games.find().toArray(function(err, items) {
+        game = items[0];
+        stats = game.stats;
+        expect(stats['Mike']['Pulls']).to.equal(1);
+        expect(stats['Mike']['Goals']).to.equal(1);
+        expect(stats['Jill']['Drops']).to.equal(1);
+        done();
+      });
     });
   });
 });
