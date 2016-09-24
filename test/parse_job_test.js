@@ -33,13 +33,23 @@ describe("parseJob", function() {
     db.dropDatabase();
   });
 
-  it("returns the result", function(done) {
+  it("returns the stats", function(done) {
     db.games.insert(game, function(err, res) {
       stats = parseJob(game);
 
       expect(stats['Mike']['Pulls']).to.equal(1);
       expect(stats['Mike']['Goals']).to.equal(1);
       expect(stats['Jill']['Drops']).to.equal(1);
+      done();
+    });
+  });
+
+  it("calculates salary change", function(done) {
+    db.games.insert(game, function(err, res) {
+      stats = parseJob(game);
+
+      expect(stats['Mike']['SalaryDelta']).to.equal(11000);
+      expect(stats['Jill']['SalaryDelta']).to.equal(-5000);
       done();
     });
   });

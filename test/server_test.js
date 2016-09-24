@@ -6,13 +6,13 @@ require('mocha-sinon');
 
 var request = require('request');
 var server = require('../server');
-var base_url = "http://localhost:3001/";
+var base_url = "http://localhost:3000/";
 var background = require('background-process');
 
 describe("server", function() {
 
   before(function () {
-    server.listen(3001);
+    server.listen(3000);
   });
 
   after(function () {
