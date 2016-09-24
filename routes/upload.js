@@ -5,7 +5,6 @@ var background = require('background-process');
 
 // upload games raw events
 router.post('/upload', function(req, res) {
-  console.log('POST /upload');
   eventsUpload = req.body;
   background.start('jobs/parse_job.js', eventsUpload);
   res.status(202).send();

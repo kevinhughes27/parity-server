@@ -2,6 +2,7 @@
 require('dotenv').load();
 
 var express = require('express'),
+    morgan = require('morgan'),
     exphbs = require('express-handlebars'),
     bodyParser = require('body-parser');
 
@@ -9,6 +10,7 @@ var db = require('monk')(process.env.MONGODB_URI);
 
 // Init express
 var app = new express();
+app.use(morgan('dev'));
 app.use(bodyParser.json())
 
 // Init handlebars
