@@ -13,42 +13,48 @@ var execute = function(game, callback) {
   salaraDeltas = calcSalaries(stats);
   stats = _.merge(stats, salaraDeltas);
 
-  saveGame(game, stats);
-  saveWeek(game.week, stats);
+  saveGame(game, stats, function(err, res) {
+    saveWeek(game.week, stats, function(err, res) {
+      callback ? callback() : null;
+    });
+  });
 
   return stats;
 };
 
-var saveGame = function(game, stats) {
+var saveGame = function(game, stats, callback) {
   games.updateById(
     game._id,
-    {$set: {stats: stats}}
+    {$set: {stats: stats}},
+    callback
   );
 };
 
-var saveWeek = function(week, gameStats) {
+var saveWeek = function(week, gameStats, callback) {
   weeks.findOne({week: week}, function(err, w) {
     weekStats = w ? w.stats : {};
     stats = _.assign({}, weekStats, gameStats);
-    _saveWeek(week, stats);
+    _saveWeek(week, stats, callback);
   });
 };
 
-var _saveWeek = function(week, stats) {
+var _saveWeek = function(week, stats, callback) {
   weeks.update(
     {week: week},
     {
       $set: {stats: stats},
       $setOnInsert: {week: week}
     },
-    {upsert: true}
+    {upsert: true},
+    callback
   );
 };
 
 var background = require('background-process');
 background.ready(function(err, options) {
-  execute(options);
-  db.close()
+  execute(options, function(err, res) {
+    db.close();
+  });
 });
 
 // export for testing

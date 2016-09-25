@@ -29,6 +29,9 @@ app.use('/', index);
 var games = require('./routes/games');
 app.use('/', games);
 
+var weeks = require('./routes/weeks');
+app.use('/', weeks);
+
 var upload = require('./routes/upload');
 app.use('/', upload);
 
