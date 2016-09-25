@@ -37,7 +37,7 @@ describe("server", function() {
 
     it("starts a background-process", function(done) {
       this.sinon.stub(background, 'start');
-      params = {events: []};
+      params = {week: 1, events: []};
 
       request.post({url: url, json: true, body: params}, function(error, response, body) {
         expect(background.start).to.have.been.calledWith('jobs/parse_job.js');
@@ -46,7 +46,9 @@ describe("server", function() {
     });
 
     it("returns status code 201", function(done) {
-      request.post({url: url, json: true, body: {}}, function(error, response, body) {
+      params = {week: 1, events: []};
+
+      request.post({url: url, json: true, body: params}, function(error, response, body) {
         expect(response.statusCode).to.equal(201);
         done();
       });

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('mongoskin').db(process.env.MONGODB_URI);
-    db.bind('games');
+var games = db.collection('games');
 var background = require('background-process');
 
 /**
@@ -17,7 +17,7 @@ router.post('/upload', function(req, res) {
   game = req.body;
   game.time = new Date();
 
-  db.games.insert(game, function(err, result) {
+  games.insert(game, function(err, result) {
     background.start('jobs/parse_job.js', game);
     res.status(201).send(game);
   });
