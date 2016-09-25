@@ -37,7 +37,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha --reporter spec",
+    "test": "mocha --recursive --reporter spec",
     "db:reset": "echo 'db.dropDatabase()' | mongo development"
   }
 }

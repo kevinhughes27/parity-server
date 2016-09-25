@@ -107,7 +107,7 @@ describe("parseJob", function() {
           expect(stats['Jill']['Drops']).to.equal(1);
           done();
         });
-      }, 100);
+      }, 150);
     });
   });
 
@@ -135,7 +135,7 @@ describe("parseJob", function() {
             expect(stats['Meg']['Drops']).to.equal(1);
             done();
           });
-        }, 100);
+        }, 150);
       });
     });
   });
