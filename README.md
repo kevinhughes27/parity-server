@@ -43,7 +43,13 @@ Running:
   curl -X POST -d '{"week": 1, "events": ["Pull\tMike", "Direction\t<<<<<<", "POINT\tJill\tPass\tBob"]}' -H "Content-Type: application/json" http://localhost:3000/upload
   ```
 
-  To clear all the data saved in Redis run `redis-cli FLUSHALL`
+  or you can send a full set of events from `test/files` using:
+
+  ```
+  curl -X POST --data @test/files/week1_game1.json -H "Content-Type: application/json" http://localhost:3000/upload
+  ```
+
+  To clear all the data saved in the database run `npm run db:reset`
 
 
 Testing
