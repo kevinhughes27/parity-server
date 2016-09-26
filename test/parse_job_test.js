@@ -10,7 +10,7 @@ var db = require('mongoskin').db(process.env.MONGODB_URI);
 var games = db.collection('games');
 var weeks = db.collection('weeks');
 
-var parseJob = require('../jobs/parse_job');
+var parseJob = require('../lib/parse_job');
 
 describe("parseJob", function() {
 

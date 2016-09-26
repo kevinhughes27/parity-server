@@ -18,7 +18,7 @@ router.post('/upload', function(req, res) {
   game.time = new Date();
 
   games.insert(game, function(err, result) {
-    background.start('jobs/parse_job.js', game);
+    background.start('lib/parse_job.js', game);
     res.status(201).send(game);
   });
 });

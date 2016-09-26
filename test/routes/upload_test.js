@@ -29,7 +29,7 @@ describe("POST /upload", function() {
     params = {week: 1, events: []};
 
     request.post({url: url, json: true, body: params}, function(error, response, body) {
-      expect(background.start).to.have.been.calledWith('jobs/parse_job.js');
+      expect(background.start).to.have.been.calledWith('lib/parse_job.js');
       done();
     });
   });
