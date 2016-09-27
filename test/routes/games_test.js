@@ -16,16 +16,7 @@ describe("games routes", function() {
   var game = {
     week: 1,
     events: [
-      "Pull\tMike",
-      "Direction\t<<<<<<",
-      "Drop\tJill\tPass\tBob",
-      "Direction\t>>>>>>",
-      "POINT\tMike\tPass\tJane",
-      "-1\tJill",
-      "-1\tBob",
-      "+1\tMike",
-      "+1\tJane",
-      "Direction\t<<<<<<",
+      "Pull\tMike"
     ]
   };
 

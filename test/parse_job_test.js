@@ -18,15 +18,11 @@ describe("parseJob", function() {
     week: 1,
     events: [
       "Pull\tMike",
-      "Direction\t<<<<<<",
-      "Drop\tJill\tPass\tBob",
       "Direction\t>>>>>>",
-      "POINT\tMike\tPass\tJane",
-      "-1\tJill",
-      "-1\tBob",
-      "+1\tMike",
-      "+1\tJane",
-      "Direction\t<<<<<<",
+      "Direction\t<<<<<<\tDrop\tJill\tPass\tBob",
+      "Direction\t>>>>>>\tPOINT\tMike\tPass\tJane",
+      "O-\tJill\tD+\tMike",
+      "O-\tBob\tD+\tJane"
     ]
   };
 
@@ -34,15 +30,11 @@ describe("parseJob", function() {
     week: 1,
     events: [
       "Pull\tJoe",
-      "Direction\t<<<<<<",
-      "Drop\tMeg\tPass\tBill",
       "Direction\t>>>>>>",
-      "POINT\tJoe\tPass\tJulie",
-      "-1\tMeg",
-      "-1\tBill",
-      "+1\tJoe",
-      "+1\tJulie",
-      "Direction\t<<<<<<",
+      "Direction\t<<<<<<\tDrop\tMeg\tPass\tBill",
+      "Direction\t>>>>>>\tPOINT\tJoe\tPass\tJulie",
+      "O-\tMeg\tD+\tJoe",
+      "O-\tBill\tD+\tJulie"
     ]
   };
 
