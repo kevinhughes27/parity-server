@@ -6,14 +6,14 @@ require('mocha-sinon');
 
 var request = require('request');
 var server = require('../../server');
-var base_url = "http://localhost:3000/";
+var base_url = "http://localhost:3001/";
 var background = require('background-process');
 
 describe("POST /upload", function() {
   var url = base_url + 'upload';
 
   before(function () {
-    server.listen(3000);
+    server.listen(3001);
   });
 
   after(function () {

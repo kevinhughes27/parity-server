@@ -6,7 +6,7 @@ require('mocha-sinon');
 
 var request = require('request');
 var server = require('../../server');
-var base_url = "http://localhost:3000/";
+var base_url = "http://localhost:3001/";
 
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 var db = require('mongoskin').db(process.env.MONGODB_URI);
@@ -21,7 +21,7 @@ describe("weeks routes", function() {
   };
 
   before(function () {
-    server.listen(3000);
+    server.listen(3001);
   });
 
   after(function () {

@@ -9,6 +9,7 @@ var db = require('monk')(process.env.MONGODB_URI);
 
 // Init express
 var app = new express();
+app.use(express.static(__dirname + "/public"));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.set('json spaces', 2);
