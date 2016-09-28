@@ -4,7 +4,7 @@ var chai   = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
-var calcSalaries = require('../lib/calc_salaries');
+var calcSalaries = require('../../lib/calc_salaries');
 
 describe("calcSalaries", function() {
   it("increase for goals", function(done) {
