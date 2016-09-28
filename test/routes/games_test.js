@@ -4,13 +4,13 @@ var chai    = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
-var request = require('request');
-var server = require('../../server');
-var base_url = "http://localhost:3001/";
-
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 var db = require('mongoskin').db(process.env.MONGODB_URI);
 var games = db.collection('games');
+
+var request = require('request');
+var server = require('../../server');
+var base_url = "http://localhost:3001/";
 
 describe("games routes", function() {
   var game = {

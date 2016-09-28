@@ -4,13 +4,13 @@ var chai    = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
-var request = require('request');
-var server = require('../../server');
-var base_url = "http://localhost:3001/";
-
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 var db = require('mongoskin').db(process.env.MONGODB_URI);
 var weeks = db.collection('weeks');
+
+var request = require('request');
+var server = require('../../server');
+var base_url = "http://localhost:3001/";
 
 describe("weeks routes", function() {
   var week = {
