@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var db = require('mongoskin').db(process.env.MONGODB_URI);
-var games = db.collection('games');
+import express from 'express';
+let router = express.Router();
+let db = require('mongoskin').db(process.env.MONGODB_URI);
+let games = db.collection('games');
 
 /**
  * @api {get} /games List of games
