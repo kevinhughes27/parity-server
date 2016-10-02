@@ -37,9 +37,11 @@
     "presets": ["es2015", "stage-2"]
   },
   "scripts": {
+    "postinstall": "cd public && npm install",
     "start": "babel-node server.js",
     "auto-start": "nodemon --exec 'npm start' --ignore public",
-    "dev:frontend": "cd public && npm start",
+    "start:frontend": "cd public && npm start",
+    "test:frontend": "cd public && npm test",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
     "db:reset": "echo 'db.dropDatabase()' | mongo development"
   }
