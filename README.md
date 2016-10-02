@@ -55,7 +55,7 @@ Running:
 Front End
 ---------
 
-To develop on the front end app you need to run `npm run dev:frontend` then the script will open your browser to the app.
+To develop on the front end app you need to run `npm run dev:frontend` then the script will open your browser to the app. You'll need to run the backend server as well in order to be able to fetch data.
 
 Testing
 -------
