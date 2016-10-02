@@ -61,14 +61,20 @@ describe("POST /upload", function() {
     ]
   };
 
-  before(function () {
-    db.dropDatabase();
+  before(function() {
     server.listen(3001);
+  });
+
+  beforeEach(function () {
+    db.dropDatabase();
+  });
+
+  afterEach(function(){
+    db.dropDatabase();
   });
 
   after(function () {
     server.close();
-    db.dropDatabase();
   });
 
   it("returns status code 201", function(done) {

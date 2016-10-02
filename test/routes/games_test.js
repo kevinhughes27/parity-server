@@ -25,6 +25,14 @@ describe("games routes", function() {
     server.listen(3001);
   });
 
+  beforeEach(function () {
+    db.dropDatabase();
+  });
+
+  afterEach(function(){
+    db.dropDatabase();
+  });
+
   after(function () {
     server.close();
   });
