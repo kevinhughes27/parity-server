@@ -14,13 +14,13 @@ Server
 
     1. Stats Keeping Client `POSTs` a JSON object to the server.
 
-    2. Node server receives the request and spawns a process to parse the events
+    2. Node server receives the request parses the events into stats
 
     3. The game is saved to the database and a `201` is returned to the client
 
-    4. (Not implemented) Node sends the data to another data source (Google Sheets)
+    4. All `games` processed by the app are visible at `/games` and each week of stats is at `/weeks`
 
-    5. All `games` processed by the app are visible at `/games` and each week of stats is at `/weeks`
+    5. An app to view the data is served from '/'
 
 
 Setup
