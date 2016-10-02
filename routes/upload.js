@@ -1,13 +1,14 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+let router = express.Router();
 
-var _ = require('lodash');
-var db = require('mongoskin').db(process.env.MONGODB_URI);
-var games = db.collection('games');
-var weeks = db.collection('weeks');
+import _ from 'lodash';
 
-var parser = require('parity-parser');
-var calcSalaries = require('../lib/calc_salaries');
+let db = require('mongoskin').db(process.env.MONGODB_URI);
+let games = db.collection('games');
+let weeks = db.collection('weeks');
+
+import parser from 'parity-parser';
+import calcSalaries from '../lib/calc_salaries';
 
 /**
  * @api {post} /upload Upload Game Events
@@ -19,12 +20,12 @@ var calcSalaries = require('../lib/calc_salaries');
  * @apiSuccess (204)
  */
 router.post('/upload', function(req, res) {
-  game = req.body;
+  let game = req.body;
   game.time = new Date();
 
   createGame(game, function(err, result) {
-    stats = parser(game.events);
-    salaraDeltas = calcSalaries(stats);
+    let stats = parser(game.events);
+    let salaraDeltas = calcSalaries(stats);
     stats = _.merge(stats, salaraDeltas);
 
     saveGame(game, stats, function(err, result) {
@@ -51,8 +52,8 @@ var saveGame = function(game, stats, callback) {
 
 var saveWeek = function(week, gameStats, callback) {
   weeks.findOne({week: week}, function(err, w) {
-    weekStats = w ? w.stats : {};
-    stats = _.assign({}, weekStats, gameStats);
+    let weekStats = w ? w.stats : {};
+    let stats = _.assign({}, weekStats, gameStats);
     _saveWeek(week, stats, callback);
   });
 };

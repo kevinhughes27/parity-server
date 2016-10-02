@@ -60,7 +60,7 @@ describe("POST /upload", function() {
 
   it("calculates the stats", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, game) {
-      stats = game.stats;
+      let stats = game.stats;
 
       expect(stats['Mike']['Pulls']).to.equal(1);
       expect(stats['Mike']['Goals']).to.equal(1);
@@ -71,7 +71,7 @@ describe("POST /upload", function() {
 
   it("calculates salary change", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, game) {
-      stats = game.stats;
+      let stats = game.stats;
 
       expect(stats['Mike']['SalaryDelta']).to.equal(11000);
       expect(stats['Jill']['SalaryDelta']).to.equal(-5000);
@@ -82,8 +82,8 @@ describe("POST /upload", function() {
   it("saves the game to mongodb", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
       games.find().toArray(function(err, items) {
-        game = items[0];
-        stats = game.stats;
+        let game = items[0];
+        let stats = game.stats;
         expect(_.keys(stats).length).to.equal(4);
         expect(stats['Mike']['Pulls']).to.equal(1);
         expect(stats['Mike']['Goals']).to.equal(1);
@@ -96,8 +96,8 @@ describe("POST /upload", function() {
   it("saves a new week to mongodb if week doesn't exist yet", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
       weeks.find().toArray(function(err, items) {
-        week = items[0];
-        stats = week.stats;
+        let week = items[0];
+        let stats = week.stats;
         expect(_.keys(stats).length).to.equal(4);
         expect(stats['Mike']['Pulls']).to.equal(1);
         expect(stats['Mike']['Goals']).to.equal(1);
@@ -111,8 +111,8 @@ describe("POST /upload", function() {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
       request.post({url: url, json: true, body: game2}, function(error, response, body) {
         weeks.find().toArray(function(err, items) {
-          week = items[0];
-          stats = week.stats;
+          let week = items[0];
+          let stats = week.stats;
           expect(_.keys(stats).length).to.equal(8);
           // game
           expect(stats['Mike']['Pulls']).to.equal(1);

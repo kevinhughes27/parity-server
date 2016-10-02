@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var db = require('mongoskin').db(process.env.MONGODB_URI);
-var weeks = db.collection('weeks');
+import express from 'express';
+let router = express.Router();
+let db = require('mongoskin').db(process.env.MONGODB_URI);
+let weeks = db.collection('weeks');
 
 /**
  * @api {get} /weeks List of weeks
