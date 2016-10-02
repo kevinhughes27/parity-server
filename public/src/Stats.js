@@ -51,12 +51,12 @@ export default class Stats extends Component {
       <Griddle
         results={statsArray}
         resultsPerPage={statsArray.length}
+        tableClassName='highlight responsive-table'
         columns={columns}
         showFilter={true}
-        showSettings={true}
         showPager={false}
-        filterPlaceholderText={'Search players ...'}
-        settingsText={'More stats'}
+        useGriddleStyles={false}
+        filterPlaceholderText='Search players ...'
       />
     );
   }

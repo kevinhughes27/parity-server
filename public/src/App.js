@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import Stats from './Stats'
-import './App.css';
+import Stats from './Stats';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Parity 2.0</h2>
-        </div>
-        <p className="App-intro">
+      <div>
+        <nav>
+          <div className="nav-wrapper">
+            <a href="#" className="brand-logo center">Parity 2.0</a>
+          </div>
+        </nav>
+        <div className="container">
           <Stats />
-        </p>
+        </div>
       </div>
     );
   }
