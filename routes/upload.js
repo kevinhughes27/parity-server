@@ -23,24 +23,32 @@ router.post('/upload', function(req, res) {
   let game = req.body;
   game.time = new Date();
 
-  createGame(game, function(err, result) {
-    let stats = parser(game.events);
-    let salaraDeltas = calcSalaries(stats);
-    stats = _.merge(stats, salaraDeltas);
+  let prevWeekNum = game.week - 1;
 
-    saveGame(game, stats, function(err, result) {
-      saveWeek(game.week, stats, function(err, result) {
-        res.status(201).send(game);
+  previousWeek(prevWeekNum, function(err, prevWeek) {
+    createGame(game, function(err, result) {
+      let stats = parser(game.events);
+      let salaries = calcSalaries(stats, prevWeek);
+      stats = _.merge(stats, salaries);
+
+      saveGame(game, stats, function(err, result) {
+        saveWeek(game.week, stats, function(err, result) {
+          res.status(201).send(game);
+        });
       });
     });
   });
 });
 
-var createGame = function(game, callback) {
+let previousWeek = function(prevWeek, callback) {
+  weeks.findOne({week: prevWeek}, callback);
+};
+
+let createGame = function(game, callback) {
   games.insert(game, callback);
 };
 
-var saveGame = function(game, stats, callback) {
+let saveGame = function(game, stats, callback) {
   game.stats = stats;
 
   games.updateById(
@@ -50,7 +58,7 @@ var saveGame = function(game, stats, callback) {
   );
 };
 
-var saveWeek = function(week, gameStats, callback) {
+let saveWeek = function(week, gameStats, callback) {
   weeks.findOne({week: week}, function(err, w) {
     let weekStats = w ? w.stats : {};
     let stats = _.assign({}, weekStats, gameStats);
@@ -58,7 +66,7 @@ var saveWeek = function(week, gameStats, callback) {
   });
 };
 
-var _saveWeek = function(week, stats, callback) {
+let _saveWeek = function(week, stats, callback) {
   weeks.update(
     {week: week},
     {

@@ -4,6 +4,7 @@ var chai    = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
+process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 var db = require('mongoskin').db(process.env.MONGODB_URI);
 var games = db.collection('games');

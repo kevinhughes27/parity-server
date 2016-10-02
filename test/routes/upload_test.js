@@ -4,6 +4,7 @@ var chai    = require('chai'),
 chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
+process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 var _ = require('lodash');
 var db = require('mongoskin').db(process.env.MONGODB_URI);
@@ -122,6 +123,21 @@ describe("POST /upload", function() {
           expect(stats['Joe']['Pulls']).to.equal(1);
           expect(stats['Joe']['Goals']).to.equal(1);
           expect(stats['Meg']['Drops']).to.equal(1);
+          done();
+        });
+      });
+    });
+  });
+
+  it("salary adds week to week", function(done) {
+    request.post({url: url, json: true, body: game1}, function(error, response, body) {
+      game1.week = 2;
+      request.post({url: url, json: true, body: game1}, function(error, response, body) {
+        weeks.find().toArray(function(err, items) {
+          let week1 = items[0].stats;
+          let week2 = items[1].stats;
+          expect(week1['Mike']['Salary']).to.equal(511000);
+          expect(week2['Mike']['Salary']).to.equal(522000);
           done();
         });
       });

@@ -12,7 +12,8 @@ const columns = [
   'Catches',
   'Completions',
   'Throwaways',
-  'Drops'
+  'Drops',
+  'Salary'
 ];
 
 export default class Stats extends Component {
