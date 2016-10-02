@@ -10,7 +10,7 @@ class App extends Component {
             <a href="#" className="brand-logo center">Parity 2.0</a>
           </div>
         </nav>
-        <div className="container">
+        <div className="container" style={{height: '100%', minHeight: '100%'}}>
           <Stats />
         </div>
       </div>

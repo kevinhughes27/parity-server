@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import Griddle from 'griddle-react';
+import Loading from './Loading';
 
 const columns = [
   'Name',
@@ -38,11 +39,7 @@ export default class Stats extends Component {
   }
 
   render() {
-    if(this.state.loading) return (
-      <div>
-        Loading ...
-      </div>
-    );
+    if(this.state.loading) return (<Loading />);
 
     let stats = this.state.stats;
     let statsArray = _.map(_.keys(stats), (k) => {
