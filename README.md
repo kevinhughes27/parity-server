@@ -35,7 +35,7 @@ Then run `npm install` to get the required modules.
 
 Running:
 --------
-  To run the server locally by starting it with `npm start`
+  To run the server locally by starting it with `npm run start` (or `auto-start` if developing)
 
   Then run the following command to send a job to the server:
 
