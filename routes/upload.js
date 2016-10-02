@@ -9,6 +9,7 @@ let weeks = db.collection('weeks');
 
 import parser from 'parity-parser';
 import calcSalaries from '../lib/calc_salaries';
+import calcTeams from '../lib/calc_teams'
 
 /**
  * @api {post} /upload Upload Game Events
@@ -28,8 +29,12 @@ router.post('/upload', function(req, res) {
   previousWeek(prevWeekNum, function(err, prevWeek) {
     createGame(game, function(err, result) {
       let stats = parser(game.events);
+
       let salaries = calcSalaries(stats, prevWeek);
       stats = _.merge(stats, salaries);
+
+      let teams = calcTeams(game);
+      stats = _.merge(stats, teams);
 
       saveGame(game, stats, function(err, result) {
         saveWeek(game.week, stats, function(err, result) {
