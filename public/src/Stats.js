@@ -21,9 +21,10 @@ const columns = [
 export default class Stats extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       loading: true,
-      week: 1,
+      week: this.props.week,
       stats: null
     };
   }

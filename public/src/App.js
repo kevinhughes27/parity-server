@@ -11,7 +11,7 @@ class App extends Component {
           </div>
         </nav>
         <div className="container" style={{height: '100%', minHeight: '100%'}}>
-          <Stats />
+          <Stats week={1}/>
         </div>
       </div>
     );
