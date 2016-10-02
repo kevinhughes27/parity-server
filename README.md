@@ -52,6 +52,11 @@ Running:
   To clear all the data saved in the database run `npm run db:reset`
 
 
+Front End
+---------
+
+To develop on the front end app you need to run `npm run dev:frontend` then the script will open your browser to the app.
+
 Testing
 -------
   run `npm test`

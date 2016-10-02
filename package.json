@@ -39,6 +39,7 @@
   "scripts": {
     "start": "babel-node server.js",
     "auto-start": "nodemon --exec 'npm start' --ignore public",
+    "dev:frontend": "cd public && npm start",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
     "db:reset": "echo 'db.dropDatabase()' | mongo development"
   }
