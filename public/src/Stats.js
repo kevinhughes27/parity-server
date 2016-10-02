@@ -3,18 +3,35 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import Griddle from 'griddle-react';
 
+const columns = [
+  'Name',
+  'Goals',
+  'Assists',
+  '2nd Assist',
+  'D-Blocks',
+  'Catches',
+  'Completions',
+  'Throwaways',
+  'Drops'
+];
+
 export default class Stats extends Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
-      week: null
-    }
+      week: 1,
+      stats: null
+    };
   }
 
   componentWillMount() {
-    $.get('/weeks/1', (result) => {
-      this.setState({ week: result, loading: false });
+    this._fetchWeek(this.state.week);
+  }
+
+  _fetchWeek(num) {
+    $.get(`/weeks/${num}`, (result) => {
+      this.setState({ stats: result.stats, loading: false });
     });
   }
 
@@ -25,18 +42,21 @@ export default class Stats extends Component {
       </div>
     );
 
-    let week = this.state.week;
-    let stats = week.stats;
-    stats = _.map(_.keys(stats), (k) => {
-      return { name: k, ...stats[k] }
+    let stats = this.state.stats;
+    let statsArray = _.map(_.keys(stats), (k) => {
+      return { Name: k, ...stats[k] }
     });
 
     return (
       <Griddle
-        results={stats}
-        resultsPerPage={stats.length}
+        results={statsArray}
+        resultsPerPage={statsArray.length}
+        columns={columns}
         showFilter={true}
         showSettings={true}
+        showPager={false}
+        filterPlaceholderText={'Search players ...'}
+        settingsText={'More stats'}
       />
     );
   }
