@@ -48,8 +48,7 @@ describe("POST /upload", function() {
         'Bill',
       ],
       Team2: [
-        'Joe',
-        'Julie'
+        'Joe'
       ]
     },
     events: [
@@ -106,6 +105,16 @@ describe("POST /upload", function() {
 
       expect(stats['Mike']['Team']).to.equal('Team2');
       expect(stats['Jill']['Team']).to.equal('Team1');
+      done();
+    });
+  });
+
+  it("players not on the roster are given Substitute as their team", function(done) {
+    request.post({url: url, json: true, body: game2}, function(error, response, game) {
+      let stats = game.stats;
+
+      expect(stats['Joe']['Team']).to.equal('Team2');
+      expect(stats['Julie']['Team']).to.equal('Substitute');
       done();
     });
   });
