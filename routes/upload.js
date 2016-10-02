@@ -33,6 +33,7 @@ router.post('/upload', function(req, res) {
       let salaries = calcSalaries(stats, prevWeek);
       stats = _.merge(stats, salaries);
 
+      setDefaultTeam(stats, 'Substitute');
       let teams = calcTeams(game);
       stats = _.merge(stats, teams);
 
@@ -47,6 +48,10 @@ router.post('/upload', function(req, res) {
 
 let previousWeek = function(prevWeek, callback) {
   weeks.findOne({week: prevWeek}, callback);
+};
+
+let setDefaultTeam = function(stats, defaultTeam) {
+  _.each(stats, (player) => { player.Team = defaultTeam} );
 };
 
 let createGame = function(game, callback) {
