@@ -33,9 +33,22 @@ export default class Stats extends Component {
     this._fetchWeek(this.state.week);
   }
 
+  componentWillReceiveProps(nextProps) {
+    let week = nextProps.week;
+
+    this.setState({
+      loading: true,
+      week: week,
+      stats: null
+    });
+
+    this._fetchWeek(week);
+  }
+
   _fetchWeek(num) {
     $.get(`/weeks/${num}`, (result) => {
-      this.setState({ stats: result.stats, loading: false });
+      let stats = result? result.stats : {};
+      this.setState({ stats: stats, loading: false });
     });
   }
 
