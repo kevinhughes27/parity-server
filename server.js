@@ -1,29 +1,12 @@
-"use-strict";
 import express from 'express';
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
-
-// Load any environment vars in a .env file
-require('dotenv').load();
-
-let db = require('monk')(process.env.MONGODB_URI);
+import configure from './config';
+import add_routes from './routes';
 
 // Init express
-let app = new express();
-app.use(express.static(__dirname + "/public"));
-app.use(morgan('dev'));
-app.use(bodyParser.json());
-app.set('json spaces', 2);
+const app = express();
 
-// Connect routes
-import upload from './routes/upload';
-app.use('/', upload);
-
-import games from './routes/games';
-app.use('/', games);
-
-import weeks from './routes/weeks';
-app.use('/', weeks);
+configure(app);
+add_routes(app);
 
 // Start the server
 let server = app.listen(process.env.PORT, function() {
