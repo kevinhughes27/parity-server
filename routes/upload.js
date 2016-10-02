@@ -37,10 +37,8 @@ router.post('/upload', function(req, res) {
       let teams = calcTeams(game);
       stats = _.merge(stats, teams);
 
-      saveGame(game, stats, function(err, result) {
-        saveWeek(game.week, stats, function(err, result) {
-          res.status(201).send(game);
-        });
+      save(game, stats, function(err, result) {
+        res.status(201).send(game);
       });
     });
   });
@@ -57,6 +55,12 @@ let setDefaultTeam = function(stats, defaultTeam) {
 let createGame = function(game, callback) {
   games.insert(game, callback);
 };
+
+let save = function(game, stats, callback) {
+  saveGame(game, stats, function(err, result) {
+    saveWeek(game.week, stats, callback);
+  });
+}
 
 let saveGame = function(game, stats, callback) {
   game.stats = stats;
