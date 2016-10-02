@@ -20,6 +20,16 @@ describe("POST /upload", function() {
 
   var game1 = {
     week: 1,
+    teams: {
+      'Team1': [
+        'Jill',
+        'Bob'
+      ],
+      'Team2': [
+        'Mike',
+        'Jane'
+      ]
+    },
     events: [
       "Pull\tMike",
       "Direction\t>>>>>>",
@@ -32,6 +42,15 @@ describe("POST /upload", function() {
 
   var game2 = {
     week: 1,
+    teams: {
+      Team1: [
+        'Meg',
+        'Bill',
+      ],
+      Team2: [
+        'Joe'
+      ]
+    },
     events: [
       "Pull\tJoe",
       "Direction\t>>>>>>",
@@ -42,14 +61,20 @@ describe("POST /upload", function() {
     ]
   };
 
-  before(function () {
-    db.dropDatabase();
+  before(function() {
     server.listen(3001);
+  });
+
+  beforeEach(function () {
+    db.dropDatabase();
+  });
+
+  afterEach(function(){
+    db.dropDatabase();
   });
 
   after(function () {
     server.close();
-    db.dropDatabase();
   });
 
   it("returns status code 201", function(done) {
@@ -76,6 +101,26 @@ describe("POST /upload", function() {
 
       expect(stats['Mike']['SalaryDelta']).to.equal(11000);
       expect(stats['Jill']['SalaryDelta']).to.equal(-5000);
+      done();
+    });
+  });
+
+  it("adds the team to the stats", function(done) {
+    request.post({url: url, json: true, body: game1}, function(error, response, game) {
+      let stats = game.stats;
+
+      expect(stats['Mike']['Team']).to.equal('Team2');
+      expect(stats['Jill']['Team']).to.equal('Team1');
+      done();
+    });
+  });
+
+  it("players not on the roster are given Substitute as their team", function(done) {
+    request.post({url: url, json: true, body: game2}, function(error, response, game) {
+      let stats = game.stats;
+
+      expect(stats['Joe']['Team']).to.equal('Team2');
+      expect(stats['Julie']['Team']).to.equal('Substitute');
       done();
     });
   });

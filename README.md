@@ -49,6 +49,8 @@ Running:
   curl -X POST --data @test/files/week1_game1.json -H "Content-Type: application/json" http://localhost:3000/upload
   ```
 
+  To seed your development database with all the test files run `npm run db:seed`
+
   To clear all the data saved in the database run `npm run db:reset`
 
 

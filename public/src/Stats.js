@@ -5,6 +5,7 @@ import Griddle from 'griddle-react';
 
 const columns = [
   'Name',
+  'Team',
   'Goals',
   'Assists',
   '2nd Assist',

@@ -9,6 +9,7 @@ let weeks = db.collection('weeks');
 
 import parser from 'parity-parser';
 import calcSalaries from '../lib/calc_salaries';
+import calcTeams from '../lib/calc_teams'
 
 /**
  * @api {post} /upload Upload Game Events
@@ -28,13 +29,16 @@ router.post('/upload', function(req, res) {
   previousWeek(prevWeekNum, function(err, prevWeek) {
     createGame(game, function(err, result) {
       let stats = parser(game.events);
+
       let salaries = calcSalaries(stats, prevWeek);
       stats = _.merge(stats, salaries);
 
-      saveGame(game, stats, function(err, result) {
-        saveWeek(game.week, stats, function(err, result) {
-          res.status(201).send(game);
-        });
+      setDefaultTeam(stats, 'Substitute');
+      let teams = calcTeams(game);
+      stats = _.merge(stats, teams);
+
+      save(game, stats, function(err, result) {
+        res.status(201).send(game);
       });
     });
   });
@@ -44,9 +48,19 @@ let previousWeek = function(prevWeek, callback) {
   weeks.findOne({week: prevWeek}, callback);
 };
 
+let setDefaultTeam = function(stats, defaultTeam) {
+  _.each(stats, (player) => { player.Team = defaultTeam} );
+};
+
 let createGame = function(game, callback) {
   games.insert(game, callback);
 };
+
+let save = function(game, stats, callback) {
+  saveGame(game, stats, function(err, result) {
+    saveWeek(game.week, stats, callback);
+  });
+}
 
 let saveGame = function(game, stats, callback) {
   game.stats = stats;

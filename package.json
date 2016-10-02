@@ -26,6 +26,8 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-stage-2": "^6.16.0",
     "chai": "^3.2.0",
+    "glob": "^7.1.0",
+    "loopnext": "0.0.3",
     "mocha": "^2.3.2",
     "mocha-sinon": "^1.1.4",
     "nodemon": "^1.10.2",
@@ -34,7 +36,10 @@
     "sinon-chai": "^2.8.0"
   },
   "babel": {
-    "presets": ["es2015", "stage-2"]
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   },
   "scripts": {
     "postinstall": "cd public && npm install",
@@ -43,6 +48,7 @@
     "start:frontend": "cd public && npm start",
     "test:frontend": "cd public && npm test",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
+    "db:seed": "babel-node seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development"
   }
 }
