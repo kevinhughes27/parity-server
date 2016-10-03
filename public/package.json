@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "devDependencies": {
-    "react-scripts": "0.6.0"
-  },
   "dependencies": {
     "griddle-react": "^0.6.1",
     "jquery": "^3.1.1",
@@ -13,7 +10,8 @@
     "materialize-css": "^0.97.7",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-materialize": "^0.17.0"
+    "react-materialize": "^0.17.0",
+    "react-scripts": "0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

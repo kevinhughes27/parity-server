@@ -7,6 +7,10 @@ require('dotenv').load();
 
 module.exports = function(app) {
   app.use(express.static(__dirname + "/public"));
+  app.use('/static', express.static(__dirname + "/public/build/static"));
+
+  let indexPath = __dirname + "/public/build/index.html";
+  app.get('/', function (_, res) { res.sendFile(indexPath) });
 
   if(!process.env.TEST) {
     app.use(morgan('dev'));

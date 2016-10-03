@@ -1,6 +1,8 @@
 parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
+[https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
+
 backend for parity league stats.
 
 Parser
@@ -67,3 +69,8 @@ Front End
 To develop on the front end app you need to run `npm run start:frontend` then the script will open your browser to the app. You'll need to run the backend server as well in order to be able to fetch data.
 
 Similarly for testing run `npm run test:frontend`
+
+Deploy
+------
+
+The app is deployed to heroku. To deploy run `npm run deploy`. In order to do this you will need access to the heroku app and you will need to setup the heroku git remote.
