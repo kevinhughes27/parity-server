@@ -1,9 +1,9 @@
 parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
-[https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
-
 backend for parity league stats.
+
+production: [https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
 
 
 Server
@@ -66,7 +66,18 @@ To develop on the front end app you need to run `npm run start:frontend` then th
 
 Similarly for testing run `npm run test:frontend`
 
+
 Deploy
 ------
 
 The app is deployed to heroku. To deploy run `npm run deploy`. In order to do this you will need access to the heroku app and you will need to setup the heroku git remote.
+
+
+Contributing
+------------
+
+PRs welcome!
+
+If you are interested in contributing (especially if you play in the league!) Feel free to contact me first if you need any help or have questions.
+
+contact: `kevinhughes27@gmail.com`
