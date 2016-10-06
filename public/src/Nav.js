@@ -23,7 +23,7 @@ class Nav extends Component {
           <a href="#" className="brand-logo center hide-on-med-and-down">Parity 2.0</a>
           <a href="#" className="brand-logo left hide-on-large-only">Parity 2.0</a>
 
-          <ul className="left">
+          <ul className="left hide-on-med-and-down">
             <li style={{lineHeight: '40px'}}>
               <a href="https://github.com/kevinhughes27/parity-server" target="_blank">
                 <i className="fa fa-3x fa-github" aria-hidden="true"></i>
