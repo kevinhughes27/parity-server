@@ -5,10 +5,6 @@ parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server
 
 backend for parity league stats.
 
-Parser
-------
-The parse is a standalone javascript module that converts `events` into `stats`. For more info checkout the [repository](https://github.com/kevinhughes27/parity-parser).
-
 
 Server
 ------

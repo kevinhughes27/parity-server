@@ -7,7 +7,7 @@ let db = require('mongoskin').db(process.env.MONGODB_URI);
 let games = db.collection('games');
 let weeks = db.collection('weeks');
 
-import parser from 'parity-parser';
+import parser from '../lib/event_parser';
 import calcSalaries from '../lib/calc_salaries';
 import calcTeams from '../lib/calc_teams'
 
