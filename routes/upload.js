@@ -16,7 +16,7 @@ import calcTeams from '../lib/calc_teams'
  * @apiName PostUpload
  * @apiGroup Events
  *
- * @apiParam {Array} events Array of Game Events.
+ * @apiParam {Object} Game upload from the stat keeper client app.
  *
  * @apiSuccess (204)
  */
