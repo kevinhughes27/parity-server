@@ -69,7 +69,7 @@ export default class Stats extends Component {
         showFilter={true}
         showPager={false}
         useGriddleStyles={false}
-        filterPlaceholderText='Search players ...'
+        filterPlaceholderText='Search players or team ...'
       />
     );
   }
