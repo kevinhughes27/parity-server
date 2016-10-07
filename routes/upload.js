@@ -30,12 +30,12 @@ router.post('/upload', function(req, res) {
     createGame(game, function(err, result) {
       let stats = parser(game.events);
 
-      let salaries = calcSalaries(stats, prevWeek);
-      stats = _.merge(stats, salaries);
-
       setDefaultTeam(stats, 'Substitute');
       let teams = calcTeams(game);
       stats = _.merge(stats, teams);
+
+      let salaries = calcSalaries(stats, prevWeek);
+      stats = _.merge(stats, salaries);
 
       save(game, stats, function(err, result) {
         res.status(201).send(game);
