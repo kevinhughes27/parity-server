@@ -27,15 +27,15 @@ router.post('/upload', function(req, res) {
   previousWeek(prevWeekNum, function(err, prevWeek) {
     createGame(game, function(err, result) {
       let stats = calcStats(game.events);
+      game.stats = stats;
 
-      setDefaultTeam(stats, 'Substitute');
       let teams = calcTeams(game);
-      stats = _.merge(stats, teams);
+      game.stats = _.merge(game.stats, teams);
 
       let salaries = calcSalaries(stats, prevWeek);
-      stats = _.merge(stats, salaries);
+      game.stats = _.merge(game.stats, salaries);
 
-      save(game, stats, function(err, result) {
+      save(game, function(err, result) {
         res.status(201).send(game);
       });
     });
@@ -46,26 +46,20 @@ let previousWeek = function(prevWeek, callback) {
   weeks.findOne({week: prevWeek}, callback);
 };
 
-let setDefaultTeam = function(stats, defaultTeam) {
-  _.each(stats, (player) => { player.Team = defaultTeam} );
-};
-
 let createGame = function(game, callback) {
   games.insert(game, callback);
 };
 
-let save = function(game, stats, callback) {
-  saveGame(game, stats, function(err, result) {
-    saveWeek(game.week, stats, callback);
+let save = function(game, callback) {
+  saveGame(game, function(err, result) {
+    saveWeek(game.week, game.stats, callback);
   });
 }
 
-let saveGame = function(game, stats, callback) {
-  game.stats = stats;
-
+let saveGame = function(game, callback) {
   games.update(
     {_id: game._id},
-    {$set: {stats: stats}},
+    {$set: {stats: game.stats}},
     callback
   );
 };
