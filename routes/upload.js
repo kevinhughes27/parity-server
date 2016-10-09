@@ -19,31 +19,30 @@ import calcTeams from '../lib/calc_teams'
  *
  * @apiSuccess (204)
  */
-router.post('/upload', function(req, res) {
+router.post('/upload', async function(req, res) {
   let game = { ...req.body, time: new Date() };
 
   let prevWeekNum = game.week - 1;
+  let prevWeek = await findWeek(prevWeekNum);
 
-  previousWeek(prevWeekNum, function(err, prevWeek) {
-    createGame(game, function(err, result) {
-      let stats = calcStats(game.events);
-      game.stats = stats;
+  createGame(game, function(err, result) {
+    let stats = calcStats(game.events);
+    game.stats = stats;
 
-      let teams = calcTeams(game);
-      game.stats = _.merge(game.stats, teams);
+    let teams = calcTeams(game);
+    game.stats = _.merge(game.stats, teams);
 
-      let salaries = calcSalaries(stats, prevWeek);
-      game.stats = _.merge(game.stats, salaries);
+    let salaries = calcSalaries(stats, prevWeek);
+    game.stats = _.merge(game.stats, salaries);
 
-      save(game, function(err, result) {
-        res.status(201).send(game);
-      });
+    save(game, function(err, result) {
+      res.status(201).send(game);
     });
   });
 });
 
-let previousWeek = function(prevWeek, callback) {
-  weeks.findOne({week: prevWeek}, callback);
+let findWeek = function(weekNum) {
+  return weeks.findOne({week: weekNum});
 };
 
 let createGame = function(game, callback) {
