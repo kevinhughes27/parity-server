@@ -7,7 +7,7 @@ let db = require('mongoskin').db(process.env.MONGODB_URI);
 let games = db.collection('games');
 let weeks = db.collection('weeks');
 
-import parser from '../lib/event_parser';
+import calcStats from '../lib/calc_stats';
 import calcSalaries from '../lib/calc_salaries';
 import calcTeams from '../lib/calc_teams'
 
@@ -28,7 +28,7 @@ router.post('/upload', function(req, res) {
 
   previousWeek(prevWeekNum, function(err, prevWeek) {
     createGame(game, function(err, result) {
-      let stats = parser(game.events);
+      let stats = calcStats(game.events);
 
       setDefaultTeam(stats, 'Substitute');
       let teams = calcTeams(game);
