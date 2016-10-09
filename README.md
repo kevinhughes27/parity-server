@@ -58,6 +58,7 @@ Testing
 
   to run a single test: `mocha <path_to_test> --grep <something unique in the test name>`
 
+  there is also an `auto-test` command which re-runs the whole suite any time a file is saved.
 
 Front End
 ---------
