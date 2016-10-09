@@ -1,17 +1,17 @@
-var chai    = require('chai'),
-    expect  = chai.expect;
+import _ from 'lodash';
+import chai from 'chai';
+let expect = chai.expect;
 
 chai.use(require('sinon-chai'));
-require('mocha-sinon');
+import sinon from 'mocha-sinon';
+import request from 'request';
 
 process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
-var _ = require('lodash');
-var db = require('mongoskin').db(process.env.MONGODB_URI);
-var games = db.collection('games');
-var weeks = db.collection('weeks');
+const db = require('mongoskin').db(process.env.MONGODB_URI);
+const games = db.collection('games');
+const weeks = db.collection('weeks');
 
-var request = require('request');
 var server = require('../../server');
 var base_url = "http://localhost:3001/";
 
