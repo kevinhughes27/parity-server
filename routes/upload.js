@@ -25,19 +25,19 @@ router.post('/upload', async function(req, res) {
   let prevWeekNum = game.week - 1;
   let prevWeek = await findWeek(prevWeekNum);
 
-  createGame(game, function(err, result) {
-    let stats = calcStats(game.events);
-    game.stats = stats;
+  await createGame(game);
 
-    let teams = calcTeams(game);
-    game.stats = _.merge(game.stats, teams);
+  let stats = calcStats(game.events);
+  game.stats = stats;
 
-    let salaries = calcSalaries(stats, prevWeek);
-    game.stats = _.merge(game.stats, salaries);
+  let teams = calcTeams(game);
+  game.stats = _.merge(game.stats, teams);
 
-    save(game, function(err, result) {
-      res.status(201).send(game);
-    });
+  let salaries = calcSalaries(stats, prevWeek);
+  game.stats = _.merge(game.stats, salaries);
+
+  save(game, function(err, result) {
+    res.status(201).send(game);
   });
 });
 
@@ -45,8 +45,8 @@ let findWeek = function(weekNum) {
   return weeks.findOne({week: weekNum});
 };
 
-let createGame = function(game, callback) {
-  games.insert(game, callback);
+let createGame = function(game) {
+  return games.insert(game);
 };
 
 let save = function(game, callback) {
