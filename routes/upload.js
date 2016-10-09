@@ -36,50 +36,43 @@ router.post('/upload', async function(req, res) {
   let salaries = calcSalaries(stats, prevWeek);
   game.stats = _.merge(game.stats, salaries);
 
-  save(game, function(err, result) {
-    res.status(201).send(game);
-  });
-});
+  await saveGame(game);
+  await updateWeek(game.week, game.stats);
 
-let findWeek = function(weekNum) {
-  return weeks.findOne({week: weekNum});
-};
+  res.status(201).send(game);
+});
 
 let createGame = function(game) {
   return games.insert(game);
 };
 
-let save = function(game, callback) {
-  saveGame(game, function(err, result) {
-    saveWeek(game.week, game.stats, callback);
-  });
-}
+let findWeek = function(weekNum) {
+  return weeks.findOne({week: weekNum});
+};
 
-let saveGame = function(game, callback) {
-  games.update(
+let saveGame = function(game) {
+  return games.update(
     {_id: game._id},
     {$set: {stats: game.stats}},
-    callback
   );
 };
 
-let saveWeek = function(week, gameStats, callback) {
-  weeks.findOne({week: week}, function(err, w) {
-    let weekStats = w ? w.stats : {};
-    let stats = _.assign({}, weekStats, gameStats);
-    _saveWeek(week, stats, callback);
-  });
+let updateWeek = async function(weekNum, gameStats) {
+  let week = await findWeek(weekNum);
+  let weekStats = week ? week.stats : {};
+  let stats = _.assign({}, weekStats, gameStats);
+
+  return saveWeek(weekNum, stats);
 };
 
-let _saveWeek = function(week, stats, callback) {
+let saveWeek = function(week, stats) {
   weeks.update(
     {week: week},
     {
       $set: {stats: stats},
       $setOnInsert: {week: week}
     },
-    {upsert: true},
-    callback
+    {upsert: true}
   );
 };
 
