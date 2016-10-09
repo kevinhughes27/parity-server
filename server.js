@@ -1,10 +1,11 @@
 import express from 'express';
-import configure from './config';
-import add_routes from './routes';
+import configure from './config/config';
+import add_routes from './config/routes';
 
 // Init express
 const app = express();
 
+// Configure
 configure(app);
 add_routes(app);
 

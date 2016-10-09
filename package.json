@@ -52,7 +52,7 @@
     "start:frontend": "cd public && npm start",
     "test:frontend": "cd public && npm test",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
-    "db:seed": "babel-node seed.js",
+    "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
     "deploy": "git push heroku"
   }
