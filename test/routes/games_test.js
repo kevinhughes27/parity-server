@@ -10,9 +10,9 @@ process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 const db = require('monk')(process.env.MONGODB_URI)
 const games = db.get('games');
 
-var server = require('../../server');
-
 describe("games routes", function() {
+  var server = require('../../server');
+
   var game = {
     week: 1,
     events: [
