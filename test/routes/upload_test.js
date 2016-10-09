@@ -63,11 +63,6 @@ describe("POST /upload", function() {
     server.listen(3001);
   });
 
-  beforeEach(function () {
-    games.drop();
-    weeks.drop();
-  });
-
   afterEach(function(){
     games.drop();
     weeks.drop();
