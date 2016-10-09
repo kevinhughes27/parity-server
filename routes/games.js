@@ -1,7 +1,8 @@
 import express from 'express';
 let router = express.Router();
-let db = require('mongoskin').db(process.env.MONGODB_URI);
-let games = db.collection('games');
+
+const db = require('monk')(process.env.MONGODB_URI)
+const games = db.get('games');
 
 /**
  * @api {get} /games List of games
@@ -11,8 +12,8 @@ let games = db.collection('games');
  * @apiSuccess (200)
  */
 router.get('/games', function (req, res) {
-  games.find().toArray(function(err, items) {
-    res.json(items);
+  games.find({}, {}, function(err, docs) {
+    res.json(docs);
   });
 });
 
@@ -24,7 +25,7 @@ router.get('/games', function (req, res) {
  * @apiSuccess (200)
  */
 router.get('/games/:id', function (req, res) {
-  games.findById(req.params.id, function(err, item) {
+  games.findOne({_id: req.params.id}, function(err, item) {
     res.json(item);
   });
 });

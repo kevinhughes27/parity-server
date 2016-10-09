@@ -1,12 +1,11 @@
 import express from 'express';
 let router = express.Router();
 
+const db = require('monk')(process.env.MONGODB_URI)
+const games = db.get('games');
+const weeks = db.get('weeks');
+
 import _ from 'lodash';
-
-let db = require('mongoskin').db(process.env.MONGODB_URI);
-let games = db.collection('games');
-let weeks = db.collection('weeks');
-
 import calcStats from '../lib/calc_stats';
 import calcSalaries from '../lib/calc_salaries';
 import calcTeams from '../lib/calc_teams'
@@ -65,8 +64,8 @@ let save = function(game, stats, callback) {
 let saveGame = function(game, stats, callback) {
   game.stats = stats;
 
-  games.updateById(
-    game._id,
+  games.update(
+    {_id: game._id},
     {$set: {stats: stats}},
     callback
   );

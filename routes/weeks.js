@@ -1,7 +1,8 @@
 import express from 'express';
 let router = express.Router();
-let db = require('mongoskin').db(process.env.MONGODB_URI);
-let weeks = db.collection('weeks');
+
+const db = require('monk')(process.env.MONGODB_URI)
+const weeks = db.get('weeks');
 
 /**
  * @api {get} /weeks List of weeks
@@ -11,8 +12,8 @@ let weeks = db.collection('weeks');
  * @apiSuccess (200)
  */
 router.get('/weeks', function (req, res) {
-  weeks.find().toArray(function(err, items) {
-    res.json(items);
+  weeks.find({}, {}, function(err, docs) {
+    res.json(docs);
   });
 });
 

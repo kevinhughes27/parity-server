@@ -7,8 +7,8 @@ import request from 'request';
 
 process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
-const db = require('mongoskin').db(process.env.MONGODB_URI);
-const games = db.collection('games');
+const db = require('monk')(process.env.MONGODB_URI)
+const games = db.get('games');
 
 var server = require('../../server');
 var base_url = "http://localhost:3001/";
@@ -21,19 +21,19 @@ describe("games routes", function() {
     ]
   };
 
-  before(function () {
+  before(function() {
     server.listen(3001);
   });
 
-  beforeEach(function () {
-    db.dropDatabase();
+  beforeEach(function() {
+    games.drop();
   });
 
-  afterEach(function(){
-    db.dropDatabase();
+  afterEach(function() {
+    games.drop();
   });
 
-  after(function () {
+  after(function() {
     server.close();
   });
 

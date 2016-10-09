@@ -8,9 +8,9 @@ import request from 'request';
 
 process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
-const db = require('mongoskin').db(process.env.MONGODB_URI);
-const games = db.collection('games');
-const weeks = db.collection('weeks');
+const db = require('monk')(process.env.MONGODB_URI)
+const games = db.get('games');
+const weeks = db.get('weeks');
 
 var server = require('../../server');
 var base_url = "http://localhost:3001/";
@@ -66,11 +66,13 @@ describe("POST /upload", function() {
   });
 
   beforeEach(function () {
-    db.dropDatabase();
+    games.drop();
+    weeks.drop();
   });
 
   afterEach(function(){
-    db.dropDatabase();
+    games.drop();
+    weeks.drop();
   });
 
   after(function () {
@@ -127,7 +129,7 @@ describe("POST /upload", function() {
 
   it("saves the game to mongodb", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
-      games.find().toArray(function(err, items) {
+      games.find({}, {}, function(err, items) {
         let game = items[0];
         let stats = game.stats;
         expect(_.keys(stats).length).to.equal(4);
@@ -141,7 +143,7 @@ describe("POST /upload", function() {
 
   it("saves a new week to mongodb if week doesn't exist yet", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
-      weeks.find().toArray(function(err, items) {
+      weeks.find({}, {}, function(err, items) {
         let week = items[0];
         let stats = week.stats;
         expect(_.keys(stats).length).to.equal(4);
@@ -156,7 +158,7 @@ describe("POST /upload", function() {
   it("updates the week in mongodb if week exists", function(done) {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
       request.post({url: url, json: true, body: game2}, function(error, response, body) {
-        weeks.find().toArray(function(err, items) {
+        weeks.find({}, {}, function(err, items) {
           let week = items[0];
           let stats = week.stats;
           expect(_.keys(stats).length).to.equal(8);
@@ -178,7 +180,7 @@ describe("POST /upload", function() {
     request.post({url: url, json: true, body: game1}, function(error, response, body) {
       game1.week = 2;
       request.post({url: url, json: true, body: game1}, function(error, response, body) {
-        weeks.find().toArray(function(err, items) {
+        weeks.find({}, {}, function(err, items) {
           let week1 = items[0].stats;
           let week2 = items[1].stats;
           expect(week1['Mike']['Salary']).to.equal(511000);

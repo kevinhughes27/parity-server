@@ -7,8 +7,8 @@ import request from 'request';
 
 process.env.TEST = 1;
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
-const db = require('mongoskin').db(process.env.MONGODB_URI);
-const weeks = db.collection('weeks');
+const db = require('monk')(process.env.MONGODB_URI)
+const weeks = db.get('weeks');
 
 var server = require('../../server');
 var base_url = "http://localhost:3001/";
@@ -26,11 +26,11 @@ describe("weeks routes", function() {
   });
 
   beforeEach(function () {
-    db.dropDatabase();
+    weeks.drop();
   });
 
   afterEach(function(){
-    db.dropDatabase();
+    weeks.drop();
   });
 
   after(function () {
