@@ -20,8 +20,7 @@ import calcTeams from '../lib/calc_teams'
  * @apiSuccess (204)
  */
 router.post('/upload', function(req, res) {
-  let game = req.body;
-  game.time = new Date();
+  let game = { ...req.body, time: new Date() };
 
   let prevWeekNum = game.week - 1;
 
