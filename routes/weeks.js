@@ -1,8 +1,8 @@
-import express from 'express';
-let router = express.Router();
+import express from 'express'
+let router = express.Router()
 
 const db = require('monk')(process.env.MONGODB_URI)
-const weeks = db.get('weeks');
+const weeks = db.get('weeks')
 
 /**
  * @api {get} /weeks List of weeks
@@ -12,10 +12,10 @@ const weeks = db.get('weeks');
  * @apiSuccess (200)
  */
 router.get('/weeks', function (req, res) {
-  weeks.find({}, {}, function(err, docs) {
-    res.json(docs);
-  });
-});
+  weeks.find({}, {}, function (err, docs) {
+    res.json(docs)
+  })
+})
 
 /**
  * @api {get} /weeks/:week Week
@@ -25,9 +25,9 @@ router.get('/weeks', function (req, res) {
  * @apiSuccess (200)
  */
 router.get('/weeks/:week', function (req, res) {
-  weeks.findOne({week: parseInt(req.params.week)}, function(err, item) {
-    res.json(item);
-  });
-});
+  weeks.findOne({week: parseInt(req.params.week)}, function (err, item) {
+    res.json(item)
+  })
+})
 
-module.exports = router;
+module.exports = router
