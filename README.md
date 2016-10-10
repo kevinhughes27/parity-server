@@ -1,7 +1,7 @@
 parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
-backend for parity league stats.
+new backend for [OCUA Parity League](http://www.ocua.ca/Parity-League) stats.
 
 production: [https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
 
