@@ -19,74 +19,60 @@ import calcTeams from '../lib/calc_teams'
  *
  * @apiSuccess (204)
  */
-router.post('/upload', function(req, res) {
+router.post('/upload', async function(req, res) {
   let game = { ...req.body, time: new Date() };
 
   let prevWeekNum = game.week - 1;
+  let prevWeek = await findWeek(prevWeekNum);
 
-  previousWeek(prevWeekNum, function(err, prevWeek) {
-    createGame(game, function(err, result) {
-      let stats = calcStats(game.events);
+  await createGame(game);
 
-      setDefaultTeam(stats, 'Substitute');
-      let teams = calcTeams(game);
-      stats = _.merge(stats, teams);
-
-      let salaries = calcSalaries(stats, prevWeek);
-      stats = _.merge(stats, salaries);
-
-      save(game, stats, function(err, result) {
-        res.status(201).send(game);
-      });
-    });
-  });
-});
-
-let previousWeek = function(prevWeek, callback) {
-  weeks.findOne({week: prevWeek}, callback);
-};
-
-let setDefaultTeam = function(stats, defaultTeam) {
-  _.each(stats, (player) => { player.Team = defaultTeam} );
-};
-
-let createGame = function(game, callback) {
-  games.insert(game, callback);
-};
-
-let save = function(game, stats, callback) {
-  saveGame(game, stats, function(err, result) {
-    saveWeek(game.week, stats, callback);
-  });
-}
-
-let saveGame = function(game, stats, callback) {
+  let stats = calcStats(game.events);
   game.stats = stats;
 
-  games.update(
+  let teams = calcTeams(game);
+  game.stats = _.merge(game.stats, teams);
+
+  let salaries = calcSalaries(stats, prevWeek);
+  game.stats = _.merge(game.stats, salaries);
+
+  await saveGame(game);
+  await updateWeek(game.week, game.stats);
+
+  res.status(201).send(game);
+});
+
+let createGame = function(game) {
+  return games.insert(game);
+};
+
+let findWeek = function(weekNum) {
+  return weeks.findOne({week: weekNum});
+};
+
+let saveGame = function(game) {
+  return games.update(
     {_id: game._id},
-    {$set: {stats: stats}},
-    callback
+    {$set: {stats: game.stats}},
   );
 };
 
-let saveWeek = function(week, gameStats, callback) {
-  weeks.findOne({week: week}, function(err, w) {
-    let weekStats = w ? w.stats : {};
-    let stats = _.assign({}, weekStats, gameStats);
-    _saveWeek(week, stats, callback);
-  });
+let updateWeek = async function(weekNum, gameStats) {
+  let week = await findWeek(weekNum);
+  let weekStats = week ? week.stats : {};
+  let stats = _.assign({}, weekStats, gameStats);
+
+  return saveWeek(weekNum, stats);
 };
 
-let _saveWeek = function(week, stats, callback) {
+let saveWeek = function(week, stats) {
   weeks.update(
     {week: week},
     {
       $set: {stats: stats},
       $setOnInsert: {week: week}
     },
-    {upsert: true},
-    callback
+    {upsert: true}
   );
 };
 
