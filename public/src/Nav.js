@@ -1,21 +1,21 @@
-import _map from 'lodash/map';
-import React, { Component } from 'react';
-import {Dropdown, NavItem} from 'react-materialize';
+import _map from 'lodash/map'
+import React, { Component } from 'react'
+import {Dropdown, NavItem} from 'react-materialize'
 
 class Nav extends Component {
-  renderWeeks(weeks) {
+  renderWeeks (weeks) {
     return _map(weeks, (week) => {
       return (
-        <NavItem key={week} onClick={() => {this.props.weekChange(week)} }>
+        <NavItem key={week} onClick={() => { this.props.weekChange(week) } }>
           Week {week}
         </NavItem>
-      );
-    });
+      )
+    })
   }
 
-  render() {
+  render () {
     let week = this.props.week
-    let weeks = this.props.weeks;
+    let weeks = this.props.weeks
 
     return (
       <nav>
@@ -43,8 +43,8 @@ class Nav extends Component {
           </ul>
         </div>
       </nav>
-    );
+    )
   }
 }
 
-export default Nav;
+export default Nav

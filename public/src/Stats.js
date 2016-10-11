@@ -1,8 +1,8 @@
-import $ from 'jquery';
-import _ from 'lodash';
-import React, { Component } from 'react';
-import Griddle from 'griddle-react';
-import Loading from './Loading';
+import $ from 'jquery'
+import _ from 'lodash'
+import React, { Component } from 'react'
+import Griddle from 'griddle-react'
+import Loading from './Loading'
 
 const columns = [
   'Name',
@@ -16,49 +16,49 @@ const columns = [
   'Throwaways',
   'Drops',
   'Salary'
-];
+]
 
 export default class Stats extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
       loading: true,
       week: this.props.week,
       stats: null
-    };
+    }
   }
 
-  componentWillMount() {
-    this._fetchWeek(this.state.week);
+  componentWillMount () {
+    this._fetchWeek(this.state.week)
   }
 
-  componentWillReceiveProps(nextProps) {
-    let week = nextProps.week;
+  componentWillReceiveProps (nextProps) {
+    let week = nextProps.week
 
     this.setState({
       loading: true,
       week: week,
       stats: null
-    });
+    })
 
-    this._fetchWeek(week);
+    this._fetchWeek(week)
   }
 
-  _fetchWeek(num) {
+  _fetchWeek (num) {
     $.get(`/weeks/${num}`, (result) => {
-      let stats = result? result.stats : {};
-      this.setState({ stats: stats, loading: false });
-    });
+      let stats = result ? result.stats : {}
+      this.setState({ stats: stats, loading: false })
+    })
   }
 
-  render() {
-    if(this.state.loading) return (<Loading />);
+  render () {
+    if (this.state.loading) return (<Loading />)
 
-    let stats = this.state.stats;
+    let stats = this.state.stats
     let statsArray = _.map(_.keys(stats), (k) => {
       return { Name: k, ...stats[k] }
-    });
+    })
 
     return (
       <Griddle
@@ -71,6 +71,6 @@ export default class Stats extends Component {
         useGriddleStyles={false}
         filterPlaceholderText='Search players or team ...'
       />
-    );
+    )
   }
 }

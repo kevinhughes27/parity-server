@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Stats extends Component {
-  render() {
+  render () {
     let layoutClass = {
       height: '100%',
       minHeight: '100%',
@@ -55,6 +55,6 @@ export default class Stats extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

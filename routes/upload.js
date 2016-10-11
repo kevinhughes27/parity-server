@@ -1,13 +1,13 @@
-import express from 'express';
-let router = express.Router();
+import express from 'express'
+let router = express.Router()
 
 const db = require('monk')(process.env.MONGODB_URI)
-const games = db.get('games');
-const weeks = db.get('weeks');
+const games = db.get('games')
+const weeks = db.get('weeks')
 
-import _ from 'lodash';
-import calcStats from '../lib/calc_stats';
-import calcSalaries from '../lib/calc_salaries';
+import _ from 'lodash'
+import calcStats from '../lib/calc_stats'
+import calcSalaries from '../lib/calc_salaries'
 import calcTeams from '../lib/calc_teams'
 
 /**
@@ -19,53 +19,53 @@ import calcTeams from '../lib/calc_teams'
  *
  * @apiSuccess (204)
  */
-router.post('/upload', async function(req, res) {
-  let game = { ...req.body, time: new Date() };
+router.post('/upload', async function (req, res) {
+  let game = { ...req.body, time: new Date() }
 
-  let prevWeekNum = game.week - 1;
-  let prevWeek = await findWeek(prevWeekNum);
+  let prevWeekNum = game.week - 1
+  let prevWeek = await findWeek(prevWeekNum)
 
-  await createGame(game);
+  await createGame(game)
 
-  let stats = calcStats(game.events);
-  game.stats = stats;
+  let stats = calcStats(game.events)
+  game.stats = stats
 
-  let teams = calcTeams(game);
-  game.stats = _.merge(game.stats, teams);
+  let teams = calcTeams(game)
+  game.stats = _.merge(game.stats, teams)
 
-  let salaries = calcSalaries(stats, prevWeek);
-  game.stats = _.merge(game.stats, salaries);
+  let salaries = calcSalaries(stats, prevWeek)
+  game.stats = _.merge(game.stats, salaries)
 
-  await saveGame(game);
-  await updateWeek(game.week, game.stats);
+  await saveGame(game)
+  await updateWeek(game.week, game.stats)
 
-  res.status(201).send(game);
-});
+  res.status(201).send(game)
+})
 
-let createGame = function(game) {
-  return games.insert(game);
-};
+let createGame = function (game) {
+  return games.insert(game)
+}
 
-let findWeek = function(weekNum) {
-  return weeks.findOne({week: weekNum});
-};
+let findWeek = function (weekNum) {
+  return weeks.findOne({week: weekNum})
+}
 
-let saveGame = function(game) {
+let saveGame = function (game) {
   return games.update(
     {_id: game._id},
     {$set: {stats: game.stats}},
-  );
-};
+  )
+}
 
-let updateWeek = async function(weekNum, gameStats) {
-  let week = await findWeek(weekNum);
-  let weekStats = week ? week.stats : {};
-  let stats = _.assign({}, weekStats, gameStats);
+let updateWeek = async function (weekNum, gameStats) {
+  let week = await findWeek(weekNum)
+  let weekStats = week ? week.stats : {}
+  let stats = _.assign({}, weekStats, gameStats)
 
-  return saveWeek(weekNum, stats);
-};
+  return saveWeek(weekNum, stats)
+}
 
-let saveWeek = function(week, stats) {
+let saveWeek = function (week, stats) {
   weeks.update(
     {week: week},
     {
@@ -73,7 +73,7 @@ let saveWeek = function(week, stats) {
       $setOnInsert: {week: week}
     },
     {upsert: true}
-  );
-};
+  )
+}
 
-module.exports = router;
+module.exports = router

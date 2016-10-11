@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import Nav from './Nav';
-import Stats from './Stats';
+import React, { Component } from 'react'
+import Nav from './Nav'
+import Stats from './Stats'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
       week: 1
     }
   }
 
-  weekChange(week) {
-    this.setState({week: week});
+  weekChange (week) {
+    this.setState({week: week})
   }
 
-  render() {
-    let week = this.state.week;
-    let weeks = [1, 2];
+  render () {
+    let week = this.state.week
+    let weeks = [1, 2]
 
-    let weekChange = this.weekChange.bind(this);
+    let weekChange = this.weekChange.bind(this)
 
     return (
       <div>
@@ -28,8 +28,8 @@ class App extends Component {
           <Stats week={week}/>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

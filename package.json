@@ -35,9 +35,13 @@
     "morgan": "^1.7.0"
   },
   "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1",
     "glob": "^7.1.0",
     "loopnext": "0.0.3",
-    "chai": "^3.2.0",
     "mocha": "^2.3.2",
     "mocha-sinon": "^1.1.4",
     "nodemon": "^1.10.2",
