@@ -1,3 +1,5 @@
+// @flow
+
 import $ from 'jquery'
 import _ from 'lodash'
 import React, { Component } from 'react'
@@ -18,8 +20,20 @@ const columns = [
   'Salary'
 ]
 
+type Props = {
+  week: number
+}
+
 export default class Stats extends Component {
-  constructor (props) {
+  props: Props
+
+  state: {
+    loading: boolean,
+    week: number,
+    stats: any
+  }
+
+  constructor (props: Props) {
     super(props)
 
     this.state = {
@@ -33,7 +47,7 @@ export default class Stats extends Component {
     this._fetchWeek(this.state.week)
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps: Props) {
     let week = nextProps.week
 
     this.setState({
@@ -45,7 +59,7 @@ export default class Stats extends Component {
     this._fetchWeek(week)
   }
 
-  _fetchWeek (num) {
+  _fetchWeek (num: number) {
     $.get(`/weeks/${num}`, (result) => {
       let stats = result ? result.stats : {}
       this.setState({ stats: stats, loading: false })
