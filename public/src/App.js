@@ -1,9 +1,15 @@
+// @flow
+
 import React, { Component } from 'react'
 import Nav from './Nav'
 import Stats from './Stats'
 
 class App extends Component {
-  constructor (props) {
+  state: {
+    week: number
+  }
+
+  constructor (props: any) {
     super(props)
 
     this.state = {
@@ -11,7 +17,7 @@ class App extends Component {
     }
   }
 
-  weekChange (week) {
+  weekChange (week: number) {
     this.setState({week: week})
   }
 

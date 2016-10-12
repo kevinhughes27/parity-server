@@ -1,12 +1,14 @@
 {
   "extends": [
     "plugin:react/recommended",
+    "plugin:flowtype/recommended",
     "standard"
   ],
   "installedESLint": true,
   "plugins": [
     "standard",
     "promise",
-    "react"
+    "react",
+    "flowtype"
   ]
 }

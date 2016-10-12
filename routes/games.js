@@ -1,3 +1,5 @@
+// @flow
+
 import express from 'express'
 let router = express.Router()
 
@@ -11,10 +13,9 @@ const games = db.get('games')
  *
  * @apiSuccess (200)
  */
-router.get('/games', function (req, res) {
-  games.find({}, {}, function (err, docs) {
-    res.json(docs)
-  })
+router.get('/games', async function (req, res) {
+  let docs = await games.find({}, {})
+  res.json(docs)
 })
 
 /**
@@ -24,10 +25,9 @@ router.get('/games', function (req, res) {
  *
  * @apiSuccess (200)
  */
-router.get('/games/:id', function (req, res) {
-  games.findOne({_id: req.params.id}, function (err, item) {
-    res.json(item)
-  })
+router.get('/games/:id', async function (req, res) {
+  let doc = await games.findOne({_id: req.params.id})
+  res.json(doc)
 })
 
 module.exports = router

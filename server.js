@@ -1,3 +1,5 @@
+// @flow
+
 import 'babel-polyfill'
 import express from 'express'
 import configure from './config/config'
@@ -21,6 +23,6 @@ exports.listen = function () {
   server.listen.apply(server, arguments)
 }
 
-exports.close = function (callback) {
+exports.close = function (callback: any) {
   server.close(callback)
 }

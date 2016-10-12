@@ -1,3 +1,5 @@
+// @flow
+
 import express from 'express'
 let router = express.Router()
 
@@ -11,10 +13,9 @@ const weeks = db.get('weeks')
  *
  * @apiSuccess (200)
  */
-router.get('/weeks', function (req, res) {
-  weeks.find({}, {}, function (err, docs) {
-    res.json(docs)
-  })
+router.get('/weeks', async function (req, res) {
+  let docs = await weeks.find({}, {})
+  res.json(docs)
 })
 
 /**
@@ -24,10 +25,9 @@ router.get('/weeks', function (req, res) {
  *
  * @apiSuccess (200)
  */
-router.get('/weeks/:week', function (req, res) {
-  weeks.findOne({week: parseInt(req.params.week)}, function (err, item) {
-    res.json(item)
-  })
+router.get('/weeks/:week', async function (req, res) {
+  let doc = await weeks.findOne({week: parseInt(req.params.week)})
+  res.json(doc)
 })
 
 module.exports = router
