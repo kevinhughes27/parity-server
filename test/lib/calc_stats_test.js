@@ -11,7 +11,7 @@ describe('calcStats', function () {
   })
 
   it('stat: Pick-Ups', function () {
-    let input = ['Direction\t>>>>>>\tPOINT\tJill\tPass\tBob',]
+    let input = ['Direction\t>>>>>>\tPOINT\tJill\tPass\tBob']
     let output = calcStats(input)
     expect(output['Bob']['Pick-Ups']).to.equal(1)
   })
@@ -113,13 +113,23 @@ describe('calcStats', function () {
   })
 
   it('stat: OPointsFor', function () {
-    let input = ['Direction\t<<<<<<\tPOINT\tJill', 'O+\tJill\tD-\tJane']
+    let input = [
+      'Direction\t<<<<<<\tPOINT\tJill',
+      '1\tJill',
+      '-1\tJane'
+    ]
+
     let output = calcStats(input)
     expect(output['Jill']['OPointsFor']).to.equal(1)
   })
 
   it('stat: DPointsAgainst', function () {
-    let input = ['Direction\t<<<<<<\tPOINT\tJill', 'O+\tJill\tD-\tJane']
+    let input = [
+      'Direction\t<<<<<<\tPOINT\tJill',
+      '1\tJill',
+      '-1\tJane'
+    ]
+
     let output = calcStats(input)
     expect(output['Jane']['DPointsAgainst']).to.equal(1)
   })
@@ -128,8 +138,10 @@ describe('calcStats', function () {
     let input = [
       'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
       'Direction\t>>>>>>\tPOINT\tMike\tPass\tJane',
-      'O-\tJill\tD+\tMike',
-      'O-\tBob\tD+\tJane'
+      '-1\tJill',
+      '-1\tBob',
+      '1\tMike',
+      '1\tJane'
     ]
 
     let output = calcStats(input)
@@ -141,8 +153,10 @@ describe('calcStats', function () {
     let input = [
       'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
       'Direction\t>>>>>>\tPOINT\tMike\tPass\tJane',
-      'O-\tJill\tD+\tMike',
-      'O-\tBob\tD+\tJane'
+      '-1\tJill',
+      '-1\tBob',
+      '1\tMike',
+      '1\tJane'
     ]
 
     let output = calcStats(input)
@@ -155,11 +169,15 @@ describe('calcStats', function () {
       'Pull\tMike',
       'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
       'Direction\t>>>>>>\tPOINT\tMike\tPass\tJane',
-      'O-\tJill\tD+\tMike',
-      'O-\tBob\tD+\tJane',
+      '-1\tJill',
+      '-1\tBob',
+      '1\tMike',
+      '1\tJane',
       'Direction\t<<<<<<\tPOINT\tJill\tPass\tBob\tJill',
-      'O+\tJill\tD-\tMike',
-      'O+\tBob\tD-\tJane',
+      '1\tJill',
+      '1\tBob',
+      '-1\tMike',
+      '-1\tJane',
       'Direction\t>>>>>>\tThrow Away\tJane'
     ]
 
