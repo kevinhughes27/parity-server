@@ -36,6 +36,15 @@ describe('calcSalaries', function () {
     expect(salaryDeltas['Mike']['Salary']).to.equal(495000)
   })
 
+  it('sets default if missing', function () {
+    let stats = {
+      'Mike': {'Team': 'Beans'}
+    }
+    let salaryDeltas = calcSalaries(stats)
+    expect(salaryDeltas['Mike']['SalaryDelta']).to.equal(100000)
+    expect(salaryDeltas['Mike']['Salary']).to.equal(600000)
+  })
+
   it('adds to previous salary', function () {
     let stats = {
       'Mike': {
