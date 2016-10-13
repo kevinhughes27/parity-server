@@ -1,0 +1,172 @@
+package io.masse.parityleaguestats;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+/**
+ * Created by mmasse on 14-11-09.
+ * first shot at separating files by java classes
+ */
+public class allTeams {
+    //TODO ensure teams get added Alphabetically, with substitue player team ALWAYS on the bottom
+    private ArrayList<team> everyone = new ArrayList<team>();
+    private String rosterName;
+    private Date gameDate;
+    private Date loadedDate;
+
+    public void addRosterName(String name){
+        rosterName = name;
+    }
+
+    public void addGameDate(Date date){
+        gameDate = date;
+    }
+
+    public void addLoadedDate(Date date){
+        loadedDate = date;
+    }
+
+    public String getRosterName(){
+        return rosterName;
+    }
+
+    public Date getGameDate(){
+        return gameDate;
+    }
+
+    public Date getLoadedDate(){
+        return loadedDate;
+    }
+
+    public void add (String teamName, String teamMember, Boolean isMale) {
+        int intTeamSize = everyone.size();
+
+        if (intTeamSize < 1){
+            everyone.add(new team(teamName,teamMember,isMale));
+        }else{
+            boolean match = false;
+
+            for (team oneteam: everyone) {
+                if (oneteam.strTeamName.equals(teamName)){
+                    match = true;
+                    oneteam.add(teamMember, isMale);
+                    break;
+                }
+            }
+            //for (int i = 0; i < intTeamSize; i++){
+            //    if (everyone.get(i).strTeamName.equals(teamName)){
+            //        match = true;
+            //        everyone.get(i).add(teamMember, isMale);
+            //        break;
+            //    }
+            //}
+            if (!match){
+                everyone.add(new team(teamName,teamMember,isMale));
+            }
+        }
+    }
+
+    public int size(){
+        return everyone.size();
+    }
+
+    public int sizeGuys(int teamNumber){
+        return everyone.get(teamNumber).arlGuys.size();
+    }
+
+    public int sizeGirls(int teamNumber) {
+        return everyone.get(teamNumber).arlGirls.size();
+    }
+
+    public String getTeamName(int teamNumber){
+        return everyone.get(teamNumber).strTeamName;
+    }
+
+    public String getGuyName(int teamNumber, int playerNumber){
+        return everyone.get(teamNumber).arlGuys.get(playerNumber);
+    }
+
+    public String getGirlName(int teamNumber, int playerNumber){
+        return everyone.get(teamNumber).arlGirls.get(playerNumber);
+    }
+
+    public String getPlayerName(int teamNumber, int playerNumber){
+        if (playerNumber < everyone.get(teamNumber).arlGirls.size()){
+            return everyone.get(teamNumber).arlGirls.get(playerNumber);
+        }else{
+            return everyone.get(teamNumber).arlGuys.get(playerNumber-everyone.get(teamNumber).arlGirls.size());
+        }
+    }
+
+    public boolean checkIfFemale(int teamNumber, int playerNumber){
+        return playerNumber < everyone.get(teamNumber).arlGirls.size();
+    }
+
+    private boolean substituteExists(){
+        int intTeamSize = size();
+        for (int i = 0; i < intTeamSize; i++){
+            if (everyone.get(i).strTeamName.equals("Substitute")){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String[] getTeams(){
+        String[] teamNames;
+        int counter = 0;
+        int intTeamSize = size();
+
+        if (substituteExists()){
+            teamNames = new String[size()-1];
+        }else{
+            teamNames = new String[size()];
+        }
+        for (int i = 0; i < intTeamSize; i++){
+            if (!everyone.get(i).strTeamName.equals("Substitute")){
+                teamNames[counter] = everyone.get(i).strTeamName;
+                counter++;
+            }
+        }
+        return teamNames;
+    }
+
+    public String[] getPlayers(int intTeamNumber){
+        String[] players = new String[sizeGirls(intTeamNumber)+sizeGuys(intTeamNumber)];
+        int counter = 0;
+
+        for (int i = 0; i < sizeGirls(intTeamNumber); i++){
+            players[counter] = everyone.get(intTeamNumber).arlGirls.get(i);
+            counter++;
+        }
+        for (int i = 0; i < sizeGuys(intTeamNumber); i++){
+            players[counter] = everyone.get(intTeamNumber).arlGuys.get(i);
+            counter++;
+        }
+        return players;
+    }
+
+    private class team {
+        public String strTeamName = "";
+        public ArrayList<String> arlGuys = new ArrayList<String>();
+        public ArrayList<String> arlGirls = new ArrayList<String>();
+
+        public team(String teamName, String teamMember, Boolean isMale){
+            strTeamName = teamName;
+            if (isMale){
+                arlGuys.add(teamMember);
+            }else{
+                arlGirls.add(teamMember);
+            }
+        }
+
+        public void add(String teamMember, Boolean isMale){
+            if (isMale){
+                arlGuys.add(teamMember);
+            }else{
+                arlGirls.add(teamMember);
+            }
+        }
+
+    }
+}
