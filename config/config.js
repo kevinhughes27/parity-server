@@ -8,9 +8,9 @@ require('dotenv').load()
 
 module.exports = function (app) {
   app.use(express.static(path.join(__dirname, '/public')))
-  app.use('/static', express.static(path.join(__dirname, '/public/build/static')))
+  app.use('/static', express.static(path.join(__dirname, '/../public/build/static')))
 
-  let indexPath = path.join(__dirname, '/public/build/index.html')
+  let indexPath = path.join(__dirname, '/../public/build/index.html')
   app.get('/', function (_, res) { res.sendFile(indexPath) })
 
   if (!process.env.TEST) {
