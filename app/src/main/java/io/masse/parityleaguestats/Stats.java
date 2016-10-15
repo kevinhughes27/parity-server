@@ -1,7 +1,5 @@
 package io.masse.parityleaguestats;
 //import io.masse.parityleaguestats.colorpickerview.dialog.ColorPickerDialog;
-import io.masse.parityleaguestats.customLayout.customLinearLayout;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -9,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,15 +18,15 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -47,6 +44,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import io.masse.parityleaguestats.customLayout.customLinearLayout;
 
 
 //TODO change swap direction to large arrow
@@ -1121,7 +1120,8 @@ public class Stats extends Activity {
                     currentButton.setTypeface(null, Typeface.NORMAL);
                 }
 
-                Toast.makeText(mainContext, "Roster Change OFF", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
+                btnMode.setText(R.string.mode_button_edit);
             }else{
                 if (!leftCorrectNumPlayers&&!rightCorrectNumPlayers){
                     Toast.makeText(mainContext, "Insufficient number of players on the Left and Right side", Toast.LENGTH_LONG).show();
@@ -1375,7 +1375,8 @@ public class Stats extends Activity {
                     currentButton.setVisibility(View.VISIBLE);
                 }
 
-                Toast.makeText(mainContext, "Roster Change ON", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mainContext, "Selecting active players", Toast.LENGTH_SHORT).show();
+                btnMode.setText(R.string.mode_button_done);
 
                 break;
             case halfState:
