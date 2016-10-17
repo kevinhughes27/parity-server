@@ -3,14 +3,12 @@ import chai from 'chai'
 let expect = chai.expect
 
 chai.use(require('sinon-chai'))
-import sinon from 'mocha-sinon'
 import request from 'request-promise'
 
 process.env.TEST = 1
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test'
 const db = require('monk')(process.env.MONGODB_URI)
 const games = db.get('games')
-const weeks = db.get('weeks')
 
 describe('POST /upload', function () {
   var server = require('../../server')
@@ -63,9 +61,8 @@ describe('POST /upload', function () {
     server.listen(3001)
   })
 
-  afterEach(function (){
+  afterEach(function () {
     games.drop()
-    weeks.drop()
   })
 
   after(function () {
@@ -128,47 +125,15 @@ describe('POST /upload', function () {
     expect(stats['Jill']['Drops']).to.equal(1)
   })
 
-  it("saves a new week to mongodb if week doesn't exist yet", async function () {
-    await request.post({url: url, json: true, body: game1})
-
-    let week = await weeks.findOne()
-    let stats = week.stats
-
-    expect(_.keys(stats).length).to.equal(4)
-    expect(stats['Mike']['Pulls']).to.equal(1)
-    expect(stats['Mike']['Goals']).to.equal(1)
-    expect(stats['Jill']['Drops']).to.equal(1)
-  })
-
-  it('updates the week in mongodb if week exists', async function () {
-    await request.post({url: url, json: true, body: game1})
-    await request.post({url: url, json: true, body: game2})
-
-    let week = await weeks.findOne()
-    let stats = week.stats
-
-    expect(_.keys(stats).length).to.equal(8)
-
-    // from game1
-    expect(stats['Mike']['Pulls']).to.equal(1)
-    expect(stats['Mike']['Goals']).to.equal(1)
-    expect(stats['Jill']['Drops']).to.equal(1)
-
-    // from game2
-    expect(stats['Joe']['Pulls']).to.equal(1)
-    expect(stats['Joe']['Goals']).to.equal(1)
-    expect(stats['Meg']['Drops']).to.equal(1)
-  })
-
   it('salary adds week to week', async function () {
     await request.post({url: url, json: true, body: game1})
     game1.week = 2
     await request.post({url: url, json: true, body: game1})
 
-    let week1 = await weeks.findOne({week: 1})
-    let week2 = await weeks.findOne({week: 2})
+    let g1 = await games.findOne({week: 1})
+    let g2 = await games.findOne({week: 2})
 
-    expect(week1.stats['Mike']['Salary']).to.equal(511000)
-    expect(week2.stats['Mike']['Salary']).to.equal(522000)
+    expect(g1.stats['Mike']['Salary']).to.equal(511000)
+    expect(g2.stats['Mike']['Salary']).to.equal(522000)
   })
 })
