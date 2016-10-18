@@ -4,7 +4,9 @@ import express from 'express'
 let router = express.Router()
 
 const db = require('monk')(process.env.MONGODB_URI)
-const weeks = db.get('weeks')
+const games = db.get('games')
+
+import calcWeek from '../lib/calc_week'
 
 /**
  * @api {get} /weeks List of weeks
@@ -14,8 +16,8 @@ const weeks = db.get('weeks')
  * @apiSuccess (200)
  */
 router.get('/weeks', async function (req, res) {
-  let docs = await weeks.find({}, {})
-  res.json(docs)
+  let weeks = await games.distinct('week')
+  res.json(weeks)
 })
 
 /**
@@ -26,8 +28,9 @@ router.get('/weeks', async function (req, res) {
  * @apiSuccess (200)
  */
 router.get('/weeks/:week', async function (req, res) {
-  let doc = await weeks.findOne({week: parseInt(req.params.week)})
-  res.json(doc)
+  let weekNum = parseInt(req.params.week)
+  let week = await calcWeek(weekNum)
+  res.json(week)
 })
 
 module.exports = router

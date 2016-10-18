@@ -1,20 +1,38 @@
 // @flow
 
+import $ from 'jquery'
+import _ from 'lodash'
 import React, { Component } from 'react'
 import Nav from './Nav'
 import Stats from './Stats'
+import Loading from './Loading'
 
 class App extends Component {
   state: {
-    week: number
+    loading: boolean,
+    weeks: any,
+    week: number,
   }
 
   constructor (props: any) {
     super(props)
 
     this.state = {
-      week: 1
+      loading: true,
+      weeks: [],
+      week: 0
     }
+  }
+
+  componentWillMount () {
+    this._fetchWeeks()
+  }
+
+  _fetchWeeks () {
+    $.get('weeks', (weeks) => {
+      let week = _.last(weeks)
+      this.setState({ weeks: weeks, week: week, loading: false })
+    })
   }
 
   weekChange (week: number) {
@@ -22,8 +40,10 @@ class App extends Component {
   }
 
   render () {
+    if (this.state.loading) return (<Loading />)
+
     let week = this.state.week
-    let weeks = [1, 2]
+    let weeks = this.state.weeks
 
     let weekChange = this.weekChange.bind(this)
 
