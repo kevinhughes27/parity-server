@@ -180,8 +180,8 @@
             android:id="@+id/btnMode"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:text="Mode"
-            android:layout_weight="10"/>
+            android:text="@string/mode_button_edit"
+            android:layout_weight="5"/>
 
         <Button
             android:id="@+id/btnUndo"
