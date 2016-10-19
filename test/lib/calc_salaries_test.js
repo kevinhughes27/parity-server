@@ -2,7 +2,6 @@ import chai from 'chai'
 let expect = chai.expect
 
 chai.use(require('sinon-chai'))
-import sinon from 'mocha-sinon'
 
 import calcSalaries from '../../lib/calc_salaries'
 
