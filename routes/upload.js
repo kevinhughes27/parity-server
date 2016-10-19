@@ -23,20 +23,19 @@ import calcWeek from '../lib/calc_week'
  */
 router.post('/upload', async function (req, res) {
   let game = { ...req.body, time: new Date() }
+  await createGame(game)
 
   let prevWeekNum = game.week - 1
   let prevWeek = await calcWeek(prevWeekNum)
 
-  await createGame(game)
-
   let stats = calcStats(game.events)
   game.stats = stats
 
-  let teams = calcTeams(game.teams, game.stats)
-  game.stats = _.merge(game.stats, teams)
+  let playerTeams = calcTeams(game.teams, game.stats)
+  game.stats = _.merge(game.stats, playerTeams)
 
-  let salaries = calcSalaries(stats, prevWeek)
-  game.stats = _.merge(game.stats, salaries)
+  let playerSalaries = calcSalaries(stats, prevWeek)
+  game.stats = _.merge(game.stats, playerSalaries)
 
   await saveGame(game)
 
