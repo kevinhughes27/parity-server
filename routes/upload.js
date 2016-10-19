@@ -32,7 +32,7 @@ router.post('/upload', async function (req, res) {
   let stats = calcStats(game.events)
   game.stats = stats
 
-  let teams = calcTeams(game)
+  let teams = calcTeams(game.teams, game.stats)
   game.stats = _.merge(game.stats, teams)
 
   let salaries = calcSalaries(stats, prevWeek)
