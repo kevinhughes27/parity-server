@@ -12,7 +12,8 @@ const games = db.get('games')
 
 describe('POST /upload', function () {
   var server = require('../../server')
-  var url = 'http://localhost:3001/upload'
+  var baseUrl = 'http://localhost:3001'
+  var url = `${baseUrl}/upload`
 
   var game1 = {
     week: 1,
@@ -130,10 +131,10 @@ describe('POST /upload', function () {
     game1.week = 2
     await request.post({url: url, json: true, body: game1})
 
-    let g1 = await games.findOne({week: 1})
-    let g2 = await games.findOne({week: 2})
+    let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
+    let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
 
-    expect(g1.stats['Mike']['Salary']).to.equal(511000)
-    expect(g2.stats['Mike']['Salary']).to.equal(522000)
+    expect(w1['stats']['Mike']['Salary']).to.equal(511000)
+    expect(w2['stats']['Mike']['Salary']).to.equal(522000)
   })
 })
