@@ -21,11 +21,13 @@ describe('POST /upload', function () {
     teams: {
       'Team1': [
         'Jill',
-        'Bob'
+        'Bob',
+        'Absent Player'
       ],
       'Team2': [
         'Mike',
-        'Jane'
+        'Jane',
+        'Dan'
       ]
     },
     events: [
@@ -41,11 +43,11 @@ describe('POST /upload', function () {
   var game2 = {
     week: 1,
     teams: {
-      Team1: [
+      'Team3': [
         'Meg',
         'Bill'
       ],
-      Team2: [
+      'Team4': [
         'Joe'
       ]
     },
@@ -111,7 +113,7 @@ describe('POST /upload', function () {
     let game = await request.post({url: url, json: true, body: game2})
     let stats = game.stats
 
-    expect(stats['Joe']['Team']).to.equal('Team2')
+    expect(stats['Joe']['Team']).to.equal('Team4')
     expect(stats['Julie']['Team']).to.equal('Substitute')
   })
 
@@ -121,7 +123,7 @@ describe('POST /upload', function () {
     let game = await Games.findOne()
     let stats = game.stats
 
-    expect(_.keys(stats).length).to.equal(4)
+    expect(_.keys(stats).length).to.equal(6)
     expect(stats['Mike']['Pulls']).to.equal(1)
     expect(stats['Mike']['Goals']).to.equal(1)
     expect(stats['Jill']['Drops']).to.equal(1)
@@ -129,13 +131,56 @@ describe('POST /upload', function () {
 
   it('salary adds week to week', async function () {
     await request.post({url: url, json: true, body: game1})
-    game1.week = 2
-    await request.post({url: url, json: true, body: game1})
+    let game = _.assign({}, game1, {week: 2})
+    await request.post({url: url, json: true, body: game})
 
     let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
     let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
 
     expect(w1['stats']['Mike']['Salary']).to.equal(511000)
     expect(w2['stats']['Mike']['Salary']).to.equal(522000)
+  })
+
+  it('salary adds week to week for Absent Player', async function () {
+    await request.post({url: url, json: true, body: game1})
+    let game = _.assign({}, game1, {week: 2})
+    await request.post({url: url, json: true, body: game})
+
+    let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
+    let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
+
+    expect(w1['stats']['Absent Player']['Salary']).to.equal(503625)
+    expect(w2['stats']['Absent Player']['Salary']).to.equal(507250)
+  })
+
+  // Note that it is a requirement the players are in the roster
+  // even if they don't play.
+  it('plays week 1, misses week 2, plays week 3', async function () {
+    await request.post({url: url, json: true, body: game1})
+
+    // Make Mike miss the game by being not present in any field events
+    let game = _.assign({}, game1, {
+      week: 2,
+      events: [
+        'Pull\tDan',
+        'Direction\t>>>>>>',
+        'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
+        'Direction\t>>>>>>\tPOINT\tDan\tPass\tJane',
+        'O-\tJill\tD+\tDan',
+        'O-\tBob\tD+\tJane'
+      ]
+    })
+    await request.post({url: url, json: true, body: game})
+
+    game = _.assign({}, game1, {week: 3})
+    await request.post({url: url, json: true, body: game})
+
+    let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
+    let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
+    let w3 = await request.get(`${baseUrl}/weeks/3`, { json: true })
+
+    expect(w1['stats']['Mike']['Salary']).to.equal(511000)
+    expect(w2['stats']['Mike']['Salary']).to.equal(522000)
+    expect(w3['stats']['Mike']['Salary']).to.equal(533000)
   })
 })
