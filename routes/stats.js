@@ -17,10 +17,15 @@ const Games = Db.get('games')
  */
 router.get('/stats', async function (req, res) {
   let games = await Games.find({}, {sort: {week: -1}})
-  let lastWeek = games[0].week
 
-  let stats = mergeGames({}, _.filter(games, (g) => g.week === lastWeek))
-  stats = addStats(stats, _.filter(games, (g) => g.week !== lastWeek))
+  let stats = {}
+
+  if (games.length > 0) {
+    let lastWeek = games[0].week
+
+    stats = mergeGames(stats, _.filter(games, (g) => g.week === lastWeek))
+    stats = addStats(stats, _.filter(games, (g) => g.week !== lastWeek))
+  }
 
   res.json({stats})
 })

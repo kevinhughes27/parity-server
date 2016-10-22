@@ -30,7 +30,7 @@ class App extends Component {
 
   _fetchWeeks () {
     $.get('weeks', (weeks) => {
-      let week = _.last(weeks)
+      let week = _.last(weeks) || 0
       this.setState({ weeks: weeks, week: week, loading: false })
     })
   }
