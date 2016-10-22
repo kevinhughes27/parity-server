@@ -5,9 +5,10 @@ chai.use(require('sinon-chai'))
 import request from 'request-promise'
 
 process.env.TEST = 1
+process.env.PORT = 3002
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test'
-const db = require('monk')(process.env.MONGODB_URI)
-const games = db.get('games')
+const Db = require('monk')(process.env.MONGODB_URI)
+const Games = Db.get('games')
 
 describe('games routes', function () {
   var server = require('../../server')
@@ -20,17 +21,17 @@ describe('games routes', function () {
   }
 
   before(async function () {
-    server.listen(3001)
-    await games.insert(game)
+    server.listen(3002)
+    await Games.insert(game)
   })
 
   after(function () {
-    games.drop()
+    Games.drop()
     server.close()
   })
 
   describe('GET /games', function () {
-    var url = 'http://localhost:3001/games'
+    var url = 'http://localhost:3002/games'
 
     it('returns a list of games', async function () {
       let response = await request.get({url: url, resolveWithFullResponse: true})
@@ -43,7 +44,7 @@ describe('games routes', function () {
   })
 
   describe('GET /games/:id', function () {
-    var url = 'http://localhost:3001/games/'
+    var url = 'http://localhost:3002/games/'
 
     it('returns a game', async function () {
       url = url + game._id

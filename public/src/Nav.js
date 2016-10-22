@@ -13,11 +13,19 @@ type Props = {
 class Nav extends Component {
   props: Props
 
+  weekText (num) {
+    if (num === 0) {
+      return 'All'
+    } else {
+      return `Week ${num}`
+    }
+  }
+
   renderWeeks (weeks: Array<any>) {
     return _map(weeks, (week) => {
       return (
         <NavItem key={week} onClick={() => { this.props.weekChange(week) } }>
-          Week {week}
+          {this.weekText(week)}
         </NavItem>
       )
     })
@@ -44,7 +52,7 @@ class Nav extends Component {
           <ul className="right">
             <Dropdown trigger={
                 <a className="dropdown-button">
-                  Week {week}
+                  {this.weekText(week)}
                   <i className="material-icons right">arrow_drop_down</i>
                 </a>
               }>

@@ -3,8 +3,8 @@
 import express from 'express'
 let router = express.Router()
 
-const db = require('monk')(process.env.MONGODB_URI)
-const games = db.get('games')
+const Db = require('monk')(process.env.MONGODB_URI)
+const Games = Db.get('games')
 
 import _ from 'lodash'
 import calcStats from '../lib/calc_stats'
@@ -43,11 +43,11 @@ router.post('/upload', async function (req, res) {
 })
 
 let createGame = function (game) {
-  return games.insert(game)
+  return Games.insert(game)
 }
 
 let saveGame = function (game) {
-  return games.update(
+  return Games.update(
     {_id: game._id},
     {$set: {stats: game.stats}},
   )
