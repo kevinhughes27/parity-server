@@ -13,8 +13,8 @@ configure(app)
 addRoutes(app)
 
 // Start the server
-let port = process.env.PORT || 3001
-let server = app.listen(port, function () {
+let server = app.listen(process.env.PORT, function () {
+  let port = server.address().port
   console.log('Express server listening on port ' + port)
 })
 
