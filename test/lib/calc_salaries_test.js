@@ -36,7 +36,23 @@ describe('calcSalaries', function () {
     expect(salaryDeltas['Mike']['Salary']).to.equal(495000)
   })
 
-  it('gives default salaray to a new player in week 2 or higher', function () {
+  it('gives previous weeks average salaray + gains to a new player in week 2 or higher', function () {
+    let stats = {
+      'Mike': {'Team': 'Beans', 'Goals': 2},
+      'Jill': {'Team': 'Beans', 'Goals': 1}
+    }
+
+    let prevWeek = {
+      week: 2,
+      stats: {'Jill': {'Salary': 100000, 'SalaryDelta': 5000}}
+    }
+
+    let salaryDeltas = calcSalaries(stats, prevWeek)
+    expect(salaryDeltas['Mike']['SalaryDelta']).to.equal(20000)
+    expect(salaryDeltas['Mike']['Salary']).to.equal(120000)
+  })
+
+  it('gives previous weeks average salaray to a new absent player in week 2 or higher', function () {
     let stats = {
       'Mike': {'Team': 'Beans'},
       'Jill': {'Team': 'Beans', 'Goals': 1}
@@ -44,12 +60,12 @@ describe('calcSalaries', function () {
 
     let prevWeek = {
       week: 2,
-      stats: {'Jill': {'SalaryDelta': 11000}}
+      stats: {'Jill': {'Salary': 100000, 'SalaryDelta': 5000}}
     }
 
     let salaryDeltas = calcSalaries(stats, prevWeek)
     expect(salaryDeltas['Mike']['SalaryDelta']).to.equal(10000)
-    expect(salaryDeltas['Mike']['Salary']).to.equal(510000)
+    expect(salaryDeltas['Mike']['Salary']).to.equal(110000)
   })
 
   it('gives the average salaray delta to a player who misses week 1', function () {
