@@ -47,8 +47,7 @@ let _addStats = function (stats, playerStats, playerName) {
   let omitKeys = ['Team', 'Salary', 'SalaryDelta']
 
   _.mapValues(playerStats, (statValue, statName) => {
-    // these are the keys that should be equal
-    // to their value in the most recent week
+    // key should not be added
     if (_.includes(omitKeys, statName)) return
 
     stats[playerName] = stats[playerName] || {}
