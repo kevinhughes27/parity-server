@@ -16,7 +16,7 @@ describe('stats route', function () {
   var game1 = {
     week: 1,
     stats: {
-      'Mike': { 'Goals': 1, 'Salaray': 1000 }
+      'Mike': { 'Goals': 1, 'Salary': 1000 }
     }
   }
 
