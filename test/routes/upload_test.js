@@ -6,13 +6,14 @@ chai.use(require('sinon-chai'))
 import request from 'request-promise'
 
 process.env.TEST = 1
+process.env.PORT = 3002
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test'
 const db = require('monk')(process.env.MONGODB_URI)
 const games = db.get('games')
 
 describe('POST /upload', function () {
   var server = require('../../server')
-  var baseUrl = 'http://localhost:3001'
+  var baseUrl = 'http://localhost:3002'
   var url = `${baseUrl}/upload`
 
   var game1 = {
@@ -59,7 +60,7 @@ describe('POST /upload', function () {
   }
 
   before(function () {
-    server.listen(3001)
+    server.listen(3002)
   })
 
   afterEach(function () {

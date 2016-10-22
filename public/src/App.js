@@ -43,7 +43,7 @@ class App extends Component {
     if (this.state.loading) return (<Loading />)
 
     let week = this.state.week
-    let weeks = this.state.weeks
+    let weeks = [0, ...this.state.weeks]
 
     let weekChange = this.weekChange.bind(this)
 

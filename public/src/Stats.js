@@ -60,7 +60,10 @@ export default class Stats extends Component {
   }
 
   _fetchWeek (num: number) {
-    $.get(`/weeks/${num}`, (result) => {
+    let url = `/weeks/${num}`
+    if (num === 0) url = '/stats'
+
+    $.get(url, (result) => {
       let stats = result ? result.stats : {}
       this.setState({ stats: stats, loading: false })
     })

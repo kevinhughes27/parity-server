@@ -71,6 +71,7 @@
     "test:ui": "cd public && npm test",
     "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
+    "db:reset:test": "echo 'db.dropDatabase()' | mongo test",
     "deploy": "git push heroku"
   }
 }
