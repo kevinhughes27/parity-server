@@ -100,6 +100,7 @@ public class Stats extends Activity {
     private Button btnLastButtonClicked;
     private File lastFileSaved;
     private actionTracker gameStats;
+    private Bookkeeper bookkeeper;
 
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeTextListener;
@@ -157,6 +158,7 @@ public class Stats extends Activity {
 
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
         gameStats = new actionTracker(myself);
+        bookkeeper = new Bookkeeper();
         adapter = new statsTickerAdapter();
         listView.setAdapter(adapter);
 
@@ -875,10 +877,12 @@ public class Stats extends Activity {
                     } else {
                         if (gameStats.getAction(0).equals("")) {
                             gameStats.setAction(0, "Pass");
+                            bookkeeper.recordPass((btns[0]).getText().toString());
                         }
                     }
                     //noinspection ResourceType,ResourceType
                     gameStats.add(0, (btns[0]).getText().toString(), "" );
+                    bookkeeper.recordFirstActor(btns[0].getText().toString());
 
                 }else if (btns[0].getParent() == layoutRight) {
                     if ((gameStats.size() < 1) || (gameStats.getAction(0).equals("Time"))) {
@@ -886,16 +890,21 @@ public class Stats extends Activity {
                     } else {
                         if (gameStats.getAction(0).equals("")) {
                             gameStats.setAction(0, "Pass");
+                            bookkeeper.recordPass((btns[0]).getText().toString());
                         }
                     }
                     gameStats.add(0, (btns[0]).getText().toString(), "" );
+                    bookkeeper.recordFirstActor(btns[0].getText().toString());
 
                 }else if ((btns[0] == btnD)) {
                     gameStats.setAction(0, (btns[0].getText().toString()));
+                    bookkeeper.recordD();
                 }else if ((btns[0] == btnCatchD)){
                     gameStats.setAction(0, (btnD.getText().toString()));
+                    bookkeeper.recordCatchD();
                     gameStats.add(0, gameStats.getName(0), "" );
                 }else if ((btns[0] == btnDrop)||(btns[0] == btnPull)||(btns[0] == btnThrowAway)) {
+                    ButtonActionInterpreter.interpretButton(btns[0], bookkeeper);
                     gameStats.setAction(0,btns[0].getText().toString());
                     discPossession = !discPossession;
                     if (discPossession) {
@@ -915,6 +924,7 @@ public class Stats extends Activity {
                         rightText = "-1";
                     }
                     gameStats.setAction(0,btns[0].getText().toString());
+                    bookkeeper.recordPoint();
 
                     for (int i = 0; i < leftCount; i++){
                         Button currentButton = (Button) layoutLeft.getChildAt(i);
