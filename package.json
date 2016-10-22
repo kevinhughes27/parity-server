@@ -60,15 +60,15 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
+    "build": "cd public && npm run build",
     "postinstall": "cd public && npm install",
     "heroku-postbuild": "npm run build",
-    "build": "cd public && npm run build",
     "start": "babel-node server.js",
-    "auto-start": "nodemon --exec 'npm start' --ignore public",
-    "start:frontend": "cd public && npm start",
+    "start:dev": "nodemon --exec 'npm start' --ignore public",
+    "start:ui": "cd public && npm start",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
-    "auto-test": "nodemon --exec 'npm test' --ignore public",
-    "test:frontend": "cd public && npm test",
+    "test:dev": "nodemon --exec 'npm test' --ignore public",
+    "test:ui": "cd public && npm test",
     "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
     "deploy": "git push heroku"
