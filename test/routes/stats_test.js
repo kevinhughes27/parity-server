@@ -7,8 +7,8 @@ import request from 'request-promise'
 process.env.TEST = 1
 process.env.PORT = 3002
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test'
-const db = require('monk')(process.env.MONGODB_URI)
-const games = db.get('games')
+const Db = require('monk')(process.env.MONGODB_URI)
+const Games = Db.get('games')
 
 describe('stats route', function () {
   var server = require('../../server')
@@ -29,12 +29,12 @@ describe('stats route', function () {
 
   before(async function () {
     server.listen(3002)
-    await games.insert(game1)
-    await games.insert(game2)
+    await Games.insert(game1)
+    await Games.insert(game2)
   })
 
   after(function () {
-    games.drop()
+    Games.drop()
     server.close()
   })
 

@@ -3,8 +3,8 @@
 import express from 'express'
 let router = express.Router()
 
-const db = require('monk')(process.env.MONGODB_URI)
-const games = db.get('games')
+const Db = require('monk')(process.env.MONGODB_URI)
+const Games = Db.get('games')
 
 /**
  * @api {get} /games List of games
@@ -14,8 +14,8 @@ const games = db.get('games')
  * @apiSuccess (200)
  */
 router.get('/games', async function (req, res) {
-  let docs = await games.find({}, {})
-  res.json(docs)
+  let games = await Games.find({}, {})
+  res.json(games)
 })
 
 /**
@@ -26,8 +26,8 @@ router.get('/games', async function (req, res) {
  * @apiSuccess (200)
  */
 router.get('/games/:id', async function (req, res) {
-  let doc = await games.findOne({_id: req.params.id})
-  res.json(doc)
+  let game = await Games.findOne({_id: req.params.id})
+  res.json(game)
 })
 
 module.exports = router
