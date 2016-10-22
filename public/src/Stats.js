@@ -4,6 +4,7 @@ import $ from 'jquery'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
+import MoneyCell from './MoneyCell'
 import Loading from './Loading'
 
 const STATS = [
@@ -25,6 +26,19 @@ const columns = [
   'Team',
   ...STATS
 ]
+
+let columnsMeta = _.map(columns, (col, idx) => {
+  return {
+    columnName: col,
+    order: idx + 1
+  }
+})
+
+columnsMeta[STATS.length + 1] = {
+  columnName: 'Salary',
+  order: STATS.length + 1,
+  customComponent: MoneyCell
+}
 
 type Props = {
   week: number
@@ -93,6 +107,7 @@ export default class Stats extends Component {
         resultsPerPage={statsArray.length}
         tableClassName='highlight responsive-table'
         columns={columns}
+        columnMetadata={columnsMeta}
         showFilter={true}
         showPager={false}
         useGriddleStyles={false}
