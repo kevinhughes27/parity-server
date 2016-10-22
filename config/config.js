@@ -4,7 +4,10 @@ import bodyParser from 'body-parser'
 import path from 'path'
 
 // Load any environment vars in a .env file
-require('dotenv').load()
+require('dotenv').load({silent: true})
+
+// Default Db
+process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/development'
 
 module.exports = function (app) {
   app.use(express.static(path.join(__dirname, '/public')))

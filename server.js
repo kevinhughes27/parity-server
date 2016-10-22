@@ -8,9 +8,6 @@ import addRoutes from './config/routes'
 // Init express
 const app = express()
 
-// Default Db
-process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/development'
-
 // Configure
 configure(app)
 addRoutes(app)
