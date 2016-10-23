@@ -11,10 +11,11 @@ process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/
 process.env.PORT = process.env.PORT || 3001
 
 module.exports = function (app) {
-  app.use(express.static(path.join(__dirname, '/public')))
-  app.use('/static', express.static(path.join(__dirname, '/../public/build/static')))
+  app.use(express.static(path.join(__dirname, '/client')))
+  app.use('/static', express.static(path.join(__dirname, '/../client/build/static')))
+  app.use('/icons', express.static(path.join(__dirname, '/../client/build/icons')))
 
-  let indexPath = path.join(__dirname, '/../public/build/index.html')
+  let indexPath = path.join(__dirname, '/../client/build/index.html')
   app.get('/', function (_, res) { res.sendFile(indexPath) })
 
   if (!process.env.TEST) {
