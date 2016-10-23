@@ -8,4 +8,4 @@ cache:
 script:
   - npm run lint
   - npm run test
-  - npm run test:ui
+  - npm run test:client
