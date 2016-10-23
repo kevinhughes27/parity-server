@@ -23,6 +23,21 @@
       "stage-2"
     ]
   },
+  "apidoc": {
+    "name": "Parity Server",
+    "description": "",
+    "title": "Parity Server API Docs",
+    "verision": "2.0",
+    "template": {
+      "withCompare": false
+    },
+    "order": [
+      "Upload",
+      "Teams",
+      "Games",
+      "Weeks"
+    ]
+  },
   "dependencies": {
     "babel-cli": "^6.16.0",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
@@ -42,6 +57,7 @@
     "request-promise": "^4.1.1"
   },
   "devDependencies": {
+    "apidoc": "^0.16.1",
     "babel-eslint": "^7.0.0",
     "chai": "^3.2.0",
     "eslint": "^3.7.1",
@@ -62,7 +78,7 @@
   "scripts": {
     "build": "cd client && npm run build",
     "postinstall": "cd client && npm install",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run build && npm run docs",
     "start": "babel-node server.js",
     "start:dev": "nodemon --exec 'npm start' --ignore public",
     "start:client": "cd client && npm start",
@@ -74,6 +90,7 @@
     "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
     "db:reset:test": "echo 'db.dropDatabase()' | mongo test",
+    "docs": "apidoc -i routes/ -o docs",
     "deploy": "git push heroku"
   }
 }

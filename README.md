@@ -61,12 +61,21 @@ Testing
 
   there is also an `test:dev` command which re-runs the whole suite any time a file is saved.
 
+
 Front End
 ---------
 
 To develop on the front end app you need to run `npm run start:ui` then the script will open your browser to the app. You'll need to run the server as well in order to be able to fetch data.
 
 Similarly for testing run `npm run test:ui`
+
+
+Documentation
+-------------
+
+The api is documented through comments which produce this [page](https://parity-server.herokuapp.com/docs)
+
+To regenerate the docs `npm run docs`
 
 
 Deploy

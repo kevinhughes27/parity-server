@@ -13,13 +13,29 @@ import calcTeams from '../lib/calc_teams'
 import calcWeek from '../lib/calc_week'
 
 /**
- * @api {post} /upload Upload Game Events
- * @apiName PostUpload
- * @apiGroup Events
+ * @api {post} /upload From Stats Keeper Client
+ * @apiGroup Upload
+ * @apiDescription This is only path which creates new data on the server.
+ * The Stats Keeper Client uploads the stats to this endpoint and the server
+ * does any required post-processing before saving the game to the database.
  *
- * @apiParam {Object} Game upload from the stat keeper client app.
+ * @apiParam {String} league the name of the league
+ * @apiParam {Number} week the week number of the game
+ * @apiParam {Object} teams a key for each team containing an array of player names
+ * @apiParam {Array} events the array of events recored by the client
  *
- * @apiSuccess (204)
+ * @apiParamExample {json} Example Upload:
+ *     {
+ *       "league": "ocua_16",
+ *       "week": 1,
+ *       "teams": {
+ *         "Karma Down Under": ["Alison Ward"],
+ *         "Kindha's Ongoing Disappointments": ["Jen Cluthe"]
+ *       },
+ *       "events": [
+ *         "Pull\tAl Colantonio"
+ *       ]
+ *     }
  */
 router.post('/upload', async function (req, res) {
   let game = { ...req.body, time: new Date() }

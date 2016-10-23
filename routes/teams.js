@@ -13,11 +13,18 @@ const leagueID = 940
 const leaguePath = `${baseUrl}/divisions/view/division:${leagueID}`
 
 /**
- * @api {get} /teams List of teams with current players
- * @apiName GetTeams
+ * @api {get} /teams List
  * @apiGroup Teams
+ * @apiDescription Scrapes the latest team and roster data from Zuluru
  *
- * @apiSuccess (200)
+ * @apiSuccess (200) {Object} teams key: team value: array of players
+ *
+ * @apiSuccessExample {json} Example Response:
+ *    {
+ *      "Karma Down Under": ["Alison Ward"],
+ *      "Kindha's Ongoing Disappointments": ["Jen Cluthe"],
+ *      "Katie Parity": ["Dan Thomson"]
+ *    }
  */
 router.get('/teams', async function (req, res) {
   await loginToZuluru()
