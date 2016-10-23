@@ -66,6 +66,7 @@
     "start": "babel-node server.js",
     "start:dev": "nodemon --exec 'npm start' --ignore public",
     "start:ui": "cd public && npm start",
+    "lint": "eslint *.js",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
     "test:dev": "nodemon --exec 'npm test' --ignore public",
     "test:ui": "cd public && npm test",
