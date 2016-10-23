@@ -89,7 +89,7 @@ export default class Stats extends Component {
     })
   }
 
-  _padStats (stats) {
+  _padStats (stats: Array<any>) {
     return _.assign({}, zeroStats, stats)
   }
 

@@ -67,6 +67,7 @@
     "start:dev": "nodemon --exec 'npm start' --ignore public",
     "start:client": "cd client && npm start",
     "lint": "eslint *.js",
+    "flow": "flow *.js",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
     "test:dev": "nodemon --exec 'npm test' --ignore public",
     "test:client": "cd client && npm test",

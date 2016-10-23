@@ -13,7 +13,7 @@ type Props = {
 class Nav extends Component {
   props: Props
 
-  weekText (num) {
+  weekText (num: number) {
     if (num === 0) {
       return 'All'
     } else {
