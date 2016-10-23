@@ -62,6 +62,7 @@ let _addStats = function (stats, playerStats, playerName) {
     if (_.includes(omitKeys, statName)) return
 
     stats[playerName] = stats[playerName] || {}
+    stats[playerName][statName] = stats[playerName][statName] || 0
     stats[playerName][statName] += statValue
   })
 
