@@ -9,11 +9,17 @@ const Games = Db.get('games')
 import calcWeek from '../lib/calc_week'
 
 /**
- * @api {get} /weeks List of weeks
- * @apiName GetWeeks
+ * @api {get} /weeks List
  * @apiGroup Weeks
- *
- * @apiSuccess (200)
+ * @apiDescription Returns an array of week numbers. This is calculated by
+ * a distinct query on game.week
+ * @apiSuccess (200) {Array} weeks returns an array of week numbers
+ * @apiSuccessExample {json} Example Response:
+ *    [
+ *      1,
+ *      2,
+ *      3
+ *    ]
  */
 router.get('/weeks', async function (req, res) {
   let weeks = await Games.distinct('week')
@@ -21,11 +27,18 @@ router.get('/weeks', async function (req, res) {
 })
 
 /**
- * @api {get} /weeks/:week Week
- * @apiName GetWeek
+ * @api {get} /weeks/:week Get
  * @apiGroup Weeks
- *
- * @apiSuccess (200)
+ * @apiDescription Returns all the stats for the given week. The week is
+ * calculated by merging all the games from that week.
+ * @apiSuccess (200) {Object} week returns a week
+ * @apiSuccessExample {json} Example Response:
+ *    {
+ *      "week": 1,
+ *      "stats": {
+ *        "Al Colantonio": {"Pulls": 1, "SalaryDelta": 2000, "Salary": 50000}
+ *      }
+ *    }
  */
 router.get('/weeks/:week', async function (req, res) {
   let weekNum = parseInt(req.params.week)
