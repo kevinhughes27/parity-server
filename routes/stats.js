@@ -66,6 +66,12 @@ let _addStats = function (stats, playerStats, playerName) {
     stats[playerName][statName] += statValue
   })
 
+  // these keys are usually taken from the last week but this
+  // may need be when they subbed so we should always copy it.
+  if (playerStats['Team'] === 'Substitute') {
+    stats[playerName]['Team'] = 'Substitute'
+  }
+
   return stats
 }
 
