@@ -39,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "apidoc": "^0.16.1",
     "babel-cli": "^6.16.0",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
     "babel-polyfill": "^6.16.0",
@@ -57,7 +58,6 @@
     "request-promise": "^4.1.1"
   },
   "devDependencies": {
-    "apidoc": "^0.16.1",
     "babel-eslint": "^7.0.0",
     "chai": "^3.2.0",
     "eslint": "^3.7.1",
