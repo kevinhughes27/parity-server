@@ -9,6 +9,12 @@ import cheerio from 'cheerio'
 
 const loginUrl = `http://www.ocua.ca/user/login`
 const baseUrl = 'http://www.ocua.ca/zuluru'
+
+// Parity 2015 / 16
+// const leagueID = 494
+// const leaguePath = `${baseUrl}/leagues/view/league:${leagueID}`
+
+// Parity 2016 / 17
 const leagueID = 940
 const leaguePath = `${baseUrl}/divisions/view/division:${leagueID}`
 
@@ -21,22 +27,35 @@ const leaguePath = `${baseUrl}/divisions/view/division:${leagueID}`
  *
  * @apiSuccessExample {json} Example Response:
  *    {
- *      "Karma Down Under": ["Alison Ward"],
- *      "Kindha's Ongoing Disappointments": ["Jen Cluthe"],
- *      "Katie Parity": ["Dan Thomson"]
+ *      "Kindha's Ongoing Disappointments": {
+ *        "players": ["Kevin Hughes", "Jen Cluthe"],
+ *        "malePlayers": ["Kevin Hughes"],
+ *        "femalePlayers": ["Jen Cluthe"],
+ *      },
+ *      "Katie Parity": {
+ *        "players": ["Dan Thomson", "Andrea Proulx"],
+ *        "malePlayers": ["Dan Thomson"],
+ *        "femalePlayers": ["Andrea Proulx"],
+ *      }
  *    }
  */
 router.get('/teams', async function (req, res) {
   await loginToZuluru()
   let teamIds = await fetchTeamIds()
+  // teamIds = ['9261'] for debugging faster
   let teams = await buildTeams(teamIds)
   res.json(teams)
 })
 
+// send an error if missing creds
 let loginToZuluru = async function () {
   let loginHtml = await request.get(loginUrl)
   let $ = cheerio.load(loginHtml)
   let formId = $('[name=form_build_id]').val()
+
+  if (!(process.env.ZULURU_USER && process.env.ZULURU_PASSWORD)) {
+    throw new Error('Missing Zurluru Credentials')
+  }
 
   let form = {
     name: process.env.ZULURU_USER,
@@ -68,9 +87,16 @@ let buildTeams = async function (teamIds) {
   for (let Id of teamIds) {
     let teamHtml = await request.get(teamPath(Id), {jar: true})
     let teamName = nameFromTeamPage(teamHtml)
-    let teamRoster = rosterFromTeamPage(teamHtml)
 
-    teams[teamName] = teamRoster
+    let teamRoster = playersFromTeamPage(teamHtml)
+    let malePlayers = playersFromTeamPage(teamHtml, 'Male')
+    let femalePlayers = playersFromTeamPage(teamHtml, 'Female')
+
+    teams[teamName] = {
+      players: teamRoster,
+      malePlayers: malePlayers,
+      femalePlayers: femalePlayers
+    }
   }
 
   return teams
@@ -85,12 +111,23 @@ let nameFromTeamPage = function (teamHtml) {
   return $('div.teams > h2').text()
 }
 
-let rosterFromTeamPage = function (teamHtml) {
+let playersFromTeamPage = function (teamHtml, gender = null) {
   let $ = cheerio.load(teamHtml)
-  let anchorTags = $('tr > td > a')
 
-  let playerNames = _.map(anchorTags, (tag) => {
-    return $(tag).text()
+  let tableRows = $('table.list > tr')
+  tableRows = tableRows.slice(1, tableRows.length - 1)
+
+  // optional gender filter
+  if (gender) {
+    tableRows = _.filter(tableRows, (row) => {
+      let genderCell = $(row).find('td').eq(3)
+      return genderCell.text() === gender
+    })
+  }
+
+  let playerNames = _.map(tableRows, (row) => {
+    let nameCell = $(row).find('td').eq(0).find('a')
+    return nameCell.text()
   })
 
   return playerNames
