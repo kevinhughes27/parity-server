@@ -1,41 +1,18 @@
 package io.masse.parityleaguestats;
 
 import java.util.ArrayList;
-import java.util.Date;
 
-/**
- * Created by mmasse on 14-11-09.
- * first shot at separating files by java classes
- */
 public class allTeams {
-    //TODO ensure teams get added Alphabetically, with substitue player team ALWAYS on the bottom
+    //TODO ensure teams get added Alphabetically, with substitute player team ALWAYS on the bottom
     private ArrayList<team> everyone = new ArrayList<team>();
     private String rosterName;
-    private Date gameDate;
-    private Date loadedDate;
 
     public void addRosterName(String name){
         rosterName = name;
     }
 
-    public void addGameDate(Date date){
-        gameDate = date;
-    }
-
-    public void addLoadedDate(Date date){
-        loadedDate = date;
-    }
-
     public String getRosterName(){
         return rosterName;
-    }
-
-    public Date getGameDate(){
-        return gameDate;
-    }
-
-    public Date getLoadedDate(){
-        return loadedDate;
     }
 
     public void add (String teamName, String teamMember, Boolean isMale) {
