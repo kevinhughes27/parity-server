@@ -795,11 +795,12 @@ public class Stats extends Activity {
 
     }
 
-    private void saveGameToFile(boolean isFinalSave){
+    private void saveGameToFile(boolean isFinalSave) {
         if (gameStats.size() < 1){
             Toast.makeText(mainContext, "Nothing To Save", Toast.LENGTH_SHORT).show();
             return;
         }
+        bookkeeper.gameCompleted();
         File folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strAutoSaveDirectory);
         if (isFinalSave){
             folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strFinalSaveDirectory);

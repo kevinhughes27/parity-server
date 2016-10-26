@@ -15,7 +15,7 @@ public class Bookkeeper {
     private Point activePoint;
     private String firstActor;
 
-    private void startGame() {
+    public void startGame() {
         activeGame = new Game();
         games.add(activeGame);
     }
@@ -59,5 +59,13 @@ public class Bookkeeper {
     public void recordPoint() {
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
+    }
+
+    public void gameCompleted() {
+        //TODO: upload the current game?
+        //Clear any references to ongoing state from the current game, just in case
+        activePoint = null;
+        firstActor = null;
+        startGame();
     }
 }
