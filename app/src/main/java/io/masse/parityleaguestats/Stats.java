@@ -1,5 +1,5 @@
 package io.masse.parityleaguestats;
-//import io.masse.parityleaguestats.colorpickerview.dialog.ColorPickerDialog;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
