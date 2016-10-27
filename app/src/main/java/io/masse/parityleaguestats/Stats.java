@@ -1,5 +1,5 @@
 package io.masse.parityleaguestats;
-//import io.masse.parityleaguestats.colorpickerview.dialog.ColorPickerDialog;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -29,8 +29,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
 import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -38,12 +38,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
+import java.util.Iterator;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 
@@ -444,26 +443,21 @@ public class Stats extends Activity {
 
         if (JSONExists){
             loadJSON();
-            SimpleDateFormat shortDate = new SimpleDateFormat("EEE, MMM d, yyyy", Locale.CANADA);
-            SimpleDateFormat longDate = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa", Locale.CANADA);
 
             new AlertDialog.Builder(mainContext)
                     .setTitle("Load Roster?")
-                    .setMessage("Load a new roster from the internet? \n\n Current Roster: " + rosterList.getRosterName() +
-                            "\n Game Date: " + shortDate.format(rosterList.getGameDate()) +
-                            "\n Current Date: " + longDate.format(new Date()) +
-                            "\n Last Roster Load Date: " + longDate.format(rosterList.getLoadedDate()))
+                    .setMessage("Load a new roster from the internet?")
                     .setPositiveButton("Load New Roster", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
-                            new webRoster(mainContext, myself).execute("https://script.google.com/macros/s/AKfycbwMUwbXgU-bbMrQ8SCLBloLV9EPefKn6ira8QlsAEyKNouXCEw/exec?resource=Roster");
+                            new webRoster(mainContext, myself).execute();
                         }
                     }).setNegativeButton("Use Current Roster", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                     loadNewTeams();
                 }
             }).show();
-        }else{
-            new webRoster(mainContext, myself).execute("https://script.google.com/macros/s/AKfycbwMUwbXgU-bbMrQ8SCLBloLV9EPefKn6ira8QlsAEyKNouXCEw/exec?resource=Roster");
+        } else {
+            new webRoster(mainContext, myself).execute();
         }
     }
 
@@ -517,64 +511,65 @@ public class Stats extends Activity {
             }
             currentButton.setTypeface(null, Typeface.NORMAL);
         }
-
-
-
     }
 
+    // Roster Schema:
+    // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
     public void loadJSON() {
 
-          /**
-           *  Roster Array Format
-           *    0 -> Game Name (ie. Week 8)
-           *    1 -> Game Date
-           *    2 -> Created Date (date script is run)
-           *    3 -> Array of Gender
-           *    4 -> Array of Names
-           *    5 -> Array of TeamNames
-           **/
-
+        // return if game in progress
         if (gameStats.size() > 0){
             Toast.makeText(mainContext, "No loading in the middle of a game, save and clear first.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
+        // Load JSON string
+        String jsonString = null;
+        try {
+            String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
 
+            BufferedReader reader = new BufferedReader(new FileReader(strFileName));
+            StringBuilder sb = new StringBuilder();
+
+            String line = null;
+            while ((line = reader.readLine()) != null)
+            {
+                sb.append(line + "\n");
+            }
+            jsonString = sb.toString();
+        }
+        catch (Exception e) {
+            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        // Parse JSON object
         rosterList = new allTeams();
         try {
-            BufferedReader br = new BufferedReader(new FileReader(strFileName));
-            String line;
-            JSONArray json = new JSONArray();
-            while ((line = br.readLine()) != null) {
-                json = new JSONArray(line);
+            JSONObject responseObject = new JSONObject(jsonString);
+            Iterator<String> iter = responseObject.keys();
+
+            while(iter.hasNext()) {
+                String teamName = iter.next();
+                JSONObject teamObject = responseObject.getJSONObject(teamName);
+                JSONArray malePlayers = teamObject.getJSONArray("malePlayers");
+                JSONArray femalePlayers = teamObject.getJSONArray("femalePlayers");
+
+                rosterList.addRosterName(teamName);
+
+                for( int i = 0; i < malePlayers.length(); i++) {
+                    rosterList.add(teamName, malePlayers.getString(i), true);
+                }
+
+                for( int i = 0; i < femalePlayers.length(); i++) {
+                    rosterList.add(teamName, femalePlayers.getString(i), false);
+                }
             }
-            br.close();
 
-
-
-            rosterList.addRosterName(json.getString(0));
-
-
-            for ( int i = 0; i < json.getJSONArray(3).length(); i++ ) {
-                boolean isMale = (json.getJSONArray(3).getString(i).equals("Male"));
-                rosterList.add(json.getJSONArray(5).getString(i), json.getJSONArray(4).getString(i), isMale);
-            }
-
-            SimpleDateFormat  format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'", Locale.CANADA);
-            format.setTimeZone(TimeZone.getTimeZone("UTC"));
-            rosterList.addGameDate(format.parse(json.getString(1)));
-            rosterList.addLoadedDate(format.parse(json.getString(2)));
-        }
-        catch (JSONException e){
+        } catch (Exception e) {
             Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
         }
-        catch (IOException e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-        catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+        return;
     }
 
     public void loadNewTeams(){
