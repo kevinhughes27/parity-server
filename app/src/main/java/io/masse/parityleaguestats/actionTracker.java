@@ -55,15 +55,6 @@ public class actionTracker implements Serializable{
         }
 
         String csvLine = "";
-        String normalStartingCommas = ",,,";
-        String startingActionCommas = ",";
-
-
-        csvLine = "\"" + parent.leftTeamName.getText().toString() + "\"" + "," + parent.leftScore.getText().toString();
-        csvFile = csvFile + csvLine + "\n";
-        csvLine = "\"" + parent.rightTeamName.getText().toString() + "\"" + "," + parent.rightScore.getText().toString();
-        csvFile = csvFile + csvLine + "\n\n";
-        csvLine = "";
 
         //Loop for every action
         for (int i = size() - 1; i >= 0; i-- ){
@@ -72,27 +63,25 @@ public class actionTracker implements Serializable{
             if (getAction(i).equals("Direction")||getAction(i).equals("+1")||getAction(i).equals("-1")) {
 
                 if (!csvLine.equals("")) {
-                    csvFile = csvFile + "\n" + normalStartingCommas + csvLine;
+                    csvFile = csvFile + "\n" + csvLine;
                     csvLine = "";
                 }
                 csvLine = getAction(i) + "," + getName(i) + "," + csvLine;
-                csvFile = csvFile + "\n" + startingActionCommas + csvLine;
+                csvFile = csvFile + "\n" + csvLine;
                 csvLine = "";
 
                 //otherwise not the end of possession, and not a new line.
             }else{
                 if ((csvLine.equals("")) && (!getAction(i).equals("Pass")) && (!getAction(i).equals("Throw Away")) && (!getAction(i).equals("POINT"))) {
                     csvLine = getAction(i) + "," + getName(i) + "," + csvLine;
-                    csvFile = csvFile + "\n" + startingActionCommas + csvLine;
+                    csvFile = csvFile + "\n" + csvLine;
                     csvLine = "";
                 } else {
                     csvLine = getAction(i) + "," + getName(i) + "," + csvLine;
                 }
             }
         }
-        if (!csvLine.equals("")){
-            csvFile = csvFile + "\n" + normalStartingCommas + csvLine;
-        }
+
         return csvFile;
     }
 
