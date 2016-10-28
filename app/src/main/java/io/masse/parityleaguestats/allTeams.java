@@ -123,6 +123,21 @@ public class allTeams {
         return players;
     }
 
+    public String[] getPlayers(String teamName){
+        int intTeamNumber = teamNumberFromName(teamName);
+        return getPlayers(intTeamNumber);
+    }
+
+    private int teamNumberFromName(String teamName) {
+        for(int i = 0; i < everyone.size(); i++) {
+            if(everyone.get(i).strTeamName == teamName) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     private class team {
         public String strTeamName = "";
         public ArrayList<String> arlGuys = new ArrayList<String>();

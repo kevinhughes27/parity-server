@@ -34,10 +34,8 @@ import org.json.JSONArray;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -598,11 +596,7 @@ public class Stats extends Activity {
     @Override
     public void onPause(){
         super.onPause();
-        saveState(false);
-    }
-
-    private void saveState(boolean isFinalSave){
-        saveGameToFile(isFinalSave); //catch all save file.  Just in case to capture data before possible data loss
+        saveGameToFile(false); //catch all save file.  Just in case to capture data before possible data loss
     }
 
     @Override
@@ -672,6 +666,8 @@ public class Stats extends Activity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 saveGameToFile(true);
+                                uploadGame();
+                                emailFile();
                                 clearStats();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -693,7 +689,7 @@ public class Stats extends Activity {
                     Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
                     return true;
                 }
-                new webRoster(mainContext, this).execute("https://script.google.com/macros/s/AKfycbwMUwbXgU-bbMrQ8SCLBloLV9EPefKn6ira8QlsAEyKNouXCEw/exec?resource=Roster");
+                new webRoster(mainContext, this).execute();
 
                 return true;
             default:
@@ -821,18 +817,40 @@ public class Stats extends Activity {
             fos.write(gameStats.compileCSV().getBytes());
             fos.flush();
             fos.close();
-        } catch (FileNotFoundException e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (IOException e) {
+        } catch (Exception e) {
             Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
         }
+
         lastFileSaved = file;
         Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
+    }
 
-        if (isFinalSave){
-            emailFile();
+    private void uploadGame() {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.accumulate("league", "ocua_16-17");
+            jsonObject.accumulate("week", 1);
+
+            JSONObject teams = new JSONObject();
+            String leftTeam = leftTeamName.getText().toString();
+            String rightTeam = rightTeamName.getText().toString();
+            teams.accumulate(leftTeam, new JSONArray(rosterList.getPlayers(leftTeam)) );
+            teams.accumulate(rightTeam, new JSONArray(rosterList.getPlayers(rightTeam)) );
+            jsonObject.accumulate("teams", teams);
+
+            String eventString = gameStats.compileCSV();
+            String[] eventStringArray = eventString.split("\n");
+            jsonObject.accumulate("event_string", new JSONArray(eventStringArray));
+
+
+            String json = jsonObject.toString();
+
+            new uploadGame(mainContext).execute(json);
+
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 
     private void emailFile(){
