@@ -12,13 +12,13 @@ import org.apache.http.util.EntityUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 
-class webRoster extends AsyncTask<String, String, Long> {
+class fetchRoster extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;
     private Stats parent;
 
-    public webRoster(Context context, Stats parent) {
+    public fetchRoster(Context context, Stats parent) {
         this.context = context;
         this.dialog = new ProgressDialog(context);
         this.parent = parent;

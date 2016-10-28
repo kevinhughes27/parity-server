@@ -447,7 +447,7 @@ public class Stats extends Activity {
                     .setMessage("Load a new roster from the internet?")
                     .setPositiveButton("Load New Roster", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
-                            new webRoster(mainContext, myself).execute();
+                            new fetchRoster(mainContext, myself).execute();
                         }
                     }).setNegativeButton("Use Current Roster", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
@@ -455,7 +455,7 @@ public class Stats extends Activity {
                 }
             }).show();
         } else {
-            new webRoster(mainContext, myself).execute();
+            new fetchRoster(mainContext, myself).execute();
         }
     }
 
@@ -689,7 +689,7 @@ public class Stats extends Activity {
                     Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
                     return true;
                 }
-                new webRoster(mainContext, this).execute();
+                new fetchRoster(mainContext, this).execute();
 
                 return true;
             default:
