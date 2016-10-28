@@ -32,9 +32,8 @@ describe('POST /upload', function () {
     },
     event_string: [
       'Pull,Mike',
-      'Direction,>>>>>>',
-      'Direction,<<<<<<,Drop,Jill,Pass,Bob',
-      'Direction,>>>>>>,POINT,Mike,Pass,Jane',
+      'Drop,Jill,Pass,Bob',
+      'POINT,Mike,Pass,Jane',
       'O-,Jill,D+,Mike',
       'O-,Bob,D+,Jane'
     ]
@@ -53,9 +52,8 @@ describe('POST /upload', function () {
     },
     event_string: [
       'Pull,Joe',
-      'Direction,>>>>>>',
-      'Direction,<<<<<<,Drop,Meg,Pass,Bill',
-      'Direction,>>>>>>,POINT,Joe,Pass,Julie',
+      'Drop,Meg,Pass,Bill',
+      'POINT,Joe,Pass,Julie',
       'O-,Meg,D+,Joe',
       'O-,Bill,D+,Julie'
     ]
@@ -163,9 +161,8 @@ describe('POST /upload', function () {
       week: 2,
       event_string: [
         'Pull,Dan',
-        'Direction,>>>>>>',
-        'Direction,<<<<<<,Drop,Jill,Pass,Bob',
-        'Direction,>>>>>>,POINT,Dan,Pass,Jane',
+        'Drop,Jill,Pass,Bob',
+        'POINT,Dan,Pass,Jane',
         'O-,Jill,D+,Dan',
         'O-,Bob,D+,Jane'
       ]
