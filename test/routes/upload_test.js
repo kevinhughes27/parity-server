@@ -30,7 +30,7 @@ describe('POST /upload', function () {
         'Dan'
       ]
     },
-    events: [
+    event_string: [
       'Pull\tMike',
       'Direction\t>>>>>>',
       'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
@@ -51,7 +51,7 @@ describe('POST /upload', function () {
         'Joe'
       ]
     },
-    events: [
+    event_string: [
       'Pull\tJoe',
       'Direction\t>>>>>>',
       'Direction\t<<<<<<\tDrop\tMeg\tPass\tBill',
@@ -161,7 +161,7 @@ describe('POST /upload', function () {
     // Make Mike miss the game by being not present in any field events
     let game = _.assign({}, game1, {
       week: 2,
-      events: [
+      event_string: [
         'Pull\tDan',
         'Direction\t>>>>>>',
         'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',

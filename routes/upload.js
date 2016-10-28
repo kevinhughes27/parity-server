@@ -22,7 +22,7 @@ import calcWeek from '../lib/calc_week'
  * @apiParam {String} league the name of the league
  * @apiParam {Number} week the week number of the game
  * @apiParam {Object} teams a key for each team containing an array of player names
- * @apiParam {Array} events the array of events recored by the client
+ * @apiParam {Array} event_string the array of events recored by the client
  *
  * @apiParamExample {json} Example Upload:
  *     {
@@ -32,7 +32,7 @@ import calcWeek from '../lib/calc_week'
  *         "Karma Down Under": ["Alison Ward"],
  *         "Kindha's Ongoing Disappointments": ["Jen Cluthe"]
  *       },
- *       "events": [
+ *       "event_string": [
  *         "Pull\tAl Colantonio"
  *       ]
  *     }
@@ -44,7 +44,7 @@ router.post('/upload', async function (req, res) {
   let prevWeekNum = game.week - 1
   let prevWeek = await calcWeek(prevWeekNum)
 
-  let stats = calcStats(game.events)
+  let stats = calcStats(game.event_string)
   game.stats = stats
 
   let playerTeams = calcTeams(game.teams, game.stats)
