@@ -39,7 +39,7 @@ Running:
   Then run the following command to send a job to the server:
 
   ```
-  curl -X POST -d '{"week": 1, "events": ["Pull\tMike", "Direction\t<<<<<<", "POINT\tJill\tPass\tBob"]}' -H "Content-Type: application/json" http://localhost:3000/upload
+  curl -X POST -d '{"week": 1, "events": ["Pull,Mike", "Direction,<<<<<<", "POINT,Jill,Pass,Bob"]}' -H "Content-Type: application/json" http://localhost:3000/upload
   ```
 
   or you can send a full set of events from `test/files` using:

@@ -31,12 +31,12 @@ describe('POST /upload', function () {
       ]
     },
     event_string: [
-      'Pull\tMike',
-      'Direction\t>>>>>>',
-      'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
-      'Direction\t>>>>>>\tPOINT\tMike\tPass\tJane',
-      'O-\tJill\tD+\tMike',
-      'O-\tBob\tD+\tJane'
+      'Pull,Mike',
+      'Direction,>>>>>>',
+      'Direction,<<<<<<,Drop,Jill,Pass,Bob',
+      'Direction,>>>>>>,POINT,Mike,Pass,Jane',
+      'O-,Jill,D+,Mike',
+      'O-,Bob,D+,Jane'
     ]
   }
 
@@ -52,12 +52,12 @@ describe('POST /upload', function () {
       ]
     },
     event_string: [
-      'Pull\tJoe',
-      'Direction\t>>>>>>',
-      'Direction\t<<<<<<\tDrop\tMeg\tPass\tBill',
-      'Direction\t>>>>>>\tPOINT\tJoe\tPass\tJulie',
-      'O-\tMeg\tD+\tJoe',
-      'O-\tBill\tD+\tJulie'
+      'Pull,Joe',
+      'Direction,>>>>>>',
+      'Direction,<<<<<<,Drop,Meg,Pass,Bill',
+      'Direction,>>>>>>,POINT,Joe,Pass,Julie',
+      'O-,Meg,D+,Joe',
+      'O-,Bill,D+,Julie'
     ]
   }
 
@@ -162,12 +162,12 @@ describe('POST /upload', function () {
     let game = _.assign({}, game1, {
       week: 2,
       event_string: [
-        'Pull\tDan',
-        'Direction\t>>>>>>',
-        'Direction\t<<<<<<\tDrop\tJill\tPass\tBob',
-        'Direction\t>>>>>>\tPOINT\tDan\tPass\tJane',
-        'O-\tJill\tD+\tDan',
-        'O-\tBob\tD+\tJane'
+        'Pull,Dan',
+        'Direction,>>>>>>',
+        'Direction,<<<<<<,Drop,Jill,Pass,Bob',
+        'Direction,>>>>>>,POINT,Dan,Pass,Jane',
+        'O-,Jill,D+,Dan',
+        'O-,Bob,D+,Jane'
       ]
     })
     await request.post({url: url, json: true, body: game})

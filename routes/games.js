@@ -31,7 +31,7 @@ router.get('/games', async function (req, res) {
  *        "Katie Parity": ["Dan Thomson"]
  *      ],
  *      "events": [
- *        "Pull\tAl Colantonio"
+ *        "Pull,Al Colantonio"
  *      ],
  *      "stats": {
  *        "Al Colantonio": {"Pulls": 1, "SalaryDelta": 2000, "Salary": 50000}

@@ -33,7 +33,7 @@ import calcWeek from '../lib/calc_week'
  *         "Kindha's Ongoing Disappointments": ["Jen Cluthe"]
  *       },
  *       "event_string": [
- *         "Pull\tAl Colantonio"
+ *         "Pull,Al Colantonio"
  *       ]
  *     }
  */

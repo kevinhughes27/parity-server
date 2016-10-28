@@ -16,7 +16,7 @@ describe('games routes', function () {
   var game = {
     week: 1,
     events: [
-      'Pull\tMike'
+      'Pull,Mike'
     ]
   }
 
