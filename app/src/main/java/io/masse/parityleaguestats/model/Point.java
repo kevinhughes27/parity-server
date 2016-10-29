@@ -11,9 +11,18 @@ public class Point {
     private List<Event> events;
 
     public Point(List<String> offensePlayers, List<String> defensePlayers) {
+        this();
         this.offensePlayers = offensePlayers;
         this.defensePlayers = defensePlayers;
+    }
+
+    public Point() {
         events = new ArrayList<Event>();
+    }
+
+    public void setPlayers(List<String> offensePlayers, List<String> defensePlayers) {
+        this.offensePlayers = offensePlayers;
+        this.defensePlayers = defensePlayers;
     }
 
     public void addEvent(Event event) {

@@ -121,6 +121,8 @@ public class Stats extends Activity {
 
     //todo fix this it's ugly
     private int intChosenTeam;
+    private ArrayList<String> leftPlayers;
+    private ArrayList<String> rightPlayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -905,9 +907,14 @@ public class Stats extends Activity {
                     bookkeeper.recordCatchD();
                     gameStats.add(0, gameStats.getName(0), "" );
                 }else if ((btns[0] == btnDrop)||(btns[0] == btnPull)||(btns[0] == btnThrowAway)) {
+                    discPossession = !discPossession;
+                    if (btns[0] == btnPull) {
+                        //The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
+                        //In this case we'll re-record the offense/defense players after the possession has been set
+                        recordActivePlayers();
+                    }
                     ButtonActionInterpreter.interpretButton(btns[0], bookkeeper);
                     gameStats.setAction(0,btns[0].getText().toString());
-                    discPossession = !discPossession;
                     if (discPossession) {
                         gameStats.add(0, ">>>>>>", "Direction" );
                     } else {
@@ -1120,13 +1127,16 @@ public class Stats extends Activity {
 
                 rosterChange = false;
                 forceRosterChange = false;
-
+                leftPlayers = new ArrayList<String>();
+                rightPlayers = new ArrayList<String>();
                 for (int i = 0; i < leftCount; i++) {
                     Button currentButton = (Button) layoutLeft.getChildAt(i);
                     currentButton.setGravity(Gravity.END);
                     currentButton.setOnClickListener(mainOnClickListener);
                     if (currentButton.getTypeface() != null) {
                         currentButton.setVisibility(View.VISIBLE);
+                        String playerName = currentButton.getText().toString();
+                        leftPlayers.add(playerName);
                     } else {
                         currentButton.setVisibility(View.INVISIBLE);
                     }
@@ -1138,12 +1148,15 @@ public class Stats extends Activity {
                     currentButton.setOnClickListener(mainOnClickListener);
                     if (currentButton.getTypeface() != null) {
                         currentButton.setVisibility(View.VISIBLE);
+                        String playerName = currentButton.getText().toString();
+                        rightPlayers.add(playerName);
                     } else {
                         currentButton.setVisibility(View.INVISIBLE);
                     }
                     currentButton.setTypeface(null, Typeface.NORMAL);
                 }
 
+                recordActivePlayers();
                 Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
                 btnMode.setText(R.string.mode_button_edit);
             }else{
@@ -1419,6 +1432,14 @@ public class Stats extends Activity {
                     layoutRight.getChildAt(i).setEnabled(true);
                 }
                 break;
+        }
+    }
+
+    private void recordActivePlayers() {
+        if (discPossession == left) {
+            bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
+        } else {
+            bookkeeper.recordActivePlayers(rightPlayers, leftPlayers);
         }
     }
 

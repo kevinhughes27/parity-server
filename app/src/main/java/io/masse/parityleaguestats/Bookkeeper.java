@@ -24,10 +24,17 @@ public class Bookkeeper {
         if (activeGame == null) {
             startGame();
         }
-        activePoint = new Point(offensePlayers, defensePlayers);
+        if (activePoint == null) {
+            activePoint = new Point(offensePlayers, defensePlayers);
+        } else {
+            activePoint.setPlayers(offensePlayers, defensePlayers);
+        }
     }
 
     public void recordFirstActor(String player) {
+        if (activePoint == null) {
+            activePoint = new Point();
+        }
         firstActor = player;
     }
 
@@ -59,11 +66,11 @@ public class Bookkeeper {
     public void recordPoint() {
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
+        activePoint = new Point();
     }
 
     public void gameCompleted() {
         //TODO: upload the current game?
-        //Clear any references to ongoing state from the current game, just in case
         activePoint = null;
         firstActor = null;
         startGame();
