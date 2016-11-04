@@ -1094,16 +1094,10 @@ public class Stats extends Activity {
                     rightVisible++;
             }
 
-            boolean leftCorrectNumPlayers = false;
-            boolean rightCorrectNumPlayers = false;
+            int teamSize = 6;
 
-            if ((leftVisible >=5)&&(leftVisible<=6)) {
-                leftCorrectNumPlayers = true;
-            }
-
-            if ((rightVisible>=5)&&(rightVisible<=6)) {
-                rightCorrectNumPlayers = true;
-            }
+            boolean leftCorrectNumPlayers = leftVisible == teamSize;
+            boolean rightCorrectNumPlayers = rightVisible == teamSize;
 
             if (leftCorrectNumPlayers&&rightCorrectNumPlayers) {
 
@@ -1135,17 +1129,19 @@ public class Stats extends Activity {
 
                 Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
                 btnMode.setText(R.string.mode_button_edit);
-            }else{
-                if (!leftCorrectNumPlayers&&!rightCorrectNumPlayers){
-                    Toast.makeText(mainContext, "Insufficient number of players on the Left and Right side", Toast.LENGTH_LONG).show();
-                }else if (!leftCorrectNumPlayers){
-                    Toast.makeText(mainContext, "Insufficient number of players on the left side", Toast.LENGTH_LONG).show();
-                }else {
-                    Toast.makeText(mainContext, "Insufficient number of players on the right side", Toast.LENGTH_LONG).show();
+            } else {
+                String error = "Incorrect number of players";
+                if (!leftCorrectNumPlayers) {
+                    error += String.format("\nLeft side: %d/%d selected", leftVisible, teamSize);
                 }
+
+                if (!rightCorrectNumPlayers) {
+                    error += String.format("\nRight side: %d/%d selected", rightVisible, teamSize);
+                }
+
+                Toast.makeText(mainContext, error, Toast.LENGTH_LONG).show();
                 return;
             }
-
         }
 
         if (currentState != rosterChangeState || currentState != rosterChangeState)
