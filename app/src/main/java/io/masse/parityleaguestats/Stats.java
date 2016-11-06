@@ -985,8 +985,10 @@ public class Stats extends Activity {
                             gameStats.remove(0);
                             requestUpdateScore = true;
                         }
+                        bookkeeper.undo();
                     }else if (gameStats.size() > 0) {
                         gameStats.remove(0);
+                        bookkeeper.undo();
                     }
                 }
 

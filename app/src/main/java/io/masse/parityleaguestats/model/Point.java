@@ -28,4 +28,15 @@ public class Point {
     public void addEvent(Event event) {
         events.add(event);
     }
+
+    public Event removeLastEvent() {
+        if (events.size() > 0) {
+            return events.remove(events.size() - 1);
+        }
+        return null;
+    }
+
+    public int getEventCount() {
+        return events.size();
+    }
 }

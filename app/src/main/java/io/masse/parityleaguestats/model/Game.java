@@ -15,4 +15,15 @@ public class Game {
     public void addPoint(Point point) {
         points.add(point);
     }
+
+    public int getPointCount() {
+        return points.size();
+    }
+
+    public Point getLastPoint() {
+        if (points.size() > 0) {
+            return points.get(points.size() - 1);
+        }
+        return null;
+    }
 }

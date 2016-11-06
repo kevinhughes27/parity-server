@@ -29,4 +29,12 @@ public class Event {
     public Event(Type type, String firstActor) {
         this(type, firstActor, null);
     }
+
+    public String getFirstActor() {
+        return firstActor;
+    }
+
+    public Type getType() {
+        return type;
+    }
 }
