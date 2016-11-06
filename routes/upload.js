@@ -11,6 +11,7 @@ import calcStats from '../lib/calc_stats'
 import calcSalaries from '../lib/calc_salaries'
 import calcTeams from '../lib/calc_teams'
 import calcWeek from '../lib/calc_week'
+import calcWeekNum from '../lib/calc_week_num'
 
 /**
  * @api {post} /upload From Stats Keeper Client
@@ -38,7 +39,9 @@ import calcWeek from '../lib/calc_week'
  *     }
  */
 router.post('/upload', async function (req, res) {
-  let game = { ...req.body, time: new Date() }
+  let game = {...req.body, time: new Date()}
+  game.week = game.week || calcWeekNum(new Date())
+
   await createGame(game)
 
   let prevWeekNum = game.week - 1
