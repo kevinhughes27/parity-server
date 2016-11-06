@@ -65,7 +65,7 @@ public class Bookkeeper {
 
     public void recordCatchD() {
         activePoint.addEvent(new Event(Event.Type.DEFENSE, firstActor));
-        firstActor = null;
+        //firstActor remains the same
     }
 
     public void recordPoint() {
