@@ -834,7 +834,11 @@ public class Stats extends Activity {
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.accumulate("league", "ocua_16-17");
-            jsonObject.accumulate("week", 1);
+
+            // server will calc the week for now.
+            // it would be nice if the client knew what
+            // week it was working for though.
+            //jsonObject.accumulate("week", 1);
 
             JSONObject teams = new JSONObject();
             String leftTeam = leftTeamName.getText().toString();
