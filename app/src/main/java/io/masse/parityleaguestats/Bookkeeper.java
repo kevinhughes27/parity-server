@@ -1,6 +1,8 @@
 package io.masse.parityleaguestats;
 
 
+import org.json.JSONObject;
+import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,10 +78,23 @@ public class Bookkeeper {
     }
 
     public void gameCompleted() {
-        //TODO: upload the current game?
         activePoint = null;
         firstActor = null;
-        startGame();
+    }
+
+    public JSONObject serialize() {
+        Gson gson = new Gson();
+        String json = gson.toJson(activeGame);
+        JSONObject jsonObject = new JSONObject();
+
+        // suuuuper efficient ....
+        try {
+            jsonObject = new JSONObject(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return jsonObject;
     }
 
     public void undo() {
