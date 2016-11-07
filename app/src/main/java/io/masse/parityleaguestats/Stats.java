@@ -669,10 +669,12 @@ public class Stats extends Activity {
                         .setMessage("Are you sure sure?" )
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
+                                bookkeeper.gameCompleted();
                                 saveGameToFile(true);
                                 uploadGame();
                                 emailFile();
                                 clearStats();
+                                bookkeeper.startGame();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
@@ -802,7 +804,6 @@ public class Stats extends Activity {
             Toast.makeText(mainContext, "Nothing To Save", Toast.LENGTH_SHORT).show();
             return;
         }
-        bookkeeper.gameCompleted();
         File folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strAutoSaveDirectory);
         if (isFinalSave){
             folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strFinalSaveDirectory);
@@ -851,6 +852,8 @@ public class Stats extends Activity {
             String[] eventStringArray = eventString.split("\n");
             jsonObject.accumulate("event_string", new JSONArray(eventStringArray));
 
+            JSONObject events = bookkeeper.serialize();
+            jsonObject.accumulate("events", events);
 
             String json = jsonObject.toString();
 
