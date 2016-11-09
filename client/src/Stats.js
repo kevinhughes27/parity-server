@@ -19,8 +19,6 @@ const STATS = [
   'Salary'
 ]
 
-const zeroStats = _.zipObject(STATS)
-
 const columns = [
   'Name',
   'Team',
@@ -89,16 +87,17 @@ export default class Stats extends Component {
     })
   }
 
-  _padStats (stats: Array<any>) {
-    return _.assign({}, zeroStats, stats)
-  }
-
   render () {
     if (this.state.loading) return (<Loading />)
 
     let stats = this.state.stats
     let statsArray = _.map(_.keys(stats), (k) => {
-      return { Name: k, ...this._padStats(stats[k]) }
+      return { Name: k, ...stats[k] }
+    })
+
+    // filter players who only have a salary for this week.
+    statsArray = _.filter(statsArray, (player) => {
+      return _.keys(player).length > 4
     })
 
     return (
