@@ -15,6 +15,7 @@ const STATS = [
   'Catches',
   'Completions',
   'Throwaways',
+  'ThrewDrop',
   'Drops',
   'Salary'
 ]
