@@ -13,6 +13,10 @@ type Props = {
 class Nav extends Component {
   props: Props
 
+  componentDidMount () {
+    window.$('.button-collapse').sideNav()
+  }
+
   weekText (num: number) {
     if (num === 0) {
       return 'All'
@@ -38,8 +42,17 @@ class Nav extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo center hide-on-med-and-down">Parity 2.0</a>
-          <a href="#" className="brand-logo left hide-on-large-only">Parity 2.0</a>
+          <a href="#" className="brand-logo center hide-on-small-and-down">Parity 2.0</a>
+
+          <a href="#" data-activates="mobile-demo" className="button-collapse">
+            <i style={{paddingLeft: 10}} className="material-icons">menu</i>
+          </a>
+
+          <ul className="side-nav" id="mobile-demo">
+            <li><a href="/">Stats</a></li>
+            <li><a href="/compare_teams">Compare Teams</a></li>
+            <li><a href="/compare_players">Compare Players</a></li>
+          </ul>
 
           <ul className="left hide-on-med-and-down">
             <li style={{lineHeight: '40px'}}>
