@@ -1,6 +1,6 @@
 // @flow
 
-import $ from 'jquery'
+let $ = window.$
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'

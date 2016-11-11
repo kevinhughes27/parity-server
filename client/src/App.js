@@ -1,9 +1,10 @@
 // @flow
 
-import $ from 'jquery'
+let $ = window.$
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Nav from './Nav'
+import { Link } from 'react-router'
 import Stats from './Stats'
 import Loading from './Loading'
 
@@ -49,9 +50,22 @@ class App extends Component {
 
     return (
       <div>
-        <Nav week={week} weeks={weeks} weekChange={weekChange} />
+        <Nav week={week} weeks={weeks} weekChange={weekChange}>
+          <li><Link to="/">Stats</Link></li>
+          <li><Link to="/compare_teams">Compare Teams</Link></li>
+          <li><Link to="/compare_players">Compare Players</Link></li>
+          <li>
+            <a href="https://github.com/kevinhughes27/parity-server" target="_blank">
+              <i className="fa fa-3x fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </Nav>
+
         <div className="container" style={{height: '100%', minHeight: '100%'}}>
-          <Stats week={week}/>
+          { this.props.children
+            ? React.cloneElement(this.props.children, {week: week})
+            : <Stats week={week}/>
+          }
         </div>
       </div>
     )

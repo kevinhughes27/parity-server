@@ -8,13 +8,14 @@ type Props = {
   week: number,
   weeks: Array<any>,
   weekChange: (week: number) => void,
+  children: any
 };
 
 class Nav extends Component {
   props: Props
 
   componentDidMount () {
-    window.$('.button-collapse').sideNav()
+    window.$('.sidebar-toggle').sideNav({closeOnClick: true})
   }
 
   weekText (num: number) {
@@ -44,22 +45,12 @@ class Nav extends Component {
         <div className="nav-wrapper">
           <a href="#" className="brand-logo center hide-on-small-and-down">Parity 2.0</a>
 
-          <a href="#" data-activates="mobile-demo" className="button-collapse">
+          <a href="#" data-activates="sidebar" className="left sidebar-toggle">
             <i style={{paddingLeft: 10}} className="material-icons">menu</i>
           </a>
 
-          <ul className="side-nav" id="mobile-demo">
-            <li><a href="/">Stats</a></li>
-            <li><a href="/compare_teams">Compare Teams</a></li>
-            <li><a href="/compare_players">Compare Players</a></li>
-          </ul>
-
-          <ul className="left hide-on-med-and-down">
-            <li style={{lineHeight: '40px'}}>
-              <a href="https://github.com/kevinhughes27/parity-server" target="_blank">
-                <i className="fa fa-3x fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
+          <ul className="side-nav" id="sidebar">
+            {this.props.children}
           </ul>
 
           <ul className="right">
