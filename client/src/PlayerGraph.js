@@ -5,8 +5,7 @@ import _ from 'lodash'
 export default class PlayerGraph {
 
   constructor (node) {
-    // Chart Config
-    this.margin = {top: 20, right: 30, bottom: 30, left: 30}
+    this.margin = {top: 60, right: 30, bottom: 30, left: 30}
     this.width = 1080 - this.margin.left - this.margin.right
     this.height = 500 - this.margin.top - this.margin.bottom
 
@@ -37,8 +36,6 @@ export default class PlayerGraph {
   }
 
   graphPlayers (playerA, playerB) {
-    // these are just stat hashes now
-
     if (this.chart.selectAll('*')[0].length === 0) {
       this._initGraphPlayers(playerA, playerB)
     } else {
@@ -47,18 +44,15 @@ export default class PlayerGraph {
   }
 
   _initGraphPlayers (playerA, playerB) {
-    // assemble data
     let data = []
     for (let stat of _.keys(playerA)) {
       let playerAStat = playerA[stat]
       let playerBStat = playerB[stat]
 
       if (stat === 'Salary' || stat === 'SalaryDelta') {
-        playerAStat = playerAStat / 50000
-        playerBStat = playerBStat / 50000
+        playerAStat /= 50000
+        playerBStat /= 50000
       }
-
-      if (stat === 'Team') continue
 
       data.push({
         name: stat,
@@ -118,29 +112,28 @@ export default class PlayerGraph {
         .attr('height', (d) => this.height - this.y(d.value))
   }
 
-  _updateGraphPlayers (playerA, playerB) {
-    // assemble data
-    let data = []
-    let i = 0
-    while (i < playerA.stats.length) {
-      let stat = playerA.stats[i].name
-      let playerAStat = playerA.stats[i].value
-      let playerBStat = playerB.stats[i].value
-
-      data.push({name: stat, player: 'playerA', value: playerAStat})
-      data.push({name: stat, player: 'playerB', value: playerBStat})
-      i++
-    }
-
-    // re-scale
-    this.y.domain([0, d3.max(data, (d) => d.value)])
-
-    // animate update
-    this.chart.selectAll('rect')
-      .data(data)
-      .transition()
-        .duration(200)
-        .attr('y', (d) => this.y(d.value))
-        .attr('height', (d) => this.height - this.y(d.value))
-  }
+  // _updateGraphPlayers (playerA, playerB) {
+  //   let data = []
+  //   let i = 0
+  //   while (i < playerA.stats.length) {
+  //     let stat = playerA.stats[i].name
+  //     let playerAStat = playerA.stats[i].value
+  //     let playerBStat = playerB.stats[i].value
+  //
+  //     data.push({name: stat, player: 'playerA', value: playerAStat})
+  //     data.push({name: stat, player: 'playerB', value: playerBStat})
+  //     i++
+  //   }
+  //
+  //   // re-scale
+  //   this.y.domain([0, d3.max(data, (d) => d.value)])
+  //
+  //   // animate update
+  //   this.chart.selectAll('rect')
+  //     .data(data)
+  //     .transition()
+  //       .duration(200)
+  //       .attr('y', (d) => this.y(d.value))
+  //       .attr('height', (d) => this.height - this.y(d.value))
+  // }
 }
