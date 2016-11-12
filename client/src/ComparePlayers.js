@@ -1,13 +1,11 @@
-let $ = window.$
+let $ = window.$ // can remove this too
 import React, { Component } from 'react'
-import Loading from './Loading'
 import PlayerGraph from './PlayerGraph'
 
 export default class ComparePlayers extends Component {
   props: Props
 
   state: {
-    loading: boolean,
     week: number,
     stats: any
   }
@@ -16,42 +14,14 @@ export default class ComparePlayers extends Component {
     super(props)
 
     this.state = {
-      loading: true,
       week: this.props.week,
-      stats: null,
+      stats: this.props.stats,
       playerAName: 'Kevin Hughes',
       playerBName: 'Rob Ives'
     }
   }
 
-  componentWillMount () {
-    this._fetchWeek(this.state.week)
-  }
-
-  componentWillReceiveProps (nextProps: Props) {
-    let week = nextProps.week
-
-    this.setState({
-      loading: true,
-      week: week,
-      stats: null
-    })
-
-    this._fetchWeek(week)
-  }
-
-  _fetchWeek (num: number) {
-    let url = `/weeks/${num}`
-    if (num === 0) url = '/stats'
-
-    $.get(url, (result) => {
-      let stats = result ? result.stats : {}
-      this.setState({ stats: stats, loading: false })
-    })
-  }
-
-  componentDidUpdate () {
-    if (this.state.loading) return
+  componentDidMount () {
     this.renderGraph()
   }
 
@@ -64,8 +34,6 @@ export default class ComparePlayers extends Component {
   }
 
   render () {
-    if (this.state.loading) return (<Loading />)
-
     return (
       <div>
         <svg id="chart"></svg>

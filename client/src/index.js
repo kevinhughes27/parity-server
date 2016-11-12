@@ -8,8 +8,9 @@ import App from './App'
 import ComparePlayers from './ComparePlayers'
 import CompareTeams from './CompareTeams'
 
-import './index.css'
 import 'materialize-css/dist/css/materialize.css'
+import './index.css'
+import './compare-players.css'
 
 ReactDOM.render(
   <Router history={browserHistory}>
