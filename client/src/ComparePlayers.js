@@ -1,4 +1,3 @@
-let $ = window.$ // can remove this too
 import React, { Component } from 'react'
 import PlayerGraph from './PlayerGraph'
 
@@ -26,8 +25,7 @@ export default class ComparePlayers extends Component {
   }
 
   renderGraph () {
-    let node = $('#chart')
-    let graph = new PlayerGraph(node)
+    let graph = new PlayerGraph(this.node)
     let playerA = this.state.stats[this.state.playerAName]
     let playerB = this.state.stats[this.state.playerBName]
     graph.graphPlayers(playerA, playerB)
@@ -36,7 +34,7 @@ export default class ComparePlayers extends Component {
   render () {
     return (
       <div>
-        <svg id="chart"></svg>
+        <svg id="chart" ref={(node) => { this.node = node }}></svg>
       </div>
     )
   }

@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 export default class PlayerGraph {
 
-  constructor ($node) {
+  constructor (node) {
     // Chart Config
     this.margin = {top: 20, right: 30, bottom: 30, left: 30}
     this.width = 1080 - this.margin.left - this.margin.right
@@ -29,7 +29,7 @@ export default class PlayerGraph {
         .scale(this.y)
         .orient('left')
 
-    this.chart = d3.select($node[0])
+    this.chart = d3.select(node)
         .attr('width', this.width + this.margin.left + this.margin.right)
         .attr('height', this.height + this.margin.top + this.margin.bottom)
       .append('g')
