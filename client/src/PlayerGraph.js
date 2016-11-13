@@ -1,12 +1,16 @@
 import d3 from 'd3'
 import 'd3-tip'
-import _ from 'lodash'
 
 export default class PlayerGraph {
 
-  constructor (node) {
+  init (node) {
     this.margin = {top: 60, right: 30, bottom: 30, left: 30}
-    this.width = 1080 - this.margin.left - this.margin.right
+    this.width = node.clientWidth - this.margin.left - this.margin.right
+
+    if (this._isSmallScreen()) {
+      this.margin.bottom = 60
+    }
+
     this.height = 500 - this.margin.top - this.margin.bottom
 
     this.x0 = d3.scale.ordinal()
@@ -28,26 +32,22 @@ export default class PlayerGraph {
         .scale(this.y)
         .orient('left')
 
-    this.chart = d3.select(node)
+    this.chart = d3.select(node).append('svg')
         .attr('width', this.width + this.margin.left + this.margin.right)
         .attr('height', this.height + this.margin.top + this.margin.bottom)
       .append('g')
         .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')')
   }
 
-  graphPlayers (playerA, playerB) {
-    if (this.chart.selectAll('*')[0].length === 0) {
-      this._initGraphPlayers(playerA, playerB)
-    } else {
-      this._updateGraphPlayers(playerA, playerB)
-    }
+  _isSmallScreen () {
+    return this.width < 500
   }
 
-  _initGraphPlayers (playerA, playerB) {
+  create (playerA, playerB, statNames) {
     let data = []
-    for (let stat of _.keys(playerA)) {
-      let playerAStat = playerA[stat]
-      let playerBStat = playerB[stat]
+    for (let stat of statNames) {
+      let playerAStat = playerA[stat] || 0
+      let playerBStat = playerB[stat] || 0
 
       if (stat === 'Salary' || stat === 'SalaryDelta') {
         playerAStat /= 50000
@@ -67,10 +67,20 @@ export default class PlayerGraph {
     this.x1.domain(['playerA', 'playerB']).rangeRoundBands([0, this.x0.rangeBand()])
 
     // create the x axis
-    this.chart.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate(0,' + this.height + ')')
-        .call(this.xAxis)
+    if (this._isSmallScreen()) {
+      this.chart.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', 'translate(0,' + this.height + ')')
+          .call(this.xAxis)
+          .selectAll('text')
+          .style('text-anchor', 'end')
+          .attr('transform', 'rotate(-65)')
+    } else {
+      this.chart.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', 'translate(0,' + this.height + ')')
+          .call(this.xAxis)
+    }
 
     // create the y axis
     this.chart.append('g')
@@ -112,28 +122,30 @@ export default class PlayerGraph {
         .attr('height', (d) => this.height - this.y(d.value))
   }
 
-  // _updateGraphPlayers (playerA, playerB) {
-  //   let data = []
-  //   let i = 0
-  //   while (i < playerA.stats.length) {
-  //     let stat = playerA.stats[i].name
-  //     let playerAStat = playerA.stats[i].value
-  //     let playerBStat = playerB.stats[i].value
-  //
-  //     data.push({name: stat, player: 'playerA', value: playerAStat})
-  //     data.push({name: stat, player: 'playerB', value: playerBStat})
-  //     i++
-  //   }
-  //
-  //   // re-scale
-  //   this.y.domain([0, d3.max(data, (d) => d.value)])
-  //
-  //   // animate update
-  //   this.chart.selectAll('rect')
-  //     .data(data)
-  //     .transition()
-  //       .duration(200)
-  //       .attr('y', (d) => this.y(d.value))
-  //       .attr('height', (d) => this.height - this.y(d.value))
-  // }
+  update (playerA, playerB, statNames) {
+    let data = []
+    for (let stat of statNames) {
+      let playerAStat = playerA[stat] || 0
+      let playerBStat = playerB[stat] || 0
+
+      if (stat === 'Salary' || stat === 'SalaryDelta') {
+        playerAStat /= 50000
+        playerBStat /= 50000
+      }
+
+      data.push({name: stat, player: 'playerA', value: playerAStat})
+      data.push({name: stat, player: 'playerB', value: playerBStat})
+    }
+
+    // re-scale
+    this.y.domain([0, d3.max(data, (d) => d.value)])
+
+    // animate update
+    this.chart.selectAll('rect')
+      .data(data)
+      .transition()
+        .duration(200)
+        .attr('y', (d) => this.y(d.value))
+        .attr('height', (d) => this.height - this.y(d.value))
+  }
 }

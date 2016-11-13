@@ -29,11 +29,13 @@ export default class ComparePlayers extends Component {
   constructor (props: Props) {
     super(props)
 
+    let players = _.keys(this.props.stats)
+
     this.state = {
       week: this.props.week,
       stats: this.props.stats,
-      playerAName: 'Kevin Hughes',
-      playerBName: 'Rob Ives'
+      playerAName: players[0],
+      playerBName: players[1]
     }
   }
 
@@ -41,31 +43,59 @@ export default class ComparePlayers extends Component {
     this.renderGraph()
   }
 
+  componentDidUpdate () {
+    this.updateGraph()
+  }
+
   renderGraph () {
-    let graph = new PlayerGraph(this.node)
+    this.graph = new PlayerGraph()
+    this.graph.init(this.node)
 
-    let playerAName = this.state.playerAName
-    let playerBName = this.state.playerBName
-
+    let { playerAName, playerBName } = this.state
     let playerAStats = _.pick(this.state.stats[playerAName], STATS)
     let playerBStats = _.pick(this.state.stats[playerBName], STATS)
 
-    graph.graphPlayers(playerAStats, playerBStats)
+    this.graph.create(playerAStats, playerBStats, STATS)
+  }
+
+  updateGraph () {
+    let { playerAName, playerBName } = this.state
+    let playerAStats = _.pick(this.state.stats[playerAName], STATS)
+    let playerBStats = _.pick(this.state.stats[playerBName], STATS)
+
+    this.graph.update(playerAStats, playerBStats, STATS)
+  }
+
+  playerAChanged (value) {
+    this.setState({playerAName: value})
+  }
+
+  playerBChanged (value) {
+    this.setState({playerBName: value})
   }
 
   render () {
     let playerNames = _.keys(this.state.stats)
+    let { playerAName, playerBName } = this.state
 
     return (
       <div>
-        <svg id="chart" ref={(node) => { this.node = node }}></svg>
+        <div id="chart" ref={(node) => { this.node = node }}></div>
         <div className="row">
-          <div className="input-field inline col s2">
-            <PlayerSelect players={playerNames}/>
+          <div className="col m2 s4">
+            <PlayerSelect
+              value={playerAName}
+              players={playerNames}
+              onChange={(event) => this.playerAChanged(event)}
+            />
           </div>
 
-          <div className="input-field col inline s2 right">
-            <PlayerSelect players={playerNames}/>
+          <div className="col m2 s4 right">
+            <PlayerSelect
+              value={playerBName}
+              players={playerNames}
+              onChange={(event) => this.playerBChanged(event)}
+            />
           </div>
         </div>
       </div>

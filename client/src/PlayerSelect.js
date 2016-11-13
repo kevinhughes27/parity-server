@@ -15,13 +15,21 @@ export default class PlayerSelect extends Component {
     super(props)
 
     this.state = {
-      value: '',
-      suggestions: []
+      value: this.props.value,
+      suggestions: this.props.players
     }
   }
 
   onChange = (event, { newValue }) => {
     this.setState({ value: newValue })
+    this.props.onChange(newValue)
+  }
+
+  onClick = () => {
+    this.setState({
+      value: '',
+      suggestions: this.props.players
+    })
   }
 
   onSuggestionsFetchRequested = ({ value }) => {
@@ -35,8 +43,9 @@ export default class PlayerSelect extends Component {
   getSuggestions = value => {
     const inputValue = value.trim().toLowerCase()
     const inputLength = inputValue.length
+    const players = this.props.players
 
-    return inputLength === 0 ? [] : this.props.players.filter(player => {
+    return inputLength === 0 ? players : players.filter(player => {
       return player.toLowerCase().slice(0, inputLength) === inputValue
     })
   }
@@ -50,7 +59,8 @@ export default class PlayerSelect extends Component {
 
     const inputProps = {
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
+      onClick: this.onClick
     }
 
     return (
@@ -59,6 +69,7 @@ export default class PlayerSelect extends Component {
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={this.getSuggestionValue}
+        shouldRenderSuggestions={() => true}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
       />
