@@ -40,14 +40,14 @@ export default class ComparePlayers extends Component {
   }
 
   componentDidMount () {
-    this.renderGraph()
+    this.renderD3()
   }
 
   componentDidUpdate () {
-    this.updateGraph()
+    this.updateD3()
   }
 
-  renderGraph () {
+  renderD3 () {
     this.graph = new PlayerGraph()
     this.graph.init(this.node)
 
@@ -58,7 +58,7 @@ export default class ComparePlayers extends Component {
     this.graph.create(playerAStats, playerBStats, STATS)
   }
 
-  updateGraph () {
+  updateD3 () {
     let { playerAName, playerBName } = this.state
     let playerAStats = _.pick(this.state.stats[playerAName], STATS)
     let playerBStats = _.pick(this.state.stats[playerBName], STATS)
