@@ -6,13 +6,19 @@ import MoneyCell from './MoneyCell'
 import SalaryPieGraph from './SalaryPieGraph'
 import SalaryBarGraph from './SalaryBarGraph'
 
+type Props = {
+  week: number,
+  stats: any
+}
+
 export default class TeamDashboard extends Component {
   props: Props
 
   state: {
     week: number,
     stats: any,
-    teams: any
+    teams: Array<string>,
+    team: string
   }
 
   constructor (props: Props) {

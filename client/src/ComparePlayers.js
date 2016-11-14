@@ -18,12 +18,19 @@ const STATS = [
   'Salary'
 ]
 
+type Props = {
+  week: number,
+  stats: any
+}
+
 export default class ComparePlayers extends Component {
   props: Props
 
   state: {
     week: number,
-    stats: any
+    stats: any,
+    playerAName: string,
+    playerBName: string,
   }
 
   constructor (props: Props) {
@@ -66,11 +73,11 @@ export default class ComparePlayers extends Component {
     this.graph.update(playerAStats, playerBStats, STATS)
   }
 
-  playerAChanged (value) {
+  playerAChanged (value: string) {
     this.setState({playerAName: value})
   }
 
-  playerBChanged (value) {
+  playerBChanged (value: string) {
     this.setState({playerBName: value})
   }
 

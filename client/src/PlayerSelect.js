@@ -3,12 +3,18 @@
 import React, { Component } from 'react'
 import Autosuggest from 'react-autosuggest'
 
+type Props = {
+  value: string,
+  players: Array<string>,
+  onChange: any
+}
+
 export default class PlayerSelect extends Component {
   props: Props
 
   state: {
     value: string,
-    suggestions: array
+    suggestions: Array<string>
   }
 
   constructor (props: Props) {
