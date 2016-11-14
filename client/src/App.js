@@ -1,12 +1,12 @@
 // @flow
 
-let $ = window.$
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router'
 import Stats from './Stats'
 import Loading from './Loading'
+import request from 'browser-request'
 
 class App extends Component {
   state: {
@@ -32,7 +32,8 @@ class App extends Component {
   }
 
   _fetchWeeks () {
-    $.get('weeks', (weeks) => {
+    request('/weeks', (er, response, body) => {
+      let weeks = JSON.parse(body)
       this.setState({ weeks: weeks })
       let week = _.last(weeks) || 0
       this.weekChange(week)
@@ -43,8 +44,8 @@ class App extends Component {
     let url = `/weeks/${num}`
     if (num === 0) url = '/stats'
 
-    $.get(url, (result) => {
-      let stats = result ? result.stats : {}
+    request(url, (er, response, body) => {
+      let stats = body ? JSON.parse(body).stats : {}
       this.setState({ stats: stats, loading: false })
     })
   }

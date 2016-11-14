@@ -1,10 +1,14 @@
+// stub materialize
 import $ from 'jquery'
+window.$ = $
+$.fn.dropdown = function (options) { }
+$.fn.sideNav = function () { }
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-window.$ = require('jquery')
-$.fn.dropdown = function (options) { }
+jest.mock('browser-request')
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
