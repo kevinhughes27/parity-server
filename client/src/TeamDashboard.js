@@ -101,7 +101,7 @@ export default class TeamDashboard extends Component {
   }
 
   renderPlayers () {
-    let players = this.playersForCurrentTeam()
+    let players = this.playersForCurrentTeam().reverse()
 
     return (
       <table className='highlight'>
