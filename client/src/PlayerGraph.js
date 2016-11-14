@@ -1,5 +1,4 @@
 import d3 from 'd3'
-import 'd3-tip'
 
 export default class PlayerGraph {
 
