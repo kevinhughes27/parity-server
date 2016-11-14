@@ -1,5 +1,3 @@
-// @flow
-
 import _ from 'lodash'
 import React, { Component } from 'react'
 import PlayerSelect from './PlayerSelect'

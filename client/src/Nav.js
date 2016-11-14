@@ -8,7 +8,7 @@ type Props = {
   week: number,
   weeks: Array<any>,
   weekChange: (week: number) => void,
-  children: any
+  children?: React$Element<any>
 };
 
 class Nav extends Component {
