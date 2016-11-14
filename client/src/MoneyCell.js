@@ -17,7 +17,7 @@ export default class MoneyCell extends Component {
     let text = format({prefix: '$'})(value)
 
     return (
-      <p>{text}</p>
+      <span>{text}</span>
     )
   }
 }

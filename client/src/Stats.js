@@ -1,11 +1,9 @@
 // @flow
 
-import $ from 'jquery'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
 import MoneyCell from './MoneyCell'
-import Loading from './Loading'
 
 const STATS = [
   'Goals',
@@ -40,14 +38,14 @@ columnsMeta[STATS.length + 1] = {
 }
 
 type Props = {
-  week: number
+  week: number,
+  stats: any
 }
 
 export default class Stats extends Component {
   props: Props
 
   state: {
-    loading: boolean,
     week: number,
     stats: any
   }
@@ -56,41 +54,12 @@ export default class Stats extends Component {
     super(props)
 
     this.state = {
-      loading: true,
       week: this.props.week,
-      stats: null
+      stats: this.props.stats
     }
   }
 
-  componentWillMount () {
-    this._fetchWeek(this.state.week)
-  }
-
-  componentWillReceiveProps (nextProps: Props) {
-    let week = nextProps.week
-
-    this.setState({
-      loading: true,
-      week: week,
-      stats: null
-    })
-
-    this._fetchWeek(week)
-  }
-
-  _fetchWeek (num: number) {
-    let url = `/weeks/${num}`
-    if (num === 0) url = '/stats'
-
-    $.get(url, (result) => {
-      let stats = result ? result.stats : {}
-      this.setState({ stats: stats, loading: false })
-    })
-  }
-
   render () {
-    if (this.state.loading) return (<Loading />)
-
     let stats = this.state.stats
     let statsArray = _.map(_.keys(stats), (k) => {
       return { Name: k, ...stats[k] }
