@@ -34,24 +34,6 @@ describe('calcStats', function () {
     expect(output['Jim']['2nd Assist']).to.equal(1)
   })
 
-  it('stat: 3rd Assists', function () {
-    let input = ['POINT,Jill,Pass,Bob,Pass,Jim,Pass,Bob']
-    let output = calcStats(input)
-    expect(output['Bob']['3rd Assist']).to.equal(1)
-  })
-
-  it('stat: 4th Assists', function () {
-    let input = ['POINT,Jill,Pass,Bob,Pass,Jim,Pass,Bob,Pass,Jim']
-    let output = calcStats(input)
-    expect(output['Jim']['4th Assist']).to.equal(1)
-  })
-
-  it('stat: 5th Assists', function () {
-    let input = ['POINT,Jill,Pass,Bob,Pass,Jim,Pass,Bob,Pass,Jim,Pass,Bob']
-    let output = calcStats(input)
-    expect(output['Bob']['5th Assist']).to.equal(1)
-  })
-
   it('stat: D-Blocks', function () {
     let input = ['D,Jill']
     let output = calcStats(input)
