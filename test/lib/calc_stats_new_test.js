@@ -3,7 +3,7 @@ import chai from 'chai'
 let expect = chai.expect
 
 import calcStats from '../../lib/calc_stats'
-let calcStatsNew = calcStats
+import calcStatsNew from '../../lib/calc_stats_new'
 
 describe('comparison with old event model', function () {
   [
