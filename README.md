@@ -30,7 +30,7 @@ Dependencies:
 
 Then run `npm install` to get the required modules.
 
-If you need to test zuluru scraping or otherwise need to set an environment variable create a `.env` file and it will be loaded.
+If you need to test zuluru scraping or need to set an environment variable create a `.env` file and it will be loaded.
 
 Running:
 --------
