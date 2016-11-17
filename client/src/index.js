@@ -13,8 +13,16 @@ import './index.css'
 import './compare-players.css'
 import './team-dashboard.css'
 
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-87669001-1')
+
+function logPageView () {
+  ReactGA.set({ page: window.location.pathname })
+  ReactGA.pageview(window.location.pathname)
+}
+
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={browserHistory} onUpdate={logPageView}>
     <Route path="/" component={App}>
       <Route path="/compare_players" component={ComparePlayers} />
       <Route path="/team_dashboard" component={TeamDashboard} />
