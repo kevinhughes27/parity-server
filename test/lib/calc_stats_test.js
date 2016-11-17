@@ -115,7 +115,7 @@ describe('calcStats', function () {
   it('stat: OPointsFor', function () {
     let input = [
       'POINT,Jill',
-      '1,Jill',
+      '+1,Jill',
       '-1,Jane'
     ]
 
@@ -123,10 +123,22 @@ describe('calcStats', function () {
     expect(output['Jill']['OPointsFor']).to.equal(1)
   })
 
+  it('stat: OPointsFor with direction swap', function () {
+    let input = [
+      'Direction,<<<<<<',
+      'POINT,Jill',
+      '+1,Jill',
+      '-1,Jane'
+    ]
+
+    let output = calcStats(input)
+    expect(output['Jill']['DPointsFor']).to.equal(1)
+  })
+
   it('stat: DPointsAgainst', function () {
     let input = [
       'POINT,Jill',
-      '1,Jill',
+      '+1,Jill',
       '-1,Jane'
     ]
 
@@ -140,8 +152,8 @@ describe('calcStats', function () {
       'POINT,Mike,Pass,Jane',
       '-1,Jill',
       '-1,Bob',
-      '1,Mike',
-      '1,Jane'
+      '+1,Mike',
+      '+1,Jane'
     ]
 
     let output = calcStats(input)
@@ -155,8 +167,8 @@ describe('calcStats', function () {
       'POINT,Mike,Pass,Jane',
       '-1,Jill',
       '-1,Bob',
-      '1,Mike',
-      '1,Jane'
+      '+1,Mike',
+      '+1,Jane'
     ]
 
     let output = calcStats(input)
@@ -171,11 +183,11 @@ describe('calcStats', function () {
       'POINT,Mike,Pass,Jane',
       '-1,Jill',
       '-1,Bob',
-      '1,Mike',
-      '1,Jane',
+      '+1,Mike',
+      '+1,Jane',
       'POINT,Jill,Pass,Bob,Jill',
-      '1,Jill',
-      '1,Bob',
+      '+1,Jill',
+      '+1,Bob',
       '-1,Mike',
       '-1,Jane',
       'Throw Away,Jane'
