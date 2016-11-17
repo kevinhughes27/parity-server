@@ -1,507 +1,3351 @@
 {
-  "week": 2,
-  "teams": {
-    "Pirate Rob's Swashbuckling Rogues": [
-      "Adrienne Junek",
-      "Lissa Greenspoon",
-      "Megan Berry",
-      "Melissa Jess",
-      "Brent Burton",
-      "Chris Sullivan",
-      "Christopher Keates",
-      "Graham Brown",
-      "Greg Cormier",
-      "Krys Kudakiewicz",
-      "Michael Blanchard",
-      "Rob Ives"
-    ],
-    "#HammerHouse": [
-      "Heather Wallace",
-      "Jessie Robinson",
-      "Justine price",
-      "Tanya Gallant",
-      "Allan Godding",
-      "Andre Scott",
-      "Greg Probe",
-      "James Maeng",
-      "Jeremy Bryan",
-      "Kyle Sprysa",
-      "Matthew Kerr",
-      "Rob Tyson"
+    "league": "ocua_16-17",
+    "teams": {
+        "Eff (F)": [
+            "Hope Celani",
+            "Janet Ibit",
+            "Justine Price",
+            "Nina Ramic",
+            "Rob Ives",
+            "Simon Berry",
+            "Brent Burton",
+            "Christopher Castonguay",
+            "Martin Cloake",
+            "Mark Donahue",
+            "Richard Gregory",
+            "Ariel Untiveros"
+        ],
+        "Like a Boss": [
+            "Jaime Boss",
+            "Tanya Gallant",
+            "Megan Robb",
+            "Jessie Robinson",
+            "Jason Fraser",
+            "Kevin Hughes",
+            "Patrick Kenzie",
+            "Ryan Mussell",
+            "Jonathan Pindur",
+            "Trevor Ryan",
+            "Trevor Stocki",
+            "Jay Thor Turner"
+        ]
+    },
+    "events": {
+        "points": [
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 1:10:17 AM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:37 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:41 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:43 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:46 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:50 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:54 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:10:56 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:10:58 AM",
+                        "firstActor": "Trevor Ryan"
+                    }
+                ],
+                "defensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:11 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:15 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:20 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:26 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:30 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:36 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:42 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:45 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:50 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:12:53 AM",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:12:59 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:13:01 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:13:19 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:13:25 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:13:26 AM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:10 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:16 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:19 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:21 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:26 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:35 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:14:37 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:14:37 AM",
+                        "firstActor": "Megan Robb"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:15:31 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:15:35 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:15:37 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:15:38 AM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:29 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:41 AM",
+                        "secondActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:42 AM",
+                        "secondActor": "Jason Fraser",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:43 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Jason Fraser"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:49 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:16:54 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:00 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:05 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:13 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:17:18 AM",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:17:21 AM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:32 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:34 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:39 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:41 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:47 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:17:49 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:17:54 AM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:17:56 AM",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:05 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:09 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:13 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:15 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:17 AM",
+                        "secondActor": "Jason Fraser",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:18:21 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Jason Fraser"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:18:32 AM",
+                        "firstActor": "Jessie Robinson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:19:14 AM",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:24 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:29 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:19:30 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:36 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:37 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:43 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:44 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:49 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:19:55 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:19:56 AM",
+                        "firstActor": "Richard Gregory"
+                    }
+                ],
+                "defensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:20:51 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:20:53 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:20:55 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:21:01 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:21:03 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:21:06 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:21:12 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:21:13 AM",
+                        "firstActor": "Brent Burton"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:11 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:14 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:18 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:21 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:26 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:30 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:22:38 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:22:39 AM",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:22:45 AM",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:23:00 AM",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:23:02 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:23:05 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:23:06 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:23:08 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:23:08 AM",
+                        "firstActor": "Richard Gregory"
+                    }
+                ],
+                "defensePlayers": [
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:23:51 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:23:58 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:24:17 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:24:38 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:24:39 AM",
+                        "firstActor": "Martin Cloake"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:25:24 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:25:27 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:25:32 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:25:36 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:25:37 AM",
+                        "firstActor": "Kevin Hughes"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Martin Cloake",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:26:33 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:26:41 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:26:56 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:00 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:27:00 AM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:08 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:11 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:12 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:14 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:21 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:24 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:29 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:27:31 AM",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:36 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:36 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:42 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:27:46 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:27:52 AM",
+                        "firstActor": "Martin Cloake"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:28:36 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:28:41 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:28:44 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:28:47 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:28:52 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:28:53 AM",
+                        "firstActor": "Kevin Hughes"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:29:44 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:29:48 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:29:53 AM",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:30:03 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:30:13 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:30:17 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:30:20 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:30:27 AM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:30:33 AM",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:30:37 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:30:40 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:30:42 AM",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:30:45 AM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:32:47 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:32:48 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:32:51 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:32:54 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:32:56 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:33:02 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:33:06 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:33:09 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:33:12 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:33:13 AM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:01 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:04 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:10 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:19 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:34:20 AM",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:23 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:34 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:37 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:42 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:34:48 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:35:00 AM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:35:51 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:35:52 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:35:53 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:35:56 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:35:58 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:36:10 AM",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:36:12 AM",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:36:19 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:36:24 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:36:29 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:36:30 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:36:35 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:36:36 AM",
+                        "firstActor": "Nina Ramic"
+                    }
+                ],
+                "defensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:37:24 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:37:28 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:37:30 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:37:37 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:37:37 AM",
+                        "firstActor": "Kevin Hughes"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:38:33 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:38:36 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:38:40 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:38:44 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:38:48 AM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:39:54 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:40:01 AM",
+                        "secondActor": "Jason Fraser",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:40:02 AM",
+                        "firstActor": "Jason Fraser"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 1:44:53 AM",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:45:28 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:45:37 AM",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:45:40 AM",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:45:44 AM",
+                        "secondActor": "Trevor Stocki",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:45:55 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Trevor Stocki"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:46:03 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:46:07 AM",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:46:11 AM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:46:12 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:46:21 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:46:23 AM",
+                        "firstActor": "chris sullivan(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:14 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:22 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:24 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:29 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:35 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:38 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:42 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:47:43 AM",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:49 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:47:54 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:47:55 AM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:48:39 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:48:43 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:48:49 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:48:55 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:00 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:05 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 1:49:06 AM",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:23 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:49:30 AM",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:49:36 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:48 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:51 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:49:55 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:49:56 AM",
+                        "firstActor": "Jonathan Pindur"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:50:49 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:50:54 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:50:56 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:50:59 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:51:02 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:51:05 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:51:35 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:51:38 AM",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:51:44 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:51:49 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:52:16 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:52:17 AM",
+                        "firstActor": "Nina Ramic"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:53:12 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:53:20 AM",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:53:52 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:53:54 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:54:01 AM",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:54:03 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:54:10 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Trevor Stocki"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:54:14 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:54:18 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:54:23 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:54:25 AM",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:54:32 AM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:54:53 AM",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:54:55 AM",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:55:08 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:55:10 AM",
+                        "firstActor": "Brent Burton"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:56:08 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:56:11 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:56:14 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:56:21 AM",
+                        "secondActor": "Jason Fraser",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:56:23 AM",
+                        "firstActor": "Jason Fraser"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:03 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:05 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:13 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:17 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:19 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:23 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:29 AM",
+                        "secondActor": "Martin Cloake",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:57:36 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:57:59 AM",
+                        "firstActor": "chris sullivan(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:58:46 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:58:49 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:58:51 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:58:53 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:58:55 AM",
+                        "secondActor": "Patrick Kenzie",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 1:59:00 AM",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 1:59:03 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:59:05 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:59:07 AM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:59:13 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 1:59:16 AM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 1:59:54 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:00:02 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:00:16 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:00:17 AM",
+                        "firstActor": "Kevin Hughes"
+                    }
+                ],
+                "defensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:01:17 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:01:22 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:01:23 AM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:02:20 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:02:35 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:02:41 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:02:44 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:02:48 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:02:49 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:03:12 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:03:13 AM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:04:03 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:04:11 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:04:12 AM",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:04:27 AM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:04:34 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Patrick Kenzie"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:04:36 AM",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:04:45 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:04:54 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:04:57 AM",
+                        "firstActor": "Richard Gregory"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:05:49 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:05:55 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:06:02 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:06:05 AM",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:06:33 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:06:37 AM",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:06:44 AM",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:06:46 AM",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:06:52 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:06:57 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:06:59 AM",
+                        "secondActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:07:03 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Martin Cloake"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:07:05 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:07:13 AM",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:07:15 AM",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:07:19 AM",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:07:21 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:07:25 AM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:07:27 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:07:36 AM",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:07:52 AM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:07:54 AM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:07:59 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Trevor Stocki"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:08:00 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:08:27 AM",
+                        "secondActor": "Jessie Robinson",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:08:35 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:08:39 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:08:44 AM",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:08:50 AM",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:09:04 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Megan Robb"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:09:07 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:09:13 AM",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:11:39 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:11:46 AM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:11:52 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:11:57 AM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:11:58 AM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Tanya Gallant",
+                    "Jessie Robinson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:12:47 AM",
+                        "secondActor": "Trevor Ryan",
+                        "firstActor": "Jessie Robinson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:12:51 AM",
+                        "secondActor": "Jay Thor Turner",
+                        "firstActor": "Trevor Ryan"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:12:52 AM",
+                        "firstActor": "Jay Thor Turner"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:08 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:08 AM",
+                        "secondActor": "Nina Ramic",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:12 AM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Nina Ramic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:14 AM",
+                        "secondActor": "chris sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:16 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "chris sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:13:22 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:13:26 AM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Kevin Hughes",
+                    "Ryan Mussell",
+                    "Jonathan Pindur",
+                    "Trevor Stocki",
+                    "Tanya Gallant",
+                    "Megan Robb"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:22 AM",
+                        "secondActor": "Tanya Gallant",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:23 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Tanya Gallant"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:27 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:29 AM",
+                        "secondActor": "Jonathan Pindur",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:36 AM",
+                        "secondActor": "Ryan Mussell",
+                        "firstActor": "Jonathan Pindur"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:38 AM",
+                        "secondActor": "Kevin Hughes",
+                        "firstActor": "Ryan Mussell"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:14:45 AM",
+                        "secondActor": "Megan Robb",
+                        "firstActor": "Kevin Hughes"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:14:46 AM",
+                        "firstActor": "Megan Robb"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Martin Cloake",
+                    "Mark Donahue",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Justine Price",
+                    "Nina Ramic",
+                    "chris sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:15:30 AM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:15:34 AM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:15:35 AM",
+                        "firstActor": "Justine Price"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jason Fraser",
+                    "Patrick Kenzie",
+                    "Trevor Ryan",
+                    "Jay Thor Turner",
+                    "Megan Robb",
+                    "Jessie Robinson"
+                ]
+            }
+        ]
+    },
+    "event_string": [
+        "",
+        "Pull,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "POINT,Trevor Ryan,Pass,Megan Robb,Pass,Jessie Robinson,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Megan Robb,Pass,Trevor Ryan,Pass,Jessie Robinson,",
+        "+1,Jason Fraser,",
+        "+1,Patrick Kenzie,",
+        "+1,Trevor Ryan,",
+        "+1,Jay Thor Turner,",
+        "+1,Megan Robb,",
+        "+1,Jessie Robinson,",
+        "-1,Martin Cloake,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Justine Price,",
+        "-1,Nina Ramic,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Janet Ibit,Pass,Ariel Untiveros,Pass,Janet Ibit,Pass,Richard Gregory,Pass,Rob Ives,Pass,Richard Gregory,Pass,Janet Ibit,Pass,Richard Gregory,Pass,Rob Ives,Pass,Brent Burton,",
+        "Direction,>>>>>>,",
+        "Drop,Jonathan Pindur,Pass,Ryan Mussell,",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Hope Celani,Pass,Ariel Untiveros,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "POINT,Megan Robb,Pass,Trevor Ryan,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Megan Robb,Pass,Trevor Ryan,Pass,Megan Robb,Pass,Jessie Robinson,",
+        "+1,Jason Fraser,",
+        "+1,Patrick Kenzie,",
+        "+1,Trevor Ryan,",
+        "+1,Jay Thor Turner,",
+        "+1,Megan Robb,",
+        "+1,Jessie Robinson,",
+        "-1,Brent Burton,",
+        "-1,Martin Cloake,",
+        "-1,Mark Donahue,",
+        "-1,Justine Price,",
+        "-1,Nina Ramic,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros,Pass,Rob Ives,Pass,Hope Celani,Pass,chris sullivan(S),",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Trevor Ryan,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Tanya Gallant,Pass,Jessie Robinson,Pass,Patrick Kenzie,Pass,Jason Fraser,Pass,Jessie Robinson,Pass,Patrick Kenzie,",
+        "Direction,<<<<<<,",
+        "D,Brent Burton,",
+        "Throw Away,Mark Donahue,Pass,Justine Price,Pass,Ariel Untiveros,Pass,Mark Donahue,Pass,Martin Cloake,Pass,Mark Donahue,Pass,Justine Price,",
+        "Direction,>>>>>>,",
+        "D,Trevor Ryan,",
+        "POINT,Jessie Robinson,Pass,Jason Fraser,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Patrick Kenzie,Pass,Jessie Robinson,Pass,Trevor Ryan,",
+        "+1,Jason Fraser,",
+        "+1,Patrick Kenzie,",
+        "+1,Trevor Ryan,",
+        "+1,Jay Thor Turner,",
+        "+1,Tanya Gallant,",
+        "+1,Jessie Robinson,",
+        "-1,Brent Burton,",
+        "-1,Martin Cloake,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Justine Price,",
+        "-1,Nina Ramic,",
+        "Direction,<<<<<<,",
+        "Throw Away,Rob Ives,",
+        "Direction,>>>>>>,",
+        "Drop,Jonathan Pindur,Pass,Kevin Hughes,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "POINT,Richard Gregory,Pass,Janet Ibit,Pass,Hope Celani,Pass,Mark Donahue,Pass,Rob Ives,Pass,Mark Donahue,Pass,chris sullivan(S),",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "D,Ariel Untiveros,",
+        "POINT,Brent Burton,Pass,Nina Ramic,Pass,Ariel Untiveros,Pass,Nina Ramic,Pass,Justine Price,Pass,Ariel Untiveros,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Martin Cloake,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "Drop,Kevin Hughes,Pass,Ryan Mussell,Pass,Megan Robb,Pass,Kevin Hughes,Pass,Ryan Mussell,Pass,Tanya Gallant,Pass,Megan Robb,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "Throw Away,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Tanya Gallant,",
+        "Direction,<<<<<<,",
+        "D,Ariel Untiveros,",
+        "POINT,Richard Gregory,Pass,Mark Donahue,Pass,chris sullivan(S),Pass,Ariel Untiveros,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Tanya Gallant,",
+        "-1,Megan Robb,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "POINT,Martin Cloake,Pass,Justine Price,Pass,Richard Gregory,Pass,Rob Ives,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Martin Cloake,",
+        "+1,Richard Gregory,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "POINT,Kevin Hughes,Pass,Jessie Robinson,Pass,Ryan Mussell,Pass,Megan Robb,Pass,Jessie Robinson,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Megan Robb,",
+        "+1,Jessie Robinson,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "Drop,Richard Gregory,Pass,Justine Price,Pass,chris sullivan(S),Pass,Rob Ives,Pass,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "Drop,Jay Thor Turner,Pass,Patrick Kenzie,Pass,Trevor Ryan,Pass,Megan Robb,Pass,Patrick Kenzie,Pass,Trevor Ryan,Pass,Tanya Gallant,Pass,Patrick Kenzie,",
+        "Direction,<<<<<<,",
+        "POINT,Martin Cloake,Pass,Justine Price,Pass,chris sullivan(S),Pass,Justine Price,Pass,Rob Ives,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Megan Robb,",
+        "+1,Rob Ives,",
+        "+1,Martin Cloake,",
+        "+1,Richard Gregory,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Kevin Hughes,Pass,Jonathan Pindur,Pass,Ryan Mussell,Pass,Jonathan Pindur,Pass,Kevin Hughes,Pass,Jessie Robinson,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Megan Robb,",
+        "+1,Jessie Robinson,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "Throw Away,Nina Ramic,Pass,Justine Price,Pass,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "Throw Away,Richard Gregory,Pass,Justine Price,Pass,Richard Gregory,Pass,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "D,Trevor Ryan,",
+        "Throw Away,Tanya Gallant,Pass,Patrick Kenzie,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "D,Justine Price,",
+        "POINT,Mark Donahue,Pass,Richard Gregory,Pass,Nina Ramic,Pass,chris sullivan(S),Pass,Justine Price,Pass,chris sullivan(S),Pass,Nina Ramic,Pass,Justine Price,Pass,chris sullivan(S),Pass,Richard Gregory,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Ryan Mussell,Pass,Jonathan Pindur,Pass,Megan Robb,Pass,Tanya Gallant,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Brent Burton,Pass,chris sullivan(S),Pass,Janet Ibit,Pass,Brent Burton,Pass,chris sullivan(S),",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Tanya Gallant,",
+        "-1,Megan Robb,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Megan Robb,Pass,Jessie Robinson,Pass,Patrick Kenzie,Pass,Trevor Ryan,Pass,Patrick Kenzie,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "D,Martin Cloake,",
+        "POINT,Nina Ramic,Pass,Ariel Untiveros,Pass,Nina Ramic,Pass,Mark Donahue,Pass,Justine Price,Pass,Richard Gregory,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "POINT,Kevin Hughes,Pass,Jessie Robinson,Pass,Ryan Mussell,Pass,Jonathan Pindur,Pass,Jessie Robinson,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Tanya Gallant,",
+        "+1,Jessie Robinson,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Richard Gregory,Pass,Martin Cloake,Pass,Ariel Untiveros,Pass,Richard Gregory,Pass,Brent Burton,",
+        "Direction,>>>>>>,",
+        "POINT,Jason Fraser,Pass,Patrick Kenzie,Pass,Trevor Ryan,",
+        "+1,Jason Fraser,",
+        "+1,Patrick Kenzie,",
+        "+1,Trevor Ryan,",
+        "+1,Jay Thor Turner,",
+        "+1,Tanya Gallant,",
+        "+1,Megan Robb,",
+        "-1,Brent Burton,",
+        "-1,Martin Cloake,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Justine Price,",
+        "-1,Nina Ramic,",
+        "Direction,<<<<<<,",
+        "Time,Half,",
+        "Pull,Ryan Mussell,",
+        "Direction,<<<<<<,",
+        "Throw Away,chris sullivan(S),Pass,Rob Ives,",
+        "Direction,>>>>>>,",
+        "D,Megan Robb,",
+        "Throw Away,Jessie Robinson,Pass,Trevor Stocki,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "D,chris sullivan(S),",
+        "POINT,chris sullivan(S),Pass,Rob Ives,Pass,Janet Ibit,Pass,chris sullivan(S),",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Jay Thor Turner,Pass,Trevor Ryan,Pass,Jessie Robinson,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Jessie Robinson,Pass,Tanya Gallant,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "POINT,Mark Donahue,Pass,Justine Price,Pass,Brent Burton,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Brent Burton,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "Drop,Tanya Gallant,Pass,Jonathan Pindur,Pass,Ryan Mussell,Pass,Megan Robb,Pass,Kevin Hughes,Pass,Megan Robb,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "Throw Away,Rob Ives,Pass,Brent Burton,",
+        "Direction,>>>>>>,",
+        "D,Jonathan Pindur,",
+        "POINT,Jonathan Pindur,Pass,Ryan Mussell,Pass,Tanya Gallant,Pass,Kevin Hughes,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Tanya Gallant,",
+        "+1,Megan Robb,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Ariel Untiveros,Pass,Richard Gregory,Pass,Ariel Untiveros,Pass,Richard Gregory,Pass,Nina Ramic,Pass,Mark Donahue,Pass,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "D,Patrick Kenzie,",
+        "Throw Away,Jessie Robinson,Pass,Trevor Ryan,",
+        "Direction,<<<<<<,",
+        "POINT,Nina Ramic,Pass,Richard Gregory,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "Throw Away,Tanya Gallant,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "Throw Away,chris sullivan(S),Pass,Brent Burton,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "D,Jonathan Pindur,",
+        "Throw Away,Jessie Robinson,Pass,Ryan Mussell,Pass,Jessie Robinson,Pass,Trevor Stocki,",
+        "Direction,<<<<<<,",
+        "D,Hope Celani,",
+        "Throw Away,Brent Burton,",
+        "Direction,>>>>>>,",
+        "Throw Away,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "D,Martin Cloake,",
+        "POINT,Brent Burton,Pass,Rob Ives,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Martin Cloake,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Jason Fraser,Pass,Megan Robb,Pass,Patrick Kenzie,Pass,Trevor Ryan,Pass,Patrick Kenzie,",
+        "+1,Jason Fraser,",
+        "+1,Patrick Kenzie,",
+        "+1,Trevor Ryan,",
+        "+1,Jay Thor Turner,",
+        "+1,Tanya Gallant,",
+        "+1,Megan Robb,",
+        "-1,Rob Ives,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Justine Price,",
+        "-1,Nina Ramic,",
+        "Direction,<<<<<<,",
+        "POINT,chris sullivan(S),Pass,Martin Cloake,Pass,Richard Gregory,Pass,Hope Celani,Pass,Martin Cloake,Pass,Brent Burton,Pass,Richard Gregory,Pass,Brent Burton,Pass,Richard Gregory,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Brent Burton,",
+        "+1,Martin Cloake,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Patrick Kenzie,Pass,Trevor Ryan,Pass,Jay Thor Turner,Pass,Trevor Ryan,Pass,Patrick Kenzie,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "D,Ariel Untiveros,",
+        "POINT,Mark Donahue,Pass,Brent Burton,Pass,Mark Donahue,Pass,Ariel Untiveros,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "Direction,>>>>>>,",
+        "POINT,Kevin Hughes,Pass,Jonathan Pindur,Pass,Tanya Gallant,Pass,Kevin Hughes,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Tanya Gallant,",
+        "+1,Megan Robb,",
+        "-1,Martin Cloake,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,chris sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Ariel Untiveros,Pass,chris sullivan(S),",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Jonathan Pindur,Pass,Ryan Mussell,Pass,Kevin Hughes,Pass,Jessie Robinson,Pass,Jonathan Pindur,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros,Pass,Richard Gregory,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "Drop,Megan Robb,Pass,Tanya Gallant,Pass,Patrick Kenzie,",
+        "Direction,<<<<<<,",
+        "Throw Away,Brent Burton,",
+        "Direction,>>>>>>,",
+        "Drop,Megan Robb,Pass,Patrick Kenzie,",
+        "Direction,<<<<<<,",
+        "POINT,Richard Gregory,Pass,chris sullivan(S),Pass,Nina Ramic,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Megan Robb,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jessie Robinson,Pass,Jonathan Pindur,Pass,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "D,Martin Cloake,",
+        "Throw Away,Hope Celani,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "Throw Away,Kevin Hughes,",
+        "Direction,<<<<<<,",
+        "D,Janet Ibit,",
+        "Throw Away,Hope Celani,Pass,Mark Donahue,Pass,Martin Cloake,Pass,Rob Ives,Pass,Mark Donahue,",
+        "Direction,>>>>>>,",
+        "D,Ryan Mussell,",
+        "Throw Away,Ryan Mussell,",
+        "Direction,<<<<<<,",
+        "D,Ariel Untiveros,",
+        "Throw Away,Ariel Untiveros,",
+        "Direction,>>>>>>,",
+        "D,Jessie Robinson,",
+        "Throw Away,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "Drop,Mark Donahue,Pass,Ariel Untiveros,",
+        "Direction,>>>>>>,",
+        "Throw Away,Megan Robb,Pass,Kevin Hughes,Pass,Jessie Robinson,Pass,Kevin Hughes,Pass,Jonathan Pindur,Pass,Trevor Stocki,",
+        "Direction,<<<<<<,",
+        "Throw Away,Rob Ives,",
+        "Direction,>>>>>>,",
+        "Throw Away,Jonathan Pindur,Pass,Ryan Mussell,Pass,Megan Robb,",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Ariel Untiveros,Pass,Hope Celani,Pass,Rob Ives,Pass,Ariel Untiveros,",
+        "-1,Kevin Hughes,",
+        "-1,Ryan Mussell,",
+        "-1,Jonathan Pindur,",
+        "-1,Trevor Stocki,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Rob Ives,",
+        "+1,Martin Cloake,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "Drop,Jay Thor Turner,Pass,Trevor Ryan,Pass,Jessie Robinson,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros,Pass,Justine Price,Pass,chris sullivan(S),Pass,Richard Gregory,Pass,Nina Ramic,Pass,chris sullivan(S),Pass,Ariel Untiveros,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Tanya Gallant,",
+        "-1,Jessie Robinson,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Megan Robb,Pass,Kevin Hughes,Pass,Ryan Mussell,Pass,Jonathan Pindur,Pass,Ryan Mussell,Pass,Kevin Hughes,Pass,Tanya Gallant,Pass,Kevin Hughes,",
+        "+1,Kevin Hughes,",
+        "+1,Ryan Mussell,",
+        "+1,Jonathan Pindur,",
+        "+1,Trevor Stocki,",
+        "+1,Tanya Gallant,",
+        "+1,Megan Robb,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Martin Cloake,",
+        "-1,Mark Donahue,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "POINT,Justine Price,Pass,Ariel Untiveros,Pass,Richard Gregory,",
+        "-1,Jason Fraser,",
+        "-1,Patrick Kenzie,",
+        "-1,Trevor Ryan,",
+        "-1,Jay Thor Turner,",
+        "-1,Megan Robb,",
+        "-1,Jessie Robinson,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Justine Price,",
+        "+1,Nina Ramic,",
+        "+1,chris sullivan(S),",
+        "Direction,>>>>>>,"
     ]
-  },
-  "event_string": [
-    "POINT,James Maeng,Pass,Jessie Robinson,Pass,Matthew Kerr,Pass,Heather Wallace,Pass,Jessie Robinson",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "-1,Chris Sullivan",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Melissa Jess",
-    "Throw Away,Megan Berry",
-    "D,Jessie Robinson",
-    "POINT,Matthew Kerr,Pass,Jessie Robinson,Pass,Rob Tyson,Pass,James Maeng,Pass,Jessie Robinson",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Christopher Keates",
-    "-1,Krys Kudakiewicz",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "1,James Maeng",
-    "1,Jeremy Bryan",
-    "1,Matthew Kerr",
-    "1,Rob Tyson",
-    "1,Jessie Robinson",
-    "1,Justine price",
-    "Throw Away,Christopher Keates,Pass,Rob Ives",
-    "Drop,Heather Wallace,Pass,Justine price,Pass,Rob Tyson",
-    "POINT,Megan Berry,Pass,Christopher Keates",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Rob Ives",
-    "-1,Megan Berry",
-    "-1,Melissa Jess",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "Throw Away,Heather Wallace,Pass,James Maeng,Pass,Jeremy Bryan,Pass,Heather Wallace,Pass,Jessie Robinson",
-    "POINT,Krys Kudakiewicz,Pass,Chris Sullivan,Pass,Brent Burton,Pass,Krys Kudakiewicz",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Krys Kudakiewicz",
-    "1,Lissa Greenspoon",
-    "1,Melissa Jess",
-    "POINT,James Maeng,Pass,Matthew Kerr,Pass,Jessie Robinson",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "-1,Brent Burton",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "Throw Away,Megan Berry,Pass,Melissa Jess,Pass,Chris Sullivan,Pass,Megan Berry,Pass,Melissa Jess,Pass,Krys Kudakiewicz,Pass,Graham Brown",
-    "Throw Away,Kyle Sprysa,Pass,Rob Tyson",
-    "Drop,Greg Cormier,Pass,Krys Kudakiewicz,Pass,Chris Sullivan,Pass,Megan Berry,Pass,Krys Kudakiewicz,Pass,Chris Sullivan,Pass,Graham Brown,Pass,Greg Cormier",
-    "POINT,Rob Tyson,Pass,Justine price,Pass,Kyle Sprysa,Pass,Heather Wallace,Pass,Justine price",
-    "-1,Chris Sullivan",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Krys Kudakiewicz",
-    "-1,Megan Berry",
-    "-1,Melissa Jess",
-    "1,Andre Scott",
-    "1,Jeremy Bryan",
-    "1,Kyle Sprysa",
-    "1,Rob Tyson",
-    "1,Heather Wallace",
-    "1,Justine price",
-    "POINT,Rob Ives,Pass,Christopher Keates,Pass,Brent Burton,Pass,Rob Ives,Pass,Christopher Keates",
-    "-1,Brent Burton",
-    "-1,Christopher Keates",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "Throw Away,Kyle Sprysa,Pass,Andre Scott,Pass,Jessie Robinson,Pass,Matthew Kerr,Pass,Jessie Robinson",
-    "D,Rob Ives",
-    "Throw Away,Christopher Keates",
-    "POINT,Kyle Sprysa,Pass,Justine price,Pass,Andre Scott,Pass,Jessie Robinson",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "-1,Chris Sullivan",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Melissa Jess",
-    "Throw Away,Christopher Keates,Pass,Krys Kudakiewicz,Pass,Megan Berry,Pass,Christopher Keates,Pass,Brent Burton,Pass,Greg Cormier,Pass,Christopher Keates,Pass,Brent Burton,Pass,Megan Berry,Pass,Brent Burton,Pass,Megan Berry,Pass,Christopher Keates,Pass,Brent Burton",
-    "Throw Away,Jessie Robinson",
-    "D,Krys Kudakiewicz",
-    "Throw Away,Krys Kudakiewicz",
-    "D,Kyle Sprysa",
-    "Throw Away,Kyle Sprysa",
-    "D,Christopher Keates",
-    "Throw Away,Christopher Keates",
-    "D,Heather Wallace",
-    "Throw Away,Jessie Robinson,Pass,Andre Scott,Pass,Jessie Robinson,Pass,Kyle Sprysa",
-    "POINT,Melissa Jess,Pass,Christopher Keates,Pass,Megan Berry,Pass,Brent Burton",
-    "-1,Brent Burton",
-    "-1,Christopher Keates",
-    "-1,Greg Cormier",
-    "-1,Krys Kudakiewicz",
-    "-1,Megan Berry",
-    "-1,Melissa Jess",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "POINT,Jessie Robinson,Pass,Jeremy Bryan,Pass,James Maeng,Pass,Justine price,Pass,James Maeng,Pass,Rob Tyson,Pass,Justine price,Pass,Rob Tyson,Pass,Justine price,Pass,Jeremy Bryan,Pass,James Maeng,Pass,Justine price,Pass,Jeremy Bryan,Pass,Matthew Kerr,Pass,Rob Tyson",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "-1,Chris Sullivan",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "POINT,Lissa Greenspoon,Pass,Christopher Keates,Pass,Brent Burton,Pass,Christopher Keates,Pass,Rob Ives,Pass,Christopher Keates,Pass,Rob Ives,Pass,Brent Burton,Pass,Christopher Keates",
-    "-1,Brent Burton",
-    "-1,Christopher Keates",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Melissa Jess",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "Drop,Andre Scott,Pass,Kyle Sprysa",
-    "POINT,Chris Sullivan,Pass,Christopher Keates",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Chris Sullivan",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Christopher Keates",
-    "1,Megan Berry",
-    "1,Melissa Jess",
-    "Throw Away,James Maeng,Pass,Matthew Kerr,Pass,Rob Tyson,Pass,James Maeng,Pass,Jeremy Bryan,Pass,James Maeng,Pass,Matthew Kerr,Pass,Jessie Robinson",
-    "POINT,Lissa Greenspoon,Pass,Greg Cormier,Pass,Krys Kudakiewicz,Pass,Brent Burton",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Krys Kudakiewicz",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Heather Wallace,Pass,Kyle Sprysa",
-    "D,Christopher Keates",
-    "Throw Away,Brent Burton,Pass,Melissa Jess,Pass,Christopher Keates",
-    "Throw Away,Justine price,Pass,Heather Wallace,Pass,James Maeng,Pass,Heather Wallace,Pass,Justine price",
-    "Throw Away,Christopher Keates,Pass,Rob Ives,Pass,Christopher Keates,Pass,Lissa Greenspoon,Pass,Brent Burton",
-    "D,Heather Wallace",
-    "Throw Away,Justine price,Pass,James Maeng,Pass,Kyle Sprysa",
-    "D,Christopher Keates",
-    "Throw Away,Christopher Keates",
-    "Drop,Matthew Kerr,Pass,Andre Scott,Pass,James Maeng",
-    "Throw Away,Rob Ives,Pass,Lissa Greenspoon,Pass,Brent Burton,Pass,Rob Ives,Pass,Brent Burton,Pass,Graham Brown",
-    "Throw Away,Matthew Kerr,Pass,Justine price",
-    "D,Rob Ives",
-    "POINT,Lissa Greenspoon,Pass,Brent Burton,Pass,Christopher Keates,Pass,Brent Burton,Pass,Rob Ives",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Rob Ives",
-    "1,Lissa Greenspoon",
-    "1,Melissa Jess",
-    "Time,Half",
-    "Pull,Jessie Robinson",
-    "Drop,Chris Sullivan,Pass,Megan Berry,Pass,Lissa Greenspoon,Pass,Megan Berry,Pass,Greg Cormier,Pass,Krys Kudakiewicz,Pass,Greg Cormier",
-    "Drop,Justine price,Pass,Jessie Robinson,Pass,Kyle Sprysa",
-    "POINT,Chris Sullivan,Pass,Krys Kudakiewicz,Pass,Brent Burton",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Krys Kudakiewicz",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "POINT,Heather Wallace,Pass,Matthew Kerr,Pass,Jessie Robinson,Pass,Heather Wallace,Pass,Jeremy Bryan,Pass,Jessie Robinson",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Melissa Jess",
-    "POINT,Chris Sullivan,Pass,Greg Cormier,Pass,Chris Sullivan,Pass,Graham Brown,Pass,Megan Berry",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Megan Berry",
-    "-1,Melissa Jess",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "Throw Away,Jessie Robinson,Pass,Andre Scott,Pass,Jeremy Bryan,Pass,Jessie Robinson,Pass,Justine price,Pass,Jessie Robinson",
-    "Drop,Lissa Greenspoon,Pass,Christopher Keates",
-    "Throw Away,Justine price,Pass,Jessie Robinson",
-    "D,Chris Sullivan",
-    "Drop,Christopher Keates,Pass,Chris Sullivan",
-    "Throw Away,Kyle Sprysa",
-    "Drop,Lissa Greenspoon,Pass,Christopher Keates,Pass,Rob Ives",
-    "Throw Away,Rob Tyson,Pass,Jessie Robinson",
-    "Throw Away,Christopher Keates,Pass,Chris Sullivan,Pass,Lissa Greenspoon,Pass,Chris Sullivan,Pass,Christopher Keates",
-    "D,Jessie Robinson",
-    "POINT,Andre Scott,Pass,Jessie Robinson,Pass,Justine price,Pass,Jessie Robinson,Pass,Jeremy Bryan,Pass,Kyle Sprysa,Pass,Jeremy Bryan,Pass,Rob Tyson,Pass,Justine price,Pass,Rob Tyson,Pass,Justine price,Pass,Andre Scott,Pass,Jeremy Bryan,Pass,Kyle Sprysa,Pass,Justine price,Pass,Kyle Sprysa,Pass,Rob Tyson,Pass,Jessie Robinson",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "-1,Chris Sullivan",
-    "-1,Christopher Keates",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "POINT,Lissa Greenspoon,Pass,Brent Burton,Pass,Graham Brown,Pass,Brent Burton,Pass,Greg Cormier,Pass,Brent Burton,Pass,Krys Kudakiewicz,Pass,Lissa Greenspoon,Pass,Krys Kudakiewicz,Pass,Greg Cormier,Pass,Graham Brown",
-    "-1,Brent Burton",
-    "-1,Graham Brown",
-    "-1,Greg Cormier",
-    "-1,Krys Kudakiewicz",
-    "-1,Lissa Greenspoon",
-    "-1,Melissa Jess",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "Throw Away,Kyle Sprysa",
-    "D,Megan Berry",
-    "POINT,Chris Sullivan,Pass,Megan Berry",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "1,Chris Sullivan",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Rob Ives",
-    "1,Megan Berry",
-    "1,Melissa Jess",
-    "Throw Away,Jessie Robinson,Pass,Jeremy Bryan,Pass,Kyle Sprysa",
-    "D,Chris Sullivan",
-    "POINT,Krys Kudakiewicz,Pass,Chris Sullivan",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Krys Kudakiewicz",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Jessie Robinson",
-    "D,Christopher Keates",
-    "POINT,Melissa Jess,Pass,Greg Cormier,Pass,Rob Ives,Pass,Christopher Keates",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Rob Ives",
-    "1,Megan Berry",
-    "1,Melissa Jess",
-    "Throw Away,James Maeng,Pass,Justine price",
-    "Throw Away,Brent Burton,Pass,Chris Sullivan,Pass,Brent Burton,Pass,Krys Kudakiewicz",
-    "Throw Away,Justine price,Pass,Matthew Kerr",
-    "D,Christopher Keates",
-    "POINT,Christopher Keates,Pass,Chris Sullivan,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Christopher Keates",
-    "1,Krys Kudakiewicz",
-    "1,Megan Berry",
-    "1,Melissa Jess",
-    "Throw Away,Jessie Robinson,Pass,Justine price,Pass,Kyle Sprysa,Pass,Jessie Robinson",
-    "POINT,Greg Cormier,Pass,Megan Berry,Pass,Rob Ives,Pass,Brent Burton",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Rob Ives",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Matthew Kerr,Pass,Heather Wallace,Pass,Matthew Kerr,Pass,Heather Wallace,Pass,Jessie Robinson",
-    "D,Krys Kudakiewicz",
-    "POINT,Melissa Jess,Pass,Krys Kudakiewicz,Pass,Christopher Keates,Pass,Rob Ives,Pass,Lissa Greenspoon,Pass,Chris Sullivan,Pass,Rob Ives",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Chris Sullivan",
-    "1,Christopher Keates",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Lissa Greenspoon",
-    "1,Melissa Jess",
-    "Throw Away,Heather Wallace",
-    "D,Megan Berry",
-    "POINT,Krys Kudakiewicz,Pass,Lissa Greenspoon,Pass,Megan Berry",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Heather Wallace",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Krys Kudakiewicz",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "POINT,Justine price,Pass,Jessie Robinson,Pass,Justine price,Pass,Jessie Robinson,Pass,Justine price,Pass,Jessie Robinson,Pass,Justine price,Pass,Jessie Robinson,Pass,Rob Tyson,Pass,Kyle Sprysa,Pass,Justine price,Pass,Jessie Robinson,Pass,Kyle Sprysa",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "-1,Chris Sullivan",
-    "-1,Christopher Keates",
-    "-1,Greg Cormier",
-    "-1,Rob Ives",
-    "-1,Megan Berry",
-    "-1,Melissa Jess",
-    "POINT,Krys Kudakiewicz,Pass,Brent Burton,Pass,Christopher Keates,Pass,Krys Kudakiewicz,Pass,Megan Berry,Pass,Brent Burton,Pass,Lissa Greenspoon,Pass,Brent Burton,Pass,Megan Berry,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Brent Burton",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "Throw Away,Kyle Sprysa",
-    "POINT,Lissa Greenspoon,Pass,Chris Sullivan,Pass,Graham Brown,Pass,Greg Cormier,Pass,Chris Sullivan",
-    "-1,Andre Scott",
-    "-1,James Maeng",
-    "-1,Kyle Sprysa",
-    "-1,Matthew Kerr",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "1,Chris Sullivan",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Rob Ives",
-    "1,Lissa Greenspoon",
-    "1,Melissa Jess",
-    "Drop,Kyle Sprysa,Pass,Jessie Robinson,Pass,Jeremy Bryan,Pass,Jessie Robinson,Pass,Kyle Sprysa,Pass,Rob Tyson",
-    "POINT,Krys Kudakiewicz,Pass,Rob Ives,Pass,Brent Burton,Pass,Rob Ives,Pass,Christopher Keates",
-    "-1,Andre Scott",
-    "-1,Jeremy Bryan",
-    "-1,Kyle Sprysa",
-    "-1,Rob Tyson",
-    "-1,Jessie Robinson",
-    "-1,Justine price",
-    "1,Brent Burton",
-    "1,Christopher Keates",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Megan Berry",
-    "1,Melissa Jess",
-    "Throw Away,Jessie Robinson",
-    "D,Megan Berry",
-    "POINT,Chris Sullivan,Pass,Greg Cormier,Pass,Megan Berry,Pass,Brent Burton,Pass,Chris Sullivan",
-    "-1,James Maeng",
-    "-1,Jeremy Bryan",
-    "-1,Matthew Kerr",
-    "-1,Rob Tyson",
-    "-1,Heather Wallace",
-    "-1,Jessie Robinson",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Graham Brown",
-    "1,Greg Cormier",
-    "1,Megan Berry",
-    "1,Melissa Jess"
-  ]
 }

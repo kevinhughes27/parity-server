@@ -1,511 +1,3918 @@
 {
-  "week": 2,
-  "teams": {
-    "The CEOs": [
-      "Ewelina Sosnowska",
-      "Kindha Gorman",
-      "Olesia Bissett",
-      "Stacey Wowchuk",
-      "Andrew W Cameron",
-      "Christopher Castonguay",
-      "David O'Connor",
-      "Jeff Hunt",
-      "Jim Robinson",
-      "Marc Vachon",
-      "Nick Theriault",
-      "Owen Lumley"
-    ],
-    "Lowered Expectations": [
-      "Anne Leduc",
-      "CarolAnne Black",
-      "Laura Chambers Storey",
-      "Stephanie White",
-      "Benoit Goulet",
-      "Edwin Wong",
-      "Geofford seaborn",
-      "Ian Ewing",
-      "Mackenzie King",
-      "Nicholas Aghajanian",
-      "Shubho Bo Biswas",
-      "Steve Chow"
+    "league": "ocua_16-17",
+    "teams": {
+        "Hindsight Hooligans": [
+            "Julia Laforge",
+            "Aleksandra Ostojic",
+            "Maya Popovic",
+            "Carrie-Anne Whyte",
+            "Amos Lee",
+            "Craig Anderson",
+            "Kevin Barford",
+            "Hadrian Mertins-Kirkwood",
+            "Michael O'Hare",
+            "Andre Scott",
+            "Nick Theriault",
+            "Geofford seaborn"
+        ],
+        "SOS - Man Overboard (SOS)": [
+            "Andrea Proulx",
+            "Christine Beals",
+            "Samantha Lee",
+            "Angela Mueller",
+            "Nicholas Aghajanian",
+            "Jonathan Champagne",
+            "Sina Dee",
+            "Morgan Howard",
+            "Tim Kealey",
+            "Benjamin Piper",
+            "Jon Rowe",
+            "Dan Thomson"
+        ]
+    },
+    "events": {
+        "points": [
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 2:25:26 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:12 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:14 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:18 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:22 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:26 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:32 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Carrie-Anne Whyte"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:37 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:26:38 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:26:39 AM",
+                        "firstActor": "Geofford seaborn"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:33 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:37 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:42 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:45 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:49 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:27:53 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:28:01 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:28:05 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:28:09 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:28:14 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:28:17 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:28:18 AM",
+                        "firstActor": "Samantha Lee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:20 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:26 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:30 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:34 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:41 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:46 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:49 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:53 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:29:59 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:30:01 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:30:51 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:30:53 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:30:58 AM",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:31:00 AM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:31:07 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:31:11 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:31:15 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:31:18 AM",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:31:21 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:31:21 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:31:23 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:31:24 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:32:16 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:32:20 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:32:27 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:32:28 AM",
+                        "firstActor": "Benjamin Piper"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:33:28 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:33:33 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:33:42 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:33:45 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:33:47 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:33:51 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:34:01 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:34:06 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:34:09 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:34:17 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:34:24 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:34:25 AM",
+                        "firstActor": "Benjamin Piper"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:35:16 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:35:21 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:35:23 AM",
+                        "firstActor": "Carrie-Anne Whyte"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:08 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:11 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:14 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:17 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:20 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:25 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:29 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:36 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:39 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:36:43 AM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:36:58 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:37:04 AM",
+                        "secondActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:37:05 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:37:06 AM",
+                        "firstActor": "Andre Scott"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:00 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:01 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:04 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:16 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:25 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:38:25 AM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:44 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:51 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:53 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Carrie-Anne Whyte"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:38:57 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:38:58 AM",
+                        "firstActor": "Craig Anderson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:39:44 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:39:48 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:39:50 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:39:51 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:39:52 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Morgan Howard",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:42:32 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:42:34 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:42:41 AM",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:42:47 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:42:54 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:42:55 AM",
+                        "firstActor": "Kevin Barford"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:43:44 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:43:57 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:44:01 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:44:02 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:44:08 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:44:10 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:44:20 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:44:37 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:10 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:45:14 AM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:26 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:33 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:37 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:42 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:45:45 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:45:46 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:46:29 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:46:32 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:46:40 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:46:44 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:46:49 AM",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:46:53 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:46:59 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:47:05 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:47:12 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:47:13 AM",
+                        "firstActor": "Kevin Barford"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:02 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:06 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:07 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:16 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:30 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:33 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:38 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:42 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:47 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:51 AM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:12 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:17 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:23 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:49:29 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:50 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:49:51 AM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:56 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:51:59 AM",
+                        "secondActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:01 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:02 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:03 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:52:04 AM",
+                        "firstActor": "Christine Beals"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:02 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:06 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:07 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:16 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:30 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:33 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:38 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:42 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:48:47 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:48:51 AM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:12 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:17 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:23 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:49:29 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:50 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 2:49:51 AM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:49:56 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:51:59 AM",
+                        "secondActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:01 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:02 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:52:03 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:52:04 AM",
+                        "firstActor": "Christine Beals"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:53:11 AM",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:53:13 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:53:16 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:53:35 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:53:41 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:53:45 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:53:51 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:53:55 AM",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 2:53:57 AM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:03 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:06 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:08 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:11 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:14 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:18 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:20 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:54:25 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:54:27 AM",
+                        "firstActor": "Andrea Proulx"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:55:08 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:55:49 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:55:54 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:55:57 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:55:58 AM",
+                        "firstActor": "Carrie-Anne Whyte"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:56:41 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:56:46 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:56:47 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:56:52 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:56:56 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:56:57 AM",
+                        "firstActor": "Dan Thomson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:57:44 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:57:47 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:57:51 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:57:57 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:58:02 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 2:58:08 AM",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:58:16 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 2:58:22 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 2:58:23 AM",
+                        "firstActor": "Benjamin Piper"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 3:03:15 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:03:56 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:00 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:07 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:14 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:19 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:21 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:04:27 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:04:29 AM",
+                        "firstActor": "Andrea Proulx"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:05:16 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:05:21 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:05:26 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:05:38 AM",
+                        "firstActor": "Carrie-Anne Whyte"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:06:23 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:06:29 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:06:30 AM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:07:17 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:07:22 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Carrie-Anne Whyte"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:07:28 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:07:36 AM",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:07:48 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:07:49 AM",
+                        "firstActor": "Jon Rowe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:08:37 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:08:42 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:08:42 AM",
+                        "firstActor": "Amos Lee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:09:45 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:09:58 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:02 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:07 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:10:11 AM",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:10:13 AM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:14 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:18 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:24 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:10:30 AM",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:52 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:10:57 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:11:04 AM",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:18 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:24 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:29 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:31 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:34 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:37 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:39 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:41 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:11:46 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:11:47 AM",
+                        "firstActor": "Christine Beals"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:12:51 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:12:54 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:13:02 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:13:10 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:13:11 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:03 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:07 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:10 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:14 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:14:17 AM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:14:20 AM",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:30 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:14:37 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:14:38 AM",
+                        "firstActor": "Carrie-Anne Whyte"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Benjamin Piper",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:19 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:23 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:28 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:40 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:43 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:15:48 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:16:22 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:16:26 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:16:30 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:16:34 AM",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:16:39 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:16:44 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:16:53 AM",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:16:58 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:03 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:06 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:17:07 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:12 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:13 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:17:20 AM",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:23 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:17:26 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:36 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:37 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:39 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:44 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:50 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:53 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:17:55 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:18:03 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:18:04 AM",
+                        "firstActor": "Andre Scott"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:20:16 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:20:22 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:20:41 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:21:14 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:21:16 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:21 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:24 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:30 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:34 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:21:39 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:57 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:21:59 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:08 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:10 AM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:12 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:15 AM",
+                        "secondActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:17 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:22:23 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:22:24 AM",
+                        "firstActor": "Samantha Lee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:14 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:23:18 AM",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:23:24 AM",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:30 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:32 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:35 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:39 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:23:42 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:23:44 AM",
+                        "firstActor": "Jon Rowe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:21 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:25 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:29 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:31 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:37 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:41 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:24:46 AM",
+                        "secondActor": "Aleksandra Ostojic",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:24:47 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:25:29 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:25:32 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:25:35 AM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:25:38 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:25:53 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:25:57 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:25:59 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:03 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:10 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:15 AM",
+                        "secondActor": "Carrie-Anne Whyte",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:19 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Carrie-Anne Whyte"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:21 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:26:27 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:26:35 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:26:38 AM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:26:45 AM",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:26:48 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:27:07 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:27:11 AM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:27:13 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:27:15 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:27:18 AM",
+                        "firstActor": "Andrea Proulx"
+                    }
+                ],
+                "defensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:27:59 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:28:02 AM",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:28:04 AM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:28:22 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:28:24 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:37 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:40 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:44 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:50 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:57 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:28:59 AM",
+                        "secondActor": "Amos Lee",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:29:00 AM",
+                        "firstActor": "Amos Lee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:29:47 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:29:52 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:29:55 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:29:57 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:30:00 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:30:01 AM",
+                        "firstActor": "Benjamin Piper"
+                    }
+                ],
+                "defensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:30:41 AM",
+                        "secondActor": "Hadrian Mertins-Kirkwood",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:30:45 AM",
+                        "firstActor": "Hadrian Mertins-Kirkwood"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:30:47 AM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:30:53 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:31:00 AM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:31:54 AM",
+                        "secondActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:01 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:32:02 AM",
+                        "firstActor": "Dan Thomson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Craig Anderson",
+                    "Hadrian Mertins-Kirkwood",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Aleksandra Ostojic"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:32:43 AM",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:32:45 AM",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:48 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:52 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:54 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:55 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:32:59 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:33:03 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:33:06 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:33:10 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:33:15 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:33:25 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:33:26 AM",
+                        "firstActor": "Benjamin Piper"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Tim Kealey",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Craig Anderson",
+                    "Kevin Barford",
+                    "Andre Scott",
+                    "Geofford seaborn",
+                    "Julia Laforge",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:34:05 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:34:10 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:34:12 AM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:34:21 AM",
+                        "secondActor": "Tim Kealey",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:34:24 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Tim Kealey"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:34:37 AM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:34:40 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:34:43 AM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:34:46 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:05 AM",
+                        "secondActor": "Andre Scott",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:12 AM",
+                        "secondActor": "Julia Laforge",
+                        "firstActor": "Andre Scott"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:17 AM",
+                        "secondActor": "Geofford seaborn",
+                        "firstActor": "Julia Laforge"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:20 AM",
+                        "secondActor": "Craig Anderson",
+                        "firstActor": "Geofford seaborn"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:24 AM",
+                        "secondActor": "Kevin Barford",
+                        "firstActor": "Craig Anderson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:35:26 AM",
+                        "firstActor": "Kevin Barford"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:35:44 AM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:35:45 AM",
+                        "firstActor": "Dan Thomson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Tim Kealey",
+                    "Dan Thomson",
+                    "Christine Beals",
+                    "Samantha Lee"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Amos Lee",
+                    "Kevin Barford",
+                    "Hadrian Mertins-Kirkwood",
+                    "Andre Scott",
+                    "Aleksandra Ostojic",
+                    "Carrie-Anne Whyte"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:36:43 AM",
+                        "firstActor": "Amos Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:36:49 AM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:36:56 AM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:36:58 AM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:37:21 AM",
+                        "firstActor": "Aleksandra Ostojic"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:37:24 AM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:26 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:29 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:37 AM",
+                        "secondActor": "Benjamin Piper",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:40 AM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Benjamin Piper"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:43 AM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:37:49 AM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:37:50 AM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Benjamin Piper",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Angela Mueller"
+                ]
+            }
+        ]
+    },
+    "event_string": [
+        "",
+        "Pull,Benjamin Piper,",
+        "Direction,>>>>>>,",
+        "POINT,Geofford seaborn,Pass,Kevin Barford,Pass,Craig Anderson,Pass,Carrie-Anne Whyte,Pass,Geofford seaborn,Pass,Kevin Barford,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,Pass,Julia Laforge,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "POINT,Samantha Lee,Pass,Jon Rowe,Pass,Morgan Howard,Pass,Sina Dee,Pass,Christine Beals,Pass,Nicholas Aghajanian,Pass,Jon Rowe,Pass,Samantha Lee,Pass,Nicholas Aghajanian,Pass,Sina Dee,Pass,Morgan Howard,Pass,Sina Dee,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "POINT,Aleksandra Ostojic,Pass,Hadrian Mertins-Kirkwood,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Andre Scott,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Amos Lee,Pass,Andre Scott,Pass,Craig Anderson,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Andre Scott,",
+        "+1,Aleksandra Ostojic,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Sina Dee,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "D,Kevin Barford,",
+        "Throw Away,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "D,Christine Beals,",
+        "Throw Away,Tim Kealey,Pass,Samantha Lee,Pass,Morgan Howard,",
+        "Direction,>>>>>>,",
+        "D,Geofford seaborn,",
+        "POINT,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,Pass,Craig Anderson,Pass,Geofford seaborn,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Jon Rowe,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Benjamin Piper,Pass,Jon Rowe,Pass,Andrea Proulx,Pass,Benjamin Piper,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Sina Dee,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Aleksandra Ostojic,Pass,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "POINT,Benjamin Piper,Pass,Tim Kealey,Pass,Nicholas Aghajanian,Pass,Morgan Howard,Pass,Samantha Lee,Pass,Nicholas Aghajanian,Pass,Tim Kealey,Pass,Nicholas Aghajanian,Pass,Benjamin Piper,Pass,Tim Kealey,",
+        "-1,Amos Lee,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Morgan Howard,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "POINT,Carrie-Anne Whyte,Pass,Geofford seaborn,Pass,Craig Anderson,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Christine Beals,Pass,Benjamin Piper,Pass,Nicholas Aghajanian,Pass,Tim Kealey,Pass,Dan Thomson,Pass,Benjamin Piper,Pass,Christine Beals,Pass,Samantha Lee,Pass,Dan Thomson,Pass,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "POINT,Andre Scott,Pass,Kevin Barford,Pass,Julia Laforge,",
+        "+1,Amos Lee,",
+        "+1,Kevin Barford,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Drop,Andrea Proulx,Pass,Morgan Howard,Pass,Jon Rowe,Pass,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "POINT,Craig Anderson,Pass,Amos Lee,Pass,Carrie-Anne Whyte,Pass,Geofford seaborn,Pass,Craig Anderson,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Aleksandra Ostojic,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Hadrian Mertins-Kirkwood,",
+        "POINT,Hadrian Mertins-Kirkwood,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,",
+        "+1,Amos Lee,",
+        "+1,Kevin Barford,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Andre Scott,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Sina Dee,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Drop,Nicholas Aghajanian,Pass,Andrea Proulx,Pass,Morgan Howard,",
+        "Direction,>>>>>>,",
+        "POINT,Kevin Barford,Pass,Craig Anderson,Pass,Aleksandra Ostojic,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Morgan Howard,",
+        "-1,Benjamin Piper,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sina Dee,",
+        "Direction,>>>>>>,",
+        "POINT,Hadrian Mertins-Kirkwood,Pass,Amos Lee,Pass,Geofford seaborn,Pass,Craig Anderson,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,Pass,Aleksandra Ostojic,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Aleksandra Ostojic,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Tim Kealey,",
+        "-1,Dan Thomson,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Angela Mueller,Pass,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "POINT,Hadrian Mertins-Kirkwood,Pass,Andre Scott,Pass,Julia Laforge,Pass,Andre Scott,Pass,Kevin Barford,Pass,Hadrian Mertins-Kirkwood,",
+        "+1,Amos Lee,",
+        "+1,Kevin Barford,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Andre Scott,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Samantha Lee,Pass,Sina Dee,Pass,Dan Thomson,Pass,Samantha Lee,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Kevin Barford,",
+        "POINT,Kevin Barford,Pass,Craig Anderson,Pass,Julia Laforge,Pass,Craig Anderson,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Benjamin Piper,",
+        "Direction,>>>>>>,",
+        "Throw Away,Amos Lee,Pass,Geofford seaborn,Pass,Aleksandra Ostojic,",
+        "Direction,<<<<<<,",
+        "Throw Away,Angela Mueller,Pass,Andrea Proulx,Pass,Benjamin Piper,Pass,Morgan Howard,Pass,Tim Kealey,Pass,Andrea Proulx,",
+        "Direction,>>>>>>,",
+        "Throw Away,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Aleksandra Ostojic,Pass,Amos Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Christine Beals,Pass,Sina Dee,Pass,Benjamin Piper,Pass,Sina Dee,Pass,Morgan Howard,Pass,Tim Kealey,",
+        "-1,Amos Lee,",
+        "-1,Craig Anderson,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Geofford seaborn,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Dan Thomson,",
+        "+1,Christine Beals,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Julia Laforge,",
+        "Direction,<<<<<<,",
+        "D,Tim Kealey,",
+        "Throw Away,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "Throw Away,Andre Scott,Pass,Aleksandra Ostojic,Pass,Craig Anderson,Pass,Julia Laforge,Pass,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "D,Jon Rowe,",
+        "POINT,Andrea Proulx,Pass,Dan Thomson,Pass,Jon Rowe,Pass,Tim Kealey,Pass,Angela Mueller,Pass,Jon Rowe,Pass,Dan Thomson,Pass,Angela Mueller,Pass,Morgan Howard,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Morgan Howard,",
+        "+1,Tim Kealey,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "POINT,Carrie-Anne Whyte,Pass,Amos Lee,Pass,Aleksandra Ostojic,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Aleksandra Ostojic,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Dan Thomson,Pass,Sina Dee,Pass,Morgan Howard,Pass,Andrea Proulx,Pass,Angela Mueller,Pass,Sina Dee,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Julia Laforge,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Andre Scott,Pass,Geofford seaborn,Pass,Andre Scott,Pass,Aleksandra Ostojic,Pass,Kevin Barford,Pass,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "POINT,Benjamin Piper,Pass,Tim Kealey,Pass,Benjamin Piper,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Dan Thomson,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "Time,Half,",
+        "Pull,Hadrian Mertins-Kirkwood,",
+        "Direction,<<<<<<,",
+        "POINT,Andrea Proulx,Pass,Sina Dee,Pass,Jon Rowe,Pass,Dan Thomson,Pass,Andrea Proulx,Pass,Jon Rowe,Pass,Andrea Proulx,Pass,Dan Thomson,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "POINT,Carrie-Anne Whyte,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,Pass,Amos Lee,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Jon Rowe,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Sina Dee,Pass,Morgan Howard,Pass,Andrea Proulx,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Tim Kealey,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Andre Scott,Pass,Hadrian Mertins-Kirkwood,Pass,Carrie-Anne Whyte,Pass,Amos Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Jon Rowe,Pass,Sina Dee,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "POINT,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Julia Laforge,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sina Dee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Craig Anderson,Pass,Julia Laforge,Pass,Craig Anderson,Pass,Andre Scott,",
+        "Direction,<<<<<<,",
+        "D,Morgan Howard,",
+        "Throw Away,Samantha Lee,Pass,Nicholas Aghajanian,Pass,Sina Dee,Pass,Morgan Howard,",
+        "Direction,>>>>>>,",
+        "Throw Away,Julia Laforge,Pass,Craig Anderson,Pass,Julia Laforge,",
+        "Direction,<<<<<<,",
+        "POINT,Christine Beals,Pass,Nicholas Aghajanian,Pass,Morgan Howard,Pass,Sina Dee,Pass,Samantha Lee,Pass,Sina Dee,Pass,Jon Rowe,Pass,Samantha Lee,Pass,Sina Dee,Pass,Samantha Lee,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Aleksandra Ostojic,",
+        "Direction,<<<<<<,",
+        "D,Tim Kealey,",
+        "Throw Away,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "POINT,Hadrian Mertins-Kirkwood,Pass,Andre Scott,",
+        "+1,Amos Lee,",
+        "+1,Kevin Barford,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Andre Scott,",
+        "+1,Aleksandra Ostojic,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Jon Rowe,Pass,Samantha Lee,Pass,Sina Dee,Pass,Jon Rowe,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Geofford seaborn,",
+        "POINT,Carrie-Anne Whyte,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Carrie-Anne Whyte,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Jon Rowe,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sina Dee,Pass,Nicholas Aghajanian,Pass,Dan Thomson,Pass,Andrea Proulx,Pass,Benjamin Piper,Pass,Andrea Proulx,Pass,Sina Dee,Pass,Andrea Proulx,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Geofford seaborn,",
+        "Throw Away,Andre Scott,Pass,Craig Anderson,Pass,Andre Scott,",
+        "Direction,<<<<<<,",
+        "Drop,Benjamin Piper,Pass,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Craig Anderson,Pass,Julia Laforge,Pass,Andre Scott,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sina Dee,Pass,Dan Thomson,",
+        "Direction,>>>>>>,",
+        "POINT,Andre Scott,Pass,Aleksandra Ostojic,Pass,Kevin Barford,Pass,Craig Anderson,Pass,Geofford seaborn,Pass,Andre Scott,Pass,Kevin Barford,Pass,Geofford seaborn,Pass,Julia Laforge,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Benjamin Piper,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "Throw Away,Benjamin Piper,Pass,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "Throw Away,Kevin Barford,",
+        "Direction,<<<<<<,",
+        "Throw Away,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "D,Aleksandra Ostojic,",
+        "Throw Away,Hadrian Mertins-Kirkwood,Pass,Andre Scott,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Amos Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Samantha Lee,Pass,Benjamin Piper,Pass,Tim Kealey,Pass,Christine Beals,Pass,Samantha Lee,Pass,Jon Rowe,Pass,Tim Kealey,Pass,Benjamin Piper,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Morgan Howard,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Geofford seaborn,Pass,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "D,Nicholas Aghajanian,",
+        "POINT,Jon Rowe,Pass,Andrea Proulx,Pass,Sina Dee,Pass,Jon Rowe,Pass,Andrea Proulx,Pass,Sina Dee,",
+        "-1,Amos Lee,",
+        "-1,Craig Anderson,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "POINT,Aleksandra Ostojic,Pass,Craig Anderson,Pass,Julia Laforge,Pass,Geofford seaborn,Pass,Craig Anderson,Pass,Andre Scott,Pass,Craig Anderson,Pass,Geofford seaborn,",
+        "+1,Craig Anderson,",
+        "+1,Kevin Barford,",
+        "+1,Andre Scott,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Benjamin Piper,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Jon Rowe,Pass,Andrea Proulx,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Kevin Barford,",
+        "Throw Away,Hadrian Mertins-Kirkwood,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Carrie-Anne Whyte,Pass,Hadrian Mertins-Kirkwood,Pass,Andre Scott,Pass,Kevin Barford,Pass,Amos Lee,Pass,Hadrian Mertins-Kirkwood,Pass,Aleksandra Ostojic,",
+        "Direction,<<<<<<,",
+        "D,Jon Rowe,",
+        "Throw Away,Benjamin Piper,",
+        "Direction,>>>>>>,",
+        "D,Kevin Barford,",
+        "Throw Away,Hadrian Mertins-Kirkwood,",
+        "Direction,<<<<<<,",
+        "D,Andrea Proulx,",
+        "POINT,Andrea Proulx,Pass,Sina Dee,Pass,Andrea Proulx,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Julia Laforge,Pass,Geofford seaborn,",
+        "Direction,<<<<<<,",
+        "D,Morgan Howard,",
+        "Throw Away,Tim Kealey,",
+        "Direction,>>>>>>,",
+        "D,Amos Lee,",
+        "POINT,Amos Lee,Pass,Geofford seaborn,Pass,Hadrian Mertins-Kirkwood,Pass,Craig Anderson,Pass,Hadrian Mertins-Kirkwood,Pass,Geofford seaborn,Pass,Craig Anderson,",
+        "+1,Amos Lee,",
+        "+1,Craig Anderson,",
+        "+1,Hadrian Mertins-Kirkwood,",
+        "+1,Geofford seaborn,",
+        "+1,Julia Laforge,",
+        "+1,Aleksandra Ostojic,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Morgan Howard,",
+        "-1,Tim Kealey,",
+        "-1,Dan Thomson,",
+        "-1,Christine Beals,",
+        "-1,Samantha Lee,",
+        "Direction,<<<<<<,",
+        "POINT,Benjamin Piper,Pass,Jon Rowe,Pass,Tim Kealey,Pass,Andrea Proulx,Pass,Angela Mueller,Pass,Sina Dee,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Hadrian Mertins-Kirkwood,Pass,Amos Lee,",
+        "Direction,<<<<<<,",
+        "D,Christine Beals,",
+        "POINT,Dan Thomson,Pass,Samantha Lee,Pass,Sina Dee,Pass,Morgan Howard,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Julia Laforge,",
+        "Direction,<<<<<<,",
+        "D,Tim Kealey,",
+        "POINT,Benjamin Piper,Pass,Angela Mueller,Pass,Andrea Proulx,Pass,Tim Kealey,Pass,Andrea Proulx,Pass,Benjamin Piper,Pass,Tim Kealey,Pass,Andrea Proulx,Pass,Morgan Howard,Pass,Angela Mueller,Pass,Tim Kealey,",
+        "-1,Amos Lee,",
+        "-1,Craig Anderson,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Aleksandra Ostojic,",
+        "+1,Morgan Howard,",
+        "+1,Tim Kealey,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,",
+        "Throw Away,Kevin Barford,Pass,Craig Anderson,",
+        "Direction,<<<<<<,",
+        "D,Christine Beals,",
+        "Throw Away,Sina Dee,Pass,Nicholas Aghajanian,Pass,Dan Thomson,Pass,Tim Kealey,Pass,Sina Dee,",
+        "Direction,>>>>>>,",
+        "D,Kevin Barford,",
+        "Throw Away,Kevin Barford,Pass,Craig Anderson,Pass,Geofford seaborn,Pass,Julia Laforge,Pass,Andre Scott,Pass,Geofford seaborn,",
+        "Direction,<<<<<<,",
+        "POINT,Dan Thomson,Pass,Sina Dee,",
+        "-1,Craig Anderson,",
+        "-1,Kevin Barford,",
+        "-1,Andre Scott,",
+        "-1,Geofford seaborn,",
+        "-1,Julia Laforge,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Tim Kealey,",
+        "+1,Dan Thomson,",
+        "+1,Christine Beals,",
+        "+1,Samantha Lee,",
+        "Direction,>>>>>>,",
+        "Throw Away,Amos Lee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Jon Rowe,Pass,Morgan Howard,Pass,Andrea Proulx,",
+        "Direction,>>>>>>,",
+        "Throw Away,Aleksandra Ostojic,",
+        "Direction,<<<<<<,",
+        "D,Angela Mueller,",
+        "POINT,Sina Dee,Pass,Angela Mueller,Pass,Andrea Proulx,Pass,Benjamin Piper,Pass,Sina Dee,Pass,Benjamin Piper,Pass,Angela Mueller,",
+        "-1,Amos Lee,",
+        "-1,Kevin Barford,",
+        "-1,Hadrian Mertins-Kirkwood,",
+        "-1,Andre Scott,",
+        "-1,Aleksandra Ostojic,",
+        "-1,Carrie-Anne Whyte,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Benjamin Piper,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Angela Mueller,",
+        "Direction,>>>>>>,"
     ]
-  },
-  "event_string": [
-    "Pull,Ian Ewing",
-    "POINT,David O'Connor,Pass,Olesia Bissett,Pass,Kindha Gorman,Pass,Olesia Bissett,Pass,Andrew W Cameron,Pass,Christopher Castonguay",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "Drop,CarolAnne Black,Pass,Steve Chow,Pass,CarolAnne Black",
-    "Throw Away,Jeff Hunt",
-    "D,CarolAnne Black",
-    "Throw Away,Shubho Bo Biswas,Pass,CarolAnne Black",
-    "Throw Away,Nick Theriault,Pass,Stacey Wowchuk,Pass,Nick Theriault",
-    "D,Shubho Bo Biswas",
-    "Throw Away,Geofford seaborn,Pass,Steve Chow,Pass,Geofford seaborn,Pass,Shubho Bo Biswas",
-    "D,Owen Lumley",
-    "Drop,Jeff Hunt,Pass,Stacey Wowchuk,Pass,Owen Lumley",
-    "D,CarolAnne Black",
-    "POINT,CarolAnne Black,Pass,Steve Chow,Pass,Geofford seaborn,Pass,Steve Chow,Pass,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Edwin Wong,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Edwin Wong,Pass,Shubho Bo Biswas",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Andrew W Cameron",
-    "Throw Away,CarolAnne Black",
-    "POINT,Kindha Gorman,Pass,Christopher Castonguay,Pass,Jim Robinson",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Stephanie White,Pass,Shubho Bo Biswas,Pass,Anne Leduc",
-    "POINT,Owen Lumley,Pass,Stacey Wowchuk,Pass,Owen Lumley,Pass,Ewelina Sosnowska,Pass,Marc Vachon,Pass,Ewelina Sosnowska,Pass,Owen Lumley",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "1,Jeff Hunt",
-    "1,Marc Vachon",
-    "1,Nick Theriault",
-    "1,Owen Lumley",
-    "1,Ewelina Sosnowska",
-    "1,Stacey Wowchuk",
-    "Throw Away,Stephanie White,Pass,CarolAnne Black",
-    "D,David O'Connor",
-    "Throw Away,Olesia Bissett,Pass,Kindha Gorman",
-    "D,Benoit Goulet",
-    "POINT,Stephanie White,Pass,Nicholas Aghajanian,Pass,Ian Ewing,Pass,CarolAnne Black,Pass,Ian Ewing,Pass,Benoit Goulet,Pass,CarolAnne Black,Pass,Mackenzie King,Pass,Ian Ewing,Pass,Benoit Goulet,Pass,Ian Ewing,Pass,Benoit Goulet",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "Throw Away,Nick Theriault,Pass,Ewelina Sosnowska,Pass,Owen Lumley",
-    "D,Geofford seaborn",
-    "Throw Away,Geofford seaborn",
-    "POINT,Ewelina Sosnowska,Pass,Stacey Wowchuk,Pass,Marc Vachon,Pass,Nick Theriault,Pass,Jeff Hunt,Pass,Owen Lumley,Pass,Marc Vachon,Pass,Jeff Hunt,Pass,Owen Lumley,Pass,Nick Theriault",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "POINT,Ian Ewing,Pass,Benoit Goulet,Pass,Stephanie White,Pass,Mackenzie King",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "Throw Away,Owen Lumley",
-    "POINT,Edwin Wong,Pass,Shubho Bo Biswas,Pass,CarolAnne Black,Pass,Steve Chow,Pass,CarolAnne Black,Pass,Geofford seaborn",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Shubho Bo Biswas",
-    "1,Steve Chow",
-    "1,CarolAnne Black",
-    "1,Stephanie White",
-    "Drop,David O'Connor,Pass,Andrew W Cameron,Pass,Jim Robinson,Pass,Christopher Castonguay,Pass,Kindha Gorman",
-    "Throw Away,Ian Ewing",
-    "Throw Away,Christopher Castonguay,Pass,David O'Connor,Pass,Andrew W Cameron",
-    "Throw Away,Mackenzie King,Pass,Ian Ewing,Pass,Nicholas Aghajanian,Pass,Ian Ewing",
-    "POINT,Christopher Castonguay,Pass,Andrew W Cameron",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Edwin Wong,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Shubho Bo Biswas",
-    "D,Owen Lumley",
-    "Drop,Stacey Wowchuk,Pass,Owen Lumley,Pass,Ewelina Sosnowska,Pass,Nick Theriault,Pass,Marc Vachon,Pass,Jeff Hunt,Pass,Owen Lumley",
-    "POINT,Steve Chow,Pass,Geofford seaborn,Pass,Shubho Bo Biswas,Pass,Edwin Wong,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Shubho Bo Biswas",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "POINT,Olesia Bissett,Pass,Christopher Castonguay,Pass,Andrew W Cameron",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "POINT,CarolAnne Black,Pass,Mackenzie King,Pass,Nicholas Aghajanian,Pass,Ian Ewing",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Kindha Gorman",
-    "Drop,CarolAnne Black,Pass,Steve Chow,Pass,Shubho Bo Biswas",
-    "POINT,Olesia Bissett,Pass,David O'Connor,Pass,Kindha Gorman",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Mackenzie King,Pass,Benoit Goulet,Pass,Nicholas Aghajanian,Pass,Mackenzie King",
-    "D,Ewelina Sosnowska",
-    "POINT,Owen Lumley,Pass,Jeff Hunt,Pass,Stacey Wowchuk,Pass,Owen Lumley,Pass,Stacey Wowchuk",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "1,Jeff Hunt",
-    "1,Marc Vachon",
-    "1,Nick Theriault",
-    "1,Owen Lumley",
-    "1,Ewelina Sosnowska",
-    "1,Stacey Wowchuk",
-    "Time,Half",
-    "Pull,Andrew W Cameron",
-    "Throw Away,Geofford seaborn,Pass,Anne Leduc",
-    "D,David O'Connor",
-    "POINT,David O'Connor,Pass,Kindha Gorman",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "1,Andrew W Cameron",
-    "1,Christopher Castonguay",
-    "1,David O'Connor",
-    "1,Jim Robinson",
-    "1,Kindha Gorman",
-    "1,Olesia Bissett",
-    "Drop,Anne Leduc,Pass,CarolAnne Black,Pass,Ian Ewing,Pass,Benoit Goulet",
-    "POINT,Owen Lumley,Pass,Nick Theriault,Pass,Stacey Wowchuk",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Jeff Hunt",
-    "1,Marc Vachon",
-    "1,Nick Theriault",
-    "1,Owen Lumley",
-    "1,Ewelina Sosnowska",
-    "1,Stacey Wowchuk",
-    "POINT,Steve Chow,Pass,Edwin Wong,Pass,CarolAnne Black",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "POINT,Ewelina Sosnowska,Pass,Nick Theriault,Pass,Owen Lumley,Pass,Marc Vachon,Pass,Ewelina Sosnowska,Pass,Owen Lumley",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "Throw Away,Anne Leduc,Pass,Steve Chow,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Anne Leduc,Pass,Edwin Wong,Pass,Shubho Bo Biswas",
-    "POINT,Christopher Castonguay,Pass,David O'Connor,Pass,Christopher Castonguay,Pass,Jim Robinson,Pass,Andrew W Cameron,Pass,Christopher Castonguay",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Andrew W Cameron",
-    "1,Christopher Castonguay",
-    "1,David O'Connor",
-    "1,Jim Robinson",
-    "1,Kindha Gorman",
-    "1,Olesia Bissett",
-    "Throw Away,Mackenzie King",
-    "D,Owen Lumley",
-    "Drop,Ewelina Sosnowska,Pass,Marc Vachon,Pass,Owen Lumley",
-    "Throw Away,Benoit Goulet",
-    "D,Marc Vachon",
-    "Drop,Nick Theriault,Pass,Marc Vachon",
-    "Throw Away,Mackenzie King,Pass,CarolAnne Black,Pass,Mackenzie King,Pass,Nicholas Aghajanian,Pass,Benoit Goulet",
-    "Throw Away,Nick Theriault,Pass,Jeff Hunt,Pass,Marc Vachon,Pass,Jeff Hunt,Pass,Nick Theriault",
-    "D,Benoit Goulet",
-    "Throw Away,Mackenzie King,Pass,Ian Ewing",
-    "D,Ewelina Sosnowska",
-    "POINT,Ewelina Sosnowska,Pass,Nick Theriault",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "1,Jeff Hunt",
-    "1,Marc Vachon",
-    "1,Nick Theriault",
-    "1,Owen Lumley",
-    "1,Ewelina Sosnowska",
-    "1,Stacey Wowchuk",
-    "Throw Away,Geofford seaborn",
-    "Throw Away,Kindha Gorman",
-    "D,Geofford seaborn",
-    "Throw Away,Anne Leduc,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Anne Leduc,Pass,Stephanie White,Pass,Steve Chow,Pass,Geofford seaborn",
-    "D,Olesia Bissett",
-    "Throw Away,Olesia Bissett,Pass,David O'Connor,Pass,Andrew W Cameron",
-    "D,Steve Chow",
-    "Throw Away,Steve Chow,Pass,Shubho Bo Biswas,Pass,Steve Chow",
-    "POINT,David O'Connor,Pass,Andrew W Cameron,Pass,Jim Robinson",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "1,Andrew W Cameron",
-    "1,Christopher Castonguay",
-    "1,David O'Connor",
-    "1,Jim Robinson",
-    "1,Kindha Gorman",
-    "1,Olesia Bissett",
-    "POINT,Nicholas Aghajanian,Pass,Ian Ewing,Pass,Mackenzie King,Pass,Ian Ewing,Pass,Nicholas Aghajanian,Pass,Mackenzie King",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Kindha Gorman,Pass,Olesia Bissett,Pass,Christopher Castonguay,Pass,Kindha Gorman",
-    "D,Geofford seaborn",
-    "Throw Away,Geofford seaborn,Pass,Steve Chow,Pass,Geofford seaborn",
-    "D,David O'Connor",
-    "Drop,Andrew W Cameron,Pass,Olesia Bissett,Pass,Andrew W Cameron,Pass,Christopher Castonguay,Pass,Jim Robinson",
-    "Throw Away,Stephanie White,Pass,Shubho Bo Biswas,Pass,Steve Chow,Pass,Geofford seaborn",
-    "Drop,Kindha Gorman,Pass,Olesia Bissett,Pass,Andrew W Cameron,Pass,Jim Robinson,Pass,Kindha Gorman",
-    "Throw Away,Shubho Bo Biswas",
-    "D,Olesia Bissett",
-    "Throw Away,Kindha Gorman,Pass,Christopher Castonguay,Pass,Kindha Gorman,Pass,Christopher Castonguay",
-    "D,Shubho Bo Biswas",
-    "POINT,Steve Chow,Pass,Geofford seaborn,Pass,Shubho Bo Biswas",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Shubho Bo Biswas",
-    "1,Steve Chow",
-    "1,CarolAnne Black",
-    "1,Stephanie White",
-    "Throw Away,Stacey Wowchuk,Pass,Owen Lumley,Pass,Jeff Hunt,Pass,Owen Lumley",
-    "D,Benoit Goulet",
-    "Throw Away,Benoit Goulet,Pass,Mackenzie King,Pass,Nicholas Aghajanian,Pass,Ian Ewing,Pass,Benoit Goulet",
-    "POINT,Ewelina Sosnowska,Pass,Jeff Hunt,Pass,Nick Theriault,Pass,Marc Vachon,Pass,Stacey Wowchuk,Pass,Owen Lumley",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Stacey Wowchuk",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Geofford seaborn",
-    "Throw Away,Christopher Castonguay,Pass,Jim Robinson,Pass,Christopher Castonguay,Pass,Kindha Gorman,Pass,Christopher Castonguay,Pass,Kindha Gorman",
-    "Drop,Stephanie White,Pass,Geofford seaborn,Pass,Steve Chow,Pass,Shubho Bo Biswas",
-    "POINT,Jim Robinson,Pass,Andrew W Cameron,Pass,David O'Connor,Pass,Olesia Bissett,Pass,Kindha Gorman",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,CarolAnne Black",
-    "-1,Stephanie White",
-    "1,Andrew W Cameron",
-    "1,Christopher Castonguay",
-    "1,David O'Connor",
-    "1,Jim Robinson",
-    "1,Kindha Gorman",
-    "1,Olesia Bissett",
-    "Throw Away,Ian Ewing",
-    "D,Ewelina Sosnowska",
-    "POINT,Kindha Gorman,Pass,Nick Theriault,Pass,Owen Lumley,Pass,Stacey Wowchuk,Pass,Marc Vachon",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,Stephanie White",
-    "1,Jeff Hunt",
-    "1,Marc Vachon",
-    "1,Nick Theriault",
-    "1,Owen Lumley",
-    "1,Kindha Gorman",
-    "1,Stacey Wowchuk",
-    "POINT,CarolAnne Black,Pass,Geofford seaborn,Pass,Shubho Bo Biswas",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Shubho Bo Biswas",
-    "-1,Steve Chow",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Owen Lumley",
-    "-1,Ewelina Sosnowska",
-    "-1,Olesia Bissett",
-    "Throw Away,Nick Theriault,Pass,Jeff Hunt,Pass,Nick Theriault,Pass,Owen Lumley",
-    "D,Nicholas Aghajanian",
-    "Throw Away,Ian Ewing",
-    "Drop,Stacey Wowchuk,Pass,Owen Lumley,Pass,Nick Theriault",
-    "Throw Away,Benoit Goulet,Pass,Ian Ewing,Pass,Nicholas Aghajanian",
-    "Throw Away,Stacey Wowchuk",
-    "D,Benoit Goulet",
-    "POINT,Stephanie White,Pass,Ian Ewing,Pass,Benoit Goulet",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Olesia Bissett",
-    "-1,Stacey Wowchuk",
-    "1,Benoit Goulet",
-    "1,Ian Ewing",
-    "1,Mackenzie King",
-    "1,Nicholas Aghajanian",
-    "1,CarolAnne Black",
-    "1,Stephanie White",
-    "Throw Away,Kindha Gorman",
-    "D,Edwin Wong",
-    "POINT,Stephanie White,Pass,Shubho Bo Biswas",
-    "-1,Andrew W Cameron",
-    "-1,Christopher Castonguay",
-    "-1,David O'Connor",
-    "-1,Jim Robinson",
-    "-1,Kindha Gorman",
-    "-1,Stacey Wowchuk",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Shubho Bo Biswas",
-    "1,Steve Chow",
-    "1,Anne Leduc",
-    "1,Stephanie White",
-    "POINT,Marc Vachon,Pass,Nick Theriault,Pass,Olesia Bissett,Pass,Owen Lumley,Pass,Kindha Gorman,Pass,Owen Lumley,Pass,Marc Vachon,Pass,Kindha Gorman",
-    "-1,Jeff Hunt",
-    "-1,Marc Vachon",
-    "-1,Nick Theriault",
-    "-1,Owen Lumley",
-    "-1,Kindha Gorman",
-    "-1,Olesia Bissett",
-    "-1,Benoit Goulet",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black"
-  ]
 }

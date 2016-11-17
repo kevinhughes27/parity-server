@@ -1,598 +1,4461 @@
 {
-  "week": 2,
-  "teams": {
-    "Kindha's Ongoing Disappointments": [
-      "Jen Cluthe",
-      "Kirsten Querbach",
-      "Laura Knowles",
-      "Sandra Hanson",
-      "Adam MacDonald",
-      "Al Colantonio",
-      "Kevin Hughes",
-      "Matt Masse",
-      "Matthew Smith",
-      "Nick Klimowicz",
-      "Steve Bisang",
-      "Will Leckie"
-    ],
-    "Scoobers in Tokyo": [
-      "Ashlin Kelly",
-      "karin phillips",
-      "Kathryn Jarrett-Ekholm",
-      "Nina Ramic",
-      "Amos Lee",
-      "David Townsend",
-      "Douglas Brierley",
-      "Greg Linton",
-      "Jonathan Champagne",
-      "Khalid Al-Zahrani",
-      "Sina Dee",
-      "Tim Kealey"
+    "league": "ocua_16-17",
+    "teams": {
+        "Kaboom": [
+            "Melissa Berry",
+            "Sandra Hanson",
+            "An Tran",
+            "Stacey Wowchuk",
+            "Jamie Wildgen",
+            "Ethan Brady",
+            "Frederic Caron",
+            "Jeff Hunt",
+            "Christopher Keates",
+            "Tyler Mulcock",
+            "Matthew Schijns",
+            "David Townsend"
+        ],
+        "Katy Parity": [
+            "Kindha Gorman",
+            "Wynne Gee",
+            "Ashlin Kelly",
+            "Rachel So",
+            "Sebastien Belanger",
+            "Jeremy Bryan",
+            "Alex Bush",
+            "Al Colantonio",
+            "Michael Colantonio",
+            "Krys Kudakiewicz",
+            "Chris Tran",
+            "Nick Vetvut"
+        ]
+    },
+    "events": {
+        "points": [
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 3:49:57 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:06 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:12 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:17 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:21 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:07 AM",
+                        "secondActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:10 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:15 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:17 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:19 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:25 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:33 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:37 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:44 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:47 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:51:48 AM",
+                        "firstActor": "Sebastien Belanger"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 3:49:57 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:06 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:12 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:17 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:50:21 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:07 AM",
+                        "secondActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:10 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:15 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:17 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:19 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:25 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:33 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:37 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:44 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:51:47 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:51:48 AM",
+                        "firstActor": "Sebastien Belanger"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:52:41 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:52:46 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:52:47 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:52:56 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:52:58 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:53:05 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:53:10 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:53:11 AM",
+                        "firstActor": "Michael Colantonio"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:01 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:05 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:07 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:10 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:54:13 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:54:23 AM",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:41 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:44 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:46 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:48 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:54 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:54:59 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:55:06 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:55:07 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:55:15 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:55:18 AM",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:55:32 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:55:33 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:55:33 AM",
+                        "firstActor": "Matthew Schijns"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:56:11 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:56:17 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:56:21 AM",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:56:34 AM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:56:54 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:56:59 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:57:05 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:57:08 AM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:57:14 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:57:16 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:57:17 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:57:20 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 3:57:21 AM",
+                        "firstActor": "Sandra Hanson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:04 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:07 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:15 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:58:16 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:24 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:58:29 AM",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:58:32 AM",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:38 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:58:39 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:51 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:53 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:01 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:04 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:08 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:01:35 AM",
+                        "secondActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:01:36 AM",
+                        "firstActor": "Ethan Brady"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:04 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:07 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:15 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:58:16 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:24 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 3:58:29 AM",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 3:58:32 AM",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:38 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 3:58:39 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:51 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:58:53 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:01 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:04 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 3:59:08 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:01:35 AM",
+                        "secondActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:01:36 AM",
+                        "firstActor": "Ethan Brady"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:01:51 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:01:54 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:01:59 AM",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:02:01 AM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:02:08 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:02:10 AM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:02:48 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:02:53 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:02:56 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:03:01 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:03:03 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:03:09 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:03:11 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:04:28 AM",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:04:54 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:04:56 AM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:06:30 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:06:33 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:06:36 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:06:44 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:00 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:04 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:10 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:14 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:21 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:24 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:26 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:07:34 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:07:35 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:08:13 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:08:15 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:08:19 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:08:28 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:08:41 AM",
+                        "firstActor": "Nick Vetvut"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:09:19 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:09:22 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:09:29 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:09:30 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    }
+                ],
+                "defensePlayers": [
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:10:12 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:10:13 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:10:17 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:10:20 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:10:32 AM",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:10:46 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:10:54 AM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:11:21 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:11:23 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:03 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:12:10 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:12:12 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:14 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:16 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:12:19 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:12:22 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:25 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:26 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:12:31 AM",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:47 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:12:54 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:12:58 AM",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:13 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:18 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:21 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:25 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:32 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:13:38 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:13:39 AM",
+                        "firstActor": "An Tran"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:16 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:18 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:20 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:23 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:26 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:14:28 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:14:38 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:15:04 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:15:11 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:15:16 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:15:17 AM",
+                        "firstActor": "Jamie Wildgen"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:15:59 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:16:02 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:16:05 AM",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:16:11 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:16:17 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:16:18 AM",
+                        "firstActor": "An Tran"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:16:53 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:16:57 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:17:05 AM",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:17:10 AM",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:17:13 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:17:13 AM",
+                        "firstActor": "Frederic Caron"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:18:07 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:18:09 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:18:12 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:18:16 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:18:21 AM",
+                        "secondActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:18:22 AM",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:18:28 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:18:29 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:18:30 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 15, 2016 4:21:44 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:21:54 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:21:55 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:21:57 AM",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:22:04 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:22:08 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:22:11 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:22:17 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:22:26 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:22:26 AM",
+                        "firstActor": "Kindha Gorman"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:17 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:20 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:24 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:23:28 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:39 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:44 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:46 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:23:52 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:23:53 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:24:59 AM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:25:01 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:25:04 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:25:07 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:25:09 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:25:10 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:25:13 AM",
+                        "firstActor": "Frederic Caron"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:25:57 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:01 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:06 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:15 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:17 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:20 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:40 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:26:44 AM",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:26:48 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:52 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:26:53 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:26:54 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:27:11 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:27:20 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:27:22 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:27:24 AM",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:27:49 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:28:07 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:28:10 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:28:11 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:28:13 AM",
+                        "firstActor": "Sandra Hanson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:28:55 AM",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:06 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:07 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:09 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:10 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:14 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:19 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:21 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:29:24 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:29:25 AM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:30:07 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:30:14 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:30:19 AM",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:30:20 AM",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:30:24 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:30:26 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:30:27 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:30:28 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:31:13 AM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:31:15 AM",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:31:23 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:31:24 AM",
+                        "firstActor": "Michael Colantonio"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:32:13 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:32:18 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:32:19 AM",
+                        "firstActor": "Matthew Schijns"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:32:58 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:00 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:02 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:11 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:14 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:18 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:21 AM",
+                        "secondActor": "Kindha Gorman",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:25 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:32 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:34 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:33:40 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:33:42 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:28 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:31 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:34:34 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:40 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:42 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:46 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:48 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:51 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:53 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:34:54 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:35:00 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:35:06 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:35:06 AM",
+                        "firstActor": "Rachel So"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:35:57 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:35:58 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:36:03 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:36:05 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:36:10 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:36:15 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:36:20 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:36:21 AM",
+                        "firstActor": "Jeff Hunt"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:05 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:07 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:08 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:15 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:37:16 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:22 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:28 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:37:32 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:37:33 AM",
+                        "firstActor": "Matthew Schijns"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:14 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:21 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:25 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:29 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:36 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:38:37 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:38:45 AM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:38:48 AM",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:38:58 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:39:03 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:39:05 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:39:51 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:39:52 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:39:55 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:07 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:40:08 AM",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:15 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:21 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:40:22 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:27 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:35 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:40 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:40:41 AM",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:50 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:53 AM",
+                        "secondActor": "Chris Tran",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:40:55 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:41:02 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:41:02 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:41:56 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:41:59 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:03 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:09 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:19 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:21 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:27 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:42:30 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:42:38 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:42:40 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:42:45 AM",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:42:47 AM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:43:26 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:43:30 AM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:43:58 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:44:04 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:44:07 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:11 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:14 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:16 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:19 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:22 AM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:25 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:31 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:46 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:44:52 AM",
+                        "secondActor": "Andrea Proulx(S)",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:44:53 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:45:41 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:45:44 AM",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:45:45 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:45:47 AM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:45:50 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:45:54 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:45:56 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:46:13 AM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:46:17 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:21 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:23 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:27 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:29 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:32 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:36 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:38 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:41 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:43 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:48 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:46:52 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:46:52 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:47:39 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:47:41 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:47:44 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:47:44 AM",
+                        "firstActor": "Christopher Keates"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:48:24 AM",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:48:29 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:48:31 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:48:34 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:48:36 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:48:37 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Al Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:49:24 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:49:25 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:49:29 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:49:36 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:49:39 AM",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:49:56 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:49:58 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:03 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:09 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:50:10 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:22 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:50:30 AM",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:50:32 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:36 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:38 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Ashlin Kelly"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:43 AM",
+                        "secondActor": "Sebastien Belanger",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:50:48 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Sebastien Belanger"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:50:52 AM",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:50:55 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:50:58 AM",
+                        "firstActor": "Andrea Proulx(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:51:06 AM",
+                        "secondActor": "Ashlin Kelly",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:51:06 AM",
+                        "firstActor": "Ashlin Kelly"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:51:53 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:51:57 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:52:02 AM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:52:05 AM",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:52:07 AM",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:13 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:26 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:52:26 AM",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:29 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:33 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:36 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:52:44 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:52:46 AM",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:48 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:54 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:56 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:52:59 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:53:00 AM",
+                        "firstActor": "Stacey Wowchuk"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:53:49 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:53:51 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:53:56 AM",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:53:58 AM",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:54:12 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:54:16 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:54:18 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:54:24 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:54:30 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:54:34 AM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:55:05 AM",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:55:07 AM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:55:12 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:55:13 AM",
+                        "firstActor": "David Townsend"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Chris Tran",
+                    "Nick Vetvut",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:56:03 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Chris Tran"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 15, 2016 4:56:05 AM",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:56:15 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:56:20 AM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:56:21 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:56:24 AM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:56:24 AM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Krys Kudakiewicz",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Rachel So"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:57:12 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Kindha Gorman"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:57:14 AM",
+                        "secondActor": "Alex Bush",
+                        "firstActor": "Krys Kudakiewicz"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:57:23 AM",
+                        "secondActor": "Krys Kudakiewicz",
+                        "firstActor": "Alex Bush"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:57:23 AM",
+                        "firstActor": "Krys Kudakiewicz"
+                    }
+                ],
+                "defensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jamie Wildgen",
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:01 AM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:04 AM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:09 AM",
+                        "secondActor": "Jamie Wildgen",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 15, 2016 4:58:13 AM",
+                        "firstActor": "Jamie Wildgen"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 15, 2016 4:58:15 AM",
+                        "firstActor": "Al Colantonio"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:25 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:29 AM",
+                        "secondActor": "Rachel So",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:35 AM",
+                        "secondActor": "Nick Vetvut",
+                        "firstActor": "Rachel So"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:39 AM",
+                        "secondActor": "Michael Colantonio",
+                        "firstActor": "Nick Vetvut"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:58:41 AM",
+                        "secondActor": "Al Colantonio",
+                        "firstActor": "Michael Colantonio"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:58:43 AM",
+                        "firstActor": "Al Colantonio"
+                    }
+                ],
+                "defensePlayers": [
+                    "Al Colantonio",
+                    "Michael Colantonio",
+                    "Krys Kudakiewicz",
+                    "Nick Vetvut",
+                    "Ashlin Kelly",
+                    "Rachel So"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Ethan Brady",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Sandra Hanson",
+                    "Andrea Proulx(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:59:22 AM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:59:24 AM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:59:30 AM",
+                        "secondActor": "Ethan Brady",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 15, 2016 4:59:35 AM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Ethan Brady"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 15, 2016 4:59:36 AM",
+                        "firstActor": "Christopher Keates"
+                    }
+                ],
+                "defensePlayers": [
+                    "Sebastien Belanger",
+                    "Alex Bush",
+                    "Al Colantonio",
+                    "Chris Tran",
+                    "Kindha Gorman",
+                    "Ashlin Kelly"
+                ]
+            }
+        ]
+    },
+    "event_string": [
+        "",
+        "Pull,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "POINT,Sebastien Belanger,Pass,Chris Tran,Pass,Kindha Gorman,Pass,Al Colantonio,Pass,Kindha Gorman,Pass,Sebastien Belanger,Pass,Kindha Gorman,Pass,Al Colantonio,Pass,Krys Kudakiewicz,Pass,Al Colantonio,Pass,Krys Kudakiewicz,Pass,Al Colantonio,Pass,Krys Kudakiewicz,Pass,Al Colantonio,",
+        "+1,Sebastien Belanger,",
+        "+1,Al Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Drop,Andrea Proulx(S),Pass,Jamie Wildgen,Pass,Jeff Hunt,",
+        "Direction,>>>>>>,",
+        "POINT,Michael Colantonio,Pass,Nick Vetvut,Pass,Al Colantonio,Pass,Nick Vetvut,Pass,Alex Bush,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Nick Vetvut,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Drop,Stacey Wowchuk,Pass,David Townsend,Pass,Ethan Brady,Pass,Stacey Wowchuk,Pass,Ethan Brady,",
+        "Direction,>>>>>>,",
+        "Throw Away,Alex Bush,",
+        "Direction,<<<<<<,",
+        "Drop,David Townsend,Pass,An Tran,Pass,Ethan Brady,Pass,Christopher Keates,Pass,David Townsend,Pass,An Tran,Pass,Ethan Brady,Pass,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Krys Kudakiewicz,",
+        "Direction,<<<<<<,",
+        "D,An Tran,",
+        "POINT,Matthew Schijns,Pass,Ethan Brady,Pass,An Tran,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Michael Colantonio,Pass,Krys Kudakiewicz,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "Throw Away,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "Throw Away,Krys Kudakiewicz,Pass,Kindha Gorman,Pass,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "D,Jeff Hunt,",
+        "POINT,Sandra Hanson,Pass,Tyler Mulcock,Pass,Andrea Proulx(S),Pass,Jamie Wildgen,Pass,Jeff Hunt,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Drop,Chris Tran,Pass,Sebastien Belanger,Pass,Al Colantonio,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "Throw Away,Ethan Brady,Pass,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "D,Ashlin Kelly,",
+        "Drop,Rachel So,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "POINT,Ethan Brady,Pass,Christopher Keates,Pass,Matthew Schijns,Pass,An Tran,Pass,David Townsend,Pass,An Tran,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Alex Bush,Pass,Krys Kudakiewicz,Pass,Alex Bush,",
+        "Direction,<<<<<<,",
+        "D,Jeff Hunt,",
+        "POINT,Tyler Mulcock,Pass,Jeff Hunt,",
+        "-1,Alex Bush,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Al Colantonio,Pass,Sebastien Belanger,Pass,Al Colantonio,Pass,Michael Colantonio,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "POINT,Stacey Wowchuk,Pass,Christopher Keates,",
+        "-1,Sebastien Belanger,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Alex Bush,",
+        "Direction,<<<<<<,",
+        "POINT,Tyler Mulcock,Pass,Andrea Proulx(S),",
+        "-1,Alex Bush,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Krys Kudakiewicz,Pass,Al Colantonio,Pass,Michael Colantonio,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "POINT,Stacey Wowchuk,Pass,An Tran,Pass,Matthew Schijns,Pass,Ethan Brady,Pass,David Townsend,Pass,Ethan Brady,Pass,An Tran,Pass,Ethan Brady,Pass,Christopher Keates,",
+        "-1,Sebastien Belanger,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "POINT,Nick Vetvut,Pass,Alex Bush,Pass,Ashlin Kelly,Pass,Kindha Gorman,Pass,Sebastien Belanger,",
+        "+1,Sebastien Belanger,",
+        "+1,Alex Bush,",
+        "+1,Chris Tran,",
+        "+1,Nick Vetvut,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "POINT,Stacey Wowchuk,Pass,Christopher Keates,Pass,An Tran,Pass,Ethan Brady,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sebastien Belanger,Pass,Al Colantonio,Pass,Alex Bush,Pass,Ashlin Kelly,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "Throw Away,Frederic Caron,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Al Colantonio,",
+        "+1,Sebastien Belanger,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,David Townsend,Pass,Ethan Brady,",
+        "Direction,>>>>>>,",
+        "D,Krys Kudakiewicz,",
+        "Throw Away,Krys Kudakiewicz,Pass,Alex Bush,Pass,Krys Kudakiewicz,",
+        "Direction,<<<<<<,",
+        "D,David Townsend,",
+        "Throw Away,An Tran,Pass,David Townsend,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "Throw Away,Nick Vetvut,Pass,Rachel So,Pass,Alex Bush,",
+        "Direction,<<<<<<,",
+        "POINT,An Tran,Pass,Stacey Wowchuk,Pass,David Townsend,Pass,Christopher Keates,Pass,An Tran,Pass,Ethan Brady,Pass,David Townsend,",
+        "-1,Alex Bush,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Al Colantonio,Pass,Sebastien Belanger,Pass,Kindha Gorman,Pass,Sebastien Belanger,Pass,Al Colantonio,Pass,Krys Kudakiewicz,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "POINT,Jamie Wildgen,Pass,Sandra Hanson,Pass,Tyler Mulcock,Pass,Andrea Proulx(S),",
+        "-1,Sebastien Belanger,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Nick Vetvut,Pass,Alex Bush,Pass,Chris Tran,",
+        "Direction,<<<<<<,",
+        "POINT,An Tran,Pass,Christopher Keates,Pass,Matthew Schijns,",
+        "-1,Alex Bush,",
+        "-1,Michael Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sebastien Belanger,Pass,Ashlin Kelly,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "D,Jamie Wildgen,",
+        "POINT,Frederic Caron,Pass,Jamie Wildgen,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Krys Kudakiewicz,Pass,Chris Tran,",
+        "Direction,<<<<<<,",
+        "D,Christopher Keates,",
+        "Drop,Ethan Brady,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Michael Colantonio,Pass,Kindha Gorman,",
+        "+1,Michael Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Chris Tran,",
+        "+1,Nick Vetvut,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Time,Half,",
+        "Pull,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sandra Hanson,Pass,Jamie Wildgen,Pass,Tyler Mulcock,",
+        "Direction,>>>>>>,",
+        "POINT,Kindha Gorman,Pass,Al Colantonio,Pass,Alex Bush,Pass,Ashlin Kelly,Pass,Alex Bush,Pass,Chris Tran,",
+        "+1,Sebastien Belanger,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Christopher Keates,Pass,David Townsend,Pass,An Tran,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Krys Kudakiewicz,Pass,Al Colantonio,Pass,Ashlin Kelly,Pass,Al Colantonio,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Nick Vetvut,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Throw Away,Jeff Hunt,",
+        "Direction,>>>>>>,",
+        "D,Chris Tran,",
+        "Throw Away,Chris Tran,",
+        "Direction,<<<<<<,",
+        "D,Andrea Proulx(S),",
+        "POINT,Frederic Caron,Pass,Jamie Wildgen,Pass,Andrea Proulx(S),",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Kindha Gorman,Pass,Alex Bush,Pass,Nick Vetvut,Pass,Rachel So,Pass,Alex Bush,Pass,Rachel So,Pass,Al Colantonio,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "D,David Townsend,",
+        "Drop,David Townsend,Pass,Christopher Keates,Pass,David Townsend,",
+        "Direction,>>>>>>,",
+        "Throw Away,Al Colantonio,Pass,Nick Vetvut,Pass,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "D,Matthew Schijns,",
+        "Throw Away,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "Throw Away,Rachel So,",
+        "Direction,<<<<<<,",
+        "D,Christopher Keates,",
+        "POINT,Sandra Hanson,Pass,Christopher Keates,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "POINT,Tyler Mulcock,Pass,Frederic Caron,Pass,Jamie Wildgen,Pass,Frederic Caron,Pass,An Tran,Pass,Jamie Wildgen,Pass,Tyler Mulcock,Pass,Jamie Wildgen,Pass,An Tran,",
+        "-1,Sebastien Belanger,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Chris Tran,Pass,Alex Bush,",
+        "Direction,<<<<<<,",
+        "D,Matthew Schijns,",
+        "Throw Away,Matthew Schijns,",
+        "Direction,>>>>>>,",
+        "D,Al Colantonio,",
+        "POINT,Ashlin Kelly,Pass,Michael Colantonio,Pass,Al Colantonio,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Jeff Hunt,",
+        "Direction,>>>>>>,",
+        "D,Sebastien Belanger,",
+        "POINT,Michael Colantonio,Pass,Kindha Gorman,",
+        "+1,Sebastien Belanger,",
+        "+1,Michael Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Nick Vetvut,",
+        "+1,Kindha Gorman,",
+        "+1,Rachel So,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "POINT,Matthew Schijns,Pass,Christopher Keates,Pass,Sandra Hanson,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Al Colantonio,Pass,Michael Colantonio,Pass,Nick Vetvut,Pass,Kindha Gorman,Pass,Nick Vetvut,Pass,Ashlin Kelly,Pass,Nick Vetvut,Pass,Michael Colantonio,Pass,Ashlin Kelly,Pass,Sebastien Belanger,Pass,Al Colantonio,",
+        "+1,Sebastien Belanger,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Nick Vetvut,",
+        "+1,Kindha Gorman,",
+        "+1,Ashlin Kelly,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Throw Away,Andrea Proulx(S),Pass,Christopher Keates,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "POINT,Rachel So,Pass,Al Colantonio,Pass,Alex Bush,Pass,Rachel So,Pass,Alex Bush,Pass,Al Colantonio,Pass,Alex Bush,Pass,Krys Kudakiewicz,Pass,Al Colantonio,Pass,Alex Bush,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Rachel So,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "POINT,Jeff Hunt,Pass,Frederic Caron,Pass,Tyler Mulcock,Pass,An Tran,Pass,Tyler Mulcock,Pass,Frederic Caron,Pass,Jeff Hunt,Pass,Jamie Wildgen,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Michael Colantonio,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Drop,Chris Tran,Pass,Al Colantonio,Pass,Nick Vetvut,Pass,Ashlin Kelly,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "POINT,Matthew Schijns,Pass,Andrea Proulx(S),Pass,Matthew Schijns,Pass,Christopher Keates,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Drop,Rachel So,Pass,Alex Bush,Pass,Sebastien Belanger,Pass,Krys Kudakiewicz,Pass,Alex Bush,Pass,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "Throw Away,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "D,Sebastien Belanger,",
+        "POINT,Krys Kudakiewicz,Pass,Alex Bush,Pass,Sebastien Belanger,",
+        "+1,Sebastien Belanger,",
+        "+1,Alex Bush,",
+        "+1,Michael Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Kindha Gorman,",
+        "+1,Rachel So,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Drop,Sandra Hanson,Pass,Ethan Brady,Pass,Sandra Hanson,Pass,David Townsend,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "Drop,Al Colantonio,Pass,Alex Bush,Pass,Chris Tran,",
+        "Direction,<<<<<<,",
+        "Drop,Sandra Hanson,Pass,David Townsend,Pass,Ethan Brady,Pass,David Townsend,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Al Colantonio,Pass,Chris Tran,Pass,Nick Vetvut,Pass,Rachel So,",
+        "+1,Alex Bush,",
+        "+1,Al Colantonio,",
+        "+1,Chris Tran,",
+        "+1,Nick Vetvut,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Stacey Wowchuk,Pass,Frederic Caron,Pass,Jamie Wildgen,Pass,Frederic Caron,Pass,Jeff Hunt,Pass,Jamie Wildgen,Pass,Tyler Mulcock,Pass,Jamie Wildgen,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "D,Krys Kudakiewicz,",
+        "Throw Away,Chris Tran,",
+        "Direction,<<<<<<,",
+        "D,Frederic Caron,",
+        "POINT,Tyler Mulcock,Pass,Frederic Caron,",
+        "-1,Sebastien Belanger,",
+        "-1,Michael Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Krys Kudakiewicz,Pass,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "D,Andrea Proulx(S),",
+        "POINT,Andrea Proulx(S),Pass,Matthew Schijns,Pass,David Townsend,Pass,Christopher Keates,Pass,Sandra Hanson,Pass,Andrea Proulx(S),Pass,Ethan Brady,Pass,David Townsend,Pass,Matthew Schijns,Pass,Ethan Brady,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "D,Jamie Wildgen,",
+        "Throw Away,Frederic Caron,Pass,Jeff Hunt,Pass,Jamie Wildgen,Pass,An Tran,Pass,Frederic Caron,Pass,Jamie Wildgen,",
+        "Direction,>>>>>>,",
+        "D,Al Colantonio,",
+        "POINT,Ashlin Kelly,Pass,Al Colantonio,Pass,Rachel So,Pass,Michael Colantonio,Pass,Al Colantonio,Pass,Sebastien Belanger,Pass,Al Colantonio,Pass,Sebastien Belanger,Pass,Rachel So,Pass,Ashlin Kelly,Pass,Al Colantonio,Pass,Chris Tran,",
+        "+1,Sebastien Belanger,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Chris Tran,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "POINT,Christopher Keates,Pass,Matthew Schijns,Pass,Christopher Keates,Pass,Sandra Hanson,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Alex Bush,",
+        "Direction,<<<<<<,",
+        "POINT,Stacey Wowchuk,Pass,Frederic Caron,Pass,Jeff Hunt,Pass,Jamie Wildgen,Pass,Tyler Mulcock,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Michael Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Drop,Krys Kudakiewicz,Pass,Sebastien Belanger,",
+        "Direction,<<<<<<,",
+        "Throw Away,David Townsend,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "D,Nick Vetvut,",
+        "Drop,Rachel So,Pass,Sebastien Belanger,Pass,Ashlin Kelly,Pass,Krys Kudakiewicz,Pass,Al Colantonio,",
+        "Direction,<<<<<<,",
+        "Throw Away,Ethan Brady,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "D,Krys Kudakiewicz,",
+        "Throw Away,Nick Vetvut,Pass,Sebastien Belanger,Pass,Krys Kudakiewicz,Pass,Ashlin Kelly,Pass,Krys Kudakiewicz,",
+        "Direction,<<<<<<,",
+        "D,Andrea Proulx(S),",
+        "Throw Away,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly,Pass,Krys Kudakiewicz,",
+        "+1,Sebastien Belanger,",
+        "+1,Al Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Nick Vetvut,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Jeff Hunt,Pass,Tyler Mulcock,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "D,Kindha Gorman,",
+        "Throw Away,Kindha Gorman,",
+        "Direction,<<<<<<,",
+        "Drop,Tyler Mulcock,Pass,Frederic Caron,Pass,Tyler Mulcock,",
+        "Direction,>>>>>>,",
+        "Throw Away,Al Colantonio,Pass,Alex Bush,Pass,Michael Colantonio,Pass,Alex Bush,",
+        "Direction,<<<<<<,",
+        "D,Jamie Wildgen,",
+        "POINT,Stacey Wowchuk,Pass,Jeff Hunt,Pass,Tyler Mulcock,Pass,Jamie Wildgen,Pass,Frederic Caron,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Rachel So,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Alex Bush,Pass,Rachel So,Pass,Alex Bush,",
+        "Direction,<<<<<<,",
+        "D,Matthew Schijns,",
+        "Throw Away,Christopher Keates,Pass,David Townsend,Pass,Christopher Keates,Pass,Ethan Brady,Pass,David Townsend,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "Throw Away,Rachel So,",
+        "Direction,<<<<<<,",
+        "D,David Townsend,",
+        "POINT,David Townsend,Pass,Christopher Keates,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Krys Kudakiewicz,",
+        "-1,Nick Vetvut,",
+        "-1,Ashlin Kelly,",
+        "-1,Rachel So,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,",
+        "Drop,Nick Vetvut,Pass,Chris Tran,",
+        "Direction,<<<<<<,",
+        "POINT,Tyler Mulcock,Pass,Jamie Wildgen,Pass,Stacey Wowchuk,Pass,Jeff Hunt,Pass,Frederic Caron,",
+        "-1,Al Colantonio,",
+        "-1,Michael Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Nick Vetvut,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Jamie Wildgen,",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "POINT,Krys Kudakiewicz,Pass,Alex Bush,Pass,Krys Kudakiewicz,Pass,Kindha Gorman,",
+        "+1,Sebastien Belanger,",
+        "+1,Alex Bush,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Chris Tran,",
+        "+1,Kindha Gorman,",
+        "+1,Rachel So,",
+        "-1,Ethan Brady,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Sandra Hanson,",
+        "-1,Andrea Proulx(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Jamie Wildgen,Pass,Jeff Hunt,Pass,Frederic Caron,Pass,Tyler Mulcock,",
+        "Direction,>>>>>>,",
+        "D,Al Colantonio,",
+        "POINT,Al Colantonio,Pass,Michael Colantonio,Pass,Nick Vetvut,Pass,Rachel So,Pass,Nick Vetvut,Pass,Rachel So,",
+        "+1,Al Colantonio,",
+        "+1,Michael Colantonio,",
+        "+1,Krys Kudakiewicz,",
+        "+1,Nick Vetvut,",
+        "+1,Ashlin Kelly,",
+        "+1,Rachel So,",
+        "-1,Jamie Wildgen,",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "POINT,Christopher Keates,Pass,Ethan Brady,Pass,David Townsend,Pass,Matthew Schijns,Pass,Ethan Brady,",
+        "-1,Sebastien Belanger,",
+        "-1,Alex Bush,",
+        "-1,Al Colantonio,",
+        "-1,Chris Tran,",
+        "-1,Kindha Gorman,",
+        "-1,Ashlin Kelly,",
+        "+1,Ethan Brady,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,Sandra Hanson,",
+        "+1,Andrea Proulx(S),",
+        "Direction,>>>>>>,"
     ]
-  },
-  "event_string": [
-    "Pull,Douglas Brierley",
-    "Throw Away,Matt Masse,Pass,Adam MacDonald,Pass,Matt Masse,Pass,Jen Cluthe,Pass,Al Colantonio,Pass,Sandra Hanson",
-    "Throw Away,Douglas Brierley,Pass,Nina Ramic,Pass,Amos Lee,Pass,Khalid Al-Zahrani,Pass,Douglas Brierley",
-    "D,Adam MacDonald",
-    "Throw Away,Matt Masse,Pass,Adam MacDonald",
-    "D,Amos Lee",
-    "Throw Away,Amos Lee,Pass,Nina Ramic,Pass,Amos Lee",
-    "Throw Away,Matt Masse,Pass,Adam MacDonald",
-    "D,Khalid Al-Zahrani",
-    "Throw Away,Khalid Al-Zahrani,Pass,Amos Lee,Pass,Douglas Brierley",
-    "POINT,Matt Masse,Pass,Adam MacDonald,Pass,Will Leckie,Pass,Sandra Hanson",
-    "-1,Adam MacDonald",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "POINT,Ashlin Kelly,Pass,Sina Dee,Pass,Nina Ramic,Pass,David Townsend,Pass,Sina Dee",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Nick Klimowicz",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "Throw Away,Al Colantonio",
-    "D,Kathryn Jarrett-Ekholm",
-    "Throw Away,Amos Lee,Pass,Kathryn Jarrett-Ekholm",
-    "D,Adam MacDonald",
-    "POINT,Adam MacDonald,Pass,Al Colantonio,Pass,Matt Masse",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "Drop,Sina Dee,Pass,David Townsend,Pass,Sina Dee,Pass,Tim Kealey",
-    "POINT,Will Leckie,Pass,Nick Klimowicz,Pass,Kevin Hughes",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "1,Kevin Hughes",
-    "1,Matt Masse",
-    "1,Nick Klimowicz",
-    "1,Will Leckie",
-    "1,Jen Cluthe",
-    "1,Sandra Hanson",
-    "Throw Away,Ashlin Kelly,Pass,Douglas Brierley,Pass,Greg Linton,Pass,Douglas Brierley",
-    "D,Adam MacDonald",
-    "POINT,Al Colantonio,Pass,Adam MacDonald,Pass,Kirsten Querbach,Pass,Nick Klimowicz,Pass,Kirsten Querbach,Pass,Nick Klimowicz,Pass,Al Colantonio",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "1,Adam MacDonald",
-    "1,Al Colantonio",
-    "1,Nick Klimowicz",
-    "1,Steve Bisang",
-    "1,Jen Cluthe",
-    "1,Kirsten Querbach",
-    "Drop,Tim Kealey,Pass,David Townsend,Pass,Tim Kealey,Pass,Jonathan Champagne,Pass,Ashlin Kelly,Pass,Sina Dee",
-    "POINT,Adam MacDonald,Pass,Will Leckie,Pass,Kevin Hughes,Pass,Sandra Hanson,Pass,Kevin Hughes,Pass,Will Leckie,Pass,Matt Masse,Pass,Sandra Hanson,Pass,Kevin Hughes,Pass,Matt Masse,Pass,Adam MacDonald",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "1,Adam MacDonald",
-    "1,Kevin Hughes",
-    "1,Matt Masse",
-    "1,Will Leckie",
-    "1,Kirsten Querbach",
-    "1,Sandra Hanson",
-    "POINT,Nina Ramic,Pass,Khalid Al-Zahrani,Pass,Greg Linton,Pass,Douglas Brierley",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "Throw Away,Kirsten Querbach,Pass,Matt Masse,Pass,Steve Bisang",
-    "D,Tim Kealey",
-    "POINT,Ashlin Kelly,Pass,Tim Kealey",
-    "-1,Adam MacDonald",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "1,David Townsend",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Nina Ramic",
-    "Throw Away,Al Colantonio,Pass,Matt Masse",
-    "D,Khalid Al-Zahrani",
-    "Throw Away,Khalid Al-Zahrani,Pass,Douglas Brierley",
-    "D,Al Colantonio",
-    "Drop,Kevin Hughes,Pass,Nick Klimowicz,Pass,Matt Masse,Pass,Al Colantonio",
-    "Throw Away,Kathryn Jarrett-Ekholm,Pass,Douglas Brierley,Pass,Greg Linton",
-    "Throw Away,Kevin Hughes,Pass,Matt Masse,Pass,Sandra Hanson,Pass,Kirsten Querbach,Pass,Sandra Hanson,Pass,Kevin Hughes,Pass,Sandra Hanson,Pass,Matt Masse",
-    "POINT,Khalid Al-Zahrani,Pass,Amos Lee",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Greg Linton",
-    "1,Khalid Al-Zahrani",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Throw Away,Al Colantonio,Pass,Sandra Hanson",
-    "D,Ashlin Kelly",
-    "POINT,Tim Kealey,Pass,Jonathan Champagne,Pass,David Townsend,Pass,Sina Dee,Pass,Jonathan Champagne,Pass,Sina Dee,Pass,David Townsend,Pass,Tim Kealey",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "1,David Townsend",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "Throw Away,Jen Cluthe,Pass,Kevin Hughes,Pass,Nick Klimowicz",
-    "D,Nina Ramic",
-    "POINT,Ashlin Kelly,Pass,Douglas Brierley",
-    "-1,Adam MacDonald",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Greg Linton",
-    "1,Khalid Al-Zahrani",
-    "1,Ashlin Kelly",
-    "1,Nina Ramic",
-    "Throw Away,Sandra Hanson",
-    "POINT,Tim Kealey,Pass,Sina Dee",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "1,David Townsend",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Throw Away,Sandra Hanson,Pass,Matt Masse",
-    "D,Amos Lee",
-    "POINT,Amos Lee,Pass,Khalid Al-Zahrani,Pass,Douglas Brierley,Pass,Khalid Al-Zahrani,Pass,Amos Lee,Pass,Greg Linton,Pass,Khalid Al-Zahrani,Pass,Amos Lee,Pass,Khalid Al-Zahrani,Pass,Greg Linton,Pass,Amos Lee",
-    "-1,Adam MacDonald",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Greg Linton",
-    "1,Khalid Al-Zahrani",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "POINT,Kirsten Querbach,Pass,Kevin Hughes,Pass,Al Colantonio,Pass,Kirsten Querbach,Pass,Al Colantonio,Pass,Jen Cluthe,Pass,Nick Klimowicz",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Nick Klimowicz",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "Throw Away,Douglas Brierley",
-    "Throw Away,Kirsten Querbach,Pass,Sandra Hanson,Pass,Matt Masse",
-    "D,Nina Ramic",
-    "POINT,Nina Ramic,Pass,Douglas Brierley",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Adam MacDonald",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "POINT,Al Colantonio,Pass,Sandra Hanson,Pass,Nick Klimowicz,Pass,Sandra Hanson",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Nick Klimowicz",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "Throw Away,Amos Lee,Pass,Greg Linton,Pass,Douglas Brierley",
-    "D,Will Leckie",
-    "Throw Away,Al Colantonio",
-    "D,Amos Lee",
-    "Drop,Khalid Al-Zahrani,Pass,Greg Linton,Pass,Amos Lee",
-    "Drop,Kirsten Querbach,Pass,Al Colantonio",
-    "POINT,Khalid Al-Zahrani,Pass,Amos Lee,Pass,Ashlin Kelly,Pass,Nina Ramic",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "-1,Al Colantonio",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "Throw Away,Matt Masse",
-    "D,Nina Ramic",
-    "Throw Away,David Townsend,Pass,Sina Dee",
-    "D,Sandra Hanson",
-    "Throw Away,Kevin Hughes,Pass,Adam MacDonald,Pass,Sandra Hanson",
-    "Throw Away,Tim Kealey",
-    "D,Matt Masse",
-    "POINT,Adam MacDonald,Pass,Kirsten Querbach,Pass,Matt Masse",
-    "-1,Adam MacDonald",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "Time,Half",
-    "Pull,Steve Bisang",
-    "Throw Away,Douglas Brierley",
-    "POINT,Sandra Hanson,Pass,Jen Cluthe,Pass,Steve Bisang,Pass,Al Colantonio",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "1,Al Colantonio",
-    "1,Nick Klimowicz",
-    "1,Steve Bisang",
-    "1,Will Leckie",
-    "1,Jen Cluthe",
-    "1,Sandra Hanson",
-    "Throw Away,David Townsend,Pass,Sina Dee",
-    "D,Adam MacDonald",
-    "POINT,Adam MacDonald",
-    "-1,David Townsend",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "1,Adam MacDonald",
-    "1,Al Colantonio",
-    "1,Kevin Hughes",
-    "1,Matt Masse",
-    "1,Jen Cluthe",
-    "1,Kirsten Querbach",
-    "Throw Away,Amos Lee,Pass,Greg Linton,Pass,Douglas Brierley",
-    "D,Kirsten Querbach",
-    "Drop,Matt Masse,Pass,Sandra Hanson,Pass,Kirsten Querbach,Pass,Nick Klimowicz",
-    "Throw Away,Douglas Brierley,Pass,Nina Ramic,Pass,Greg Linton",
-    "D,Will Leckie",
-    "POINT,Steve Bisang,Pass,Nick Klimowicz,Pass,Matt Masse,Pass,Steve Bisang,Pass,Will Leckie",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "1,Matt Masse",
-    "1,Nick Klimowicz",
-    "1,Steve Bisang",
-    "1,Will Leckie",
-    "1,Kirsten Querbach",
-    "1,Sandra Hanson",
-    "Drop,Ashlin Kelly,Pass,Sina Dee",
-    "Drop,Adam MacDonald,Pass,Kevin Hughes,Pass,Al Colantonio",
-    "POINT,Jonathan Champagne,Pass,Sina Dee,Pass,Ashlin Kelly,Pass,Kathryn Jarrett-Ekholm,Pass,Sina Dee,Pass,David Townsend,Pass,Douglas Brierley,Pass,Sina Dee",
-    "-1,David Townsend",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Nick Klimowicz",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "Throw Away,Matt Masse",
-    "POINT,Greg Linton,Pass,Amos Lee,Pass,Nina Ramic,Pass,Tim Kealey,Pass,Amos Lee",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "1,Amos Lee",
-    "1,Greg Linton",
-    "1,Khalid Al-Zahrani",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Nina Ramic",
-    "Drop,Nick Klimowicz,Pass,Al Colantonio,Pass,Kirsten Querbach,Pass,Sandra Hanson",
-    "Drop,Jonathan Champagne,Pass,David Townsend,Pass,Douglas Brierley,Pass,Sina Dee",
-    "Drop,Sandra Hanson,Pass,Nick Klimowicz",
-    "Drop,Nina Ramic,Pass,Douglas Brierley,Pass,David Townsend,Pass,Sina Dee,Pass,Douglas Brierley,Pass,Sina Dee",
-    "Throw Away,Adam MacDonald",
-    "POINT,Nina Ramic,Pass,Sina Dee,Pass,Jonathan Champagne,Pass,David Townsend",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Nick Klimowicz",
-    "-1,Will Leckie",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "1,David Townsend",
-    "1,Douglas Brierley",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Throw Away,Al Colantonio,Pass,Steve Bisang,Pass,Al Colantonio",
-    "D,Tim Kealey",
-    "POINT,Ashlin Kelly,Pass,Tim Kealey,Pass,Amos Lee,Pass,Ashlin Kelly,Pass,Amos Lee,Pass,Khalid Al-Zahrani,Pass,Tim Kealey",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "1,Amos Lee",
-    "1,Greg Linton",
-    "1,Khalid Al-Zahrani",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "POINT,Kirsten Querbach,Pass,Will Leckie,Pass,Nick Klimowicz,Pass,Adam MacDonald,Pass,Will Leckie,Pass,Adam MacDonald",
-    "-1,Adam MacDonald",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "-1,David Townsend",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "Throw Away,Amos Lee,Pass,Tim Kealey,Pass,Nina Ramic,Pass,Tim Kealey",
-    "D,Will Leckie",
-    "Throw Away,Sandra Hanson,Pass,Kevin Hughes,Pass,Matt Masse,Pass,Kevin Hughes",
-    "D,Khalid Al-Zahrani",
-    "Throw Away,Kathryn Jarrett-Ekholm,Pass,Amos Lee,Pass,Tim Kealey,Pass,Amos Lee,Pass,Tim Kealey,Pass,Khalid Al-Zahrani",
-    "D,Will Leckie",
-    "Throw Away,Al Colantonio",
-    "Drop,Kathryn Jarrett-Ekholm,Pass,Tim Kealey",
-    "POINT,Kevin Hughes,Pass,Sandra Hanson",
-    "-1,Amos Lee",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "1,Al Colantonio",
-    "1,Kevin Hughes",
-    "1,Matt Masse",
-    "1,Will Leckie",
-    "1,Kirsten Querbach",
-    "1,Sandra Hanson",
-    "POINT,Nina Ramic,Pass,Sina Dee,Pass,Jonathan Champagne,Pass,David Townsend,Pass,Sina Dee",
-    "-1,David Townsend",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "-1,Adam MacDonald",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "Throw Away,Al Colantonio,Pass,Sandra Hanson",
-    "D,Ashlin Kelly",
-    "Throw Away,Ashlin Kelly,Pass,Tim Kealey",
-    "Throw Away,Will Leckie,Pass,Al Colantonio",
-    "D,Khalid Al-Zahrani",
-    "Throw Away,Greg Linton,Pass,Tim Kealey",
-    "D,Adam MacDonald",
-    "Throw Away,Adam MacDonald",
-    "D,Kathryn Jarrett-Ekholm",
-    "Drop,Kathryn Jarrett-Ekholm,Pass,Amos Lee,Pass,Greg Linton,Pass,Kathryn Jarrett-Ekholm,Pass,Amos Lee,Pass,Greg Linton",
-    "Throw Away,Will Leckie,Pass,Al Colantonio,Pass,Will Leckie,Pass,Al Colantonio,Pass,Adam MacDonald",
-    "Throw Away,Tim Kealey,Pass,Greg Linton,Pass,Khalid Al-Zahrani,Pass,Kathryn Jarrett-Ekholm,Pass,Ashlin Kelly,Pass,Tim Kealey",
-    "D,Adam MacDonald",
-    "POINT,Will Leckie,Pass,Kevin Hughes,Pass,Sandra Hanson,Pass,Adam MacDonald",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Kevin Hughes",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "-1,Amos Lee",
-    "-1,Greg Linton",
-    "-1,Khalid Al-Zahrani",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "POINT,Nina Ramic,Pass,David Townsend,Pass,Sina Dee",
-    "-1,David Townsend",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Ashlin Kelly",
-    "-1,Nina Ramic",
-    "-1,Al Colantonio",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "Drop,Will Leckie,Pass,Kevin Hughes,Pass,Matt Masse",
-    "Throw Away,Amos Lee",
-    "Throw Away,Kevin Hughes",
-    "D,Kathryn Jarrett-Ekholm",
-    "POINT,Sina Dee,Pass,Amos Lee,Pass,Sina Dee",
-    "-1,Adam MacDonald",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "1,Amos Lee",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Drop,Nick Klimowicz,Pass,Steve Bisang,Pass,Adam MacDonald,Pass,Jen Cluthe,Pass,Adam MacDonald,Pass,Nick Klimowicz",
-    "POINT,Jonathan Champagne,Pass,Douglas Brierley,Pass,David Townsend,Pass,Kathryn Jarrett-Ekholm,Pass,Jonathan Champagne,Pass,Douglas Brierley",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson",
-    "1,David Townsend",
-    "1,Douglas Brierley",
-    "1,Greg Linton",
-    "1,Jonathan Champagne",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "Throw Away,Sandra Hanson,Pass,Matt Masse,Pass,Sandra Hanson,Pass,Will Leckie,Pass,Sandra Hanson,Pass,Will Leckie,Pass,Sandra Hanson",
-    "D,Amos Lee",
-    "POINT,Nina Ramic,Pass,Tim Kealey,Pass,Khalid Al-Zahrani,Pass,Amos Lee,Pass,Khalid Al-Zahrani,Pass,Amos Lee",
-    "-1,Kevin Hughes",
-    "-1,Matt Masse",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Kirsten Querbach",
-    "-1,Sandra Hanson",
-    "1,Amos Lee",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Nina Ramic",
-    "POINT,Jen Cluthe,Pass,Adam MacDonald,Pass,Nick Klimowicz,Pass,Matt Masse,Pass,Jen Cluthe,Pass,Nick Klimowicz,Pass,Kirsten Querbach,Pass,Adam MacDonald,Pass,Nick Klimowicz",
-    "-1,Adam MacDonald",
-    "-1,Al Colantonio",
-    "-1,Matt Masse",
-    "-1,Nick Klimowicz",
-    "-1,Jen Cluthe",
-    "-1,Kirsten Querbach",
-    "-1,David Townsend",
-    "-1,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Jonathan Champagne",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "Throw Away,Sina Dee,Pass,Tim Kealey,Pass,Sina Dee",
-    "D,Steve Bisang",
-    "Throw Away,Nick Klimowicz",
-    "D,Amos Lee",
-    "Drop,Khalid Al-Zahrani,Pass,Amos Lee",
-    "Throw Away,Kevin Hughes,Pass,Steve Bisang,Pass,Sandra Hanson,Pass,Steve Bisang,Pass,Will Leckie,Pass,Sandra Hanson,Pass,Nick Klimowicz,Pass,Kevin Hughes",
-    "D,Amos Lee",
-    "Throw Away,Sina Dee,Pass,Amos Lee",
-    "D,Nick Klimowicz",
-    "Drop,Sandra Hanson,Pass,Steve Bisang,Pass,Nick Klimowicz",
-    "POINT,Kathryn Jarrett-Ekholm,Pass,Sina Dee",
-    "-1,Amos Lee",
-    "-1,David Townsend",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Kevin Hughes",
-    "-1,Nick Klimowicz",
-    "-1,Steve Bisang",
-    "-1,Will Leckie",
-    "-1,Jen Cluthe",
-    "-1,Sandra Hanson"
-  ]
 }
