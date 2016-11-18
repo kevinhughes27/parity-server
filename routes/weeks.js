@@ -23,6 +23,7 @@ import calcWeek from '../lib/calc_week'
  */
 router.get('/weeks', async function (req, res) {
   let weeks = await Games.distinct('week')
+  weeks = weeks.sort()
   res.json(weeks)
 })
 
