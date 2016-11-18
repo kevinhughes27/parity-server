@@ -1,4 +1,4 @@
-parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg)](https://travis-ci.org/kevinhughes27/parity-server)
+parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg?branch=master)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
 new backend for [OCUA Parity League](http://www.ocua.ca/Parity-League) stats.
