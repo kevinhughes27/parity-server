@@ -1,524 +1,3365 @@
 {
-  "week": 1,
-  "teams": {
-    "Stan's Sturgeons": [
-      "Christine Beals",
-      "Karen Kavanagh",
-      "Marie-Claude Lacombe",
-      "Neena Sidhu",
-      "Alex Bush",
-      "Brian Kells",
-      "Chris Tran",
-      "Derek Tokarski",
-      "Frederic Caron",
-      "Jamie Wildgen",
-      "Sebastien Benard",
-      "Stanley Kent"
-    ],
-    "Pirate Rob’s Swashbuckling Rogues": [
-      "Adrienne Junek",
-      "Lissa Greenspoon",
-      "Megan Berry",
-      "Melissa Jess",
-      "Brent Burton",
-      "Chris Sullivan",
-      "Christopher Keates",
-      "Graham Brown",
-      "Greg Cormier",
-      "Krys Kudakiewicz",
-      "Michael Blanchard",
-      "Rob Ives"
+    "league": "ocua_16-17",
+    "week": 1,
+    "teams": {
+        "Kaboom": [
+            "Melissa Berry",
+            "Sandra Hanson",
+            "An Tran",
+            "Stacey Wowchuk",
+            "Jamie Wildgen",
+            "Ethan Brady",
+            "Frederic Caron",
+            "Jeff Hunt",
+            "Christopher Keates",
+            "Tyler Mulcock",
+            "Matthew Schijns",
+            "David Townsend"
+        ],
+        "Mike and the Milburys": [
+            "CarolAnne Black",
+            "Laura Chambers Storey",
+            "Laura Knowles",
+            "Heather McCabe",
+            "Brian Kells",
+            "Alessandro Colonnier",
+            "Nick Klimowicz",
+            "Will Leckie",
+            "Mike Lee",
+            "Greg Probe",
+            "Peter Roebuck",
+            "Andrew Spearin"
+        ]
+    },
+    "events": {
+        "points": [
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 7, 2016 7:05:51 PM",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:05:58 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:06:03 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:06:05 PM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:06:07 PM",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:06:13 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:06:14 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:07 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:11 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:13 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:20 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:26 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:32 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:34 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:37 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:07:40 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:07:41 PM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:08:55 PM",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:09:13 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:09:21 PM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:09:23 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:09:24 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:09:36 PM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:09:39 PM",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:09:52 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:04 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:07 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:14 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:18 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:49 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:52 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:10:54 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:11:00 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:11:01 PM",
+                        "firstActor": "Sina Dee(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:12:02 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:12:10 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:12:15 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:12:17 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:12:58 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:05 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:08 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:15 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:18 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:23 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:13:24 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:34 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:41 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:47 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:48 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:53 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:13:58 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:14:01 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:14:06 PM",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:14:17 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:14:20 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:14:23 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:14:27 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:14:28 PM",
+                        "firstActor": "Andrew Spearin"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:15:34 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:15:40 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:15:48 PM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:15:53 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:15:59 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:03 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:08 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:16:09 PM",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:18 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:16:24 PM",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:16:26 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:30 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:34 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:16:39 PM",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:46 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:49 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:52 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:54 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:56 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:16:59 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:17:03 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:17:07 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:17:08 PM",
+                        "firstActor": "An Tran"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:08 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:11 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:17 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:20 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:23 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:27 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:29 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:35 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:38 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:41 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:47 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:53 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:18:56 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:19:03 PM",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:19:29 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:19:36 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:19:37 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Morgan Howard(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:31 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:37 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:40 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:44 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:51 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:56 PM",
+                        "secondActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:20:59 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:21:01 PM",
+                        "firstActor": "Heather McCabe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:21:59 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:09 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:10 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:12 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:13 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:14 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:22:19 PM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:22:23 PM",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:25 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:28 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:30 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:34 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:37 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:44 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:50 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:22:52 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:22:54 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:23:57 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:02 PM",
+                        "secondActor": "Matthew Schijns",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:05 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:24:10 PM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:24:14 PM",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:20 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:30 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:24:31 PM",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:24:36 PM",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:40 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:24:42 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:24:43 PM",
+                        "firstActor": "An Tran"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:25:36 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:25:41 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:25:42 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:25:46 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:25:51 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:25:52 PM",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:00 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:04 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:09 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:12 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:16 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:26:24 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:26:24 PM",
+                        "firstActor": "Christopher Keates"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Morgan Howard(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:27:33 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:27:35 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "CarolAnne Black"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:27:39 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:27:40 PM",
+                        "firstActor": "CarolAnne Black"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:28:31 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:28:35 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:28:36 PM",
+                        "firstActor": "Jeff Hunt"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:29:24 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:29:28 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:29:37 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:05 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:30:06 PM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:08 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:11 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "CarolAnne Black"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:13 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:17 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:22 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:28 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:35 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:38 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:42 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:30:46 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:30:47 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:31:41 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Matthew Schijns"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:31:47 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:31:53 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:31:55 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:32:00 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:32:00 PM",
+                        "firstActor": "Melissa Berry"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Morgan Howard(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:32:50 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:32:52 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:32:57 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:01 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:05 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "CarolAnne Black"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:20 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:23 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:27 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:29 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:32 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:34 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:33:40 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:33:41 PM",
+                        "firstActor": "CarolAnne Black"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 7, 2016 7:38:11 PM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:38:26 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:38:46 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:38:51 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:38:54 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:38:59 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:39:07 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:39:08 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:39:54 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:00 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:07 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:11 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:14 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:20 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:40:25 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:40:28 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:41:20 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:41:27 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:41:28 PM",
+                        "firstActor": "Heather McCabe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "Melissa Berry",
+                    "Sandra Hanson"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:42:25 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:42:27 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:42:33 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:42:37 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:42:44 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:42:45 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:43:42 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:43:49 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:43:56 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:43:59 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:03 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:06 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:10 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:13 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:44:14 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:58 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:44:59 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:45:01 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:45:08 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:45:13 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:45:19 PM",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:45:22 PM",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:45:26 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:45:28 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:45:29 PM",
+                        "firstActor": "Alessandro Colonnier"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:46:23 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:46:25 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:46:28 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:46:30 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:46:33 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:46:41 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:47:00 PM",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:47:29 PM",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:47:31 PM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:47:34 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:47:36 PM",
+                        "secondActor": "Sandra Hanson",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:47:48 PM",
+                        "secondActor": "Frederic Caron",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:47:49 PM",
+                        "firstActor": "Frederic Caron"
+                    }
+                ],
+                "defensePlayers": [
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:48:27 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:48:33 PM",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:48:42 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:48:43 PM",
+                        "firstActor": "Christopher Keates"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Heather McCabe"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:30 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:34 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:36 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:40 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:42 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:45 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:51 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:49:55 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:50:00 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:50:00 PM",
+                        "firstActor": "CarolAnne Black"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Christopher Keates",
+                    "Matthew Schijns",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:50:51 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:50:55 PM",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:50:58 PM",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:51:32 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:51:36 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:51:39 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:51:45 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 7:51:45 PM",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:51:52 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:00 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:52:13 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:20 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:22 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:25 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:30 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:33 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:39 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:42 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:48 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:51 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:52:53 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:53:00 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:53:06 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:53:09 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:53:10 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Jeff Hunt",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:02 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Sandra Hanson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:05 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:10 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:16 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:54:24 PM",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:30 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "CarolAnne Black"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:35 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:39 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:46 PM",
+                        "secondActor": "Brian Kells",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:54:49 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:54:53 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:07 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:12 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:16 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:19 PM",
+                        "secondActor": "Melissa Berry",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:24 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Melissa Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:55:30 PM",
+                        "secondActor": "Jeff Hunt",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:55:38 PM",
+                        "firstActor": "Jeff Hunt"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:56:00 PM",
+                        "firstActor": "CarolAnne Black"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:56:18 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:56:24 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:56:24 PM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brian Kells",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:57:16 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:57:19 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:57:23 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:57:54 PM",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:57:56 PM",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:58:00 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:58:01 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:58:03 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 7:58:04 PM",
+                        "firstActor": "Tyler Mulcock"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "Matthew Schijns",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alessandro Colonnier",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Heather McCabe",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:59:03 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:59:06 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:59:14 PM",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 7:59:16 PM",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:59:22 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 7:59:29 PM",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 7:59:57 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:00:02 PM",
+                        "secondActor": "CarolAnne Black",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:00:03 PM",
+                        "firstActor": "CarolAnne Black"
+                    }
+                ],
+                "defensePlayers": [
+                    "Jeff Hunt",
+                    "Matthew Schijns",
+                    "David Townsend",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Frederic Caron",
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:02:45 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:02:50 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:03:00 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:03:15 PM",
+                        "secondActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:03:21 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Frederic Caron"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:03:22 PM",
+                        "firstActor": "Christopher Keates"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Greg Probe",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Alessandro Colonnier",
+                    "Greg Probe",
+                    "Andrew Spearin",
+                    "CarolAnne Black",
+                    "Ashlin Kelly(S)",
+                    "Sina Dee(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:22 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:26 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Alessandro Colonnier"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:28 PM",
+                        "secondActor": "Greg Probe",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:30 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Greg Probe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:32 PM",
+                        "secondActor": "Sina Dee(S)",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:04:36 PM",
+                        "secondActor": "Alessandro Colonnier",
+                        "firstActor": "Sina Dee(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:04:37 PM",
+                        "firstActor": "Alessandro Colonnier"
+                    }
+                ],
+                "defensePlayers": [
+                    "Frederic Caron",
+                    "Jeff Hunt",
+                    "Matthew Schijns",
+                    "Melissa Berry",
+                    "Sandra Hanson",
+                    "Ariel Untiveros(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Christopher Keates",
+                    "Tyler Mulcock",
+                    "David Townsend",
+                    "An Tran",
+                    "Stacey Wowchuk",
+                    "Ariel Untiveros(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:29 PM",
+                        "secondActor": "Stacey Wowchuk",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:31 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:37 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:42 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:44 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:48 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:54 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:05:58 PM",
+                        "secondActor": "David Townsend",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:03 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "David Townsend"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:12 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:15 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:20 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:25 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:06:26 PM",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:33 PM",
+                        "secondActor": "Will Leckie",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:06:38 PM",
+                        "firstActor": "Will Leckie"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:45 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:52 PM",
+                        "secondActor": "Ariel Untiveros(S)",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:06:59 PM",
+                        "secondActor": "An Tran",
+                        "firstActor": "Ariel Untiveros(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:04 PM",
+                        "secondActor": "Christopher Keates",
+                        "firstActor": "An Tran"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:07:08 PM",
+                        "firstActor": "Christopher Keates"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:32 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:37 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:38 PM",
+                        "secondActor": "Heather McCabe",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:42 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Heather McCabe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:07:46 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:07:49 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:08:01 PM",
+                        "secondActor": "Tyler Mulcock",
+                        "firstActor": "Stacey Wowchuk"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:08:10 PM",
+                        "firstActor": "Tyler Mulcock"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:08:33 PM",
+                        "secondActor": "Andrew Spearin",
+                        "firstActor": "Brian Kells"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:08:37 PM",
+                        "secondActor": "Morgan Howard(S)",
+                        "firstActor": "Andrew Spearin"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:08:41 PM",
+                        "secondActor": "Ashlin Kelly(S)",
+                        "firstActor": "Morgan Howard(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:08:42 PM",
+                        "firstActor": "Ashlin Kelly(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brian Kells",
+                    "Will Leckie",
+                    "Andrew Spearin",
+                    "Heather McCabe",
+                    "Ashlin Kelly(S)",
+                    "Morgan Howard(S)"
+                ]
+            }
+        ]
+    },
+    "event_string": [
+        "",
+        "Pull,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "Drop,Matthew Schijns,Pass,Christopher Keates,Pass,Sandra Hanson,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Sina Dee(S),",
+        "+1,Brian Kells,",
+        "+1,Alessandro Colonnier,",
+        "+1,Will Leckie,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Sina Dee(S),",
+        "-1,Jeff Hunt,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "Direction,<<<<<<,",
+        "POINT,Tyler Mulcock,Pass,Christopher Keates,Pass,Frederic Caron,Pass,Christopher Keates,Pass,An Tran,Pass,Ariel Untiveros(S),Pass,Frederic Caron,Pass,Ariel Untiveros(S),Pass,Tyler Mulcock,Pass,Frederic Caron,",
+        "-1,Alessandro Colonnier,",
+        "-1,Greg Probe,",
+        "-1,Andrew Spearin,",
+        "-1,CarolAnne Black,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "+1,Frederic Caron,",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Heather McCabe,",
+        "Direction,<<<<<<,",
+        "Throw Away,David Townsend,Pass,Jeff Hunt,Pass,Matthew Schijns,Pass,David Townsend,Pass,Jeff Hunt,",
+        "Direction,>>>>>>,",
+        "D,Brian Kells,",
+        "POINT,Sina Dee(S),Pass,Brian Kells,Pass,Heather McCabe,Pass,Sina Dee(S),Pass,Ashlin Kelly(S),Pass,Brian Kells,Pass,Andrew Spearin,Pass,Heather McCabe,Pass,Will Leckie,Pass,Brian Kells,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Andrew Spearin,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Sina Dee(S),",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros(S),Pass,Jeff Hunt,Pass,An Tran,Pass,Stacey Wowchuk,",
+        "-1,Alessandro Colonnier,",
+        "-1,Greg Probe,",
+        "-1,CarolAnne Black,",
+        "-1,Heather McCabe,",
+        "-1,Morgan Howard(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Drop,Ashlin Kelly(S),Pass,Will Leckie,Pass,Heather McCabe,Pass,Ashlin Kelly(S),Pass,Brian Kells,Pass,Will Leckie,Pass,Brian Kells,",
+        "Direction,<<<<<<,",
+        "Throw Away,Sandra Hanson,Pass,Melissa Berry,Pass,Sandra Hanson,Pass,Frederic Caron,Pass,Melissa Berry,Pass,Sandra Hanson,Pass,Frederic Caron,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "POINT,Andrew Spearin,Pass,Brian Kells,Pass,Ashlin Kelly(S),Pass,Andrew Spearin,Pass,Greg Probe,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "-1,Frederic Caron,",
+        "-1,Tyler Mulcock,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "Direction,<<<<<<,",
+        "Throw Away,Christopher Keates,Pass,David Townsend,Pass,Jeff Hunt,",
+        "Direction,>>>>>>,",
+        "Drop,Morgan Howard(S),Pass,Sina Dee(S),Pass,Will Leckie,Pass,Morgan Howard(S),Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Stacey Wowchuk,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "D,Ashlin Kelly(S),",
+        "Throw Away,Sina Dee(S),Pass,Alessandro Colonnier,Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "POINT,An Tran,Pass,David Townsend,Pass,Christopher Keates,Pass,Jeff Hunt,Pass,Christopher Keates,Pass,Jeff Hunt,Pass,Ariel Untiveros(S),Pass,Christopher Keates,Pass,An Tran,",
+        "-1,Alessandro Colonnier,",
+        "-1,Will Leckie,",
+        "-1,CarolAnne Black,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "-1,Sina Dee(S),",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Andrew Spearin,Pass,Greg Probe,Pass,Sina Dee(S),Pass,Heather McCabe,Pass,Andrew Spearin,Pass,Greg Probe,Pass,Heather McCabe,Pass,Greg Probe,Pass,Andrew Spearin,Pass,Heather McCabe,Pass,Brian Kells,Pass,Heather McCabe,Pass,Brian Kells,Pass,Greg Probe,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros(S),Pass,Frederic Caron,Pass,Sandra Hanson,",
+        "-1,Brian Kells,",
+        "-1,Greg Probe,",
+        "-1,Andrew Spearin,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Tyler Mulcock,",
+        "+1,Matthew Schijns,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "POINT,Heather McCabe,Pass,Morgan Howard(S),Pass,Will Leckie,Pass,Brian Kells,Pass,Heather McCabe,Pass,Alessandro Colonnier,Pass,Heather McCabe,",
+        "+1,Brian Kells,",
+        "+1,Alessandro Colonnier,",
+        "+1,Will Leckie,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "+1,Morgan Howard(S),",
+        "-1,Jeff Hunt,",
+        "-1,Christopher Keates,",
+        "-1,Tyler Mulcock,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Throw Away,Christopher Keates,Pass,Melissa Berry,Pass,Ariel Untiveros(S),Pass,Christopher Keates,Pass,Tyler Mulcock,Pass,Sandra Hanson,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "D,Sina Dee(S),",
+        "POINT,Ashlin Kelly(S),Pass,Andrew Spearin,Pass,Sina Dee(S),Pass,Ashlin Kelly(S),Pass,Heather McCabe,Pass,Andrew Spearin,Pass,Greg Probe,Pass,Will Leckie,Pass,Greg Probe,",
+        "+1,Will Leckie,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Sina Dee(S),",
+        "-1,Frederic Caron,",
+        "-1,Christopher Keates,",
+        "-1,Tyler Mulcock,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Jeff Hunt,Pass,Matthew Schijns,Pass,Tyler Mulcock,Pass,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "D,Alessandro Colonnier,",
+        "Throw Away,Alessandro Colonnier,Pass,Greg Probe,Pass,Ashlin Kelly(S),",
+        "Direction,<<<<<<,",
+        "D,Tyler Mulcock,",
+        "POINT,An Tran,Pass,David Townsend,Pass,Tyler Mulcock,",
+        "-1,Brian Kells,",
+        "-1,Alessandro Colonnier,",
+        "-1,Greg Probe,",
+        "-1,CarolAnne Black,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Drop,Heather McCabe,Pass,Will Leckie,Pass,Brian Kells,Pass,Sina Dee(S),Pass,Ashlin Kelly(S),Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "POINT,Christopher Keates,Pass,Frederic Caron,Pass,Melissa Berry,Pass,Sandra Hanson,Pass,Jeff Hunt,Pass,Christopher Keates,Pass,Melissa Berry,",
+        "-1,Brian Kells,",
+        "-1,Will Leckie,",
+        "-1,Andrew Spearin,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "POINT,CarolAnne Black,Pass,Morgan Howard(S),Pass,CarolAnne Black,Pass,Greg Probe,",
+        "+1,Alessandro Colonnier,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "+1,Morgan Howard(S),",
+        "-1,Frederic Caron,",
+        "-1,Tyler Mulcock,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "POINT,Jeff Hunt,Pass,Ariel Untiveros(S),Pass,Sandra Hanson,",
+        "-1,Brian Kells,",
+        "-1,Will Leckie,",
+        "-1,Greg Probe,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Sina Dee(S),",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Ashlin Kelly(S),Pass,Morgan Howard(S),",
+        "Direction,<<<<<<,",
+        "Drop,David Townsend,Pass,An Tran,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Alessandro Colonnier,Pass,Ashlin Kelly(S),Pass,Morgan Howard(S),Pass,Will Leckie,Pass,Andrew Spearin,Pass,Morgan Howard(S),Pass,Ashlin Kelly(S),Pass,Alessandro Colonnier,Pass,CarolAnne Black,Pass,Morgan Howard(S),",
+        "+1,Alessandro Colonnier,",
+        "+1,Will Leckie,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Morgan Howard(S),",
+        "-1,Frederic Caron,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "POINT,Melissa Berry,Pass,Tyler Mulcock,Pass,Sandra Hanson,Pass,Christopher Keates,Pass,Tyler Mulcock,Pass,Matthew Schijns,",
+        "-1,Brian Kells,",
+        "-1,Greg Probe,",
+        "-1,Andrew Spearin,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Sina Dee(S),",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,Matthew Schijns,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "POINT,CarolAnne Black,Pass,Brian Kells,Pass,Heather McCabe,Pass,Brian Kells,Pass,Morgan Howard(S),Pass,Heather McCabe,Pass,Will Leckie,Pass,Heather McCabe,Pass,CarolAnne Black,Pass,Heather McCabe,Pass,Brian Kells,Pass,Heather McCabe,Pass,Brian Kells,",
+        "+1,Brian Kells,",
+        "+1,Alessandro Colonnier,",
+        "+1,Will Leckie,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "+1,Morgan Howard(S),",
+        "-1,Frederic Caron,",
+        "-1,Tyler Mulcock,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Time,Half,",
+        "Pull,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Sina Dee(S),Pass,Greg Probe,Pass,Sina Dee(S),Pass,Greg Probe,Pass,Andrew Spearin,Pass,Sina Dee(S),",
+        "+1,Will Leckie,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Sina Dee(S),",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros(S),Pass,An Tran,Pass,Christopher Keates,Pass,David Townsend,Pass,Ariel Untiveros(S),Pass,An Tran,Pass,Tyler Mulcock,Pass,Christopher Keates,",
+        "-1,Brian Kells,",
+        "-1,Alessandro Colonnier,",
+        "-1,Greg Probe,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "POINT,Heather McCabe,Pass,Andrew Spearin,Pass,Brian Kells,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "+1,Sina Dee(S),",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Matthew Schijns,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros(S),Pass,Christopher Keates,Pass,David Townsend,Pass,An Tran,Pass,Christopher Keates,Pass,Ariel Untiveros(S),",
+        "-1,Alessandro Colonnier,",
+        "-1,Greg Probe,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "-1,Sina Dee(S),",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Brian Kells,Pass,Andrew Spearin,Pass,Greg Probe,Pass,Will Leckie,Pass,Andrew Spearin,Pass,Greg Probe,Pass,Ashlin Kelly(S),Pass,Greg Probe,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Ashlin Kelly(S),",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,An Tran,Pass,Christopher Keates,Pass,An Tran,Pass,David Townsend,Pass,Stacey Wowchuk,Pass,An Tran,",
+        "Direction,>>>>>>,",
+        "D,Heather McCabe,",
+        "POINT,Alessandro Colonnier,Pass,Heather McCabe,Pass,Morgan Howard(S),",
+        "+1,Brian Kells,",
+        "+1,Alessandro Colonnier,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Morgan Howard(S),",
+        "+1,Sina Dee(S),",
+        "-1,Jeff Hunt,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "Direction,<<<<<<,",
+        "Throw Away,Ariel Untiveros(S),Pass,Frederic Caron,Pass,Melissa Berry,Pass,David Townsend,Pass,Melissa Berry,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "D,Greg Probe,",
+        "Throw Away,Greg Probe,",
+        "Direction,<<<<<<,",
+        "D,Frederic Caron,",
+        "POINT,Frederic Caron,Pass,Sandra Hanson,Pass,Tyler Mulcock,Pass,Frederic Caron,",
+        "-1,Will Leckie,",
+        "-1,Greg Probe,",
+        "-1,Andrew Spearin,",
+        "-1,CarolAnne Black,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Tyler Mulcock,",
+        "+1,David Townsend,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Morgan Howard(S),Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "POINT,Christopher Keates,Pass,Frederic Caron,",
+        "-1,Brian Kells,",
+        "-1,Alessandro Colonnier,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Jeff Hunt,",
+        "+1,Christopher Keates,",
+        "+1,Matthew Schijns,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "POINT,CarolAnne Black,Pass,Brian Kells,Pass,Greg Probe,Pass,Andrew Spearin,Pass,Heather McCabe,Pass,Brian Kells,Pass,Greg Probe,Pass,Brian Kells,Pass,Heather McCabe,Pass,Brian Kells,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "-1,Jeff Hunt,",
+        "-1,Tyler Mulcock,",
+        "-1,David Townsend,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Stacey Wowchuk,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "D,Sina Dee(S),",
+        "Drop,Greg Probe,Pass,Heather McCabe,Pass,Greg Probe,Pass,Heather McCabe,Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Ariel Untiveros(S),Pass,An Tran,Pass,Frederic Caron,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Alessandro Colonnier,Pass,Morgan Howard(S),Pass,Ashlin Kelly(S),Pass,Sina Dee(S),Pass,Heather McCabe,Pass,Morgan Howard(S),Pass,Heather McCabe,Pass,Morgan Howard(S),Pass,Heather McCabe,Pass,Ashlin Kelly(S),Pass,Heather McCabe,Pass,Sina Dee(S),Pass,Greg Probe,",
+        "+1,Alessandro Colonnier,",
+        "+1,Greg Probe,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Morgan Howard(S),",
+        "+1,Sina Dee(S),",
+        "-1,Frederic Caron,",
+        "-1,Christopher Keates,",
+        "-1,Matthew Schijns,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Tyler Mulcock,Pass,Ariel Untiveros(S),Pass,Melissa Berry,Pass,Tyler Mulcock,Pass,Sandra Hanson,",
+        "Direction,>>>>>>,",
+        "Throw Away,Ashlin Kelly(S),Pass,Brian Kells,Pass,Will Leckie,Pass,Alessandro Colonnier,Pass,Ashlin Kelly(S),Pass,CarolAnne Black,",
+        "Direction,<<<<<<,",
+        "Throw Away,Jeff Hunt,Pass,Tyler Mulcock,Pass,Melissa Berry,Pass,Ariel Untiveros(S),Pass,Tyler Mulcock,Pass,Ariel Untiveros(S),Pass,Melissa Berry,",
+        "Direction,>>>>>>,",
+        "Throw Away,CarolAnne Black,",
+        "Direction,<<<<<<,",
+        "POINT,Tyler Mulcock,Pass,David Townsend,Pass,Ariel Untiveros(S),",
+        "-1,Brian Kells,",
+        "-1,Alessandro Colonnier,",
+        "-1,Will Leckie,",
+        "-1,Andrew Spearin,",
+        "-1,CarolAnne Black,",
+        "-1,Ashlin Kelly(S),",
+        "+1,Jeff Hunt,",
+        "+1,Tyler Mulcock,",
+        "+1,David Townsend,",
+        "+1,Melissa Berry,",
+        "+1,Sandra Hanson,",
+        "+1,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Morgan Howard(S),Pass,Heather McCabe,Pass,Ashlin Kelly(S),Pass,Greg Probe,",
+        "Direction,<<<<<<,",
+        "D,Frederic Caron,",
+        "POINT,Tyler Mulcock,Pass,Christopher Keates,Pass,Stacey Wowchuk,Pass,Christopher Keates,",
+        "-1,Brian Kells,",
+        "-1,Greg Probe,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "-1,Sina Dee(S),",
+        "+1,Frederic Caron,",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,Matthew Schijns,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sina Dee(S),Pass,Alessandro Colonnier,Pass,Sina Dee(S),",
+        "Direction,<<<<<<,",
+        "D,David Townsend,",
+        "Throw Away,Ariel Untiveros(S),Pass,David Townsend,",
+        "Direction,>>>>>>,",
+        "POINT,CarolAnne Black,Pass,Andrew Spearin,Pass,Sina Dee(S),",
+        "+1,Alessandro Colonnier,",
+        "+1,Will Leckie,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Heather McCabe,",
+        "+1,Sina Dee(S),",
+        "-1,Jeff Hunt,",
+        "-1,Matthew Schijns,",
+        "-1,David Townsend,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "POINT,Christopher Keates,Pass,Frederic Caron,Pass,Tyler Mulcock,Pass,Stacey Wowchuk,Pass,Frederic Caron,",
+        "-1,Brian Kells,",
+        "-1,Will Leckie,",
+        "-1,Greg Probe,",
+        "-1,Heather McCabe,",
+        "-1,Ashlin Kelly(S),",
+        "-1,Morgan Howard(S),",
+        "+1,Frederic Caron,",
+        "+1,Christopher Keates,",
+        "+1,Tyler Mulcock,",
+        "+1,David Townsend,",
+        "+1,An Tran,",
+        "+1,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "POINT,Alessandro Colonnier,Pass,Sina Dee(S),Pass,Ashlin Kelly(S),Pass,Greg Probe,Pass,Andrew Spearin,Pass,Alessandro Colonnier,Pass,Greg Probe,",
+        "+1,Alessandro Colonnier,",
+        "+1,Greg Probe,",
+        "+1,Andrew Spearin,",
+        "+1,CarolAnne Black,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Sina Dee(S),",
+        "-1,Frederic Caron,",
+        "-1,Jeff Hunt,",
+        "-1,Matthew Schijns,",
+        "-1,Melissa Berry,",
+        "-1,Sandra Hanson,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,",
+        "Drop,An Tran,Pass,Tyler Mulcock,Pass,Christopher Keates,Pass,Tyler Mulcock,Pass,Ariel Untiveros(S),Pass,David Townsend,Pass,Tyler Mulcock,Pass,Christopher Keates,Pass,Tyler Mulcock,Pass,David Townsend,Pass,Ariel Untiveros(S),Pass,Christopher Keates,Pass,Stacey Wowchuk,Pass,Christopher Keates,",
+        "Direction,>>>>>>,",
+        "Throw Away,Will Leckie,Pass,Ashlin Kelly(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Christopher Keates,Pass,An Tran,Pass,Ariel Untiveros(S),Pass,Tyler Mulcock,Pass,Ariel Untiveros(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Ashlin Kelly(S),Pass,Morgan Howard(S),Pass,Heather McCabe,Pass,Morgan Howard(S),Pass,Andrew Spearin,Pass,Heather McCabe,",
+        "Direction,<<<<<<,",
+        "Throw Away,Tyler Mulcock,Pass,Stacey Wowchuk,",
+        "Direction,>>>>>>,",
+        "POINT,Ashlin Kelly(S),Pass,Morgan Howard(S),Pass,Andrew Spearin,Pass,Brian Kells,",
+        "+1,Brian Kells,",
+        "+1,Will Leckie,",
+        "+1,Andrew Spearin,",
+        "+1,Heather McCabe,",
+        "+1,Ashlin Kelly(S),",
+        "+1,Morgan Howard(S),",
+        "-1,Christopher Keates,",
+        "-1,Tyler Mulcock,",
+        "-1,David Townsend,",
+        "-1,An Tran,",
+        "-1,Stacey Wowchuk,",
+        "-1,Ariel Untiveros(S),",
+        "Direction,<<<<<<,"
     ]
-  },
-  "event_string": [
-    "Pull,Frederic Caron",
-    "Throw Away,Krys Kudakiewicz,Pass,Melissa Jess,Pass,Adrienne Junek,Pass,Krys Kudakiewicz,Pass,Christopher Keates,Pass,Rob Ives",
-    "D,Chris Tran",
-    "Drop,Frederic Caron,Pass,Alex Bush,Pass,Frederic Caron,Pass,Christine Beals,Pass,Alex Bush,Pass,Chris Tran",
-    "Throw Away,Krys Kudakiewicz,Pass,Christopher Keates",
-    "Drop,Frederic Caron,Pass,Alex Bush,Pass,Christine Beals",
-    "POINT,Adrienne Junek,Pass,Christopher Keates",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "Throw Away,Jamie Wildgen,Pass,Stanley Kent",
-    "Throw Away,Chris Sullivan",
-    "Throw Away,Jamie Wildgen,Pass,Stanley Kent,Pass,Karen Kavanagh",
-    "Throw Away,Michael Blanchard,Pass,Brent Burton",
-    "Throw Away,Brian Kells,Pass,Karen Kavanagh",
-    "D,Michael Blanchard",
-    "POINT,Lissa Greenspoon,Pass,Michael Blanchard",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Chris Tran,Pass,Alex Bush,Pass,Frederic Caron",
-    "D,Adrienne Junek",
-    "POINT,Rob Ives,Pass,Krys Kudakiewicz,Pass,Melissa Jess,Pass,Rob Ives,Pass,Christopher Keates,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Adrienne Junek",
-    "1,Melissa Jess",
-    "Throw Away,Laura Chambers Storey(S),Pass,Brian Kells,Pass,Stanley Kent",
-    "Drop,Chris Sullivan,Pass,Michael Blanchard",
-    "Throw Away,Jamie Wildgen",
-    "Drop,Michael Blanchard,Pass,Megan Berry,Pass,Chris Sullivan",
-    "POINT,Derek Tokarski,Pass,Jamie Wildgen,Pass,Brian Kells",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "Throw Away,Rob Ives",
-    "D,Alex Bush",
-    "POINT,Neena Sidhu,Pass,Alex Bush",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "1,Alex Bush",
-    "1,Chris Tran",
-    "1,Frederic Caron",
-    "1,Sebastien Benard",
-    "1,Christine Beals",
-    "1,Neena Sidhu",
-    "Drop,Lissa Greenspoon,Pass,Brent Burton",
-    "Throw Away,Brian Kells,Pass,Jamie Wildgen,Pass,Stanley Kent,Pass,Derek Tokarski,Pass,Brian Kells,Pass,Stanley Kent,Pass,Karen Kavanagh",
-    "Throw Away,Chris Sullivan,Pass,Megan Berry",
-    "POINT,Derek Tokarski,Pass,Brian Kells,Pass,Jamie Wildgen,Pass,Stanley Kent,Pass,Laura Chambers Storey(S)",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "1,Brian Kells",
-    "1,Derek Tokarski",
-    "1,Jamie Wildgen",
-    "1,Stanley Kent",
-    "1,Karen Kavanagh",
-    "1,Laura Chambers Storey(S)",
-    "Throw Away,Christopher Keates",
-    "Throw Away,Sebastien Benard,Pass,Alex Bush",
-    "Throw Away,Krys Kudakiewicz,Pass,Adrienne Junek,Pass,Rob Ives",
-    "D,Frederic Caron",
-    "Throw Away,Chris Tran,Pass,Frederic Caron,Pass,Christine Beals",
-    "D,Krys Kudakiewicz",
-    "POINT,Rob Ives,Pass,Christopher Keates,Pass,Adrienne Junek,Pass,Melissa Jess,Pass,Krys Kudakiewicz,Pass,Christopher Keates,Pass,Adrienne Junek,Pass,Rob Ives",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "POINT,Laura Chambers Storey(S),Pass,Derek Tokarski,Pass,Brian Kells,Pass,Jamie Wildgen,Pass,Brian Kells,Pass,Jamie Wildgen,Pass,Brian Kells,Pass,Stanley Kent",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "Throw Away,Christopher Keates,Pass,Rob Ives",
-    "POINT,Alex Bush,Pass,Frederic Caron,Pass,Sebastien Benard,Pass,Neena Sidhu,Pass,Alex Bush,Pass,Frederic Caron,Pass,Alex Bush",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "1,Alex Bush",
-    "1,Chris Tran",
-    "1,Frederic Caron",
-    "1,Sebastien Benard",
-    "1,Christine Beals",
-    "1,Neena Sidhu",
-    "Throw Away,Greg Cormier,Pass,Brent Burton,Pass,Megan Berry,Pass,Greg Cormier,Pass,Michael Blanchard,Pass,Brent Burton,Pass,Megan Berry,Pass,Michael Blanchard,Pass,Megan Berry,Pass,Lissa Greenspoon,Pass,Chris Sullivan",
-    "D,Stanley Kent",
-    "Throw Away,Karen Kavanagh,Pass,Jamie Wildgen,Pass,Stanley Kent",
-    "Drop,Brent Burton,Pass,Megan Berry,Pass,Brent Burton,Pass,Chris Sullivan,Pass,Michael Blanchard",
-    "POINT,Derek Tokarski,Pass,Brian Kells,Pass,Jamie Wildgen,Pass,Stanley Kent",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "1,Brian Kells",
-    "1,Derek Tokarski",
-    "1,Jamie Wildgen",
-    "1,Stanley Kent",
-    "1,Karen Kavanagh",
-    "1,Laura Chambers Storey(S)",
-    "Throw Away,Graham Brown,Pass,Rob Ives,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "D,Frederic Caron",
-    "Throw Away,Frederic Caron",
-    "D,Christopher Keates",
-    "Throw Away,Adrienne Junek,Pass,Christopher Keates,Pass,Rob Ives,Pass,Graham Brown,Pass,Christopher Keates",
-    "Throw Away,Chris Tran",
-    "Drop,Rob Ives,Pass,Krys Kudakiewicz,Pass,Graham Brown,Pass,Rob Ives,Pass,Christopher Keates,Pass,Rob Ives,Pass,Christopher Keates,Pass,Krys Kudakiewicz,Pass,Rob Ives",
-    "Throw Away,Alex Bush,Pass,Chris Tran,Pass,Sebastien Benard",
-    "D,Rob Ives",
-    "POINT,Krys Kudakiewicz,Pass,Christopher Keates,Pass,Rob Ives",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "POINT,Derek Tokarski,Pass,Jamie Wildgen,Pass,Stanley Kent",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "Throw Away,Christopher Keates,Pass,Adrienne Junek,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "D,Neena Sidhu",
-    "Drop,Sebastien Benard,Pass,Chris Tran,Pass,Frederic Caron,Pass,Neena Sidhu,Pass,Frederic Caron",
-    "POINT,Rob Ives,Pass,Graham Brown,Pass,Christopher Keates,Pass,Rob Ives",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "Drop,Brian Kells,Pass,Stanley Kent,Pass,Derek Tokarski,Pass,Stanley Kent",
-    "Drop,Michael Blanchard,Pass,Brent Burton,Pass,Greg Cormier",
-    "Drop,Laura Chambers Storey(S),Pass,Jamie Wildgen,Pass,Stanley Kent",
-    "POINT,Lissa Greenspoon,Pass,Greg Cormier,Pass,Michael Blanchard,Pass,Megan Berry,Pass,Michael Blanchard",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Frederic Caron",
-    "D,Adrienne Junek",
-    "Throw Away,Graham Brown,Pass,Krys Kudakiewicz,Pass,Rob Ives,Pass,Krys Kudakiewicz,Pass,Adrienne Junek",
-    "Throw Away,Chris Tran,Pass,Alex Bush,Pass,Frederic Caron",
-    "D,Adrienne Junek",
-    "Throw Away,Rob Ives,Pass,Adrienne Junek",
-    "D,Chris Tran",
-    "POINT,Sebastien Benard,Pass,Frederic Caron",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "Drop,Chris Sullivan,Pass,Megan Berry",
-    "POINT,Stanley Kent,Pass,Jamie Wildgen,Pass,Stanley Kent",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "1,Brian Kells",
-    "1,Derek Tokarski",
-    "1,Jamie Wildgen",
-    "1,Stanley Kent",
-    "1,Karen Kavanagh",
-    "1,Laura Chambers Storey(S)",
-    "Time,Half",
-    "Pull,Christopher Keates",
-    "Throw Away,Alex Bush,Pass,Frederic Caron,Pass,Chris Tran,Pass,Neena Sidhu,Pass,Frederic Caron",
-    "D,Graham Brown",
-    "Throw Away,Christopher Keates",
-    "D,Christine Beals",
-    "Throw Away,Frederic Caron,Pass,Sebastien Benard,Pass,Chris Tran,Pass,Christine Beals",
-    "Throw Away,Adrienne Junek,Pass,Christopher Keates,Pass,Rob Ives",
-    "D,Chris Tran",
-    "Drop,Frederic Caron,Pass,Alex Bush",
-    "POINT,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Adrienne Junek",
-    "1,Melissa Jess",
-    "POINT,Brian Kells,Pass,Jamie Wildgen,Pass,Derek Tokarski,Pass,Stanley Kent",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "Drop,Graham Brown,Pass,Adrienne Junek,Pass,Christopher Keates",
-    "Throw Away,Neena Sidhu,Pass,Alex Bush",
-    "D,Christopher Keates",
-    "Throw Away,Christopher Keates",
-    "Drop,Frederic Caron,Pass,Alex Bush,Pass,Sebastien Benard,Pass,Chris Tran",
-    "POINT,Krys Kudakiewicz,Pass,Adrienne Junek,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "Drop,Stanley Kent,Pass,Laura Chambers Storey(S),Pass,Brian Kells,Pass,Jamie Wildgen,Pass,Brian Kells,Pass,Karen Kavanagh,Pass,Laura Chambers Storey(S),Pass,Jamie Wildgen,Pass,Derek Tokarski,Pass,Laura Chambers Storey(S)",
-    "Throw Away,Michael Blanchard",
-    "D,Jamie Wildgen",
-    "Throw Away,Jamie Wildgen,Pass,Brian Kells,Pass,Jamie Wildgen",
-    "D,Chris Sullivan",
-    "POINT,Lissa Greenspoon,Pass,Brent Burton,Pass,Megan Berry,Pass,Greg Cormier,Pass,Michael Blanchard,Pass,Lissa Greenspoon,Pass,Greg Cormier,Pass,Megan Berry,Pass,Brent Burton,Pass,Chris Sullivan",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Frederic Caron,Pass,Chris Tran,Pass,Alex Bush",
-    "Throw Away,Christopher Keates",
-    "Drop,Alex Bush,Pass,Frederic Caron,Pass,Christine Beals",
-    "Throw Away,Christopher Keates",
-    "D,Frederic Caron",
-    "Drop,Sebastien Benard,Pass,Neena Sidhu,Pass,Alex Bush,Pass,Sebastien Benard,Pass,Alex Bush,Pass,Frederic Caron,Pass,Alex Bush,Pass,Frederic Caron,Pass,Alex Bush,Pass,Frederic Caron",
-    "Throw Away,Krys Kudakiewicz,Pass,Adrienne Junek,Pass,Christopher Keates,Pass,Rob Ives,Pass,Adrienne Junek,Pass,Krys Kudakiewicz",
-    "Throw Away,Sebastien Benard,Pass,Chris Tran",
-    "D,Rob Ives",
-    "Drop,Christopher Keates,Pass,Rob Ives",
-    "Throw Away,Neena Sidhu,Pass,Alex Bush",
-    "POINT,Krys Kudakiewicz,Pass,Christopher Keates,Pass,Graham Brown,Pass,Rob Ives,Pass,Adrienne Junek",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Adrienne Junek",
-    "1,Melissa Jess",
-    "Throw Away,Stanley Kent,Pass,Jamie Wildgen,Pass,Brian Kells,Pass,Laura Chambers Storey(S)",
-    "Throw Away,Brent Burton,Pass,Chris Sullivan,Pass,Greg Cormier",
-    "D,Laura Chambers Storey(S)",
-    "Drop,Derek Tokarski,Pass,Brian Kells,Pass,Stanley Kent",
-    "POINT,Lissa Greenspoon,Pass,Chris Sullivan",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Drop,Alex Bush,Pass,Frederic Caron,Pass,Alex Bush",
-    "POINT,Christopher Keates,Pass,Graham Brown,Pass,Christopher Keates,Pass,Rob Ives,Pass,Melissa Jess,Pass,Adrienne Junek,Pass,Christopher Keates,Pass,Rob Ives,Pass,Christopher Keates,Pass,Adrienne Junek,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "-1,Alex Bush",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Adrienne Junek",
-    "1,Melissa Jess",
-    "Throw Away,Brian Kells,Pass,Derek Tokarski,Pass,Stanley Kent",
-    "D,Megan Berry",
-    "POINT,Megan Berry",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Jamie Wildgen",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "POINT,Chris Tran,Pass,Neena Sidhu,Pass,Frederic Caron,Pass,Jamie Wildgen,Pass,Frederic Caron",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Jamie Wildgen",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess",
-    "Drop,Greg Cormier,Pass,Michael Blanchard,Pass,Megan Berry,Pass,Lissa Greenspoon,Pass,Chris Sullivan,Pass,Brent Burton,Pass,Megan Berry,Pass,Brent Burton",
-    "Throw Away,Stanley Kent,Pass,Alex Bush",
-    "D,Chris Sullivan",
-    "POINT,Megan Berry,Pass,Brent Burton,Pass,Lissa Greenspoon,Pass,Chris Sullivan,Pass,Brent Burton,Pass,Greg Cormier,Pass,Lissa Greenspoon,Pass,Greg Cormier",
-    "-1,Brent Burton",
-    "-1,Chris Sullivan",
-    "-1,Greg Cormier",
-    "-1,Michael Blanchard",
-    "-1,Lissa Greenspoon",
-    "-1,Megan Berry",
-    "-1,Alex Bush",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "Throw Away,Frederic Caron,Pass,Chris Tran,Pass,Frederic Caron",
-    "POINT,Melissa Jess,Pass,Graham Brown,Pass,Christopher Keates,Pass,Krys Kudakiewicz",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Jamie Wildgen",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "1,Christopher Keates",
-    "1,Graham Brown",
-    "1,Krys Kudakiewicz",
-    "1,Rob Ives",
-    "1,Adrienne Junek",
-    "1,Melissa Jess",
-    "Throw Away,Stanley Kent,Pass,Brian Kells",
-    "D,Brent Burton",
-    "Throw Away,Michael Blanchard,Pass,Brent Burton,Pass,Megan Berry,Pass,Greg Cormier,Pass,Chris Sullivan,Pass,Brent Burton",
-    "Drop,Laura Chambers Storey(S),Pass,Alex Bush",
-    "Throw Away,Megan Berry,Pass,Michael Blanchard",
-    "D,Stanley Kent",
-    "Throw Away,Laura Chambers Storey(S),Pass,Karen Kavanagh",
-    "D,Megan Berry",
-    "POINT,Greg Cormier,Pass,Michael Blanchard,Pass,Megan Berry,Pass,Greg Cormier",
-    "-1,Alex Bush",
-    "-1,Brian Kells",
-    "-1,Derek Tokarski",
-    "-1,Stanley Kent",
-    "-1,Karen Kavanagh",
-    "-1,Laura Chambers Storey(S)",
-    "1,Brent Burton",
-    "1,Chris Sullivan",
-    "1,Greg Cormier",
-    "1,Michael Blanchard",
-    "1,Lissa Greenspoon",
-    "1,Megan Berry",
-    "Throw Away,Frederic Caron,Pass,Jamie Wildgen,Pass,Frederic Caron,Pass,Jamie Wildgen,Pass,Frederic Caron",
-    "Throw Away,Rob Ives,Pass,Graham Brown,Pass,Krys Kudakiewicz,Pass,Rob Ives,Pass,Adrienne Junek,Pass,Christopher Keates,Pass,Graham Brown,Pass,Krys Kudakiewicz,Pass,Rob Ives",
-    "Throw Away,Chris Tran,Pass,Sebastien Benard",
-    "D,Krys Kudakiewicz",
-    "Drop,Melissa Jess,Pass,Krys Kudakiewicz,Pass,Christopher Keates",
-    "POINT,Neena Sidhu,Pass,Jamie Wildgen,Pass,Sebastien Benard,Pass,Jamie Wildgen,Pass,Christine Beals",
-    "-1,Chris Tran",
-    "-1,Frederic Caron",
-    "-1,Jamie Wildgen",
-    "-1,Sebastien Benard",
-    "-1,Christine Beals",
-    "-1,Neena Sidhu",
-    "-1,Christopher Keates",
-    "-1,Graham Brown",
-    "-1,Krys Kudakiewicz",
-    "-1,Rob Ives",
-    "-1,Adrienne Junek",
-    "-1,Melissa Jess"
-  ]
 }

@@ -1,589 +1,3904 @@
 {
-  "week": 1,
-  "teams": {
-    "Lowered Expectations": [
-      "Anne Leduc",
-      "CarolAnne Black",
-      "Laura Chambers Storey",
-      "Stephanie White",
-      "Benoit Goulet",
-      "Edwin Wong",
-      "Geofford seaborn",
-      "Greg Linton",
-      "Ian Ewing",
-      "Mackenzie King",
-      "Nicholas Aghajanian",
-      "Shubho Bo Biswas"
-    ],
-    "Scoobers in Tokyo": [
-      "Ashlin Kelly",
-      "Kathryn Jarrett-Ekholm",
-      "Nina Ramic",
-      "Stacey Wowchuk",
-      "Amos Lee",
-      "David Townsend",
-      "Douglas Brierley",
-      "Jonathan Champagne",
-      "Khalid Al-Zahrani",
-      "Sina Dee",
-      "Steve Chow",
-      "Tim Kealey"
+    "league": "ocua_16-17",
+    "week": 1,
+    "teams": {
+        "Eff (F)": [
+            "Hope Celani",
+            "Janet Ibit",
+            "Justine Price",
+            "Nina Ramic",
+            "Rob Ives",
+            "Simon Berry",
+            "Brent Burton",
+            "Christopher Castonguay",
+            "Martin Cloake",
+            "Mark Donahue",
+            "Richard Gregory",
+            "Ariel Untiveros"
+        ],
+        "SOS - Man Overboard (SOS)": [
+            "Andrea Proulx",
+            "Christine Beals",
+            "Samantha Lee",
+            "Angela Mueller",
+            "Nicholas Aghajanian",
+            "Jonathan Champagne",
+            "Sina Dee",
+            "Morgan Howard",
+            "Tim Kealey",
+            "Benjamin Piper",
+            "Jon Rowe",
+            "Dan Thomson"
+        ]
+    },
+    "events": {
+        "points": [
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 7, 2016 8:18:06 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:26 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:31 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:37 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:40 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:43 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:18:47 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:18:49 PM",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:18:54 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:19:00 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:19:10 PM",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:19:27 PM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:19:52 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:19:56 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:20:00 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:20:02 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:20:06 PM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:20:08 PM",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:20:23 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:20:24 PM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Samantha Lee",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:21:36 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:21:47 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:21:51 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:21:54 PM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:11 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:16 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:20 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:22:27 PM",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:46 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:49 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:57 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:22:59 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:03 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:06 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:13 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:20 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:23:25 PM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:23:28 PM",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:38 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:23:39 PM",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:23:58 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:24:01 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:24:02 PM",
+                        "firstActor": "Andrea Proulx"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Janet Ibit",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:25:19 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:25:20 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:25:37 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:25:40 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:25:46 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:25:53 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:27:36 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:27:40 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:27:42 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:27:43 PM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Samantha Lee",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:27 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:30 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:34 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:28:38 PM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:28:40 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:45 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:48 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:54 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:28:56 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:28:57 PM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:05 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:07 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:10 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:15 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:20 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:30:21 PM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:28 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:33 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:41 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:42 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:30:46 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:30:47 PM",
+                        "firstActor": "Justine Price"
+                    }
+                ],
+                "defensePlayers": [
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:39 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:40 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:33:42 PM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:45 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:47 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:52 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:33:56 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:34:03 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:34:04 PM",
+                        "firstActor": "Justine Price"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:34:55 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:34:56 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:05 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:05 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:07 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:09 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:10 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:35:16 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:35:18 PM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:18 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:20 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:27 PM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:30 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:31 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:36:37 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:36:41 PM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:37:26 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:37:28 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:37:39 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:37:40 PM",
+                        "firstActor": "Justine Price"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Hope Celani",
+                    "Justine Price"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:38:27 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:38:32 PM",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:38:35 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:38:37 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:38:38 PM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:22 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:39:23 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:35 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:39:41 PM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:49 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:50 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:51 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:39:58 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:39:59 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Janet Ibit",
+                    "Justine Price"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:40:48 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:40:53 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:41:02 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:41:06 PM",
+                        "secondActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:41:07 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:41:08 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:41:54 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:41:58 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:42:00 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:42:06 PM",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:42:32 PM",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:42:35 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:42:38 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:42:43 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:42:49 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:43:43 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:43:47 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:43:48 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:43:52 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:43:56 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:01 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 8:44:07 PM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:14 PM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:17 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:27 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:29 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:44:41 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:45 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:49 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:44:55 PM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:44:57 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:44:59 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:45:01 PM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:45:03 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:45:06 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:45:17 PM",
+                        "firstActor": "Morgan Howard"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:46:03 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:46:04 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:46:09 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:46:14 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:46:14 PM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:01 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:04 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:08 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:15 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:47:27 PM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:40 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:42 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:45 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:49 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:50 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:55 PM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:47:57 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:48:01 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:48:02 PM",
+                        "firstActor": "Hope Celani"
+                    }
+                ],
+                "defensePlayers": [
+                    "Simon Berry",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PULL",
+                        "timestamp": "Nov 7, 2016 8:52:35 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:02 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:08 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:14 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:17 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:23 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:53:27 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:53:30 PM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:53:35 PM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:01 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:05 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:08 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:12 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 8:54:24 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 8:54:26 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:38 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:41 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:44 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:47 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:52 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:56 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:54:58 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:55:03 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:55:04 PM",
+                        "firstActor": "Morgan Howard"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:56:45 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:56:50 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:56:56 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:56:59 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:02 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:06 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:10 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:19 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:23 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:24 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:57:26 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:57:27 PM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:58:33 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:58:45 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:58:47 PM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:59:27 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 8:59:31 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 8:59:33 PM",
+                        "firstActor": "Justine Price"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:29 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:00:33 PM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:00:34 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:36 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:37 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:00:42 PM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:00:44 PM",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:47 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:51 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:55 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:00:58 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:00 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:01:04 PM",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:01:07 PM",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:10 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:18 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:21 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:23 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:27 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:31 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:01:39 PM",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:56 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:01:57 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:01 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:09 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:12 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:18 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:22 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:02:24 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:02:32 PM",
+                        "firstActor": "Jon Rowe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:14 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:17 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:21 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:23 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:27 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:31 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:03:37 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:03:39 PM",
+                        "firstActor": "Mark Donahue"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:33 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:34 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:37 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:45 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:52 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:54 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:56 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:04:58 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:05:04 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:05:05 PM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Richard Gregory",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:04 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:12 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:17 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:20 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:22 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:24 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:27 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:32 PM",
+                        "secondActor": "Hope Celani",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:37 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Hope Celani"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:06:46 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:06:51 PM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:07:34 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:07:37 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:07:41 PM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:08:00 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:03 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:08 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:10 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:12 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:36 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:08:37 PM",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:53 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:08:59 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:09:06 PM",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:09:09 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:32 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:34 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:35 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:37 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:45 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:09:49 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:09:50 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Simon Berry",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:10:52 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:10:54 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:10:58 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:10:59 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:11:02 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:11:03 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:11:06 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:11:10 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:11:11 PM",
+                        "firstActor": "Rob Ives"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:12:06 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:12:08 PM",
+                        "secondActor": "Morgan Howard",
+                        "firstActor": "Jon Rowe"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:12:14 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:12:15 PM",
+                        "firstActor": "Samantha Lee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:05 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:08 PM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:11 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:18 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:13:22 PM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:13:25 PM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:28 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:34 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:36 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:13:42 PM",
+                        "secondActor": "Jon Rowe",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:13:42 PM",
+                        "firstActor": "Jon Rowe"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:14:42 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:14:44 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:14:58 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:15:02 PM",
+                        "firstActor": "Morgan Howard"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Simon Berry",
+                    "Mark Donahue",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:15:44 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:15:50 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:15:56 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:15:59 PM",
+                        "secondActor": "Rob Ives",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 9:16:00 PM",
+                        "firstActor": "Rob Ives"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:16:05 PM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:16:11 PM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:16:14 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:16:18 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:16:19 PM",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:16:50 PM",
+                        "firstActor": "Morgan Howard"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:16:51 PM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:16:55 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 9:16:56 PM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:17:03 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:17:05 PM",
+                        "firstActor": "Dan Thomson"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:18:01 PM",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:18:19 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:18:27 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:18:29 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:18:35 PM",
+                        "secondActor": "Samantha Lee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:18:39 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Samantha Lee"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:18:47 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:21:09 PM",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:21:11 PM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:21:15 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:21:22 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:21:23 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:17 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:19 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:21 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:23 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:27 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:32 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:37 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Simon Berry"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:39 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:44 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:47 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:22:52 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:23:21 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:23:24 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:23:29 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:23:35 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:23:40 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:23:48 PM",
+                        "firstActor": "Simon Berry"
+                    }
+                ],
+                "defensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:24:37 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:24:42 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:24:43 PM",
+                        "firstActor": "Sina Dee"
+                    }
+                ],
+                "defensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Brent Burton",
+                    "Ariel Untiveros",
+                    "Janet Ibit",
+                    "Justine Price",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:25:51 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 9:25:52 PM",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:25:57 PM",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:04 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:08 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:13 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:14 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:20 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:22 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:28 PM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:33 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:26:38 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:26:42 PM",
+                        "firstActor": "Ariel Untiveros"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Samantha Lee",
+                    "Angela Mueller"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Morgan Howard",
+                    "Jon Rowe",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Frederic Caron(S)",
+                    "Christine Beals"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:27:31 PM",
+                        "secondActor": "Dan Thomson",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:27:34 PM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Dan Thomson"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:27:37 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:27:49 PM",
+                        "secondActor": "Andrea Proulx",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:27:50 PM",
+                        "firstActor": "Andrea Proulx"
+                    }
+                ],
+                "defensePlayers": [
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Justine Price"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Rob Ives",
+                    "Mark Donahue",
+                    "Ariel Untiveros",
+                    "Hope Celani",
+                    "Janet Ibit",
+                    "Chris Sullivan(S)"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:28:36 PM",
+                        "secondActor": "Ariel Untiveros",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:28:40 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:28:44 PM",
+                        "secondActor": "Janet Ibit",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:29:52 PM",
+                        "firstActor": "Janet Ibit"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:01 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:08 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:12 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:14 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:19 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Nicholas Aghajanian"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:21 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 9:30:23 PM",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:32 PM",
+                        "secondActor": "Chris Sullivan(S)",
+                        "firstActor": "Ariel Untiveros"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:30:37 PM",
+                        "firstActor": "Chris Sullivan(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:47 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:53 PM",
+                        "secondActor": "Sina Dee",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:55 PM",
+                        "secondActor": "Angela Mueller",
+                        "firstActor": "Sina Dee"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:30:59 PM",
+                        "secondActor": "Frederic Caron(S)",
+                        "firstActor": "Angela Mueller"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:31:02 PM",
+                        "secondActor": "Nicholas Aghajanian",
+                        "firstActor": "Frederic Caron(S)"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:31:02 PM",
+                        "firstActor": "Nicholas Aghajanian"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Jon Rowe",
+                    "Samantha Lee",
+                    "Angela Mueller",
+                    "Frederic Caron(S)"
+                ]
+            },
+            {
+                "offensePlayers": [
+                    "Simon Berry",
+                    "Brent Burton",
+                    "Mark Donahue",
+                    "Richard Gregory",
+                    "Hope Celani",
+                    "Justine Price"
+                ],
+                "events": [
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:32:56 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:32:58 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:00 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:03 PM",
+                        "secondActor": "Richard Gregory",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:05 PM",
+                        "secondActor": "Mark Donahue",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "THROWAWAY",
+                        "timestamp": "Nov 7, 2016 9:33:12 PM",
+                        "firstActor": "Mark Donahue"
+                    },
+                    {
+                        "type": "DEFENSE",
+                        "timestamp": "Nov 7, 2016 9:33:21 PM",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:24 PM",
+                        "secondActor": "Christine Beals",
+                        "firstActor": "Andrea Proulx"
+                    },
+                    {
+                        "type": "DROP",
+                        "timestamp": "Nov 7, 2016 9:33:27 PM",
+                        "firstActor": "Christine Beals"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:44 PM",
+                        "secondActor": "Brent Burton",
+                        "firstActor": "Richard Gregory"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:46 PM",
+                        "secondActor": "Justine Price",
+                        "firstActor": "Brent Burton"
+                    },
+                    {
+                        "type": "PASS",
+                        "timestamp": "Nov 7, 2016 9:33:49 PM",
+                        "secondActor": "Simon Berry",
+                        "firstActor": "Justine Price"
+                    },
+                    {
+                        "type": "POINT",
+                        "timestamp": "Nov 7, 2016 9:33:50 PM",
+                        "firstActor": "Simon Berry"
+                    }
+                ],
+                "defensePlayers": [
+                    "Nicholas Aghajanian",
+                    "Sina Dee",
+                    "Morgan Howard",
+                    "Dan Thomson",
+                    "Andrea Proulx",
+                    "Christine Beals"
+                ]
+            }
+        ]
+    },
+    "event_string": [
+        "",
+        "Pull,Morgan Howard,",
+        "Direction,<<<<<<,",
+        "Throw Away,Brent Burton,Pass,Justine Price,Pass,Richard Gregory,Pass,Justine Price,Pass,Ariel Untiveros,Pass,Brent Burton,",
+        "Direction,>>>>>>,",
+        "D,Frederic Caron(S),",
+        "Throw Away,Frederic Caron(S),Pass,Angela Mueller,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Angela Mueller,Pass,Andrea Proulx,Pass,Frederic Caron(S),Pass,Dan Thomson,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "D,Hope Celani,",
+        "POINT,Ariel Untiveros,Pass,Richard Gregory,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "-1,Frederic Caron(S),",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Andrea Proulx,Pass,Sina Dee,Pass,Jon Rowe,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Simon Berry,Pass,Chris Sullivan(S),Pass,Rob Ives,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "Throw Away,Andrea Proulx,Pass,Sina Dee,Pass,Frederic Caron(S),Pass,Samantha Lee,Pass,Frederic Caron(S),Pass,Samantha Lee,Pass,Andrea Proulx,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "D,Simon Berry,",
+        "Drop,Simon Berry,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "POINT,Andrea Proulx,Pass,Samantha Lee,Pass,Frederic Caron(S),",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Samantha Lee,",
+        "+1,Frederic Caron(S),",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "Drop,Brent Burton,Pass,Mark Donahue,",
+        "Direction,>>>>>>,",
+        "POINT,Nicholas Aghajanian,Pass,Morgan Howard,Pass,Sina Dee,Pass,Morgan Howard,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "Direction,<<<<<<,",
+        "POINT,Mark Donahue,Pass,Justine Price,Pass,Simon Berry,Pass,Justine Price,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Angela Mueller,",
+        "-1,Frederic Caron(S),",
+        "+1,Simon Berry,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jon Rowe,Pass,Nicholas Aghajanian,Pass,Andrea Proulx,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "D,Brent Burton,",
+        "POINT,Rob Ives,Pass,Hope Celani,Pass,Chris Sullivan(S),Pass,Richard Gregory,Pass,Brent Burton,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Samantha Lee,",
+        "-1,Frederic Caron(S),",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Angela Mueller,Pass,Samantha Lee,Pass,Dan Thomson,Pass,Sina Dee,Pass,Angela Mueller,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "POINT,Justine Price,Pass,Ariel Untiveros,Pass,Simon Berry,Pass,Ariel Untiveros,Pass,Justine Price,Pass,Janet Ibit,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Samantha Lee,",
+        "-1,Angela Mueller,",
+        "+1,Simon Berry,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Janet Ibit,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Jon Rowe,Pass,Morgan Howard,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "POINT,Justine Price,Pass,Brent Burton,Pass,Rob Ives,Pass,Chris Sullivan(S),Pass,Justine Price,Pass,Richard Gregory,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Sina Dee,Pass,Frederic Caron(S),Pass,Samantha Lee,Pass,Frederic Caron(S),Pass,Angela Mueller,Pass,Samantha Lee,Pass,Sina Dee,Pass,Samantha Lee,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Simon Berry,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros,Pass,Richard Gregory,Pass,Justine Price,Pass,Janet Ibit,Pass,Rob Ives,Pass,Ariel Untiveros,Pass,Richard Gregory,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Christine Beals,",
+        "+1,Rob Ives,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Janet Ibit,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Morgan Howard,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "POINT,Justine Price,Pass,Brent Burton,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Samantha Lee,",
+        "-1,Angela Mueller,",
+        "-1,Frederic Caron(S),",
+        "+1,Rob Ives,",
+        "+1,Simon Berry,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Frederic Caron(S),Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "D,Chris Sullivan(S),",
+        "POINT,Mark Donahue,Pass,Chris Sullivan(S),",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Morgan Howard,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Richard Gregory,Pass,Rob Ives,",
+        "Direction,>>>>>>,",
+        "POINT,Nicholas Aghajanian,Pass,Dan Thomson,Pass,Angela Mueller,Pass,Samantha Lee,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Brent Burton,",
+        "-1,Richard Gregory,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "Direction,<<<<<<,",
+        "POINT,Chris Sullivan(S),Pass,Hope Celani,Pass,Justine Price,Pass,Mark Donahue,Pass,Chris Sullivan(S),",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Simon Berry,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Frederic Caron(S),Pass,Samantha Lee,Pass,Angela Mueller,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "POINT,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,Pass,Frederic Caron(S),",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "Drop,Justine Price,Pass,Simon Berry,Pass,Richard Gregory,Pass,Mark Donahue,Pass,Simon Berry,Pass,Chris Sullivan(S),Pass,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "Throw Away,Morgan Howard,Pass,Dan Thomson,Pass,Sina Dee,Pass,Christine Beals,Pass,Andrea Proulx,",
+        "Direction,<<<<<<,",
+        "Throw Away,Mark Donahue,Pass,Richard Gregory,Pass,Justine Price,",
+        "Direction,>>>>>>,",
+        "D,Morgan Howard,",
+        "POINT,Morgan Howard,Pass,Nicholas Aghajanian,Pass,Christine Beals,Pass,Sina Dee,Pass,Morgan Howard,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Christine Beals,",
+        "-1,Simon Berry,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Ariel Untiveros,Pass,Brent Burton,Pass,Ariel Untiveros,Pass,Justine Price,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Samantha Lee,",
+        "-1,Angela Mueller,",
+        "-1,Frederic Caron(S),",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sina Dee,Pass,Frederic Caron(S),Pass,Nicholas Aghajanian,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "POINT,Hope Celani,Pass,Chris Sullivan(S),Pass,Janet Ibit,Pass,Richard Gregory,Pass,Ariel Untiveros,Pass,Simon Berry,Pass,Chris Sullivan(S),Pass,Richard Gregory,Pass,Ariel Untiveros,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Simon Berry,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Time,Half,",
+        "Pull,Brent Burton,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sina Dee,Pass,Angela Mueller,Pass,Sina Dee,Pass,Morgan Howard,Pass,Angela Mueller,Pass,Morgan Howard,Pass,Dan Thomson,",
+        "Direction,<<<<<<,",
+        "D,Ariel Untiveros,",
+        "Throw Away,Brent Burton,Pass,Mark Donahue,Pass,Ariel Untiveros,Pass,Justine Price,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "D,Nicholas Aghajanian,",
+        "POINT,Morgan Howard,Pass,Sina Dee,Pass,Samantha Lee,Pass,Nicholas Aghajanian,Pass,Dan Thomson,Pass,Samantha Lee,Pass,Dan Thomson,Pass,Angela Mueller,Pass,Morgan Howard,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "-1,Rob Ives,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "Direction,<<<<<<,",
+        "POINT,Mark Donahue,Pass,Simon Berry,Pass,Justine Price,Pass,Chris Sullivan(S),Pass,Richard Gregory,Pass,Justine Price,Pass,Hope Celani,Pass,Chris Sullivan(S),Pass,Mark Donahue,Pass,Richard Gregory,Pass,Chris Sullivan(S),Pass,Richard Gregory,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Simon Berry,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Sina Dee,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Brent Burton,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "POINT,Justine Price,Pass,Brent Burton,Pass,Richard Gregory,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Christine Beals,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Janet Ibit,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Angela Mueller,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "D,Chris Sullivan(S),",
+        "Throw Away,Justine Price,Pass,Simon Berry,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "D,Frederic Caron(S),",
+        "Throw Away,Dan Thomson,Pass,Samantha Lee,Pass,Jon Rowe,Pass,Frederic Caron(S),Pass,Dan Thomson,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "D,Simon Berry,",
+        "Throw Away,Hope Celani,Pass,Simon Berry,Pass,Rob Ives,Pass,Chris Sullivan(S),Pass,Hope Celani,Pass,Ariel Untiveros,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Jon Rowe,Pass,Angela Mueller,Pass,Dan Thomson,Pass,Frederic Caron(S),Pass,Dan Thomson,Pass,Morgan Howard,Pass,Frederic Caron(S),Pass,Dan Thomson,Pass,Frederic Caron(S),",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Mark Donahue,Pass,Richard Gregory,Pass,Brent Burton,Pass,Richard Gregory,Pass,Mark Donahue,Pass,Brent Burton,Pass,Mark Donahue,Pass,Janet Ibit,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Jon Rowe,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "POINT,Sina Dee,Pass,Morgan Howard,Pass,Sina Dee,Pass,Dan Thomson,Pass,Samantha Lee,Pass,Nicholas Aghajanian,Pass,Morgan Howard,Pass,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Richard Gregory,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Ariel Untiveros,Pass,Hope Celani,Pass,Justine Price,Pass,Brent Burton,Pass,Justine Price,Pass,Rob Ives,Pass,Mark Donahue,Pass,Justine Price,Pass,Ariel Untiveros,Pass,Rob Ives,",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Frederic Caron(S),",
+        "-1,Christine Beals,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "Throw Away,Sina Dee,Pass,Angela Mueller,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Jon Rowe,Pass,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,Pass,Samantha Lee,Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Ariel Untiveros,Pass,Richard Gregory,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "D,Nicholas Aghajanian,",
+        "POINT,Nicholas Aghajanian,Pass,Sina Dee,Pass,Frederic Caron(S),Pass,Sina Dee,Pass,Jon Rowe,Pass,Samantha Lee,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Simon Berry,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Rob Ives,Pass,Brent Burton,Pass,Mark Donahue,Pass,Justine Price,Pass,Rob Ives,Pass,Justine Price,Pass,Brent Burton,Pass,Mark Donahue,Pass,Janet Ibit,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Christine Beals,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Ariel Untiveros,",
+        "+1,Janet Ibit,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,",
+        "POINT,Samantha Lee,Pass,Morgan Howard,Pass,Jon Rowe,Pass,Angela Mueller,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Brent Burton,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Mark Donahue,Pass,Chris Sullivan(S),Pass,Janet Ibit,Pass,Rob Ives,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "D,Andrea Proulx,",
+        "POINT,Jon Rowe,Pass,Frederic Caron(S),Pass,Andrea Proulx,Pass,Sina Dee,Pass,Andrea Proulx,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Frederic Caron(S),",
+        "+1,Christine Beals,",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Mark Donahue,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Brent Burton,Pass,Richard Gregory,Pass,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "POINT,Morgan Howard,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "Direction,<<<<<<,",
+        "Drop,Rob Ives,Pass,Chris Sullivan(S),Pass,Justine Price,Pass,Rob Ives,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Christine Beals,Pass,Frederic Caron(S),",
+        "Direction,<<<<<<,",
+        "D,Chris Sullivan(S),",
+        "Throw Away,Simon Berry,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Throw Away,Morgan Howard,",
+        "Direction,<<<<<<,",
+        "D,Justine Price,",
+        "Drop,Mark Donahue,Pass,Justine Price,",
+        "Direction,>>>>>>,",
+        "POINT,Dan Thomson,Pass,Frederic Caron(S),",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Frederic Caron(S),",
+        "+1,Christine Beals,",
+        "-1,Rob Ives,",
+        "-1,Simon Berry,",
+        "-1,Mark Donahue,",
+        "-1,Hope Celani,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Brent Burton,",
+        "Direction,>>>>>>,",
+        "POINT,Nicholas Aghajanian,Pass,Samantha Lee,Pass,Angela Mueller,Pass,Frederic Caron(S),Pass,Nicholas Aghajanian,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Simon Berry,",
+        "-1,Brent Burton,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "Throw Away,Janet Ibit,",
+        "Direction,>>>>>>,",
+        "D,Sina Dee,",
+        "POINT,Nicholas Aghajanian,Pass,Andrea Proulx,Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Morgan Howard,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Christine Beals,",
+        "-1,Rob Ives,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Janet Ibit,",
+        "-1,Justine Price,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "POINT,Simon Berry,Pass,Brent Burton,Pass,Chris Sullivan(S),Pass,Richard Gregory,Pass,Brent Burton,Pass,Chris Sullivan(S),Pass,Justine Price,Pass,Brent Burton,Pass,Richard Gregory,Pass,Brent Burton,Pass,Simon Berry,Pass,Chris Sullivan(S),Pass,Richard Gregory,Pass,Brent Burton,Pass,Simon Berry,Pass,Justine Price,Pass,Chris Sullivan(S),",
+        "-1,Morgan Howard,",
+        "-1,Jon Rowe,",
+        "-1,Dan Thomson,",
+        "-1,Samantha Lee,",
+        "-1,Angela Mueller,",
+        "-1,Frederic Caron(S),",
+        "+1,Simon Berry,",
+        "+1,Brent Burton,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Sina Dee,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Andrea Proulx,",
+        "+1,Frederic Caron(S),",
+        "+1,Christine Beals,",
+        "-1,Rob Ives,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "Direction,<<<<<<,",
+        "Drop,Justine Price,Pass,Brent Burton,",
+        "Direction,>>>>>>,",
+        "Throw Away,Angela Mueller,",
+        "Direction,<<<<<<,",
+        "POINT,Ariel Untiveros,Pass,Chris Sullivan(S),Pass,Janet Ibit,Pass,Ariel Untiveros,Pass,Justine Price,Pass,Chris Sullivan(S),Pass,Justine Price,Pass,Ariel Untiveros,Pass,Chris Sullivan(S),Pass,Janet Ibit,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Samantha Lee,",
+        "-1,Angela Mueller,",
+        "+1,Rob Ives,",
+        "+1,Brent Burton,",
+        "+1,Ariel Untiveros,",
+        "+1,Janet Ibit,",
+        "+1,Justine Price,",
+        "+1,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "POINT,Andrea Proulx,Pass,Frederic Caron(S),Pass,Christine Beals,Pass,Dan Thomson,Pass,Andrea Proulx,",
+        "+1,Morgan Howard,",
+        "+1,Jon Rowe,",
+        "+1,Dan Thomson,",
+        "+1,Andrea Proulx,",
+        "+1,Frederic Caron(S),",
+        "+1,Christine Beals,",
+        "-1,Simon Berry,",
+        "-1,Brent Burton,",
+        "-1,Mark Donahue,",
+        "-1,Richard Gregory,",
+        "-1,Hope Celani,",
+        "-1,Justine Price,",
+        "Direction,<<<<<<,",
+        "Throw Away,Janet Ibit,Pass,Mark Donahue,Pass,Ariel Untiveros,Pass,Chris Sullivan(S),",
+        "Direction,>>>>>>,",
+        "Drop,Sina Dee,Pass,Angela Mueller,Pass,Nicholas Aghajanian,Pass,Angela Mueller,Pass,Sina Dee,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "Direction,<<<<<<,",
+        "Throw Away,Chris Sullivan(S),Pass,Ariel Untiveros,",
+        "Direction,>>>>>>,",
+        "POINT,Nicholas Aghajanian,Pass,Frederic Caron(S),Pass,Angela Mueller,Pass,Sina Dee,Pass,Frederic Caron(S),Pass,Sina Dee,",
+        "+1,Nicholas Aghajanian,",
+        "+1,Sina Dee,",
+        "+1,Jon Rowe,",
+        "+1,Samantha Lee,",
+        "+1,Angela Mueller,",
+        "+1,Frederic Caron(S),",
+        "-1,Rob Ives,",
+        "-1,Mark Donahue,",
+        "-1,Ariel Untiveros,",
+        "-1,Hope Celani,",
+        "-1,Janet Ibit,",
+        "-1,Chris Sullivan(S),",
+        "Direction,<<<<<<,",
+        "Throw Away,Mark Donahue,Pass,Richard Gregory,Pass,Mark Donahue,Pass,Brent Burton,Pass,Justine Price,Pass,Richard Gregory,",
+        "Direction,>>>>>>,",
+        "D,Andrea Proulx,",
+        "Drop,Christine Beals,Pass,Andrea Proulx,",
+        "Direction,<<<<<<,",
+        "POINT,Simon Berry,Pass,Justine Price,Pass,Brent Burton,Pass,Richard Gregory,",
+        "-1,Nicholas Aghajanian,",
+        "-1,Sina Dee,",
+        "-1,Morgan Howard,",
+        "-1,Dan Thomson,",
+        "-1,Andrea Proulx,",
+        "-1,Christine Beals,",
+        "+1,Simon Berry,",
+        "+1,Brent Burton,",
+        "+1,Mark Donahue,",
+        "+1,Richard Gregory,",
+        "+1,Hope Celani,",
+        "+1,Justine Price,",
+        "Direction,>>>>>>,"
     ]
-  },
-  "event_string": [
-    "Pull,Douglas Brierley",
-    "Drop,Benoit Goulet,Pass,Laura Chambers Storey,Pass,Ian Ewing,Pass,Mackenzie King",
-    "Drop,Ashlin Kelly,Pass,Tim Kealey,Pass,Amos Lee,Pass,Ashlin Kelly,Pass,Amos Lee",
-    "POINT,Stephanie White,Pass,Mackenzie King,Pass,Benoit Goulet,Pass,Laura Chambers Storey",
-    "-1,Benoit Goulet",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Sina Dee,Pass,Nina Ramic,Pass,Sina Dee",
-    "D,Nicholas Aghajanian",
-    "Throw Away,Anne Leduc,Pass,Edwin Wong,Pass,Geofford seaborn,Pass,Nicholas Aghajanian,Pass,Geofford seaborn",
-    "D,Sina Dee",
-    "Drop,Nina Ramic,Pass,Steve Chow,Pass,Sina Dee",
-    "Throw Away,CarolAnne Black",
-    "D,Steve Chow",
-    "POINT,Steve Chow,Pass,Douglas Brierley",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Shubho Bo Biswas",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Drop,Ian Ewing,Pass,Greg Linton,Pass,Benoit Goulet,Pass,Laura Chambers Storey,Pass,Ian Ewing",
-    "Throw Away,Ashlin Kelly,Pass,Stacey Wowchuk,Pass,Sina Dee,Pass,Tim Kealey,Pass,Stacey Wowchuk,Pass,Amos Lee,Pass,Sina Dee",
-    "D,Ian Ewing",
-    "POINT,Mackenzie King,Pass,Ian Ewing,Pass,Benoit Goulet,Pass,Ian Ewing",
-    "-1,Benoit Goulet",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Amos Lee",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Steve Chow,Pass,Khalid Al-Zahrani,Pass,Nina Ramic,Pass,Steve Chow,Pass,Khalid Al-Zahrani,Pass,Kathryn Jarrett-Ekholm,Pass,Douglas Brierley,Pass,Steve Chow,Pass,Nina Ramic,Pass,Steve Chow",
-    "D,Geofford seaborn",
-    "Throw Away,Anne Leduc,Pass,CarolAnne Black,Pass,Geofford seaborn,Pass,Shubho Bo Biswas",
-    "D,Douglas Brierley",
-    "POINT,Khalid Al-Zahrani,Pass,Douglas Brierley",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Khalid Al-Zahrani",
-    "-1,Steve Chow",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Shubho Bo Biswas",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Mackenzie King",
-    "D,Sina Dee",
-    "Drop,Amos Lee,Pass,Sina Dee",
-    "Drop,Laura Chambers Storey,Pass,Ian Ewing,Pass,Mackenzie King",
-    "POINT,Amos Lee,Pass,Ashlin Kelly,Pass,Tim Kealey,Pass,Ashlin Kelly,Pass,Sina Dee",
-    "-1,Benoit Goulet",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Amos Lee",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Stacey Wowchuk",
-    "Drop,Nicholas Aghajanian,Pass,Geofford seaborn,Pass,CarolAnne Black",
-    "POINT,Khalid Al-Zahrani,Pass,Douglas Brierley,Pass,Khalid Al-Zahrani",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Shubho Bo Biswas",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Khalid Al-Zahrani",
-    "1,Steve Chow",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "POINT,Stephanie White,Pass,Mackenzie King,Pass,Ian Ewing,Pass,Greg Linton,Pass,Stephanie White,Pass,Greg Linton,Pass,Ian Ewing",
-    "-1,Benoit Goulet",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "POINT,Nina Ramic,Pass,Steve Chow,Pass,Amos Lee,Pass,Steve Chow,Pass,Nina Ramic,Pass,Steve Chow,Pass,Amos Lee,Pass,Steve Chow,Pass,Amos Lee",
-    "-1,Amos Lee",
-    "-1,Khalid Al-Zahrani",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Shubho Bo Biswas",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Ian Ewing,Pass,Laura Chambers Storey",
-    "POINT,Ashlin Kelly,Pass,Sina Dee,Pass,Khalid Al-Zahrani,Pass,Ashlin Kelly,Pass,Douglas Brierley,Pass,Sina Dee",
-    "-1,Benoit Goulet",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Douglas Brierley",
-    "1,Jonathan Champagne",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Ashlin Kelly",
-    "1,Stacey Wowchuk",
-    "Throw Away,CarolAnne Black,Pass,Benoit Goulet",
-    "D,Steve Chow",
-    "POINT,Amos Lee,Pass,Tim Kealey,Pass,Kathryn Jarrett-Ekholm,Pass,Tim Kealey,Pass,Douglas Brierley",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Steve Chow",
-    "1,Tim Kealey",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Throw Away,Stephanie White,Pass,Ian Ewing,Pass,Mackenzie King",
-    "D,Stacey Wowchuk",
-    "POINT,Stacey Wowchuk,Pass,Douglas Brierley",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Douglas Brierley",
-    "1,Jonathan Champagne",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Ashlin Kelly",
-    "1,Stacey Wowchuk",
-    "Throw Away,Geofford seaborn,Pass,Benoit Goulet",
-    "D,Amos Lee",
-    "Throw Away,Jonathan Champagne,Pass,Nina Ramic,Pass,Steve Chow,Pass,Kathryn Jarrett-Ekholm,Pass,Amos Lee,Pass,Nina Ramic,Pass,Amos Lee",
-    "Drop,Geofford seaborn,Pass,CarolAnne Black,Pass,Geofford seaborn,Pass,Edwin Wong,Pass,Benoit Goulet",
-    "Throw Away,Jonathan Champagne,Pass,Tim Kealey,Pass,Steve Chow",
-    "POINT,Nicholas Aghajanian,Pass,Benoit Goulet",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "-1,Amos Lee",
-    "-1,Jonathan Champagne",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "Throw Away,Stacey Wowchuk,Pass,Khalid Al-Zahrani,Pass,Douglas Brierley,Pass,Sina Dee,Pass,Ashlin Kelly,Pass,Stacey Wowchuk,Pass,Douglas Brierley,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Sina Dee",
-    "POINT,Stephanie White,Pass,Shubho Bo Biswas,Pass,Ian Ewing,Pass,Laura Chambers Storey,Pass,Mackenzie King,Pass,Shubho Bo Biswas",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "1,Greg Linton",
-    "1,Ian Ewing",
-    "1,Mackenzie King",
-    "1,Shubho Bo Biswas",
-    "1,Laura Chambers Storey",
-    "1,Stephanie White",
-    "Drop,Tim Kealey,Pass,Nina Ramic,Pass,Tim Kealey",
-    "POINT,Anne Leduc,Pass,Benoit Goulet",
-    "-1,Amos Lee",
-    "-1,Jonathan Champagne",
-    "-1,Khalid Al-Zahrani",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "1,Benoit Goulet",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Nicholas Aghajanian",
-    "1,Anne Leduc",
-    "1,CarolAnne Black",
-    "POINT,Sina Dee,Pass,Steve Chow,Pass,Amos Lee,Pass,Ashlin Kelly,Pass,Steve Chow",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "Throw Away,Benoit Goulet,Pass,Anne Leduc,Pass,Benoit Goulet,Pass,Geofford seaborn,Pass,CarolAnne Black",
-    "D,Jonathan Champagne",
-    "POINT,Nina Ramic,Pass,Tim Kealey,Pass,Jonathan Champagne,Pass,Khalid Al-Zahrani,Pass,Sina Dee,Pass,Jonathan Champagne",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Jonathan Champagne",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Kathryn Jarrett-Ekholm",
-    "1,Nina Ramic",
-    "Drop,Shubho Bo Biswas,Pass,Stephanie White,Pass,Ian Ewing,Pass,Mackenzie King,Pass,Shubho Bo Biswas",
-    "Drop,Khalid Al-Zahrani,Pass,Ashlin Kelly,Pass,Steve Chow,Pass,Amos Lee,Pass,Douglas Brierley",
-    "POINT,Ian Ewing,Pass,Greg Linton,Pass,Laura Chambers Storey,Pass,Mackenzie King,Pass,Shubho Bo Biswas",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Steve Chow",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Sina Dee,Pass,Nina Ramic,Pass,Sina Dee,Pass,Amos Lee,Pass,Sina Dee,Pass,Amos Lee,Pass,Tim Kealey",
-    "POINT,Geofford seaborn,Pass,Nicholas Aghajanian,Pass,Benoit Goulet",
-    "-1,Amos Lee",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "1,Benoit Goulet",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Nicholas Aghajanian",
-    "1,Anne Leduc",
-    "1,CarolAnne Black",
-    "Drop,Tim Kealey,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Douglas Brierley",
-    "POINT,Shubho Bo Biswas,Pass,Ian Ewing",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "1,Greg Linton",
-    "1,Ian Ewing",
-    "1,Mackenzie King",
-    "1,Shubho Bo Biswas",
-    "1,Laura Chambers Storey",
-    "1,Stephanie White",
-    "POINT,Steve Chow,Pass,Sina Dee,Pass,Steve Chow,Pass,Nina Ramic,Pass,Sina Dee,Pass,Kathryn Jarrett-Ekholm,Pass,Steve Chow,Pass,Amos Lee,Pass,Steve Chow,Pass,Sina Dee,Pass,Nina Ramic,Pass,Sina Dee",
-    "-1,Amos Lee",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Shubho Bo Biswas,Pass,Mackenzie King",
-    "POINT,Ashlin Kelly,Pass,Amos Lee",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Khalid Al-Zahrani",
-    "1,Tim Kealey",
-    "1,Ashlin Kelly",
-    "1,Stacey Wowchuk",
-    "POINT,CarolAnne Black,Pass,Edwin Wong,Pass,Geofford seaborn,Pass,CarolAnne Black",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Nina Ramic",
-    "POINT,Khalid Al-Zahrani,Pass,Stacey Wowchuk,Pass,Amos Lee,Pass,Jonathan Champagne,Pass,Ashlin Kelly,Pass,Khalid Al-Zahrani,Pass,Douglas Brierley",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Khalid Al-Zahrani",
-    "-1,Ashlin Kelly",
-    "-1,Stacey Wowchuk",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "Time,Half",
-    "Pull,Geofford seaborn",
-    "POINT,Sina Dee,Pass,Ashlin Kelly,Pass,Tim Kealey,Pass,Sina Dee",
-    "-1,Douglas Brierley",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Laura Chambers Storey,Pass,Mackenzie King",
-    "Throw Away,Stacey Wowchuk,Pass,Jonathan Champagne,Pass,Nina Ramic,Pass,Amos Lee,Pass,Douglas Brierley",
-    "POINT,Laura Chambers Storey,Pass,Greg Linton,Pass,Ian Ewing,Pass,Mackenzie King,Pass,Shubho Bo Biswas",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Khalid Al-Zahrani",
-    "-1,Nina Ramic",
-    "-1,Stacey Wowchuk",
-    "POINT,Khalid Al-Zahrani,Pass,Sina Dee,Pass,Tim Kealey",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "POINT,Stephanie White,Pass,Ian Ewing,Pass,Mackenzie King,Pass,Greg Linton,Pass,Ian Ewing",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Jonathan Champagne",
-    "-1,Tim Kealey",
-    "-1,Nina Ramic",
-    "-1,Stacey Wowchuk",
-    "Drop,Douglas Brierley,Pass,Khalid Al-Zahrani,Pass,Sina Dee,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Douglas Brierley",
-    "Throw Away,CarolAnne Black,Pass,Anne Leduc,Pass,Geofford seaborn,Pass,Anne Leduc,Pass,CarolAnne Black,Pass,Geofford seaborn,Pass,Nicholas Aghajanian,Pass,Benoit Goulet,Pass,Geofford seaborn",
-    "D,Khalid Al-Zahrani",
-    "Throw Away,Khalid Al-Zahrani,Pass,Kathryn Jarrett-Ekholm,Pass,Steve Chow,Pass,Douglas Brierley,Pass,Sina Dee",
-    "D,CarolAnne Black",
-    "Throw Away,Anne Leduc,Pass,Benoit Goulet,Pass,CarolAnne Black",
-    "POINT,Steve Chow,Pass,Douglas Brierley,Pass,Khalid Al-Zahrani,Pass,Steve Chow,Pass,Sina Dee",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "Throw Away,Mackenzie King,Pass,Shubho Bo Biswas,Pass,Mackenzie King",
-    "D,Amos Lee",
-    "POINT,Tim Kealey,Pass,Stacey Wowchuk,Pass,Amos Lee",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Amos Lee",
-    "1,Jonathan Champagne",
-    "1,Sina Dee",
-    "1,Tim Kealey",
-    "1,Nina Ramic",
-    "1,Stacey Wowchuk",
-    "Throw Away,Nicholas Aghajanian,Pass,Geofford seaborn",
-    "D,Amos Lee",
-    "Drop,Khalid Al-Zahrani,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Amos Lee",
-    "POINT,CarolAnne Black,Pass,Geofford seaborn",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "-1,Amos Lee",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Steve Chow",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "POINT,Tim Kealey,Pass,Steve Chow,Pass,Sina Dee,Pass,Nina Ramic,Pass,Tim Kealey,Pass,Jonathan Champagne,Pass,Stacey Wowchuk",
-    "-1,Jonathan Champagne",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Nina Ramic",
-    "-1,Stacey Wowchuk",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "Throw Away,Geofford seaborn,Pass,Benoit Goulet",
-    "POINT,Amos Lee,Pass,Douglas Brierley",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Jonathan Champagne",
-    "1,Khalid Al-Zahrani",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "Drop,Stephanie White,Pass,Ian Ewing,Pass,Laura Chambers Storey,Pass,Shubho Bo Biswas,Pass,Stephanie White,Pass,Greg Linton,Pass,Shubho Bo Biswas,Pass,Laura Chambers Storey,Pass,Ian Ewing",
-    "POINT,Nina Ramic,Pass,Khalid Al-Zahrani,Pass,Steve Chow,Pass,Stacey Wowchuk",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "1,Khalid Al-Zahrani",
-    "1,Sina Dee",
-    "1,Steve Chow",
-    "1,Tim Kealey",
-    "1,Nina Ramic",
-    "1,Stacey Wowchuk",
-    "Throw Away,CarolAnne Black,Pass,Edwin Wong,Pass,Geofford seaborn,Pass,Benoit Goulet",
-    "D,Amos Lee",
-    "POINT,Kathryn Jarrett-Ekholm,Pass,Douglas Brierley,Pass,Amos Lee,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Amos Lee",
-    "-1,Benoit Goulet",
-    "-1,Edwin Wong",
-    "-1,Geofford seaborn",
-    "-1,Nicholas Aghajanian",
-    "-1,Anne Leduc",
-    "-1,CarolAnne Black",
-    "1,Amos Lee",
-    "1,Douglas Brierley",
-    "1,Jonathan Champagne",
-    "1,Steve Chow",
-    "1,Ashlin Kelly",
-    "1,Kathryn Jarrett-Ekholm",
-    "POINT,Greg Linton,Pass,Ian Ewing,Pass,Laura Chambers Storey,Pass,Greg Linton,Pass,Ian Ewing,Pass,Laura Chambers Storey",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Tim Kealey",
-    "-1,Nina Ramic",
-    "-1,Stacey Wowchuk",
-    "Throw Away,Tim Kealey",
-    "Throw Away,Benoit Goulet,Pass,Geofford seaborn,Pass,Nicholas Aghajanian,Pass,Geofford seaborn,Pass,Edwin Wong,Pass,Anne Leduc,Pass,Benoit Goulet,Pass,Geofford seaborn,Pass,CarolAnne Black",
-    "D,Jonathan Champagne",
-    "Throw Away,Tim Kealey",
-    "D,CarolAnne Black",
-    "POINT,Benoit Goulet,Pass,Geofford seaborn,Pass,Nicholas Aghajanian,Pass,CarolAnne Black",
-    "-1,Amos Lee",
-    "-1,Jonathan Champagne",
-    "-1,Steve Chow",
-    "-1,Tim Kealey",
-    "-1,Ashlin Kelly",
-    "-1,Kathryn Jarrett-Ekholm",
-    "1,Benoit Goulet",
-    "1,Edwin Wong",
-    "1,Geofford seaborn",
-    "1,Nicholas Aghajanian",
-    "1,Anne Leduc",
-    "1,CarolAnne Black",
-    "POINT,Khalid Al-Zahrani,Pass,Douglas Brierley,Pass,Sina Dee,Pass,Khalid Al-Zahrani,Pass,Sina Dee",
-    "-1,Douglas Brierley",
-    "-1,Khalid Al-Zahrani",
-    "-1,Sina Dee",
-    "-1,Steve Chow",
-    "-1,Nina Ramic",
-    "-1,Stacey Wowchuk",
-    "-1,Greg Linton",
-    "-1,Ian Ewing",
-    "-1,Mackenzie King",
-    "-1,Shubho Bo Biswas",
-    "-1,Laura Chambers Storey",
-    "-1,Stephanie White",
-    "Throw Away,Edwin Wong,Pass,Nicholas Aghajanian,Pass,CarolAnne Black",
-    "D,Ashlin Kelly",
-    "Throw Away,Ashlin Kelly",
-    "D,Geofford seaborn",
-    "Drop,Nicholas Aghajanian,Pass,Mackenzie King,Pass,Benoit Goulet,Pass,CarolAnne Black,Pass,Mackenzie King,Pass,Anne Leduc,Pass,Mackenzie King,Pass,Nicholas Aghajanian,Pass,Benoit Goulet,Pass,Mackenzie King,Pass,Geofford seaborn",
-    "Drop,Steve Chow,Pass,Ashlin Kelly,Pass,Amos Lee,Pass,Tim Kealey",
-    "Throw Away,Nicholas Aghajanian,Pass,Mackenzie King",
-    "Throw Away,Kathryn Jarrett-Ekholm,Pass,Tim Kealey,Pass,Amos Lee,Pass,Jonathan Champagne,Pass,Amos Lee,Pass,Steve Chow,Pass,Ashlin Kelly,Pass,Steve Chow,Pass,Amos Lee,Pass,Steve Chow,Pass,Tim Kealey,Pass,Steve Chow"
-  ]
 }
