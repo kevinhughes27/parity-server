@@ -1,13 +1,12 @@
+import fs from 'fs'
 import glob from 'glob'
+import request from 'request'
 
 import LoopNext from 'loopnext'
 let syncLoop = new LoopNext().syncLoop
 
-import childProcess from 'child_process'
-let exec = childProcess.exec
-
-let host = 'http://localhost:3000'
-// let host = 'https://parity-server.herokuapp.com'
+let url = 'http://localhost:3001/upload'
+// let url = 'https://parity-server.herokuapp.com/upload'
 
 glob('test/files/*.json', (err, files) => {
   if (err) console.log(err)
@@ -17,15 +16,11 @@ glob('test/files/*.json', (err, files) => {
   syncLoop(iterations, (l) => {
     let idx = l.iteration()
     let file = files[idx]
+    let data = JSON.parse(fs.readFileSync(file))
 
     console.log(`seeding with: ${file}`)
 
-    let cmd = `curl -X POST\
-           --data @${file}\
-           -H "Content-Type: application/json"\
-           ${host}/upload`
-
-    exec(cmd, function (error, stdout, stderr) {
+    request.post({url: url, json: true, body: data}, (error) => {
       if (error) console.log(error)
       l.next()
     })
