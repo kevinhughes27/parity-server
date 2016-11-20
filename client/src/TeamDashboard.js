@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import MoneyCell from './MoneyCell'
+import Trades from './Trades'
 import SalaryPieGraph from './SalaryPieGraph'
 import SalaryBarGraph from './SalaryBarGraph'
 
@@ -162,10 +163,18 @@ export default class TeamDashboard extends Component {
           </div>
         </div>
 
+        <div className="row">
+          <Trades applyTrade={ (trade) => this.applyTrade(trade) }/>
+        </div>
+
         <div className="row" style={{paddingTop: 20}}>
           <div id="chart" ref={(node) => { this.barChartNode = node }}></div>
         </div>
       </div>
     )
+  }
+
+  applyTrade (trade) {
+
   }
 }
