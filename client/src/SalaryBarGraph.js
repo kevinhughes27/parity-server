@@ -46,6 +46,12 @@ export default class SalaryBarGraph {
       data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
     }
 
+    let avgSalary = _.sum(_.map(data, (d) => {
+      return _.sum(_.map(d.salaries, (player) => player.salary))
+    })) / data.length
+    this.salaryCap = avgSalary + 0.02 * avgSalary
+    this.salaryFloor = avgSalary - 0.02 * avgSalary
+
     this.x.domain(data.map((d) => d.team))
     this.y.domain([0, d3.max(data, (d) => d.total)])
 
@@ -62,26 +68,26 @@ export default class SalaryBarGraph {
       .call(this.yAxis)
 
     // salary cap line
-    // this.chart.append('svg:line')
-    //   .attr('x1', 0)
-    //   .attr('x2', this.width - 20)
-    //   .attr('y1', this.y(SALARY_CAP))
-    //   .attr('y2', this.y(SALARY_CAP))
-    //   .style('stroke', '#000')
-    //   .style('fill', 'none')
-    //   .style('stroke-width', 1)
-    //   .style('shape-rendering', 'crispEdges')
+    this.chart.append('svg:line')
+      .attr('x1', 0)
+      .attr('x2', this.width - 20)
+      .attr('y1', this.y(this.salaryCap))
+      .attr('y2', this.y(this.salaryCap))
+      .style('stroke', '#000')
+      .style('fill', 'none')
+      .style('stroke-width', 1)
+      .style('shape-rendering', 'crispEdges')
 
     // salary cap line
-    // this.chart.append('svg:line')
-    //   .attr('x1', 0)
-    //   .attr('x2', this.width - 20)
-    //   .attr('y1', this.y(SALARY_FLOOR))
-    //   .attr('y2', this.y(SALARY_FLOOR))
-    //   .style('stroke', '#238B45')
-    //   .style('fill', 'none')
-    //   .style('stroke-width', 1)
-    //   .style('shape-rendering', 'crispEdges')
+    this.chart.append('svg:line')
+      .attr('x1', 0)
+      .attr('x2', this.width - 20)
+      .attr('y1', this.y(this.salaryFloor))
+      .attr('y2', this.y(this.salaryFloor))
+      .style('stroke', '#238B45')
+      .style('fill', 'none')
+      .style('stroke-width', 1)
+      .style('shape-rendering', 'crispEdges')
 
     // tooltip
     // this.tip = d3.tip()
@@ -106,7 +112,7 @@ export default class SalaryBarGraph {
         .attr('transform', (d) => 'translate(' + this.x.rangeBand() * 0.25 + ',0)')
         .attr('width', this.x.rangeBand() * 0.5)
         .attr('class', (d) => {
-          if (d.y1 > SALARY_CAP) {
+          if (d.y1 > this.salaryCap) {
             return 'yellow-11'
           } else {
             return 'green-' + d.pos
@@ -146,7 +152,7 @@ export default class SalaryBarGraph {
         .attr('y', (d) => this.y(d.y1))
         .attr('height', (d) => this.y(d.y0) - this.y(d.y1))
         .attr('class', (d) => {
-          if (d.y1 > SALARY_CAP) {
+          if (d.y1 > this.salaryCap) {
             return 'yellow-11'
           } else {
             return 'green-' + d.pos
