@@ -17,8 +17,10 @@ import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')
 
 function logPageView () {
-  ReactGA.set({ page: window.location.pathname })
-  ReactGA.pageview(window.location.pathname)
+  if (window.location.hostname !== 'localhost') {
+    ReactGA.set({ page: window.location.pathname })
+    ReactGA.pageview(window.location.pathname)
+  }
 }
 
 ReactDOM.render(
