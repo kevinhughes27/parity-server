@@ -7,31 +7,31 @@ import calcStats from '../../lib/calc_stats'
 import calcStatsNew from '../../lib/calc_stats_new'
 
 describe('comparison with old event model', function () {
-//   [
-//     // 'week1_game1',
-//     // 'week1_game2',
-//     // 'week2_game1',
-//     'week2_game2'
-//   ].forEach(function (fileName) {
-//     it(`matches for game ${fileName}`, function () {
-//       let filePath = `test/files/${fileName}.json`
-//       let input = JSON.parse(fs.readFileSync(filePath))
-//       let originalOutput = calcStats(input.event_string)
-//       let newOutput = calcStatsNew(input.points)
-//
-//       // compare player
-//       let player = 'Brian Kells'
-//       expect(newOutput[player]).to.deep.equal(originalOutput[player])
-//
-//       // compare all
-//       // expect(newOutput).to.deep.equal(originalOutput)
-//
-//       // compare all one by one with error message
-//       _.mapKeys(newOutput, (value, key) => {
-//         expect(value).to.deep.equal(originalOutput[key], key)
-//       })
-//     })
-//   })
+  [
+    // 'week1_game1',
+    // 'week1_game2',
+    // 'week2_game1',
+    'week2_game2'
+  ].forEach(function (fileName) {
+    it(`matches for game ${fileName}`, function () {
+      let filePath = `test/files/${fileName}.json`
+      let input = JSON.parse(fs.readFileSync(filePath))
+      let originalOutput = calcStats(input.event_string)
+      let newOutput = calcStatsNew(input.points)
+
+      // compare player
+      // let player = 'Brian Kells'
+      // expect(newOutput[player]).to.deep.equal(originalOutput[player])
+
+      // compare all
+      // expect(newOutput).to.deep.equal(originalOutput)
+
+      // compare all one by one with error message
+      _.mapKeys(newOutput, (value, key) => {
+        expect(value).to.deep.equal(originalOutput[key], key)
+      })
+    })
+  })
 
   it('matches for point', function () {
     let points = [
