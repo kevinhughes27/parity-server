@@ -1,8 +1,6 @@
 import _ from 'lodash'
 import d3 from 'd3'
 
-const SALARY_CAP = 9999999999999
-
 export default class SalaryBarGraph {
 
   init (node) {
