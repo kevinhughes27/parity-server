@@ -865,10 +865,9 @@ public class Stats extends Activity {
             JSONArray points = bookkeeper.serialize().getJSONArray("points");
             jsonObject.accumulate("points", points);
 
+            // Upload
             String json = jsonObject.toString();
-
             new uploadGame(mainContext).execute(json);
-
             return;
         } catch (Exception e) {
             e.printStackTrace();
