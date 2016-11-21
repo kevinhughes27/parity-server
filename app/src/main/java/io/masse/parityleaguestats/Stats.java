@@ -841,19 +841,29 @@ public class Stats extends Activity {
             // week it was working for though.
             //jsonObject.accumulate("week", 1);
 
-            JSONObject teams = new JSONObject();
             String leftTeam = leftTeamName.getText().toString();
             String rightTeam = rightTeamName.getText().toString();
+
+            // Teams
+            JSONObject teams = new JSONObject();
             teams.accumulate(leftTeam, new JSONArray(rosterList.getPlayers(leftTeam)) );
             teams.accumulate(rightTeam, new JSONArray(rosterList.getPlayers(rightTeam)) );
             jsonObject.accumulate("teams", teams);
 
+            // Score
+            JSONObject score = new JSONObject();
+            score.accumulate(leftTeam, leftScore.getText().toString());
+            score.accumulate(rightTeam, rightScore.getText().toString());
+            jsonObject.accumulate("score", score);
+
+            // EventString
             String eventString = gameStats.compileCSV();
             String[] eventStringArray = eventString.split("\n");
             jsonObject.accumulate("event_string", new JSONArray(eventStringArray));
 
-            JSONObject events = bookkeeper.serialize();
-            jsonObject.accumulate("events", events);
+            // Points
+            JSONArray points = bookkeeper.serialize().getJSONArray("points");
+            jsonObject.accumulate("points", points);
 
             String json = jsonObject.toString();
 
