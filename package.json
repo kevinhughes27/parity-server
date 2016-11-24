@@ -90,6 +90,7 @@
     "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
     "db:reset:test": "echo 'db.dropDatabase()' | mongo test",
+    "backup": "babel-node bin/backup.js",
     "docs": "apidoc -i routes/ -o docs",
     "deploy": "git push heroku"
   }
