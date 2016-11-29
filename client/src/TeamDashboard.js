@@ -50,8 +50,17 @@ export default class TeamDashboard extends Component {
 
     this.barChart = new SalaryBarGraph()
     this.barChart.init(this.barChartNode)
+
     let { teams, stats } = this.state
-    this.barChart.create(teams, stats)
+
+    let averageTeamSalary = _.sum(_.map(teams, (t) => {
+      return _.sum(_.map(this.playersForTeam(t), (p) => p.salary))
+    })) / teams.length
+
+    let salaryCap = averageTeamSalary * 1.01
+    let salaryFloor = averageTeamSalary * 0.99
+
+    this.barChart.create(teams, stats, salaryCap, salaryFloor)
   }
 
   updateD3 () {
@@ -86,7 +95,11 @@ export default class TeamDashboard extends Component {
   }
 
   playersForCurrentTeam () {
-    let { team, stats } = this.state
+    return this.playersForTeam(this.state.team)
+  }
+
+  playersForTeam (team) {
+    let stats = this.state.stats
 
     let players = []
     _.mapKeys(stats, (playerStats, playerName) => {
