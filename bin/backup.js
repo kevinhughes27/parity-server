@@ -3,7 +3,7 @@ import fs from 'fs'
 import request from 'request'
 
 let url = 'https://parity-server.herokuapp.com/games'
-let week = 3
+let week = parseInt(process.argv[2])
 
 request.get(url, (error, response, body) => {
   let games = JSON.parse(body)
