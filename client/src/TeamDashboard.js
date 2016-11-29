@@ -31,6 +31,13 @@ export default class TeamDashboard extends Component {
       teams: teams,
       team: teams[0]
     }
+
+    this.averageTeamSalary = _.sum(_.map(teams, (t) => {
+      return _.sum(_.map(this.playersForTeam(t), (p) => p.salary))
+    })) / teams.length
+
+    this.salaryCap = _.floor(this.averageTeamSalary * 1.01)
+    this.salaryFloor = _.floor(this.averageTeamSalary * 0.99)
   }
 
   componentDidMount () {
@@ -50,17 +57,8 @@ export default class TeamDashboard extends Component {
 
     this.barChart = new SalaryBarGraph()
     this.barChart.init(this.barChartNode)
-
     let { teams, stats } = this.state
-
-    let averageTeamSalary = _.sum(_.map(teams, (t) => {
-      return _.sum(_.map(this.playersForTeam(t), (p) => p.salary))
-    })) / teams.length
-
-    let salaryCap = averageTeamSalary * 1.01
-    let salaryFloor = averageTeamSalary * 0.99
-
-    this.barChart.create(teams, stats, salaryCap, salaryFloor)
+    this.barChart.create(teams, stats, this.salaryCap, this.salaryFloor)
   }
 
   updateD3 () {
@@ -115,6 +113,7 @@ export default class TeamDashboard extends Component {
 
   renderPlayers () {
     let players = this.playersForCurrentTeam().reverse()
+    let teamSalary = _.sum(_.map(players, (p) => p.salary))
 
     return (
       <table className='highlight'>
@@ -133,6 +132,14 @@ export default class TeamDashboard extends Component {
               </tr>
             )
           })}
+          <tr style={{borderTop: '1px solid grey', lineHeight: 0.5}}>
+            <td>Total</td>
+            <td><MoneyCell data={teamSalary}/></td>
+          </tr>
+          <tr style={{lineHeight: 0.5}}>
+            <td>Salary Cap</td>
+            <td><MoneyCell data={this.salaryCap}/></td>
+          </tr>
         </tbody>
       </table>
     )
