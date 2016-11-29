@@ -80,7 +80,7 @@
     "postinstall": "cd client && npm install",
     "heroku-postbuild": "npm run build && npm run docs",
     "start": "babel-node server.js",
-    "start:dev": "nodemon --exec 'npm start' --ignore public",
+    "start:dev": "nodemon --exec 'npm start' --ignore client",
     "start:client": "cd client && npm start",
     "lint": "eslint *.js",
     "flow": "flow check",

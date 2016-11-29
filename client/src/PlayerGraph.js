@@ -1,4 +1,8 @@
 import d3 from 'd3'
+import d3Tip from 'd3-tip'
+d3.tip = d3Tip
+
+import format from 'format-number'
 
 export default class PlayerGraph {
 
@@ -87,15 +91,19 @@ export default class PlayerGraph {
         .call(this.yAxis)
 
     // tooltip
-    // this.tip = d3.tip()
-    //     .attr('class', 'd3-tip')
-    //     .offset([-10, 0])
-    //     .html((d) => {
-    //       let ud = this.untransformPlayerData(d)
-    //       return `<span class='${d.player}'> ${ud.name}: ${ud.value}</span>`
-    //     })
-    //
-    // this.chart.call(this.tip)
+    this.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html((d) => {
+          let value = d.value
+          if (d.name === 'Salary' || d.name === 'SalaryDelta') {
+            value *= 50000
+            value = format({prefix: '$'})(value)
+          }
+          return `<span class='${d.player}'> ${d.name}: ${value}</span>`
+        })
+
+    this.chart.call(this.tip)
 
     // create the rectangles for each stat
     let stats = this.chart.selectAll('.stat')
@@ -113,8 +121,8 @@ export default class PlayerGraph {
         .attr('x', (d) => this.x1(d.player))
         .attr('y', this.height)
         .attr('height', 0)
-        // .on('mouseover', this.tip.show)
-        // .on('mouseout', this.tip.hide)
+        .on('mouseover', this.tip.show)
+        .on('mouseout', this.tip.hide)
       .transition()
         .duration(200)
         .attr('y', (d) => this.y(d.value))

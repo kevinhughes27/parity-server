@@ -1,6 +1,11 @@
 import _ from 'lodash'
 import d3 from 'd3'
 
+import d3Tip from 'd3-tip'
+d3.tip = d3Tip
+
+import format from 'format-number'
+
 export default class SalaryBarGraph {
 
   init (node) {
@@ -82,13 +87,11 @@ export default class SalaryBarGraph {
       .style('shape-rendering', 'crispEdges')
 
     // tooltip
-    // this.tip = d3.tip()
-    //   .attr('class', 'd3-tip').offset([-10, 0])
-    //   .html((d) =>
-    //     '<p>#{d.name}</p> <p>#{salaryString(d.salary)}</p>'
-    //   )
-    //
-    // this.chart.call(this.tip)
+    this.tip = d3.tip()
+      .attr('class', 'd3-tip').offset([-10, 0])
+      .html((d) => `<p>${d.name}</p> <p>${ format({prefix: '$'})(d.salary) }</p>`)
+
+    this.chart.call(this.tip)
 
     let team = this.chart.selectAll('.team')
         .data(data)
@@ -112,8 +115,8 @@ export default class SalaryBarGraph {
         })
         .attr('y', this.height)
         .attr('height', 0)
-        // .on('mouseover', this.tip.show)
-        // .on('mouseout', this.tip.hide)
+        .on('mouseover', this.tip.show)
+        .on('mouseout', this.tip.hide)
       .transition(300)
         .attr('y', (d) => this.y(d.y1))
         .attr('height', (d) => this.y(d.y0) - this.y(d.y1))
