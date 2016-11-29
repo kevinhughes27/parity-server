@@ -133,12 +133,16 @@ export default class TeamDashboard extends Component {
             )
           })}
           <tr style={{borderTop: '1px solid grey', lineHeight: 0.5}}>
-            <td>Total</td>
+            <td>Current Salary</td>
             <td><MoneyCell data={teamSalary}/></td>
           </tr>
           <tr style={{lineHeight: 0.5}}>
-            <td>Salary Cap</td>
+            <td>League Salary Cap</td>
             <td><MoneyCell data={this.salaryCap}/></td>
+          </tr>
+          <tr style={{lineHeight: 0.5}}>
+            <td><b>Team Cap Space</b></td>
+            <td><MoneyCell data={this.salaryCap - teamSalary}/></td>
           </tr>
         </tbody>
       </table>
