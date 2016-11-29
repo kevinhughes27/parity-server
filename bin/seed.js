@@ -6,7 +6,10 @@ import LoopNext from 'loopnext'
 let syncLoop = new LoopNext().syncLoop
 
 let url = 'http://localhost:3001/upload'
-// let url = 'https://parity-server.herokuapp.com/upload'
+
+if (process.argv[2] === 'prod') {
+  url = 'https://parity-server.herokuapp.com/upload'
+}
 
 glob('test/files/*.json', (err, files) => {
   if (err) console.log(err)
