@@ -4,7 +4,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router'
-import Stats from './Stats'
+import StatsTable from './StatsTable'
 import Loading from './Loading'
 import request from 'browser-request'
 
@@ -64,7 +64,7 @@ class App extends Component {
 
     return (
       <Nav week={week} weeks={weeks} weekChange={weekChange}>
-        <li><Link to='/'>Stats</Link></li>
+        <li><Link to='/'>Raw Stats</Link></li>
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
         <li><a href={docsUrl} target='_blank'>API Documentation</a></li>
@@ -83,7 +83,7 @@ class App extends Component {
       <div className="container" style={{height: '100%', minHeight: '100%'}}>
         { this.props.children
           ? React.cloneElement(this.props.children, {week: week, stats: stats})
-          : <Stats week={week} stats={stats}/>
+          : <StatsTable week={week} stats={stats}/>
         }
       </div>
     )

@@ -42,7 +42,7 @@ type Props = {
   stats: any
 }
 
-export default class Stats extends Component {
+export default class StatsTable extends Component {
   props: Props
 
   state: {
