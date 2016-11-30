@@ -76,22 +76,21 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
-    "build": "cd client && npm run build",
     "postinstall": "cd client && npm install",
-    "heroku-postbuild": "npm run build && npm run docs",
     "start": "babel-node server.js",
-    "start:dev": "nodemon --exec 'npm start' --ignore client",
-    "start:client": "cd client && npm start",
+    "server": "nodemon --exec 'npm start' --ignore client",
+    "client": "cd client && npm start",
     "lint": "eslint *.js",
     "flow": "flow check",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
-    "test:dev": "nodemon --exec 'npm test' --ignore public",
     "test:client": "cd client && npm test",
     "db:seed": "babel-node bin/seed.js",
     "db:reset": "echo 'db.dropDatabase()' | mongo development",
     "db:reset:test": "echo 'db.dropDatabase()' | mongo test",
     "backup": "babel-node bin/backup.js",
-    "docs": "apidoc -i routes/ -o docs",
-    "deploy": "git push heroku"
+    "deploy": "git push heroku",
+    "heroku-postbuild": "npm run build && npm run docs",
+    "build": "cd client && npm run build",
+    "docs": "apidoc -i routes/ -o docs"
   }
 }
