@@ -1,9 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import MoneyCell from './MoneyCell'
-import Trades from './Trades'
 import SalaryPieGraph from './SalaryPieGraph'
-import SalaryBarGraph from './SalaryBarGraph'
 
 type Props = {
   week: number,
@@ -55,11 +53,6 @@ export default class TeamDashboard extends Component {
     this.pieChart.init(this.pieChartNode)
     let players = this.playersForCurrentTeam()
     this.pieChart.create(players)
-
-    this.barChart = new SalaryBarGraph()
-    this.barChart.init(this.barChartNode)
-    let { teams, stats } = this.state
-    this.barChart.create(teams, stats, this.salaryCap, this.salaryFloor)
   }
 
   updateD3 () {
@@ -84,7 +77,11 @@ export default class TeamDashboard extends Component {
 
     return (
       <div>
-        <a className='dropdown-button btn' data-activates='team-dropdown'>{team}</a>
+        <a className='dropdown-button btn'
+           style={{minWidth: '100%'}}
+           data-activates='team-dropdown'>
+          {team}
+        </a>
 
         <ul id='team-dropdown' className='dropdown-content'>
           {this.renderTeams(teams)}
@@ -162,19 +159,7 @@ export default class TeamDashboard extends Component {
             <div id="pie-chart" ref={(node) => { this.pieChartNode = node }}></div>
           </div>
         </div>
-
-        <div className="row">
-          <Trades applyTrade={ (trade) => this.applyTrade(trade) }/>
-        </div>
-
-        <div className="row" style={{paddingTop: 20}}>
-          <div id="chart" ref={(node) => { this.barChartNode = node }}></div>
-        </div>
       </div>
     )
-  }
-
-  applyTrade (trade) {
-
   }
 }

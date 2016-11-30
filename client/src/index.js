@@ -7,6 +7,7 @@ import { browserHistory, Router, Route } from 'react-router'
 import App from './App'
 import ComparePlayers from './ComparePlayers'
 import TeamDashboard from './TeamDashboard'
+import TradeSimulator from './TradeSimulator'
 
 import 'materialize-css/dist/css/materialize.css'
 import './index.css'
@@ -28,6 +29,7 @@ ReactDOM.render(
     <Route path="/" component={App}>
       <Route path="/compare_players" component={ComparePlayers} />
       <Route path="/team_dashboard" component={TeamDashboard} />
+      <Route path="/trade_simulator" component={TradeSimulator} />
     </Route>
   </Router>,
   document.getElementById('root')
