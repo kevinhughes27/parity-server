@@ -3,6 +3,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
+import Stats from './Stats'
 import MoneyCell from './MoneyCell'
 
 const STATS = [
@@ -39,7 +40,7 @@ columnsMeta[STATS.length + 1] = {
 
 type Props = {
   week: number,
-  stats: any
+  stats: Stats
 }
 
 export default class StatsTable extends Component {
@@ -47,7 +48,7 @@ export default class StatsTable extends Component {
 
   state: {
     week: number,
-    stats: any
+    stats: Stats
   }
 
   constructor (props: Props) {
@@ -60,13 +61,8 @@ export default class StatsTable extends Component {
   }
 
   render () {
-    let stats = this.state.stats
-    let statsArray = _.map(_.keys(stats), (k) => {
-      return { Name: k, ...stats[k] }
-    })
-
     // filter players who only have a salary for this week.
-    statsArray = _.filter(statsArray, (player) => {
+    let statsArray = _.filter(this.state.stats.toArray(), (player) => {
       return _.keys(player).length > 4
     })
 

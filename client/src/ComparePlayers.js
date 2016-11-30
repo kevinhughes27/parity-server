@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import Stats from './Stats'
 import PlayerSelect from './PlayerSelect'
 import PlayerGraph from './PlayerGraph'
 
@@ -18,7 +19,7 @@ const STATS = [
 
 type Props = {
   week: number,
-  stats: any
+  stats: Stats
 }
 
 export default class ComparePlayers extends Component {
@@ -26,7 +27,7 @@ export default class ComparePlayers extends Component {
 
   state: {
     week: number,
-    stats: any,
+    stats: Stats,
     playerAName: string,
     playerBName: string,
   }
@@ -34,7 +35,7 @@ export default class ComparePlayers extends Component {
   constructor (props: Props) {
     super(props)
 
-    let players = _.keys(this.props.stats)
+    let players = this.props.stats.playerNames()
 
     this.state = {
       week: this.props.week,
@@ -56,17 +57,17 @@ export default class ComparePlayers extends Component {
     this.graph = new PlayerGraph()
     this.graph.init(this.node)
 
-    let { playerAName, playerBName } = this.state
-    let playerAStats = _.pick(this.state.stats[playerAName], STATS)
-    let playerBStats = _.pick(this.state.stats[playerBName], STATS)
+    let { playerAName, playerBName, stats } = this.state
+    let playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
+    let playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
 
     this.graph.create(playerAStats, playerBStats, STATS)
   }
 
   updateD3 () {
-    let { playerAName, playerBName } = this.state
-    let playerAStats = _.pick(this.state.stats[playerAName], STATS)
-    let playerBStats = _.pick(this.state.stats[playerBName], STATS)
+    let { playerAName, playerBName, stats } = this.state
+    let playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
+    let playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
 
     this.graph.update(playerAStats, playerBStats, STATS)
   }
@@ -80,7 +81,7 @@ export default class ComparePlayers extends Component {
   }
 
   render () {
-    let playerNames = _.keys(this.state.stats)
+    let playerNames = this.state.stats.playerNames()
     let { playerAName, playerBName } = this.state
 
     return (

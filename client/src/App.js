@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router'
 import StatsTable from './StatsTable'
+import Stats from './Stats'
 import Loading from './Loading'
 import request from 'browser-request'
 
@@ -45,7 +46,8 @@ class App extends Component {
     if (num === 0) url = '/stats'
 
     request(url, (er, response, body) => {
-      let stats = body ? JSON.parse(body).stats : {}
+      let data = body ? JSON.parse(body).stats : {}
+      let stats = new Stats(data)
       this.setState({ stats: stats, loading: false })
     })
   }

@@ -38,7 +38,7 @@ export default class SalaryBarGraph {
   create (teams, stats, salaryCap, salaryFloor) {
     let data = []
     for (let team of teams) {
-      let players = this._playersFromTeam(team, stats)
+      let players = stats.playersFor(team)
 
       let salaries = []
       let y0 = 0

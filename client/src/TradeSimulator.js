@@ -1,11 +1,12 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import Stats from './Stats'
 import Trades from './Trades'
 import SalaryBarGraph from './SalaryBarGraph'
 
 type Props = {
   week: number,
-  stats: any
+  stats: Stats
 }
 
 export default class TradeSimulator extends Component {
@@ -13,30 +14,16 @@ export default class TradeSimulator extends Component {
 
   state: {
     week: number,
-    stats: any,
-    teams: Array<string>,
-    team: string
+    stats: Stats
   }
 
   constructor (props: Props) {
     super(props)
 
-    let teams = _.uniq(_.map(_.values(this.props.stats), 'Team'))
-    _.pull(teams, 'Substitute')
-
     this.state = {
       week: this.props.week,
-      stats: this.props.stats,
-      teams: teams,
-      team: teams[0]
+      stats: this.props.stats
     }
-
-    this.averageTeamSalary = _.sum(_.map(teams, (t) => {
-      return _.sum(_.map(this.playersForTeam(t), (p) => p.salary))
-    })) / teams.length
-
-    this.salaryCap = _.floor(this.averageTeamSalary * 1.01)
-    this.salaryFloor = _.floor(this.averageTeamSalary * 0.99)
   }
 
   componentDidMount () {
@@ -48,33 +35,15 @@ export default class TradeSimulator extends Component {
   }
 
   renderD3 () {
+    let stats = this.state.stats
+
     this.barChart = new SalaryBarGraph()
     this.barChart.init(this.barChartNode)
-    let { teams, stats } = this.state
-    this.barChart.create(teams, stats, this.salaryCap, this.salaryFloor)
+    this.barChart.create(stats.teamNames(), stats, stats.salaryCap(), stats.salaryFloor())
   }
 
   updateD3 () {
-    this.pieChart.barChart()
-  }
-
-  playersForCurrentTeam () {
-    return this.playersForTeam(this.state.team)
-  }
-
-  playersForTeam (team) {
-    let stats = this.state.stats
-
-    let players = []
-    _.mapKeys(stats, (playerStats, playerName) => {
-      if (playerStats['Team'] === team) {
-        players.push({name: playerName, salary: playerStats['Salary']})
-      }
-    })
-
-    players = _.sortBy(players, (p) => p.salary)
-
-    return players
+    this.barChart.update()
   }
 
   render () {

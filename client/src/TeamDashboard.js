@@ -1,11 +1,12 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import Stats from './Stats'
 import MoneyCell from './MoneyCell'
 import SalaryPieGraph from './SalaryPieGraph'
 
 type Props = {
   week: number,
-  stats: any
+  stats: Stats
 }
 
 export default class TeamDashboard extends Component {
@@ -13,30 +14,23 @@ export default class TeamDashboard extends Component {
 
   state: {
     week: number,
-    stats: any,
-    teams: Array<string>,
+    stats: Stats,
     team: string
   }
 
   constructor (props: Props) {
     super(props)
 
-    let teams = _.uniq(_.map(_.values(this.props.stats), 'Team'))
-    _.pull(teams, 'Substitute')
-
     this.state = {
       week: this.props.week,
       stats: this.props.stats,
-      teams: teams,
-      team: teams[0]
+      team: this.props.stats.teamNames()[0]
     }
+  }
 
-    this.averageTeamSalary = _.sum(_.map(teams, (t) => {
-      return _.sum(_.map(this.playersForTeam(t), (p) => p.salary))
-    })) / teams.length
-
-    this.salaryCap = _.floor(this.averageTeamSalary * 1.01)
-    this.salaryFloor = _.floor(this.averageTeamSalary * 0.99)
+  playersForCurrentTeam () {
+    let { team, stats } = this.state
+    return stats.playersFor(team).reverse()
   }
 
   componentDidMount () {
@@ -49,9 +43,10 @@ export default class TeamDashboard extends Component {
   }
 
   renderD3 () {
+    let players = this.playersForCurrentTeam()
+
     this.pieChart = new SalaryPieGraph()
     this.pieChart.init(this.pieChartNode)
-    let players = this.playersForCurrentTeam()
     this.pieChart.create(players)
   }
 
@@ -73,7 +68,8 @@ export default class TeamDashboard extends Component {
   }
 
   renderTeamsDropdown () {
-    let { team, teams } = this.state
+    let { team, stats } = this.state
+    let teams = stats.teamNames()
 
     return (
       <div>
@@ -90,28 +86,11 @@ export default class TeamDashboard extends Component {
     )
   }
 
-  playersForCurrentTeam () {
-    return this.playersForTeam(this.state.team)
-  }
-
-  playersForTeam (team) {
-    let stats = this.state.stats
-
-    let players = []
-    _.mapKeys(stats, (playerStats, playerName) => {
-      if (playerStats['Team'] === team) {
-        players.push({name: playerName, salary: playerStats['Salary']})
-      }
-    })
-
-    players = _.sortBy(players, (p) => p.salary)
-
-    return players
-  }
-
   renderPlayers () {
-    let players = this.playersForCurrentTeam().reverse()
-    let teamSalary = _.sum(_.map(players, (p) => p.salary))
+    let { team, stats } = this.state
+    let players = this.playersForCurrentTeam()
+    let teamSalary = stats.teamSalary(team)
+    let salaryCap = stats.salaryCap()
 
     return (
       <table className='highlight'>
@@ -136,11 +115,11 @@ export default class TeamDashboard extends Component {
           </tr>
           <tr style={{lineHeight: 0.5}}>
             <td>League Salary Cap</td>
-            <td><MoneyCell data={this.salaryCap}/></td>
+            <td><MoneyCell data={salaryCap}/></td>
           </tr>
           <tr style={{lineHeight: 0.5}}>
             <td><b>Team Cap Space</b></td>
-            <td><MoneyCell data={this.salaryCap - teamSalary}/></td>
+            <td><MoneyCell data={salaryCap - teamSalary}/></td>
           </tr>
         </tbody>
       </table>
