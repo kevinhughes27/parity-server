@@ -25,7 +25,7 @@ const columns = [
   ...STATS
 ]
 
-columnsMeta = {
+let columnsMeta = {
   'Name',
   'Team',
   'Goals',
