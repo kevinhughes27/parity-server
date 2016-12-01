@@ -15,6 +15,7 @@ const STATS = [
   'Throwaways',
   'ThrewDrop',
   'Drops',
+  'SalaryDelta',
   'Salary'
 ]
 
@@ -24,15 +25,24 @@ const columns = [
   ...STATS
 ]
 
-let columnsMeta = _.map(columns, (col, idx) => {
-  return {
-    columnName: col,
-    order: idx + 1
-  }
-})
-
+let columnsMeta = {
+  'Name',
+  'Team',
+  'Goals',
+  'Assists',
+  '2nd Assist',
+  'D-Blocks',
+  'Catches',
+  'Completions',
+  'Throwaways',
+  'Threw Drop',
+  'Drops',
+  'Weekly Salary Increase',
+  'New Salary'
+}
+  
 columnsMeta[STATS.length + 1] = {
-  columnName: 'Salary',
+  columnName: 'New Salary',
   order: STATS.length + 1,
   customComponent: MoneyCell
 }
