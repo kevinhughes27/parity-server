@@ -1,6 +1,6 @@
 import d3 from 'd3'
 
-export default class SalaryPieGraph {
+export default class TeamGraph {
 
   init (node) {
     this.width = node.clientWidth

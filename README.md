@@ -34,7 +34,7 @@ If you need to test zuluru scraping or need to set an environment variable creat
 
 Running:
 --------
-  To run the server locally by starting it with `npm run start` (or `start:dev` if developing to live reload on changes)
+  To run the server locally by starting it with `npm run server` (note that production uses the `npm start` command to start the server)
 
   Then run the following command to send a job to the server:
 
@@ -59,15 +59,13 @@ Testing
 
   to run a single test: `mocha <path_to_test> --grep <something unique in the test name>`
 
-  there is also the `test:dev` command which re-runs the whole suite any time a file is saved.
-
 
 Front End
 ---------
 
-To develop on the front end app you need to run `npm run start:client` then the script will open your browser to the app. You'll need to run the server as well in order to be able to fetch data.
+To develop on the front end app you need to run `npm run client` then the script will open your browser to the app. You'll need to run the server as well in order to be able to fetch data.
 
-Similarly for testing run `npm run test:client`
+For testing run `npm run test:client`
 
 
 Documentation

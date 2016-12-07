@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import d3 from 'd3'
 
 import d3Tip from 'd3-tip'
@@ -6,7 +5,7 @@ d3.tip = d3Tip
 
 import format from 'format-number'
 
-export default class SalaryBarGraph {
+export default class LeagueGraph {
 
   init (node) {
     this.margin = {top: 20, right: 20, bottom: 80, left: 40}
@@ -36,18 +35,7 @@ export default class SalaryBarGraph {
   }
 
   create (teams, stats, salaryCap, salaryFloor) {
-    let data = []
-    for (let team of teams) {
-      let players = this._playersFromTeam(team, stats)
-
-      let salaries = []
-      let y0 = 0
-      players.forEach((player, index) => {
-        salaries.push({name: player.name, salary: player.salary, pos: index, y0: y0, y1: y0 += player.salary})
-      })
-
-      data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
-    }
+    let data = this._formatData(teams, stats)
 
     this.x.domain(data.map((d) => d.team))
     this.y.domain([0, d3.max(data, (d) => d.total)])
@@ -89,7 +77,7 @@ export default class SalaryBarGraph {
     // tooltip
     this.tip = d3.tip()
       .attr('class', 'd3-tip').offset([-10, 0])
-      .html((d) => `<p>${d.name}</p> <p>${ format({prefix: '$'})(d.salary) }</p>`)
+      .html((d) => `<p>${d.name}</p> <p>${format({prefix: '$'})(d.salary)}</p>`)
 
     this.chart.call(this.tip)
 
@@ -122,20 +110,8 @@ export default class SalaryBarGraph {
         .attr('height', (d) => this.y(d.y0) - this.y(d.y1))
   }
 
-  _playersFromTeam (team, stats) {
-    let players = []
-    _.mapKeys(stats, (playerStats, playerName) => {
-      if (playerStats['Team'] === team) {
-        players.push({name: playerName, salary: playerStats['Salary']})
-      }
-    })
-
-    players = _.sortBy(players, (p) => p.salary)
-
-    return players
-  }
-
-  update (data, salaryCap) {
+  update (teams, stats, salaryCap) {
+    let data = this._formatData(teams, stats)
     let flatData = []
     data.forEach((d) => {
       flatData = flatData.concat(d.salaries)
@@ -153,5 +129,22 @@ export default class SalaryBarGraph {
             return 'green-' + d.pos
           }
         })
+  }
+
+  _formatData (teams, stats) {
+    let data = []
+    for (let team of teams) {
+      let players = stats.playersFor(team)
+
+      let salaries = []
+      let y0 = 0
+      players.forEach((player, index) => {
+        salaries.push({name: player.name, salary: player.salary, pos: index, y0: y0, y1: y0 += player.salary})
+      })
+
+      data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
+    }
+
+    return data
   }
 }

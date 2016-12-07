@@ -1,87 +1,69 @@
-// @flow
-
 import _ from 'lodash'
-import React, { Component } from 'react'
-import Griddle from 'griddle-react'
-import MoneyCell from './MoneyCell'
 
-const STATS = [
-  'Goals',
-  'Assists',
-  '2nd Assist',
-  'D-Blocks',
-  'Catches',
-  'Completions',
-  'Throwaways',
-  'ThrewDrop',
-  'Drops',
-  'Salary'
-]
-
-const columns = [
-  'Name',
-  'Team',
-  ...STATS
-]
-
-let columnsMeta = _.map(columns, (col, idx) => {
-  return {
-    columnName: col,
-    order: idx + 1
-  }
-})
-
-columnsMeta[STATS.length + 1] = {
-  columnName: 'Salary',
-  order: STATS.length + 1,
-  customComponent: MoneyCell
-}
-
-type Props = {
-  week: number,
-  stats: any
-}
-
-export default class Stats extends Component {
-  props: Props
-
-  state: {
-    week: number,
-    stats: any
+export default class Stats {
+  constructor (data) {
+    this.data = data
   }
 
-  constructor (props: Props) {
-    super(props)
-
-    this.state = {
-      week: this.props.week,
-      stats: this.props.stats
-    }
+  toArray () {
+    return _.map(_.keys(this.data), (k) => {
+      return { Name: k, ...this.data[k] }
+    })
   }
 
-  render () {
-    let stats = this.state.stats
-    let statsArray = _.map(_.keys(stats), (k) => {
-      return { Name: k, ...stats[k] }
+  playerNames () {
+    return _.keys(this.data)
+  }
+
+  teamNames () {
+    let teams = _.uniq(_.map(_.values(this.data), 'Team'))
+    _.pull(teams, 'Substitute')
+    return teams
+  }
+
+  forPlayer (playerName) {
+    return this.data[playerName]
+  }
+
+  playersFor (team) {
+    let players = []
+    _.mapKeys(this.data, (playerStats, playerName) => {
+      if (playerStats['Team'] === team) {
+        players.push({name: playerName, salary: playerStats['Salary']})
+      }
     })
 
-    // filter players who only have a salary for this week.
-    statsArray = _.filter(statsArray, (player) => {
-      return _.keys(player).length > 4
-    })
+    players = _.sortBy(players, (p) => p.salary)
 
-    return (
-      <Griddle
-        results={statsArray}
-        resultsPerPage={statsArray.length}
-        tableClassName='highlight responsive-table'
-        columns={columns}
-        columnMetadata={columnsMeta}
-        showFilter={true}
-        showPager={false}
-        useGriddleStyles={false}
-        filterPlaceholderText='Search players or team ...'
-      />
-    )
+    return players
+  }
+
+  applyTrade (playerA, playerB) {
+    let teamA = this.data[playerA]['Team']
+    let teamB = this.data[playerB]['Team']
+
+    this.data[playerA]['Team'] = teamB
+    this.data[playerB]['Team'] = teamA
+  }
+
+  teamSalary (team) {
+    let players = this.playersFor(team)
+    return _.sum(_.map(players, (p) => p.salary))
+  }
+
+  averageTeamSalary () {
+    let teams = this.teamNames()
+
+    return _.sum(_.map(teams, (t) => {
+      return _.sum(_.map(this.playersFor(t), (p) => p.salary))
+    })) / teams.length
+  }
+
+  salaryCap () {
+    return _.floor(this.averageTeamSalary() * 1.01)
+  }
+
+  salaryFloor () {
+    return _.floor(this.averageTeamSalary() * 0.99)
   }
 }
