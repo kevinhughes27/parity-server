@@ -38,6 +38,14 @@ export default class Stats {
     return players
   }
 
+  applyTrade (playerA, playerB) {
+    let teamA = this.data[playerA]['Team']
+    let teamB = this.data[playerB]['Team']
+
+    this.data[playerA]['Team'] = teamB
+    this.data[playerB]['Team'] = teamA
+  }
+
   teamSalary (team) {
     let players = this.playersFor(team)
     return _.sum(_.map(players, (p) => p.salary))

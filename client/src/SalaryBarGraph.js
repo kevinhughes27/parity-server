@@ -36,18 +36,7 @@ export default class SalaryBarGraph {
   }
 
   create (teams, stats, salaryCap, salaryFloor) {
-    let data = []
-    for (let team of teams) {
-      let players = stats.playersFor(team)
-
-      let salaries = []
-      let y0 = 0
-      players.forEach((player, index) => {
-        salaries.push({name: player.name, salary: player.salary, pos: index, y0: y0, y1: y0 += player.salary})
-      })
-
-      data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
-    }
+    let data = this._formatData(teams, stats)
 
     this.x.domain(data.map((d) => d.team))
     this.y.domain([0, d3.max(data, (d) => d.total)])
@@ -122,20 +111,8 @@ export default class SalaryBarGraph {
         .attr('height', (d) => this.y(d.y0) - this.y(d.y1))
   }
 
-  _playersFromTeam (team, stats) {
-    let players = []
-    _.mapKeys(stats, (playerStats, playerName) => {
-      if (playerStats['Team'] === team) {
-        players.push({name: playerName, salary: playerStats['Salary']})
-      }
-    })
-
-    players = _.sortBy(players, (p) => p.salary)
-
-    return players
-  }
-
-  update (data, salaryCap) {
+  update (teams, stats, salaryCap) {
+    let data = this._formatData(teams, stats)
     let flatData = []
     data.forEach((d) => {
       flatData = flatData.concat(d.salaries)
@@ -153,5 +130,22 @@ export default class SalaryBarGraph {
             return 'green-' + d.pos
           }
         })
+  }
+
+  _formatData (teams, stats) {
+    let data = []
+    for (let team of teams) {
+      let players = stats.playersFor(team)
+
+      let salaries = []
+      let y0 = 0
+      players.forEach((player, index) => {
+        salaries.push({name: player.name, salary: player.salary, pos: index, y0: y0, y1: y0 += player.salary})
+      })
+
+      data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
+    }
+
+    return data
   }
 }
