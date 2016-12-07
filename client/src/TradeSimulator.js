@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from './Stats'
 import PlayerSelect from './PlayerSelect'
-import SalaryBarGraph from './SalaryBarGraph'
+import LeagueGraph from './LeagueGraph'
 
 type Props = {
   week: number,
@@ -56,7 +56,7 @@ export default class TradeSimulator extends Component {
   renderD3 () {
     let stats = this.state.stats
 
-    this.barChart = new SalaryBarGraph()
+    this.barChart = new LeagueGraph()
     this.barChart.init(this.barChartNode)
     this.barChart.create(stats.teamNames(), stats, stats.salaryCap(), stats.salaryFloor())
   }

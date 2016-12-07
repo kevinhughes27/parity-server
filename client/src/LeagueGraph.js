@@ -6,7 +6,7 @@ d3.tip = d3Tip
 
 import format from 'format-number'
 
-export default class SalaryBarGraph {
+export default class LeagueGraph {
 
   init (node) {
     this.margin = {top: 20, right: 20, bottom: 80, left: 40}

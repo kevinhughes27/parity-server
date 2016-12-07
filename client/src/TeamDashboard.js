@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from './Stats'
 import MoneyCell from './MoneyCell'
-import SalaryPieGraph from './SalaryPieGraph'
+import TeamGraph from './TeamGraph'
 
 type Props = {
   week: number,
@@ -45,7 +45,7 @@ export default class TeamDashboard extends Component {
   renderD3 () {
     let players = this.playersForCurrentTeam()
 
-    this.pieChart = new SalaryPieGraph()
+    this.pieChart = new TeamGraph()
     this.pieChart.init(this.pieChartNode)
     this.pieChart.create(players)
   }
