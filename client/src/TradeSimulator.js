@@ -165,11 +165,11 @@ export default class TradeSimulator extends Component {
           </div>
         </div>
 
-        <div className="row" style={{paddingTop: 20}}>
+        <div className="row">
           {this.renderTrades(trades)}
         </div>
 
-        <div className="row" style={{paddingTop: 20}}>
+        <div className="row" style={{paddingTop: 10}}>
           <div id="chart" ref={(node) => { this.barChartNode = node }}></div>
         </div>
       </div>
