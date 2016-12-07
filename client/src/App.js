@@ -61,6 +61,7 @@ class App extends Component {
     let week = this.state.week
     let weeks = [0, ...this.state.weeks]
     let weekChange = this.weekChange.bind(this)
+    let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing'
     let docsUrl = 'https://parity-server.herokuapp.com/docs'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
 
@@ -70,6 +71,7 @@ class App extends Component {
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
         <li><Link to='/trade_simulator'>Trade Simulator</Link></li>
+        <li><a href={spreadsheetUrl} target='_blank'>Spreadsheets</a></li>
         <li><a href={docsUrl} target='_blank'>API Documentation</a></li>
         <li><a href={srcUrl} target='_blank'>Source Code</a></li>
       </Nav>
