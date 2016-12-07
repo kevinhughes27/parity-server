@@ -89,7 +89,7 @@ export default class SalaryBarGraph {
     // tooltip
     this.tip = d3.tip()
       .attr('class', 'd3-tip').offset([-10, 0])
-      .html((d) => `<p>${d.name}</p> <p>${ format({prefix: '$'})(d.salary) }</p>`)
+      .html((d) => `<p>${d.name}</p> <p>${format({prefix: '$'})(d.salary)}</p>`)
 
     this.chart.call(this.tip)
 
