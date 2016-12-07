@@ -18,7 +18,7 @@ export default class Stats {
   teamNames () {
     let teams = _.uniq(_.map(_.values(this.data), 'Team'))
     _.pull(teams, 'Substitute')
-    return teams
+    return _.sortBy(teams, (t) => t.length)
   }
 
   forPlayer (playerName) {
