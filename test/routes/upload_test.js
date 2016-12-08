@@ -147,8 +147,8 @@ describe('POST /upload', function () {
     let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
     let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
 
-    expect(w1['stats']['Absent Player']['Salary']).to.equal(503625)
-    expect(w2['stats']['Absent Player']['Salary']).to.equal(507250)
+    expect(w1['stats']['Absent Player']['Salary']).to.equal(496250)
+    expect(w2['stats']['Absent Player']['Salary']).to.equal(492500)
   })
 
   // Note that it is a requirement the players are in the roster
