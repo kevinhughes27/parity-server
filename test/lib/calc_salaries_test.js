@@ -3,6 +3,10 @@ let expect = chai.expect
 
 chai.use(require('sinon-chai'))
 
+process.env.MONGODB_URI = 'mongodb://localhost:27017/test'
+const Db = require('monk')(process.env.MONGODB_URI)
+const Games = Db.get('games')
+
 import calcSalaries from '../../lib/calc_salaries'
 
 describe('calcSalaries', function () {
@@ -86,7 +90,7 @@ describe('calcSalaries', function () {
     expect(salaryDeltas['Mike']['Salary']).to.equal(expectedSalary)
   })
 
-  it('gives salary delta from the previous week if player is absent', function () {
+  it('gives a player their average salary delta if they are absent', function () {
     let stats = {
       'Mike': {'Team': 'Beans'}
     }
