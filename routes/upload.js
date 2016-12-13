@@ -49,7 +49,9 @@ router.post('/upload', async function (req, res) {
   let playerTeams = calcTeams(game.teams, game.stats)
   game.stats = _.merge(game.stats, playerTeams)
 
-  let playerSalaries = await calcSalaries(stats, game.week - 1)
+  let games = await Games.find({}, {sort: { week: 1 }})
+
+  let playerSalaries = calcSalaries(stats, games)
   game.stats = _.merge(game.stats, playerSalaries)
 
   await saveGame(game)

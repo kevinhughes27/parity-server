@@ -139,18 +139,6 @@ describe('POST /upload', function () {
     expect(w2['stats']['Mike']['Salary']).to.equal(522000)
   })
 
-  it('salary adds week to week for Absent Player', async function () {
-    await request.post({url: url, json: true, body: game1})
-    let game = _.assign({}, game1, {week: 2})
-    await request.post({url: url, json: true, body: game})
-
-    let w1 = await request.get(`${baseUrl}/weeks/1`, { json: true })
-    let w2 = await request.get(`${baseUrl}/weeks/2`, { json: true })
-
-    expect(w1['stats']['Absent Player']['Salary']).to.equal(503625)
-    expect(w2['stats']['Absent Player']['Salary']).to.equal(507250)
-  })
-
   // Note that it is a requirement the players are in the roster
   // even if they don't play.
   it('plays week 1, misses week 2, plays week 3', async function () {
