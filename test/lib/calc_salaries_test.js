@@ -46,11 +46,22 @@ describe('calcSalaries', function () {
     expect(salaryDeltas['Mike']['Salary']).to.equal(510000)
   })
 
-  it('averageDelta is 0 for player who has no past games', function () {
-    stats['Mike'] = {'Team': 'Beans'}
+  it('give team average delta if no history is available', function () {
+    stats = {
+      'Mike': {'Team': 'Beans'},
+      'Jim': {'Team': 'Beans', 'Goals': 1},
+      'Meg': {'Team': 'Beans', 'D-Blocks': 1}
+    }
+
+    // 1 playValues[Goal] * 1 playValues[D-Block]
+    let expectedDelta = (10000 + 8000) / 2
+
+    // defaultSalary + expectedDelta
+    let expectedSalary = 500000 + expectedDelta
+
     let salaryDeltas = calcSalaries(stats, [])
-    expect(salaryDeltas['Mike']['SalaryDelta']).to.equal(0)
-    expect(salaryDeltas['Mike']['Salary']).to.equal(500000)
+    expect(salaryDeltas['Mike']['SalaryDelta']).to.equal(expectedDelta)
+    expect(salaryDeltas['Mike']['Salary']).to.equal(expectedSalary)
   })
 
   it('adds delta to previous salary', function () {
