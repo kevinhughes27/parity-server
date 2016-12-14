@@ -13,7 +13,7 @@ const Games = Db.get('games')
  * @apiSuccess (200) {Array} games returns an array of games
  */
 router.get('/games', async function (req, res) {
-  let games = await Games.find({}, {})
+  let games = await Games.find({}, {sort: { week: 1 }})
   res.json(games)
 })
 
