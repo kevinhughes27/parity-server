@@ -19,9 +19,9 @@ _.mapKeys(oldStats, (playerStats, playerName) => {
   // greater than 5% change
   if (percentChange > 0.05) {
     if (diff > 0) {
-      console.log(`${playerName} ${oldSalary} ^^^ ${newSalary}`.green)
+      console.log(`${playerName} ${oldSalary} --> ${newSalary}`.green)
     } else {
-      console.log(`${playerName} ${oldSalary} vvv ${newSalary}`.red)
+      console.log(`${playerName} ${oldSalary} --> ${newSalary}`.red)
     }
   }
 })
