@@ -3,7 +3,24 @@
 import express from 'express'
 let router = express.Router()
 
+import NodeCache from 'node-cache'
+const cache = new NodeCache()
+const key = 'teams'
+
+const ttl = 60 * 90 // 1.5 hours in seconds
+const refreshFreq = 60 * 60 * 1000 // 1 hour in milliseconds
+
 import fetchTeams from '../lib/fetch_teams'
+
+let cacheTeams = async function () {
+  console.log('[TeamsCache] starting refresh...')
+  let teams = await fetchTeams()
+  cache.set(key, teams, ttl)
+  console.log('[TeamsCache] finished')
+}
+
+cacheTeams() // cache on boot
+setInterval(cacheTeams, refreshFreq)
 
 /**
  * @api {get} /teams List
@@ -26,9 +43,12 @@ import fetchTeams from '../lib/fetch_teams'
  *      }
  *    }
  */
-router.get('/teams', async function (req, res) {
-  let teams = await fetchTeams()
-  res.json(teams)
+router.get('/teams', function (req, res) {
+  cache.get(key, function (err, value) {
+    if (!err) {
+      res.json(value)
+    }
+  })
 })
 
 module.exports = router
