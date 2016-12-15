@@ -10,7 +10,6 @@ import _ from 'lodash'
 import calcStats from '../lib/calc_stats'
 import calcSalaries from '../lib/calc_salaries'
 import calcTeams from '../lib/calc_teams'
-import calcWeek from '../lib/calc_week'
 import calcWeekNum from '../lib/calc_week_num'
 
 /**
@@ -44,16 +43,15 @@ router.post('/upload', async function (req, res) {
 
   await createGame(game)
 
-  let prevWeekNum = game.week - 1
-  let prevWeek = await calcWeek(prevWeekNum)
-
   let stats = calcStats(game.event_string)
   game.stats = stats
 
   let playerTeams = calcTeams(game.teams, game.stats)
   game.stats = _.merge(game.stats, playerTeams)
 
-  let playerSalaries = calcSalaries(stats, prevWeek)
+  let games = await Games.find({}, {sort: { week: 1 }})
+
+  let playerSalaries = calcSalaries(stats, games)
   game.stats = _.merge(game.stats, playerSalaries)
 
   await saveGame(game)
