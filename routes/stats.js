@@ -6,6 +6,8 @@ let router = express.Router()
 const Db = require('monk')(process.env.MONGODB_URI)
 const Games = Db.get('games')
 
+import _ from 'lodash'
+import getTeams from '../lib/teams_cache'
 import calcTotalStats from '../lib/calc_total_stats'
 
 /**
@@ -24,7 +26,19 @@ import calcTotalStats from '../lib/calc_total_stats'
 router.get('/stats', async function (req, res) {
   let games = await Games.find({}, {sort: {week: -1}})
   let stats = calcTotalStats(games)
+  stats = updateTeams(stats)
   res.json({stats})
 })
+
+let updateTeams = function (stats) {
+  let teams = getTeams()
+  let playerTeams = {}
+
+  _.mapValues(teams, (team, teamName) => {
+    _.map(team.players, (player) => { playerTeams[player] = {Team: teamName} })
+  })
+
+  return _.merge(stats, playerTeams)
+}
 
 module.exports = router
