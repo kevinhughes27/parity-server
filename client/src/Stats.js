@@ -33,7 +33,7 @@ export default class Stats {
       }
     })
 
-    players = _.sortBy(players, (p) => p.salary)
+    players = _.sortBy(players, (p) => p.salary ? p.salary : -1)
 
     return players
   }
