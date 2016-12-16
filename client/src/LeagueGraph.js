@@ -139,10 +139,22 @@ export default class LeagueGraph {
       let salaries = []
       let y0 = 0
       players.forEach((player, index) => {
-        salaries.push({name: player.name, salary: player.salary, pos: index, y0: y0, y1: y0 += player.salary})
+        if (!player.salary) return
+
+        salaries.push({
+          name: player.name,
+          salary: player.salary,
+          pos: index,
+          y0: y0,
+          y1: y0 += player.salary
+        })
       })
 
-      data.push({team: team, salaries: salaries, total: salaries[salaries.length - 1].y1})
+      data.push({
+        team: team,
+        salaries: salaries,
+        total: salaries[salaries.length - 1].y1
+      })
     }
 
     return data
