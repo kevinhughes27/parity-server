@@ -23,14 +23,7 @@ export default class TeamGraph {
   }
 
   create (players) {
-    let data = []
-    players.forEach((player, index) => {
-      data.push({
-        name: player.name,
-        pos: index,
-        salary: player.salary
-      })
-    })
+    let data = this._formatData(players)
 
     let g = this.chart.selectAll('.arc')
         .data(this.pie(data))
@@ -58,14 +51,7 @@ export default class TeamGraph {
   }
 
   update (players) {
-    let data = []
-    players.forEach((player, index) => {
-      data.push({
-        name: player.name,
-        pos: index,
-        salary: player.salary
-      })
-    })
+    let data = this._formatData(players)
 
     this.chart.selectAll('text')
       .data(this.pie(data))
@@ -86,5 +72,21 @@ export default class TeamGraph {
       .data(this.pie(data))
       .transition()
       .duration(10)
+  }
+
+  _formatData (players) {
+    let data = []
+
+    players.forEach((player, index) => {
+      if (!player.salary) return
+
+      data.push({
+        name: player.name,
+        pos: index,
+        salary: player.salary
+      })
+    })
+
+    return data
   }
 }
