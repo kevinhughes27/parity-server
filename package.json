@@ -78,7 +78,6 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
-    "postinstall": "cd client && npm install",
     "start": "babel-node server.js",
     "server": "nodemon --exec 'npm start' --ignore client",
     "client": "cd client && npm start",
