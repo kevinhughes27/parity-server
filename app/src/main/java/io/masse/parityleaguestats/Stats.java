@@ -103,7 +103,7 @@ public class Stats extends Activity {
     private Bookkeeper bookkeeper;
 
     private View.OnClickListener mainOnClickListener;
-    private View.OnClickListener changeTextListener;
+    private View.OnClickListener teamEditListener;
     private View.OnClickListener changeModeListener;
     private View.OnClickListener toggleUserListener;
 
@@ -206,7 +206,7 @@ public class Stats extends Activity {
             }
         };
 
-        changeTextListener = new View.OnClickListener() {
+        teamEditListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnLastButtonClicked = (Button) view;
@@ -325,7 +325,7 @@ public class Stats extends Activity {
                                         ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
                                         btn.setLayoutParams(param);
                                         btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                                        btn.setOnClickListener(changeTextListener);
+                                        btn.setOnClickListener(teamEditListener);
                                         btn.setGravity(btnLastButtonClicked.getGravity());
                                     }
                                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -356,7 +356,7 @@ public class Stats extends Activity {
                         ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
                         btn.setLayoutParams(param);
                         btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                        btn.setOnClickListener(changeTextListener);
+                        btn.setOnClickListener(teamEditListener);
                         btn.setBackgroundColor(getResources().getColor(R.color.manualEntryButtonColour));
                         btn.setGravity(btnLastButtonClicked.getGravity());
                     }
@@ -673,7 +673,7 @@ public class Stats extends Activity {
             btn.setLayoutParams(param);
             btn.setId(i);
             btn.setGravity(gravity);
-            btn.setOnClickListener(changeTextListener);
+            btn.setOnClickListener(teamEditListener);
         }
         for (int i = 0; i < intGirls; i++){
             Button btn = new Button(this);
@@ -684,7 +684,7 @@ public class Stats extends Activity {
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
             btn.setGravity(gravity);
-            btn.setOnClickListener(changeTextListener);
+            btn.setOnClickListener(teamEditListener);
         }
 
     }
@@ -1279,14 +1279,14 @@ public class Stats extends Activity {
                     Button currentButton = (Button) layoutLeft.getChildAt(i);
                     currentButton.setEnabled(true);
                     currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(changeTextListener);
+                    currentButton.setOnClickListener(teamEditListener);
                     currentButton.setVisibility(View.VISIBLE);
                 }
                 for (int i = 0; i < rightCount; i++){
                     Button currentButton = (Button) layoutRight.getChildAt(i);
                     currentButton.setEnabled(true);
                     currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(changeTextListener);
+                    currentButton.setOnClickListener(teamEditListener);
                     currentButton.setVisibility(View.VISIBLE);
                 }
                 break;
