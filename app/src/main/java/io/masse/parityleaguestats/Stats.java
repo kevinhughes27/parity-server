@@ -218,91 +218,10 @@ public class Stats extends Activity {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which){
                                     case 0: //add sub from Existing team
-                                        new AlertDialog.Builder(mainContext)
-                                                .setTitle("Choose Team")
-                                                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        intChosenTeam = which;
-                                                        new AlertDialog.Builder(mainContext)
-                                                                .setTitle("Choose Player")
-                                                                .setItems(rosterList.getPlayers(which), new DialogInterface.OnClickListener() {
-                                                                    public void onClick(DialogInterface dialog, int which) {
-                                                                        forceRosterChange = true;
-                                                                        Button btn = new Button(mainContext);
-                                                                        TextView teamName;
-
-                                                                        boolean isFemale = rosterList.checkIfFemale(intChosenTeam,which);
-                                                                        if (btnLastButtonClicked.getParent() == layoutRight){
-                                                                            teamName = rightTeamName;
-                                                                            if (isFemale){
-                                                                                btn.setBackgroundColor(getResources().getColor(R.color.rightGirlsColour));
-                                                                            }
-                                                                            else {
-                                                                                btn.setBackgroundColor(getResources().getColor(R.color.rightGuysColour));
-                                                                            }
-                                                                        }else{
-                                                                            teamName = leftTeamName;
-                                                                            if (isFemale){
-                                                                                btn.setBackgroundColor(getResources().getColor(R.color.leftGirlsColour));
-                                                                            }
-                                                                            else {
-                                                                                btn.setBackgroundColor(getResources().getColor(R.color.leftGuysColour));
-                                                                            }
-                                                                        }
-
-                                                                        if (rosterList.getTeamName(intChosenTeam).equals(teamName.getText().toString())){
-                                                                            btn.setText(rosterList.getPlayerName(intChosenTeam, which));
-                                                                        }else{
-                                                                            String txtButtonText = rosterList.getPlayerName(intChosenTeam, which) + "(S)";
-                                                                            btn.setText(txtButtonText);
-                                                                        }
-                                                                        //float margin = getResources().getDimension(R.dimen.button_all_margin);
-
-                                                                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
-                                                                        btn.setLayoutParams(param);
-                                                                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                                                                        btn.setOnClickListener(changeTextListener);
-                                                                        btn.setGravity(btnLastButtonClicked.getGravity());
-                                                                    }
-                                                                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                                            public void onClick(DialogInterface dialog, int whichButton) {
-                                                                // Do nothing.
-                                                            }
-                                                        }).show();
-                                                    }
-                                                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int whichButton) {
-                                                // Do nothing.
-                                            }
-                                        }).show();
-
-
+                                        addSubFromTeam();
                                         break;
-
                                     case 1: //add a sub manually
-                                        new AlertDialog.Builder(mainContext)
-                                                .setTitle("Add Sub Manually")
-                                                .setMessage("Player Name")
-                                                .setView(input)
-                                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                                        forceRosterChange = true;
-                                                        Editable value = input.getText();
-                                                        Button btn = new Button(mainContext);
-                                                        String txtButtonText = value.toString()+"(S)";
-                                                        btn.setText(txtButtonText);
-                                                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
-                                                        btn.setLayoutParams(param);
-                                                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                                                        btn.setOnClickListener(changeTextListener);
-                                                        btn.setBackgroundColor(getResources().getColor(R.color.manualEntryButtonColour));
-                                                        btn.setGravity(btnLastButtonClicked.getGravity());
-                                                    }
-                                                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int whichButton) {
-                                                // Do nothing.
-                                            }
-                                        }).show();
+                                        addSubManually(input);
                                         break;
                                     case 2://delete player
                                         forceRosterChange = true;
@@ -318,9 +237,7 @@ public class Stats extends Activity {
         };
 
         if ((savedInstanceState != null) && (savedInstanceState.getSerializable("arrayEventNames") != null)  && (savedInstanceState.getSerializable("arrayEventActions") != null) && (savedInstanceState.getSerializable("leftTeam") != null) && (savedInstanceState.getSerializable("rightTeam") != null)) {
-
             gameStats = (actionTracker) savedInstanceState.getSerializable("gameStats");
-
 
             ArrayList<String> leftTeam;
             ArrayList<String> rightTeam;
@@ -332,7 +249,6 @@ public class Stats extends Activity {
             rightTeamName.setText(rightTeam.get(0));
             leftTeam.remove(0);
             rightTeam.remove(0);
-
 
             for (int i = 0; i < leftTeam.size(); i++) {
                 Button btn = new Button(this);
@@ -353,9 +269,7 @@ public class Stats extends Activity {
             Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
 
         } else {
-
             startRosterLoad();
-
         }
 
         btnUndo.setOnClickListener(mainOnClickListener);
@@ -368,9 +282,90 @@ public class Stats extends Activity {
         btnMode.setOnClickListener(changeModeListener);
 
         changeState(autoState);
-
     }
 
+    private void addSubFromTeam() {
+        new AlertDialog.Builder(mainContext)
+                .setTitle("Choose Team")
+                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        intChosenTeam = which;
+                        new AlertDialog.Builder(mainContext)
+                                .setTitle("Choose Player")
+                                .setItems(rosterList.getPlayers(which), new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        forceRosterChange = true;
+                                        Button btn = new Button(mainContext);
+                                        TextView teamName;
+
+                                        boolean isFemale = rosterList.checkIfFemale(intChosenTeam,which);
+                                        if (btnLastButtonClicked.getParent() == layoutRight){
+                                            teamName = rightTeamName;
+                                            if (isFemale){
+                                                btn.setBackgroundColor(getResources().getColor(R.color.rightGirlsColour));
+                                            } else {
+                                                btn.setBackgroundColor(getResources().getColor(R.color.rightGuysColour));
+                                            }
+                                        } else {
+                                            teamName = leftTeamName;
+                                            if (isFemale){
+                                                btn.setBackgroundColor(getResources().getColor(R.color.leftGirlsColour));
+                                            } else {
+                                                btn.setBackgroundColor(getResources().getColor(R.color.leftGuysColour));
+                                            }
+                                        }
+
+                                        if (rosterList.getTeamName(intChosenTeam).equals(teamName.getText().toString())){
+                                            btn.setText(rosterList.getPlayerName(intChosenTeam, which));
+                                        } else {
+                                            String txtButtonText = rosterList.getPlayerName(intChosenTeam, which) + "(S)";
+                                            btn.setText(txtButtonText);
+                                        }
+
+                                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
+                                        btn.setLayoutParams(param);
+                                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
+                                        btn.setOnClickListener(changeTextListener);
+                                        btn.setGravity(btnLastButtonClicked.getGravity());
+                                    }
+                                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                // Do nothing.
+                            }
+                        }).show();
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Do nothing.
+            }
+        }).show();
+    }
+
+    private void addSubManually(final EditText input){
+        new AlertDialog.Builder(mainContext)
+                .setTitle("Add Sub Manually")
+                .setMessage("Player Name")
+                .setView(input)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        forceRosterChange = true;
+                        Editable value = input.getText();
+                        Button btn = new Button(mainContext);
+                        String txtButtonText = value.toString()+"(S)";
+                        btn.setText(txtButtonText);
+                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
+                        btn.setLayoutParams(param);
+                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
+                        btn.setOnClickListener(changeTextListener);
+                        btn.setBackgroundColor(getResources().getColor(R.color.manualEntryButtonColour));
+                        btn.setGravity(btnLastButtonClicked.getGravity());
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Do nothing.
+            }
+        }).show();
+    }
 
     private void startRosterLoad() {
         boolean JSONExists = checkJSONExists();
