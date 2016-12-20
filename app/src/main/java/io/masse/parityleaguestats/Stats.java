@@ -214,7 +214,7 @@ public class Stats extends Activity {
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
-                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Delete this Player" , "Cancel"}, new DialogInterface.OnClickListener() {
+                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Delete " + btnLastButtonClicked.getText(), "Cancel"}, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which){
                                     case 0: //add sub from Existing team
