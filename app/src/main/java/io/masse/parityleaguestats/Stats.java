@@ -100,7 +100,6 @@ public class Stats extends Activity {
     private MenuItem mnuItmEditTeam;
 
     private Button btnLastButtonClicked;
-    private File lastFileSaved;
     private actionTracker gameStats;
     private Bookkeeper bookkeeper;
 
@@ -527,17 +526,21 @@ public class Stats extends Activity {
                                 bookkeeper.gameCompleted();
                                 saveGameToFile(true);
                                 uploadGame();
-                                emailFile();
+                                clearStats();
+                                bookkeeper.startGame();
+                            }
+                        }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                bookkeeper.gameCompleted();
+                                saveGameToFile(true);
                                 clearStats();
                                 bookkeeper.startGame();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        // Do nothing.
-                    }
-                }).show();
-
-                return true;
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                // Do nothing.
+                            }
+                        }).show();
             case R.id.action_half:
                 if (editOn){
                     Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
@@ -682,7 +685,6 @@ public class Stats extends Activity {
             Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
         }
 
-        lastFileSaved = file;
         Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
     }
 
@@ -727,15 +729,6 @@ public class Stats extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private void emailFile(){
-        Intent email = new Intent(Intent.ACTION_SEND);
-        email .setType("text/csv");
-        email .putExtra(Intent.EXTRA_SUBJECT, lastFileSaved.getName());
-        email .putExtra(Intent.EXTRA_EMAIL, new String[]{"mmasse@gmail.com"});
-        email .putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + lastFileSaved.toString()));
-        startActivity(Intent.createChooser(email, "Email:"));
     }
 
     private class ButtonPress extends AsyncTask <Button, Button, Long> {
