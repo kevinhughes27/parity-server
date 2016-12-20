@@ -214,7 +214,7 @@ public class Stats extends Activity {
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
-                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a sub manually" , "Change Player Colour" , "Delete this player" , "Cancel"}, new DialogInterface.OnClickListener() {
+                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Change Player Colour" , "Delete this Player" , "Cancel"}, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which){
                                     case 0: //add sub from Existing team
@@ -281,8 +281,8 @@ public class Stats extends Activity {
 
                                     case 1: //add a sub manually
                                         new AlertDialog.Builder(mainContext)
-                                                .setTitle("Change " + btnLastButtonClicked.getText())
-                                                .setMessage("Change Name" )
+                                                .setTitle("Add Sub Manually")
+                                                .setMessage("Player Name")
                                                 .setView(input)
                                                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                                     public void onClick(DialogInterface dialog, int whichButton) {
