@@ -214,7 +214,7 @@ public class Stats extends Activity {
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
-                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Change Player Colour" , "Delete this Player" , "Cancel"}, new DialogInterface.OnClickListener() {
+                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Delete this Player" , "Cancel"}, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which){
                                     case 0: //add sub from Existing team
@@ -304,40 +304,11 @@ public class Stats extends Activity {
                                             }
                                         }).show();
                                         break;
-                                    /*case 2: //change player color
-
-                                        int initialValue = ((ColorDrawable) btnLastButtonClicked.getBackground()).getColor();
-                                        //Log.d("mColorPicker", "initial value:" + initialValue);
-
-                                        final ColorPickerDialog colorDialog = new ColorPickerDialog(mainContext, initialValue);
-
-                                        colorDialog.setAlphaSliderVisible(false);
-                                        colorDialog.setTitle("Pick " + btnLastButtonClicked.getText().toString() + "'s Colour");
-
-                                        colorDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-
-                                                btnLastButtonClicked.setBackgroundColor(colorDialog.getColor());
-
-                                            }
-                                        });
-                                        colorDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
-
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                //Nothing to do here.
-                                            }
-                                        });
-                                        colorDialog.show();
-
-                                        break;
-                                        */
-                                    case 3://delete player
+                                    case 2://delete player
                                         forceRosterChange = true;
                                         ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
                                         break;
-                                    case 4:
+                                    case 3:
                                         //do nothing
                                         break;
                                 }
