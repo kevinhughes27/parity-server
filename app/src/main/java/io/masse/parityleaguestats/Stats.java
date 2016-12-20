@@ -238,7 +238,12 @@ public class Stats extends Activity {
             }
         };
 
-        if ((savedInstanceState != null) && (savedInstanceState.getSerializable("arrayEventNames") != null)  && (savedInstanceState.getSerializable("arrayEventActions") != null) && (savedInstanceState.getSerializable("leftTeam") != null) && (savedInstanceState.getSerializable("rightTeam") != null)) {
+        if ((savedInstanceState != null) &&
+            (savedInstanceState.getSerializable("arrayEventNames") != null)  &&
+            (savedInstanceState.getSerializable("arrayEventActions") != null) &&
+            (savedInstanceState.getSerializable("leftTeam") != null) &&
+            (savedInstanceState.getSerializable("rightTeam") != null)) {
+
             gameStats = (actionTracker) savedInstanceState.getSerializable("gameStats");
 
             ArrayList<String> leftTeam;
@@ -271,7 +276,7 @@ public class Stats extends Activity {
             Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
 
         } else {
-            startRosterLoad();
+            new fetchRoster(mainContext, myself).execute();
         }
 
         btnUndo.setOnClickListener(mainOnClickListener);
@@ -317,35 +322,6 @@ public class Stats extends Activity {
                 // Do nothing.
             }
         }).show();
-    }
-
-    private void startRosterLoad() {
-        boolean JSONExists = checkJSONExists();
-
-        if (JSONExists){
-            loadJSON();
-
-            new AlertDialog.Builder(mainContext)
-                    .setTitle("Load Roster?")
-                    .setMessage("Load a new roster from the internet?")
-                    .setPositiveButton("Load New Roster", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            new fetchRoster(mainContext, myself).execute();
-                        }
-                    }).setNegativeButton("Use Current Roster", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                    loadNewTeams();
-                }
-            }).show();
-        } else {
-            new fetchRoster(mainContext, myself).execute();
-        }
-    }
-
-    private boolean checkJSONExists(){
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
-        File file = new File(strFileName);
-        return file.exists();
     }
 
     private void saveButtonVisibility() {
@@ -511,7 +487,7 @@ public class Stats extends Activity {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_actions, menu);
-        mnuItmEditTeam = menu.findItem(R.id.action_edit_team_players);
+        mnuItmEditTeam = menu.findItem(R.id.action_edit_teams);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -520,7 +496,7 @@ public class Stats extends Activity {
         // Handle presses on the action bar items
 
         switch (item.getItemId()) {
-            case R.id.action_edit_team_players:
+            case R.id.action_edit_teams:
                 if (rosterChange) {
                     Toast.makeText(mainContext, "Exit roster change mode first.", Toast.LENGTH_LONG).show();
                     return true;
@@ -569,7 +545,7 @@ public class Stats extends Activity {
                 }
                 half();
                 return true;
-            case R.id.load_roster_from_web:
+            case R.id.action_select_teams:
                 if (editOn){
                     Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
                     return true;
@@ -979,7 +955,7 @@ public class Stats extends Activity {
             editOn = false;
             leftTeamName.setGravity(Gravity.START);
             rightTeamName.setGravity(Gravity.END);
-            mnuItmEditTeam.setTitle(R.string.str_action_edit_team_players);
+            mnuItmEditTeam.setTitle(R.string.str_action_edit_teams);
 
             for (int i = 0; i < leftCount; i++){
                 ((Button) layoutLeft.getChildAt(i)).setGravity(Gravity.CENTER);
@@ -1225,7 +1201,7 @@ public class Stats extends Activity {
                 btnMode.setEnabled(false);
                 saveButtonVisibility();
 
-                mnuItmEditTeam.setTitle(R.string.str_action_stop_edit_team_players);
+                mnuItmEditTeam.setTitle(R.string.str_action_stop_edit_teams);
 
                 for (int i = 0; i < leftCount; i++){
                     Button currentButton = (Button) layoutLeft.getChildAt(i);
@@ -1420,17 +1396,3 @@ public class Stats extends Activity {
         }
     }
 }
-
-/**
-//Shared Preferences Code
- init
- final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
- get
- int initialValue = prefs.getInt("color_2", 0xFF000000);
-
- set forget
- SharedPreferences.Editor editor = prefs.edit();00);
- editor.putInt("color_2", colorDialog.getColor());
- editor.commit();
-*/
