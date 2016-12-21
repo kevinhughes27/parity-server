@@ -21,9 +21,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Iterator;
@@ -210,7 +212,7 @@ public class Stats extends Activity {
             @Override
             public void onClick(View view) {
                 btnLastButtonClicked = (Button) view;
-                final EditText input = new EditText(view.getContext());
+                final AutoCompleteTextView input = new AutoCompleteTextView(view.getContext());
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
@@ -346,7 +348,14 @@ public class Stats extends Activity {
         }).show();
     }
 
-    private void addSubManually(final EditText input){
+    private void addSubManually(final AutoCompleteTextView input) {
+        ArrayList<String> names = new ArrayList<String>();
+        for (int i = 0; i < rosterList.size(); i++) {
+            names.addAll(Arrays.asList(rosterList.getPlayers(i)));
+        }
+
+        input.setAdapter(new ArrayAdapter<String>(mainContext, android.R.layout.simple_dropdown_item_1line, names));
+
         new AlertDialog.Builder(mainContext)
                 .setTitle("Add Sub Manually")
                 .setMessage("Player Name")
@@ -356,7 +365,7 @@ public class Stats extends Activity {
                         forceRosterChange = true;
                         Editable value = input.getText();
                         Button btn = new Button(mainContext);
-                        String txtButtonText = value.toString()+"(S)";
+                        String txtButtonText = value.toString() + "(S)";
                         btn.setText(txtButtonText);
                         ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
                         btn.setLayoutParams(param);
