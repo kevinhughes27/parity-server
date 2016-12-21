@@ -214,25 +214,30 @@ public class Stats extends Activity {
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
-                        .setItems(new String[] {"Add a Sub from an Existing Team" , "Add a Sub Manually" , "Delete " + btnLastButtonClicked.getText(), "Cancel"}, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                switch (which){
-                                    case 0: //add sub from Existing team
-                                        addSubFromTeam();
-                                        break;
-                                    case 1: //add a sub manually
-                                        addSubManually(input);
-                                        break;
-                                    case 2://delete player
-                                        forceRosterChange = true;
-                                        ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
-                                        break;
-                                    case 3:
-                                        //do nothing
-                                        break;
-                                }
-                            }
-                        }).show();
+                        .setItems(new String[]{
+                                        "Add a Sub from an Existing Team",
+                                        "Add a Sub Manually",
+                                        "Delete " + btnLastButtonClicked.getText(),
+                                        "Cancel"},
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        switch (which) {
+                                            case 0: //add sub from Existing team
+                                                addSubFromTeam();
+                                                break;
+                                            case 1: //add a sub manually
+                                                addSubManually(input);
+                                                break;
+                                            case 2://delete player
+                                                forceRosterChange = true;
+                                                ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
+                                                break;
+                                            case 3:
+                                                //do nothing
+                                                break;
+                                        }
+                                    }
+                                }).show();
             }
         };
 
