@@ -4,10 +4,9 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router'
-import StatsTable from './StatsTable'
-import Stats from './Stats'
+import Loader from './Loader'
 import Loading from './Loading'
-import request from 'browser-request'
+import StatsTable from './StatsTable'
 
 class App extends Component {
   state: {
@@ -28,33 +27,17 @@ class App extends Component {
     }
   }
 
-  componentWillMount () {
-    this._fetchWeeks()
+  async componentDidMount () {
+    let weeks = await Loader.fetchWeeks()
+    let week = _.last(weeks) || 0
+    let stats = await Loader.fetchStats(week)
+    this.setState({weeks, week, stats, loading: false})
   }
 
-  _fetchWeeks () {
-    request('/weeks', (er, response, body) => {
-      let weeks = JSON.parse(body)
-      this.setState({ weeks: weeks })
-      let week = _.last(weeks) || 0
-      this.weekChange(week)
-    })
-  }
-
-  _fetchWeek (num: number) {
-    let url = `/weeks/${num}`
-    if (num === 0) url = '/stats'
-
-    request(url, (er, response, body) => {
-      let data = body ? JSON.parse(body).stats : {}
-      let stats = new Stats(data)
-      this.setState({ stats: stats, loading: false })
-    })
-  }
-
-  weekChange (week: number) {
-    this.setState({week: week, loading: true})
-    this._fetchWeek(week)
+  async weekChange (week: number) {
+    this.setState({week, loading: true})
+    let stats = await Loader.fetchStats(week)
+    this.setState({ stats, loading: false })
   }
 
   renderNav () {
@@ -81,8 +64,7 @@ class App extends Component {
   renderMain () {
     if (this.state.loading) return (<Loading />)
 
-    let week = this.state.week
-    let stats = this.state.stats
+    let { week, stats } = this.state
 
     return (
       <div className="container" style={{height: '100%', minHeight: '100%'}}>
