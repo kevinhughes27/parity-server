@@ -27,17 +27,21 @@ class App extends Component {
     }
   }
 
-  async componentDidMount () {
-    let weeks = await Loader.fetchWeeks()
-    let week = _.last(weeks) || 0
-    let stats = await Loader.fetchStats(week)
-    this.setState({weeks, week, stats, loading: false})
+  componentDidMount () {
+    async () => {
+      let weeks = await Loader.fetchWeeks()
+      let week = _.last(weeks) || 0
+      let stats = await Loader.fetchStats(week)
+      this.setState({weeks, week, stats, loading: false})
+    }
   }
 
-  async weekChange (week: number) {
-    this.setState({week, loading: true})
-    let stats = await Loader.fetchStats(week)
-    this.setState({ stats, loading: false })
+  weekChange (week: number) {
+    async () => {
+      this.setState({week, loading: true})
+      let stats = await Loader.fetchStats(week)
+      this.setState({ stats, loading: false })
+    }
   }
 
   renderNav () {
