@@ -29,7 +29,8 @@ class uploadGame extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
-        String url = "https://parity-server.herokuapp.com/upload";
+        // String url = "https://parity-server.herokuapp.com/upload";
+        String url = "localhost:3001/upload";
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
