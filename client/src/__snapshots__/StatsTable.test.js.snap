@@ -1,0 +1,249 @@
+exports[`test StatsTable renders correctly 1`] = `
+<div
+  className="griddle">
+  <div
+    className="top-section"
+    style={null}>
+    <div
+      className="griddle-filter"
+      style={null}>
+      <div
+        className="filter-container">
+        <input
+          className="form-control"
+          name="filter"
+          onChange={[Function bound handleChange]}
+          placeholder="Search players or team ..."
+          type="text" />
+      </div>
+    </div>
+    <div
+      className="griddle-settings-toggle"
+      style={null}>
+      
+    </div>
+  </div>
+  
+  <div
+    className="griddle-container"
+    style={null}>
+    <div
+      className="griddle-body">
+      <div
+        onScroll={[Function bound gridScroll]}
+        style={null}>
+        <table
+          className="highlight responsive-table"
+          style={null}>
+          <thead>
+            <tr
+              className={null}
+              style={Object {}}>
+              <th
+                className=""
+                data-title="Name"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Name
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Team"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Team
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Goals"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Goals
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Assists"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Assists
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="2nd Assist"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  2nd Assist
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="D-Blocks"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  D-Blocks
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Catches"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Catches
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Completions"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Completions
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Throwaways"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Throwaways
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="ThrewDrop"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  ThrewDrop
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Drops"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Drops
+                </span>
+              </th>
+              <th
+                className=""
+                data-title="Salary"
+                onClick={[Function anonymous]}
+                style={Object {}}>
+                <span>
+                  Salary
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="standard-row"
+              onClick={null}>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                Kevin Hughes
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                Like a Boss
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                2
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                1
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                1
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                1
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                17
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                19
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                1
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                0
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                
+                0
+              </td>
+              <td
+                className={undefined}
+                onClick={[Function bound handleClick]}
+                style={null}>
+                <span>
+                  $1,071,666
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody />
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
