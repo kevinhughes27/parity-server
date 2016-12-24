@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/action_edit_team_players"
-        android:title="@string/str_action_edit_team_players"
+    <item android:id="@+id/action_edit_teams"
+        android:title="@string/str_action_edit_teams"
         android:layout_width="wrap_content" />
     <item android:id="@+id/action_half"
         android:title="@string/str_action_half"
         android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_select_teams"
+    android:title="@string/str_action_select_teams" />
     <item android:id="@+id/action_save_game"
         android:title="@string/str_action_save_game" />
-    <item android:id="@+id/load_roster_from_web"
-    android:title="@string/str_load_roster_from_web" />
 </menu>
