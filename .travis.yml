@@ -5,6 +5,7 @@ before_script: sleep 15
 cache:
   directories:
     - node_modules
+    - client/node_modules
 script:
   - npm run lint
   - npm run flow

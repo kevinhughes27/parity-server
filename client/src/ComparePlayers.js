@@ -1,3 +1,5 @@
+// @flow
+
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from './Stats'
@@ -24,7 +26,8 @@ type Props = {
 
 export default class ComparePlayers extends Component {
   props: Props
-
+  graph: PlayerGraph
+  node: Node
   state: {
     week: number,
     stats: Stats,

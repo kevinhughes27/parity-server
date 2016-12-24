@@ -1,13 +1,24 @@
-import d3 from 'd3'
+// @flow
 
+import d3 from 'd3'
 import d3Tip from 'd3-tip'
 d3.tip = d3Tip
 
 import format from 'format-number'
 
 export default class LeagueGraph {
+  margin: {top: number, right: number, bottom: number, left: number}
+  width: number
+  height: number
+  x: any
+  y: any
+  klass: any
+  xAxis: any
+  yAxis: any
+  chart: any
+  tip: any
 
-  init (node) {
+  init (node: any) {
     this.margin = {top: 20, right: 20, bottom: 80, left: 40}
     this.width = node.clientWidth - this.margin.left - this.margin.right
     this.height = 500 - this.margin.top - this.margin.bottom
@@ -34,7 +45,7 @@ export default class LeagueGraph {
         .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')')
   }
 
-  create (teams, stats, salaryCap, salaryFloor) {
+  create (teams: Array<string>, stats: any, salaryCap: number, salaryFloor: number) {
     let data = this._formatData(teams, stats)
 
     this.x.domain(data.map((d) => d.team))
@@ -110,7 +121,7 @@ export default class LeagueGraph {
         .attr('height', (d) => this.y(d.y0) - this.y(d.y1))
   }
 
-  update (teams, stats, salaryCap) {
+  update (teams: Array<string>, stats: any, salaryCap: number) {
     let data = this._formatData(teams, stats)
     let flatData = []
     data.forEach((d) => {
@@ -131,7 +142,7 @@ export default class LeagueGraph {
         })
   }
 
-  _formatData (teams, stats) {
+  _formatData (teams: Array<string>, stats: any) {
     let data = []
     for (let team of teams) {
       let players = stats.playersFor(team)
