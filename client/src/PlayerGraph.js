@@ -1,3 +1,5 @@
+// @flow
+
 import d3 from 'd3'
 import d3Tip from 'd3-tip'
 d3.tip = d3Tip
@@ -5,8 +7,19 @@ d3.tip = d3Tip
 import format from 'format-number'
 
 export default class PlayerGraph {
+  margin: {top: number, right: number, bottom: number, left: number}
+  width: number
+  height: number
+  x0: any
+  x1: any
+  y: any
+  klass: any
+  xAxis: any
+  yAxis: any
+  chart: any
+  tip: any
 
-  init (node) {
+  init (node: any) {
     this.margin = {top: 60, right: 30, bottom: 30, left: 30}
     this.width = node.clientWidth - this.margin.left - this.margin.right
 
@@ -46,7 +59,7 @@ export default class PlayerGraph {
     return this.width < 500
   }
 
-  create (playerA, playerB, statNames) {
+  create (playerA: any, playerB: any, statNames: Array<string>) {
     let data = []
     for (let stat of statNames) {
       let playerAStat = playerA[stat] || 0
@@ -129,7 +142,7 @@ export default class PlayerGraph {
         .attr('height', (d) => this.height - this.y(d.value))
   }
 
-  update (playerA, playerB, statNames) {
+  update (playerA: any, playerB: any, statNames: Array<string>) {
     let data = []
     for (let stat of statNames) {
       let playerAStat = playerA[stat] || 0

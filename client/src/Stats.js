@@ -1,7 +1,11 @@
+// @flow
+
 import _ from 'lodash'
 
 export default class Stats {
-  constructor (data) {
+  data: any
+
+  constructor (data: any) {
     this.data = data
   }
 
@@ -21,11 +25,11 @@ export default class Stats {
     return _.sortBy(teams, (t) => t.length)
   }
 
-  forPlayer (playerName) {
+  forPlayer (playerName: string) {
     return this.data[playerName]
   }
 
-  playersFor (team) {
+  playersFor (team: string) {
     let players = []
     _.mapKeys(this.data, (playerStats, playerName) => {
       if (playerStats['Team'] === team) {
@@ -38,7 +42,7 @@ export default class Stats {
     return players
   }
 
-  applyTrade (playerA, playerB) {
+  applyTrade (playerA: string, playerB: string) {
     let teamA = this.data[playerA]['Team']
     let teamB = this.data[playerB]['Team']
 
@@ -46,7 +50,7 @@ export default class Stats {
     this.data[playerB]['Team'] = teamA
   }
 
-  teamSalary (team) {
+  teamSalary (team: string) {
     let players = this.playersFor(team)
     return _.sum(_.map(players, (p) => p.salary))
   }

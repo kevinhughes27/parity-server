@@ -1,3 +1,5 @@
+// @flow
+
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from './Stats'
@@ -22,7 +24,8 @@ type Trade = {
 
 export default class TradeSimulator extends Component {
   props: Props
-
+  graph: LeagueGraph
+  node: Node
   state: {
     week: number,
     stats: Stats,
@@ -56,14 +59,14 @@ export default class TradeSimulator extends Component {
   renderD3 () {
     let stats = this.state.stats
 
-    this.barChart = new LeagueGraph()
-    this.barChart.init(this.barChartNode)
-    this.barChart.create(stats.teamNames(), stats, stats.salaryCap(), stats.salaryFloor())
+    this.graph = new LeagueGraph()
+    this.graph.init(this.node)
+    this.graph.create(stats.teamNames(), stats, stats.salaryCap(), stats.salaryFloor())
   }
 
   updateD3 () {
     let stats = this.state.stats
-    this.barChart.update(stats.teamNames(), stats, stats.salaryCap())
+    this.graph.update(stats.teamNames(), stats, stats.salaryCap())
   }
 
   playerAChanged (value: string) {
@@ -95,7 +98,7 @@ export default class TradeSimulator extends Component {
     this.setState({stats: stats, trades: trades})
   }
 
-  deleteTrade (trade) {
+  deleteTrade (trade: Trade) {
     let { stats, trades } = this.state
     let playerA = trade.playerA.name
     let playerB = trade.playerB.name
@@ -170,7 +173,7 @@ export default class TradeSimulator extends Component {
         </div>
 
         <div className="row" style={{paddingTop: 10}}>
-          <div id="chart" ref={(node) => { this.barChartNode = node }}></div>
+          <div id="chart" ref={(node) => { this.node = node }}></div>
         </div>
       </div>
     )

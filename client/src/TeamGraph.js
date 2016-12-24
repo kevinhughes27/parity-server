@@ -1,8 +1,16 @@
+// @flow
+
 import d3 from 'd3'
 
 export default class TeamGraph {
+  width: number
+  height: number
+  radius: number
+  arc: any
+  pie: any
+  chart: any
 
-  init (node) {
+  init (node: any) {
     this.width = node.clientWidth
     this.height = 480
     this.radius = Math.min(this.width, this.height) / 2
@@ -22,7 +30,7 @@ export default class TeamGraph {
         .attr('transform', 'translate(' + this.width / 2 + ',' + this.height / 2 + ')')
   }
 
-  create (players) {
+  create (players: Array<any>) {
     let data = this._formatData(players)
 
     let g = this.chart.selectAll('.arc')
@@ -50,7 +58,7 @@ export default class TeamGraph {
       .text((d) => d.data.name)
   }
 
-  update (players) {
+  update (players: Array<any>) {
     let data = this._formatData(players)
 
     this.chart.selectAll('text')
@@ -74,7 +82,7 @@ export default class TeamGraph {
       .duration(10)
   }
 
-  _formatData (players) {
+  _formatData (players: Array<any>) {
     let data = []
 
     players.forEach((player, index) => {

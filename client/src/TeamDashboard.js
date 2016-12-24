@@ -1,3 +1,5 @@
+// @flow
+
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from './Stats'
@@ -11,7 +13,8 @@ type Props = {
 
 export default class TeamDashboard extends Component {
   props: Props
-
+  graph: TeamGraph
+  node: Node
   state: {
     week: number,
     stats: Stats,
@@ -45,14 +48,14 @@ export default class TeamDashboard extends Component {
   renderD3 () {
     let players = this.playersForCurrentTeam()
 
-    this.pieChart = new TeamGraph()
-    this.pieChart.init(this.pieChartNode)
-    this.pieChart.create(players)
+    this.graph = new TeamGraph()
+    this.graph.init(this.node)
+    this.graph.create(players)
   }
 
   updateD3 () {
     let players = this.playersForCurrentTeam()
-    this.pieChart.update(players)
+    this.graph.update(players)
   }
 
   renderTeams (teams: Array<any>) {
@@ -135,7 +138,7 @@ export default class TeamDashboard extends Component {
             {this.renderPlayers()}
           </div>
           <div className="col m6">
-            <div id="pie-chart" ref={(node) => { this.pieChartNode = node }}></div>
+            <div id="pie-chart" ref={(node) => { this.node = node }}></div>
           </div>
         </div>
       </div>

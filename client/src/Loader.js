@@ -1,3 +1,5 @@
+// @flow
+
 import 'whatwg-fetch'
 import Stats from './Stats'
 

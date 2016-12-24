@@ -28,20 +28,20 @@ class App extends Component {
   }
 
   componentDidMount () {
-    async () => {
+    (async () => {
       let weeks = await Loader.fetchWeeks()
       let week = _.last(weeks) || 0
       let stats = await Loader.fetchStats(week)
       this.setState({weeks, week, stats, loading: false})
-    }
+    })()
   }
 
   weekChange (week: number) {
-    async () => {
+    (async () => {
       this.setState({week, loading: true})
       let stats = await Loader.fetchStats(week)
       this.setState({ stats, loading: false })
-    }
+    })()
   }
 
   renderNav () {
