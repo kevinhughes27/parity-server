@@ -15,8 +15,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SERVER_URL", "\"https://parity-server.herokuapp.com/upload\""
         }
         debug {
+            buildConfigField "String", "SERVER_URL", "\"localhost:3001/upload\""
         }
     }
     productFlavors {
