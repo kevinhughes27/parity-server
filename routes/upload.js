@@ -61,11 +61,8 @@ router.post('/upload', async function (req, res) {
   // this should only be used when someone misses the first
   // game after they join midway through. Or if a salary is
   // needed before the player has played.
-  if (game.new_players) {
-    let adjustments = {}
-    _.mapValues(game.new_players, (salary, player) => {
-      adjustments[player] = {'Salary': salary}
-    })
+  if (game.player_adjustments) {
+    let adjustments = game.player_adjustments
     game.stats = _.merge(game.stats, adjustments)
   }
 
