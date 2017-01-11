@@ -42,10 +42,10 @@ Running:
   curl -X POST -d '{"week": 1, "events": ["Pull,Mike", "POINT,Jill,Pass,Bob"]}' -H "Content-Type: application/json" http://localhost:3000/upload
   ```
 
-  or you can send a full set of events from `test/files` using:
+  or you can send a full set of events from the `db` using:
 
   ```
-  curl -X POST --data @test/files/week1_game1.json -H "Content-Type: application/json" http://localhost:3000/upload
+  curl -X POST --data @db/week1_game1.json -H "Content-Type: application/json" http://localhost:3000/upload
   ```
 
   To seed your development database with all the test files run `npm run db:seed`

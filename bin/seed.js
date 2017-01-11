@@ -11,7 +11,7 @@ if (process.argv[2] === 'prod') {
   url = 'https://parity-server.herokuapp.com/upload'
 }
 
-glob('test/files/*.json', (err, files) => {
+glob('db/*.json', (err, files) => {
   if (err) console.log(err)
 
   let iterations = files.length

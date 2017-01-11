@@ -11,7 +11,7 @@ request.get(url, (error, response, body) => {
 
   games.forEach((game, idx) => {
     game = _.omit(game, ['stats', '_id'])
-    let file = `test/files/week${week}_game${idx + 1}.json`
+    let file = `db/week${week}_game${idx + 1}.json`
     fs.writeFileSync(file, JSON.stringify(game, null, 4))
   })
 })
