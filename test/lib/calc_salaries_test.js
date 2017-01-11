@@ -70,12 +70,33 @@ describe('calcSalaries', function () {
     expect(salaryDeltas['Mike']['Salary']).to.equal(expectedSalary)
   })
 
-  it('gives a new player their delta multplied by the number of weeks into the league', function () {
-    stats = { 'Newbie': {'Team': 'Beans', 'Goals': 1} }
+  it('regular salary gain for new player in week 4', function () {
     games[0].week = 4
+    stats = { 'Newbie': {'Team': 'Beans', 'Goals': 1} }
 
     let salaryDeltas = calcSalaries(stats, games)
-    expect(salaryDeltas['Newbie']['SalaryDelta']).to.equal(10000)
-    expect(salaryDeltas['Newbie']['Salary']).to.equal(540000)
+    let expectedDelta = 10000
+    // the delta multplied by the number of weeks into the league
+    let expectedSalary = expectedDelta * 4 + 500000
+
+    expect(salaryDeltas['Newbie']['SalaryDelta']).to.equal(expectedDelta)
+    expect(salaryDeltas['Newbie']['Salary']).to.equal(expectedSalary)
+  })
+
+  it('negative salary gain for new player in week 8', function () {
+    games[0].week = 8
+    stats = { 'Newbie': {'Team': 'Beans',
+      'Catches': 2,
+      'Completions': 1,
+      'Throwaways': 1,
+      'Drops': 2
+    }}
+
+    let salaryDeltas = calcSalaries(stats, games)
+    let expectedDelta = -12000
+    let expectedSalary = expectedDelta * 8 + 500000
+
+    expect(salaryDeltas['Newbie']['SalaryDelta']).to.equal(expectedDelta)
+    expect(salaryDeltas['Newbie']['Salary']).to.equal(expectedSalary)
   })
 })
