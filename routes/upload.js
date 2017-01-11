@@ -46,13 +46,28 @@ router.post('/upload', async function (req, res) {
   let stats = calcStats(game.event_string)
   game.stats = stats
 
+  // add the players current team to the stats object
   let playerTeams = calcTeams(game.teams, game.stats)
   game.stats = _.merge(game.stats, playerTeams)
 
+  // games sorted from week 1 to N
   let games = await Games.find({}, {sort: { week: 1 }})
 
+  // use the stats to calculate each players salary
   let playerSalaries = calcSalaries(stats, games)
   game.stats = _.merge(game.stats, playerSalaries)
+
+  // apply any adjusments for new players
+  // this should only be used when someone misses the first
+  // game after they join midway through. Or if a salary is
+  // needed before the player has played.
+  if (game.new_players) {
+    let adjustments = {}
+    _.mapValues(game.new_players, (salary, player) => {
+      adjustments[player] = {'Salary': salary}
+    })
+    game.stats = _.merge(game.stats, adjustments)
+  }
 
   await saveGame(game)
 
