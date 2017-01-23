@@ -121,7 +121,6 @@ public class Stats extends Activity {
     private LinearLayout.LayoutParams param;
 
     //todo fix this it's ugly
-    private int intChosenTeam;
     private ArrayList<String> leftPlayers;
     private ArrayList<String> rightPlayers;
 
@@ -150,7 +149,6 @@ public class Stats extends Activity {
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
-        intChosenTeam = -1;
         currentState = -1;
         previousState = currentState;
 
@@ -548,14 +546,6 @@ public class Stats extends Activity {
                 }
                 half();
                 return true;
-            case R.id.action_select_teams:
-                if (editOn){
-                    Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
-                    return true;
-                }
-                new fetchRoster(mainContext, this).execute();
-
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -725,7 +715,7 @@ public class Stats extends Activity {
             // Upload
             String json = jsonObject.toString();
             new uploadGame(mainContext).execute(json);
-            return;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
