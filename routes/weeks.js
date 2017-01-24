@@ -6,6 +6,7 @@ let router = express.Router()
 const Db = require('monk')(process.env.MONGODB_URI)
 const Games = Db.get('games')
 
+import _ from 'lodash'
 import calcWeek from '../lib/calc_week'
 
 /**
@@ -23,7 +24,7 @@ import calcWeek from '../lib/calc_week'
  */
 router.get('/weeks', async function (req, res) {
   let weeks = await Games.distinct('week')
-  weeks = weeks.sort()
+  weeks = _.sortBy(weeks)
   res.json(weeks)
 })
 
