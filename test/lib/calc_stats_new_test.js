@@ -8,15 +8,15 @@ import calcStatsNew from '../../lib/calc_stats_new'
 
 describe('comparison with old event model', function () {
   let testCases = [
-    // 'week1_game1',
-    // 'week1_game2',
-    // 'week2_game1',
-    'week2_game2'
+    // 'week01_game1',
+    // 'week01_game2',
+    // 'week02_game1',
+    'week02_game2'
   ]
 
   for (let testCase of testCases) {
     it(`matches for game ${testCase}`, function () {
-      let filePath = `test/files/${testCase}.json`
+      let filePath = `db/${testCase}.json`
       let input = JSON.parse(fs.readFileSync(filePath))
 
       let numPoints = input.points.length
