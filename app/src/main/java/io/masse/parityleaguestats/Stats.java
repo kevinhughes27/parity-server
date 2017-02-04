@@ -304,17 +304,21 @@ public class Stats extends Activity {
                 .setView(input)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
+
                         forceRosterChange = true;
-                        Editable value = input.getText();
+                        String playerName = input.getText().toString();
                         Button btn = new Button(mainContext);
-                        String txtButtonText = value.toString() + "(S)";
+                        String txtButtonText = playerName + "(S)";
                         btn.setText(txtButtonText);
                         ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
                         btn.setLayoutParams(param);
                         btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
                         btn.setOnClickListener(teamEditListener);
-                        btn.setBackgroundColor(getResources().getColor(R.color.manualEntryButtonColour));
                         btn.setGravity(btnLastButtonClicked.getGravity());
+
+                        int color = rosterList.getPlayerColour(playerName);
+                        btn.setBackgroundColor(getResources().getColor(color));
+
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
