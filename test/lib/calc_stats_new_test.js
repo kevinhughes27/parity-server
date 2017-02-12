@@ -10,7 +10,7 @@ describe('comparison with old event model', function () {
   let testCases = [
     // 'week01_game1',
     // 'week01_game2',
-    // 'week02_game1',
+    'week02_game1',
     'week02_game2'
   ]
 
