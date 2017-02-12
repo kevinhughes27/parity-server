@@ -15,13 +15,24 @@ describe('comparison with old event model', function () {
     'week02_game1',
     'week02_game2',
     'week02_game3',
-    'week02_game4'
+    'week02_game4',
+    'week10_game1',
+    // 'week10_game2',
+    // 'week10_game3',
+    'week10_game4'
   ]
 
   for (let testCase of testCases) {
     it(`matches for game ${testCase}`, function () {
       let filePath = `db/${testCase}.json`
       let input = JSON.parse(fs.readFileSync(filePath))
+
+      // temp-fix remove duplicate points
+      let uniqPoints = _.uniqWith(input.points, _.isEqual)
+      if (uniqPoints.length < input.points.length) {
+        console.log('has duplicate points')
+        input.points = uniqPoints
+      }
 
       let numPoints = input.points.length
       for (let n = 1; n <= numPoints; n++) {
