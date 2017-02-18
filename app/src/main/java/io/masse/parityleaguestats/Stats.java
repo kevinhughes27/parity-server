@@ -12,6 +12,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.Editable;
+import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -210,6 +211,7 @@ public class Stats extends Activity {
             public void onClick(View view) {
                 btnLastButtonClicked = (Button) view;
                 final AutoCompleteTextView input = new AutoCompleteTextView(view.getContext());
+                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
