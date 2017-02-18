@@ -290,6 +290,17 @@ public class Stats extends Activity {
         changeState(autoState);
     }
 
+    private void addPlayerButton(LinearLayout parent, String name, int colorId){
+        final Button btn = new Button(mainContext);
+        btn.setText(name);
+        parent.addView(btn);
+        btn.setLayoutParams(param);
+        btn.setId(parent.getChildCount() - 1);
+        btn.setOnClickListener(teamEditListener);
+        btn.setGravity(btnLastButtonClicked.getGravity());
+        btn.setBackgroundColor(getResources().getColor(colorId));
+    }
+
     private void addSubstitutePlayer(final AutoCompleteTextView input) {
         ArrayList<String> names = new ArrayList<String>();
         for (int i = 0; i < rosterList.size(); i++) {
@@ -304,20 +315,33 @@ public class Stats extends Activity {
                 .setView(input)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-
                         forceRosterChange = true;
                         String playerName = input.getText().toString();
-                        Button btn = new Button(mainContext);
-                        String txtButtonText = playerName + "(S)";
-                        btn.setText(txtButtonText);
-                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
-                        btn.setLayoutParams(param);
-                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                        btn.setOnClickListener(teamEditListener);
-                        btn.setGravity(btnLastButtonClicked.getGravity());
+                        final String txtButtonText = playerName + "(S)";
+                        final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
 
+                        // This all is kind of gross
                         int color = rosterList.getPlayerColour(playerName);
-                        btn.setBackgroundColor(getResources().getColor(color));
+                        if (color == R.color.manualEntryButtonColour) {
+                            new AlertDialog.Builder(mainContext)
+                                    .setTitle("Select Gender")
+                                    .setMessage(playerName)
+                                    .setPositiveButton("Female", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            addPlayerButton(parent, txtButtonText, R.color.leftGirlsColour);
+                                        }
+                                    })
+                                    .setNegativeButton("Male", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            addPlayerButton(parent, txtButtonText, R.color.leftGuysColour);
+                                        }
+                                    })
+                                    .show();
+                        } else {
+                            addPlayerButton(parent, txtButtonText, color);
+                        }
 
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
