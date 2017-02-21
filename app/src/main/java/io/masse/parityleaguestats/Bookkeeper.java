@@ -16,8 +16,8 @@ public class Bookkeeper {
 
     private List<Game> games = new ArrayList<Game>();
     private Game activeGame;
-    private Point activePoint;
-    private String firstActor;
+    Point activePoint;
+    String firstActor;
 
     public void startGame() {
         activeGame = new Game();
