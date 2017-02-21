@@ -36,7 +36,23 @@ public class Point {
         return null;
     }
 
+    public Event getLastEvent() {
+        if (events.size() > 0) {
+            return events.get(events.size() - 1);
+        }
+        return null;
+    }
+
     public int getEventCount() {
         return events.size();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        for (Event event : events) {
+            builder.append(event).append("\n");
+        }
+        return builder.toString();
     }
 }

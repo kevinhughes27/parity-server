@@ -1,8 +1,10 @@
 package io.masse.parityleaguestats;
 
 
-import org.json.JSONObject;
 import com.google.gson.Gson;
+
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,12 +100,14 @@ public class Bookkeeper {
     }
 
     public void undo() {
-        if (firstActor != null) {
+        if (lastEventWasRecordingFirstActor()) {
             //Handle the case of a pickup on change of possession
             firstActor = null;
             return;
         } else if (lastEventWasAGoal()) {
             undoGoal();
+        } else if (lastEventWasADefense()) {
+            undoDefense();
         } else {
             Event lastEvent = activePoint.removeLastEvent();
             if (lastEvent == null) {
@@ -120,8 +124,29 @@ public class Bookkeeper {
         firstActor = lastEvent.getFirstActor();
     }
 
+    private void undoDefense() {
+        //Doing this in its own method to highlight the fact that the
+        //firstActor is cleared in this case, unlike some other cases
+        activePoint.removeLastEvent();
+        firstActor = null;
+    }
+
     private boolean lastEventWasAGoal() {
         return activePoint.getEventCount() == 0 && activeGame.getPointCount() > 0;
+    }
+
+    private boolean lastEventWasADefense() {
+        Event lastEvent = activePoint.getLastEvent();
+        return lastEvent != null && lastEvent.getType() == Event.Type.DEFENSE;
+    }
+
+    /**
+     * @return true if firstActor != null and firstActor was not the secondActor
+     * in the last Event
+     */
+    private boolean lastEventWasRecordingFirstActor() {
+        Event lastEvent = activePoint.getLastEvent();
+        return firstActor != null && lastEvent != null && !firstActor.equals(lastEvent.getSecondActor());
     }
 
 }
