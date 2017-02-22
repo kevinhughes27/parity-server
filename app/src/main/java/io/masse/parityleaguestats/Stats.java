@@ -289,10 +289,32 @@ public class Stats extends Activity {
         changeState(autoState);
     }
 
+    private int findFemaleStartIndex(LinearLayout parent) {
+        int count = parent.getChildCount();
+        for (int i = 0; i < count; i++) {
+            Object child = parent.getChildAt(i).getTag();
+            if (child == null) {
+                continue;
+            }
+
+            Gender check = Gender.valueOf(Gender.class, child.toString());
+            if (check == Gender.Female) {
+                return i;
+            }
+        }
+
+        return count;
+    }
+
     private void addPlayerButton(LinearLayout parent, String name, Gender gender){
         final Button btn = new Button(mainContext);
+        if (gender == Gender.Male) {
+            parent.addView(btn, findFemaleStartIndex(parent));
+        } else {
+            parent.addView(btn);
+        }
+
         btn.setText(name);
-        parent.addView(btn);
         btn.setLayoutParams(param);
         btn.setId(parent.getChildCount() - 1);
         btn.setTag(gender);
