@@ -67,16 +67,16 @@ public class allTeams {
         return everyone.get(teamNumber).arlGirls.get(playerNumber);
     }
 
-    public int getPlayerColour(String playerName) {
+    public Gender getPlayerGender(String playerName) {
         for (team team : everyone) {
             if (team.arlGirls.contains(playerName)) {
-                return R.color.leftGirlsColour;
+                return Gender.Female;
             } else if (team.arlGuys.contains(playerName)) {
-                return R.color.leftGuysColour;
+                return Gender.Male;
             }
         }
 
-        return R.color.manualEntryButtonColour;
+        return Gender.Unknown;
     }
 
     private boolean substituteExists(){

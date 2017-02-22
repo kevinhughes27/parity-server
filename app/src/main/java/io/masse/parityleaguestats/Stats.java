@@ -57,7 +57,6 @@ import io.masse.parityleaguestats.customLayout.customLinearLayout;
 @SuppressWarnings({"unchecked", "null"})
 
 public class Stats extends Activity {
-
     //States for each ViewState to be in.
     private int currentState;
     private int previousState;
@@ -290,15 +289,16 @@ public class Stats extends Activity {
         changeState(autoState);
     }
 
-    private void addPlayerButton(LinearLayout parent, String name, int colorId){
+    private void addPlayerButton(LinearLayout parent, String name, Gender gender){
         final Button btn = new Button(mainContext);
         btn.setText(name);
         parent.addView(btn);
         btn.setLayoutParams(param);
         btn.setId(parent.getChildCount() - 1);
+        btn.setTag(gender);
         btn.setOnClickListener(teamEditListener);
         btn.setGravity(btnLastButtonClicked.getGravity());
-        btn.setBackgroundColor(getResources().getColor(colorId));
+        btn.setBackgroundColor(getResources().getColor(gender.colorId));
     }
 
     private void addSubstitutePlayer(final AutoCompleteTextView input) {
@@ -321,26 +321,26 @@ public class Stats extends Activity {
                         final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
 
                         // This all is kind of gross
-                        int color = rosterList.getPlayerColour(playerName);
-                        if (color == R.color.manualEntryButtonColour) {
+                        final Gender gender = rosterList.getPlayerGender(playerName);
+                        if (gender == Gender.Unknown) {
                             new AlertDialog.Builder(mainContext)
                                     .setTitle("Select Gender")
                                     .setMessage(playerName)
                                     .setPositiveButton("Female", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, R.color.leftGirlsColour);
+                                            addPlayerButton(parent, txtButtonText, Gender.Female);
                                         }
                                     })
                                     .setNegativeButton("Male", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, R.color.leftGuysColour);
+                                            addPlayerButton(parent, txtButtonText, Gender.Male);
                                         }
                                     })
                                     .show();
                         } else {
-                            addPlayerButton(parent, txtButtonText, color);
+                            addPlayerButton(parent, txtButtonText, gender);
                         }
 
                     }
@@ -623,6 +623,7 @@ public class Stats extends Activity {
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i);
+            btn.setTag(Gender.Male);
             btn.setGravity(gravity);
             btn.setOnClickListener(teamEditListener);
         }
@@ -634,6 +635,7 @@ public class Stats extends Activity {
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
+            btn.setTag(Gender.Female);
             btn.setGravity(gravity);
             btn.setOnClickListener(teamEditListener);
         }
