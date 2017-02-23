@@ -67,16 +67,16 @@ public class allTeams {
         return everyone.get(teamNumber).arlGirls.get(playerNumber);
     }
 
-    public String getPlayerName(int teamNumber, int playerNumber){
-        if (playerNumber < everyone.get(teamNumber).arlGirls.size()){
-            return everyone.get(teamNumber).arlGirls.get(playerNumber);
-        }else{
-            return everyone.get(teamNumber).arlGuys.get(playerNumber-everyone.get(teamNumber).arlGirls.size());
+    public Gender getPlayerGender(String playerName) {
+        for (team team : everyone) {
+            if (team.arlGirls.contains(playerName)) {
+                return Gender.Female;
+            } else if (team.arlGuys.contains(playerName)) {
+                return Gender.Male;
+            }
         }
-    }
 
-    public boolean checkIfFemale(int teamNumber, int playerNumber){
-        return playerNumber < everyone.get(teamNumber).arlGirls.size();
+        return Gender.Unknown;
     }
 
     private boolean substituteExists(){

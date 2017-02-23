@@ -12,6 +12,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.Editable;
+import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -56,7 +57,6 @@ import io.masse.parityleaguestats.customLayout.customLinearLayout;
 @SuppressWarnings({"unchecked", "null"})
 
 public class Stats extends Activity {
-
     //States for each ViewState to be in.
     private int currentState;
     private int previousState;
@@ -210,6 +210,7 @@ public class Stats extends Activity {
             public void onClick(View view) {
                 btnLastButtonClicked = (Button) view;
                 final AutoCompleteTextView input = new AutoCompleteTextView(view.getContext());
+                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Edit")
@@ -288,6 +289,40 @@ public class Stats extends Activity {
         changeState(autoState);
     }
 
+    private int findFemaleStartIndex(LinearLayout parent) {
+        int count = parent.getChildCount();
+        for (int i = 0; i < count; i++) {
+            Object child = parent.getChildAt(i).getTag();
+            if (child == null) {
+                continue;
+            }
+
+            Gender check = Gender.valueOf(Gender.class, child.toString());
+            if (check == Gender.Female) {
+                return i;
+            }
+        }
+
+        return count;
+    }
+
+    private void addPlayerButton(LinearLayout parent, String name, Gender gender){
+        final Button btn = new Button(mainContext);
+        if (gender == Gender.Male) {
+            parent.addView(btn, findFemaleStartIndex(parent));
+        } else {
+            parent.addView(btn);
+        }
+
+        btn.setText(name);
+        btn.setLayoutParams(param);
+        btn.setId(parent.getChildCount() - 1);
+        btn.setTag(gender);
+        btn.setOnClickListener(teamEditListener);
+        btn.setGravity(btnLastButtonClicked.getGravity());
+        btn.setBackgroundColor(getResources().getColor(gender.colorId));
+    }
+
     private void addSubstitutePlayer(final AutoCompleteTextView input) {
         ArrayList<String> names = new ArrayList<String>();
         for (int i = 0; i < rosterList.size(); i++) {
@@ -303,16 +338,33 @@ public class Stats extends Activity {
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         forceRosterChange = true;
-                        Editable value = input.getText();
-                        Button btn = new Button(mainContext);
-                        String txtButtonText = value.toString() + "(S)";
-                        btn.setText(txtButtonText);
-                        ((LinearLayout) btnLastButtonClicked.getParent()).addView(btn);
-                        btn.setLayoutParams(param);
-                        btn.setId(((LinearLayout) btnLastButtonClicked.getParent()).getChildCount() - 1);
-                        btn.setOnClickListener(teamEditListener);
-                        btn.setBackgroundColor(getResources().getColor(R.color.manualEntryButtonColour));
-                        btn.setGravity(btnLastButtonClicked.getGravity());
+                        String playerName = input.getText().toString();
+                        final String txtButtonText = playerName + "(S)";
+                        final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
+
+                        // This all is kind of gross
+                        final Gender gender = rosterList.getPlayerGender(playerName);
+                        if (gender == Gender.Unknown) {
+                            new AlertDialog.Builder(mainContext)
+                                    .setTitle("Select Gender")
+                                    .setMessage(playerName)
+                                    .setPositiveButton("Female", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            addPlayerButton(parent, txtButtonText, Gender.Female);
+                                        }
+                                    })
+                                    .setNegativeButton("Male", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            addPlayerButton(parent, txtButtonText, Gender.Male);
+                                        }
+                                    })
+                                    .show();
+                        } else {
+                            addPlayerButton(parent, txtButtonText, gender);
+                        }
+
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
@@ -593,6 +645,7 @@ public class Stats extends Activity {
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i);
+            btn.setTag(Gender.Male);
             btn.setGravity(gravity);
             btn.setOnClickListener(teamEditListener);
         }
@@ -604,6 +657,7 @@ public class Stats extends Activity {
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
+            btn.setTag(Gender.Female);
             btn.setGravity(gravity);
             btn.setOnClickListener(teamEditListener);
         }
