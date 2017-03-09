@@ -42,6 +42,10 @@ export default class Stats {
     return players
   }
 
+  topPlayers (stat: string, num: number) {
+    return _.sortBy(this.toArray(), (p) => { return -p[stat] }).slice(0, num)
+  }
+
   applyTrade (playerA: string, playerB: string) {
     let teamA = this.data[playerA]['Team']
     let teamB = this.data[playerB]['Team']

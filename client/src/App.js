@@ -55,6 +55,7 @@ class App extends Component {
     return (
       <Nav week={week} weeks={weeks} weekChange={weekChange}>
         <li><Link to='/'>Raw Stats</Link></li>
+        <li><Link to='/leaderboards'>Leaderboards</Link></li>
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
         <li><Link to='/trade_simulator'>Trade Simulator</Link></li>
