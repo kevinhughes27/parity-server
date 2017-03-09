@@ -140,11 +140,11 @@ exports[`test StatsTable renders correctly 1`] = `
               </th>
               <th
                 className=""
-                data-title="Salary"
+                data-title="SalaryDelta"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Salary
+                  SalaryDelta
                 </span>
               </th>
             </tr>
@@ -235,7 +235,7 @@ exports[`test StatsTable renders correctly 1`] = `
                 onClick={[Function bound handleClick]}
                 style={null}>
                 <span>
-                  $1,071,666
+                  $77,000
                 </span>
               </td>
             </tr>
