@@ -15,8 +15,7 @@ const STATS = [
   'Completions',
   'Throwaways',
   'ThrewDrop',
-  'Drops',
-  'Salary'
+  'Drops'
 ]
 
 const columns = [
@@ -25,18 +24,12 @@ const columns = [
   ...STATS
 ]
 
-let columnsMeta = _.map(columns, (col, idx) => {
+const columnsMeta = _.map(columns, (col, idx) => {
   return {
     columnName: col,
     order: idx + 1
   }
 })
-
-columnsMeta[STATS.length + 1] = {
-  columnName: 'Salary',
-  order: STATS.length + 1,
-  customComponent: MoneyCell
-}
 
 type Props = {
   week: number,
@@ -45,6 +38,8 @@ type Props = {
 
 export default class StatsTable extends Component {
   props: Props
+  columns: Array<string>
+  columnsMeta: Array<any>
 
   state: {
     week: number,
@@ -53,6 +48,25 @@ export default class StatsTable extends Component {
 
   constructor (props: Props) {
     super(props)
+
+    this.columns = columns.slice()
+    this.columnsMeta = columnsMeta.slice()
+
+    if (this.props.week === 0) {
+      this.columns.push('Salary')
+      this.columnsMeta.push({
+        columnName: 'Salary',
+        order: STATS.length + 2,
+        customComponent: MoneyCell
+      })
+    } else {
+      this.columns.push('SalaryDelta')
+      this.columnsMeta.push({
+        columnName: 'SalaryDelta',
+        order: STATS.length + 2,
+        customComponent: MoneyCell
+      })
+    }
 
     this.state = {
       week: this.props.week,
@@ -71,8 +85,8 @@ export default class StatsTable extends Component {
         results={statsArray}
         resultsPerPage={statsArray.length}
         tableClassName='highlight responsive-table'
-        columns={columns}
-        columnMetadata={columnsMeta}
+        columns={this.columns}
+        columnMetadata={this.columnsMeta}
         showFilter={true}
         showPager={false}
         useGriddleStyles={false}
