@@ -4,6 +4,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
 import Stats from './Stats'
+import SearchBar from './SearchBar'
 import MoneyCell from './MoneyCell'
 
 const STATS = [
@@ -90,7 +91,8 @@ export default class StatsTable extends Component {
         showFilter={true}
         showPager={false}
         useGriddleStyles={false}
-        filterPlaceholderText='Search players or team ...'
+        useCustomFilterComponent={true}
+        customFilterComponent={SearchBar}
       />
     )
   }

@@ -7,15 +7,12 @@ exports[`test StatsTable renders correctly 1`] = `
     <div
       className="griddle-filter"
       style={null}>
-      <div
-        className="filter-container">
-        <input
-          className="form-control"
-          name="filter"
-          onChange={[Function bound handleChange]}
-          placeholder="Search players or team ..."
-          type="text" />
-      </div>
+      <input
+        name="search"
+        onChange={[Function bound searchChange]}
+        placeholder="Search players or team ..."
+        type="text"
+        value="" />
     </div>
     <div
       className="griddle-settings-toggle"
