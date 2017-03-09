@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom'
 import { browserHistory, Router, Route } from 'react-router'
 
 import App from './App'
+
+import Leaderboards from './Leaderboards'
 import ComparePlayers from './ComparePlayers'
 import TeamDashboard from './TeamDashboard'
 import TradeSimulator from './TradeSimulator'
@@ -27,6 +29,7 @@ function logPageView () {
 ReactDOM.render(
   <Router history={browserHistory} onUpdate={logPageView}>
     <Route path="/" component={App}>
+      <Route path="/leaderboards" component={Leaderboards} />
       <Route path="/compare_players" component={ComparePlayers} />
       <Route path="/team_dashboard" component={TeamDashboard} />
       <Route path="/trade_simulator" component={TradeSimulator} />
