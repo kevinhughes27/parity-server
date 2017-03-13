@@ -1,20 +1,21 @@
 package io.masse.parityleaguestats;
 
-import android.support.test.runner.AndroidJUnit4;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import java.util.List;
+
+import io.masse.parityleaguestats.model.Event;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
-import static junit.framework.Assert.assertTrue;
 
-@RunWith(AndroidJUnit4.class)
+//@RunWith(AndroidJUnit4.class)
 public class BookkeeperTest {
 
     private static final String PLAYER1 = "Kevin Hughes";
     private static final String PLAYER2 = "Allan Godding";
+    private static final String PLAYER3 = "Patrick Kenzie";
 
     private Bookkeeper bookkeeper;
 
@@ -105,8 +106,48 @@ public class BookkeeperTest {
         assertNull(bookkeeper.firstActor);
     }
 
+    @Test
+    public void testComplexScenario() {
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordPull();
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.undo();
+        bookkeeper.recordFirstActor(PLAYER3);
+        bookkeeper.recordPass(PLAYER2);
+        bookkeeper.recordThrowAway();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordCatchD();
+        bookkeeper.undo();   //undo set first actor
+        bookkeeper.undo();   //undo D
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordD();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordPass(PLAYER3);
+        bookkeeper.recordPoint();
+        bookkeeper.undo();
+
+        verifyComplexScenarioEvents();
+    }
+
+    private void verifyComplexScenarioEvents() {
+        verifyEventCount(5);
+        List<Event> events = bookkeeper.activePoint.getEvents();
+
+        verifyEvent(events.get(0), Event.Type.PULL, PLAYER2, null);
+        verifyEvent(events.get(1), Event.Type.PASS, PLAYER3, PLAYER2);
+        verifyEvent(events.get(2), Event.Type.THROWAWAY, PLAYER2, null);
+        verifyEvent(events.get(3), Event.Type.DEFENSE, PLAYER1, null);
+        verifyEvent(events.get(4), Event.Type.PASS, PLAYER2, PLAYER3);
+    }
+
+    private void verifyEvent(Event event, Event.Type type, String firstActor, String secondActor) {
+        assertEquals(type, event.getType());
+        assertEquals(firstActor, event.getFirstActor());
+        assertEquals(secondActor, event.getSecondActor());
+    }
+
     private void verifyEventCount(int expected) {
-        assertTrue(bookkeeper.activePoint.getEventCount() == expected);
+        assertEquals(expected, bookkeeper.activePoint.getEventCount());
     }
 
     private void recordPass() {

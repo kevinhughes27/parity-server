@@ -47,6 +47,10 @@ public class Point {
         return events.size();
     }
 
+    public List<Event> getEvents() {
+        return events;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
