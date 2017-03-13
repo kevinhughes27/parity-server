@@ -151,53 +151,6 @@ public class Bookkeeper {
         if (!mementos.isEmpty()) {
             mementos.pop().apply();
         }
-//        if (lastEventWasRecordingFirstActor()) {
-//            //Handle the case of a pickup on change of possession
-//            firstActor = null;
-//            return;
-//        } else if (lastEventWasAGoal()) {
-//            undoGoal();
-//        } else if (lastEventWasADefense()) {
-//            undoDefense();
-//        } else {
-//            Event lastEvent = activePoint.removeLastEvent();
-//            if (lastEvent == null) {
-//                firstActor = null;
-//                return;
-//            }
-//            firstActor = lastEvent.getFirstActor();
-//        }
-    }
-
-    private void undoGoal() {
-        activePoint = activeGame.getLastPoint();
-        Event lastEvent = activePoint.removeLastEvent();
-        firstActor = lastEvent.getFirstActor();
-    }
-
-    private void undoDefense() {
-        //Doing this in its own method to highlight the fact that the
-        //firstActor is cleared in this case, unlike some other cases
-        activePoint.removeLastEvent();
-        firstActor = null;
-    }
-
-    private boolean lastEventWasAGoal() {
-        return activePoint.getEventCount() == 0 && activeGame.getPointCount() > 0;
-    }
-
-    private boolean lastEventWasADefense() {
-        Event lastEvent = activePoint.getLastEvent();
-        return lastEvent != null && lastEvent.getType() == Event.Type.DEFENSE;
-    }
-
-    /**
-     * @return true if firstActor != null and firstActor was not the secondActor
-     * in the last Event
-     */
-    private boolean lastEventWasRecordingFirstActor() {
-        Event lastEvent = activePoint.getLastEvent();
-        return firstActor != null && lastEvent != null && !firstActor.equals(lastEvent.getSecondActor());
     }
 
     private abstract class Memento {
