@@ -1,0 +1,157 @@
+package io.masse.parityleaguestats;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
+
+import io.masse.parityleaguestats.model.Event;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNull;
+
+//@RunWith(AndroidJUnit4.class)
+public class BookkeeperTest {
+
+    private static final String PLAYER1 = "Kevin Hughes";
+    private static final String PLAYER2 = "Allan Godding";
+    private static final String PLAYER3 = "Patrick Kenzie";
+
+    private Bookkeeper bookkeeper;
+
+    @Before
+    public void before() {
+        bookkeeper = new Bookkeeper();
+        bookkeeper.startGame();
+    }
+
+    @Test
+    public void testUndoRecordFirstActor() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.undo();
+
+        assertNull(bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoPull() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordPull();
+        bookkeeper.undo();
+
+        verifyEventCount(0);
+        assertEquals(PLAYER1, bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoPass() {
+        recordPass();
+        bookkeeper.undo();
+
+        verifyEventCount(0);
+        assertEquals(PLAYER1, bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoPoint() {
+        recordPass();
+        bookkeeper.recordPoint();
+        bookkeeper.undo();
+
+        verifyEventCount(1);
+        assertEquals(PLAYER2, bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoThrowAway() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordThrowAway();
+        bookkeeper.undo();
+
+        verifyEventCount(0);
+        assertEquals(PLAYER1, bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoThrowAwayAfterPass() {
+        recordPass();
+        bookkeeper.recordThrowAway();
+        bookkeeper.undo();
+
+        verifyEventCount(1);
+        assertEquals(PLAYER2, bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoD() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordThrowAway();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordD();
+        bookkeeper.undo();
+
+        verifyEventCount(1);
+        assertNull(bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testUndoCatchD() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordThrowAway();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordCatchD();
+        bookkeeper.undo();
+
+        verifyEventCount(2);
+        assertNull(bookkeeper.firstActor);
+    }
+
+    @Test
+    public void testComplexScenario() {
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordPull();
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.undo();
+        bookkeeper.recordFirstActor(PLAYER3);
+        bookkeeper.recordPass(PLAYER2);
+        bookkeeper.recordThrowAway();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordCatchD();
+        bookkeeper.undo();   //undo set first actor
+        bookkeeper.undo();   //undo D
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordD();
+        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordPass(PLAYER3);
+        bookkeeper.recordPoint();
+        bookkeeper.undo();
+
+        verifyComplexScenarioEvents();
+    }
+
+    private void verifyComplexScenarioEvents() {
+        verifyEventCount(5);
+        List<Event> events = bookkeeper.activePoint.getEvents();
+
+        verifyEvent(events.get(0), Event.Type.PULL, PLAYER2, null);
+        verifyEvent(events.get(1), Event.Type.PASS, PLAYER3, PLAYER2);
+        verifyEvent(events.get(2), Event.Type.THROWAWAY, PLAYER2, null);
+        verifyEvent(events.get(3), Event.Type.DEFENSE, PLAYER1, null);
+        verifyEvent(events.get(4), Event.Type.PASS, PLAYER2, PLAYER3);
+    }
+
+    private void verifyEvent(Event event, Event.Type type, String firstActor, String secondActor) {
+        assertEquals(type, event.getType());
+        assertEquals(firstActor, event.getFirstActor());
+        assertEquals(secondActor, event.getSecondActor());
+    }
+
+    private void verifyEventCount(int expected) {
+        assertEquals(expected, bookkeeper.activePoint.getEventCount());
+    }
+
+    private void recordPass() {
+        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordPass(PLAYER2);
+    }
+}

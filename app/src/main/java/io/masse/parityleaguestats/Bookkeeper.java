@@ -1,10 +1,13 @@
 package io.masse.parityleaguestats;
 
 
-import org.json.JSONObject;
 import com.google.gson.Gson;
+
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 import io.masse.parityleaguestats.model.Event;
 import io.masse.parityleaguestats.model.Game;
@@ -12,14 +15,16 @@ import io.masse.parityleaguestats.model.Point;
 
 public class Bookkeeper {
 
-    private List<Game> games = new ArrayList<Game>();
+    private List<Game> games = new ArrayList<>();
     private Game activeGame;
-    private Point activePoint;
-    private String firstActor;
+    private Stack<Memento> mementos;
+    Point activePoint;
+    String firstActor;
 
     public void startGame() {
         activeGame = new Game();
         games.add(activeGame);
+        mementos = new Stack<>();
     }
 
     public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
@@ -34,6 +39,13 @@ public class Bookkeeper {
     }
 
     public void recordFirstActor(String player) {
+        mementos.push(new Memento(firstActor) {
+            @Override
+            public void apply() {
+                firstActor = savedFirstActor;
+            }
+        });
+
         if (activePoint == null) {
             activePoint = new Point();
         }
@@ -41,36 +53,74 @@ public class Bookkeeper {
     }
 
     public void recordPull() {
+        mementos.push(genericUndoLastEventMemento());
+
         activePoint.addEvent(new Event(Event.Type.PULL, firstActor));
         firstActor = null;
     }
 
     public void recordThrowAway() {
+        mementos.push(genericUndoLastEventMemento());
+
         activePoint.addEvent(new Event(Event.Type.THROWAWAY, firstActor));
         firstActor = null;
     }
 
     public void recordPass(String receiver) {
+        mementos.push(genericUndoLastEventMemento());
+
         activePoint.addEvent(new Event(Event.Type.PASS, firstActor, receiver));
         firstActor = receiver;
     }
 
     public void recordDrop() {
+        mementos.push(genericUndoLastEventMemento());
+
         activePoint.addEvent(new Event(Event.Type.DROP, firstActor));
         firstActor = null;
     }
 
     public void recordD() {
+        mementos.push(new Memento() {
+            @Override
+            public void apply() {
+                activePoint.removeLastEvent();
+                firstActor = null;
+            }
+        });
+
         activePoint.addEvent(new Event(Event.Type.DEFENSE, firstActor));
         firstActor = null;
     }
 
     public void recordCatchD() {
+        mementos.push(new Memento() {
+            @Override
+            public void apply() {
+                activePoint.removeLastEvent();
+            }
+        });
+        mementos.push(new Memento() {
+            @Override
+            public void apply() {
+                firstActor = null;
+            }
+        });
+
         activePoint.addEvent(new Event(Event.Type.DEFENSE, firstActor));
         //firstActor remains the same
     }
 
     public void recordPoint() {
+        mementos.add(new Memento(firstActor) {
+            @Override
+            public void apply() {
+                activePoint = activeGame.getLastPoint();
+                activePoint.removeLastEvent();
+                firstActor = savedFirstActor;
+            }
+        });
+
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
         activePoint = new Point();
@@ -98,30 +148,32 @@ public class Bookkeeper {
     }
 
     public void undo() {
-        if (firstActor != null) {
-            //Handle the case of a pickup on change of possession
-            firstActor = null;
-            return;
-        } else if (lastEventWasAGoal()) {
-            undoGoal();
-        } else {
-            Event lastEvent = activePoint.removeLastEvent();
-            if (lastEvent == null) {
-                firstActor = null;
-                return;
-            }
-            firstActor = lastEvent.getFirstActor();
+        if (!mementos.isEmpty()) {
+            mementos.pop().apply();
         }
     }
 
-    private void undoGoal() {
-        activePoint = activeGame.getLastPoint();
-        Event lastEvent = activePoint.removeLastEvent();
-        firstActor = lastEvent.getFirstActor();
+    private abstract class Memento {
+
+        protected String savedFirstActor;
+
+        public Memento(String savedFirstActor) {
+            this.savedFirstActor = savedFirstActor;
+        }
+
+        public Memento() {}
+
+        public abstract void apply();
     }
 
-    private boolean lastEventWasAGoal() {
-        return activePoint.getEventCount() == 0 && activeGame.getPointCount() > 0;
+    public Memento genericUndoLastEventMemento() {
+        return new Memento(firstActor) {
+            @Override
+            public void apply() {
+                activePoint.removeLastEvent();
+                firstActor = savedFirstActor;
+            }
+        };
     }
 
 }

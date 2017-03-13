@@ -34,7 +34,16 @@ public class Event {
         return firstActor;
     }
 
+    public String getSecondActor() {
+        return secondActor;
+    }
+
     public Type getType() {
         return type;
+    }
+
+    @Override
+    public String toString() {
+        return type.toString() + ", " + firstActor + ", " + secondActor;
     }
 }
