@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package io.masse.parityleaguestats.tasks;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,7 +10,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-class uploadGame extends AsyncTask<String, String, Long> {
+import io.masse.parityleaguestats.BuildConfig;
+
+public class uploadGame extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;

@@ -5,13 +5,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.Editable;
 import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Gravity;
@@ -46,6 +43,8 @@ import java.util.Locale;
 import java.util.Iterator;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
+import io.masse.parityleaguestats.tasks.fetchRoster;
+import io.masse.parityleaguestats.tasks.uploadGame;
 
 
 //TODO change swap direction to large arrow
