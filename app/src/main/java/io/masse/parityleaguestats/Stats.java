@@ -31,20 +31,17 @@ import android.widget.Toast;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Iterator;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Teams;
+import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.tasks.fetchRoster;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
@@ -441,14 +438,16 @@ public class Stats extends Activity {
         }
         new AlertDialog.Builder(mainContext)
                 .setTitle("Choose Home Team")
-                .setItems(teams.getTeams(), new DialogInterface.OnClickListener() {
+                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        updateTeam(which, true);
+                        Team team = teams.getTeam(which);
+                        updateTeam(team, true);
                         new AlertDialog.Builder(mainContext)
                                 .setTitle("Choose Away Team")
-                                .setItems(teams.getTeams(), new DialogInterface.OnClickListener() {
+                                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        updateTeam(which, false);
+                                        Team team = teams.getTeam(which);
+                                        updateTeam(team, false);
                                         forceRosterChange = true;
                                         changeState(editState);
                                     }
@@ -574,13 +573,13 @@ public class Stats extends Activity {
         loadNewTeams();
     }
 
-    private void updateTeam(int teamIndex, boolean isLeft){
+    private void updateTeam(Team team, boolean isLeft){
         TextView tvTeamName = rightTeamName;
         LinearLayout llButtonLayout = layoutRight;
         int guyColour = getResources().getColor(R.color.rightGuysColour);
         int girlColour = getResources().getColor(R.color.rightGirlsColour);
-        int intGirls = teams.sizeGirls(teamIndex);
-        int intGuys = teams.sizeGuys(teamIndex);
+        int intGirls = team.sizeGirls();
+        int intGuys = team.sizeGuys();
         int gravity = Gravity.START;
 
         if (isLeft){
@@ -590,14 +589,14 @@ public class Stats extends Activity {
             girlColour = getResources().getColor(R.color.leftGirlsColour);
             gravity = Gravity.END;
         }
-        tvTeamName.setText(teams.getTeamName(teamIndex));
+        tvTeamName.setText(team.name);
         llButtonLayout.removeAllViews();
 
 
         for (int i = 0; i < intGuys; i++) {
             Button btn = new Button(this);
             btn.setBackgroundColor(guyColour);
-            btn.setText(teams.getGuyName(teamIndex, i));
+            btn.setText(team.getGuyName(i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i);
@@ -609,7 +608,7 @@ public class Stats extends Activity {
             Button btn = new Button(this);
             btn.setPadding(1, 1, 1, 1);
             btn.setBackgroundColor(girlColour);
-            btn.setText(teams.getGirlName(teamIndex,i));
+            btn.setText(team.getGirlName(i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
@@ -698,19 +697,22 @@ public class Stats extends Activity {
             // week it was working for though.
             //jsonObject.accumulate("week", 1);
 
-            String leftTeam = leftTeamName.getText().toString();
-            String rightTeam = rightTeamName.getText().toString();
+            String strLeftTeamName = leftTeamName.getText().toString();
+            String strRightTeamName = rightTeamName.getText().toString();
+
+            Team leftTeam = this.teams.getTeam(strLeftTeamName);
+            Team rightTeam = this.teams.getTeam(strRightTeamName);
 
             // Teams
             JSONObject teams = new JSONObject();
-            teams.accumulate(leftTeam, new JSONArray(this.teams.getPlayers(leftTeam)) );
-            teams.accumulate(rightTeam, new JSONArray(this.teams.getPlayers(rightTeam)) );
+            teams.accumulate(strLeftTeamName, new JSONArray(leftTeam.getPlayers()));
+            teams.accumulate(strRightTeamName, new JSONArray(rightTeam.getPlayers()));
             jsonObject.accumulate("teams", teams);
 
             // Score
             JSONObject score = new JSONObject();
-            score.accumulate(leftTeam, leftScore.getText().toString());
-            score.accumulate(rightTeam, rightScore.getText().toString());
+            score.accumulate(strLeftTeamName, leftScore.getText().toString());
+            score.accumulate(strRightTeamName, rightScore.getText().toString());
             jsonObject.accumulate("score", score);
 
             // EventString

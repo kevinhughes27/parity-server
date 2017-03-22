@@ -6,15 +6,15 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class Teams {
-    private ArrayList<team> teamsArray = new ArrayList<team>();
+    private ArrayList<Team> teamsArray = new ArrayList<>();
 
-    // Roster Schema:
-    // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
     public void load(String filename) {
+        // Roster Schema:
+        // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
+
         // Load JSON string
         String jsonString = null;
         try {
@@ -57,58 +57,57 @@ public class Teams {
         }
     }
 
-    private void addPlayer(String teamName, String teamMember, Boolean isMale) {
+    private void addPlayer(String teamName, String playerName, Boolean isMale) {
         if (teamsArray.isEmpty()) {
-            teamsArray.add(new team(teamName, teamMember, isMale));
+            teamsArray.add(new Team(teamName, playerName, isMale));
         } else {
             boolean match = false;
 
-            for (team oneteam: teamsArray) {
-                if (oneteam.strTeamName.equals(teamName)){
+            for (Team team: teamsArray) {
+                if (team.name.equals(teamName)){
                     match = true;
-                    oneteam.add(teamMember, isMale);
+                    team.addPlayer(playerName, isMale);
                     break;
                 }
             }
 
             if (!match){
-                teamsArray.add(new team(teamName, teamMember, isMale));
+                teamsArray.add(new Team(teamName, playerName, isMale));
             }
         }
     }
 
     public ArrayList<String> allPlayers() {
-        ArrayList<String> names = new ArrayList<String>();
+        ArrayList<String> names = new ArrayList<>();
 
         for (int i = 0; i < teamsArray.size(); i++) {
-            names.addAll(Arrays.asList(getPlayers(i)));
+            names.addAll(teamsArray.get(i).getPlayers());
         }
 
         return names;
     }
 
-    public int sizeGuys(int teamNumber){
-        return teamsArray.get(teamNumber).arlGuys.size();
+    public Team getTeam(int teamNumber) {
+        return teamsArray.get(teamNumber);
     }
 
-    public int sizeGirls(int teamNumber) {
-        return teamsArray.get(teamNumber).arlGirls.size();
+    public Team getTeam(String teamName) {
+        int teamNumber = teamNumberFromName(teamName);
+        return getTeam(teamNumber);
     }
 
-    public String getTeamName(int teamNumber){
-        return teamsArray.get(teamNumber).strTeamName;
-    }
+    private int teamNumberFromName(String teamName) {
+        for(int i = 0; i < teamsArray.size(); i++) {
+            if(teamsArray.get(i).name == teamName) {
+                return i;
+            }
+        }
 
-    public String getGuyName(int teamNumber, int playerNumber){
-        return teamsArray.get(teamNumber).arlGuys.get(playerNumber);
-    }
-
-    public String getGirlName(int teamNumber, int playerNumber){
-        return teamsArray.get(teamNumber).arlGirls.get(playerNumber);
+        return -1;
     }
 
     public Gender getPlayerGender(String playerName) {
-        for (team team : teamsArray) {
+        for (Team team : teamsArray) {
             if (team.arlGirls.contains(playerName)) {
                 return Gender.Female;
             } else if (team.arlGuys.contains(playerName)) {
@@ -119,86 +118,34 @@ public class Teams {
         return Gender.Unknown;
     }
 
-    private boolean substituteExists(){
-        int intTeamSize = teamsArray.size();
-        for (int i = 0; i < intTeamSize; i++){
-            if (teamsArray.get(i).strTeamName.equals("Substitute")){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public String[] getTeams(){
+    public String[] getNames() {
         String[] teamNames;
         int counter = 0;
         int intTeamSize = teamsArray.size();
 
         if (substituteExists()){
             teamNames = new String[teamsArray.size()-1];
-        }else{
+        } else {
             teamNames = new String[teamsArray.size()];
         }
-        for (int i = 0; i < intTeamSize; i++){
-            if (!teamsArray.get(i).strTeamName.equals("Substitute")){
-                teamNames[counter] = teamsArray.get(i).strTeamName;
+
+        for (int i = 0; i < intTeamSize; i++) {
+            if (!teamsArray.get(i).name.equals("Substitute")){
+                teamNames[counter] = teamsArray.get(i).name;
                 counter++;
             }
         }
+        
         return teamNames;
     }
 
-    public String[] getPlayers(int intTeamNumber){
-        String[] players = new String[sizeGirls(intTeamNumber)+sizeGuys(intTeamNumber)];
-        int counter = 0;
-
-        for (int i = 0; i < sizeGirls(intTeamNumber); i++){
-            players[counter] = teamsArray.get(intTeamNumber).arlGirls.get(i);
-            counter++;
-        }
-        for (int i = 0; i < sizeGuys(intTeamNumber); i++){
-            players[counter] = teamsArray.get(intTeamNumber).arlGuys.get(i);
-            counter++;
-        }
-        return players;
-    }
-
-    public String[] getPlayers(String teamName){
-        int intTeamNumber = teamNumberFromName(teamName);
-        return getPlayers(intTeamNumber);
-    }
-
-    private int teamNumberFromName(String teamName) {
-        for(int i = 0; i < teamsArray.size(); i++) {
-            if(teamsArray.get(i).strTeamName == teamName) {
-                return i;
+    private boolean substituteExists() {
+        int intTeamSize = teamsArray.size();
+        for (int i = 0; i < intTeamSize; i++){
+            if (teamsArray.get(i).name.equals("Substitute")){
+                return true;
             }
         }
-
-        return -1;
-    }
-
-    private class team {
-        public String strTeamName = "";
-        public ArrayList<String> arlGuys = new ArrayList<String>();
-        public ArrayList<String> arlGirls = new ArrayList<String>();
-
-        public team(String teamName, String teamMember, Boolean isMale){
-            strTeamName = teamName;
-            if (isMale){
-                arlGuys.add(teamMember);
-            }else{
-                arlGirls.add(teamMember);
-            }
-        }
-
-        public void add(String teamMember, Boolean isMale){
-            if (isMale){
-                arlGuys.add(teamMember);
-            }else{
-                arlGirls.add(teamMember);
-            }
-        }
-
+        return false;
     }
 }
