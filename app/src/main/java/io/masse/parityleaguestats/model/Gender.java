@@ -1,6 +1,8 @@
-package io.masse.parityleaguestats;
+package io.masse.parityleaguestats.model;
 
-enum Gender {
+import io.masse.parityleaguestats.R;
+
+public enum Gender {
     Unknown(R.color.manualEntryButtonColour),
     Female(R.color.leftGirlsColour),
     Male(R.color.leftGuysColour);

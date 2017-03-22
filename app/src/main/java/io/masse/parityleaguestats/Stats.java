@@ -43,6 +43,8 @@ import java.util.Locale;
 import java.util.Iterator;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
+import io.masse.parityleaguestats.model.Gender;
+import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.fetchRoster;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
@@ -115,7 +117,7 @@ public class Stats extends Activity {
 
     private final Stats myself = this;
 
-    private allTeams rosterList;
+    private Teams teams;
 
     private LinearLayout.LayoutParams param;
 
@@ -130,7 +132,7 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        rosterList = new allTeams();
+        teams = new Teams();
 
         //Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -323,12 +325,11 @@ public class Stats extends Activity {
     }
 
     private void addSubstitutePlayer(final AutoCompleteTextView input) {
-        ArrayList<String> names = new ArrayList<String>();
-        for (int i = 0; i < rosterList.size(); i++) {
-            names.addAll(Arrays.asList(rosterList.getPlayers(i)));
-        }
-
-        input.setAdapter(new ArrayAdapter<String>(mainContext, android.R.layout.simple_dropdown_item_1line, names));
+        input.setAdapter(new ArrayAdapter<String>(
+                mainContext,
+                android.R.layout.simple_dropdown_item_1line,
+                teams.allPlayers())
+        );
 
         new AlertDialog.Builder(mainContext)
                 .setTitle("Add Substitute Player")
@@ -342,7 +343,7 @@ public class Stats extends Activity {
                         final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
 
                         // This all is kind of gross
-                        final Gender gender = rosterList.getPlayerGender(playerName);
+                        final Gender gender = teams.getPlayerGender(playerName);
                         if (gender == Gender.Unknown) {
                             new AlertDialog.Builder(mainContext)
                                     .setTitle("Select Gender")
@@ -418,8 +419,6 @@ public class Stats extends Activity {
         }
     }
 
-    // Roster Schema:
-    // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
     public void loadJSON() {
 
         // return if game in progress
@@ -428,53 +427,11 @@ public class Stats extends Activity {
             return;
         }
 
-        // Load JSON string
-        String jsonString = null;
-        try {
-            String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
+        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
 
-            BufferedReader reader = new BufferedReader(new FileReader(strFileName));
-            StringBuilder sb = new StringBuilder();
-
-            String line = null;
-            while ((line = reader.readLine()) != null)
-            {
-                sb.append(line + "\n");
-            }
-            jsonString = sb.toString();
-        }
-        catch (Exception e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        // Parse JSON object
-        rosterList = new allTeams();
-        try {
-            JSONObject responseObject = new JSONObject(jsonString);
-            Iterator<String> iter = responseObject.keys();
-
-            while(iter.hasNext()) {
-                String teamName = iter.next();
-                JSONObject teamObject = responseObject.getJSONObject(teamName);
-                JSONArray malePlayers = teamObject.getJSONArray("malePlayers");
-                JSONArray femalePlayers = teamObject.getJSONArray("femalePlayers");
-
-                rosterList.addRosterName(teamName);
-
-                for( int i = 0; i < malePlayers.length(); i++) {
-                    rosterList.add(teamName, malePlayers.getString(i), true);
-                }
-
-                for( int i = 0; i < femalePlayers.length(); i++) {
-                    rosterList.add(teamName, femalePlayers.getString(i), false);
-                }
-            }
-
-        } catch (Exception e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        return;
+        // whats the best pattern to show failure here?
+        // I have to rescue in the function or else java yells at me
+        teams.load(strFileName);
     }
 
     public void loadNewTeams(){
@@ -484,12 +441,12 @@ public class Stats extends Activity {
         }
         new AlertDialog.Builder(mainContext)
                 .setTitle("Choose Home Team")
-                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
+                .setItems(teams.getTeams(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         updateTeam(which, true);
                         new AlertDialog.Builder(mainContext)
                                 .setTitle("Choose Away Team")
-                                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
+                                .setItems(teams.getTeams(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         updateTeam(which, false);
                                         forceRosterChange = true;
@@ -622,8 +579,8 @@ public class Stats extends Activity {
         LinearLayout llButtonLayout = layoutRight;
         int guyColour = getResources().getColor(R.color.rightGuysColour);
         int girlColour = getResources().getColor(R.color.rightGirlsColour);
-        int intGirls = rosterList.sizeGirls(teamIndex);
-        int intGuys = rosterList.sizeGuys(teamIndex);
+        int intGirls = teams.sizeGirls(teamIndex);
+        int intGuys = teams.sizeGuys(teamIndex);
         int gravity = Gravity.START;
 
         if (isLeft){
@@ -633,14 +590,14 @@ public class Stats extends Activity {
             girlColour = getResources().getColor(R.color.leftGirlsColour);
             gravity = Gravity.END;
         }
-        tvTeamName.setText(rosterList.getTeamName(teamIndex));
+        tvTeamName.setText(teams.getTeamName(teamIndex));
         llButtonLayout.removeAllViews();
 
 
         for (int i = 0; i < intGuys; i++) {
             Button btn = new Button(this);
             btn.setBackgroundColor(guyColour);
-            btn.setText(rosterList.getGuyName(teamIndex, i));
+            btn.setText(teams.getGuyName(teamIndex, i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i);
@@ -652,7 +609,7 @@ public class Stats extends Activity {
             Button btn = new Button(this);
             btn.setPadding(1, 1, 1, 1);
             btn.setBackgroundColor(girlColour);
-            btn.setText(rosterList.getGirlName(teamIndex,i));
+            btn.setText(teams.getGirlName(teamIndex,i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
@@ -746,8 +703,8 @@ public class Stats extends Activity {
 
             // Teams
             JSONObject teams = new JSONObject();
-            teams.accumulate(leftTeam, new JSONArray(rosterList.getPlayers(leftTeam)) );
-            teams.accumulate(rightTeam, new JSONArray(rosterList.getPlayers(rightTeam)) );
+            teams.accumulate(leftTeam, new JSONArray(this.teams.getPlayers(leftTeam)) );
+            teams.accumulate(rightTeam, new JSONArray(this.teams.getPlayers(rightTeam)) );
             jsonObject.accumulate("teams", teams);
 
             // Score
