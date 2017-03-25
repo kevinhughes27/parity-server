@@ -426,9 +426,12 @@ public class Stats extends Activity {
 
         String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
 
-        // whats the best pattern to show failure here?
-        // I have to rescue in the function or else java yells at me
-        teams.load(strFileName);
+        try {
+            teams.load(strFileName);
+        }
+        catch (Exception e) {
+            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
+        }
     }
 
     public void loadNewTeams(){

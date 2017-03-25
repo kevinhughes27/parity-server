@@ -8,6 +8,12 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+class TeamsLoadError extends RuntimeException {
+    public TeamsLoadError(String msg) {
+        super(msg);
+    }
+}
+
 public class Teams {
     private ArrayList<Team> teamsArray = new ArrayList<>();
 
@@ -29,7 +35,7 @@ public class Teams {
             jsonString = sb.toString();
         }
         catch (Exception e) {
-            return;
+            throw new TeamsLoadError(e.getMessage());
         }
 
         // Parse JSON object
@@ -53,7 +59,7 @@ public class Teams {
             }
 
         } catch (Exception e) {
-            return;
+            throw new TeamsLoadError(e.getMessage());
         }
     }
 
@@ -135,7 +141,7 @@ public class Teams {
                 counter++;
             }
         }
-        
+
         return teamNames;
     }
 
