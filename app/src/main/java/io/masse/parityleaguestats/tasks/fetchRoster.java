@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package io.masse.parityleaguestats.tasks;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -12,7 +12,9 @@ import org.apache.http.util.EntityUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 
-class fetchRoster extends AsyncTask<String, String, Long> {
+import io.masse.parityleaguestats.Stats;
+
+public class fetchRoster extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;

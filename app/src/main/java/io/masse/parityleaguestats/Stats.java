@@ -5,13 +5,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.Editable;
 import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Gravity;
@@ -34,18 +31,19 @@ import android.widget.Toast;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Iterator;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
+import io.masse.parityleaguestats.model.Gender;
+import io.masse.parityleaguestats.model.Teams;
+import io.masse.parityleaguestats.model.Team;
+import io.masse.parityleaguestats.tasks.fetchRoster;
+import io.masse.parityleaguestats.tasks.uploadGame;
 
 
 //TODO change swap direction to large arrow
@@ -116,7 +114,7 @@ public class Stats extends Activity {
 
     private final Stats myself = this;
 
-    private allTeams rosterList;
+    private Teams teams;
 
     private LinearLayout.LayoutParams param;
 
@@ -131,7 +129,7 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        rosterList = new allTeams();
+        teams = new Teams();
 
         //Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -324,12 +322,11 @@ public class Stats extends Activity {
     }
 
     private void addSubstitutePlayer(final AutoCompleteTextView input) {
-        ArrayList<String> names = new ArrayList<String>();
-        for (int i = 0; i < rosterList.size(); i++) {
-            names.addAll(Arrays.asList(rosterList.getPlayers(i)));
-        }
-
-        input.setAdapter(new ArrayAdapter<String>(mainContext, android.R.layout.simple_dropdown_item_1line, names));
+        input.setAdapter(new ArrayAdapter<String>(
+                mainContext,
+                android.R.layout.simple_dropdown_item_1line,
+                teams.allPlayers())
+        );
 
         new AlertDialog.Builder(mainContext)
                 .setTitle("Add Substitute Player")
@@ -343,7 +340,7 @@ public class Stats extends Activity {
                         final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
 
                         // This all is kind of gross
-                        final Gender gender = rosterList.getPlayerGender(playerName);
+                        final Gender gender = teams.getPlayerGender(playerName);
                         if (gender == Gender.Unknown) {
                             new AlertDialog.Builder(mainContext)
                                     .setTitle("Select Gender")
@@ -419,8 +416,6 @@ public class Stats extends Activity {
         }
     }
 
-    // Roster Schema:
-    // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
     public void loadJSON() {
 
         // return if game in progress
@@ -429,53 +424,14 @@ public class Stats extends Activity {
             return;
         }
 
-        // Load JSON string
-        String jsonString = null;
+        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
+
         try {
-            String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
-
-            BufferedReader reader = new BufferedReader(new FileReader(strFileName));
-            StringBuilder sb = new StringBuilder();
-
-            String line = null;
-            while ((line = reader.readLine()) != null)
-            {
-                sb.append(line + "\n");
-            }
-            jsonString = sb.toString();
+            teams.load(strFileName);
         }
         catch (Exception e) {
             Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
         }
-
-        // Parse JSON object
-        rosterList = new allTeams();
-        try {
-            JSONObject responseObject = new JSONObject(jsonString);
-            Iterator<String> iter = responseObject.keys();
-
-            while(iter.hasNext()) {
-                String teamName = iter.next();
-                JSONObject teamObject = responseObject.getJSONObject(teamName);
-                JSONArray malePlayers = teamObject.getJSONArray("malePlayers");
-                JSONArray femalePlayers = teamObject.getJSONArray("femalePlayers");
-
-                rosterList.addRosterName(teamName);
-
-                for( int i = 0; i < malePlayers.length(); i++) {
-                    rosterList.add(teamName, malePlayers.getString(i), true);
-                }
-
-                for( int i = 0; i < femalePlayers.length(); i++) {
-                    rosterList.add(teamName, femalePlayers.getString(i), false);
-                }
-            }
-
-        } catch (Exception e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        return;
     }
 
     public void loadNewTeams(){
@@ -485,14 +441,16 @@ public class Stats extends Activity {
         }
         new AlertDialog.Builder(mainContext)
                 .setTitle("Choose Home Team")
-                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
+                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        updateTeam(which, true);
+                        Team team = teams.getTeam(which);
+                        updateTeam(team, true);
                         new AlertDialog.Builder(mainContext)
                                 .setTitle("Choose Away Team")
-                                .setItems(rosterList.getTeams(), new DialogInterface.OnClickListener() {
+                                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        updateTeam(which, false);
+                                        Team team = teams.getTeam(which);
+                                        updateTeam(team, false);
                                         forceRosterChange = true;
                                         changeState(editState);
                                     }
@@ -618,13 +576,13 @@ public class Stats extends Activity {
         loadNewTeams();
     }
 
-    private void updateTeam(int teamIndex, boolean isLeft){
+    private void updateTeam(Team team, boolean isLeft){
         TextView tvTeamName = rightTeamName;
         LinearLayout llButtonLayout = layoutRight;
         int guyColour = getResources().getColor(R.color.rightGuysColour);
         int girlColour = getResources().getColor(R.color.rightGirlsColour);
-        int intGirls = rosterList.sizeGirls(teamIndex);
-        int intGuys = rosterList.sizeGuys(teamIndex);
+        int intGirls = team.sizeGirls();
+        int intGuys = team.sizeGuys();
         int gravity = Gravity.START;
 
         if (isLeft){
@@ -634,14 +592,14 @@ public class Stats extends Activity {
             girlColour = getResources().getColor(R.color.leftGirlsColour);
             gravity = Gravity.END;
         }
-        tvTeamName.setText(rosterList.getTeamName(teamIndex));
+        tvTeamName.setText(team.name);
         llButtonLayout.removeAllViews();
 
 
         for (int i = 0; i < intGuys; i++) {
             Button btn = new Button(this);
             btn.setBackgroundColor(guyColour);
-            btn.setText(rosterList.getGuyName(teamIndex, i));
+            btn.setText(team.getGuyName(i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i);
@@ -653,7 +611,7 @@ public class Stats extends Activity {
             Button btn = new Button(this);
             btn.setPadding(1, 1, 1, 1);
             btn.setBackgroundColor(girlColour);
-            btn.setText(rosterList.getGirlName(teamIndex,i));
+            btn.setText(team.getGirlName(i));
             llButtonLayout.addView(btn);
             btn.setLayoutParams(param);
             btn.setId(i+intGuys);
@@ -742,19 +700,22 @@ public class Stats extends Activity {
             // week it was working for though.
             //jsonObject.accumulate("week", 1);
 
-            String leftTeam = leftTeamName.getText().toString();
-            String rightTeam = rightTeamName.getText().toString();
+            String strLeftTeamName = leftTeamName.getText().toString();
+            String strRightTeamName = rightTeamName.getText().toString();
+
+            Team leftTeam = this.teams.getTeam(strLeftTeamName);
+            Team rightTeam = this.teams.getTeam(strRightTeamName);
 
             // Teams
             JSONObject teams = new JSONObject();
-            teams.accumulate(leftTeam, new JSONArray(rosterList.getPlayers(leftTeam)) );
-            teams.accumulate(rightTeam, new JSONArray(rosterList.getPlayers(rightTeam)) );
+            teams.accumulate(strLeftTeamName, new JSONArray(leftTeam.getPlayers()));
+            teams.accumulate(strRightTeamName, new JSONArray(rightTeam.getPlayers()));
             jsonObject.accumulate("teams", teams);
 
             // Score
             JSONObject score = new JSONObject();
-            score.accumulate(leftTeam, leftScore.getText().toString());
-            score.accumulate(rightTeam, rightScore.getText().toString());
+            score.accumulate(strLeftTeamName, leftScore.getText().toString());
+            score.accumulate(strRightTeamName, rightScore.getText().toString());
             jsonObject.accumulate("score", score);
 
             // EventString
