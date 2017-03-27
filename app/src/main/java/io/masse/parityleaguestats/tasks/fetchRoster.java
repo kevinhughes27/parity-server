@@ -12,18 +12,18 @@ import org.apache.http.util.EntityUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 
-import io.masse.parityleaguestats.Stats;
+import io.masse.parityleaguestats.EditPlayers;
 
 public class fetchRoster extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;
-    private Stats parent;
+    private EditPlayers parent;
 
-    public fetchRoster(Context context, Stats parent) {
+    public fetchRoster(Context context, EditPlayers parent) {
         this.context = context;
-        this.dialog = new ProgressDialog(context);
         this.parent = parent;
+        this.dialog = new ProgressDialog(context);
     }
 
     @Override

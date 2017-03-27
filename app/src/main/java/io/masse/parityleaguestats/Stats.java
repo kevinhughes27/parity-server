@@ -9,7 +9,6 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -19,8 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -39,10 +36,8 @@ import java.util.Date;
 import java.util.Locale;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.tasks.fetchRoster;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
 
@@ -102,7 +97,6 @@ public class Stats extends Activity {
     private Bookkeeper bookkeeper;
 
     private View.OnClickListener mainOnClickListener;
-    private View.OnClickListener teamEditListener;
     private View.OnClickListener changeModeListener;
     private View.OnClickListener toggleUserListener;
 
@@ -110,7 +104,6 @@ public class Stats extends Activity {
     private static final String strAppDirectory = "ParityLeagueStats";
     private static final String strAutoSaveDirectory = "autosave";
     private static final String strFinalSaveDirectory = "finalsave";
-    private static final String strRosterFileName = "roster.JSON";
 
     private final Stats myself = this;
 
@@ -203,37 +196,6 @@ public class Stats extends Activity {
             }
         };
 
-        teamEditListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btnLastButtonClicked = (Button) view;
-                final AutoCompleteTextView input = new AutoCompleteTextView(view.getContext());
-                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
-
-                new AlertDialog.Builder(mainContext)
-                        .setTitle("Edit")
-                        .setItems(new String[]{
-                                        "Add Substitute Player",
-                                        "Delete " + btnLastButtonClicked.getText(),
-                                        "Cancel"},
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        switch (which) {
-                                            case 0: //add substitute player
-                                                addSubstitutePlayer(input);
-                                                break;
-                                            case 1: //delete player
-                                                forceRosterChange = true;
-                                                ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
-                                                break;
-                                            case 2: //do nothing
-                                                break;
-                                        }
-                                    }
-                                }).show();
-            }
-        };
-
         if ((savedInstanceState != null) &&
             (savedInstanceState.getSerializable("arrayEventNames") != null)  &&
             (savedInstanceState.getSerializable("arrayEventActions") != null) &&
@@ -272,7 +234,7 @@ public class Stats extends Activity {
             Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
 
         } else {
-            new fetchRoster(mainContext, myself).execute();
+            // new fetchRoster(mainContext, myself).execute();
         }
 
         btnUndo.setOnClickListener(mainOnClickListener);
@@ -285,89 +247,6 @@ public class Stats extends Activity {
         btnMode.setOnClickListener(changeModeListener);
 
         changeState(autoState);
-    }
-
-    private int findFemaleStartIndex(LinearLayout parent) {
-        int count = parent.getChildCount();
-        for (int i = 0; i < count; i++) {
-            Object child = parent.getChildAt(i).getTag();
-            if (child == null) {
-                continue;
-            }
-
-            Gender check = Gender.valueOf(Gender.class, child.toString());
-            if (check == Gender.Female) {
-                return i;
-            }
-        }
-
-        return count;
-    }
-
-    private void addPlayerButton(LinearLayout parent, String name, Gender gender){
-        final Button btn = new Button(mainContext);
-        if (gender == Gender.Male) {
-            parent.addView(btn, findFemaleStartIndex(parent));
-        } else {
-            parent.addView(btn);
-        }
-
-        btn.setText(name);
-        btn.setLayoutParams(param);
-        btn.setId(parent.getChildCount() - 1);
-        btn.setTag(gender);
-        btn.setOnClickListener(teamEditListener);
-        btn.setGravity(btnLastButtonClicked.getGravity());
-        btn.setBackgroundColor(getResources().getColor(gender.colorId));
-    }
-
-    private void addSubstitutePlayer(final AutoCompleteTextView input) {
-        input.setAdapter(new ArrayAdapter<String>(
-                mainContext,
-                android.R.layout.simple_dropdown_item_1line,
-                teams.allPlayers())
-        );
-
-        new AlertDialog.Builder(mainContext)
-                .setTitle("Add Substitute Player")
-                .setMessage("Player Name")
-                .setView(input)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        forceRosterChange = true;
-                        String playerName = input.getText().toString();
-                        final String txtButtonText = playerName + "(S)";
-                        final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
-
-                        // This all is kind of gross
-                        final Gender gender = teams.getPlayerGender(playerName);
-                        if (gender == Gender.Unknown) {
-                            new AlertDialog.Builder(mainContext)
-                                    .setTitle("Select Gender")
-                                    .setMessage(playerName)
-                                    .setPositiveButton("Female", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, Gender.Female);
-                                        }
-                                    })
-                                    .setNegativeButton("Male", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, Gender.Male);
-                                        }
-                                    })
-                                    .show();
-                        } else {
-                            addPlayerButton(parent, txtButtonText, gender);
-                        }
-
-                    }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                // Do nothing.
-            }
-        }).show();
     }
 
     private void saveButtonVisibility() {
@@ -414,49 +293,6 @@ public class Stats extends Activity {
             }
             currentButton.setTypeface(null, Typeface.NORMAL);
         }
-    }
-
-    public void loadJSON() {
-
-        // return if game in progress
-        if (gameStats.size() > 0){
-            Toast.makeText(mainContext, "No loading in the middle of a game, save and clear first.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
-
-        try {
-            teams.load(strFileName);
-        }
-        catch (Exception e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void loadNewTeams(){
-        if (gameStats.size() > 0){
-            Toast.makeText(mainContext, "No loading in the middle of a game, save and clear first.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        new AlertDialog.Builder(mainContext)
-                .setTitle("Choose Home Team")
-                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Team team = teams.getTeam(which);
-                        updateTeam(team, true);
-                        new AlertDialog.Builder(mainContext)
-                                .setTitle("Choose Away Team")
-                                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Team team = teams.getTeam(which);
-                                        updateTeam(team, false);
-                                        forceRosterChange = true;
-                                        changeState(editState);
-                                    }
-                                }).show();
-                    }
-                }).show();
     }
 
     @Override
@@ -573,53 +409,7 @@ public class Stats extends Activity {
         layoutRight.removeAllViews();
         editOn = false;
         rosterChange = false;
-        loadNewTeams();
-    }
-
-    private void updateTeam(Team team, boolean isLeft){
-        TextView tvTeamName = rightTeamName;
-        LinearLayout llButtonLayout = layoutRight;
-        int guyColour = getResources().getColor(R.color.rightGuysColour);
-        int girlColour = getResources().getColor(R.color.rightGirlsColour);
-        int intGirls = team.sizeGirls();
-        int intGuys = team.sizeGuys();
-        int gravity = Gravity.START;
-
-        if (isLeft){
-            tvTeamName = leftTeamName;
-            llButtonLayout = layoutLeft;
-            guyColour = getResources().getColor(R.color.leftGuysColour);
-            girlColour = getResources().getColor(R.color.leftGirlsColour);
-            gravity = Gravity.END;
-        }
-        tvTeamName.setText(team.name);
-        llButtonLayout.removeAllViews();
-
-
-        for (int i = 0; i < intGuys; i++) {
-            Button btn = new Button(this);
-            btn.setBackgroundColor(guyColour);
-            btn.setText(team.getGuyName(i));
-            llButtonLayout.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i);
-            btn.setTag(Gender.Male);
-            btn.setGravity(gravity);
-            btn.setOnClickListener(teamEditListener);
-        }
-        for (int i = 0; i < intGirls; i++){
-            Button btn = new Button(this);
-            btn.setPadding(1, 1, 1, 1);
-            btn.setBackgroundColor(girlColour);
-            btn.setText(team.getGirlName(i));
-            llButtonLayout.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i+intGuys);
-            btn.setTag(Gender.Female);
-            btn.setGravity(gravity);
-            btn.setOnClickListener(teamEditListener);
-        }
-
+        //TODO switch activity loadNewTeams();
     }
 
     private void createDefaultDirectories(){
@@ -1187,35 +977,35 @@ public class Stats extends Activity {
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
                 }
                 break;
-            case editState:
-                editOn = true;
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(false);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(false);
-                saveButtonVisibility();
-
-                mnuItmEditTeam.setTitle(R.string.str_action_stop_edit_teams);
-
-                for (int i = 0; i < leftCount; i++){
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                    currentButton.setEnabled(true);
-                    currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(teamEditListener);
-                    currentButton.setVisibility(View.VISIBLE);
-                }
-                for (int i = 0; i < rightCount; i++){
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    currentButton.setEnabled(true);
-                    currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(teamEditListener);
-                    currentButton.setVisibility(View.VISIBLE);
-                }
-                break;
+//            case editState:
+//                editOn = true;
+//                btnPoint.setEnabled(false);
+//                btnDrop.setEnabled(false);
+//                btnD.setEnabled(false);
+//                btnCatchD.setEnabled(false);
+//                btnThrowAway.setEnabled(false);
+//                btnUndo.setEnabled(false);
+//                btnPull.setEnabled(false);
+//                btnMode.setEnabled(false);
+//                saveButtonVisibility();
+//
+//                mnuItmEditTeam.setTitle(R.string.str_action_stop_edit_teams);
+//
+//                for (int i = 0; i < leftCount; i++){
+//                    Button currentButton = (Button) layoutLeft.getChildAt(i);
+//                    currentButton.setEnabled(true);
+//                    currentButton.setGravity(Gravity.END);
+//                    currentButton.setOnClickListener(teamEditListener);
+//                    currentButton.setVisibility(View.VISIBLE);
+//                }
+//                for (int i = 0; i < rightCount; i++){
+//                    Button currentButton = (Button) layoutRight.getChildAt(i);
+//                    currentButton.setEnabled(true);
+//                    currentButton.setGravity(Gravity.START);
+//                    currentButton.setOnClickListener(teamEditListener);
+//                    currentButton.setVisibility(View.VISIBLE);
+//                }
+//                break;
             case rosterChangeState:
                 rosterChange = true;
                 saveButtonVisibility();
