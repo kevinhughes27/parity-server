@@ -66,32 +66,48 @@ public class EditPlayers extends Activity {
             @Override
             public void onClick(View view) {
                 btnLastButtonClicked = (Button) view;
-                final AutoCompleteTextView input = new AutoCompleteTextView(view.getContext());
-                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
+                String deleteTxt = "Delete " + btnLastButtonClicked.getText();
 
                 new AlertDialog.Builder(context)
                         .setTitle("Edit")
-                        .setItems(new String[]{
-                                        "Add Substitute Player",
-                                        "Delete " + btnLastButtonClicked.getText(),
-                                        "Cancel"},
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        switch (which) {
-                                            case 0: //add substitute player
-                                                addSubstitutePlayer(input);
-                                                break;
-                                            case 1: //delete player
-                                                ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
-                                                break;
-                                            case 2: //do nothing
-                                                break;
-                                        }
-                                    }
-                                }).show();
+                        .setItems(new String[]{ deleteTxt, "Cancel" },
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                switch (which) {
+                                    case 0: //delete player
+                                        ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
+                                        break;
+                                    case 1: //do nothing
+                                        break;
+                                }
+                                }
+                            }).show();
             }
         };
 
+        final Button button = (Button) findViewById(R.id.btnAddPlayer);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            final AutoCompleteTextView input = new AutoCompleteTextView(v.getContext());
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
+
+            final String[] teams = new String[] {
+                leftTeamName.getText().toString(),
+                rightTeamName.getText().toString()
+            };
+
+            new AlertDialog.Builder(context)
+                .setTitle("Choose Teams")
+                .setItems(teams, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        addSubstitutePlayer(input, teams[which]);
+                    }
+                }).show();
+            }
+        });
+
+        // this probably shouldn't always run since this won't make sense if
+        // coming back to this state.
         new fetchRoster(this, myself).execute();
     }
 
@@ -108,21 +124,21 @@ public class EditPlayers extends Activity {
 
     public void loadNewTeams() {
         new AlertDialog.Builder(context)
-                .setTitle("Choose Home Team")
-                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+            .setTitle("Choose Home Team")
+            .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                Team team = teams.getTeam(which);
+                updateTeam(team, true);
+                new AlertDialog.Builder(context)
+                    .setTitle("Choose Away Team")
+                    .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
                         Team team = teams.getTeam(which);
-                        updateTeam(team, true);
-                        new AlertDialog.Builder(context)
-                                .setTitle("Choose Away Team")
-                                .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Team team = teams.getTeam(which);
-                                        updateTeam(team, false);
-                                    }
-                                }).show();
-                    }
-                }).show();
+                        updateTeam(team, false);
+                        }
+                    }).show();
+                }
+            }).show();
     }
 
     private void updateTeam(Team team, boolean isLeft){
@@ -170,69 +186,79 @@ public class EditPlayers extends Activity {
         }
     }
 
-    private void addPlayerButton(LinearLayout parent, String name, Gender gender){
+    private void addSubstitutePlayer(final AutoCompleteTextView input, final String team) {
+        input.setAdapter(new ArrayAdapter<String>(
+            context,
+            android.R.layout.simple_dropdown_item_1line,
+            teams.allPlayers())
+        );
+
+        new AlertDialog.Builder(context)
+            .setTitle("Add Substitute Player")
+            .setMessage("Player Name")
+            .setView(input)
+            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                String playerName = input.getText().toString();
+                final String txtButtonText = playerName + "(S)";
+
+                // This all is kind of gross
+                final Gender gender = teams.getPlayerGender(playerName);
+                if (gender == Gender.Unknown) {
+                    new AlertDialog.Builder(context)
+                        .setTitle("Select Gender")
+                        .setMessage(playerName)
+                        .setPositiveButton("Female", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                addPlayerButton(team, txtButtonText, Gender.Female);
+                            }
+                        })
+                        .setNegativeButton("Male", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                addPlayerButton(team, txtButtonText, Gender.Male);
+                            }
+                        }).show();
+                } else {
+                    addPlayerButton(team, txtButtonText, gender);
+                }
+
+                }
+            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    // Do nothing.
+                }
+            }).show();
+    }
+
+    private void addPlayerButton(String teamName, String name, Gender gender){
         final Button btn = new Button(context);
-        if (gender == Gender.Male) {
-            parent.addView(btn, findFemaleStartIndex(parent));
+
+        int gravity;
+        customLinearLayout layout;
+
+        if (teamName == leftTeamName.getText().toString()) {
+            layout = layoutLeft;
+            gravity = Gravity.END;
         } else {
-            parent.addView(btn);
+            layout = layoutRight;
+            gravity = Gravity.START;
+        }
+
+        if (gender == Gender.Male) {
+            layout.addView(btn, findFemaleStartIndex(layout));
+        } else {
+            layout.addView(btn);
         }
 
         btn.setText(name);
         btn.setLayoutParams(param);
-        btn.setId(parent.getChildCount() - 1);
+        btn.setId(layout.getChildCount() - 1);
         btn.setTag(gender);
         btn.setOnClickListener(teamEditListener);
-        btn.setGravity(btnLastButtonClicked.getGravity());
+        btn.setGravity(gravity);
         btn.setBackgroundColor(getResources().getColor(gender.colorId));
-    }
-
-    private void addSubstitutePlayer(final AutoCompleteTextView input) {
-        input.setAdapter(new ArrayAdapter<String>(
-                context,
-                android.R.layout.simple_dropdown_item_1line,
-                teams.allPlayers())
-        );
-
-        new AlertDialog.Builder(context)
-                .setTitle("Add Substitute Player")
-                .setMessage("Player Name")
-                .setView(input)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        String playerName = input.getText().toString();
-                        final String txtButtonText = playerName + "(S)";
-                        final LinearLayout parent = (LinearLayout) btnLastButtonClicked.getParent();
-
-                        // This all is kind of gross
-                        final Gender gender = teams.getPlayerGender(playerName);
-                        if (gender == Gender.Unknown) {
-                            new AlertDialog.Builder(context)
-                                    .setTitle("Select Gender")
-                                    .setMessage(playerName)
-                                    .setPositiveButton("Female", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, Gender.Female);
-                                        }
-                                    })
-                                    .setNegativeButton("Male", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            addPlayerButton(parent, txtButtonText, Gender.Male);
-                                        }
-                                    })
-                                    .show();
-                        } else {
-                            addPlayerButton(parent, txtButtonText, gender);
-                        }
-
-                    }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                // Do nothing.
-            }
-        }).show();
     }
 
     private int findFemaleStartIndex(LinearLayout parent) {

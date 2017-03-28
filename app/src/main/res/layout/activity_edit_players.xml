@@ -90,14 +90,14 @@
             tools:context=".Stats">
 
             <Button
-                android:id="@+id/btnMode"
+                android:id="@+id/btnAddPlayer"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
                 android:text="Add Player" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnFinish"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
