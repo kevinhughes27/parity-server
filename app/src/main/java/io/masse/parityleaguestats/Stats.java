@@ -111,7 +111,6 @@ public class Stats extends Activity {
 
     private LinearLayout.LayoutParams param;
 
-    //todo fix this it's ugly
     private ArrayList<String> leftPlayers;
     private ArrayList<String> rightPlayers;
 
@@ -122,6 +121,12 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
+        String leftTeam = this.getIntent().getStringExtra("leftTeamName");
+        String rightTeam = this.getIntent().getStringExtra("rightTeamName");
+        leftPlayers = this.getIntent().getStringArrayListExtra("leftPlayers");
+        rightPlayers = this.getIntent().getStringArrayListExtra("rightPlayers");
+
+        // needs to be passed in.
         teams = new Teams();
 
         //Setup Buttons
@@ -155,7 +160,6 @@ public class Stats extends Activity {
         listView.setAdapter(adapter);
 
         createDefaultDirectories();
-
 
         int margin = getResources().getDimensionPixelSize(R.dimen.button_all_margin);
         param = new LinearLayout.LayoutParams(
@@ -233,8 +237,6 @@ public class Stats extends Activity {
             }
             Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
 
-        } else {
-            // new fetchRoster(mainContext, myself).execute();
         }
 
         btnUndo.setOnClickListener(mainOnClickListener);
@@ -782,6 +784,7 @@ public class Stats extends Activity {
 
                 rosterChange = false;
                 forceRosterChange = false;
+
                 leftPlayers = new ArrayList<String>();
                 rightPlayers = new ArrayList<String>();
                 for (int i = 0; i < leftCount; i++) {

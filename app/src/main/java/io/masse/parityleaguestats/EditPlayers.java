@@ -1,9 +1,11 @@
 package io.masse.parityleaguestats;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.InputType;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Gender;
@@ -85,8 +88,8 @@ public class EditPlayers extends Activity {
             }
         };
 
-        final Button button = (Button) findViewById(R.id.btnAddPlayer);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button editButton = (Button) findViewById(R.id.btnAddPlayer);
+        editButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             final AutoCompleteTextView input = new AutoCompleteTextView(v.getContext());
             input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
@@ -105,6 +108,38 @@ public class EditPlayers extends Activity {
                 }).show();
             }
         });
+
+
+        final Button finishButton = (Button) findViewById(R.id.btnFinish);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+                                            public void onClick(View v) {
+                                                Intent intent = new Intent(context, Stats.class);
+
+                                                ArrayList<String>leftPlayers = new ArrayList<>();
+                                                ArrayList<String> rightPlayers = new ArrayList<>();
+
+                                                int leftCount = layoutLeft.getChildCount();
+                                                int rightCount = layoutRight.getChildCount();
+
+                                                for (int i = 0; i < leftCount; i++) {
+                                                    Button currentButton = (Button) layoutLeft.getChildAt(i);
+                                                    String playerName = currentButton.getText().toString();
+                                                    leftPlayers.add(playerName);
+                                                }
+                                                for (int i = 0; i < rightCount; i++) {
+                                                    Button currentButton = (Button) layoutRight.getChildAt(i);
+                                                    String playerName = currentButton.getText().toString();
+                                                    rightPlayers.add(playerName);
+                                                }
+
+                                                intent.putExtra("leftTeamName", leftTeamName.getText().toString());
+                                                intent.putExtra("rightTeamName", leftTeamName.getText().toString());
+                                                intent.putExtra("leftPlayers", leftPlayers);
+                                                intent.putExtra("leftRightPlayers", rightPlayers);
+
+                                                startActivity(intent);
+                                            }
+                                        });
 
         // this probably shouldn't always run since this won't make sense if
         // coming back to this state.
