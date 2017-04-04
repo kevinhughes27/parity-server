@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.InputType;
@@ -135,7 +134,7 @@ public class EditPlayers extends Activity {
                                                 intent.putExtra("leftTeamName", leftTeamName.getText().toString());
                                                 intent.putExtra("rightTeamName", leftTeamName.getText().toString());
                                                 intent.putExtra("leftPlayers", leftPlayers);
-                                                intent.putExtra("leftRightPlayers", rightPlayers);
+                                                intent.putExtra("rightPlayers", rightPlayers);
 
                                                 startActivity(intent);
                                             }

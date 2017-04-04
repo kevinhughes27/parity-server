@@ -40,13 +40,6 @@ import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
-
-//TODO change swap direction to large arrow
-//TODO remove static text
-//TODO separate class to handle state.
-//todo add unknown button to each side.
-//todo add about
-
 @SuppressWarnings({"unchecked", "null"})
 
 public class Stats extends Activity {
@@ -111,6 +104,8 @@ public class Stats extends Activity {
 
     private LinearLayout.LayoutParams param;
 
+    private String leftTeam;
+    private String rightTeam;
     private ArrayList<String> leftPlayers;
     private ArrayList<String> rightPlayers;
 
@@ -121,15 +116,22 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        String leftTeam = this.getIntent().getStringExtra("leftTeamName");
-        String rightTeam = this.getIntent().getStringExtra("rightTeamName");
+        leftTeam = this.getIntent().getStringExtra("leftTeamName");
+        rightTeam = this.getIntent().getStringExtra("rightTeamName");
         leftPlayers = this.getIntent().getStringArrayListExtra("leftPlayers");
         rightPlayers = this.getIntent().getStringArrayListExtra("rightPlayers");
 
         // needs to be passed in.
         teams = new Teams();
+        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/roster.JSON";
+        try {
+            teams.load(strFileName);
+        }
+        catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+        }
 
-        //Setup Buttons
+        // Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
         btnPoint = (Button) findViewById(R.id.btnPoint);
         btnDrop = (Button) findViewById(R.id.btnDrop);
@@ -139,7 +141,7 @@ public class Stats extends Activity {
         btnUndo = (Button) findViewById(R.id.btnUndo);
         btnMode = (Button) findViewById(R.id.btnMode);
 
-        //Setup TextView
+        // Setup TextView
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
         leftScore = (TextView) findViewById(R.id.leftScore);
@@ -200,43 +202,33 @@ public class Stats extends Activity {
             }
         };
 
+        leftTeamName.setText(leftTeam);
+        rightTeamName.setText(rightTeam);
+
+        for (int i = 0; i < leftPlayers.size(); i++) {
+            Button btn = new Button(this);
+            btn.setText(leftPlayers.get(i));
+            layoutLeft.addView(btn);
+            btn.setLayoutParams(param);
+            btn.setId(i);
+            btn.setOnClickListener(mainOnClickListener);
+        }
+        for (int i = 0; i < rightPlayers.size(); i++) {
+            Button btn = new Button(this);
+            btn.setText(rightPlayers.get(i));
+            layoutRight.addView(btn);
+            btn.setLayoutParams(param);
+            btn.setId(i);
+            btn.setOnClickListener(mainOnClickListener);
+        }
+
         if ((savedInstanceState != null) &&
             (savedInstanceState.getSerializable("arrayEventNames") != null)  &&
-            (savedInstanceState.getSerializable("arrayEventActions") != null) &&
-            (savedInstanceState.getSerializable("leftTeam") != null) &&
-            (savedInstanceState.getSerializable("rightTeam") != null)) {
+            (savedInstanceState.getSerializable("arrayEventActions") != null)) {
 
             gameStats = (actionTracker) savedInstanceState.getSerializable("gameStats");
 
-            ArrayList<String> leftTeam;
-            ArrayList<String> rightTeam;
-
-            leftTeam = (ArrayList<String>) savedInstanceState.getSerializable("leftTeam");
-            rightTeam = (ArrayList<String>) savedInstanceState.getSerializable("rightTeam");
-
-            leftTeamName.setText(leftTeam.get(0));
-            rightTeamName.setText(rightTeam.get(0));
-            leftTeam.remove(0);
-            rightTeam.remove(0);
-
-            for (int i = 0; i < leftTeam.size(); i++) {
-                Button btn = new Button(this);
-                btn.setText(leftTeam.get(i));
-                layoutLeft.addView(btn);
-                btn.setLayoutParams(param);
-                btn.setId(i);
-                btn.setOnClickListener(mainOnClickListener);
-            }
-            for (int i = 0; i < rightTeam.size(); i++) {
-                Button btn = new Button(this);
-                btn.setText(rightTeam.get(i));
-                layoutRight.addView(btn);
-                btn.setLayoutParams(param);
-                btn.setId(i);
-                btn.setOnClickListener(mainOnClickListener);
-            }
             Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
-
         }
 
         btnUndo.setOnClickListener(mainOnClickListener);
@@ -268,7 +260,6 @@ public class Stats extends Activity {
     }
 
     private void loadButtonVisibility() {
-
         int leftCount = layoutLeft.getChildCount();
         int rightCount = layoutRight.getChildCount();
         rosterChange = false;
