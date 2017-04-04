@@ -240,7 +240,7 @@ public class Stats extends Activity {
         btnThrowAway.setOnClickListener(mainOnClickListener);
         btnMode.setOnClickListener(changeModeListener);
 
-        changeState(autoState);
+        changeState(rosterChangeState);
     }
 
     private void saveButtonVisibility() {
@@ -971,35 +971,6 @@ public class Stats extends Activity {
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
                 }
                 break;
-//            case editState:
-//                editOn = true;
-//                btnPoint.setEnabled(false);
-//                btnDrop.setEnabled(false);
-//                btnD.setEnabled(false);
-//                btnCatchD.setEnabled(false);
-//                btnThrowAway.setEnabled(false);
-//                btnUndo.setEnabled(false);
-//                btnPull.setEnabled(false);
-//                btnMode.setEnabled(false);
-//                saveButtonVisibility();
-//
-//                mnuItmEditTeam.setTitle(R.string.str_action_stop_edit_teams);
-//
-//                for (int i = 0; i < leftCount; i++){
-//                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-//                    currentButton.setEnabled(true);
-//                    currentButton.setGravity(Gravity.END);
-//                    currentButton.setOnClickListener(teamEditListener);
-//                    currentButton.setVisibility(View.VISIBLE);
-//                }
-//                for (int i = 0; i < rightCount; i++){
-//                    Button currentButton = (Button) layoutRight.getChildAt(i);
-//                    currentButton.setEnabled(true);
-//                    currentButton.setGravity(Gravity.START);
-//                    currentButton.setOnClickListener(teamEditListener);
-//                    currentButton.setVisibility(View.VISIBLE);
-//                }
-//                break;
             case rosterChangeState:
                 rosterChange = true;
                 saveButtonVisibility();
