@@ -5,12 +5,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.content.Context;
+import android.view.View.OnClickListener;
 
 import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
 
 public class Utils {
-    public static void draw_players(Context context, LinearLayout layout, Team team, boolean isLeft) {
+    public static void draw_players(Context context, LinearLayout layout, OnClickListener listener, Team team, boolean isLeft) {
         int guyColour = context.getResources().getColor(R.color.rightGuysColour);
         int girlColour = context.getResources().getColor(R.color.rightGirlsColour);
         int gravity = Gravity.START;
@@ -41,7 +42,7 @@ public class Utils {
             btn.setId(i);
             btn.setTag(Gender.Male);
             btn.setGravity(gravity);
-            // btn.setOnClickListener(teamEditListener);
+            btn.setOnClickListener(listener);
         }
         for (int i = 0; i < intGirls; i++){
             Button btn = new Button(context);
@@ -53,7 +54,7 @@ public class Utils {
             btn.setId(i+intGuys);
             btn.setTag(Gender.Female);
             btn.setGravity(gravity);
-            // btn.setOnClickListener(teamEditListener);
+            btn.setOnClickListener(listener);
         }
     }
 }

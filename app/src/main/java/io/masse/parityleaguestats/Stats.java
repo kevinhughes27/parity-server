@@ -17,7 +17,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -163,12 +162,6 @@ public class Stats extends Activity {
 
         createDefaultDirectories();
 
-        int margin = getResources().getDimensionPixelSize(R.dimen.button_all_margin);
-        param = new LinearLayout.LayoutParams(
-                LayoutParams.MATCH_PARENT,
-                LayoutParams.MATCH_PARENT, 1.0f);
-        param.setMargins(margin,margin,margin,margin);
-
         mainOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -203,22 +196,16 @@ public class Stats extends Activity {
         };
 
         leftTeamName.setText(leftTeam);
-        rightTeamName.setText(rightTeam);
-
-        for (int i = 0; i < leftPlayers.size(); i++) {
-            Button btn = new Button(this);
-            btn.setText(leftPlayers.get(i));
-            layoutLeft.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i);
+        Utils.draw_players(mainContext, layoutLeft, leftPlayers, true);
+        for (int i = 0; i < layoutLeft.getChildCount(); i++) {
+            Button btn = (Button) layoutLeft.getChildAt(i);
             btn.setOnClickListener(mainOnClickListener);
         }
-        for (int i = 0; i < rightPlayers.size(); i++) {
-            Button btn = new Button(this);
-            btn.setText(rightPlayers.get(i));
-            layoutRight.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i);
+
+        rightTeamName.setText(rightTeam);
+        Utils.draw_players(mainContext, layoutLeft, rightPlayers, false);
+        for (int i = 0; i < layoutRight.getChildCount(); i++) {
+            Button btn = (Button) layoutRight.getChildAt(i);
             btn.setOnClickListener(mainOnClickListener);
         }
 

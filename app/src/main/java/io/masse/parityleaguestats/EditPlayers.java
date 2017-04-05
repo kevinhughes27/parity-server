@@ -8,9 +8,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.InputType;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -19,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.util.ArrayList;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Gender;
@@ -35,13 +32,14 @@ public class EditPlayers extends Activity {
     TextView leftTeamName, rightTeamName;
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
-    private LinearLayout.LayoutParams param;
     private Button btnLastButtonClicked;
     private View.OnClickListener teamEditListener;
     private Context context;
     private final EditPlayers myself = this;
 
     private Teams teams;
+    private Team leftTeam;
+    private Team rightTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +56,6 @@ public class EditPlayers extends Activity {
         layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
         layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
 
-        int margin = getResources().getDimensionPixelSize(R.dimen.button_all_margin);
-        param = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT, 1.0f);
-        param.setMargins(margin,margin,margin,margin);
-
         teamEditListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +69,13 @@ public class EditPlayers extends Activity {
                                 public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0: //delete player
-                                        ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
+                                        String playerName = btnLastButtonClicked.getText().toString();
+                                        if (btnLastButtonClicked.getParent() == layoutLeft) {
+                                            leftTeam.removePlayer(playerName);
+                                        } else {
+                                            rightTeam.removePlayer(playerName);
+                                        }
+                                        //TODO redraw
                                         break;
                                     case 1: //do nothing
                                         break;
@@ -94,15 +92,22 @@ public class EditPlayers extends Activity {
             input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
             final String[] teams = new String[] {
-                leftTeamName.getText().toString(),
-                rightTeamName.getText().toString()
+                leftTeam.name,
+                rightTeam.name
             };
 
             new AlertDialog.Builder(context)
                 .setTitle("Choose Teams")
                 .setItems(teams, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        addSubstitutePlayer(input, teams[which]);
+                        switch (which) {
+                            case 0:
+                                addSubstitutePlayer(input, leftTeam);
+                                break;
+                            case 1:
+                                addSubstitutePlayer(input, rightTeam);
+                                break;
+                        }
                     }
                 }).show();
             }
@@ -113,35 +118,16 @@ public class EditPlayers extends Activity {
         finishButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(context, Stats.class);
-
-                                                ArrayList<String>leftPlayers = new ArrayList<>();
-                                                ArrayList<String> rightPlayers = new ArrayList<>();
-
-                                                int leftCount = layoutLeft.getChildCount();
-                                                int rightCount = layoutRight.getChildCount();
-
-                                                for (int i = 0; i < leftCount; i++) {
-                                                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                                                    String playerName = currentButton.getText().toString();
-                                                    leftPlayers.add(playerName);
-                                                }
-                                                for (int i = 0; i < rightCount; i++) {
-                                                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                                                    String playerName = currentButton.getText().toString();
-                                                    rightPlayers.add(playerName);
-                                                }
-
-                                                intent.putExtra("leftTeamName", leftTeamName.getText().toString());
-                                                intent.putExtra("rightTeamName", leftTeamName.getText().toString());
-                                                intent.putExtra("leftPlayers", leftPlayers);
-                                                intent.putExtra("rightPlayers", rightPlayers);
-
+                                                Bundle bundle = new Bundle();
+                                                //TODO make these serializable
+                                                bundle.putSerializable("leftTeam", leftTeam);
+                                                bundle.putSerializable("rightTeam", rightTeam);
+                                                intent.putExtra("teams", bundle);
                                                 startActivity(intent);
                                             }
                                         });
 
-        // this probably shouldn't always run since this won't make sense if
-        // coming back to this state.
+        // this probably shouldn't always run since this won't make sense if coming back to this state.
         new fetchRoster(this, myself).execute();
     }
 
@@ -161,32 +147,24 @@ public class EditPlayers extends Activity {
             .setTitle("Choose Home Team")
             .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                Team team = teams.getTeam(which);
-                rightTeamName.setText(team.name);
-                Utils.draw_players(context, layoutLeft, team, true);
-                for (int i = 0; i < layoutLeft.getChildCount(); i++) {
-                    Button btn = (Button) layoutLeft.getChildAt(i);
-                    btn.setOnClickListener(teamEditListener);
-                }
+                leftTeam = teams.getTeam(which);
+                leftTeamName.setText(leftTeam.name);
+                Utils.draw_players(context, layoutLeft, teamEditListener, leftTeam, true);
                 new AlertDialog.Builder(context)
                     .setTitle("Choose Away Team")
                     .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                        Team team = teams.getTeam(which);
-                        leftTeamName.setText(team.name);
-                        Utils.draw_players(context, layoutRight, team, false);
-                        for (int i = 0; i < layoutRight.getChildCount(); i++) {
-                            Button btn = (Button) layoutRight.getChildAt(i);
-                            btn.setOnClickListener(teamEditListener);
-                        }
+                        rightTeam = teams.getTeam(which);
+                        rightTeamName.setText(rightTeam.name);
+                        Utils.draw_players(context, layoutRight, teamEditListener, rightTeam, false);
                         }
                     }).show();
                 }
             }).show();
     }
 
-    private void addSubstitutePlayer(final AutoCompleteTextView input, final String team) {
-        input.setAdapter(new ArrayAdapter<String>(
+    private void addSubstitutePlayer(final AutoCompleteTextView input, final Team team) {
+        input.setAdapter(new ArrayAdapter<>(
             context,
             android.R.layout.simple_dropdown_item_1line,
             teams.allPlayers())
@@ -198,10 +176,8 @@ public class EditPlayers extends Activity {
             .setView(input)
             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                String playerName = input.getText().toString();
-                final String txtButtonText = playerName + "(S)";
+                final String playerName = input.getText().toString() + "(S)";
 
-                // This all is kind of gross
                 final Gender gender = teams.getPlayerGender(playerName);
                 if (gender == Gender.Unknown) {
                     new AlertDialog.Builder(context)
@@ -210,17 +186,20 @@ public class EditPlayers extends Activity {
                         .setPositiveButton("Female", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                addPlayerButton(team, txtButtonText, Gender.Female);
+                                team.addPlayer(playerName, Gender.Female);
+                                //TODO redraw
                             }
                         })
                         .setNegativeButton("Male", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                addPlayerButton(team, txtButtonText, Gender.Male);
+                                team.addPlayer(playerName, Gender.Male);
+                                //TODO redraw
                             }
                         }).show();
                 } else {
-                    addPlayerButton(team, txtButtonText, gender);
+                    team.addPlayer(playerName, gender);
+                    //TODO redraw
                 }
 
                 }
@@ -229,51 +208,5 @@ public class EditPlayers extends Activity {
                     // Do nothing.
                 }
             }).show();
-    }
-
-    private void addPlayerButton(String teamName, String name, Gender gender){
-        final Button btn = new Button(context);
-
-        int gravity;
-        customLinearLayout layout;
-
-        if (teamName == leftTeamName.getText().toString()) {
-            layout = layoutLeft;
-            gravity = Gravity.END;
-        } else {
-            layout = layoutRight;
-            gravity = Gravity.START;
-        }
-
-        if (gender == Gender.Male) {
-            layout.addView(btn, findFemaleStartIndex(layout));
-        } else {
-            layout.addView(btn);
-        }
-
-        btn.setText(name);
-        btn.setLayoutParams(param);
-        btn.setId(layout.getChildCount() - 1);
-        btn.setTag(gender);
-        btn.setOnClickListener(teamEditListener);
-        btn.setGravity(gravity);
-        btn.setBackgroundColor(getResources().getColor(gender.colorId));
-    }
-
-    private int findFemaleStartIndex(LinearLayout parent) {
-        int count = parent.getChildCount();
-        for (int i = 0; i < count; i++) {
-            Object child = parent.getChildAt(i).getTag();
-            if (child == null) {
-                continue;
-            }
-
-            Gender check = Gender.valueOf(Gender.class, child.toString());
-            if (check == Gender.Female) {
-                return i;
-            }
-        }
-
-        return count;
     }
 }

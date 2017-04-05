@@ -16,12 +16,21 @@ public class Team {
         }
     }
 
-    public void addPlayer(String teamMember, Boolean isMale){
+    public void addPlayer(String playerName, Gender gender){
+        boolean isMale = (gender == Gender.Male);
+        addPlayer(playerName, isMale);
+    }
+
+    public void addPlayer(String playerName, Boolean isMale){
         if (isMale){
-            arlGuys.add(teamMember);
+            arlGuys.add(playerName);
         }else{
-            arlGirls.add(teamMember);
+            arlGirls.add(playerName);
         }
+    }
+
+    public void removePlayer(String playerName) {
+
     }
 
     public ArrayList<String> getPlayers(){
