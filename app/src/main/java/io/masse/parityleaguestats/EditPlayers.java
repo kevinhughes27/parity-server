@@ -162,62 +162,27 @@ public class EditPlayers extends Activity {
             .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                 Team team = teams.getTeam(which);
-                updateTeam(team, true);
+                rightTeamName.setText(team.name);
+                Utils.draw_players(context, layoutLeft, team, true);
+                for (int i = 0; i < layoutLeft.getChildCount(); i++) {
+                    Button btn = (Button) layoutLeft.getChildAt(i);
+                    btn.setOnClickListener(teamEditListener);
+                }
                 new AlertDialog.Builder(context)
                     .setTitle("Choose Away Team")
                     .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                         Team team = teams.getTeam(which);
-                        updateTeam(team, false);
+                        leftTeamName.setText(team.name);
+                        Utils.draw_players(context, layoutRight, team, false);
+                        for (int i = 0; i < layoutRight.getChildCount(); i++) {
+                            Button btn = (Button) layoutRight.getChildAt(i);
+                            btn.setOnClickListener(teamEditListener);
+                        }
                         }
                     }).show();
                 }
             }).show();
-    }
-
-    private void updateTeam(Team team, boolean isLeft){
-        TextView tvTeamName = rightTeamName;
-        LinearLayout llButtonLayout = layoutRight;
-        int guyColour = getResources().getColor(R.color.rightGuysColour);
-        int girlColour = getResources().getColor(R.color.rightGirlsColour);
-        int intGirls = team.sizeGirls();
-        int intGuys = team.sizeGuys();
-        int gravity = Gravity.START;
-
-        if (isLeft){
-            tvTeamName = leftTeamName;
-            llButtonLayout = layoutLeft;
-            guyColour = getResources().getColor(R.color.leftGuysColour);
-            girlColour = getResources().getColor(R.color.leftGirlsColour);
-            gravity = Gravity.END;
-        }
-        tvTeamName.setText(team.name);
-        llButtonLayout.removeAllViews();
-
-
-        for (int i = 0; i < intGuys; i++) {
-            Button btn = new Button(this);
-            btn.setBackgroundColor(guyColour);
-            btn.setText(team.getGuyName(i));
-            llButtonLayout.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i);
-            btn.setTag(Gender.Male);
-            btn.setGravity(gravity);
-            btn.setOnClickListener(teamEditListener);
-        }
-        for (int i = 0; i < intGirls; i++){
-            Button btn = new Button(this);
-            btn.setPadding(1, 1, 1, 1);
-            btn.setBackgroundColor(girlColour);
-            btn.setText(team.getGirlName(i));
-            llButtonLayout.addView(btn);
-            btn.setLayoutParams(param);
-            btn.setId(i+intGuys);
-            btn.setTag(Gender.Female);
-            btn.setGravity(gravity);
-            btn.setOnClickListener(teamEditListener);
-        }
     }
 
     private void addSubstitutePlayer(final AutoCompleteTextView input, final String team) {
