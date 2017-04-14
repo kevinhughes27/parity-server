@@ -11,7 +11,7 @@ type Props = {
   children?: React$Element<any>
 };
 
-class Nav extends Component {
+class TopNav extends Component {
   props: Props
 
   componentDidMount () {
@@ -69,4 +69,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav
+export default TopNav
