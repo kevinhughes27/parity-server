@@ -15,6 +15,12 @@ export default class Stats {
     })
   }
 
+  playersWithStats () {
+    return _.filter(this.toArray(), (player) => {
+      return _.keys(player).length > 4
+    })
+  }
+
   playerNames () {
     return _.keys(this.data)
   }

@@ -76,10 +76,7 @@ export default class StatsTable extends Component {
   }
 
   render () {
-    // filter players who only have a salary for this week.
-    let statsArray = _.filter(this.state.stats.toArray(), (player) => {
-      return _.keys(player).length > 4
-    })
+    let statsArray = this.state.stats.playersWithStats()
 
     return (
       <Griddle
