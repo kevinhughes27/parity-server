@@ -25,62 +25,80 @@ exports[`test App renders correctly 1`] = `
       <ul
         className="side-nav"
         id="sidebar">
-        <li>
-          <a
-            onClick={[Function bound handleClick]}
-            style={Object {}}>
-            Raw Stats
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={[Function bound handleClick]}
-            style={Object {}}>
-            Leaderboards
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={[Function bound handleClick]}
-            style={Object {}}>
-            Compare Players
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={[Function bound handleClick]}
-            style={Object {}}>
-            Team Dashboard
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={[Function bound handleClick]}
-            style={Object {}}>
-            Trade Simulator
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing"
-            target="_blank">
-            Spreadsheets
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://parity-server.herokuapp.com/docs"
-            target="_blank">
-            API Documentation
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/kevinhughes27/parity-server"
-            target="_blank">
-            Source Code
-          </a>
-        </li>
+        <div>
+          <li>
+            <div
+              className="userView">
+              <img
+                src="logo.png"
+                style={
+                  Object {
+                    "width": 240
+                  }
+                } />
+            </div>
+          </li>
+          <li>
+            <a
+              onClick={[Function bound handleClick]}
+              style={Object {}}>
+              Raw Stats
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={[Function bound handleClick]}
+              style={Object {}}>
+              Leaderboards
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={[Function bound handleClick]}
+              style={Object {}}>
+              Compare Players
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={[Function bound handleClick]}
+              style={Object {}}>
+              Team Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={[Function bound handleClick]}
+              style={Object {}}>
+              Trade Simulator
+            </a>
+          </li>
+          <li>
+            <div
+              className="divider" />
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing"
+              target="_blank">
+              Spreadsheets
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://parity-server.herokuapp.com/docs"
+              target="_blank">
+              API Documentation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/kevinhughes27/parity-server"
+              target="_blank">
+              Source Code
+            </a>
+          </li>
+        </div>
       </ul>
       <ul
         className="right">
