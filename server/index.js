@@ -2,8 +2,8 @@
 
 import 'babel-polyfill'
 import express from 'express'
-import configure from './config/config'
-import addRoutes from './config/routes'
+import configure from './config'
+import addRoutes from './routes'
 
 // Init express
 const app = express()

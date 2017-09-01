@@ -38,7 +38,7 @@
     "deploy": "git push heroku",
     "heroku-postbuild": "yarn run build && yarn run docs",
     "build": "cd client && yarn run build",
-    "docs": "apidoc -i routes/ -o docs"
+    "docs": "apidoc -i server/routes/ -o docs"
   },
   "apidoc": {
     "name": "Parity Server",
