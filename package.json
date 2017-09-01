@@ -10,8 +10,7 @@
     "url": "http://github.com/kevinhughes27/parity-server"
   },
   "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.3"
+    "node": "~7.7.3"
   },
   "babel": {
     "plugins": [
@@ -22,6 +21,24 @@
       "es2017",
       "stage-2"
     ]
+  },
+  "scripts": {
+    "postinstall": "cd client && yarn install",
+    "start": "babel-node server/index.js",
+    "server": "nodemon --exec 'yarn start' --ignore client",
+    "client": "cd client && yarn start",
+    "lint": "eslint *.js",
+    "flow": "flow check",
+    "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
+    "test:client": "cd client && yarn test",
+    "db:seed": "babel-node bin/seed.js",
+    "db:drop": "echo 'db.dropDatabase()' | mongo development",
+    "db:drop:test": "echo 'db.dropDatabase()' | mongo test",
+    "backup": "babel-node bin/backup.js",
+    "deploy": "git push heroku",
+    "heroku-postbuild": "yarn run build && yarn run docs",
+    "build": "cd client && yarn run build",
+    "docs": "apidoc -i routes/ -o docs"
   },
   "apidoc": {
     "name": "Parity Server",
@@ -77,23 +94,5 @@
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "zero-pad": "^1.0.2"
-  },
-  "scripts": {
-    "postinstall": "cd client && npm install",
-    "start": "babel-node server.js",
-    "server": "nodemon --exec 'npm start' --ignore client",
-    "client": "cd client && npm start",
-    "lint": "eslint *.js",
-    "flow": "flow check",
-    "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
-    "test:client": "cd client && npm test",
-    "db:seed": "babel-node bin/seed.js",
-    "db:drop": "echo 'db.dropDatabase()' | mongo development",
-    "db:drop:test": "echo 'db.dropDatabase()' | mongo test",
-    "backup": "babel-node bin/backup.js",
-    "deploy": "git push heroku",
-    "heroku-postbuild": "npm run build && npm run docs",
-    "build": "cd client && npm run build",
-    "docs": "apidoc -i routes/ -o docs"
   }
 }
