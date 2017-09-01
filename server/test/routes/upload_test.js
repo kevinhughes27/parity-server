@@ -12,7 +12,7 @@ const Db = require('monk')(process.env.MONGODB_URI)
 const Games = Db.get('games')
 
 describe('POST /upload', function () {
-  var server = require('../../server')
+  var server = require('../../index')
   var baseUrl = 'http://localhost:3002'
   var url = `${baseUrl}/upload`
 

@@ -29,7 +29,7 @@
     "client": "cd client && yarn start",
     "lint": "eslint *.js",
     "flow": "flow check",
-    "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
+    "test": "cd server && mocha --compilers js:babel-core/register --recursive --reporter spec",
     "test:client": "cd client && yarn test",
     "db:seed": "babel-node bin/seed.js",
     "db:drop": "echo 'db.dropDatabase()' | mongo development",

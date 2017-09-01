@@ -11,7 +11,7 @@ const Db = require('monk')(process.env.MONGODB_URI)
 const Games = Db.get('games')
 
 describe('games routes', function () {
-  var server = require('../../server')
+  var server = require('../../index')
 
   var game = {
     week: 1,
