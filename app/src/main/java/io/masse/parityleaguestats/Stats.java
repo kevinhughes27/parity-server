@@ -10,7 +10,6 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -79,7 +77,6 @@ public class Stats extends Activity {
 
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
-    private MenuItem mnuItmEditTeam;
 
     private Button btnLastButtonClicked;
     private actionTracker gameStats;
@@ -88,11 +85,6 @@ public class Stats extends Activity {
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeModeListener;
     private View.OnClickListener toggleUserListener;
-
-    private static final File fileStorageDirectory = Environment.getExternalStorageDirectory();
-    private static final String strAppDirectory = "ParityLeagueStats";
-    private static final String strAutoSaveDirectory = "autosave";
-    private static final String strFinalSaveDirectory = "finalsave";
 
     private final Stats myself = this;
 
@@ -279,7 +271,6 @@ public class Stats extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_actions, menu);
-        mnuItmEditTeam = menu.findItem(R.id.action_edit_players);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -331,53 +322,51 @@ public class Stats extends Activity {
         startActivity(intent);
     }
 
-    private void createDefaultDirectories(){
-        File folder = new File(fileStorageDirectory + "/" + strAppDirectory);
-        boolean success;
-        if (!folder.exists()) {
-            Toast.makeText(mainContext, "Directory Does Not Exist, Create It", Toast.LENGTH_SHORT).show();
-            success = folder.mkdir();
-            if (success) {
-                Toast.makeText(mainContext, "Directory Created: " + folder , Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(mainContext, "Failed - Error", Toast.LENGTH_SHORT).show();
-            }
+    private static final String strAppDirectory = "ParityLeagueStats";
+    private static final String strAutoSaveDirectory = "autosave";
+    private static final String strFinalSaveDirectory = "finalsave";
+
+    private String fileStorageDirectory() {
+        String savePath;
+        String state = Environment.getExternalStorageState();
+
+
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            savePath = Environment.getExternalStorageDirectory().getPath();
+        } else {
+            savePath = mainContext.getFilesDir().getPath();
         }
 
-        folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strAutoSaveDirectory );
+        return savePath;
+    }
+
+    private void createDefaultDirectories() {
+        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory));
+        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strAutoSaveDirectory));
+        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strFinalSaveDirectory));
+    }
+
+    private void createDirectory(File folder) {
         if (!folder.exists()) {
-            Toast.makeText(mainContext, "Directory Does Not Exist, Create It", Toast.LENGTH_SHORT).show();
-            success = folder.mkdir();
-            if (success) {
-                Toast.makeText(mainContext, "Directory Created: " + folder, Toast.LENGTH_SHORT).show();
+            Toast.makeText(mainContext, "Directory Found: " + folder, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(mainContext, "Missing Directory" + folder, Toast.LENGTH_SHORT).show();
+            if (folder.mkdir()) {
+                Toast.makeText(mainContext, "Directory Created.", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(mainContext, "Failed - Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mainContext, "Error", Toast.LENGTH_SHORT).show();
             }
         }
-
-        folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strFinalSaveDirectory );
-        if (!folder.exists()) {
-            Toast.makeText(mainContext, "Directory Does Not Exist, Create It", Toast.LENGTH_SHORT).show();
-            success = folder.mkdir();
-            if (success) {
-                Toast.makeText(mainContext, "Directory Created: " + folder, Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(mainContext, "Failed - Error", Toast.LENGTH_SHORT).show();
-            }
-        }
-
     }
 
     private void saveGameToFile(boolean isFinalSave) {
-        if (gameStats.size() < 1){
-            Toast.makeText(mainContext, "Nothing To Save", Toast.LENGTH_SHORT).show();
+        if (gameStats.size() < 1)
             return;
-        }
-        File folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strAutoSaveDirectory);
+
+        File folder = new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strAutoSaveDirectory);
         if (isFinalSave){
-            folder = new File(fileStorageDirectory + "/" + strAppDirectory + "/" + strFinalSaveDirectory);
+            folder = new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strFinalSaveDirectory);
         }
-        createDefaultDirectories();
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss", Locale.CANADA);
         Date date = new Date();
@@ -390,13 +379,11 @@ public class Stats extends Activity {
         try {
             fos = new FileOutputStream(file);
             fos.write(gameStats.compileCSV().getBytes());
-            fos.flush();
             fos.close();
+            Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
         }
-
-        Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
     }
 
     private void uploadGame() {
