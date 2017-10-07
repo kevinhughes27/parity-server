@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -44,7 +45,6 @@ import io.masse.parityleaguestats.tasks.uploadGame;
 public class Stats extends Activity {
     //States for each ViewState to be in.
     private int currentState;
-    private int previousState;
     private static final int autoState = 0;
     private static final int normalState = 1;
     private static final int firstDState = 2;
@@ -293,7 +293,6 @@ public class Stats extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_actions, menu);
         mnuItmEditTeam = menu.findItem(R.id.action_edit_teams);
@@ -302,32 +301,12 @@ public class Stats extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle presses on the action bar items
-
         switch (item.getItemId()) {
             case R.id.action_edit_teams:
-                if (rosterChange) {
-                    Toast.makeText(mainContext, "Exit roster change mode first.", Toast.LENGTH_LONG).show();
-                    return true;
-                }
-                if (!editOn) {
-                    saveButtonVisibility();
-                    changeState(editState);
-                }else{
-                    if (forceRosterChange){
-                        changeState(rosterChangeState);
-                    }else {
-                        loadButtonVisibility();
-                        changeState(previousState);
-                    }
-                }
+                Intent intent = new Intent(myself, EditPlayers.class);
+                startActivity(intent);
                 return true;
             case R.id.action_save_game:
-                if (editOn){
-                    Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
-                    return true;
-                }
-
                 new AlertDialog.Builder(mainContext)
                         .setTitle("Save and Clear")
                         .setMessage("Are you sure sure?" )
@@ -352,10 +331,6 @@ public class Stats extends Activity {
                             }
                         }).show();
             case R.id.action_half:
-                if (editOn){
-                    Toast.makeText(mainContext, "Exit edit mode first.", Toast.LENGTH_LONG).show();
-                    return true;
-                }
                 half();
                 return true;
             default:
