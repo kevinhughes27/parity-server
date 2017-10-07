@@ -119,10 +119,9 @@ public class EditPlayers extends Activity {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(context, Stats.class);
                                                 Bundle bundle = new Bundle();
-                                                //TODO make these serializable
                                                 bundle.putSerializable("leftTeam", leftTeam);
                                                 bundle.putSerializable("rightTeam", rightTeam);
-                                                intent.putExtra("teams", bundle);
+                                                intent.putExtras(bundle);
                                                 startActivity(intent);
                                             }
                                         });

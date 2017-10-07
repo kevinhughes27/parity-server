@@ -101,12 +101,8 @@ public class Stats extends Activity {
 
     private Teams teams;
 
-    private LinearLayout.LayoutParams param;
-
-    private String leftTeam;
-    private String rightTeam;
-    private ArrayList<String> leftPlayers;
-    private ArrayList<String> rightPlayers;
+    private Team leftTeam;
+    private Team rightTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,10 +111,8 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        leftTeam = this.getIntent().getStringExtra("leftTeamName");
-        rightTeam = this.getIntent().getStringExtra("rightTeamName");
-        leftPlayers = this.getIntent().getStringArrayListExtra("leftPlayers");
-        rightPlayers = this.getIntent().getStringArrayListExtra("rightPlayers");
+        leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
+        rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
 
         // needs to be passed in.
         teams = new Teams();
@@ -195,19 +189,11 @@ public class Stats extends Activity {
             }
         };
 
-        leftTeamName.setText(leftTeam);
-        Utils.draw_players(mainContext, layoutLeft, leftPlayers, true);
-        for (int i = 0; i < layoutLeft.getChildCount(); i++) {
-            Button btn = (Button) layoutLeft.getChildAt(i);
-            btn.setOnClickListener(mainOnClickListener);
-        }
+        leftTeamName.setText(leftTeam.name);
+        Utils.draw_players(mainContext, layoutLeft, mainOnClickListener, leftTeam, true);
 
-        rightTeamName.setText(rightTeam);
-        Utils.draw_players(mainContext, layoutLeft, rightPlayers, false);
-        for (int i = 0; i < layoutRight.getChildCount(); i++) {
-            Button btn = (Button) layoutRight.getChildAt(i);
-            btn.setOnClickListener(mainOnClickListener);
-        }
+        rightTeamName.setText(rightTeam.name);
+        Utils.draw_players(mainContext, layoutRight, mainOnClickListener, rightTeam, false);
 
         if ((savedInstanceState != null) &&
             (savedInstanceState.getSerializable("arrayEventNames") != null)  &&
@@ -763,8 +749,9 @@ public class Stats extends Activity {
                 rosterChange = false;
                 forceRosterChange = false;
 
-                leftPlayers = new ArrayList<String>();
-                rightPlayers = new ArrayList<String>();
+                ArrayList<String> leftPlayers = leftTeam.getPlayers();
+                ArrayList<String> rightPlayers = rightTeam.getPlayers();
+
                 for (int i = 0; i < leftCount; i++) {
                     Button currentButton = (Button) layoutLeft.getChildAt(i);
                     currentButton.setGravity(Gravity.END);
@@ -1046,9 +1033,9 @@ public class Stats extends Activity {
 
     private void recordActivePlayers() {
         if (discPossession == left) {
-            bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
+            bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
         } else {
-            bookkeeper.recordActivePlayers(rightPlayers, leftPlayers);
+            bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
         }
     }
 

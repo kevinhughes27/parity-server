@@ -1,8 +1,9 @@
 package io.masse.parityleaguestats.model;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Team {
+public class Team implements Serializable {
     public String name = "";
     public ArrayList<String> arlGuys = new ArrayList<>();
     public ArrayList<String> arlGirls = new ArrayList<>();
