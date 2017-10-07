@@ -107,7 +107,6 @@ public class Stats extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
@@ -142,6 +141,7 @@ public class Stats extends Activity {
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
         gameStats = new actionTracker(myself);
         bookkeeper = new Bookkeeper();
+        bookkeeper.startGame();
         adapter = new statsTickerAdapter();
         listView.setAdapter(adapter);
 
@@ -311,21 +311,20 @@ public class Stats extends Activity {
                                 bookkeeper.gameCompleted();
                                 saveGameToFile(true);
                                 uploadGame();
-                                clearStats();
-                                bookkeeper.startGame();
+                                resetApp();
                             }
                         }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 bookkeeper.gameCompleted();
                                 saveGameToFile(true);
-                                clearStats();
-                                bookkeeper.startGame();
+                                resetApp();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                // Do nothing.
+                                saveGameToFile(true);
                             }
                         }).show();
+                return true;
             case R.id.action_half:
                 half();
                 return true;
@@ -334,19 +333,9 @@ public class Stats extends Activity {
         }
     }
 
-    private void clearStats(){
-        leftTeamName.setText(getResources().getText(R.string.str_DefaultLeftTeam));
-        rightTeamName.setText(getResources().getText(R.string.str_DefaultRightTeam));
-        leftScore.setText("0");
-        rightScore.setText("0");
-        gameStats = new actionTracker(myself);
-        updateScore();
-        adapter.notifyDataSetChanged();
-        layoutLeft.removeAllViews();
-        layoutRight.removeAllViews();
-        editOn = false;
-        rosterChange = false;
-        //TODO switch activity loadNewTeams();
+    private void resetApp(){
+        Intent intent = new Intent(myself, ChooseTeams.class);
+        startActivity(intent);
     }
 
     private void createDefaultDirectories(){
