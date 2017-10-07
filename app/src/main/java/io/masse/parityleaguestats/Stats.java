@@ -45,6 +45,7 @@ import io.masse.parityleaguestats.tasks.uploadGame;
 public class Stats extends Activity {
     //States for each ViewState to be in.
     private int currentState;
+    private int previousState;
     private static final int autoState = 0;
     private static final int normalState = 1;
     private static final int firstDState = 2;
@@ -100,7 +101,6 @@ public class Stats extends Activity {
     private final Stats myself = this;
 
     private Teams teams;
-
     private Team leftTeam;
     private Team rightTeam;
 
@@ -111,18 +111,9 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
+        teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
-
-        // needs to be passed in.
-        teams = new Teams();
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/roster.JSON";
-        try {
-            teams.load(strFileName);
-        }
-        catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
 
         // Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -295,15 +286,20 @@ public class Stats extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_actions, menu);
-        mnuItmEditTeam = menu.findItem(R.id.action_edit_teams);
+        mnuItmEditTeam = menu.findItem(R.id.action_edit_players);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_edit_teams:
+            case R.id.action_edit_players:
                 Intent intent = new Intent(myself, EditPlayers.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("teams", teams);
+                bundle.putSerializable("leftTeam", leftTeam);
+                bundle.putSerializable("rightTeam", rightTeam);
+                intent.putExtras(bundle);
                 startActivity(intent);
                 return true;
             case R.id.action_save_game:
@@ -684,7 +680,7 @@ public class Stats extends Activity {
             editOn = false;
             leftTeamName.setGravity(Gravity.START);
             rightTeamName.setGravity(Gravity.END);
-            mnuItmEditTeam.setTitle(R.string.str_action_edit_teams);
+            mnuItmEditTeam.setTitle(R.string.str_action_edit_players);
 
             for (int i = 0; i < leftCount; i++){
                 ((Button) layoutLeft.getChildAt(i)).setGravity(Gravity.CENTER);

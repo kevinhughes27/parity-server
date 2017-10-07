@@ -6,36 +6,25 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Environment;
 import android.text.InputType;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.File;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
-import io.masse.parityleaguestats.tasks.fetchRoster;
 
 public class EditPlayers extends Activity {
-    private static final File fileStorageDirectory = Environment.getExternalStorageDirectory();
-    private static final String strAppDirectory = "ParityLeagueStats";
-    private static final String strRosterFileName = "roster.JSON";
-
     TextView leftTeamName, rightTeamName;
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
     private Button btnLastButtonClicked;
     private View.OnClickListener teamEditListener;
     private Context context;
-    private final EditPlayers myself = this;
 
     private Teams teams;
     private Team leftTeam;
@@ -48,14 +37,27 @@ public class EditPlayers extends Activity {
 
         context = this;
 
-        teams = new Teams();
+        loadIntent();
+        initViewVariables();
+        bindEvents();
+        redraw();
+    }
 
+    private void loadIntent() {
+        teams = (Teams) this.getIntent().getSerializableExtra("teams");
+        leftTeam = (Team) this.getIntent().getSerializableExtra("leftTeam");
+        rightTeam = (Team) this.getIntent().getSerializableExtra("rightTeam");
+    }
+
+    private void initViewVariables() {
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
 
         layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
         layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+    }
 
+    private void bindEvents() {
         teamEditListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,12 +72,14 @@ public class EditPlayers extends Activity {
                                 switch (which) {
                                     case 0: //delete player
                                         String playerName = btnLastButtonClicked.getText().toString();
+                                        Boolean isMale = btnLastButtonClicked.getTag() == Gender.Male;
                                         if (btnLastButtonClicked.getParent() == layoutLeft) {
-                                            leftTeam.removePlayer(playerName);
+                                            leftTeam.removePlayer(playerName, isMale);
+                                            redraw();
                                         } else {
-                                            rightTeam.removePlayer(playerName);
+                                            rightTeam.removePlayer(playerName, isMale);
+                                            redraw();
                                         }
-                                        //TODO redraw
                                         break;
                                     case 1: //do nothing
                                         break;
@@ -84,6 +88,8 @@ public class EditPlayers extends Activity {
                             }).show();
             }
         };
+
+
 
         final Button editButton = (Button) findViewById(R.id.btnAddPlayer);
         editButton.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +103,7 @@ public class EditPlayers extends Activity {
             };
 
             new AlertDialog.Builder(context)
-                .setTitle("Choose Teams")
+                .setTitle("Choose Team")
                 .setItems(teams, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
@@ -119,47 +125,13 @@ public class EditPlayers extends Activity {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(context, Stats.class);
                                                 Bundle bundle = new Bundle();
+                                                bundle.putSerializable("teams", teams);
                                                 bundle.putSerializable("leftTeam", leftTeam);
                                                 bundle.putSerializable("rightTeam", rightTeam);
                                                 intent.putExtras(bundle);
                                                 startActivity(intent);
                                             }
                                         });
-
-        // this probably shouldn't always run since this won't make sense if coming back to this state.
-        new fetchRoster(this, myself).execute();
-    }
-
-    public void loadJSON() {
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
-
-        try {
-            teams.load(strFileName);
-        }
-        catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void loadNewTeams() {
-        new AlertDialog.Builder(context)
-            .setTitle("Choose Home Team")
-            .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                leftTeam = teams.getTeam(which);
-                leftTeamName.setText(leftTeam.name);
-                Utils.draw_players(context, layoutLeft, teamEditListener, leftTeam, true);
-                new AlertDialog.Builder(context)
-                    .setTitle("Choose Away Team")
-                    .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                        rightTeam = teams.getTeam(which);
-                        rightTeamName.setText(rightTeam.name);
-                        Utils.draw_players(context, layoutRight, teamEditListener, rightTeam, false);
-                        }
-                    }).show();
-                }
-            }).show();
     }
 
     private void addSubstitutePlayer(final AutoCompleteTextView input, final Team team) {
@@ -186,19 +158,19 @@ public class EditPlayers extends Activity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 team.addPlayer(playerName, Gender.Female);
-                                //TODO redraw
+                                redraw();
                             }
                         })
                         .setNegativeButton("Male", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 team.addPlayer(playerName, Gender.Male);
-                                //TODO redraw
+                                redraw();
                             }
                         }).show();
                 } else {
                     team.addPlayer(playerName, gender);
-                    //TODO redraw
+                    redraw();
                 }
 
                 }
@@ -207,5 +179,13 @@ public class EditPlayers extends Activity {
                     // Do nothing.
                 }
             }).show();
+    }
+
+    private void redraw() {
+        leftTeamName.setText(leftTeam.name);
+        Utils.draw_players(context, layoutLeft, teamEditListener, leftTeam, true);
+
+        rightTeamName.setText(rightTeam.name);
+        Utils.draw_players(context, layoutRight, teamEditListener, rightTeam, false);
     }
 }

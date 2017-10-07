@@ -25,13 +25,17 @@ public class Team implements Serializable {
     public void addPlayer(String playerName, Boolean isMale){
         if (isMale){
             arlGuys.add(playerName);
-        }else{
+        } else {
             arlGirls.add(playerName);
         }
     }
 
-    public void removePlayer(String playerName) {
-
+    public void removePlayer(String playerName, Boolean isMale) {
+        if (isMale) {
+            arlGuys.remove(playerName);
+        } else {
+            arlGirls.remove(playerName);
+        }
     }
 
     public ArrayList<String> getPlayers(){
