@@ -44,15 +44,12 @@ import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
     //States for each ViewState to be in.
-    private int currentState;
-    private int previousState;
     private static final int autoState = 0;
     private static final int normalState = 1;
     private static final int firstDState = 2;
     private static final int startState = 3;
     private static final int pullState = 4;
     private static final int whoPickedUpDiscState = 5;
-    private static final int editState = 6;
     private static final int halfState = 7;
     private static final int firstThrowQuebecVariantState = 8;
     private static final int firstActionState = 9;
@@ -63,7 +60,6 @@ public class Stats extends Activity {
     private static final boolean right = false;
 
     //Edit Team and Rosters
-    private boolean editOn = false;
     private boolean rosterChange = false;
     private boolean forceRosterChange = true;
     private boolean forceRosterInvert = false;
@@ -81,8 +77,8 @@ public class Stats extends Activity {
     private statsTickerAdapter adapter;
     private boolean discPossession;
 
-    private static Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
-    TextView leftTeamName, rightTeamName, leftScore, rightScore;
+    private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
+    private TextView leftTeamName, rightTeamName, leftScore, rightScore;
     private MenuItem mnuItmEditTeam;
 
     private Button btnLastButtonClicked;
@@ -129,9 +125,6 @@ public class Stats extends Activity {
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
-
-        currentState = -1;
-        previousState = currentState;
 
         discPossession = true;
 
@@ -660,29 +653,6 @@ public class Stats extends Activity {
             }
         }
 
-        if ((currentState == change)&&(change != normalState)) {
-            return;
-        }
-
-        //if editOn turn edit off.
-        if (editOn && (change != editState)){
-            editOn = false;
-            leftTeamName.setGravity(Gravity.START);
-            rightTeamName.setGravity(Gravity.END);
-            mnuItmEditTeam.setTitle(R.string.str_action_edit_players);
-
-            for (int i = 0; i < leftCount; i++){
-                ((Button) layoutLeft.getChildAt(i)).setGravity(Gravity.CENTER);
-                layoutLeft.getChildAt(i).setOnClickListener(mainOnClickListener);
-            }
-            for (int i = 0; i < rightCount; i++){
-                ((Button) layoutRight.getChildAt(i)).setGravity(Gravity.CENTER);
-                layoutRight.getChildAt(i).setOnClickListener(mainOnClickListener);
-            }
-            if (!forceRosterChange)
-                loadButtonVisibility();
-        }
-
         //if rosterChange on turn it off
         if (rosterChange && (change != rosterChangeState)) {
             int leftVisible = 0;
@@ -756,10 +726,6 @@ public class Stats extends Activity {
                 return;
             }
         }
-
-        if (currentState != rosterChangeState || currentState != rosterChangeState)
-            previousState=currentState;
-        currentState=change;
 
         switch (change) {
             case normalState:
@@ -1014,32 +980,6 @@ public class Stats extends Activity {
         } else
             Toast.makeText(mainContext, "You can only have half between points", Toast.LENGTH_LONG).show();
      }
-
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        btnLastButtonClicked = (Button) v;
-        menu.setHeaderTitle(((Button) v).getText());
-        menu.add(0, v.getId(), 0, "Add Male");
-        menu.add(0, v.getId(), 0, "Add Female");
-        menu.add(0, v.getId(), 0, "Delete");
-
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        if (item.getTitle() == "Add Male") {
-            gameStats.setAction(0, "Add Male");
-        } else if (item.getTitle() == "Add Female") {
-            gameStats.setAction(0, "Add Female");
-        } else if (item.getTitle() == "Delete") {
-            ((LinearLayout) btnLastButtonClicked.getParent()).removeView(btnLastButtonClicked);
-        } else {
-            return false;
-        }
-        adapter.notifyDataSetChanged();
-        return true;
-    }
 
     private class statsTickerAdapter extends BaseAdapter {
     //todo fix inefficient statsTicker somehow.
