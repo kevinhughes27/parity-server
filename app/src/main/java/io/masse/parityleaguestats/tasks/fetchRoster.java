@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 import io.masse.parityleaguestats.ChooseTeams;
+import io.masse.parityleaguestats.Persistence;
 
 public class fetchRoster extends AsyncTask<String, String, Long> {
 
@@ -30,16 +31,11 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
     protected void onPreExecute() {
         this.dialog.setMessage("Fetching latest rosters");
         this.dialog.show();
-
     }
 
     @Override
     protected Long doInBackground(String... strings) {
         String strRosterUrl = "http://parity-server.herokuapp.com/teams";
-
-        File fileStorageDirectory = Environment.getExternalStorageDirectory();
-        String strAppDirectory = "ParityLeagueStats";
-        String strFileName = "roster.JSON";
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
@@ -48,7 +44,7 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
 
             String resString = EntityUtils.toString(response.getEntity());
 
-            File file = new File(fileStorageDirectory + "/" + strAppDirectory , strFileName);
+            File file = new Persistence(context).rosterJSON();
             FileOutputStream fos;
 
             fos = new FileOutputStream(file);

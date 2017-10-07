@@ -6,20 +6,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Environment;
 import android.widget.Toast;
-
-import java.io.File;
 
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.fetchRoster;
 
 public class ChooseTeams extends Activity {
-    private static final File fileStorageDirectory = Environment.getExternalStorageDirectory();
-    private static final String strAppDirectory = "ParityLeagueStats";
-    private static final String strRosterFileName = "roster.JSON";
-
     private Context context;
     private final ChooseTeams myself = this;
 
@@ -33,14 +26,14 @@ public class ChooseTeams extends Activity {
         setContentView(R.layout.activity_choose_teams);
 
         context = this;
-
+        new Persistence(context).initializeDirectories();
         teams = new Teams();
 
         new fetchRoster(this, myself).execute();
     }
 
     public void loadJSON() {
-        String strFileName = fileStorageDirectory + "/" + strAppDirectory + "/" + strRosterFileName;
+        String strFileName = new Persistence(context).rosterJSON().getPath();
 
         try {
             teams.load(strFileName);

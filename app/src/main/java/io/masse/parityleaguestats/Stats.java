@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -129,8 +128,6 @@ public class Stats extends Activity {
         bookkeeper.startGame();
         adapter = new statsTickerAdapter();
         listView.setAdapter(adapter);
-
-        createDefaultDirectories();
 
         mainOnClickListener = new View.OnClickListener() {
             @Override
@@ -322,50 +319,13 @@ public class Stats extends Activity {
         startActivity(intent);
     }
 
-    private static final String strAppDirectory = "ParityLeagueStats";
-    private static final String strAutoSaveDirectory = "autosave";
-    private static final String strFinalSaveDirectory = "finalsave";
-
-    private String fileStorageDirectory() {
-        String savePath;
-        String state = Environment.getExternalStorageState();
-
-
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            savePath = Environment.getExternalStorageDirectory().getPath();
-        } else {
-            savePath = mainContext.getFilesDir().getPath();
-        }
-
-        return savePath;
-    }
-
-    private void createDefaultDirectories() {
-        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory));
-        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strAutoSaveDirectory));
-        createDirectory(new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strFinalSaveDirectory));
-    }
-
-    private void createDirectory(File folder) {
-        if (!folder.exists()) {
-            Toast.makeText(mainContext, "Directory Found: " + folder, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(mainContext, "Missing Directory" + folder, Toast.LENGTH_SHORT).show();
-            if (folder.mkdir()) {
-                Toast.makeText(mainContext, "Directory Created.", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(mainContext, "Error", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
     private void saveGameToFile(boolean isFinalSave) {
         if (gameStats.size() < 1)
             return;
 
-        File folder = new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strAutoSaveDirectory);
+        File folder = new Persistence(mainContext).autosaveFile();
         if (isFinalSave){
-            folder = new File(fileStorageDirectory() + "/" + strAppDirectory + "/" + strFinalSaveDirectory);
+            folder = new Persistence(mainContext).finalsaveFile();
         }
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss", Locale.CANADA);
@@ -379,6 +339,7 @@ public class Stats extends Activity {
         try {
             fos = new FileOutputStream(file);
             fos.write(gameStats.compileCSV().getBytes());
+            fos.flush();
             fos.close();
             Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
