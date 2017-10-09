@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -14,7 +15,7 @@ class TeamsLoadError extends RuntimeException {
     }
 }
 
-public class Teams {
+public class Teams implements Serializable {
     private ArrayList<Team> teamsArray = new ArrayList<>();
 
     public void load(String filename) {

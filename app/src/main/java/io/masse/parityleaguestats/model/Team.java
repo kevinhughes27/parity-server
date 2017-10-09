@@ -1,8 +1,9 @@
 package io.masse.parityleaguestats.model;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Team {
+public class Team implements Serializable {
     public String name = "";
     public ArrayList<String> arlGuys = new ArrayList<>();
     public ArrayList<String> arlGirls = new ArrayList<>();
@@ -16,11 +17,24 @@ public class Team {
         }
     }
 
-    public void addPlayer(String teamMember, Boolean isMale){
+    public void addPlayer(String playerName, Gender gender){
+        boolean isMale = (gender == Gender.Male);
+        addPlayer(playerName, isMale);
+    }
+
+    public void addPlayer(String playerName, Boolean isMale){
         if (isMale){
-            arlGuys.add(teamMember);
-        }else{
-            arlGirls.add(teamMember);
+            arlGuys.add(playerName);
+        } else {
+            arlGirls.add(playerName);
+        }
+    }
+
+    public void removePlayer(String playerName, Boolean isMale) {
+        if (isMale) {
+            arlGuys.remove(playerName);
+        } else {
+            arlGirls.remove(playerName);
         }
     }
 
