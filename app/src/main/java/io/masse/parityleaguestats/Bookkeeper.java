@@ -21,10 +21,23 @@ public class Bookkeeper {
     Point activePoint;
     String firstActor;
 
+    public Integer homeScore;
+    public Integer awayScore;
+
     public void startGame() {
         activeGame = new Game();
+        homeScore = 0;
+        awayScore = 0;
         games.add(activeGame);
         mementos = new Stack<>();
+    }
+
+    public boolean startOfPossession() {
+        return false;
+    }
+
+    public boolean shouldRecordNewPass() {
+        return true;
     }
 
     public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
@@ -127,6 +140,10 @@ public class Bookkeeper {
         firstActor = null;
     }
 
+    public void recordHalf() {
+
+    }
+
     public void gameCompleted() {
         activePoint = null;
         firstActor = null;
@@ -145,6 +162,10 @@ public class Bookkeeper {
         }
 
         return jsonObject;
+    }
+
+    public void backup() {
+        return;
     }
 
     public void undo() {
