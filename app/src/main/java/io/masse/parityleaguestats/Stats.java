@@ -366,25 +366,19 @@ public class Stats extends Activity {
     private void changeState(int change) {
         //Determine state automatically.
         if (change == autoState) {
-            if (gameStats.size() < 1) {
+            if (bookkeeper.size() < 1) {
                 change = startState;
-            } else if (gameStats.size() == 1) {
+            } else if (bookkeeper.size() == 1) {
                 change = pullState;
-            } else if (gameStats.getAction(0).equals("Direction")) {
+            } else if (bookkeeper.previousEventEquals("Turn-Over")) {
                 change = whoPickedUpDiscState;
-            } else if (gameStats.size() > 2) {
-                if (gameStats.getAction(0).equals("Time")) {
-                    change = startState;
-                } else if (gameStats.getAction(1).equals("Time")) {
+            } else if (bookkeeper.size() > 2) {
+                if (bookkeeper.previousEventEquals("Half-Time")) {
                     change = pullState;
-                } else if ((gameStats.getAction(2).equals("+1")) || (gameStats.getAction(2).equals("-1")) || (gameStats.getAction(2).equals("Pull"))) {
+                } else if (bookkeeper.previousEventEquals("Point") || bookkeeper.previousEventEquals("Pull")) {
                     change = firstThrowQuebecVariantState;
-                } else if (gameStats.getAction(0).equals("D")) {
+                } else if (bookkeeper.previousEventEquals("Turn-Over")) {
                     change = whoPickedUpDiscState;
-                } else if ((gameStats.getAction(1).equals("D")) || (gameStats.getAction(2).equals("Drop"))) {
-                    change = firstActionState;
-                } else if ((gameStats.getAction(1).equals("Direction")) && (!gameStats.getAction(2).equals("+1")) && (!gameStats.getAction(2).equals("-1")) && (!gameStats.getAction(2).equals("Drop")) && (!gameStats.getAction(2).equals("Pull"))) {
-                    change = firstDState;
                 } else {
                     change = normalState;
                 }

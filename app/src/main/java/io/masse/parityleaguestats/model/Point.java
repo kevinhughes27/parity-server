@@ -25,6 +25,10 @@ public class Point {
         this.defensePlayers = defensePlayers;
     }
 
+    public Integer size() {
+        return events.size();
+    }
+
     public void addEvent(Event event) {
         events.add(event);
     }

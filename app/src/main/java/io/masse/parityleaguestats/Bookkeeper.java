@@ -32,8 +32,16 @@ public class Bookkeeper {
         mementos = new Stack<>();
     }
 
+    public Integer size() {
+        return mementos.size();
+    }
+
     public boolean startOfPossession() {
-        return false;
+        return activePoint.size() < 1;
+    }
+
+    public boolean previousEventEquals(String type) {
+        return true;
     }
 
     public boolean shouldRecordNewPass() {
