@@ -27,8 +27,12 @@ public class ChooseTeams extends Activity {
 
         context = this;
         new Persistence(context).initializeDirectories();
-        teams = new Teams();
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        teams = new Teams();
         new fetchRoster(this, myself).execute();
     }
 
