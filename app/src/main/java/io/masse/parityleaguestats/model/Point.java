@@ -63,4 +63,12 @@ public class Point {
         }
         return builder.toString();
     }
+
+    public List<String> prettyPrint() {
+        ArrayList<String> eventList = new ArrayList<>(events.size());
+        for (Event event : events) {
+            eventList.add(event.prettyPrint());
+        }
+        return eventList;
+    }
 }

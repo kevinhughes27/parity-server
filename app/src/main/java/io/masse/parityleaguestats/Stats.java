@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -76,6 +77,7 @@ public class Stats extends Activity {
     private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
+    private ArrayAdapter<String> gameSummaryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +112,8 @@ public class Stats extends Activity {
 
         // undo view
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
+        gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
+        listView.setAdapter(gameSummaryAdapter);
 
         bookkeeper = new Bookkeeper();
         bookkeeper.startGame();
@@ -277,20 +281,22 @@ public class Stats extends Activity {
 
             if (btns.length == 1) {
                 if (btns[0].getParent() == layoutLeft) {
-                    if (bookkeeper.startOfPossession()) {
+                    if (bookkeeper.startOfHalf()) {
                         discPossession = left;
-                    }
-                    if (bookkeeper.shouldRecordNewPass()) {
-                        bookkeeper.recordPass((btns[0]).getText().toString());
+                    } else {
+                        if (bookkeeper.shouldRecordNewPass()) {
+                            bookkeeper.recordPass((btns[0]).getText().toString());
+                        }
                     }
                     bookkeeper.recordFirstActor(btns[0].getText().toString());
 
                 } else if (btns[0].getParent() == layoutRight) {
-                    if (bookkeeper.startOfPossession()) {
+                    if (bookkeeper.startOfHalf()) {
                         discPossession = right;
-                    }
-                    if (bookkeeper.shouldRecordNewPass()) {
-                        bookkeeper.recordPass((btns[0]).getText().toString());
+                    } else {
+                        if (bookkeeper.shouldRecordNewPass()) {
+                            bookkeeper.recordPass((btns[0]).getText().toString());
+                        }
                     }
                     bookkeeper.recordFirstActor(btns[0].getText().toString());
 
@@ -356,6 +362,10 @@ public class Stats extends Activity {
                         } else {
                             changeState(autoState);
                         }
+
+                        gameSummaryAdapter.clear();
+                        gameSummaryAdapter.addAll(bookkeeper.getActivePoint().prettyPrint());
+                        gameSummaryAdapter.notifyDataSetChanged();
                     }
                 });
             }

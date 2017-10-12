@@ -36,7 +36,7 @@ public class Bookkeeper {
         return mementos.size();
     }
 
-    public boolean startOfPossession() {
+    public boolean startOfHalf() {
         return activePoint.size() < 1;
     }
 
@@ -155,6 +155,10 @@ public class Bookkeeper {
     public void gameCompleted() {
         activePoint = null;
         firstActor = null;
+    }
+
+    public Point getActivePoint() {
+        return activePoint;
     }
 
     public JSONObject serialize() {
