@@ -15,7 +15,7 @@ public class Persistence {
     }
 
     public File rosterJSON() {
-        return new File(fileStorageDirectory() + "/" + strAppDirectory , strRosterFile);
+        return new File(fileStorageDirectory(), strRosterFile);
     }
 
     private File fileStorageDirectory() {
