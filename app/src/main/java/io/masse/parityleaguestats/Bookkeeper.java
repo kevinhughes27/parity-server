@@ -76,15 +76,19 @@ public class Bookkeeper {
         homePossession = !homePossession;
     }
 
-    public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
-        if (activeGame == null) {
-            startGame();
-        }
-        if (activePoint == null) {
-            activePoint = new Point(offensePlayers, defensePlayers);
+    public void startPoint(List<String> homePlayers, List<String> awayPlayers) {
+        List<String> offensePlayers;
+        List<String> defensePlayers;
+
+        if (homePossession) {
+            offensePlayers = homePlayers;
+            defensePlayers = awayPlayers;
         } else {
-            activePoint.setPlayers(offensePlayers, defensePlayers);
+            offensePlayers = awayPlayers;
+            defensePlayers = homePlayers;
         }
+
+        activePoint = new Point(offensePlayers, defensePlayers);
     }
 
     public void recordFirstActor(String player, Boolean isHome) {
@@ -102,10 +106,15 @@ public class Bookkeeper {
         firstActor = player;
     }
 
+    // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
+    // To fix this we call swapOffenseAndDefense on the activePoint
     public void recordPull() {
+        // I think this means I can't undo pulls right now. Also does it work if away pulls?
+        activePoint.swapOffenseAndDefense();
+        changePossession();
+
         mementos.push(genericUndoLastEventMemento());
 
-        changePossession();
         activePoint.addEvent(new Event(Event.Type.PULL, firstActor));
         firstActor = null;
     }
@@ -171,7 +180,7 @@ public class Bookkeeper {
                 if (homePossession) {
                     awayScore--;
                 } else {
-                    homeScore++;
+                    homeScore--;
                 }
                 changePossession();
                 activePoint = activeGame.getLastPoint();
@@ -191,10 +200,6 @@ public class Bookkeeper {
         changePossession();
         activePoint = new Point();
         firstActor = null;
-    }
-
-    public void recordHalf() {
-
     }
 
     public void gameCompleted() {

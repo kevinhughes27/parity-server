@@ -47,6 +47,13 @@ public class Point {
         return null;
     }
 
+    public void swapOffenseAndDefense() {
+        List<String> tmpPlayers;
+        tmpPlayers = offensePlayers;
+        offensePlayers = defensePlayers;
+        defensePlayers = tmpPlayers;
+    }
+
     public int getEventCount() {
         return events.size();
     }

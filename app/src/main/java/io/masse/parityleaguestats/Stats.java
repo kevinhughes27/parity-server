@@ -304,15 +304,7 @@ public class Stats extends Activity {
                 } else if ((btn == btnDrop)){
                     bookkeeper.recordDrop();
 
-                //The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
-                //In this case we'll re-record the offense/defense players after the possession has been set
                 } else if ((btn == btnPull)){
-                    if (bookkeeper.homePossession) {
-                        bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
-                    } else {
-                        bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
-                    }
-
                     bookkeeper.recordPull();
 
                 } else if ((btn == btnThrowAway)){
@@ -326,10 +318,13 @@ public class Stats extends Activity {
                     forceRosterInvert = true;
 
                 } else if (btn == btnUndo){
-                    if (rosterChange) {
-                        //do nothing
-                    } else {
-                        bookkeeper.undo();
+                    int score = bookkeeper.homeScore + bookkeeper.awayScore;
+                    bookkeeper.undo();
+                    int newScore = bookkeeper.homeScore + bookkeeper.awayScore;
+
+                    if (score != newScore) {
+                        requestUpdateScore = true;
+                        forceRosterInvert = true;
                     }
                 }
 
@@ -434,11 +429,7 @@ public class Stats extends Activity {
                     currentButton.setTypeface(null, Typeface.NORMAL);
                 }
 
-                if (bookkeeper.homePossession) {
-                    bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
-                } else {
-                    bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
-                }
+                bookkeeper.startPoint(leftTeam.getPlayers(), rightTeam.getPlayers());
 
                 Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
                 btnMode.setText(R.string.mode_button_edit);
