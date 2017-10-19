@@ -379,27 +379,8 @@ public class Stats extends Activity {
     }
 
     private void changeState(int change) {
-        //Determine state automatically.
         if (change == autoState) {
-            if (bookkeeper.size() < 1) {
-                change = startState;
-            } else if (bookkeeper.size() == 1) {
-                change = pullState;
-            } else if (bookkeeper.previousEventEquals("Turn-Over")) {
-                change = whoPickedUpDiscState;
-            } else if (bookkeeper.size() > 2) {
-                if (bookkeeper.previousEventEquals("Half-Time")) {
-                    change = pullState;
-                } else if (bookkeeper.previousEventEquals("Point") || bookkeeper.previousEventEquals("Pull")) {
-                    change = firstThrowQuebecVariantState;
-                } else if (bookkeeper.previousEventEquals("Turn-Over")) {
-                    change = whoPickedUpDiscState;
-                } else {
-                    change = normalState;
-                }
-            } else {
-                change = normalState;
-            }
+            change = bookkeeper.uiState();
         }
 
         toggleRoster(change);

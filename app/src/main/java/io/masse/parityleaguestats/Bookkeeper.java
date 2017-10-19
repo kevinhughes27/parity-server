@@ -32,6 +32,36 @@ public class Bookkeeper {
         mementos = new Stack<>();
     }
 
+    private static final int autoState = 0;
+    private static final int normalState = 1;
+    private static final int firstDState = 2;
+    private static final int startState = 3;
+    private static final int pullState = 4;
+    private static final int whoPickedUpDiscState = 5;
+    private static final int halfState = 7;
+    private static final int firstThrowQuebecVariantState = 8;
+    private static final int firstActionState = 9;
+    private static final int rosterChangeState = 10;
+
+    public int uiState() {
+        int state = autoState;
+
+        Boolean firstPoint = (activeGame.getPointCount() == 0);
+        Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
+
+        if (firstPoint && firstEvent && firstActor == null) {
+            state = startState;
+        } else if (firstPoint && firstEvent) {
+            state = pullState;
+        } else if (activePoint.getLastEventType() == Event.Type.PULL || firstEvent) {
+            state = whoPickedUpDiscState;
+        } else {
+            state = normalState;
+        }
+
+        return state;
+    }
+
     public Integer size() {
         return mementos.size();
     }

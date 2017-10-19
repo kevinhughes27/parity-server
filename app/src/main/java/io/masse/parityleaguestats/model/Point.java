@@ -40,9 +40,9 @@ public class Point {
         return null;
     }
 
-    public Event getLastEvent() {
+    public Event.Type getLastEventType() {
         if (events.size() > 0) {
-            return events.get(events.size() - 1);
+            return events.get(events.size() - 1).getType();
         }
         return null;
     }
