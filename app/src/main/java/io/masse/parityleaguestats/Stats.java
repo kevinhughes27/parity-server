@@ -351,7 +351,7 @@ public class Stats extends Activity {
                         }
 
                         gameSummaryAdapter.clear();
-                        gameSummaryAdapter.addAll(bookkeeper.getActivePoint().prettyPrint());
+                        gameSummaryAdapter.addAll(bookkeeper.undoHistory());
                         gameSummaryAdapter.notifyDataSetChanged();
                     }
                 });

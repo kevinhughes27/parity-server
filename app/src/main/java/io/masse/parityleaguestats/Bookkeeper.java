@@ -21,6 +21,8 @@ public class Bookkeeper {
     Point activePoint;
     String firstActor;
 
+    private List<String> homePlayers;
+    private List<String> awayPlayers;
     public Boolean homePossession;
     public Integer homeScore;
     public Integer awayScore;
@@ -75,19 +77,10 @@ public class Bookkeeper {
         homePossession = !homePossession;
     }
 
-    public void startPoint(List<String> homePlayers, List<String> awayPlayers) {
-        List<String> offensePlayers;
-        List<String> defensePlayers;
-
-        if (homePossession) {
-            offensePlayers = homePlayers;
-            defensePlayers = awayPlayers;
-        } else {
-            offensePlayers = awayPlayers;
-            defensePlayers = homePlayers;
-        }
-
-        activePoint = new Point(offensePlayers, defensePlayers);
+    public void startPoint(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
+        homePlayers = activeHomePlayers;
+        awayPlayers = activeAwayPlayers;
+        activePoint = null;
     }
 
     public void recordFirstActor(String player, Boolean isHome) {
@@ -95,16 +88,27 @@ public class Bookkeeper {
             @Override
             public void apply() {
                 firstActor = savedFirstActor;
+                if (activePoint.getEventCount() == 0) {
+                    activePoint = null;
+                }
             }
         });
 
         if (activePoint == null) {
-            activePoint = new Point();
-        }
-
-        // set possession if it is the first event
-        if (activePoint.getEventCount() == 0) {
             homePossession = isHome;
+
+            List<String> offensePlayers;
+            List<String> defensePlayers;
+
+            if (isHome) {
+                offensePlayers = homePlayers;
+                defensePlayers = awayPlayers;
+            } else {
+                offensePlayers = awayPlayers;
+                defensePlayers = homePlayers;
+            }
+
+            activePoint = new Point(offensePlayers, defensePlayers);
         }
 
         firstActor = player;
@@ -113,7 +117,6 @@ public class Bookkeeper {
     // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
     // To fix this we call swapOffenseAndDefense on the activePoint
     public void recordPull() {
-        // I think this means I can't undo pulls right now.
         activePoint.swapOffenseAndDefense();
         changePossession();
 
@@ -241,6 +244,14 @@ public class Bookkeeper {
     public void undo() {
         if (!mementos.isEmpty()) {
             mementos.pop().apply();
+        }
+    }
+
+    public List undoHistory() {
+        if (activePoint != null) {
+            return activePoint.prettyPrint();
+        } else {
+            return new ArrayList<>(0);
         }
     }
 
