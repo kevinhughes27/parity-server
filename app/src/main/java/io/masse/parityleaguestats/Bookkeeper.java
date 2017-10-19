@@ -12,10 +12,10 @@ import java.util.Stack;
 import io.masse.parityleaguestats.model.Event;
 import io.masse.parityleaguestats.model.Game;
 import io.masse.parityleaguestats.model.Point;
+import io.masse.parityleaguestats.model.Team;
 
 public class Bookkeeper {
 
-    private List<Game> games = new ArrayList<>();
     private Game activeGame;
     private Stack<Memento> mementos;
     Point activePoint;
@@ -30,7 +30,6 @@ public class Bookkeeper {
         homeScore = 0;
         awayScore = 0;
         homePossession = true;
-        games.add(activeGame);
         mementos = new Stack<>();
     }
 
@@ -100,16 +99,21 @@ public class Bookkeeper {
         });
 
         if (activePoint == null) {
-            homePossession = isHome;
             activePoint = new Point();
         }
+
+        // set possession if it is the first event
+        if (activePoint.getEventCount() == 0) {
+            homePossession = isHome;
+        }
+
         firstActor = player;
     }
 
     // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
     // To fix this we call swapOffenseAndDefense on the activePoint
     public void recordPull() {
-        // I think this means I can't undo pulls right now. Also does it work if away pulls?
+        // I think this means I can't undo pulls right now.
         activePoint.swapOffenseAndDefense();
         changePossession();
 
@@ -200,6 +204,11 @@ public class Bookkeeper {
         changePossession();
         activePoint = new Point();
         firstActor = null;
+    }
+
+    public void recordHalf() {
+        // needs conditional logic
+        changePossession();
     }
 
     public void gameCompleted() {
