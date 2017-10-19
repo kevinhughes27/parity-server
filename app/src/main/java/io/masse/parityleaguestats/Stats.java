@@ -284,24 +284,16 @@ public class Stats extends Activity {
                 Boolean rightSideButton = btn.getParent() == layoutRight;
 
                 if (leftSideButton) {
-                    if (bookkeeper.startOfHalf()) {
-                        bookkeeper.homePossession = true;
-                    } else {
-                        if (bookkeeper.shouldRecordNewPass()) {
-                            bookkeeper.recordPass(buttonText);
-                        }
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
                     }
-                    bookkeeper.recordFirstActor(btns[0].getText().toString());
+                    bookkeeper.recordFirstActor(buttonText, true);
 
                 } else if (rightSideButton) {
-                    if (bookkeeper.startOfHalf()) {
-                        bookkeeper.homePossession = false;
-                    } else {
-                        if (bookkeeper.shouldRecordNewPass()) {
-                            bookkeeper.recordPass(buttonText);
-                        }
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
                     }
-                    bookkeeper.recordFirstActor(buttonText);
+                    bookkeeper.recordFirstActor(buttonText, false);
 
                 } else if ((btn == btnD)) {
                     bookkeeper.recordD();
