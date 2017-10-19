@@ -51,7 +51,6 @@ public class Stats extends Activity {
     private boolean rosterChange = false;
     private boolean forceRosterChange = true;
     private boolean forceRosterInvert = false;
-    private boolean requestHalf = false;
     private boolean requestUpdateScore = false;
     private boolean requestChangeRoster = false;
     private boolean visibleState[][];
@@ -334,9 +333,6 @@ public class Stats extends Activity {
                         if (btnLastButtonClicked == btnUndo && rosterChange) {
                             loadButtonVisibility();
                             Toast.makeText(mainContext, "Roster Change OFF and reverted back.", Toast.LENGTH_SHORT).show();
-                        }
-                        if (requestHalf) {
-                            requestHalf = false;
                         }
                         if (requestUpdateScore) {
                             requestUpdateScore = false;
