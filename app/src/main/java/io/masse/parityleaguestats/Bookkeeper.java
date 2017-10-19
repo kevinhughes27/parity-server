@@ -56,12 +56,16 @@ public class Bookkeeper {
             state = startState;
         } else if (firstPoint && firstEvent) {
             state = pullState;
-        } else if (activePoint.getLastEventType() == Event.Type.PULL) {
+        } else if (activePoint.getLastEventType() == Event.Type.PULL && firstActor == null) {
             state = whoPickedUpDiscState;
+        } else if (activePoint.getLastEventType() == Event.Type.PULL) {
+            state = firstThrowQuebecVariantState;
         } else if (firstEvent && firstActor == null) {
             state = whoPickedUpDiscState;
         } else if (firstEvent) {
             state = firstThrowQuebecVariantState;
+        } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY) {
+            state = firstDState;
         } else {
             state = normalState;
         }
@@ -217,10 +221,6 @@ public class Bookkeeper {
     public void gameCompleted() {
         activePoint = null;
         firstActor = null;
-    }
-
-    public Point getActivePoint() {
-        return activePoint;
     }
 
     public JSONObject serialize() {
