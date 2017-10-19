@@ -41,11 +41,18 @@ public class Bookkeeper {
     }
 
     public boolean previousEventEquals(String type) {
+
         return true;
     }
 
     public boolean shouldRecordNewPass() {
-        return true;
+        return firstActor != null;
+//        Event lastEvent = activePoint.getLastEvent();
+//        if (lastEvent.getType() == Event.Type.PULL) {
+//            return false;
+//        } else {
+//            return true;
+//        }
     }
 
     public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
@@ -166,7 +173,6 @@ public class Bookkeeper {
         String json = gson.toJson(activeGame);
         JSONObject jsonObject = new JSONObject();
 
-        // suuuuper efficient ....
         try {
             jsonObject = new JSONObject(json);
         } catch (Exception e) {

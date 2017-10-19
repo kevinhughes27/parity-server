@@ -280,28 +280,33 @@ public class Stats extends Activity {
         protected Long doInBackground(Button... btns) {
 
             if (btns.length == 1) {
-                if (btns[0].getParent() == layoutLeft) {
+                String buttonText = btns[0].getText().toString();
+                Boolean leftSideButton = btns[0].getParent() == layoutLeft;
+                Boolean rightSideButton = btns[0].getParent() == layoutRight;
+
+                if (leftSideButton) {
                     if (bookkeeper.startOfHalf()) {
                         discPossession = left;
                     } else {
                         if (bookkeeper.shouldRecordNewPass()) {
-                            bookkeeper.recordPass((btns[0]).getText().toString());
+                            bookkeeper.recordPass(buttonText);
                         }
                     }
                     bookkeeper.recordFirstActor(btns[0].getText().toString());
 
-                } else if (btns[0].getParent() == layoutRight) {
+                } else if (rightSideButton) {
                     if (bookkeeper.startOfHalf()) {
                         discPossession = right;
                     } else {
                         if (bookkeeper.shouldRecordNewPass()) {
-                            bookkeeper.recordPass((btns[0]).getText().toString());
+                            bookkeeper.recordPass(buttonText);
                         }
                     }
-                    bookkeeper.recordFirstActor(btns[0].getText().toString());
+                    bookkeeper.recordFirstActor(buttonText);
 
                 } else if ((btns[0] == btnD)) {
                     bookkeeper.recordD();
+
                 } else if ((btns[0] == btnCatchD)){
                     bookkeeper.recordCatchD();
 
