@@ -332,7 +332,7 @@ public class Stats extends Activity {
                     bookkeeper.recordThrowAway();
 
                 } else if (btns[0] == btnPoint) {
-                    bookkeeper.recordPoint();
+                    bookkeeper.recordPoint(discPossession);
 
                     requestUpdateScore = true;
                     requestChangeRoster = true;
@@ -358,8 +358,8 @@ public class Stats extends Activity {
                         }
                         if (requestUpdateScore) {
                             requestUpdateScore = false;
-                            leftScore.setText(bookkeeper.homeScore);
-                            rightScore.setText(bookkeeper.awayScore);
+                            leftScore.setText(bookkeeper.homeScore.toString());
+                            rightScore.setText(bookkeeper.awayScore.toString());
                         }
                         if (requestChangeRoster) {
                             requestChangeRoster = false;

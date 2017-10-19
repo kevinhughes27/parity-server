@@ -169,7 +169,7 @@ public class Bookkeeper {
         //firstActor remains the same
     }
 
-    public void recordPoint() {
+    public void recordPoint(Boolean homeScored) {
         mementos.add(new Memento(firstActor) {
             @Override
             public void apply() {
@@ -181,6 +181,11 @@ public class Bookkeeper {
 
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
+        if (homeScored) {
+            homeScore++;
+        } else {
+            awayScore++;
+        }
         activePoint = new Point();
         firstActor = null;
     }
