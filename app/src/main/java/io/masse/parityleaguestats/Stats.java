@@ -105,8 +105,6 @@ public class Stats extends Activity {
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
-        discPossession = true;
-
         layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
         layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
 
@@ -280,13 +278,14 @@ public class Stats extends Activity {
         protected Long doInBackground(Button... btns) {
 
             if (btns.length == 1) {
-                String buttonText = btns[0].getText().toString();
-                Boolean leftSideButton = btns[0].getParent() == layoutLeft;
-                Boolean rightSideButton = btns[0].getParent() == layoutRight;
+                Button btn = btns[0];
+                String buttonText = btn.getText().toString();
+                Boolean leftSideButton = btn.getParent() == layoutLeft;
+                Boolean rightSideButton = btn.getParent() == layoutRight;
 
                 if (leftSideButton) {
                     if (bookkeeper.startOfHalf()) {
-                        discPossession = left;
+                        bookkeeper.homePossession = true;
                     } else {
                         if (bookkeeper.shouldRecordNewPass()) {
                             bookkeeper.recordPass(buttonText);
@@ -296,7 +295,7 @@ public class Stats extends Activity {
 
                 } else if (rightSideButton) {
                     if (bookkeeper.startOfHalf()) {
-                        discPossession = right;
+                        bookkeeper.homePossession = false;
                     } else {
                         if (bookkeeper.shouldRecordNewPass()) {
                             bookkeeper.recordPass(buttonText);
@@ -304,22 +303,19 @@ public class Stats extends Activity {
                     }
                     bookkeeper.recordFirstActor(buttonText);
 
-                } else if ((btns[0] == btnD)) {
+                } else if ((btn == btnD)) {
                     bookkeeper.recordD();
 
-                } else if ((btns[0] == btnCatchD)){
+                } else if ((btn == btnCatchD)){
                     bookkeeper.recordCatchD();
 
-                } else if ((btns[0] == btnDrop)){
-                    discPossession = !discPossession;
+                } else if ((btn == btnDrop)){
                     bookkeeper.recordDrop();
 
                 //The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
                 //In this case we'll re-record the offense/defense players after the possession has been set
-                } else if ((btns[0] == btnPull)){
-                    discPossession = !discPossession;
-
-                    if (discPossession == left) {
+                } else if ((btn == btnPull)){
+                    if (bookkeeper.homePossession) {
                         bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
                     } else {
                         bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
@@ -327,18 +323,17 @@ public class Stats extends Activity {
 
                     bookkeeper.recordPull();
 
-                } else if ((btns[0] == btnThrowAway)){
-                    discPossession = !discPossession;
+                } else if ((btn == btnThrowAway)){
                     bookkeeper.recordThrowAway();
 
-                } else if (btns[0] == btnPoint) {
-                    bookkeeper.recordPoint(discPossession);
+                } else if (btn == btnPoint) {
+                    bookkeeper.recordPoint();
 
                     requestUpdateScore = true;
                     requestChangeRoster = true;
                     forceRosterInvert = true;
 
-                } else if (btns[0] == btnUndo){
+                } else if (btn == btnUndo){
                     if (rosterChange) {
                         //do nothing
                     } else {
@@ -447,7 +442,7 @@ public class Stats extends Activity {
                     currentButton.setTypeface(null, Typeface.NORMAL);
                 }
 
-                if (discPossession == left) {
+                if (bookkeeper.homePossession) {
                     bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
                 } else {
                     bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
@@ -486,13 +481,13 @@ public class Stats extends Activity {
                 btnPull.setEnabled(false);
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
                 for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
                     }
@@ -509,13 +504,13 @@ public class Stats extends Activity {
                 btnPull.setEnabled(false);
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
                 for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
                     }
@@ -532,13 +527,13 @@ public class Stats extends Activity {
                 btnPull.setEnabled(false);
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
                 for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
                     }
@@ -555,13 +550,13 @@ public class Stats extends Activity {
                 btnPull.setEnabled(false);
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
                 for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
                     }
@@ -611,13 +606,13 @@ public class Stats extends Activity {
                 btnPull.setEnabled(false);
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
                 for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
                     }

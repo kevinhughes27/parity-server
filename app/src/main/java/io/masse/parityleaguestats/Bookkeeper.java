@@ -21,6 +21,7 @@ public class Bookkeeper {
     Point activePoint;
     String firstActor;
 
+    public Boolean homePossession;
     public Integer homeScore;
     public Integer awayScore;
 
@@ -53,8 +54,10 @@ public class Bookkeeper {
             state = startState;
         } else if (firstPoint && firstEvent) {
             state = pullState;
-        } else if (activePoint.getLastEventType() == Event.Type.PULL || firstEvent) {
+        } else if (activePoint.getLastEventType() == Event.Type.PULL) {
             state = whoPickedUpDiscState;
+        } else if (firstEvent) {
+            state = firstThrowQuebecVariantState;
         } else {
             state = normalState;
         }
@@ -70,19 +73,12 @@ public class Bookkeeper {
         return activePoint.size() < 1;
     }
 
-    public boolean previousEventEquals(String type) {
-
-        return true;
-    }
-
     public boolean shouldRecordNewPass() {
         return firstActor != null;
-//        Event lastEvent = activePoint.getLastEvent();
-//        if (lastEvent.getType() == Event.Type.PULL) {
-//            return false;
-//        } else {
-//            return true;
-//        }
+    }
+
+    private void turnover() {
+        homePossession = !homePossession;
     }
 
     public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
@@ -110,16 +106,19 @@ public class Bookkeeper {
         firstActor = player;
     }
 
+    // not really a turnover but the undo mechanism is the same (switch possession)
     public void recordPull() {
-        mementos.push(genericUndoLastEventMemento());
+        mementos.push(undoTurnoverMemento());
 
+        turnover();
         activePoint.addEvent(new Event(Event.Type.PULL, firstActor));
         firstActor = null;
     }
 
     public void recordThrowAway() {
-        mementos.push(genericUndoLastEventMemento());
+        mementos.push(undoTurnoverMemento());
 
+        turnover();
         activePoint.addEvent(new Event(Event.Type.THROWAWAY, firstActor));
         firstActor = null;
     }
@@ -132,8 +131,9 @@ public class Bookkeeper {
     }
 
     public void recordDrop() {
-        mementos.push(genericUndoLastEventMemento());
+        mementos.push(undoTurnoverMemento());
 
+        turnover();
         activePoint.addEvent(new Event(Event.Type.DROP, firstActor));
         firstActor = null;
     }
@@ -169,7 +169,7 @@ public class Bookkeeper {
         //firstActor remains the same
     }
 
-    public void recordPoint(Boolean homeScored) {
+    public void recordPoint() {
         mementos.add(new Memento(firstActor) {
             @Override
             public void apply() {
@@ -181,7 +181,7 @@ public class Bookkeeper {
 
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
-        if (homeScored) {
+        if (homePossession) {
             homeScore++;
         } else {
             awayScore++;
@@ -246,6 +246,17 @@ public class Bookkeeper {
             public void apply() {
                 activePoint.removeLastEvent();
                 firstActor = savedFirstActor;
+            }
+        };
+    }
+
+    public Memento undoTurnoverMemento() {
+        return new Memento(firstActor) {
+            @Override
+            public void apply() {
+                activePoint.removeLastEvent();
+                firstActor = savedFirstActor;
+                turnover();
             }
         };
     }
