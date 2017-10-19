@@ -487,9 +487,15 @@ public class Stats extends Activity {
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
                 for (int i = 0; i < rightCount; i++){
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
 
@@ -504,9 +510,15 @@ public class Stats extends Activity {
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
                 for (int i = 0; i < rightCount; i++){
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
 
@@ -521,9 +533,15 @@ public class Stats extends Activity {
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
                 for (int i = 0; i < rightCount; i++){
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
 
@@ -538,9 +556,15 @@ public class Stats extends Activity {
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
                 for (int i = 0; i < rightCount; i++){
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
 
@@ -588,9 +612,15 @@ public class Stats extends Activity {
                 btnMode.setEnabled(true);
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(discPossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
                 for (int i = 0; i < rightCount; i++){
                     layoutRight.getChildAt(i).setEnabled(!discPossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
 
