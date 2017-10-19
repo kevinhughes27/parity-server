@@ -59,8 +59,6 @@ public class Stats extends Activity {
     private customLinearLayout layoutRight;
     private Context mainContext;
 
-    private boolean discPossession;
-
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
 
