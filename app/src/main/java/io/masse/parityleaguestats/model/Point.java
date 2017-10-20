@@ -20,15 +20,6 @@ public class Point {
         events = new ArrayList<Event>();
     }
 
-    public void setPlayers(List<String> offensePlayers, List<String> defensePlayers) {
-        this.offensePlayers = offensePlayers;
-        this.defensePlayers = defensePlayers;
-    }
-
-    public Integer size() {
-        return events.size();
-    }
-
     public void addEvent(Event event) {
         events.add(event);
     }

@@ -44,6 +44,7 @@ public class Bookkeeper {
         mementos = new Stack<>();
     }
 
+    private int state = autoState;
     private static final int autoState = 0;
     private static final int normalState = 1;
     private static final int firstDState = 2;
@@ -56,8 +57,6 @@ public class Bookkeeper {
     private static final int rosterChangeState = 10;
 
     public int uiState() {
-        int state = autoState;
-
         Boolean firstPoint = (activeGame.getPointCount() == 0);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 

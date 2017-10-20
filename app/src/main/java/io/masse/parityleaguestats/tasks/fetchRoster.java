@@ -3,7 +3,6 @@ package io.masse.parityleaguestats.tasks;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Environment;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -11,11 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileOutputStream;
-
 import io.masse.parityleaguestats.ChooseTeams;
-import io.masse.parityleaguestats.Persistence;
 
 public class fetchRoster extends AsyncTask<String, String, Long> {
 
