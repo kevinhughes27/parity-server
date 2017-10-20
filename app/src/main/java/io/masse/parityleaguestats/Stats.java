@@ -32,10 +32,10 @@ public class Stats extends Activity {
     private static final int startState = 3;
     private static final int pullState = 4;
     private static final int whoPickedUpDiscState = 5;
-    private static final int halfState = 7;
-    private static final int firstThrowQuebecVariantState = 8;
-    private static final int firstActionState = 9;
-    private static final int rosterChangeState = 10;
+    private static final int firstThrowQuebecVariantState = 6;
+
+    private static final int rosterChangeState = 7;
+    private static final int halfState = 8;
 
 
     //Edit Team and Rosters
@@ -456,29 +456,6 @@ public class Stats extends Activity {
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(true);
                 btnCatchD.setEnabled(true);
-                btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
-                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
-                        layoutLeft.getChildAt(i).setEnabled(false);
-                    }
-                }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
-                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
-                        layoutRight.getChildAt(i).setEnabled(false);
-                    }
-                }
-                break;
-
-            case firstActionState:
-                btnPoint.setEnabled(true);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(true);
                 btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);

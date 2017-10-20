@@ -51,10 +51,7 @@ public class Bookkeeper {
     private static final int startState = 3;
     private static final int pullState = 4;
     private static final int whoPickedUpDiscState = 5;
-    private static final int halfState = 7;
-    private static final int firstThrowQuebecVariantState = 8;
-    private static final int firstActionState = 9;
-    private static final int rosterChangeState = 10;
+    private static final int firstThrowQuebecVariantState = 6;
 
     public int uiState() {
         Boolean firstPoint = (activeGame.getPointCount() == 0);
