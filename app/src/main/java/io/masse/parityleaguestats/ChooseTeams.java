@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.fetchRoster;
@@ -34,18 +36,11 @@ public class ChooseTeams extends Activity {
         new fetchRoster(this, myself).execute();
     }
 
-    public void loadJSON() {
-        String strFileName = new Persistence(context).rosterJSON().getPath();
-
-        try {
-            teams.load(strFileName);
-        }
-        catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+    public void initTeams(JSONObject response) {
+        teams.load(response);
     }
 
-    public void loadNewTeams() {
+    public void openDialog() {
         new AlertDialog.Builder(context)
                 .setTitle("Choose Home Team")
                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {

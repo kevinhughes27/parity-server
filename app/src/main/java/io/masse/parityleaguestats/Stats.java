@@ -19,16 +19,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-import org.json.JSONArray;
-
 import java.util.ArrayList;
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.tasks.uploadGame;
-
-@SuppressWarnings({"unchecked", "null"})
 
 public class Stats extends Activity {
     //States for each ViewState to be in.
@@ -43,9 +37,6 @@ public class Stats extends Activity {
     private static final int firstActionState = 9;
     private static final int rosterChangeState = 10;
 
-    //Disc Directions
-    private static final boolean left = true;
-    private static final boolean right = false;
 
     //Edit Team and Rosters
     private boolean rosterChange = false;
@@ -71,7 +62,6 @@ public class Stats extends Activity {
 
     private final Stats myself = this;
 
-    private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
     private ArrayAdapter<String> gameSummaryAdapter;
@@ -82,7 +72,6 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
 
@@ -110,7 +99,7 @@ public class Stats extends Activity {
         gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
         listView.setAdapter(gameSummaryAdapter);
 
-        bookkeeper = new Bookkeeper();
+        bookkeeper = new Bookkeeper(leftTeam, rightTeam);
         bookkeeper.startGame();
 
         mainOnClickListener = new View.OnClickListener() {
@@ -185,7 +174,6 @@ public class Stats extends Activity {
             case R.id.action_edit_players:
                 Intent intent = new Intent(myself, EditPlayers.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("teams", teams);
                 bundle.putSerializable("leftTeam", leftTeam);
                 bundle.putSerializable("rightTeam", rightTeam);
                 intent.putExtras(bundle);
@@ -229,38 +217,7 @@ public class Stats extends Activity {
 
     private void uploadGame() {
         try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.accumulate("league", "ocua_16-17");
-
-            // server will calc the week for now.
-            // it would be nice if the client knew what
-            // week it was working for though.
-            //jsonObject.accumulate("week", 1);
-
-            String strLeftTeamName = leftTeamName.getText().toString();
-            String strRightTeamName = rightTeamName.getText().toString();
-
-            Team leftTeam = this.teams.getTeam(strLeftTeamName);
-            Team rightTeam = this.teams.getTeam(strRightTeamName);
-
-            // Teams
-            JSONObject teams = new JSONObject();
-            teams.accumulate(strLeftTeamName, new JSONArray(leftTeam.getPlayers()));
-            teams.accumulate(strRightTeamName, new JSONArray(rightTeam.getPlayers()));
-            jsonObject.accumulate("teams", teams);
-
-            // Score
-            JSONObject score = new JSONObject();
-            score.accumulate(strLeftTeamName, leftScore.getText().toString());
-            score.accumulate(strRightTeamName, rightScore.getText().toString());
-            jsonObject.accumulate("score", score);
-
-            // Points
-            JSONArray points = bookkeeper.serialize().getJSONArray("points");
-            jsonObject.accumulate("points", points);
-
-            // Upload
-            String json = jsonObject.toString();
+            String json = bookkeeper.serialize().toString();
             new uploadGame(mainContext).execute(json);
 
         } catch (Exception e) {

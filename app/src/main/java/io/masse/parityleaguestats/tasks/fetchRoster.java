@@ -9,6 +9,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -20,6 +22,7 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
     public Context context;
     private ProgressDialog dialog;
     private ChooseTeams parent;
+    private JSONObject json;
 
     public fetchRoster(Context context, ChooseTeams parent) {
         this.context = context;
@@ -43,14 +46,8 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
             HttpResponse response = httpclient.execute(httpget);
 
             String resString = EntityUtils.toString(response.getEntity());
+            json = new JSONObject(resString.toString());
 
-            File file = new Persistence(context).rosterJSON();
-            FileOutputStream fos;
-
-            fos = new FileOutputStream(file);
-            fos.write(resString.getBytes());
-            fos.flush();
-            fos.close();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,8 +59,8 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
     protected void onPostExecute(Long result) {
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
-            parent.loadJSON();
-            parent.loadNewTeams();
+            parent.initTeams(json);
+            parent.openDialog();
         }
     }
 }

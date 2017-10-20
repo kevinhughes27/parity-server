@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.List;
 
 import io.masse.parityleaguestats.model.Event;
+import io.masse.parityleaguestats.model.Team;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
@@ -18,10 +19,14 @@ public class BookkeeperTest {
     private static final String PLAYER3 = "Patrick Kenzie";
 
     private Bookkeeper bookkeeper;
+    private Team home;
+    private Team away;
 
     @Before
     public void before() {
-        bookkeeper = new Bookkeeper();
+        home = new Team("Team A", PLAYER1, true);
+        away = new Team("Team B", PLAYER2, true);
+        bookkeeper = new Bookkeeper(home, away);
         bookkeeper.startGame();
     }
 

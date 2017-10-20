@@ -3,6 +3,7 @@ package io.masse.parityleaguestats;
 
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -16,16 +17,24 @@ import io.masse.parityleaguestats.model.Team;
 
 public class Bookkeeper {
 
+    private static final String league = "ocua_17-18";
     private Game activeGame;
     private Stack<Memento> mementos;
     Point activePoint;
     String firstActor;
 
+    private Team homeTeam;
+    private Team awayTeam;
     private List<String> homePlayers;
     private List<String> awayPlayers;
     public Boolean homePossession;
     public Integer homeScore;
     public Integer awayScore;
+
+    public Bookkeeper(Team leftTeam, Team rightTeam) {
+        homeTeam = leftTeam;
+        awayTeam = rightTeam;
+    }
 
     public void startGame() {
         activeGame = new Game();
@@ -224,12 +233,31 @@ public class Bookkeeper {
     }
 
     public JSONObject serialize() {
-        Gson gson = new Gson();
-        String json = gson.toJson(activeGame);
         JSONObject jsonObject = new JSONObject();
 
         try {
-            jsonObject = new JSONObject(json);
+            jsonObject.accumulate("league", league);
+
+            // server will calc the week for now.
+            // it would be nice if the client knew what
+            // week it was working for though.
+            //jsonObject.accumulate("week", 1);
+
+            // Teams
+            JSONObject teams = new JSONObject();
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            jsonObject.accumulate("teams", teams);
+
+            // Score
+            JSONObject score = new JSONObject();
+            score.accumulate(homeTeam.name, homeScore.toString());
+            score.accumulate(awayTeam.name, awayScore.toString());
+            jsonObject.accumulate("score", score);
+
+            // Points
+            Gson gson = new Gson();
+            jsonObject.accumulate("points", gson.toJson(activeGame));
         } catch (Exception e) {
             e.printStackTrace();
         }
