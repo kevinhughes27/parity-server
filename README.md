@@ -15,7 +15,6 @@ Setup
 4. Install client dependencies: from the client directory run `yarn install`
 5. Start the client by running `yarn start`
 
-
 Testing
 -------
 
@@ -33,7 +32,7 @@ curl -X POST --data @data/ocua_16-17/session1/week1_game1.json -H "Content-Type:
 
 To reset your local database delete the `db.sqlite` file and restart the python server.
 
-There is also an automated test suite which can be run using the `pip test` for the python tests and `yarn test` inside the client directory to run javascript tests.
+There is also an automated test suite which can be run using the `pytest tests/*` for the python tests and `yarn test` inside the client directory to run javascript tests.
 
 
 Zuluru Integration
