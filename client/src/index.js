@@ -4,17 +4,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { browserHistory, Router, Route } from 'react-router'
 
-import App from './App'
+import App from './Components/App'
 
-import Leaderboards from './Leaderboards'
-import ComparePlayers from './ComparePlayers'
-import TeamDashboard from './TeamDashboard'
-import TradeSimulator from './TradeSimulator'
+import Leaderboards from './Components/Leaderboards'
+import ComparePlayers from './Components/ComparePlayers'
+import TeamDashboard from './Components/TeamDashboard'
+import TradeSimulator from './Components/TradeSimulator'
 
 import 'materialize-css/dist/css/materialize.css'
 import './index.css'
-import './compare-players.css'
-import './team-dashboard.css'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')

@@ -1,7 +1,7 @@
 // @flow
 
 import 'whatwg-fetch'
-import Stats from './Stats'
+import Stats from './Stores/Stats'
 
 class Loader {
   async fetchWeeks () {
