@@ -4,7 +4,6 @@ import { Link } from 'react-router'
 class SideNav extends Component {
   render () {
     let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing'
-    let docsUrl = 'https://parity-server.herokuapp.com/docs'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
 
     return (
@@ -24,7 +23,6 @@ class SideNav extends Component {
         <li><div className='divider'></div></li>
 
         <li><a href={spreadsheetUrl} target='_blank'>Spreadsheets</a></li>
-        <li><a href={docsUrl} target='_blank'>API Documentation</a></li>
         <li><a href={srcUrl} target='_blank'>Source Code</a></li>
       </div>
     )
