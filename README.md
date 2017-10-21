@@ -42,22 +42,6 @@ Zuluru Integration
 If you need to test zuluru scraping or need to set an environment variable create a `.env` file and it will be loaded.
 
 
-Operations
-----------
-
-Adjusting Salaries - to adjust a player's salary add the following data to the game and re-seed the database:
-
-```json
-  "player_adjustments": {
-    "Player Name": {
-      "Salary": 1050000,
-      "SalaryDelta": 104000
-    }
-  }
-```
-
-This will be their salary for that week so if they already played and are being adjusted afterwards this data will overwrite and become their salary. If they've already played I put the salary delta as what the earned so it makes sense.
-
 Contributing
 ------------
 
