@@ -52,11 +52,13 @@ def upload():
     """
     game = Game()
     game.league = request.json['league']
-    game.week = 1 #TODO - implement calc week from upload time
+    game.week = request.json['week'] #TODO - implement calc week from upload time
     game.teams = json.dumps(request.json['teams'])
     game.score = json.dumps(request.json['score'])
     game.points = json.dumps(request.json['points'])
+    game.stats = json.dumps(request.json['stats']) #TODO - implement calculation
 
+    db.session.add(game)
     db.session.commit()
     return ('', 201)
 
@@ -101,7 +103,10 @@ def stats():
          }
        }
     """
-    return jsonify({})
+    stats = {}
+    for game in Game.query.all():
+        stats = dict(stats.items() + json.loads(game.stats).items())
+    return jsonify({"stats": stats})
 
 @app.route('/weeks')
 def weeks():
@@ -118,7 +123,11 @@ def weeks():
          3
        ]
     """
-    return jsonify([1,2,3,4])
+    weeks = []
+    for game in Game.query.distinct(Game.week):
+        weeks.append(game.week)
+
+    return jsonify(sorted(weeks))
 
 @app.route('/weeks/<num>')
 def week(num):
@@ -136,7 +145,10 @@ def week(num):
          }
        }
      """
-    return jsonify({})
+    stats = {}
+    for game in Game.query.filter_by(week=num):
+        stats = dict(stats.items() + json.loads(game.stats).items())
+    return jsonify({"week": num, "stats": stats})
 
 @app.route('/games')
 def games():
@@ -146,10 +158,14 @@ def games():
     @apiDescription Returns an array of all the games
     @apiSuccess (200) {Array} games returns an array of games
     """
-    return jsonify([1,2,3])
+    games = []
+    for game in Game.query.all():
+        games.append(game)
 
-@app.route('/games/<num>')
-def game(num):
+    return jsonify(games)
+
+@app.route('/games/<id>')
+def game(id):
     """
     @api {get} /games/:id Get
     @apiGroup Games
@@ -171,7 +187,8 @@ def game(num):
          }
        }
     """
-    return jsonify({})
+    game = Game.query.get(id)
+    return jsonify(game.to_dict())
 
 # Client
 @app.route('/', defaults={'path': ''})

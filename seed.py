@@ -1,7 +1,7 @@
 import glob, os
 import requests
 
-os.chdir("data/ocua_16-17/session2")
+os.chdir("data/ocua_16-17/session2_withstats")
 
 blacklist = ['week03', 'week04']
 

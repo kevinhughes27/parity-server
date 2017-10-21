@@ -1,4 +1,5 @@
 from models.db import db
+import json
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -8,3 +9,13 @@ class Game(db.Model):
     score = db.Column(db.Text)
     points = db.Column(db.Text)
     stats = db.Column(db.Text)
+
+    def to_dict(self):
+        return {
+            "league": self.league,
+            "week": self.week,
+            "teams": json.loads(self.teams),
+            "score": json.loads(self.score),
+            "points": json.loads(self.points),
+            "stats": json.loads(self.stats),
+        }
