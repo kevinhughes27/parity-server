@@ -20,11 +20,6 @@ public class Point {
         events = new ArrayList<Event>();
     }
 
-    public void setPlayers(List<String> offensePlayers, List<String> defensePlayers) {
-        this.offensePlayers = offensePlayers;
-        this.defensePlayers = defensePlayers;
-    }
-
     public void addEvent(Event event) {
         events.add(event);
     }
@@ -36,11 +31,18 @@ public class Point {
         return null;
     }
 
-    public Event getLastEvent() {
+    public Event.Type getLastEventType() {
         if (events.size() > 0) {
-            return events.get(events.size() - 1);
+            return events.get(events.size() - 1).getType();
         }
         return null;
+    }
+
+    public void swapOffenseAndDefense() {
+        List<String> tmpPlayers;
+        tmpPlayers = offensePlayers;
+        offensePlayers = defensePlayers;
+        defensePlayers = tmpPlayers;
     }
 
     public int getEventCount() {
@@ -58,5 +60,13 @@ public class Point {
             builder.append(event).append("\n");
         }
         return builder.toString();
+    }
+
+    public List<String> prettyPrint() {
+        ArrayList<String> eventList = new ArrayList<>(events.size());
+        for (Event event : events) {
+            eventList.add(event.prettyPrint());
+        }
+        return eventList;
     }
 }

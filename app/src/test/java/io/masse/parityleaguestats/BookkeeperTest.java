@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.List;
 
 import io.masse.parityleaguestats.model.Event;
+import io.masse.parityleaguestats.model.Team;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
@@ -18,16 +19,20 @@ public class BookkeeperTest {
     private static final String PLAYER3 = "Patrick Kenzie";
 
     private Bookkeeper bookkeeper;
+    private Team home;
+    private Team away;
 
     @Before
     public void before() {
-        bookkeeper = new Bookkeeper();
+        home = new Team("Team A", PLAYER1, true);
+        away = new Team("Team B", PLAYER2, true);
+        bookkeeper = new Bookkeeper(home, away);
         bookkeeper.startGame();
     }
 
     @Test
     public void testUndoRecordFirstActor() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.undo();
 
         assertNull(bookkeeper.firstActor);
@@ -35,7 +40,7 @@ public class BookkeeperTest {
 
     @Test
     public void testUndoPull() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordPull();
         bookkeeper.undo();
 
@@ -64,7 +69,7 @@ public class BookkeeperTest {
 
     @Test
     public void testUndoThrowAway() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordThrowAway();
         bookkeeper.undo();
 
@@ -84,9 +89,9 @@ public class BookkeeperTest {
 
     @Test
     public void testUndoD() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordThrowAway();
-        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordFirstActor(PLAYER2, false);
         bookkeeper.recordD();
         bookkeeper.undo();
 
@@ -96,9 +101,9 @@ public class BookkeeperTest {
 
     @Test
     public void testUndoCatchD() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordThrowAway();
-        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordFirstActor(PLAYER2, false);
         bookkeeper.recordCatchD();
         bookkeeper.undo();
 
@@ -108,20 +113,20 @@ public class BookkeeperTest {
 
     @Test
     public void testComplexScenario() {
-        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordFirstActor(PLAYER2, false);
         bookkeeper.recordPull();
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.undo();
-        bookkeeper.recordFirstActor(PLAYER3);
+        bookkeeper.recordFirstActor(PLAYER3, true);
         bookkeeper.recordPass(PLAYER2);
         bookkeeper.recordThrowAway();
-        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordFirstActor(PLAYER2, false);
         bookkeeper.recordCatchD();
         bookkeeper.undo();   //undo set first actor
         bookkeeper.undo();   //undo D
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordD();
-        bookkeeper.recordFirstActor(PLAYER2);
+        bookkeeper.recordFirstActor(PLAYER2, false);
         bookkeeper.recordPass(PLAYER3);
         bookkeeper.recordPoint();
         bookkeeper.undo();
@@ -151,7 +156,7 @@ public class BookkeeperTest {
     }
 
     private void recordPass() {
-        bookkeeper.recordFirstActor(PLAYER1);
+        bookkeeper.recordFirstActor(PLAYER1, true);
         bookkeeper.recordPass(PLAYER2);
     }
 }

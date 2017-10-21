@@ -46,4 +46,22 @@ public class Event {
     public String toString() {
         return type.toString() + ", " + firstActor + ", " + secondActor;
     }
+
+    public String prettyPrint() {
+        switch (type) {
+            case PULL:
+                return firstActor + " pulled";
+            case PASS:
+                return firstActor + " passed to " + secondActor;
+            case POINT:
+                return firstActor + " scored!";
+            case DEFENSE:
+                return firstActor + " got a block";
+            case THROWAWAY:
+                return firstActor + " threw it away";
+            case DROP:
+                return firstActor + " dropped it";
+        }
+        return null;
+    }
 }

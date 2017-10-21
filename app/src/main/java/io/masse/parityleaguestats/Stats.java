@@ -1,6 +1,5 @@
 package io.masse.parityleaguestats;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,34 +9,20 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-import org.json.JSONArray;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
-
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.tasks.uploadGame;
-
-@SuppressWarnings({"unchecked", "null"})
 
 public class Stats extends Activity {
     //States for each ViewState to be in.
@@ -47,38 +32,28 @@ public class Stats extends Activity {
     private static final int startState = 3;
     private static final int pullState = 4;
     private static final int whoPickedUpDiscState = 5;
-    private static final int halfState = 7;
-    private static final int firstThrowQuebecVariantState = 8;
-    private static final int firstActionState = 9;
-    private static final int rosterChangeState = 10;
+    private static final int firstThrowQuebecVariantState = 6;
 
-    //Disc Directions
-    private static final boolean left = true;
-    private static final boolean right = false;
+    private static final int rosterChangeState = 7;
+    private static final int halfState = 8;
+
 
     //Edit Team and Rosters
     private boolean rosterChange = false;
     private boolean forceRosterChange = true;
     private boolean forceRosterInvert = false;
-    private boolean requestHalf = false;
     private boolean requestUpdateScore = false;
     private boolean requestChangeRoster = false;
     private boolean visibleState[][];
-    private ArrayList<String> arrayUndoNames = new ArrayList<String>();
-    private boolean requestUpdateButtons = false;
 
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
     private Context mainContext;
 
-    private statsTickerAdapter adapter;
-    private boolean discPossession;
-
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
 
     private Button btnLastButtonClicked;
-    private actionTracker gameStats;
     private Bookkeeper bookkeeper;
 
     private View.OnClickListener mainOnClickListener;
@@ -87,9 +62,9 @@ public class Stats extends Activity {
 
     private final Stats myself = this;
 
-    private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
+    private ArrayAdapter<String> gameSummaryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +72,6 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
-        teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
 
@@ -117,17 +91,16 @@ public class Stats extends Activity {
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
-        discPossession = true;
-
         layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
         layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
 
+        // undo view
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
-        gameStats = new actionTracker(myself);
-        bookkeeper = new Bookkeeper();
+        gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
+        listView.setAdapter(gameSummaryAdapter);
+
+        bookkeeper = new Bookkeeper(leftTeam, rightTeam);
         bookkeeper.startGame();
-        adapter = new statsTickerAdapter();
-        listView.setAdapter(adapter);
 
         mainOnClickListener = new View.OnClickListener() {
             @Override
@@ -140,10 +113,9 @@ public class Stats extends Activity {
         changeModeListener = new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
                 if (rosterChange){
                     changeState(autoState);
-                }else{
+                } else {
                     changeState(rosterChangeState);
                 }
             }
@@ -151,12 +123,11 @@ public class Stats extends Activity {
 
         toggleUserListener = new View.OnClickListener(){
             @Override
-        public void onClick(View view){
-
+            public void onClick(View view){
                 Button currentButton = (Button) view;
-                if (currentButton.getTypeface()!=null){
+                if (currentButton.getTypeface()!=null) {
                     currentButton.setTypeface(null, Typeface.NORMAL);
-                }else {
+                } else {
                     currentButton.setTypeface(null, Typeface.BOLD);
                 }
             }
@@ -168,15 +139,6 @@ public class Stats extends Activity {
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(mainContext, layoutRight, mainOnClickListener, rightTeam, false);
 
-        if ((savedInstanceState != null) &&
-            (savedInstanceState.getSerializable("arrayEventNames") != null)  &&
-            (savedInstanceState.getSerializable("arrayEventActions") != null)) {
-
-            gameStats = (actionTracker) savedInstanceState.getSerializable("gameStats");
-
-            Toast.makeText(mainContext, "Restored State", Toast.LENGTH_SHORT).show();
-        }
-
         btnUndo.setOnClickListener(mainOnClickListener);
         btnPoint.setOnClickListener(mainOnClickListener);
         btnDrop.setOnClickListener(mainOnClickListener);
@@ -187,6 +149,471 @@ public class Stats extends Activity {
         btnMode.setOnClickListener(changeModeListener);
 
         changeState(rosterChangeState);
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Do nothing;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_edit_players:
+                Intent intent = new Intent(myself, EditPlayers.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("leftTeam", leftTeam);
+                bundle.putSerializable("rightTeam", rightTeam);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                return true;
+            case R.id.action_save_game:
+                new AlertDialog.Builder(mainContext)
+                        .setTitle("Save and Clear")
+                        .setMessage("Are you sure sure?" )
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                bookkeeper.gameCompleted();
+                                uploadGame();
+                                resetApp();
+                            }
+                        }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                bookkeeper.gameCompleted();
+                                bookkeeper.backup(); // this is in case someone fat fingers a clear
+                                resetApp();
+                            }
+                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                bookkeeper.backup(); // this is in case someone fat fingers a cancel
+                            }
+                        }).show();
+                return true;
+            case R.id.action_half:
+                bookkeeper.recordHalf();
+                changeState(rosterChangeState);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void resetApp(){
+        Intent intent = new Intent(myself, ChooseTeams.class);
+        startActivity(intent);
+    }
+
+    private void uploadGame() {
+        try {
+            String json = bookkeeper.serialize().toString();
+            new uploadGame(mainContext).execute(json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private class ButtonPress extends AsyncTask <Button, Button, Long> {
+
+        @SuppressWarnings("ResourceType")
+        @Override
+        protected Long doInBackground(Button... btns) {
+
+            if (btns.length == 1) {
+                Button btn = btns[0];
+                String buttonText = btn.getText().toString();
+                Boolean leftSideButton = btn.getParent() == layoutLeft;
+                Boolean rightSideButton = btn.getParent() == layoutRight;
+
+                if (leftSideButton) {
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
+                    }
+                    bookkeeper.recordFirstActor(buttonText, true);
+
+                } else if (rightSideButton) {
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
+                    }
+                    bookkeeper.recordFirstActor(buttonText, false);
+
+                } else if ((btn == btnD)) {
+                    bookkeeper.recordD();
+
+                } else if ((btn == btnCatchD)){
+                    bookkeeper.recordCatchD();
+
+                } else if ((btn == btnDrop)){
+                    bookkeeper.recordDrop();
+
+                } else if ((btn == btnPull)){
+                    bookkeeper.recordPull();
+
+                } else if ((btn == btnThrowAway)){
+                    bookkeeper.recordThrowAway();
+
+                } else if (btn == btnPoint) {
+                    bookkeeper.recordPoint();
+
+                    requestUpdateScore = true;
+                    requestChangeRoster = true;
+                    forceRosterInvert = true;
+
+                } else if (btn == btnUndo){
+                    int score = bookkeeper.homeScore + bookkeeper.awayScore;
+                    bookkeeper.undo();
+                    int newScore = bookkeeper.homeScore + bookkeeper.awayScore;
+
+                    if (score != newScore) {
+                        requestUpdateScore = true;
+                        forceRosterInvert = true;
+                    }
+                }
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (btnLastButtonClicked == btnUndo && rosterChange) {
+                            loadButtonVisibility();
+                            Toast.makeText(mainContext, "Roster Change OFF and reverted back.", Toast.LENGTH_SHORT).show();
+                        }
+                        if (requestUpdateScore) {
+                            requestUpdateScore = false;
+                            leftScore.setText(bookkeeper.homeScore.toString());
+                            rightScore.setText(bookkeeper.awayScore.toString());
+                        }
+                        if (requestChangeRoster) {
+                            requestChangeRoster = false;
+                            changeState(rosterChangeState);
+                        } else {
+                            changeState(autoState);
+                        }
+
+                        gameSummaryAdapter.clear();
+                        gameSummaryAdapter.addAll(bookkeeper.undoHistory());
+                        gameSummaryAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+            return null;
+        }
+    }
+
+    private void changeState(int change) {
+        if (change == autoState) {
+            change = bookkeeper.uiState();
+        }
+
+        toggleRoster(change);
+        updateUI(change);
+    }
+
+    private void toggleRoster(int change) {
+        int leftCount = layoutLeft.getChildCount();
+        int rightCount = layoutRight.getChildCount();
+
+        // if rosterChange on turn it off
+        if (rosterChange && (change != rosterChangeState)) {
+            int leftVisible = 0;
+            int rightVisible = 0;
+
+            for (int i = 0; i < leftCount; i++) {
+                Button currentButton = (Button) layoutLeft.getChildAt(i);
+                if (currentButton.getTypeface() != null)
+                    leftVisible++;
+            }
+            for (int i = 0; i < rightCount; i++) {
+                Button currentButton = (Button) layoutRight.getChildAt(i);
+                if (currentButton.getTypeface() != null)
+                    rightVisible++;
+            }
+
+            int teamSize = 6;
+
+            boolean leftCorrectNumPlayers = leftVisible == teamSize;
+            boolean rightCorrectNumPlayers = rightVisible == teamSize;
+
+            if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
+
+                rosterChange = false;
+                forceRosterChange = false;
+
+                ArrayList<String> leftPlayers = leftTeam.getPlayers();
+                ArrayList<String> rightPlayers = rightTeam.getPlayers();
+
+                for (int i = 0; i < leftCount; i++) {
+                    Button currentButton = (Button) layoutLeft.getChildAt(i);
+                    currentButton.setGravity(Gravity.END);
+                    currentButton.setOnClickListener(mainOnClickListener);
+                    if (currentButton.getTypeface() != null) {
+                        currentButton.setVisibility(View.VISIBLE);
+                        String playerName = currentButton.getText().toString();
+                        leftPlayers.add(playerName);
+                    } else {
+                        currentButton.setVisibility(View.INVISIBLE);
+                    }
+                    currentButton.setTypeface(null, Typeface.NORMAL);
+                }
+                for (int i = 0; i < rightCount; i++) {
+                    Button currentButton = (Button) layoutRight.getChildAt(i);
+                    currentButton.setGravity(Gravity.START);
+                    currentButton.setOnClickListener(mainOnClickListener);
+                    if (currentButton.getTypeface() != null) {
+                        currentButton.setVisibility(View.VISIBLE);
+                        String playerName = currentButton.getText().toString();
+                        rightPlayers.add(playerName);
+                    } else {
+                        currentButton.setVisibility(View.INVISIBLE);
+                    }
+                    currentButton.setTypeface(null, Typeface.NORMAL);
+                }
+
+                bookkeeper.startPoint(leftTeam.getPlayers(), rightTeam.getPlayers());
+
+                Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
+                btnMode.setText(R.string.mode_button_edit);
+            } else {
+                String error = "Incorrect number of players";
+                if (!leftCorrectNumPlayers) {
+                    error += String.format("\nLeft side: %d/%d selected", leftVisible, teamSize);
+                }
+
+                if (!rightCorrectNumPlayers) {
+                    error += String.format("\nRight side: %d/%d selected", rightVisible, teamSize);
+                }
+
+                Toast.makeText(mainContext, error, Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+    }
+
+    private void updateUI(int change) {
+        int leftCount = layoutLeft.getChildCount();
+        int rightCount = layoutRight.getChildCount();
+
+        switch (change) {
+            case normalState:
+                btnPoint.setEnabled(true);
+                btnDrop.setEnabled(true);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(true);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
+                }
+                break;
+
+            case firstThrowQuebecVariantState:
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(true);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
+                }
+                break;
+
+            case firstDState:
+                btnPoint.setEnabled(true);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(true);
+                btnCatchD.setEnabled(true);
+                btnThrowAway.setEnabled(true);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
+                }
+                break;
+
+            case startState:
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(false);
+                btnPull.setEnabled(false);
+                btnUndo.setEnabled(true);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(true);
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(true);
+                }
+                break;
+
+            case pullState:
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnThrowAway.setEnabled(false);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(true);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(false);
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(false);
+                }
+                break;
+
+            case whoPickedUpDiscState:
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(false);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
+                }
+                break;
+
+            case rosterChangeState:
+                rosterChange = true;
+                saveButtonVisibility();
+                boolean leftAllEnabled = true;
+                boolean rightAllEnabled = true;
+                for (int i = 0; i < leftCount; i++){
+                    Button currentButton = (Button) layoutLeft.getChildAt(i);
+                    if (currentButton.getVisibility() != View.VISIBLE)
+                        leftAllEnabled = false;
+                }
+                for (int i = 0; i < rightCount; i++){
+                    Button currentButton = (Button) layoutRight.getChildAt(i);
+                    if (currentButton.getVisibility() != View.VISIBLE)
+                        rightAllEnabled = false;
+                }
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(false);
+                btnUndo.setEnabled(!forceRosterChange);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+
+                int intTypeON = Typeface.BOLD;
+                int intTypeOFF = Typeface.NORMAL;
+
+                if (forceRosterInvert) {
+                    forceRosterInvert = false;
+                    intTypeON = Typeface.NORMAL;
+                    intTypeOFF = Typeface.BOLD;
+                }
+                for (int i = 0; i < leftCount; i++){
+                    Button currentButton = (Button) layoutLeft.getChildAt(i);
+                    currentButton.setEnabled(true);
+                    currentButton.setGravity(Gravity.END);
+                    currentButton.setOnClickListener(toggleUserListener);
+
+                    if (currentButton.getVisibility() == View.VISIBLE && !leftAllEnabled){
+                        currentButton.setTypeface(null, intTypeON);
+                    } else {
+                        currentButton.setTypeface(null, intTypeOFF);
+                    }
+
+                    currentButton.setVisibility(View.VISIBLE);
+
+                }
+                for (int i = 0; i < rightCount; i++){
+                    Button currentButton = (Button) layoutRight.getChildAt(i);
+                    currentButton.setEnabled(true);
+                    currentButton.setGravity(Gravity.START);
+                    currentButton.setOnClickListener(toggleUserListener);
+
+                    if (currentButton.getVisibility()== View.VISIBLE && !rightAllEnabled){
+                        currentButton.setTypeface(null, intTypeON);
+                    } else {
+                        currentButton.setTypeface(null, intTypeOFF);
+                    }
+
+                    currentButton.setVisibility(View.VISIBLE);
+                }
+
+                Toast.makeText(mainContext, "Selecting active players", Toast.LENGTH_SHORT).show();
+                btnMode.setText(R.string.mode_button_done);
+
+                break;
+
+            case halfState:
+                btnPoint.setEnabled(false);
+                btnDrop.setEnabled(false);
+                btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
+                btnThrowAway.setEnabled(false);
+                btnUndo.setEnabled(true);
+                btnPull.setEnabled(false);
+                btnMode.setEnabled(true);
+                for (int i = 0; i < leftCount; i++){
+                    layoutLeft.getChildAt(i).setEnabled(true);
+                }
+                for (int i = 0; i < rightCount; i++){
+                    layoutRight.getChildAt(i).setEnabled(true);
+                }
+                break;
+        }
     }
 
     private void saveButtonVisibility() {
@@ -231,743 +658,6 @@ public class Stats extends Activity {
                 currentButton.setVisibility(View.INVISIBLE);
             }
             currentButton.setTypeface(null, Typeface.NORMAL);
-        }
-    }
-
-    @Override
-    public void onPause(){
-        super.onPause();
-        saveGameToFile(false); //catch all save file.  Just in case to capture data before possible data loss
-    }
-
-    @Override
-    public void onBackPressed() {
-        // Do nothing;
-    }
-
-    @SuppressLint("SetTextI18n")
-    private void updateScore(){
-        int tmpLeftScore = 0;
-        int tmpRightScore = 0;
-
-        int arrayLength = gameStats.size();
-
-        for (int i = 0; i < arrayLength; i++) {
-            if (gameStats.getAction(i).equals("+1")||gameStats.getAction(i).equals("-1")){
-                if (gameStats.getName(i-1).equals(">>>>>>"))
-                        tmpRightScore++;
-                else if (gameStats.getName(i-1).equals("<<<<<<"))
-                        tmpLeftScore++;
-            }
-        }
-        leftScore.setText(Integer.toString(tmpLeftScore));
-        rightScore.setText(Integer.toString(tmpRightScore));
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_actions, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_edit_players:
-                Intent intent = new Intent(myself, EditPlayers.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("teams", teams);
-                bundle.putSerializable("leftTeam", leftTeam);
-                bundle.putSerializable("rightTeam", rightTeam);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                return true;
-            case R.id.action_save_game:
-                new AlertDialog.Builder(mainContext)
-                        .setTitle("Save and Clear")
-                        .setMessage("Are you sure sure?" )
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                bookkeeper.gameCompleted();
-                                saveGameToFile(true);
-                                uploadGame();
-                                resetApp();
-                            }
-                        }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                bookkeeper.gameCompleted();
-                                saveGameToFile(true);
-                                resetApp();
-                            }
-                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                saveGameToFile(true);
-                            }
-                        }).show();
-                return true;
-            case R.id.action_half:
-                half();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    private void resetApp(){
-        Intent intent = new Intent(myself, ChooseTeams.class);
-        startActivity(intent);
-    }
-
-    private void saveGameToFile(boolean isFinalSave) {
-        if (gameStats.size() < 1)
-            return;
-
-        File folder = new Persistence(mainContext).autosaveFile();
-        if (isFinalSave){
-            folder = new Persistence(mainContext).finalsaveFile();
-        }
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss", Locale.CANADA);
-        Date date = new Date();
-        String timeStamp = dateFormat.format(date);
-
-        String filename = leftTeamName.getText().toString().replace("#","") + "_VS_" + rightTeamName.getText().toString().replace("#","") + "_" + timeStamp +".csv";
-        File file = new File(folder, filename);
-        FileOutputStream fos;
-
-        try {
-            fos = new FileOutputStream(file);
-            fos.write(gameStats.compileCSV().getBytes());
-            fos.flush();
-            fos.close();
-            Toast.makeText(mainContext, folder + "/" + filename + " Saved", Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            Toast.makeText(mainContext, e.toString(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private void uploadGame() {
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.accumulate("league", "ocua_16-17");
-
-            // server will calc the week for now.
-            // it would be nice if the client knew what
-            // week it was working for though.
-            //jsonObject.accumulate("week", 1);
-
-            String strLeftTeamName = leftTeamName.getText().toString();
-            String strRightTeamName = rightTeamName.getText().toString();
-
-            Team leftTeam = this.teams.getTeam(strLeftTeamName);
-            Team rightTeam = this.teams.getTeam(strRightTeamName);
-
-            // Teams
-            JSONObject teams = new JSONObject();
-            teams.accumulate(strLeftTeamName, new JSONArray(leftTeam.getPlayers()));
-            teams.accumulate(strRightTeamName, new JSONArray(rightTeam.getPlayers()));
-            jsonObject.accumulate("teams", teams);
-
-            // Score
-            JSONObject score = new JSONObject();
-            score.accumulate(strLeftTeamName, leftScore.getText().toString());
-            score.accumulate(strRightTeamName, rightScore.getText().toString());
-            jsonObject.accumulate("score", score);
-
-            // EventString
-            String eventString = gameStats.compileCSV();
-            String[] eventStringArray = eventString.split("\n");
-            jsonObject.accumulate("event_string", new JSONArray(eventStringArray));
-
-            // Points
-            JSONArray points = bookkeeper.serialize().getJSONArray("points");
-            jsonObject.accumulate("points", points);
-
-            // Upload
-            String json = jsonObject.toString();
-            new uploadGame(mainContext).execute(json);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private class ButtonPress extends AsyncTask <Button, Button, Long> {
-
-        @SuppressWarnings("ResourceType")
-        @Override
-        protected Long doInBackground(Button... btns) {
-
-            if (btns.length == 1) {
-                if (btns[0].getParent() == layoutLeft) {
-                    if ((gameStats.size() < 1) || (gameStats.getAction(0).equals("Time"))) {
-                        discPossession = left;
-                    } else {
-                        if (gameStats.getAction(0).equals("")) {
-                            gameStats.setAction(0, "Pass");
-                            bookkeeper.recordPass((btns[0]).getText().toString());
-                        }
-                    }
-                    //noinspection ResourceType,ResourceType
-                    gameStats.add(0, (btns[0]).getText().toString(), "" );
-                    bookkeeper.recordFirstActor(btns[0].getText().toString());
-
-                }else if (btns[0].getParent() == layoutRight) {
-                    if ((gameStats.size() < 1) || (gameStats.getAction(0).equals("Time"))) {
-                        discPossession = right;
-                    } else {
-                        if (gameStats.getAction(0).equals("")) {
-                            gameStats.setAction(0, "Pass");
-                            bookkeeper.recordPass((btns[0]).getText().toString());
-                        }
-                    }
-                    gameStats.add(0, (btns[0]).getText().toString(), "" );
-                    bookkeeper.recordFirstActor(btns[0].getText().toString());
-
-                }else if ((btns[0] == btnD)) {
-                    gameStats.setAction(0, (btns[0].getText().toString()));
-                    bookkeeper.recordD();
-                }else if ((btns[0] == btnCatchD)){
-                    gameStats.setAction(0, (btnD.getText().toString()));
-                    bookkeeper.recordCatchD();
-                    gameStats.add(0, gameStats.getName(0), "" );
-                }else if ((btns[0] == btnDrop)||(btns[0] == btnPull)||(btns[0] == btnThrowAway)) {
-                    discPossession = !discPossession;
-                    if (btns[0] == btnPull) {
-                        //The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
-                        //In this case we'll re-record the offense/defense players after the possession has been set
-                        recordActivePlayers();
-                    }
-                    ButtonActionInterpreter.interpretButton(btns[0], bookkeeper);
-                    gameStats.setAction(0,btns[0].getText().toString());
-                    if (discPossession) {
-                        gameStats.add(0, ">>>>>>", "Direction" );
-                    } else {
-                        gameStats.add(0, "<<<<<<", "Direction" );
-                    }
-
-                }else if (btns[0] == btnPoint) {
-                    int leftCount = layoutLeft.getChildCount();
-                    int rightCount = layoutRight.getChildCount();
-
-                    String leftText = "-1";
-                    String rightText = "+1";
-                    if (discPossession){
-                        leftText = "+1";
-                        rightText = "-1";
-                    }
-                    gameStats.setAction(0,btns[0].getText().toString());
-                    bookkeeper.recordPoint();
-
-                    for (int i = 0; i < leftCount; i++){
-                        Button currentButton = (Button) layoutLeft.getChildAt(i);
-
-                        if (currentButton.getVisibility() == View.VISIBLE)
-                            gameStats.add(0,currentButton.getText().toString(),leftText);
-                    }
-                    for (int i = 0; i < rightCount; i++){
-                        Button currentButton = (Button) layoutRight.getChildAt(i);
-
-                        if (currentButton.getVisibility() == View.VISIBLE)
-                            gameStats.add(0,currentButton.getText().toString(),rightText);
-                    }
-
-                    discPossession = !discPossession;
-                    if (discPossession) {
-                        gameStats.add(0, ">>>>>>", "Direction" );
-                    } else {
-                        gameStats.add(0, "<<<<<<", "Direction" );
-                    }
-                    requestUpdateScore = true;
-                    requestChangeRoster = true;
-                    forceRosterInvert = true;
-
-                }else if (btns[0] == btnUndo){
-                    //if rosterChange do nothing
-                    if (rosterChange) {
-                        //do nothing
-                    } else if ((gameStats.size() > 1)) {
-
-                        //undo past point is really annoying.
-                        if ((gameStats.getAction(1).equals("+1"))||(gameStats.getAction(1).equals("-1"))){
-                            requestUpdateButtons = true;
-                            arrayUndoNames = new ArrayList<String>();
-                            while ((gameStats.getAction(1).equals("+1"))||(gameStats.getAction(1).equals("-1"))) {
-                                arrayUndoNames.add(gameStats.getName(1));
-                                gameStats.remove(1);
-                            }
-                        }
-
-                        if (gameStats.getAction(0).equals("Time")) {
-                            requestHalf = true;
-                        }else{
-                            if (gameStats.getAction(0).equals("Direction")) {
-                                gameStats.setAction(1, "");
-                                discPossession = !discPossession;
-                            }else if (gameStats.getAction(1).equals("Pass")){
-                                gameStats.setAction(1, "");
-                            }
-                            gameStats.remove(0);
-                            requestUpdateScore = true;
-                        }
-                        bookkeeper.undo();
-                    }else if (gameStats.size() > 0) {
-                        gameStats.remove(0);
-                        bookkeeper.undo();
-                    }
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if (btnLastButtonClicked == btnUndo && rosterChange) {
-                            loadButtonVisibility();
-                            Toast.makeText(mainContext, "Roster Change OFF and reverted back.", Toast.LENGTH_SHORT).show();
-                        }
-                        if (requestHalf) {
-                            requestHalf = false;
-                            half();
-                        }
-                        if (requestUpdateScore) {
-                            requestUpdateScore = false;
-                            updateScore();
-                        }
-                        if (requestChangeRoster) {
-                            requestChangeRoster = false;
-                            changeState(rosterChangeState);
-                        } else {
-                            changeState(autoState);
-                        }
-                        if (requestUpdateButtons) {
-                            requestUpdateButtons = false;
-                            int leftCount = layoutLeft.getChildCount();
-                            int rightCount = layoutRight.getChildCount();
-
-                            for (int i = 0; i < leftCount; i++)
-                                layoutLeft.getChildAt(i).setVisibility(View.INVISIBLE);
-                            for (int i = 0; i < rightCount; i++)
-                                layoutRight.getChildAt(i).setVisibility(View.INVISIBLE);
-
-                            for (int j = 0; j < arrayUndoNames.size(); j++) {
-                                for (int i = 0; i < leftCount; i++)
-                                    if (((Button) layoutLeft.getChildAt(i)).getText().toString().equals(arrayUndoNames.get(j)))
-                                        layoutLeft.getChildAt(i).setVisibility(View.VISIBLE);
-                                for (int i = 0; i < rightCount; i++)
-                                    if (((Button) layoutRight.getChildAt(i)).getText().toString().equals(arrayUndoNames.get(j)))
-                                        layoutRight.getChildAt(i).setVisibility(View.VISIBLE);
-                            }
-                        }
-                        adapter.notifyDataSetChanged();
-                    }
-                });
-            }
-            return null;
-        }
-    }
-
-    private void changeState(int change) {
-        int leftCount = layoutLeft.getChildCount();
-        int rightCount = layoutRight.getChildCount();
-
-        if (change == autoState ){
-
-            //Determine state automatically.
-            if (gameStats.size() < 1) {
-                change = startState;
-            }else if (gameStats.size() == 1) {
-                change = pullState;
-            }else if (gameStats.getAction(0).equals("Direction")){
-                change = whoPickedUpDiscState;
-            }else if (gameStats.size() > 2) {
-                if (gameStats.getAction(0).equals("Time")) {
-                    change = startState;
-                }else if (gameStats.getAction(1).equals("Time")){
-                    change = pullState;
-                }else if ((gameStats.getAction(2).equals("+1")) || (gameStats.getAction(2).equals("-1")) ||  (gameStats.getAction(2).equals("Pull"))) {
-                    change = firstThrowQuebecVariantState;
-                }else if (gameStats.getAction(0).equals("D")){
-                    change = whoPickedUpDiscState;
-                }else if ((gameStats.getAction(1).equals("D")) || (gameStats.getAction(2).equals("Drop"))){
-                    change = firstActionState;
-                }else if ((gameStats.getAction(1).equals("Direction")) && (!gameStats.getAction(2).equals("+1")) && (!gameStats.getAction(2).equals("-1")) && (!gameStats.getAction(2).equals("Drop")) && (!gameStats.getAction(2).equals("Pull"))){
-                    change = firstDState;
-                }else{
-                    change = normalState;
-                }
-            }else{
-                change = normalState;
-            }
-        }
-
-        //if rosterChange on turn it off
-        if (rosterChange && (change != rosterChangeState)) {
-            int leftVisible = 0;
-            int rightVisible = 0;
-
-            for (int i = 0; i < leftCount; i++) {
-                Button currentButton = (Button) layoutLeft.getChildAt(i);
-                if (currentButton.getTypeface() != null)
-                    leftVisible++;
-            }
-            for (int i = 0; i < rightCount; i++) {
-                Button currentButton = (Button) layoutRight.getChildAt(i);
-                if (currentButton.getTypeface() != null)
-                    rightVisible++;
-            }
-
-            int teamSize = 6;
-
-            boolean leftCorrectNumPlayers = leftVisible == teamSize;
-            boolean rightCorrectNumPlayers = rightVisible == teamSize;
-
-            if (leftCorrectNumPlayers&&rightCorrectNumPlayers) {
-
-                rosterChange = false;
-                forceRosterChange = false;
-
-                ArrayList<String> leftPlayers = leftTeam.getPlayers();
-                ArrayList<String> rightPlayers = rightTeam.getPlayers();
-
-                for (int i = 0; i < leftCount; i++) {
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                    currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(mainOnClickListener);
-                    if (currentButton.getTypeface() != null) {
-                        currentButton.setVisibility(View.VISIBLE);
-                        String playerName = currentButton.getText().toString();
-                        leftPlayers.add(playerName);
-                    } else {
-                        currentButton.setVisibility(View.INVISIBLE);
-                    }
-                    currentButton.setTypeface(null, Typeface.NORMAL);
-                }
-                for (int i = 0; i < rightCount; i++) {
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(mainOnClickListener);
-                    if (currentButton.getTypeface() != null) {
-                        currentButton.setVisibility(View.VISIBLE);
-                        String playerName = currentButton.getText().toString();
-                        rightPlayers.add(playerName);
-                    } else {
-                        currentButton.setVisibility(View.INVISIBLE);
-                    }
-                    currentButton.setTypeface(null, Typeface.NORMAL);
-                }
-
-                recordActivePlayers();
-                Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
-                btnMode.setText(R.string.mode_button_edit);
-            } else {
-                String error = "Incorrect number of players";
-                if (!leftCorrectNumPlayers) {
-                    error += String.format("\nLeft side: %d/%d selected", leftVisible, teamSize);
-                }
-
-                if (!rightCorrectNumPlayers) {
-                    error += String.format("\nRight side: %d/%d selected", rightVisible, teamSize);
-                }
-
-                Toast.makeText(mainContext, error, Toast.LENGTH_LONG).show();
-                return;
-            }
-        }
-
-        switch (change) {
-            case normalState:
-                btnPoint.setEnabled(true);
-                btnDrop.setEnabled(true);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    if (((Button) layoutLeft.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutLeft.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutLeft.getChildAt(i).setEnabled(discPossession);
-                    }
-                }
-                for (int i = 0; i < rightCount; i++){
-                    if (((Button) layoutRight.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutRight.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutRight.getChildAt(i).setEnabled(!discPossession);
-                    }
-                }
-                break;
-            case firstThrowQuebecVariantState:
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    if (((Button) layoutLeft.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutLeft.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutLeft.getChildAt(i).setEnabled(discPossession);
-                    }
-                }
-                for (int i = 0; i < rightCount; i++){
-                    if (((Button) layoutRight.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutRight.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutRight.getChildAt(i).setEnabled(!discPossession);
-                    }
-                }
-                break;
-            case firstDState:
-                btnPoint.setEnabled(true);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(true);
-                btnCatchD.setEnabled(true);
-                btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    if (((Button) layoutLeft.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutLeft.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutLeft.getChildAt(i).setEnabled(discPossession);
-                    }
-                }
-                for (int i = 0; i < rightCount; i++){
-                    if (((Button) layoutRight.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutRight.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutRight.getChildAt(i).setEnabled(!discPossession);
-                    }
-                }
-                break;
-            case firstActionState:
-                btnPoint.setEnabled(true);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    if (((Button) layoutLeft.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutLeft.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutLeft.getChildAt(i).setEnabled(discPossession);
-                    }
-                }
-                for (int i = 0; i < rightCount; i++){
-                    if (((Button) layoutRight.getChildAt(i)).getText().equals(gameStats.getName(0))){
-                        layoutRight.getChildAt(i).setEnabled(false);
-                    } else {
-                        layoutRight.getChildAt(i).setEnabled(!discPossession);
-                    }
-                }
-                break;
-            case startState:
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnPull.setEnabled(false);
-                btnUndo.setEnabled(true);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(true);
-                }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(true);
-                }
-                break;
-            case pullState:
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(true);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(false);
-                }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(false);
-                }
-                break;
-            case whoPickedUpDiscState:
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(discPossession);
-                }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(!discPossession);
-                }
-                break;
-            case rosterChangeState:
-                rosterChange = true;
-                saveButtonVisibility();
-                boolean leftAllEnabled = true;
-                boolean rightAllEnabled = true;
-                for (int i = 0; i < leftCount; i++){
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-
-                    if (currentButton.getVisibility() != View.VISIBLE)
-                        leftAllEnabled = false;
-
-                }
-                for (int i = 0; i < rightCount; i++){
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    if (currentButton.getVisibility() != View.VISIBLE)
-                        rightAllEnabled = false;
-                }
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(!forceRosterChange);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-
-                int intTypeON = Typeface.BOLD;
-                int intTypeOFF = Typeface.NORMAL;
-
-                if (forceRosterInvert) {
-                    forceRosterInvert = false;
-                    intTypeON = Typeface.NORMAL;
-                    intTypeOFF = Typeface.BOLD;
-                }
-                for (int i = 0; i < leftCount; i++){
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-
-                    currentButton.setEnabled(true);
-
-                    currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(toggleUserListener);
-                    if (currentButton.getVisibility() == View.VISIBLE && !leftAllEnabled){
-                        currentButton.setTypeface(null, intTypeON);
-                    }else{
-                        currentButton.setTypeface(null, intTypeOFF);
-                    }
-                    currentButton.setVisibility(View.VISIBLE);
-
-                }
-                for (int i = 0; i < rightCount; i++){
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    currentButton.setEnabled(true);
-                    currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(toggleUserListener);
-
-                    if (currentButton.getVisibility()== View.VISIBLE && !rightAllEnabled){
-                        currentButton.setTypeface(null, intTypeON);
-                    }else{
-                        currentButton.setTypeface(null, intTypeOFF);
-                    }
-                    currentButton.setVisibility(View.VISIBLE);
-                }
-
-                Toast.makeText(mainContext, "Selecting active players", Toast.LENGTH_SHORT).show();
-                btnMode.setText(R.string.mode_button_done);
-
-                break;
-            case halfState:
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(true);
-                }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(true);
-                }
-                break;
-        }
-    }
-
-    private void recordActivePlayers() {
-        if (discPossession == left) {
-            bookkeeper.recordActivePlayers(leftTeam.getPlayers(), rightTeam.getPlayers());
-        } else {
-            bookkeeper.recordActivePlayers(rightTeam.getPlayers(), leftTeam.getPlayers());
-        }
-    }
-
-    private void half() {
-        if ( gameStats.getName(0).equals("Half") || ((gameStats.size() > 1) && (gameStats.getAction(1).equals("+1")|| gameStats.getAction(1).equals("-1")))) {
-            if (gameStats.size() > 0) {
-                if (gameStats.getName(0).equals("Half")) {
-                    gameStats.remove(0);
-                    changeState(autoState);
-                }else {
-                    gameStats.add(0, "Half", "Time");
-                    changeState(rosterChangeState);
-                }
-                adapter.notifyDataSetChanged();
-            }
-        } else
-            Toast.makeText(mainContext, "You can only have half between points", Toast.LENGTH_LONG).show();
-     }
-
-    private class statsTickerAdapter extends BaseAdapter {
-    //todo fix inefficient statsTicker somehow.
-        final LayoutInflater inflater = getLayoutInflater();
-
-        class ViewHolderItem {
-            TextView name;
-            TextView action;
-        }
-
-        @Override
-        public int getCount() {
-            return gameStats.size();
-        }
-
-        @Override
-        public String getItem(int position) {
-            return gameStats.getName(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolderItem viewHolder;
-            if (convertView == null){
-                viewHolder = new ViewHolderItem();
-                convertView = inflater.inflate(R.layout.list_layout, parent, false);
-                viewHolder.name = (TextView) convertView.findViewById(R.id.name);
-                viewHolder.action = (TextView) convertView.findViewById(R.id.action);
-                convertView.setTag(viewHolder);
-            }else{
-                viewHolder = (ViewHolderItem) convertView.getTag();
-            }
-            viewHolder.name.setText(gameStats.getName(position));
-            viewHolder.action.setText(gameStats.getAction(position));
-            return convertView;
         }
     }
 }

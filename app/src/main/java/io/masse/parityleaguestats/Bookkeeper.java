@@ -3,6 +3,7 @@ package io.masse.parityleaguestats;
 
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -12,47 +13,122 @@ import java.util.Stack;
 import io.masse.parityleaguestats.model.Event;
 import io.masse.parityleaguestats.model.Game;
 import io.masse.parityleaguestats.model.Point;
+import io.masse.parityleaguestats.model.Team;
 
 public class Bookkeeper {
 
-    private List<Game> games = new ArrayList<>();
+    private static final String league = "ocua_17-18";
     private Game activeGame;
     private Stack<Memento> mementos;
     Point activePoint;
     String firstActor;
 
+    private Team homeTeam;
+    private Team awayTeam;
+    private List<String> homePlayers;
+    private List<String> awayPlayers;
+    public Boolean homePossession;
+    public Integer homeScore;
+    public Integer awayScore;
+
+    public Bookkeeper(Team leftTeam, Team rightTeam) {
+        homeTeam = leftTeam;
+        awayTeam = rightTeam;
+    }
+
     public void startGame() {
         activeGame = new Game();
-        games.add(activeGame);
+        homeScore = 0;
+        awayScore = 0;
+        homePossession = true;
         mementos = new Stack<>();
     }
 
-    public void recordActivePlayers(List<String> offensePlayers, List<String> defensePlayers) {
-        if (activeGame == null) {
-            startGame();
-        }
-        if (activePoint == null) {
-            activePoint = new Point(offensePlayers, defensePlayers);
+    private int state = autoState;
+    private static final int autoState = 0;
+    private static final int normalState = 1;
+    private static final int firstDState = 2;
+    private static final int startState = 3;
+    private static final int pullState = 4;
+    private static final int whoPickedUpDiscState = 5;
+    private static final int firstThrowQuebecVariantState = 6;
+
+    public int uiState() {
+        Boolean firstPoint = (activeGame.getPointCount() == 0);
+        Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
+
+        if (firstPoint && firstEvent && firstActor == null) {
+            state = startState;
+        } else if (firstPoint && firstEvent) {
+            state = pullState;
+        } else if (activePoint.getLastEventType() == Event.Type.PULL && firstActor == null) {
+            state = whoPickedUpDiscState;
+        } else if (activePoint.getLastEventType() == Event.Type.PULL) {
+            state = firstThrowQuebecVariantState;
+        } else if (firstEvent && firstActor == null) {
+            state = whoPickedUpDiscState;
+        } else if (firstEvent) {
+            state = firstThrowQuebecVariantState;
+        } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY) {
+            state = firstDState;
         } else {
-            activePoint.setPlayers(offensePlayers, defensePlayers);
+            state = normalState;
         }
+
+        return state;
     }
 
-    public void recordFirstActor(String player) {
+    public boolean shouldRecordNewPass() {
+        return firstActor != null;
+    }
+
+    private void changePossession() {
+        homePossession = !homePossession;
+    }
+
+    public void startPoint(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
+        homePlayers = activeHomePlayers;
+        awayPlayers = activeAwayPlayers;
+        activePoint = null;
+    }
+
+    public void recordFirstActor(String player, Boolean isHome) {
         mementos.push(new Memento(firstActor) {
             @Override
             public void apply() {
                 firstActor = savedFirstActor;
+                if (activePoint.getEventCount() == 0) {
+                    activePoint = null;
+                }
             }
         });
 
         if (activePoint == null) {
-            activePoint = new Point();
+            homePossession = isHome;
+
+            List<String> offensePlayers;
+            List<String> defensePlayers;
+
+            if (isHome) {
+                offensePlayers = homePlayers;
+                defensePlayers = awayPlayers;
+            } else {
+                offensePlayers = awayPlayers;
+                defensePlayers = homePlayers;
+            }
+
+            activePoint = new Point(offensePlayers, defensePlayers);
         }
+
         firstActor = player;
     }
 
+    // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
+    // To fix this we call swapOffenseAndDefense on the activePoint
     public void recordPull() {
+        activePoint.swapOffenseAndDefense();
+        changePossession();
+
         mementos.push(genericUndoLastEventMemento());
 
         activePoint.addEvent(new Event(Event.Type.PULL, firstActor));
@@ -60,8 +136,9 @@ public class Bookkeeper {
     }
 
     public void recordThrowAway() {
-        mementos.push(genericUndoLastEventMemento());
+        mementos.push(undoTurnoverMemento());
 
+        changePossession();
         activePoint.addEvent(new Event(Event.Type.THROWAWAY, firstActor));
         firstActor = null;
     }
@@ -74,8 +151,9 @@ public class Bookkeeper {
     }
 
     public void recordDrop() {
-        mementos.push(genericUndoLastEventMemento());
+        mementos.push(undoTurnoverMemento());
 
+        changePossession();
         activePoint.addEvent(new Event(Event.Type.DROP, firstActor));
         firstActor = null;
     }
@@ -115,6 +193,12 @@ public class Bookkeeper {
         mementos.add(new Memento(firstActor) {
             @Override
             public void apply() {
+                if (homePossession) {
+                    awayScore--;
+                } else {
+                    homeScore--;
+                }
+                changePossession();
                 activePoint = activeGame.getLastPoint();
                 activePoint.removeLastEvent();
                 firstActor = savedFirstActor;
@@ -123,8 +207,20 @@ public class Bookkeeper {
 
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
+        if (homePossession) {
+            homeScore++;
+        } else {
+            awayScore++;
+        }
+
+        changePossession();
         activePoint = new Point();
         firstActor = null;
+    }
+
+    public void recordHalf() {
+        // needs conditional logic
+        changePossession();
     }
 
     public void gameCompleted() {
@@ -133,13 +229,31 @@ public class Bookkeeper {
     }
 
     public JSONObject serialize() {
-        Gson gson = new Gson();
-        String json = gson.toJson(activeGame);
         JSONObject jsonObject = new JSONObject();
 
-        // suuuuper efficient ....
         try {
-            jsonObject = new JSONObject(json);
+            jsonObject.accumulate("league", league);
+
+            // server will calc the week for now.
+            // it would be nice if the client knew what
+            // week it was working for though.
+            //jsonObject.accumulate("week", 1);
+
+            // Teams
+            JSONObject teams = new JSONObject();
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            jsonObject.accumulate("teams", teams);
+
+            // Score
+            JSONObject score = new JSONObject();
+            score.accumulate(homeTeam.name, homeScore.toString());
+            score.accumulate(awayTeam.name, awayScore.toString());
+            jsonObject.accumulate("score", score);
+
+            // Points
+            Gson gson = new Gson();
+            jsonObject.accumulate("points", gson.toJson(activeGame));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -147,9 +261,21 @@ public class Bookkeeper {
         return jsonObject;
     }
 
+    public void backup() {
+        return;
+    }
+
     public void undo() {
         if (!mementos.isEmpty()) {
             mementos.pop().apply();
+        }
+    }
+
+    public List undoHistory() {
+        if (activePoint != null) {
+            return activePoint.prettyPrint();
+        } else {
+            return new ArrayList<>(0);
         }
     }
 
@@ -172,6 +298,17 @@ public class Bookkeeper {
             public void apply() {
                 activePoint.removeLastEvent();
                 firstActor = savedFirstActor;
+            }
+        };
+    }
+
+    public Memento undoTurnoverMemento() {
+        return new Memento(firstActor) {
+            @Override
+            public void apply() {
+                activePoint.removeLastEvent();
+                firstActor = savedFirstActor;
+                changePossession();
             }
         };
     }
