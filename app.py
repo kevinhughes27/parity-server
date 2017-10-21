@@ -8,6 +8,7 @@ from flask import (
 )
 
 from flask_sqlalchemy import SQLAlchemy
+from models.db import db
 import os
 
 # Directories
@@ -19,19 +20,8 @@ client_path = 'client/build'
 app = Flask(__name__, static_folder=client_path)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
 
-# Database
-db = SQLAlchemy(app)
-
-# Models
-class Game(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    league = db.Column(db.Text)
-    week = db.Column(db.Integer)
-    teams = db.Column(db.Text)
-    score = db.Column(db.Text)
-    points = db.Column(db.Text)
-
 # InitDB
+db.init_app(app)
 if (os.path.exists(db_path) == False):
     db.create_all()
 
