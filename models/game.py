@@ -1,4 +1,4 @@
-from db import db
+from models.db import db
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -7,3 +7,4 @@ class Game(db.Model):
     teams = db.Column(db.Text)
     score = db.Column(db.Text)
     points = db.Column(db.Text)
+    stats = db.Column(db.Text)

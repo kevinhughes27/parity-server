@@ -12,6 +12,7 @@ Setup
 1. You will need `python` (with `pip`), `node` (with `yarn`) and `sqlite` on your local machine.
 2. To install python dependencies run `pip install -r requirements.txt`
 3. Start the python server with this command `python app.py`
+4. Seed your local database by running: `python seed.py`
 4. Install client dependencies: from the client directory run `yarn install`
 5. Start the client by running `yarn start`
 

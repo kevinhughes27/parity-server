@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+
 from models.db import db
+from models.game import Game
+
 import os
+import json
 
 # Directories
 base_dir = os.path.abspath(os.path.dirname(__file__))
@@ -15,7 +19,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
 # Database
 db.init_app(app)
 if (os.path.exists(db_path) == False):
-    db.create_all()
+    with app.app_context():
+        db.create_all()
 
 # Upload
 @app.route('/upload', methods=['POST'])
@@ -46,14 +51,14 @@ def upload():
         }
     """
     game = Game()
-    game.league = request.form['league']
-    game.week = calculate_week()
-    game.teams = request.form['teams']
-    game.score = request.form['score']
-    game.points = request.form['points']
+    game.league = request.json['league']
+    game.week = 1 #TODO - implement calc week from upload time
+    game.teams = json.dumps(request.json['teams'])
+    game.score = json.dumps(request.json['score'])
+    game.points = json.dumps(request.json['points'])
 
-    calculate_stats(game.points)
     db.session.commit()
+    return ('', 201)
 
 # API
 @app.route('/teams')
@@ -179,13 +184,6 @@ def client(path):
             return send_from_directory(client_path, path)
         else:
             return send_from_directory(client_path, 'index.html')
-
-# Utils
-def calculate_week():
-    return 1
-
-def calculate_stats(points):
-    return {}
 
 # Boot
 if __name__ == '__main__':
