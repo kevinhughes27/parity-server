@@ -1,7 +1,7 @@
 parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server.svg?branch=master)](https://travis-ci.org/kevinhughes27/parity-server)
 =============
 
-new backend for [OCUA Parity League](http://www.ocua.ca/Parity-League) stats.
+[OCUA Parity League](http://www.ocua.ca/Parity-League) server code.
 
 production: [https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
 
@@ -12,7 +12,7 @@ Server
 
     1. Stats Keeping Client `POSTs` a JSON object to the server.
 
-    2. Node server receives the request parses the events into stats
+    2. Server receives the request parses the events into stats
 
     3. The game is saved to the database and a `201` is returned to the client
 
