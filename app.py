@@ -1,12 +1,4 @@
-from flask import (
-    Flask,
-    flash,
-    request,
-    redirect,
-    jsonify,
-    send_from_directory,
-)
-
+from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from models.db import db
 import os
@@ -20,7 +12,7 @@ client_path = 'client/build'
 app = Flask(__name__, static_folder=client_path)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
 
-# InitDB
+# Database
 db.init_app(app)
 if (os.path.exists(db_path) == False):
     db.create_all()
@@ -46,7 +38,6 @@ def weeks():
 @app.route('/weeks/<num>')
 def week(num):
     return jsonify({})
-
 
 # Client
 @app.route('/', defaults={'path': ''})
