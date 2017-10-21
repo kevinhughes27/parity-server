@@ -2,9 +2,10 @@
 
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from './Stats'
-import MoneyCell from './MoneyCell'
+import Stats from '../../Stores/Stats'
+import MoneyCell from '../MoneyCell'
 import TeamGraph from './TeamGraph'
+import './team-dashboard.css'
 
 type Props = {
   week: number,

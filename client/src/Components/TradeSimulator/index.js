@@ -2,8 +2,8 @@
 
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from './Stats'
-import PlayerSelect from './PlayerSelect'
+import Stats from '../../Stores/Stats'
+import PlayerSelect from '../PlayerSelect'
 import LeagueGraph from './LeagueGraph'
 
 type Props = {

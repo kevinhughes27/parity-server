@@ -2,7 +2,7 @@
 
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from './Stats'
+import Stats from '../../Stores/Stats'
 
 type Props = {
   week: number,

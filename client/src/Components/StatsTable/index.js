@@ -3,9 +3,9 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
-import Stats from './Stats'
+import Stats from '../../Stores/Stats'
+import MoneyCell from '../MoneyCell'
 import SearchBar from './SearchBar'
-import MoneyCell from './MoneyCell'
 
 const STATS = [
   'Goals',

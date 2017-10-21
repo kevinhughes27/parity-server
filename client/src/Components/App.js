@@ -4,9 +4,9 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import TopNav from './TopNav'
 import SideNav from './SideNav'
-import Loader from './Loader'
 import Loading from './Loading'
 import StatsTable from './StatsTable'
+import Loader from '../Loader'
 
 class App extends Component {
   state: {

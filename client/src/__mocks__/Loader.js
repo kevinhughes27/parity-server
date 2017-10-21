@@ -1,4 +1,4 @@
-import Stats from '../Stats'
+import Stats from '../Stores/Stats'
 
 const loader = jest.genMockFromModule('../Loader')
 

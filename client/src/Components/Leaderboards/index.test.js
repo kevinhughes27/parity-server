@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer'
 import React from 'react'
-import Loader from './Loader'
-import Leaderboards from './Leaderboards'
+import Loader from '../../Loader'
+import Leaderboards from '.'
 
-jest.mock('./Loader')
+jest.mock('../../Loader')
 
 test('Leaderboards renders correctly', () => {
   let week = 1

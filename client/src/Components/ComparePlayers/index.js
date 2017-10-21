@@ -2,9 +2,10 @@
 
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from './Stats'
-import PlayerSelect from './PlayerSelect'
+import Stats from '../../Stores/Stats'
+import PlayerSelect from '../PlayerSelect'
 import PlayerGraph from './PlayerGraph'
+import './compare-players.css'
 
 const STATS = [
   'Goals',

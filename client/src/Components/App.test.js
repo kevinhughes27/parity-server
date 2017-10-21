@@ -8,7 +8,7 @@ window.$ = $
 $.fn.dropdown = function (options) { }
 $.fn.sideNav = function () { }
 
-jest.mock('./Loader')
+jest.mock('../Loader')
 
 test('App renders correctly', () => {
   const tree = renderer.create(<App />).toJSON()

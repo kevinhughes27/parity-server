@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer'
 import React from 'react'
-import Loader from './Loader'
-import StatsTable from './StatsTable'
+import Loader from '../../Loader'
+import StatsTable from '.'
 
-jest.mock('./Loader')
+jest.mock('../../Loader')
 
 test('StatsTable renders correctly', () => {
   let week = 1
