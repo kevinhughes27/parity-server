@@ -108,7 +108,7 @@ def stats():
     """
     stats = {}
     for game in Game.query.all():
-        stats = dict(stats.items() + json.loads(game.stats).items())
+        stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
     return jsonify({"stats": stats})
 
 @app.route('/weeks')
@@ -149,7 +149,7 @@ def week(num):
      """
     stats = {}
     for game in Game.query.filter_by(week=num):
-        stats = dict(stats.items() + json.loads(game.stats).items())
+        stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
     return jsonify({"week": num, "stats": stats})
 
 @app.route('/games')
