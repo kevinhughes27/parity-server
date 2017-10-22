@@ -75,9 +75,7 @@ def teams():
     @api {get} /teams List
     @apiGroup Teams
     @apiDescription Scrapes the latest team and roster data from Zuluru
-     *
     @apiSuccess (200) {Object} teams key: team value: array of players
-     *
     @apiSuccessExample {json} Example Response:
        {
          "Kindha's Ongoing Disappointments": {
@@ -99,8 +97,7 @@ def stats():
     """
     @api {get} /stats Cumulative
     @apiGroup Weeks
-    @apiDescription Returns the summed stats for all weeks keeping the latest salary.
-    This response is calculated by summing all the games.
+    @apiDescription Returns the summed stats for all weeks keeping the latest salary. This response is calculated by summing all the games.
     @apiSuccess (200) {Object} stats returns the summed stats for all weeks
     @apiSuccessExample {json} Example Response:
        {
@@ -119,8 +116,7 @@ def weeks():
     """
     @api {get} /weeks List
     @apiGroup Weeks
-    @apiDescription Returns an array of week numbers. This is calculated by
-    a distinct query on game.week
+    @apiDescription Returns an array of week numbers. This is calculated by a distinct query on game.week
     @apiSuccess (200) {Array} weeks returns an array of week numbers
     @apiSuccessExample {json} Example Response:
        [
