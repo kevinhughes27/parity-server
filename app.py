@@ -60,8 +60,9 @@ def upload():
     game.teams = json.dumps(request.json['teams'])
     game.score = json.dumps(request.json['score'])
     game.points = json.dumps(request.json['points'])
+    game.stats = json.dumps(request.json['stats'])
 
-    stats = StatsCalculator(game.points).run()
+    # stats = StatsCalculator(game.points).run()
 
     db.session.add(game)
     db.session.commit()
@@ -74,9 +75,7 @@ def teams():
     @api {get} /teams List
     @apiGroup Teams
     @apiDescription Scrapes the latest team and roster data from Zuluru
-     *
     @apiSuccess (200) {Object} teams key: team value: array of players
-     *
     @apiSuccessExample {json} Example Response:
        {
          "Kindha's Ongoing Disappointments": {
@@ -98,8 +97,7 @@ def stats():
     """
     @api {get} /stats Cumulative
     @apiGroup Weeks
-    @apiDescription Returns the summed stats for all weeks keeping the latest salary.
-    This response is calculated by summing all the games.
+    @apiDescription Returns the summed stats for all weeks keeping the latest salary. This response is calculated by summing all the games.
     @apiSuccess (200) {Object} stats returns the summed stats for all weeks
     @apiSuccessExample {json} Example Response:
        {
@@ -110,7 +108,7 @@ def stats():
     """
     stats = {}
     for game in Game.query.all():
-        stats = dict(stats.items() + json.loads(game.stats).items())
+        stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
     return jsonify({"stats": stats})
 
 @app.route('/weeks')
@@ -118,8 +116,7 @@ def weeks():
     """
     @api {get} /weeks List
     @apiGroup Weeks
-    @apiDescription Returns an array of week numbers. This is calculated by
-    a distinct query on game.week
+    @apiDescription Returns an array of week numbers. This is calculated by a distinct query on game.week
     @apiSuccess (200) {Array} weeks returns an array of week numbers
     @apiSuccessExample {json} Example Response:
        [
@@ -152,7 +149,7 @@ def week(num):
      """
     stats = {}
     for game in Game.query.filter_by(week=num):
-        stats = dict(stats.items() + json.loads(game.stats).items())
+        stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
     return jsonify({"week": num, "stats": stats})
 
 @app.route('/games')

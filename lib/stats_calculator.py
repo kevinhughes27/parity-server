@@ -26,4 +26,3 @@ class StatsCalculator:
         # is player in stats by name?
         # otherwise add them to stats array
         # update their stats
-        pass
