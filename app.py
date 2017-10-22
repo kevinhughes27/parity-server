@@ -60,8 +60,9 @@ def upload():
     game.teams = json.dumps(request.json['teams'])
     game.score = json.dumps(request.json['score'])
     game.points = json.dumps(request.json['points'])
+    game.stats = json.dumps(request.json['stats'])
 
-    stats = StatsCalculator(game.points).run()
+    # stats = StatsCalculator(game.points).run()
 
     db.session.add(game)
     db.session.commit()
