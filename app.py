@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 from models.db import db
 from models.game import Game
+from lib.stats_calculator import StatsCalculator
 
 import os
 import json
@@ -56,7 +57,8 @@ def upload():
     game.teams = json.dumps(request.json['teams'])
     game.score = json.dumps(request.json['score'])
     game.points = json.dumps(request.json['points'])
-    game.stats = json.dumps(request.json['stats']) #TODO - implement calculation
+
+    stats = StatsCalculator(game.points).run()
 
     db.session.add(game)
     db.session.commit()
