@@ -14,7 +14,10 @@ client_path = 'client/build'
 
 # App
 app = Flask(__name__, static_folder=client_path)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
+if os.name == 'nt':
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
 
 # Database
 db.init_app(app)
