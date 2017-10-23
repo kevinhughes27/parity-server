@@ -26,8 +26,8 @@ public class BookkeeperTest {
     public void before() {
         home = new Team("Team A", PLAYER1, true);
         away = new Team("Team B", PLAYER2, true);
-        bookkeeper = new Bookkeeper(home, away);
-        bookkeeper.startGame();
+        bookkeeper = new Bookkeeper();
+        bookkeeper.startGame(home, away);
     }
 
     @Test

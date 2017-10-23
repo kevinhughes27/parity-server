@@ -20,7 +20,7 @@ public class Bookkeeper {
     private static final String league = "ocua_17-18";
     private Game activeGame;
     private Stack<Memento> mementos;
-    Point activePoint;
+    private Point activePoint;
     String firstActor;
 
     private Team homeTeam;
@@ -31,13 +31,10 @@ public class Bookkeeper {
     public Integer homeScore;
     public Integer awayScore;
 
-    public Bookkeeper(Team leftTeam, Team rightTeam) {
+    public void startGame(Team leftTeam, Team rightTeam) {
+        activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
-    }
-
-    public void startGame() {
-        activeGame = new Game();
         homeScore = 0;
         awayScore = 0;
         homePossession = true;

@@ -99,8 +99,8 @@ public class Stats extends Activity {
         gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
         listView.setAdapter(gameSummaryAdapter);
 
-        bookkeeper = new Bookkeeper(leftTeam, rightTeam);
-        bookkeeper.startGame();
+        bookkeeper = new Bookkeeper();
+        bookkeeper.startGame(leftTeam, rightTeam);
 
         mainOnClickListener = new View.OnClickListener() {
             @Override
