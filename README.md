@@ -16,16 +16,12 @@ Setup
 4. Install client dependencies: from the client directory run `yarn install`
 5. Start the client by running `yarn start`
 
+Yarn will start a local server on port 3000 for developing on the frontend of the website. The yarn development server will proxy all API requests to port 5000 where it expects the python server to be running. The python server returns data to the frontend. On production the python server serves a static build of the frontend (this can be tested locally by running yarn build and then visiting localhost:5000).
+
 Testing
 -------
 
-To test an upload locally run:
-
-```sh
-curl -X POST -d '{"week": 1, "events": ["Pull,Mike", "POINT,Jill,Pass,Bob"]}' -H "Content-Type: application/json" http://localhost:5000/upload
-```
-
-or sending a saved json file:
+To test locally by uploading a json file run:
 
 ```sh
 curl -X POST --data @data/ocua_16-17/session1/week1_game1.json -H "Content-Type: application/json" http://localhost:5000/upload
@@ -33,7 +29,7 @@ curl -X POST --data @data/ocua_16-17/session1/week1_game1.json -H "Content-Type:
 
 To reset your local database delete the `db.sqlite` file and restart the python server.
 
-There is also an automated test suite which can be run using the `pytest tests/*` for the python tests and `yarn test` inside the client directory to run javascript tests.
+There is also an automated test suite which can be run using the `python test.py` for the python tests and `yarn test` inside the client directory to run javascript tests.
 
 
 Zuluru Integration
