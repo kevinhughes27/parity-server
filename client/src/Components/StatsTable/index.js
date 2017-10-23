@@ -20,8 +20,8 @@ const STATS = [
 ]
 
 const columns = [
-  'Name',
-  'Team',
+  'name',
+  'team',
   ...STATS
 ]
 

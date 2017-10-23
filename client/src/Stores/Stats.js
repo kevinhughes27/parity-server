@@ -11,7 +11,7 @@ export default class Stats {
 
   toArray () {
     return _.map(_.keys(this.data), (k) => {
-      return { Name: k, ...this.data[k] }
+      return { name: k, ...this.data[k] }
     })
   }
 
@@ -26,7 +26,7 @@ export default class Stats {
   }
 
   teamNames () {
-    let teams = _.uniq(_.map(_.values(this.data), 'Team'))
+    let teams = _.uniq(_.map(_.values(this.data), 'team'))
     _.pull(teams, 'Substitute', 'None')
     return _.sortBy(teams, (t) => t.length)
   }
@@ -38,7 +38,7 @@ export default class Stats {
   playersFor (team: string) {
     let players = []
     _.mapKeys(this.data, (playerStats, playerName) => {
-      if (playerStats['Team'] === team) {
+      if (playerStats['team'] === team) {
         players.push({name: playerName, salary: playerStats['Salary']})
       }
     })
@@ -53,11 +53,11 @@ export default class Stats {
   }
 
   applyTrade (playerA: string, playerB: string) {
-    let teamA = this.data[playerA]['Team']
-    let teamB = this.data[playerB]['Team']
+    let teamA = this.data[playerA]['team']
+    let teamB = this.data[playerB]['team']
 
-    this.data[playerA]['Team'] = teamB
-    this.data[playerB]['Team'] = teamA
+    this.data[playerA]['team'] = teamB
+    this.data[playerB]['team'] = teamA
   }
 
   teamSalary (team: string) {

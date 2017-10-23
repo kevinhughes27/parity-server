@@ -163,8 +163,17 @@ def create_app():
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
 
+                teams = json.loads(game.teams).items()
+                if player.name in teams[0][1]:
+                    team = teams[0][0]
+                else:
+                    team = teams[1][0]
+
+                data = player_stats.to_dict()
+                data.update({'team': team})
+
                 item = {}
-                item[player.name] = player_stats.to_dict()
+                item[player.name] = data
                 stats.update(item)
 
         return jsonify({"week": num, "stats": stats})
