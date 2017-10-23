@@ -57,7 +57,9 @@ public class Bookkeeper {
         Boolean firstPoint = (activeGame.getPointCount() == 0);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 
-        if (firstPoint && firstEvent && firstActor == null) {
+        if (activePoint == null) {
+            state = startState;
+        } else if (firstPoint && firstEvent && firstActor == null) {
             state = startState;
         } else if (firstPoint && firstEvent) {
             state = pullState;
