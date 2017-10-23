@@ -51,13 +51,13 @@ export default class Leaderboards extends Component {
   render () {
     return (
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        { this.renderBoard('Goals') }
-        { this.renderBoard('Assists') }
-        { this.renderBoard('Catches') }
-        { this.renderBoard('Completions') }
-        { this.renderBoard('D-Blocks') }
-        { this.renderBoard('Throwaways') }
-        { this.renderBoard('Drops') }
+        { this.renderBoard('goals') }
+        { this.renderBoard('assists') }
+        { this.renderBoard('catches') }
+        { this.renderBoard('completions') }
+        { this.renderBoard('d_blocks') }
+        { this.renderBoard('throw_aways') }
+        { this.renderBoard('drops') }
       </div>
     )
   }
