@@ -22,6 +22,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
+import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
@@ -62,6 +63,7 @@ public class Stats extends Activity {
 
     private final Stats myself = this;
 
+    private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
     private ArrayAdapter<String> gameSummaryAdapter;
@@ -72,6 +74,7 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         mainContext = this;
 
+        teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
 
@@ -174,6 +177,7 @@ public class Stats extends Activity {
             case R.id.action_edit_players:
                 Intent intent = new Intent(myself, EditPlayers.class);
                 Bundle bundle = new Bundle();
+                bundle.putSerializable("teams", teams);
                 bundle.putSerializable("leftTeam", leftTeam);
                 bundle.putSerializable("rightTeam", rightTeam);
                 intent.putExtras(bundle);
