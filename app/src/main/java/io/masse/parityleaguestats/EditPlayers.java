@@ -123,7 +123,7 @@ public class EditPlayers extends Activity {
         final Button finishButton = (Button) findViewById(R.id.btnFinish);
         finishButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
-                                                Intent intent = new Intent(context, Stats.class);
+                                                Intent intent = new Intent(context, Roster.class);
                                                 Bundle bundle = new Bundle();
                                                 bundle.putSerializable("teams", teams);
                                                 bundle.putSerializable("leftTeam", leftTeam);

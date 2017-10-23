@@ -20,7 +20,7 @@ public class Bookkeeper {
     private static final String league = "ocua_17-18";
     private Game activeGame;
     private Stack<Memento> mementos;
-    private Point activePoint;
+    Point activePoint;
     String firstActor;
 
     private Team homeTeam;
@@ -50,7 +50,7 @@ public class Bookkeeper {
     private static final int whoPickedUpDiscState = 5;
     private static final int firstThrowQuebecVariantState = 6;
 
-    public int uiState() {
+    public int gameState() {
         Boolean firstPoint = (activeGame.getPointCount() == 0);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 

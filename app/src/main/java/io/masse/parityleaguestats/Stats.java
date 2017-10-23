@@ -5,10 +5,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,9 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
@@ -34,32 +30,19 @@ public class Stats extends Activity {
     private static final int pullState = 4;
     private static final int whoPickedUpDiscState = 5;
     private static final int firstThrowQuebecVariantState = 6;
-
-    private static final int rosterChangeState = 7;
-    private static final int halfState = 8;
-
-
-    //Edit Team and Rosters
-    private boolean rosterChange = false;
-    private boolean forceRosterChange = true;
-    private boolean forceRosterInvert = false;
-    private boolean requestUpdateScore = false;
-    private boolean requestChangeRoster = false;
-    private boolean visibleState[][];
+    private static final int halfState = 7;
 
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
-    private Context mainContext;
+    private Context context;
 
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
 
-    private Button btnLastButtonClicked;
     private Bookkeeper bookkeeper;
 
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeModeListener;
-    private View.OnClickListener toggleUserListener;
 
     private final Stats myself = this;
 
@@ -72,11 +55,12 @@ public class Stats extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
-        mainContext = this;
+        context = this;
 
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
+        // I need to get the active players and draw the side bars correctly.
 
         // Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -108,7 +92,6 @@ public class Stats extends Activity {
         mainOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnLastButtonClicked = (Button) view;
                 new ButtonPress().execute((Button) view);
             }
         };
@@ -116,31 +99,15 @@ public class Stats extends Activity {
         changeModeListener = new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if (rosterChange){
-                    changeState(autoState);
-                } else {
-                    changeState(rosterChangeState);
-                }
-            }
-        };
-
-        toggleUserListener = new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Button currentButton = (Button) view;
-                if (currentButton.getTypeface()!=null) {
-                    currentButton.setTypeface(null, Typeface.NORMAL);
-                } else {
-                    currentButton.setTypeface(null, Typeface.BOLD);
-                }
+                pickRoster();
             }
         };
 
         leftTeamName.setText(leftTeam.name);
-        Utils.draw_players(mainContext, layoutLeft, mainOnClickListener, leftTeam, true);
+        Utils.draw_players(context, layoutLeft, mainOnClickListener, leftTeam, true);
 
         rightTeamName.setText(rightTeam.name);
-        Utils.draw_players(mainContext, layoutRight, mainOnClickListener, rightTeam, false);
+        Utils.draw_players(context, layoutRight, mainOnClickListener, rightTeam, false);
 
         btnUndo.setOnClickListener(mainOnClickListener);
         btnPoint.setOnClickListener(mainOnClickListener);
@@ -151,7 +118,8 @@ public class Stats extends Activity {
         btnThrowAway.setOnClickListener(mainOnClickListener);
         btnMode.setOnClickListener(changeModeListener);
 
-        changeState(rosterChangeState);
+        // set UI state
+        updateUI(bookkeeper.gameState());
     }
 
     @Override
@@ -175,16 +143,10 @@ public class Stats extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_edit_players:
-                Intent intent = new Intent(myself, EditPlayers.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("teams", teams);
-                bundle.putSerializable("leftTeam", leftTeam);
-                bundle.putSerializable("rightTeam", rightTeam);
-                intent.putExtras(bundle);
-                startActivity(intent);
+                editPlayers();
                 return true;
             case R.id.action_save_game:
-                new AlertDialog.Builder(mainContext)
+                new AlertDialog.Builder(context)
                         .setTitle("Save and Clear")
                         .setMessage("Are you sure sure?" )
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -207,14 +169,33 @@ public class Stats extends Activity {
                 return true;
             case R.id.action_half:
                 bookkeeper.recordHalf();
-                changeState(rosterChangeState);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    private void resetApp(){
+    private void editPlayers() {
+        Intent intent = new Intent(myself, EditPlayers.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("teams", teams);
+        bundle.putSerializable("leftTeam", leftTeam);
+        bundle.putSerializable("rightTeam", rightTeam);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    private void pickRoster() {
+        Intent intent = new Intent(context, Roster.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("teams", teams);
+        bundle.putSerializable("leftTeam", leftTeam);
+        bundle.putSerializable("rightTeam", rightTeam);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    private void resetApp() {
         Intent intent = new Intent(myself, ChooseTeams.class);
         startActivity(intent);
     }
@@ -222,7 +203,7 @@ public class Stats extends Activity {
     private void uploadGame() {
         try {
             String json = bookkeeper.serialize().toString();
-            new uploadGame(mainContext).execute(json);
+            new uploadGame(context).execute(json);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -272,41 +253,16 @@ public class Stats extends Activity {
 
                 } else if (btn == btnPoint) {
                     bookkeeper.recordPoint();
+                    pickRoster();
 
-                    requestUpdateScore = true;
-                    requestChangeRoster = true;
-                    forceRosterInvert = true;
-
-                } else if (btn == btnUndo){
-                    int score = bookkeeper.homeScore + bookkeeper.awayScore;
+                } else if (btn == btnUndo) {
                     bookkeeper.undo();
-                    int newScore = bookkeeper.homeScore + bookkeeper.awayScore;
-
-                    if (score != newScore) {
-                        requestUpdateScore = true;
-                        forceRosterInvert = true;
-                    }
                 }
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (btnLastButtonClicked == btnUndo && rosterChange) {
-                            loadButtonVisibility();
-                            Toast.makeText(mainContext, "Roster Change OFF and reverted back.", Toast.LENGTH_SHORT).show();
-                        }
-                        if (requestUpdateScore) {
-                            requestUpdateScore = false;
-                            leftScore.setText(bookkeeper.homeScore.toString());
-                            rightScore.setText(bookkeeper.awayScore.toString());
-                        }
-                        if (requestChangeRoster) {
-                            requestChangeRoster = false;
-                            changeState(rosterChangeState);
-                        } else {
-                            changeState(autoState);
-                        }
-
+                        updateUI(bookkeeper.gameState());
                         gameSummaryAdapter.clear();
                         gameSummaryAdapter.addAll(bookkeeper.undoHistory());
                         gameSummaryAdapter.notifyDataSetChanged();
@@ -314,95 +270,6 @@ public class Stats extends Activity {
                 });
             }
             return null;
-        }
-    }
-
-    private void changeState(int change) {
-        if (change == autoState) {
-            change = bookkeeper.uiState();
-        }
-
-        toggleRoster(change);
-        updateUI(change);
-    }
-
-    private void toggleRoster(int change) {
-        int leftCount = layoutLeft.getChildCount();
-        int rightCount = layoutRight.getChildCount();
-
-        // if rosterChange on turn it off
-        if (rosterChange && (change != rosterChangeState)) {
-            int leftVisible = 0;
-            int rightVisible = 0;
-
-            for (int i = 0; i < leftCount; i++) {
-                Button currentButton = (Button) layoutLeft.getChildAt(i);
-                if (currentButton.getTypeface() != null)
-                    leftVisible++;
-            }
-            for (int i = 0; i < rightCount; i++) {
-                Button currentButton = (Button) layoutRight.getChildAt(i);
-                if (currentButton.getTypeface() != null)
-                    rightVisible++;
-            }
-
-            int teamSize = 6;
-
-            boolean leftCorrectNumPlayers = leftVisible == teamSize;
-            boolean rightCorrectNumPlayers = rightVisible == teamSize;
-
-            if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-
-                rosterChange = false;
-                forceRosterChange = false;
-
-                ArrayList<String> leftPlayers = leftTeam.getPlayers();
-                ArrayList<String> rightPlayers = rightTeam.getPlayers();
-
-                for (int i = 0; i < leftCount; i++) {
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                    currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(mainOnClickListener);
-                    if (currentButton.getTypeface() != null) {
-                        currentButton.setVisibility(View.VISIBLE);
-                        String playerName = currentButton.getText().toString();
-                        leftPlayers.add(playerName);
-                    } else {
-                        currentButton.setVisibility(View.INVISIBLE);
-                    }
-                    currentButton.setTypeface(null, Typeface.NORMAL);
-                }
-                for (int i = 0; i < rightCount; i++) {
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(mainOnClickListener);
-                    if (currentButton.getTypeface() != null) {
-                        currentButton.setVisibility(View.VISIBLE);
-                        String playerName = currentButton.getText().toString();
-                        rightPlayers.add(playerName);
-                    } else {
-                        currentButton.setVisibility(View.INVISIBLE);
-                    }
-                    currentButton.setTypeface(null, Typeface.NORMAL);
-                }
-
-                bookkeeper.startPoint(leftTeam.getPlayers(), rightTeam.getPlayers());
-
-                Toast.makeText(mainContext, "Done selecting active players", Toast.LENGTH_SHORT).show();
-                btnMode.setText(R.string.mode_button_edit);
-            } else {
-                String error = "Incorrect number of players";
-                if (!leftCorrectNumPlayers) {
-                    error += String.format("\nLeft side: %d/%d selected", leftVisible, teamSize);
-                }
-
-                if (!rightCorrectNumPlayers) {
-                    error += String.format("\nRight side: %d/%d selected", rightVisible, teamSize);
-                }
-
-                Toast.makeText(mainContext, error, Toast.LENGTH_LONG).show();
-                return;
-            }
         }
     }
 
@@ -536,73 +403,6 @@ public class Stats extends Activity {
                 }
                 break;
 
-            case rosterChangeState:
-                rosterChange = true;
-                saveButtonVisibility();
-                boolean leftAllEnabled = true;
-                boolean rightAllEnabled = true;
-                for (int i = 0; i < leftCount; i++){
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                    if (currentButton.getVisibility() != View.VISIBLE)
-                        leftAllEnabled = false;
-                }
-                for (int i = 0; i < rightCount; i++){
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    if (currentButton.getVisibility() != View.VISIBLE)
-                        rightAllEnabled = false;
-                }
-                btnPoint.setEnabled(false);
-                btnDrop.setEnabled(false);
-                btnD.setEnabled(false);
-                btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(!forceRosterChange);
-                btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
-
-                int intTypeON = Typeface.BOLD;
-                int intTypeOFF = Typeface.NORMAL;
-
-                if (forceRosterInvert) {
-                    forceRosterInvert = false;
-                    intTypeON = Typeface.NORMAL;
-                    intTypeOFF = Typeface.BOLD;
-                }
-                for (int i = 0; i < leftCount; i++){
-                    Button currentButton = (Button) layoutLeft.getChildAt(i);
-                    currentButton.setEnabled(true);
-                    currentButton.setGravity(Gravity.END);
-                    currentButton.setOnClickListener(toggleUserListener);
-
-                    if (currentButton.getVisibility() == View.VISIBLE && !leftAllEnabled){
-                        currentButton.setTypeface(null, intTypeON);
-                    } else {
-                        currentButton.setTypeface(null, intTypeOFF);
-                    }
-
-                    currentButton.setVisibility(View.VISIBLE);
-
-                }
-                for (int i = 0; i < rightCount; i++){
-                    Button currentButton = (Button) layoutRight.getChildAt(i);
-                    currentButton.setEnabled(true);
-                    currentButton.setGravity(Gravity.START);
-                    currentButton.setOnClickListener(toggleUserListener);
-
-                    if (currentButton.getVisibility()== View.VISIBLE && !rightAllEnabled){
-                        currentButton.setTypeface(null, intTypeON);
-                    } else {
-                        currentButton.setTypeface(null, intTypeOFF);
-                    }
-
-                    currentButton.setVisibility(View.VISIBLE);
-                }
-
-                Toast.makeText(mainContext, "Selecting active players", Toast.LENGTH_SHORT).show();
-                btnMode.setText(R.string.mode_button_done);
-
-                break;
-
             case halfState:
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
@@ -619,51 +419,6 @@ public class Stats extends Activity {
                     layoutRight.getChildAt(i).setEnabled(true);
                 }
                 break;
-        }
-    }
-
-    private void saveButtonVisibility() {
-        int leftCount = layoutLeft.getChildCount();
-        int rightCount = layoutRight.getChildCount();
-
-        visibleState = new boolean[2][Math.max(leftCount,rightCount)];
-
-        for (int i = 0; i < leftCount; i++){
-            Button currentButton = (Button) layoutLeft.getChildAt(i);
-            visibleState[0][i] = (currentButton.getVisibility() == View.VISIBLE);
-        }
-        for (int i = 0; i < rightCount; i++){
-            Button currentButton = (Button) layoutRight.getChildAt(i);
-            visibleState[1][i] = (currentButton.getVisibility() == View.VISIBLE);
-        }
-    }
-
-    private void loadButtonVisibility() {
-        int leftCount = layoutLeft.getChildCount();
-        int rightCount = layoutRight.getChildCount();
-        rosterChange = false;
-
-        for (int i = 0; i < leftCount; i++) {
-            Button currentButton = (Button) layoutLeft.getChildAt(i);
-            currentButton.setGravity(Gravity.END);
-            currentButton.setOnClickListener(mainOnClickListener);
-            if (visibleState[0][i]) {
-                currentButton.setVisibility(View.VISIBLE);
-            } else {
-                currentButton.setVisibility(View.INVISIBLE);
-            }
-            currentButton.setTypeface(null, Typeface.NORMAL);
-        }
-        for (int i = 0; i < rightCount; i++) {
-            Button currentButton = (Button) layoutRight.getChildAt(i);
-            currentButton.setGravity(Gravity.START);
-            currentButton.setOnClickListener(mainOnClickListener);
-            if (visibleState[1][i]) {
-                currentButton.setVisibility(View.VISIBLE);
-            } else {
-                currentButton.setVisibility(View.INVISIBLE);
-            }
-            currentButton.setTypeface(null, Typeface.NORMAL);
         }
     }
 }
