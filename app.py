@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 
-from models import db, Game
+from models import db, Game, Stats, Player
 from utils import StatsCalculator
 
 import os
@@ -56,7 +56,13 @@ def create_app():
             }
         """
         game = Game()
-        points = json.loads(request.json['points'])['points']
+
+        #HACK to fix seed
+        try:
+            points = json.loads(request.json['points'])['points']
+        except:
+            points = json.loads(request.json['points'])
+
         game.league = request.json['league']
         game.week = request.json['week']
         game.teams = json.dumps(request.json['teams'])
@@ -154,7 +160,13 @@ def create_app():
          """
         stats = {}
         for game in Game.query.filter_by(week=num):
-            stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
+            for player_stats in Stats.query.filter_by(game_id=game.id):
+                player = Player.query.get(player_stats.player_id)
+
+                item = {}
+                item[player.name] = player_stats.to_dict()
+                stats.update(item)
+
         return jsonify({"week": num, "stats": stats})
 
     @app.route('/games')

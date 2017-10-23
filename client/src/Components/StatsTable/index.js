@@ -8,15 +8,15 @@ import MoneyCell from '../MoneyCell'
 import SearchBar from './SearchBar'
 
 const STATS = [
-  'Goals',
-  'Assists',
-  '2nd Assist',
-  'D-Blocks',
-  'Catches',
-  'Completions',
-  'Throwaways',
-  'ThrewDrop',
-  'Drops'
+  'goals',
+  'assists',
+  'second_assists',
+  'd_blocks',
+  'catches',
+  'completions',
+  'throw_aways',
+  'threw_drops',
+  'drops'
 ]
 
 const columns = [
