@@ -240,14 +240,16 @@ public class Stats extends Activity {
                 if (leftSideButton) {
                     if (bookkeeper.shouldRecordNewPass()) {
                         bookkeeper.recordPass(buttonText);
+                    } else {
+                        bookkeeper.recordFirstActor(buttonText, true);
                     }
-                    bookkeeper.recordFirstActor(buttonText, true);
 
                 } else if (rightSideButton) {
                     if (bookkeeper.shouldRecordNewPass()) {
                         bookkeeper.recordPass(buttonText);
+                    } else {
+                        bookkeeper.recordFirstActor(buttonText, false);
                     }
-                    bookkeeper.recordFirstActor(buttonText, false);
 
                 } else if ((btn == btnD)) {
                     bookkeeper.recordD();

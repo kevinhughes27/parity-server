@@ -159,13 +159,7 @@ public class Bookkeeper {
     }
 
     public void recordD() {
-        mementos.push(new Memento() {
-            @Override
-            public void apply() {
-                activePoint.removeLastEvent();
-                firstActor = null;
-            }
-        });
+        mementos.push(genericUndoLastEventMemento());
 
         activePoint.addEvent(new Event(Event.Type.DEFENSE, firstActor));
         firstActor = null;
@@ -176,12 +170,6 @@ public class Bookkeeper {
             @Override
             public void apply() {
                 activePoint.removeLastEvent();
-            }
-        });
-        mementos.push(new Memento() {
-            @Override
-            public void apply() {
-                firstActor = null;
             }
         });
 

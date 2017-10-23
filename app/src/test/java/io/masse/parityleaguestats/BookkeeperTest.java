@@ -96,7 +96,7 @@ public class BookkeeperTest {
         bookkeeper.undo();
 
         verifyEventCount(1);
-        assertNull(bookkeeper.firstActor);
+        assertEquals(PLAYER2, bookkeeper.firstActor);
     }
 
     @Test
@@ -107,8 +107,8 @@ public class BookkeeperTest {
         bookkeeper.recordCatchD();
         bookkeeper.undo();
 
-        verifyEventCount(2);
-        assertNull(bookkeeper.firstActor);
+        verifyEventCount(1);
+        assertEquals(PLAYER2, bookkeeper.firstActor);
     }
 
     @Test
