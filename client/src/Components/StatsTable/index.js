@@ -6,28 +6,30 @@ import Griddle from 'griddle-react'
 import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
 import SearchBar from './SearchBar'
+import capitalize from 'capitalize'
 
 const STATS = [
-  'Goals',
-  'Assists',
-  '2nd Assist',
-  'D-Blocks',
-  'Catches',
-  'Completions',
-  'Throwaways',
-  'ThrewDrop',
-  'Drops'
+  'goals',
+  'assists',
+  'second_assists',
+  'd_blocks',
+  'catches',
+  'completions',
+  'throw_aways',
+  'threw_drops',
+  'drops'
 ]
 
 const columns = [
-  'Name',
-  'Team',
+  'name',
+  'team',
   ...STATS
 ]
 
 const columnsMeta = _.map(columns, (col, idx) => {
   return {
     columnName: col,
+    displayName: capitalize(col.replace('_', ' ')),
     order: idx + 1
   }
 })
