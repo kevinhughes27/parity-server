@@ -9,28 +9,24 @@ let fetchWeeks = function () {
 let fetchStats = function (weekNum: number) {
   let data = {
     'Kevin Hughes': {
-      'Goals': 2,
-      'Assists': 1,
-      '2nd Assist': 1,
-      '3rd Assist': 3,
-      '4th Assist': 1,
-      '5th Assist': 1,
-      'D-Blocks': 1,
-      'Completions': 19,
-      'Throwaways': 1,
-      'ThrewDrop': 0,
-      'Catches': 17,
-      'Drops': 0,
-      'Pick-Ups': 5,
-      'Pulls': 0,
-      'Calihan': 0,
-      'OPointsFor': 5,
-      'OPointsAgainst': 5,
-      'DPointsFor': 5,
-      'DPointsAgainst': 7,
-      'Team': 'Like a Boss',
-      'SalaryDelta': 77000,
-      'Salary': 1071666
+      'goals': 2,
+      'assists': 1,
+      'second_assists': 1,
+      'd_blocks': 1,
+      'completions': 19,
+      'throw_aways': 1,
+      'threw_drops': 0,
+      'catches': 17,
+      'drops': 0,
+      'pulls': 0,
+      'callahan': 0,
+      'o_points_for': 5,
+      'o_points_against': 5,
+      'd_points_for': 5,
+      'd_points_against': 7,
+      'team': 'Like a Boss',
+      'salaryDelta': 77000,
+      'salary': 1071666
     }
   }
 

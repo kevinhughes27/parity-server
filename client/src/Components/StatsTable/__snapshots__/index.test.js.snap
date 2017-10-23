@@ -38,101 +38,101 @@ exports[`test StatsTable renders correctly 1`] = `
               style={Object {}}>
               <th
                 className=""
-                data-title="Name"
+                data-title="name"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Name
+                  name
                 </span>
               </th>
               <th
                 className=""
-                data-title="Team"
+                data-title="team"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Team
+                  team
                 </span>
               </th>
               <th
                 className=""
-                data-title="Goals"
+                data-title="goals"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Goals
+                  goals
                 </span>
               </th>
               <th
                 className=""
-                data-title="Assists"
+                data-title="assists"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Assists
+                  assists
                 </span>
               </th>
               <th
                 className=""
-                data-title="2nd Assist"
+                data-title="second_assists"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  2nd Assist
+                  second_assists
                 </span>
               </th>
               <th
                 className=""
-                data-title="D-Blocks"
+                data-title="d_blocks"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  D-Blocks
+                  d_blocks
                 </span>
               </th>
               <th
                 className=""
-                data-title="Catches"
+                data-title="catches"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Catches
+                  catches
                 </span>
               </th>
               <th
                 className=""
-                data-title="Completions"
+                data-title="completions"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Completions
+                  completions
                 </span>
               </th>
               <th
                 className=""
-                data-title="Throwaways"
+                data-title="throw_aways"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Throwaways
+                  throw_aways
                 </span>
               </th>
               <th
                 className=""
-                data-title="ThrewDrop"
+                data-title="threw_drops"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  ThrewDrop
+                  threw_drops
                 </span>
               </th>
               <th
                 className=""
-                data-title="Drops"
+                data-title="drops"
                 onClick={[Function anonymous]}
                 style={Object {}}>
                 <span>
-                  Drops
+                  drops
                 </span>
               </th>
               <th
@@ -226,14 +226,6 @@ exports[`test StatsTable renders correctly 1`] = `
                 style={null}>
                 
                 0
-              </td>
-              <td
-                className={undefined}
-                onClick={[Function bound handleClick]}
-                style={null}>
-                <span>
-                  $77,000
-                </span>
               </td>
             </tr>
           </tbody>
