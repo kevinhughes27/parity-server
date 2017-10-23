@@ -3,6 +3,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
+import capitalize from 'capitalize'
 
 type Props = {
   week: number,
@@ -28,10 +29,11 @@ export default class Leaderboards extends Component {
   renderBoard (stat: string) {
     let stats = this.state.stats
     let players = stats.topPlayers(stat, 10)
+    let statTitle = capitalize(stat.replace('_', ' '))
 
     return (
       <div key={stat} className="card-panel" style={{minWidth: 300, margin: 20}}>
-        <h5>{stat}</h5>
+        <h5>{statTitle}</h5>
         <table className='highlight'>
           <tbody>
             { _.map(players, (player) => {
