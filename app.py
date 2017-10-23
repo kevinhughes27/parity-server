@@ -136,10 +136,8 @@ def create_app():
              3
            ]
         """
-        weeks = []
-        for game in Game.query.distinct(Game.week):
-            weeks.append(game.week)
-
+        query = db.session.query(Game.week.distinct().label("week"))
+        weeks = [row.week for row in query.all()]
         return jsonify(sorted(weeks))
 
     @app.route('/weeks/<num>')
