@@ -268,7 +268,7 @@ public class Bookkeeper implements Serializable {
         }
     }
 
-    private abstract class Memento {
+    private abstract class Memento implements Serializable {
 
         protected String savedFirstActor;
 
