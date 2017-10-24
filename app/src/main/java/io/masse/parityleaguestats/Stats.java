@@ -125,9 +125,8 @@ public class Stats extends Activity {
         btnCatchD.setOnClickListener(mainOnClickListener);
         btnThrowAway.setOnClickListener(mainOnClickListener);
         btnMode.setOnClickListener(changeModeListener);
-
-        // set UI state
-        updateUI(bookkeeper.gameState());
+        
+        updateUI();
     }
 
     @Override
@@ -286,10 +285,7 @@ public class Stats extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        updateUI(bookkeeper.gameState());
-                        gameSummaryAdapter.clear();
-                        gameSummaryAdapter.addAll(bookkeeper.undoHistory());
-                        gameSummaryAdapter.notifyDataSetChanged();
+                        updateUI();
                     }
                 });
             }
@@ -297,11 +293,16 @@ public class Stats extends Activity {
         }
     }
 
-    private void updateUI(int change) {
+    private void updateUI() {
+        gameSummaryAdapter.clear();
+        gameSummaryAdapter.addAll(bookkeeper.undoHistory());
+        gameSummaryAdapter.notifyDataSetChanged();
+
+        int state = bookkeeper.gameState();
         int leftCount = layoutLeft.getChildCount();
         int rightCount = layoutRight.getChildCount();
 
-        switch (change) {
+        switch (state) {
             case normalState:
                 btnPoint.setEnabled(true);
                 btnDrop.setEnabled(true);
