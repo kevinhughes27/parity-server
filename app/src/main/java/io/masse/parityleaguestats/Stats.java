@@ -26,7 +26,6 @@ import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
     //States for each ViewState to be in.
-    private static final int autoState = 0;
     private static final int normalState = 1;
     private static final int firstDState = 2;
     private static final int startState = 3;
@@ -63,6 +62,17 @@ public class Stats extends Activity {
         setContentView(R.layout.activity_stats);
         context = this;
 
+        loadIntent();
+        renderGameBar();
+        initUndoView();
+        createListeners();
+        renderPlayers();
+        setupButtons();
+
+        updateUI();
+    }
+
+    private void loadIntent() {
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
         leftTeam = bookkeeper.homeTeam;
@@ -70,31 +80,29 @@ public class Stats extends Activity {
 
         leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
         rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
+    }
 
-        // Setup Buttons
-        btnPull = (Button) findViewById(R.id.btnPull);
-        btnPoint = (Button) findViewById(R.id.btnPoint);
-        btnDrop = (Button) findViewById(R.id.btnDrop);
-        btnD = (Button) findViewById(R.id.btnD);
-        btnCatchD = (Button) findViewById(R.id.btnCatchD);
-        btnThrowAway = (Button) findViewById(R.id.btnThrowAway);
-        btnUndo = (Button) findViewById(R.id.btnUndo);
-        btnMode = (Button) findViewById(R.id.btnMode);
-
-        // Setup TextView
+    private void renderGameBar() {
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
+
+        leftTeamName.setText(bookkeeper.homeTeam.name);
+        rightTeamName.setText(bookkeeper.awayTeam.name);
+
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
-        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
-        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+        leftScore.setText(bookkeeper.homeScore.toString());
+        rightScore.setText(bookkeeper.awayScore.toString());
+    }
 
-        // undo view
+    private void initUndoView() {
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
         gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
         listView.setAdapter(gameSummaryAdapter);
+    }
 
+    private void createListeners() {
         mainOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,6 +116,11 @@ public class Stats extends Activity {
                 selectPlayers();
             }
         };
+    }
+
+    private void renderPlayers() {
+        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
+        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, mainOnClickListener, leftTeam, true);
@@ -116,6 +129,17 @@ public class Stats extends Activity {
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, mainOnClickListener, rightTeam, false);
         Utils.show_players(layoutRight, rightPlayers);
+    }
+
+    private void setupButtons() {
+        btnPull = (Button) findViewById(R.id.btnPull);
+        btnPoint = (Button) findViewById(R.id.btnPoint);
+        btnDrop = (Button) findViewById(R.id.btnDrop);
+        btnD = (Button) findViewById(R.id.btnD);
+        btnCatchD = (Button) findViewById(R.id.btnCatchD);
+        btnThrowAway = (Button) findViewById(R.id.btnThrowAway);
+        btnUndo = (Button) findViewById(R.id.btnUndo);
+        btnMode = (Button) findViewById(R.id.btnMode);
 
         btnUndo.setOnClickListener(mainOnClickListener);
         btnPoint.setOnClickListener(mainOnClickListener);
@@ -125,8 +149,6 @@ public class Stats extends Activity {
         btnCatchD.setOnClickListener(mainOnClickListener);
         btnThrowAway.setOnClickListener(mainOnClickListener);
         btnMode.setOnClickListener(changeModeListener);
-        
-        updateUI();
     }
 
     @Override

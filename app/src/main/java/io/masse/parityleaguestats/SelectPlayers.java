@@ -37,6 +37,14 @@ public class SelectPlayers extends Activity {
         setContentView(R.layout.activity_select_players);
         context = this;
 
+        loadIntent();
+        renderGameBar();
+        createListeners();
+        renderPlayers();
+        setupButtons();
+    }
+
+    private void loadIntent() {
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
         leftTeam = bookkeeper.homeTeam;
@@ -50,16 +58,23 @@ public class SelectPlayers extends Activity {
         if (this.getIntent().hasExtra("rightPlayers")) {
             rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
         }
+    }
 
+    private void renderGameBar() {
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
+
+        leftTeamName.setText(bookkeeper.homeTeam.name);
+        rightTeamName.setText(bookkeeper.awayTeam.name);
 
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
-        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
-        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+        leftScore.setText(bookkeeper.homeScore.toString());
+        rightScore.setText(bookkeeper.awayScore.toString());
+    }
 
+    private void createListeners() {
         toggleUserListener = new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -71,6 +86,11 @@ public class SelectPlayers extends Activity {
                 }
             }
         };
+    }
+
+    private void renderPlayers() {
+        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
+        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, toggleUserListener, leftTeam, true);
@@ -79,7 +99,9 @@ public class SelectPlayers extends Activity {
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, toggleUserListener, rightTeam, false);
         Utils.bold_players(layoutRight, rightPlayers);
+    }
 
+    private void setupButtons() {
         final Button doneButton = (Button) findViewById(R.id.btnDone);
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

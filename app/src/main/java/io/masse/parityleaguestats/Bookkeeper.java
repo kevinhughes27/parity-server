@@ -44,8 +44,7 @@ public class Bookkeeper implements Serializable {
         mementos = new Stack<>();
     }
 
-    private int state = autoState;
-    private static final int autoState = 0;
+    private int state = normalState;
     private static final int normalState = 1;
     private static final int firstDState = 2;
     private static final int startState = 3;
