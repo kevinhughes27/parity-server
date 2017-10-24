@@ -18,7 +18,7 @@ import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
 
-public class EditPlayers extends Activity {
+public class EditRosters extends Activity {
     TextView leftTeamName, rightTeamName;
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
@@ -33,7 +33,7 @@ public class EditPlayers extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_players);
+        setContentView(R.layout.activity_edit_rosters);
 
         context = this;
 
@@ -123,7 +123,7 @@ public class EditPlayers extends Activity {
         final Button finishButton = (Button) findViewById(R.id.btnFinish);
         finishButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
-                                                Intent intent = new Intent(context, Roster.class);
+                                                Intent intent = new Intent(context, SelectPlayers.class);
                                                 Bundle bundle = new Bundle();
                                                 bundle.putSerializable("teams", teams);
                                                 bundle.putSerializable("leftTeam", leftTeam);

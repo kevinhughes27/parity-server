@@ -62,7 +62,7 @@ public class Utils {
         }
     }
 
-    public static void bold_players(Context context, LinearLayout layout, ArrayList<String> players) {
+    public static void bold_players(LinearLayout layout, ArrayList<String> players) {
         int count = layout.getChildCount();
 
         for (int i = 0; i < count; i++) {
@@ -77,7 +77,7 @@ public class Utils {
         }
     }
 
-    public static void show_players(Context context, LinearLayout layout, ArrayList<String> players) {
+    public static void show_players(LinearLayout layout, ArrayList<String> players) {
         int count = layout.getChildCount();
 
         for (int i = 0; i < count; i++) {
@@ -85,7 +85,6 @@ public class Utils {
             String playerName = currentButton.getText().toString();
             currentButton.setGravity(Gravity.END);
 
-            // maybe this code is fucked
             if (players.contains(playerName)) {
                 currentButton.setVisibility(View.VISIBLE);
             } else {

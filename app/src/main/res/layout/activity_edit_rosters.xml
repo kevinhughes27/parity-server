@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.masse.parityleaguestats.Roster">
+    tools:context="io.masse.parityleaguestats.EditRosters">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -68,9 +68,9 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Select the players who are on the field"
+                android:text="Check with each team to see who is missing and who is subbing.\n\n*Add a player using the button below.\n\n* Remove a player by pressing their name and following the prompt."
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <io.masse.parityleaguestats.customLayout.customLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -96,11 +96,18 @@
             tools:context=".Stats">
 
             <Button
-                android:id="@+id/btnDone"
+                android:id="@+id/btnAddPlayer"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Done" />
+                android:text="Add Player" />
+
+            <Button
+                android:id="@+id/btnFinish"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Finish" />
 
         </LinearLayout>
 

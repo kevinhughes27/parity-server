@@ -111,11 +111,11 @@ public class Stats extends Activity {
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, mainOnClickListener, leftTeam, true);
-        Utils.show_players(context, layoutLeft, leftPlayers);
+        Utils.show_players(layoutLeft, leftPlayers);
 
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, mainOnClickListener, rightTeam, false);
-        Utils.show_players(context, layoutRight, rightPlayers);
+        Utils.show_players(layoutRight, rightPlayers);
 
         btnUndo.setOnClickListener(mainOnClickListener);
         btnPoint.setOnClickListener(mainOnClickListener);
@@ -184,7 +184,7 @@ public class Stats extends Activity {
     }
 
     private void editPlayers() {
-        Intent intent = new Intent(myself, EditPlayers.class);
+        Intent intent = new Intent(myself, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("leftTeam", leftTeam);
@@ -195,7 +195,7 @@ public class Stats extends Activity {
     }
 
     private void pickRoster() {
-        Intent intent = new Intent(context, Roster.class);
+        Intent intent = new Intent(context, SelectPlayers.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("leftTeam", leftTeam);

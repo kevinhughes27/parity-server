@@ -50,7 +50,7 @@ public class ChooseTeams extends Activity {
                                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         rightTeam = teams.getTeam(which);
-                                        Intent intent = new Intent(context, EditPlayers.class);
+                                        Intent intent = new Intent(context, EditRosters.class);
                                         Bundle bundle = new Bundle();
                                         bundle.putSerializable("teams", teams);
                                         bundle.putSerializable("leftTeam", leftTeam);

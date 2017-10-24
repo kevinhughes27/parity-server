@@ -16,7 +16,7 @@ import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
 
-public class Roster extends Activity {
+public class SelectPlayers extends Activity {
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
@@ -32,7 +32,7 @@ public class Roster extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_roster);
+        setContentView(R.layout.activity_select_players);
         context = this;
 
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
@@ -70,11 +70,11 @@ public class Roster extends Activity {
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, toggleUserListener, leftTeam, true);
-        Utils.bold_players(context, layoutLeft, leftPlayers);
+        Utils.bold_players(layoutLeft, leftPlayers);
 
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, toggleUserListener, rightTeam, false);
-        Utils.bold_players(context, layoutRight, rightPlayers);
+        Utils.bold_players(layoutRight, rightPlayers);
 
         final Button doneButton = (Button) findViewById(R.id.btnDone);
         doneButton.setOnClickListener(new View.OnClickListener() {
