@@ -51,6 +51,9 @@ public class Stats extends Activity {
     private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
+    ArrayList<String> leftPlayers;
+    ArrayList<String> rightPlayers;
+
     private ArrayAdapter<String> gameSummaryAdapter;
 
     @Override
@@ -62,10 +65,8 @@ public class Stats extends Activity {
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
-
-        ArrayList<String> leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
-        ArrayList<String> rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
-        // not sure this came in right
+        leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
+        rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
 
         // Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -199,6 +200,8 @@ public class Stats extends Activity {
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("leftTeam", leftTeam);
         bundle.putSerializable("rightTeam", rightTeam);
+        bundle.putSerializable("leftPlayers", leftPlayers);
+        bundle.putSerializable("rightPlayers", rightPlayers);
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);

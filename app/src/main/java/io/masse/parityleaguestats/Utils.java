@@ -1,5 +1,6 @@
 package io.masse.parityleaguestats;
 
+import android.graphics.Typeface;
 import android.view.View;
 import android.view.Gravity;
 import android.view.ViewGroup;
@@ -58,6 +59,21 @@ public class Utils {
             btn.setTag(Gender.Female);
             btn.setGravity(gravity);
             btn.setOnClickListener(listener);
+        }
+    }
+
+    public static void bold_players(Context context, LinearLayout layout, ArrayList<String> players) {
+        int count = layout.getChildCount();
+
+        for (int i = 0; i < count; i++) {
+            Button currentButton = (Button) layout.getChildAt(i);
+            String playerName = currentButton.getText().toString();
+
+            if (players.contains(playerName)) {
+                currentButton.setTypeface(null, Typeface.BOLD);
+            } else {
+                currentButton.setTypeface(null, Typeface.NORMAL);
+            }
         }
     }
 

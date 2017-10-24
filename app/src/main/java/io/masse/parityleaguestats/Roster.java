@@ -26,6 +26,8 @@ public class Roster extends Activity {
     private Teams teams;
     private Team leftTeam;
     private Team rightTeam;
+    ArrayList<String> leftPlayers;
+    ArrayList<String> rightPlayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,14 @@ public class Roster extends Activity {
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
+        leftPlayers = new ArrayList<>();
+        if (this.getIntent().hasExtra("leftPlayers")) {
+            leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
+        }
+        rightPlayers = new ArrayList<>();
+        if (this.getIntent().hasExtra("rightPlayers")) {
+            rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
+        }
 
 
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
@@ -60,9 +70,11 @@ public class Roster extends Activity {
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, toggleUserListener, leftTeam, true);
+        Utils.bold_players(context, layoutLeft, leftPlayers);
 
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, toggleUserListener, rightTeam, false);
+        Utils.bold_players(context, layoutRight, rightPlayers);
 
         final Button doneButton = (Button) findViewById(R.id.btnDone);
         doneButton.setOnClickListener(new View.OnClickListener() {
