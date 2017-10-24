@@ -56,6 +56,7 @@ public class ChooseTeams extends Activity {
                                         bundle.putSerializable("leftTeam", leftTeam);
                                         bundle.putSerializable("rightTeam", rightTeam);
                                         intent.putExtras(bundle);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                         startActivity(intent);
                                     }
                                 }).show();

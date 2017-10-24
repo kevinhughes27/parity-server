@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
@@ -60,7 +62,10 @@ public class Stats extends Activity {
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
-        // I need to get the active players and draw the side bars correctly.
+
+        ArrayList<String> leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
+        ArrayList<String> rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
+        // not sure this came in right
 
         // Setup Buttons
         btnPull = (Button) findViewById(R.id.btnPull);
@@ -105,9 +110,11 @@ public class Stats extends Activity {
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, mainOnClickListener, leftTeam, true);
+        Utils.show_players(context, layoutLeft, leftPlayers);
 
         rightTeamName.setText(rightTeam.name);
         Utils.draw_players(context, layoutRight, mainOnClickListener, rightTeam, false);
+        Utils.show_players(context, layoutRight, rightPlayers);
 
         btnUndo.setOnClickListener(mainOnClickListener);
         btnPoint.setOnClickListener(mainOnClickListener);
@@ -182,6 +189,7 @@ public class Stats extends Activity {
         bundle.putSerializable("leftTeam", leftTeam);
         bundle.putSerializable("rightTeam", rightTeam);
         intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
 
@@ -192,6 +200,7 @@ public class Stats extends Activity {
         bundle.putSerializable("leftTeam", leftTeam);
         bundle.putSerializable("rightTeam", rightTeam);
         intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
 

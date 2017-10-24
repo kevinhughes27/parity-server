@@ -37,6 +37,7 @@ public class Roster extends Activity {
         leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
         rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
 
+
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
         leftScore = (TextView) findViewById(R.id.leftScore);
@@ -85,44 +86,30 @@ public class Roster extends Activity {
         int leftCount = layoutLeft.getChildCount();
         int rightCount = layoutRight.getChildCount();
 
-        int leftVisible = 0;
-        int rightVisible = 0;
+        ArrayList<String> leftPlayers = new ArrayList<>();
+        ArrayList<String> rightPlayers= new ArrayList<>();
 
         for (int i = 0; i < leftCount; i++) {
             Button currentButton = (Button) layoutLeft.getChildAt(i);
-            if (currentButton.getTypeface() != null)
-                leftVisible++;
+            if (currentButton.getTypeface() != null) {
+                String playerName = currentButton.getText().toString();
+                leftPlayers.add(playerName);
+            }
         }
         for (int i = 0; i < rightCount; i++) {
             Button currentButton = (Button) layoutRight.getChildAt(i);
-            if (currentButton.getTypeface() != null)
-                rightVisible++;
+            if (currentButton.getTypeface() != null) {
+                String playerName = currentButton.getText().toString();
+                rightPlayers.add(playerName);
+            }
         }
 
         int teamSize = 6;
 
-        boolean leftCorrectNumPlayers = leftVisible == teamSize;
-        boolean rightCorrectNumPlayers = rightVisible == teamSize;
+        boolean leftCorrectNumPlayers = leftPlayers.size() == teamSize;
+        boolean rightCorrectNumPlayers = rightPlayers.size() == teamSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-
-            ArrayList<String> leftPlayers = leftTeam.getPlayers();
-            ArrayList<String> rightPlayers = rightTeam.getPlayers();
-
-            for (int i = 0; i < leftCount; i++) {
-                Button currentButton = (Button) layoutLeft.getChildAt(i);
-                if (currentButton.getTypeface() != null) {
-                    String playerName = currentButton.getText().toString();
-                    leftPlayers.add(playerName);
-                }
-            }
-            for (int i = 0; i < rightCount; i++) {
-                Button currentButton = (Button) layoutRight.getChildAt(i);
-                if (currentButton.getTypeface() != null) {
-                    String playerName = currentButton.getText().toString();
-                    rightPlayers.add(playerName);
-                }
-            }
 
             Intent intent = new Intent(context, Stats.class);
             Bundle bundle = new Bundle();
@@ -132,16 +119,17 @@ public class Roster extends Activity {
             bundle.putSerializable("rightTeam", rightTeam);
             bundle.putSerializable("rightPlayers", rightPlayers);
             intent.putExtras(bundle);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
 
         } else {
             String error = "Incorrect number of players";
             if (!leftCorrectNumPlayers) {
-                error += String.format("\nLeft side: %d/%d selected", leftVisible, teamSize);
+                error += String.format("\nLeft side: %d/%d selected", leftPlayers.size(), teamSize);
             }
 
             if (!rightCorrectNumPlayers) {
-                error += String.format("\nRight side: %d/%d selected", rightVisible, teamSize);
+                error += String.format("\nRight side: %d/%d selected", rightPlayers.size(), teamSize);
             }
 
             Toast.makeText(context, error, Toast.LENGTH_LONG).show();
