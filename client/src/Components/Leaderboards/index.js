@@ -3,6 +3,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
+import capitalize from 'capitalize'
 
 type Props = {
   week: number,
@@ -28,16 +29,17 @@ export default class Leaderboards extends Component {
   renderBoard (stat: string) {
     let stats = this.state.stats
     let players = stats.topPlayers(stat, 10)
+    let statTitle = capitalize(stat.replace('_', ' '))
 
     return (
-      <div className="card-panel" style={{minWidth: 300, margin: 20}}>
-        <h5>{stat}</h5>
+      <div key={stat} className="card-panel" style={{minWidth: 300, margin: 20}}>
+        <h5>{statTitle}</h5>
         <table className='highlight'>
           <tbody>
             { _.map(players, (player) => {
               return (
-                <tr key={player['Name']} style={{lineHeight: 0.5}}>
-                  <td>{player['Name']}</td>
+                <tr key={player['name']} style={{lineHeight: 0.5}}>
+                  <td>{player['name']}</td>
                   <td>{player[stat]}</td>
                 </tr>
               )
@@ -51,13 +53,13 @@ export default class Leaderboards extends Component {
   render () {
     return (
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        { this.renderBoard('Goals') }
-        { this.renderBoard('Assists') }
-        { this.renderBoard('Catches') }
-        { this.renderBoard('Completions') }
-        { this.renderBoard('D-Blocks') }
-        { this.renderBoard('Throwaways') }
-        { this.renderBoard('Drops') }
+        { this.renderBoard('goals') }
+        { this.renderBoard('assists') }
+        { this.renderBoard('catches') }
+        { this.renderBoard('completions') }
+        { this.renderBoard('d_blocks') }
+        { this.renderBoard('throw_aways') }
+        { this.renderBoard('drops') }
       </div>
     )
   }

@@ -8,16 +8,15 @@ import PlayerGraph from './PlayerGraph'
 import './compare-players.css'
 
 const STATS = [
-  'Goals',
-  'Assists',
-  '2nd Assist',
-  'D-Blocks',
-  'Catches',
-  'Completions',
-  'Throwaways',
-  'ThrewDrop',
-  'Drops',
-  'Salary'
+  'goals',
+  'assists',
+  'second_assists',
+  'd_blocks',
+  'catches',
+  'completions',
+  'throw_aways',
+  'threw_drops',
+  'drops'
 ]
 
 type Props = {
