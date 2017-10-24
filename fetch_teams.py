@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import getpass
-from pprint import pprint
 
 #Assumed constants
 base_url = 'https://www.ocua.ca/zuluru'
@@ -83,4 +82,3 @@ def login():
 
 def get_soup(session, url):
     return BeautifulSoup(session.get(url).text, 'html.parser')
-
