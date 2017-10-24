@@ -27,6 +27,8 @@ public class EditRosters extends Activity {
     private Context context;
 
     private Teams teams;
+    private Bookkeeper bookkeeper;
+
     private Team leftTeam;
     private Team rightTeam;
 
@@ -45,8 +47,9 @@ public class EditRosters extends Activity {
 
     private void loadIntent() {
         teams = (Teams) this.getIntent().getSerializableExtra("teams");
-        leftTeam = (Team) this.getIntent().getSerializableExtra("leftTeam");
-        rightTeam = (Team) this.getIntent().getSerializableExtra("rightTeam");
+        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        leftTeam = bookkeeper.homeTeam;
+        rightTeam = bookkeeper.awayTeam;
     }
 
     private void initViewVariables() {
@@ -126,8 +129,7 @@ public class EditRosters extends Activity {
                                                 Intent intent = new Intent(context, SelectPlayers.class);
                                                 Bundle bundle = new Bundle();
                                                 bundle.putSerializable("teams", teams);
-                                                bundle.putSerializable("leftTeam", leftTeam);
-                                                bundle.putSerializable("rightTeam", rightTeam);
+                                                bundle.putSerializable("bookkeeper", bookkeeper);
                                                 intent.putExtras(bundle);
                                                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                                 startActivity(intent);

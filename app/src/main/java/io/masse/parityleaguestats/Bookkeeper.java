@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -15,18 +16,21 @@ import io.masse.parityleaguestats.model.Game;
 import io.masse.parityleaguestats.model.Point;
 import io.masse.parityleaguestats.model.Team;
 
-public class Bookkeeper {
-
+public class Bookkeeper implements Serializable {
     private static final String league = "ocua_17-18";
+
+    Team homeTeam;
+    Team awayTeam;
+
+    private List<String> homePlayers;
+    private List<String> awayPlayers;
+
     private Game activeGame;
     private Stack<Memento> mementos;
+
     Point activePoint;
     String firstActor;
 
-    private Team homeTeam;
-    private Team awayTeam;
-    private List<String> homePlayers;
-    private List<String> awayPlayers;
     public Boolean homePossession;
     public Integer homeScore;
     public Integer awayScore;
@@ -85,12 +89,6 @@ public class Bookkeeper {
         homePossession = !homePossession;
     }
 
-    public void startPoint(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
-        homePlayers = activeHomePlayers;
-        awayPlayers = activeAwayPlayers;
-        activePoint = null;
-    }
-
     public void recordFirstActor(String player, Boolean isHome) {
         mementos.push(new Memento(firstActor) {
             @Override
@@ -120,6 +118,11 @@ public class Bookkeeper {
         }
 
         firstActor = player;
+    }
+
+    public void recordActivePlayers(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
+        homePlayers = activeHomePlayers;
+        awayPlayers = activeAwayPlayers;
     }
 
     // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.

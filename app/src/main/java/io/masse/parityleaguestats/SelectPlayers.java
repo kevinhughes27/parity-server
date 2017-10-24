@@ -24,6 +24,8 @@ public class SelectPlayers extends Activity {
     private Context context;
 
     private Teams teams;
+    private Bookkeeper bookkeeper;
+
     private Team leftTeam;
     private Team rightTeam;
     ArrayList<String> leftPlayers;
@@ -36,8 +38,10 @@ public class SelectPlayers extends Activity {
         context = this;
 
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
-        leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
-        rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
+        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        leftTeam = bookkeeper.homeTeam;
+        rightTeam = bookkeeper.awayTeam;
+
         leftPlayers = new ArrayList<>();
         if (this.getIntent().hasExtra("leftPlayers")) {
             leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
@@ -49,6 +53,7 @@ public class SelectPlayers extends Activity {
 
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
+
         leftScore = (TextView) findViewById(R.id.leftScore);
         rightScore = (TextView) findViewById(R.id.rightScore);
 
@@ -121,13 +126,13 @@ public class SelectPlayers extends Activity {
         boolean rightCorrectNumPlayers = rightPlayers.size() == teamSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
+            bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
 
             Intent intent = new Intent(context, Stats.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("teams", teams);
-            bundle.putSerializable("leftTeam", leftTeam);
+            bundle.putSerializable("bookkeeper", bookkeeper);
             bundle.putSerializable("leftPlayers", leftPlayers);
-            bundle.putSerializable("rightTeam", rightTeam);
             bundle.putSerializable("rightPlayers", rightPlayers);
             intent.putExtras(bundle);
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

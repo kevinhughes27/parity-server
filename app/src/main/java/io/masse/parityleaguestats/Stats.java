@@ -42,14 +42,14 @@ public class Stats extends Activity {
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
 
-    private Bookkeeper bookkeeper;
-
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeModeListener;
 
     private final Stats myself = this;
 
     private Teams teams;
+    private Bookkeeper bookkeeper;
+
     private Team leftTeam;
     private Team rightTeam;
     ArrayList<String> leftPlayers;
@@ -64,8 +64,10 @@ public class Stats extends Activity {
         context = this;
 
         teams = (Teams)this.getIntent().getSerializableExtra("teams");
-        leftTeam = (Team)this.getIntent().getSerializableExtra("leftTeam");
-        rightTeam = (Team)this.getIntent().getSerializableExtra("rightTeam");
+        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        leftTeam = bookkeeper.homeTeam;
+        rightTeam = bookkeeper.awayTeam;
+
         leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
         rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
 
@@ -92,9 +94,6 @@ public class Stats extends Activity {
         ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
         gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
         listView.setAdapter(gameSummaryAdapter);
-
-        bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(leftTeam, rightTeam);
 
         mainOnClickListener = new View.OnClickListener() {
             @Override
@@ -188,8 +187,7 @@ public class Stats extends Activity {
         Intent intent = new Intent(myself, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
-        bundle.putSerializable("leftTeam", leftTeam);
-        bundle.putSerializable("rightTeam", rightTeam);
+        bundle.putSerializable("bookkeeper", bookkeeper);
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
@@ -203,8 +201,7 @@ public class Stats extends Activity {
         Intent intent = new Intent(context, SelectPlayers.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
-        bundle.putSerializable("leftTeam", leftTeam);
-        bundle.putSerializable("rightTeam", rightTeam);
+        bundle.putSerializable("bookkeeper", bookkeeper);
         if (flipPlayers) {
             HashSet<String> newLeftPlayers = new HashSet<>(leftTeam.getRoster());
             newLeftPlayers.removeAll(leftPlayers);
