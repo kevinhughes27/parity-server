@@ -228,8 +228,8 @@ public class Bookkeeper {
 
             // Teams
             JSONObject teams = new JSONObject();
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
             jsonObject.accumulate("teams", teams);
 
             // Score

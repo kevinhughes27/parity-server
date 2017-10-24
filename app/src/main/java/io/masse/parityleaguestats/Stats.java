@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
@@ -105,7 +106,7 @@ public class Stats extends Activity {
         changeModeListener = new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                pickRoster();
+                selectPlayers();
             }
         };
 
@@ -151,7 +152,7 @@ public class Stats extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_edit_players:
-                editPlayers();
+                editRosters();
                 return true;
             case R.id.action_save_game:
                 new AlertDialog.Builder(context)
@@ -183,7 +184,7 @@ public class Stats extends Activity {
         }
     }
 
-    private void editPlayers() {
+    private void editRosters() {
         Intent intent = new Intent(myself, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
@@ -194,14 +195,28 @@ public class Stats extends Activity {
         startActivity(intent);
     }
 
-    private void pickRoster() {
+    private void selectPlayers() {
+        selectPlayers(false);
+    }
+
+    private void selectPlayers(Boolean flipPlayers) {
         Intent intent = new Intent(context, SelectPlayers.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("leftTeam", leftTeam);
         bundle.putSerializable("rightTeam", rightTeam);
-        bundle.putSerializable("leftPlayers", leftPlayers);
-        bundle.putSerializable("rightPlayers", rightPlayers);
+        if (flipPlayers) {
+            HashSet<String> newLeftPlayers = new HashSet<>(leftTeam.getRoster());
+            newLeftPlayers.removeAll(leftPlayers);
+            bundle.putSerializable("leftPlayers", new ArrayList<>(newLeftPlayers));
+
+            HashSet<String> newRightPlayers = new HashSet<>(rightTeam.getRoster());
+            newRightPlayers.removeAll(rightPlayers);
+            bundle.putSerializable("rightPlayers", new ArrayList<>(newRightPlayers));
+        } else {
+            bundle.putSerializable("leftPlayers", leftPlayers);
+            bundle.putSerializable("rightPlayers", rightPlayers);
+        }
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
@@ -265,7 +280,7 @@ public class Stats extends Activity {
 
                 } else if (btn == btnPoint) {
                     bookkeeper.recordPoint();
-                    pickRoster();
+                    selectPlayers(true);
 
                 } else if (btn == btnUndo) {
                     bookkeeper.undo();

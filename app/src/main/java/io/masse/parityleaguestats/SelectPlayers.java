@@ -47,7 +47,6 @@ public class SelectPlayers extends Activity {
             rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
         }
 
-
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
         leftScore = (TextView) findViewById(R.id.leftScore);
@@ -98,8 +97,8 @@ public class SelectPlayers extends Activity {
         int leftCount = layoutLeft.getChildCount();
         int rightCount = layoutRight.getChildCount();
 
-        ArrayList<String> leftPlayers = new ArrayList<>();
-        ArrayList<String> rightPlayers= new ArrayList<>();
+        leftPlayers = new ArrayList<>();
+        rightPlayers= new ArrayList<>();
 
         for (int i = 0; i < leftCount; i++) {
             Button currentButton = (Button) layoutLeft.getChildAt(i);

@@ -66,7 +66,7 @@ public class Teams implements Serializable {
         ArrayList<String> names = new ArrayList<>();
 
         for (int i = 0; i < teamsArray.size(); i++) {
-            names.addAll(teamsArray.get(i).getPlayers());
+            names.addAll(teamsArray.get(i).getRoster());
         }
 
         return names;
