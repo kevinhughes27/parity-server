@@ -99,12 +99,10 @@
 
         </io.masse.parityleaguestats.customLayout.customLinearLayout>
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/listPlayByPlay"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_weight="8" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="10" />
 
         <io.masse.parityleaguestats.customLayout.customLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
