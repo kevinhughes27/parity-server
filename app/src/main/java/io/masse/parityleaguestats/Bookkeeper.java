@@ -13,9 +13,10 @@ import java.util.Stack;
 
 import io.masse.parityleaguestats.model.Event;
 import io.masse.parityleaguestats.model.Game;
+import io.masse.parityleaguestats.model.League;
 import io.masse.parityleaguestats.model.Point;
 import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.League;
+import io.masse.parityleaguestats.model.Week;
 
 public class Bookkeeper implements Serializable {
     Team homeTeam;
@@ -225,10 +226,7 @@ public class Bookkeeper implements Serializable {
         try {
             jsonObject.accumulate("league", League.name);
 
-            // server will calc the week for now.
-            // it would be nice if the client knew what
-            // week it was working for though.
-            //jsonObject.accumulate("week", 1);
+            jsonObject.accumulate("week", Week.current());
 
             // Teams
             JSONObject teams = new JSONObject();
