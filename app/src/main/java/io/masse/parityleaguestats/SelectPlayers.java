@@ -102,10 +102,18 @@ public class SelectPlayers extends Activity {
     }
 
     private void setupButtons() {
-        final Button doneButton = (Button) findViewById(R.id.btnDone);
+        Button doneButton = (Button) findViewById(R.id.btnDone);
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                toggleRoster();
+                playersSelected();
+            }
+        });
+
+        Button btnUndo = (Button) findViewById(R.id.btnUndo);
+        btnUndo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                bookkeeper.undo();
+                playersSelected();
             }
         });
     }
@@ -120,7 +128,7 @@ public class SelectPlayers extends Activity {
         // Do nothing;
     }
 
-    private void toggleRoster() {
+    private void playersSelected() {
         int leftCount = layoutLeft.getChildCount();
         int rightCount = layoutRight.getChildCount();
 

@@ -94,7 +94,7 @@ public class EditRosters extends Activity {
 
 
 
-        final Button editButton = (Button) findViewById(R.id.btnAddPlayer);
+        Button editButton = (Button) findViewById(R.id.btnAddPlayer);
         editButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             final AutoCompleteTextView input = new AutoCompleteTextView(v.getContext());
@@ -123,7 +123,7 @@ public class EditRosters extends Activity {
         });
 
 
-        final Button finishButton = (Button) findViewById(R.id.btnFinish);
+        Button finishButton = (Button) findViewById(R.id.btnFinish);
         finishButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(context, SelectPlayers.class);
