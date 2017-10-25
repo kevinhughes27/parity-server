@@ -113,6 +113,7 @@ public class SelectPlayers extends Activity {
         btnUndo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 bookkeeper.undo();
+                //TODO need to check if this undoes a point
                 playersSelected();
             }
         });

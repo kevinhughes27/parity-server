@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,7 +16,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.gdata.data.DateTime;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -180,19 +186,17 @@ public class Stats extends Activity {
                         .setMessage("Are you sure sure?" )
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                bookkeeper.gameCompleted();
                                 uploadGame();
                                 resetApp();
                             }
                         }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                bookkeeper.gameCompleted();
-                                bookkeeper.backup(); // this is in case someone fat fingers a clear
+                                saveBackup();
                                 resetApp();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                bookkeeper.backup(); // this is in case someone fat fingers a cancel
+                                // do nothing
                             }
                         }).show();
                 return true;
@@ -251,7 +255,27 @@ public class Stats extends Activity {
             new uploadGame(context).execute(json);
 
         } catch (Exception e) {
+            saveBackup();
             e.printStackTrace();
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void saveBackup() {
+        try {
+            String json = bookkeeper.serialize().toString();
+
+            String pathToExternalStorage = Environment.getExternalStorageDirectory().toString();
+            String fileName = "ParityBackup_" + DateTime.now().toString() + ".json";
+            File file = new File(pathToExternalStorage + fileName);
+            file.mkdirs();
+
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(json.getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

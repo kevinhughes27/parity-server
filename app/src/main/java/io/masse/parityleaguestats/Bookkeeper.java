@@ -211,11 +211,6 @@ public class Bookkeeper implements Serializable {
         changePossession();
     }
 
-    public void gameCompleted() {
-        activePoint = null;
-        firstActor = null;
-    }
-
     public JSONObject serialize() {
         JSONObject jsonObject = new JSONObject();
 
@@ -247,10 +242,6 @@ public class Bookkeeper implements Serializable {
         }
 
         return jsonObject;
-    }
-
-    public void backup() {
-        return;
     }
 
     public void undo() {
