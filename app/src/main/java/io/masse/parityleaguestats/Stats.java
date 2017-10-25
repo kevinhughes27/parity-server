@@ -31,7 +31,6 @@ import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
-    //States for each ViewState to be in.
     private static final int normalState = 1;
     private static final int firstDState = 2;
     private static final int startState = 3;

@@ -112,8 +112,17 @@ public class SelectPlayers extends Activity {
         Button btnUndo = (Button) findViewById(R.id.btnUndo);
         btnUndo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                int oldScore = bookkeeper.homeScore + bookkeeper.awayScore;
                 bookkeeper.undo();
-                //TODO need to check if this undoes a point
+                int newScore = bookkeeper.homeScore + bookkeeper.awayScore;
+
+                // put the right players back on
+                if (newScore != oldScore) {
+                    leftPlayers = new ArrayList(bookkeeper.homePlayers);
+                    rightPlayers = new ArrayList(bookkeeper.awayPlayers);
+                    renderPlayers();
+                }
+
                 playersSelected();
             }
         });

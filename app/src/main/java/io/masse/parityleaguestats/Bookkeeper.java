@@ -21,8 +21,8 @@ public class Bookkeeper implements Serializable {
     Team homeTeam;
     Team awayTeam;
 
-    private List<String> homePlayers;
-    private List<String> awayPlayers;
+    List<String> homePlayers;
+    List<String> awayPlayers;
 
     private Game activeGame;
     private Stack<Memento> mementos;
@@ -126,10 +126,18 @@ public class Bookkeeper implements Serializable {
     // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
     // To fix this we call swapOffenseAndDefense on the activePoint
     public void recordPull() {
+        mementos.push(new Memento(firstActor) {
+            @Override
+            public void apply() {
+                activePoint.swapOffenseAndDefense();
+                changePossession();
+                activePoint.removeLastEvent();
+                firstActor = savedFirstActor;
+            }
+        });
+
         activePoint.swapOffenseAndDefense();
         changePossession();
-
-        mementos.push(genericUndoLastEventMemento());
 
         activePoint.addEvent(new Event(Event.Type.PULL, firstActor));
         firstActor = null;
