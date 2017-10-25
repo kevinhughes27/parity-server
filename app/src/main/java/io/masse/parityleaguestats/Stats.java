@@ -267,7 +267,7 @@ public class Stats extends Activity {
 
             String pathToExternalStorage = Environment.getExternalStorageDirectory().toString();
             String fileName = "ParityBackup_" + DateTime.now().toString() + ".json";
-            File file = new File(pathToExternalStorage + fileName);
+            File file = new File(pathToExternalStorage + File.separator + fileName);
             file.mkdirs();
 
             FileOutputStream fos = new FileOutputStream(file);
