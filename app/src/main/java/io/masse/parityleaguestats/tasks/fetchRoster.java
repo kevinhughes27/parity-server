@@ -34,17 +34,17 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
     @Override
     protected Long doInBackground(String... strings) {
         String strRosterUrl = "http://parity-server.herokuapp.com/teams";
+        String resString = "";
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
             HttpGet httpget = new HttpGet(strRosterUrl);
             HttpResponse response = httpclient.execute(httpget);
 
-            String resString = EntityUtils.toString(response.getEntity());
+            resString = EntityUtils.toString(response.getEntity());
             json = new JSONObject(resString.toString());
-
-
         } catch (Exception e) {
+            this.dialog.setMessage(resString);
             e.printStackTrace();
         }
         return null;

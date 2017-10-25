@@ -1,11 +1,15 @@
 package io.masse.parityleaguestats;
 
+import android.graphics.Typeface;
+import android.view.View;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.content.Context;
 import android.view.View.OnClickListener;
+
+import java.util.ArrayList;
 
 import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
@@ -55,6 +59,37 @@ public class Utils {
             btn.setTag(Gender.Female);
             btn.setGravity(gravity);
             btn.setOnClickListener(listener);
+        }
+    }
+
+    public static void bold_players(LinearLayout layout, ArrayList<String> players) {
+        int count = layout.getChildCount();
+
+        for (int i = 0; i < count; i++) {
+            Button currentButton = (Button) layout.getChildAt(i);
+            String playerName = currentButton.getText().toString();
+
+            if (players.contains(playerName)) {
+                currentButton.setTypeface(null, Typeface.BOLD);
+            } else {
+                currentButton.setTypeface(null, Typeface.NORMAL);
+            }
+        }
+    }
+
+    public static void show_players(LinearLayout layout, ArrayList<String> players) {
+        int count = layout.getChildCount();
+
+        for (int i = 0; i < count; i++) {
+            Button currentButton = (Button) layout.getChildAt(i);
+            String playerName = currentButton.getText().toString();
+            currentButton.setGravity(Gravity.END);
+
+            if (players.contains(playerName)) {
+                currentButton.setVisibility(View.VISIBLE);
+            } else {
+                currentButton.setVisibility(View.INVISIBLE);
+            }
         }
     }
 }

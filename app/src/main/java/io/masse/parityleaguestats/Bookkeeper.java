@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -14,38 +15,36 @@ import io.masse.parityleaguestats.model.Event;
 import io.masse.parityleaguestats.model.Game;
 import io.masse.parityleaguestats.model.Point;
 import io.masse.parityleaguestats.model.Team;
+import io.masse.parityleaguestats.model.League;
 
-public class Bookkeeper {
+public class Bookkeeper implements Serializable {
+    Team homeTeam;
+    Team awayTeam;
 
-    private static final String league = "ocua_17-18";
+    private List<String> homePlayers;
+    private List<String> awayPlayers;
+
     private Game activeGame;
     private Stack<Memento> mementos;
+
     Point activePoint;
     String firstActor;
 
-    private Team homeTeam;
-    private Team awayTeam;
-    private List<String> homePlayers;
-    private List<String> awayPlayers;
     public Boolean homePossession;
     public Integer homeScore;
     public Integer awayScore;
 
-    public Bookkeeper(Team leftTeam, Team rightTeam) {
+    public void startGame(Team leftTeam, Team rightTeam) {
+        activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
-    }
-
-    public void startGame() {
-        activeGame = new Game();
         homeScore = 0;
         awayScore = 0;
         homePossession = true;
         mementos = new Stack<>();
     }
 
-    private int state = autoState;
-    private static final int autoState = 0;
+    private int state = normalState;
     private static final int normalState = 1;
     private static final int firstDState = 2;
     private static final int startState = 3;
@@ -53,11 +52,13 @@ public class Bookkeeper {
     private static final int whoPickedUpDiscState = 5;
     private static final int firstThrowQuebecVariantState = 6;
 
-    public int uiState() {
+    public int gameState() {
         Boolean firstPoint = (activeGame.getPointCount() == 0);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 
-        if (firstPoint && firstEvent && firstActor == null) {
+        if (activePoint == null) {
+            state = startState;
+        } else if (firstPoint && firstEvent && firstActor == null) {
             state = startState;
         } else if (firstPoint && firstEvent) {
             state = pullState;
@@ -84,12 +85,6 @@ public class Bookkeeper {
 
     private void changePossession() {
         homePossession = !homePossession;
-    }
-
-    public void startPoint(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
-        homePlayers = activeHomePlayers;
-        awayPlayers = activeAwayPlayers;
-        activePoint = null;
     }
 
     public void recordFirstActor(String player, Boolean isHome) {
@@ -121,6 +116,11 @@ public class Bookkeeper {
         }
 
         firstActor = player;
+    }
+
+    public void recordActivePlayers(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
+        homePlayers = activeHomePlayers;
+        awayPlayers = activeAwayPlayers;
     }
 
     // The pull is an edge case for possession; the team that starts with possession isn't actually on offense.
@@ -220,7 +220,7 @@ public class Bookkeeper {
         JSONObject jsonObject = new JSONObject();
 
         try {
-            jsonObject.accumulate("league", league);
+            jsonObject.accumulate("league", League.name);
 
             // server will calc the week for now.
             // it would be nice if the client knew what
@@ -229,8 +229,8 @@ public class Bookkeeper {
 
             // Teams
             JSONObject teams = new JSONObject();
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getPlayers()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
+            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
             jsonObject.accumulate("teams", teams);
 
             // Score
@@ -267,7 +267,7 @@ public class Bookkeeper {
         }
     }
 
-    private abstract class Memento {
+    private abstract class Memento implements Serializable {
 
         protected String savedFirstActor;
 

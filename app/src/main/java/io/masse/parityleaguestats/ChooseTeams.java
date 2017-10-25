@@ -18,8 +18,6 @@ public class ChooseTeams extends Activity {
     private final ChooseTeams myself = this;
 
     private Teams teams;
-    private Team leftTeam;
-    private Team rightTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,22 +42,30 @@ public class ChooseTeams extends Activity {
                 .setTitle("Choose Home Team")
                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        leftTeam = teams.getTeam(which);
+                        final Team homeTeam = teams.getTeam(which);
                         new AlertDialog.Builder(context)
                                 .setTitle("Choose Away Team")
                                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        rightTeam = teams.getTeam(which);
-                                        Intent intent = new Intent(context, EditPlayers.class);
-                                        Bundle bundle = new Bundle();
-                                        bundle.putSerializable("teams", teams);
-                                        bundle.putSerializable("leftTeam", leftTeam);
-                                        bundle.putSerializable("rightTeam", rightTeam);
-                                        intent.putExtras(bundle);
-                                        startActivity(intent);
+                                        Team awayTeam = teams.getTeam(which);
+                                        editRosters(homeTeam, awayTeam);
                                     }
                                 }).show();
                     }
                 }).show();
+    }
+
+    private void editRosters(Team homeTeam, Team awayTeam) {
+        Intent intent = new Intent(context, EditRosters.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("teams", teams);
+
+        Bookkeeper bookkeeper = new Bookkeeper();
+        bookkeeper.startGame(homeTeam, awayTeam);
+        bundle.putSerializable("bookkeeper", bookkeeper);
+
+        intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 }

@@ -16,7 +16,7 @@ class TeamsLoadError extends RuntimeException {
 public class Teams implements Serializable {
     private ArrayList<Team> teamsArray = new ArrayList<>();
 
-    // Roster Schema:
+    // SelectPlayers Schema:
     // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
     public void load(JSONObject json) {
         try {
@@ -66,7 +66,7 @@ public class Teams implements Serializable {
         ArrayList<String> names = new ArrayList<>();
 
         for (int i = 0; i < teamsArray.size(); i++) {
-            names.addAll(teamsArray.get(i).getPlayers());
+            names.addAll(teamsArray.get(i).getRoster());
         }
 
         return names;

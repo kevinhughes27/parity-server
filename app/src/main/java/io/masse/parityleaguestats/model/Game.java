@@ -1,10 +1,11 @@
 package io.masse.parityleaguestats.model;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
+public class Game implements Serializable {
 
     private List<Point> points;
 

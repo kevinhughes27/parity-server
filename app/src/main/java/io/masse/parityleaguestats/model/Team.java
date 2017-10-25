@@ -38,7 +38,7 @@ public class Team implements Serializable {
         }
     }
 
-    public ArrayList<String> getPlayers(){
+    public ArrayList<String> getRoster(){
         ArrayList<String> names = new ArrayList<>();
 
         for (int i = 0; i < sizeGirls(); i++){

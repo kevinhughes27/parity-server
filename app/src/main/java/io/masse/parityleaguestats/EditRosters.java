@@ -18,7 +18,7 @@ import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
 import io.masse.parityleaguestats.model.Teams;
 
-public class EditPlayers extends Activity {
+public class EditRosters extends Activity {
     TextView leftTeamName, rightTeamName;
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
@@ -27,13 +27,15 @@ public class EditPlayers extends Activity {
     private Context context;
 
     private Teams teams;
+    private Bookkeeper bookkeeper;
+
     private Team leftTeam;
     private Team rightTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_players);
+        setContentView(R.layout.activity_edit_rosters);
 
         context = this;
 
@@ -45,8 +47,9 @@ public class EditPlayers extends Activity {
 
     private void loadIntent() {
         teams = (Teams) this.getIntent().getSerializableExtra("teams");
-        leftTeam = (Team) this.getIntent().getSerializableExtra("leftTeam");
-        rightTeam = (Team) this.getIntent().getSerializableExtra("rightTeam");
+        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        leftTeam = bookkeeper.homeTeam;
+        rightTeam = bookkeeper.awayTeam;
     }
 
     private void initViewVariables() {
@@ -91,7 +94,7 @@ public class EditPlayers extends Activity {
 
 
 
-        final Button editButton = (Button) findViewById(R.id.btnAddPlayer);
+        Button editButton = (Button) findViewById(R.id.btnAddPlayer);
         editButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             final AutoCompleteTextView input = new AutoCompleteTextView(v.getContext());
@@ -120,14 +123,15 @@ public class EditPlayers extends Activity {
         });
 
 
-        final Button finishButton = (Button) findViewById(R.id.btnFinish);
+        Button finishButton = (Button) findViewById(R.id.btnFinish);
         finishButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
-                                                Intent intent = new Intent(context, Stats.class);
+                                                Intent intent = new Intent(context, SelectPlayers.class);
                                                 Bundle bundle = new Bundle();
-                                                bundle.putSerializable("leftTeam", leftTeam);
-                                                bundle.putSerializable("rightTeam", rightTeam);
+                                                bundle.putSerializable("teams", teams);
+                                                bundle.putSerializable("bookkeeper", bookkeeper);
                                                 intent.putExtras(bundle);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                                 startActivity(intent);
                                             }
                                         });
