@@ -35,12 +35,15 @@ public class Bookkeeper implements Serializable {
     public Integer homeScore;
     public Integer awayScore;
 
+    private int pointsAtHalf;
+
     public void startGame(Team leftTeam, Team rightTeam) {
         activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
         homeScore = 0;
         awayScore = 0;
+        pointsAtHalf = 0;
         homePossession = true;
         mementos = new Stack<>();
     }
@@ -54,25 +57,33 @@ public class Bookkeeper implements Serializable {
     private static final int firstThrowQuebecVariantState = 6;
 
     public int gameState() {
-        Boolean firstPoint = (activeGame.getPointCount() == 0);
+        Boolean firstPoint = (activeGame.getPointCount() == pointsAtHalf);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 
         if (activePoint == null) {
             state = startState;
+
         } else if (firstPoint && firstEvent && firstActor == null) {
             state = startState;
+
         } else if (firstPoint && firstEvent) {
             state = pullState;
+
         } else if (activePoint.getLastEventType() == Event.Type.PULL && firstActor == null) {
             state = whoPickedUpDiscState;
+
         } else if (activePoint.getLastEventType() == Event.Type.PULL) {
             state = firstThrowQuebecVariantState;
+
         } else if (firstEvent && firstActor == null) {
             state = whoPickedUpDiscState;
+
         } else if (firstEvent) {
             state = firstThrowQuebecVariantState;
+
         } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY && firstActor != null) {
             state = firstDState;
+
         } else {
             state = normalState;
         }
@@ -216,8 +227,14 @@ public class Bookkeeper implements Serializable {
     }
 
     public void recordHalf() {
-        // needs conditional logic
-        changePossession();
+        mementos.add(new Memento(firstActor) {
+            @Override
+            public void apply() {
+                pointsAtHalf = 0;
+            }
+        });
+
+        pointsAtHalf = activeGame.getPointCount();
     }
 
     public JSONObject serialize() {

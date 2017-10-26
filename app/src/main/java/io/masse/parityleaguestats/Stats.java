@@ -170,7 +170,7 @@ public class Stats extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_actions, menu);
+        inflater.inflate(R.menu.main_stats, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -199,9 +199,6 @@ public class Stats extends Activity {
                                 // do nothing
                             }
                         }).show();
-                return true;
-            case R.id.action_half:
-                bookkeeper.recordHalf();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

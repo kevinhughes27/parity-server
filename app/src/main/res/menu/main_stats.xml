@@ -2,9 +2,6 @@
     <item android:id="@+id/action_edit_players"
         android:title="@string/str_action_edit_players"
         android:layout_width="wrap_content" />
-    <item android:id="@+id/action_half"
-        android:title="@string/str_action_half"
-        android:showAsAction="ifRoom" />
     <item android:id="@+id/action_save_game"
         android:title="@string/str_action_save_game" />
 </menu>
