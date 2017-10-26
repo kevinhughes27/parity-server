@@ -30,43 +30,28 @@ def create_app():
     # Upload
     @app.route('/upload', methods=['POST'])
     def upload():
-        """
-        @api {post} /upload From Stats Keeper Client
-        @apiGroup Upload
-        @apiDescription This is only path which creates new data on the server.
-        The Stats Keeper Client uploads the stats to this endpoint and the server
-        does any required post-processing before saving the game to the database.
-         *
-        @apiParam {String} league the name of the league
-        @apiParam {Number} week the week number of the game
-        @apiParam {Object} teams a key for each team containing an array of player names
-        @apiParam {Array} event_string the array of events recored by the client
-         *
-        @apiParamExample {json} Example Upload:
-            {
-              "league": "ocua_16",
-              "week": 1,
-              "teams": {
-                "Karma Down Under": ["Alison Ward"],
-                "Kindha's Ongoing Disappointments": ["Jen Cluthe"]
-              },
-              "points": [
-                {"type": "PULL", "firstActor": "Alison Ward"}
-              ]
-            }
-        """
         game = Game()
 
-        #HACK to fix seed
-        try:
-            points = json.loads(request.json['points'])['points']
-        except:
-            points = json.loads(request.json['points'])
+        debug = False
+        if debug:
+            now = datetime.datetime.now()
+            fo = open('data/test/' + str(now) + '.json', 'wb')
+            fo.write(json.dumps(request.json))
+            fo.close()
 
         game.league = request.json['league']
         game.week = request.json['week']
-        game.teams = json.dumps(request.json['teams'])
-        game.score = json.dumps(request.json['score'])
+
+        game.home_team = request.json['homeTeam']
+        game.away_team = request.json['awayTeam']
+
+        game.home_score = request.json['homeScore']
+        game.away_score = request.json['awayScore']
+
+        game.home_roster = json.dumps(request.json['homeRoster'])
+        game.away_roster = json.dumps(request.json['awayRoster'])
+
+        points = request.json['points']
         game.points = json.dumps(points)
 
         db.session.add(game)
@@ -119,7 +104,21 @@ def create_app():
         """
         stats = {}
         for game in Game.query.all():
-            stats = dict(list(stats.items()) + list(json.loads(game.stats).items()))
+            for player_stats in Stats.query.filter_by(game_id=game.id):
+                player = Player.query.get(player_stats.player_id)
+
+                if player.name in json.loads(game.home_roster):
+                    team = game.home_team
+                else:
+                    team = game.away_team
+
+                data = player_stats.to_dict()
+                data.update({'team': team})
+
+                item = {}
+                item[player.name] = data
+                stats.update(item)
+
         return jsonify({"stats": stats})
 
     @app.route('/weeks')
@@ -161,11 +160,10 @@ def create_app():
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
 
-                teams = json.loads(game.teams).items()
-                if player.name in teams[0][1]:
-                    team = teams[0][0]
+                if player.name in json.loads(game.home_roster):
+                    team = game.home_team
                 else:
-                    team = teams[1][0]
+                    team = game.away_team
 
                 data = player_stats.to_dict()
                 data.update({'team': team})

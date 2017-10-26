@@ -12,19 +12,27 @@ class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     league = db.Column(db.Text)
     week = db.Column(db.Integer)
-    teams = db.Column(db.Text)
-    score = db.Column(db.Text)
+    home_team = db.Column(db.Text)
+    away_team = db.Column(db.Text)
+    home_roster = db.Column(db.Text)
+    away_roster = db.Column(db.Text)
+    home_score = db.Column(db.Integer)
+    away_score = db.Column(db.Integer)
     points = db.Column(db.Text)
-    stats = db.Column(db.Text)
 
     def to_dict(self):
         return {
             "league": self.league,
             "week": self.week,
-            "teams": json.loads(self.teams),
-            "score": json.loads(self.score),
+            "teams": {
+                home_team: json.loads(home_roster),
+                away_team: json.loads(away_roster)
+            },
+            "score": {
+                home_team: home_score,
+                away_team: away_score
+            },
             "points": json.loads(self.points),
-            "stats": json.loads(self.stats),
         }
 
 class Stats(db.Model):
