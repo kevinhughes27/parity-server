@@ -41,6 +41,7 @@ public class Stats extends Activity {
 
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
+    private ListView undoHistory;
     private Context context;
 
     private Button btnPull, btnPoint, btnDrop, btnD, btnCatchD,  btnThrowAway, btnUndo, btnMode;
@@ -102,9 +103,9 @@ public class Stats extends Activity {
     }
 
     private void initUndoView() {
-        ListView listView = (ListView) findViewById(R.id.listPlayByPlay);
+        undoHistory = (ListView) findViewById(R.id.listPlayByPlay);
         gameSummaryAdapter = new ArrayAdapter<>(this, R.layout.game_summary_event_view, R.id.title_text);
-        listView.setAdapter(gameSummaryAdapter);
+        undoHistory.setAdapter(gameSummaryAdapter);
     }
 
     private void createListeners() {
@@ -342,6 +343,7 @@ public class Stats extends Activity {
         gameSummaryAdapter.clear();
         gameSummaryAdapter.addAll(bookkeeper.undoHistory());
         gameSummaryAdapter.notifyDataSetChanged();
+        undoHistory.setSelection(gameSummaryAdapter.getCount() - 1);
 
         int state = bookkeeper.gameState();
         int leftCount = layoutLeft.getChildCount();
