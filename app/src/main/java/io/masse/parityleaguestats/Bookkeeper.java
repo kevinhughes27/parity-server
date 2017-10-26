@@ -71,7 +71,7 @@ public class Bookkeeper implements Serializable {
             state = whoPickedUpDiscState;
         } else if (firstEvent) {
             state = firstThrowQuebecVariantState;
-        } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY) {
+        } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY && firstActor != null) {
             state = firstDState;
         } else {
             state = normalState;
