@@ -21,7 +21,7 @@ class Test(TestCase):
         db.drop_all()
 
     def test_upload(self):
-        game = open('data/test/one.json').read()
+        game = open('data/test/basic_point.json').read()
         self.client.post('/upload', data=game, content_type='application/json')
 
         player = Player.query.filter_by(name='Owen Lumley').first()
