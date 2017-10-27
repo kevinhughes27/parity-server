@@ -105,29 +105,34 @@ public class Bookkeeper implements Serializable {
             public void apply() {
                 firstActor = savedFirstActor;
                 if (activePoint.getEventCount() == 0) {
-                    activePoint = null;
+                    activePoint = null; // undo the created point
                 }
             }
         });
 
         if (activePoint == null) {
-            homePossession = isHome;
-
-            List<String> offensePlayers;
-            List<String> defensePlayers;
-
-            if (isHome) {
-                offensePlayers = homePlayers;
-                defensePlayers = awayPlayers;
-            } else {
-                offensePlayers = awayPlayers;
-                defensePlayers = homePlayers;
-            }
-
-            activePoint = new Point(offensePlayers, defensePlayers);
+            startPoint(isHome);
         }
 
         firstActor = player;
+    }
+
+    private void startPoint(Boolean isHome) {
+        homePossession = isHome;
+
+        List<String> offensePlayers;
+        List<String> defensePlayers;
+
+        if (isHome) {
+            offensePlayers = homePlayers;
+            defensePlayers = awayPlayers;
+        } else {
+            offensePlayers = awayPlayers;
+            defensePlayers = homePlayers;
+        }
+
+        activePoint = new Point(offensePlayers, defensePlayers);
+
     }
 
     public void recordActivePlayers(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
@@ -222,7 +227,7 @@ public class Bookkeeper implements Serializable {
         }
 
         changePossession();
-        activePoint = new Point();
+        activePoint = null;
         firstActor = null;
     }
 
@@ -245,21 +250,20 @@ public class Bookkeeper implements Serializable {
 
             jsonObject.accumulate("week", Week.current());
 
-            // Teams
-            JSONObject teams = new JSONObject();
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
-            teams.accumulate(homeTeam.name, new JSONArray(awayTeam.getRoster()));
-            jsonObject.accumulate("teams", teams);
+            jsonObject.accumulate("homeTeam", homeTeam.name);
+            jsonObject.accumulate("awayTeam", awayTeam.name);
 
-            // Score
-            JSONObject score = new JSONObject();
-            score.accumulate(homeTeam.name, homeScore.toString());
-            score.accumulate(awayTeam.name, awayScore.toString());
-            jsonObject.accumulate("score", score);
+            jsonObject.accumulate("homeRoster", new JSONArray(awayTeam.getRoster()));
+            jsonObject.accumulate("awayRoster", new JSONArray(awayTeam.getRoster()));
+
+            jsonObject.accumulate("homeScore", homeScore.toString());
+            jsonObject.accumulate("awayScore", awayScore.toString());
 
             // Points
             Gson gson = new Gson();
-            jsonObject.accumulate("points", gson.toJson(activeGame));
+            JSONObject points = new JSONObject(gson.toJson(activeGame));
+            jsonObject.accumulate("points", points.get("points"));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
