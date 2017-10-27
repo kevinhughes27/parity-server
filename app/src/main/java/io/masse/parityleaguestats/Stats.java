@@ -262,11 +262,10 @@ public class Stats extends Activity {
         try {
             String json = bookkeeper.serialize().toString();
 
-            String pathToExternalStorage = Environment.getExternalStorageDirectory().toString();
+            File pathToExternalStorage = Environment.getExternalStorageDirectory();
             String fileName = "ParityBackup_" + DateTime.now().toString() + ".json";
-            File file = new File(pathToExternalStorage + File.separator + fileName);
-            file.mkdirs();
 
+            File file = new File(pathToExternalStorage, fileName);
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(json.getBytes());
             fos.close();
