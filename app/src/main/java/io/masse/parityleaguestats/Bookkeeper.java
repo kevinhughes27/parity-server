@@ -253,7 +253,7 @@ public class Bookkeeper implements Serializable {
             jsonObject.accumulate("homeTeam", homeTeam.name);
             jsonObject.accumulate("awayTeam", awayTeam.name);
 
-            jsonObject.accumulate("homeRoster", new JSONArray(awayTeam.getRoster()));
+            jsonObject.accumulate("homeRoster", new JSONArray(homeTeam.getRoster()));
             jsonObject.accumulate("awayRoster", new JSONArray(awayTeam.getRoster()));
 
             jsonObject.accumulate("homeScore", homeScore.toString());
