@@ -15,6 +15,8 @@ class Player(db.Model):
     name = db.Column(db.Text)
     gender = db.Column(db.Text)
 
+    def is_male(self):
+        return self.gender == 'male'
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
