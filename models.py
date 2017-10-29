@@ -3,10 +3,18 @@ import json
 
 db = SQLAlchemy()
 
-class Player(db.Model):
+class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
-    rank = db.Column(db.Integer)
+
+
+class Player(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    zuluru_id = db.Column(db.Integer, unique=True)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    name = db.Column(db.Text)
+    gender = db.Column(db.Text)
+
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -34,6 +42,7 @@ class Game(db.Model):
             },
             "points": json.loads(self.points),
         }
+
 
 class Stats(db.Model):
     id = db.Column(db.Integer, primary_key=True)
