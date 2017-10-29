@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 
-from models import db, Game, Stats, Player
+from models import db, Game, Stats, Team, Player
 from utils import StatsCalculator
 
 import os
@@ -86,7 +86,22 @@ def create_app():
              }
            }
         """
-        return jsonify({})
+        teams = {}
+        for team in Team.query.all():
+            teams[team.name] = {
+                'players': [],
+                'malePlayers': [],
+                'femalePlayers': []
+            }
+            for player in Player.query.filter_by(team_id=team.id):
+                teams[team.name]['players'].append(player.name)
+                if player.is_male():
+                    teams[team.name]['malePlayers'].append(player.name)
+                else:
+                    teams[team.name]['femalePlayers'].append(player.name)
+
+        return jsonify(teams)
+
 
     @app.route('/stats')
     def stats():
