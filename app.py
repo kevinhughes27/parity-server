@@ -247,7 +247,7 @@ if __name__ == '__main__':
 
     app = create_app()
 
-    if app.config['DEVELOPMENT']:
+    if app.config.get('DEVELOPMENT'):
         with app.app_context():
             db.create_all()
 
