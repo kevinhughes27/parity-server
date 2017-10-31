@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "postinstall": "subpkg install",
+    "heroku-postbuild": "yarn build",
     "build": "subpkg build"
   },
   "dependencies": {
