@@ -8,7 +8,7 @@ import getpass
 
 base_url = 'https://www.ocua.ca/zuluru'
 login_url = 'https://www.ocua.ca/user/login'
-league_path = base_url + '/divisions/view/division:'
+league_path = base_url + '/leagues/view/league:'
 team_path = base_url + '/teams/view/team:'
 
 team_id_preamble = 'teams_team_'
@@ -120,6 +120,6 @@ if __name__ == '__main__':
     app = create_app()
 
     with app.app_context():
-        sync_teams(league_id=941)
+        sync_teams(league_id=596)
 
     db.session.remove()

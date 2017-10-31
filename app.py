@@ -11,6 +11,10 @@ client_path = 'client/build'
 
 def create_app():
     app = Flask(__name__, static_folder=client_path)
+
+    if os.environ.get('APP_SETTINGS') == None:
+        os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
+
     app.config.from_object(os.environ['APP_SETTINGS'])
     db.init_app(app)
 
