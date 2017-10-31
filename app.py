@@ -238,12 +238,9 @@ def create_app():
     return app
 
 
-# Boot
+# Development Server
 if __name__ == '__main__':
-    try:
-        os.environ['APP_SETTINGS']
-    except:
-        os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
+    os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
 
     app = create_app()
 

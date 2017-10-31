@@ -12,7 +12,7 @@ Setup
 1. You will need `python` (with `pip`), `node` (with `yarn`) and `sqlite` on your local machine.
 2. To install python dependencies run `pip install -r requirements.txt`
 3. Start the python server with this command `python app.py`
-4. Seed your local database by running: `python seed.py`
+4. Create your database by running `python init_db.py` and then seed it with `python seed.py`
 4. Install client dependencies: from the client directory run `yarn install`
 5. Start the client by running `yarn start`
 
@@ -32,10 +32,16 @@ To reset your local database delete the `db.sqlite` file and restart the python 
 There is also an automated test suite which can be run using the `python test.py` for the python tests and `yarn test` inside the client directory to run javascript tests.
 
 
-Zuluru Integration
-------------------
+Operations
+----------
 
-If you need to test zuluru scraping or need to set an environment variable create a `.env` file and it will be loaded.
+This app is deployed to Heroku.
+
+
+To create the database run `heroku run python init_db.py`
+
+
+To sync teams from Zuluru run `heroku run python zuluru_sync.py`
 
 
 Contributing
