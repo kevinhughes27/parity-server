@@ -1,0 +1,22 @@
+{
+  "name": "parity-server",
+  "private": "true",
+  "engines": {
+    "node": ">= 6.11.1",
+    "yarn": ">= 0.24.5"
+  },
+  "subPackages": [
+    "client"
+  ],
+  "scripts": {
+    "postinstall": "subpkg install",
+    "build": "subpkg build"
+  },
+  "dependencies": {
+    "subpackage": "^1.1.0"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ]
+}
