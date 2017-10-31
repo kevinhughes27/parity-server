@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
 
 from models import db, Game, Stats, Team, Player
 from utils import StatsCalculator
@@ -8,24 +7,13 @@ import os
 import json
 import datetime
 
-# Directories
-base_dir = os.path.abspath(os.path.dirname(__file__))
-db_path = os.path.join(base_dir, 'db.sqlite')
 client_path = 'client/build'
 
 def create_app():
-    # App
     app = Flask(__name__, static_folder=client_path)
-    if os.name == 'nt':
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
-    else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + db_path
-
-    # Database
+    app.config.from_object(os.environ['APP_SETTINGS'])
     db.init_app(app)
-    if (os.path.exists(db_path) == False):
-        with app.app_context():
-            db.create_all()
+
 
     # Upload
     @app.route('/upload', methods=['POST'])
@@ -63,6 +51,7 @@ def create_app():
         db.session.commit()
 
         return ('', 201)
+
 
     # API
     @app.route('/teams')
@@ -136,6 +125,7 @@ def create_app():
 
         return jsonify({"stats": stats})
 
+
     @app.route('/weeks')
     def weeks():
         """
@@ -153,6 +143,7 @@ def create_app():
         query = db.session.query(Game.week.distinct().label("week"))
         weeks = [row.week for row in query.all()]
         return jsonify(sorted(weeks))
+
 
     @app.route('/weeks/<num>')
     def week(num):
@@ -189,6 +180,7 @@ def create_app():
 
         return jsonify({"week": num, "stats": stats})
 
+
     @app.route('/games')
     def games():
         """
@@ -202,6 +194,7 @@ def create_app():
             games.append(game)
 
         return jsonify(games)
+
 
     @app.route('/games/<id>')
     def game(id):
@@ -229,6 +222,7 @@ def create_app():
         game = Game.query.get(id)
         return jsonify(game.to_dict())
 
+
     # Client
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
@@ -243,7 +237,18 @@ def create_app():
 
     return app
 
+
 # Boot
 if __name__ == '__main__':
+    try:
+        os.environ['APP_SETTINGS']
+    except:
+        os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
+
     app = create_app()
+
+    if app.config['DEVELOPMENT']:
+        with app.app_context():
+            db.create_all()
+
     app.run(use_reloader=True)

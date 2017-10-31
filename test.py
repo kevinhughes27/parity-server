@@ -1,6 +1,7 @@
 from flask_testing import TestCase
 import unittest
 import json
+import os
 
 from app import db, create_app
 from models import db, Player, Stats
@@ -9,8 +10,6 @@ from utils import StatsCalculator
 class Test(TestCase):
     def create_app(self):
         app = create_app()
-        app.config['TESTING'] = True
-        app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite://"
         return app
 
     def setUp(self):
@@ -36,5 +35,7 @@ class Test(TestCase):
     #     stats = StatsCalculator(game_id, points).run()
     #     # assert
 
+
 if __name__ == '__main__':
+    os.environ['APP_SETTINGS'] = 'config.TestingConfig'
     unittest.main()
