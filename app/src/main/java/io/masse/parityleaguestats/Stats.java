@@ -249,10 +249,10 @@ public class Stats extends Activity {
     private void uploadGame() {
         try {
             String json = bookkeeper.serialize().toString();
+            saveBackup();
             new uploadGame(context).execute(json);
 
         } catch (Exception e) {
-            saveBackup();
             e.printStackTrace();
             Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
         }
