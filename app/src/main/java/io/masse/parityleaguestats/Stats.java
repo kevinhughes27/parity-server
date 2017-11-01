@@ -24,6 +24,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Team;
@@ -263,9 +265,15 @@ public class Stats extends Activity {
             String json = bookkeeper.serialize().toString();
 
             File pathToExternalStorage = Environment.getExternalStorageDirectory();
-            String fileName = "ParityBackup_" + DateTime.now().toString() + ".json";
+            File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats");
 
-            File file = new File(pathToExternalStorage, fileName);
+            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+
+            String fileName = "ParityBackup_" + timestamp + ".json";
+
+            backupDirectory.mkdir();
+
+            File file = new File(backupDirectory, fileName);
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(json.getBytes());
             fos.close();
