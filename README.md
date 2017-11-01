@@ -13,10 +13,15 @@ Setup
 2. To install python dependencies run `pip install -r requirements.txt`
 3. Start the python server with this command `python app.py`
 4. Create your database by running `python init_db.py` and then seed it with `python seed.py`
-4. Install client dependencies: from the client directory run `yarn install`
-5. Start the client by running `yarn start`
+5. Install client dependencies: from the client directory run `yarn install`
+6. Start the client by running `yarn start`
 
 Yarn will start a local server on port 3000 for developing on the frontend of the website. The yarn development server will proxy all API requests to port 5000 where it expects the python server to be running. The python server returns data to the frontend. On production the python server serves a static build of the frontend (this can be tested locally by running yarn build and then visiting localhost:5000).
+
+Additional notes for those using Visual Studio 2017, depending on the selected workload
+- VS2017 installs an older version of node. Get the latest version, then ensure it is referenced correctly in the path by going to Tools->Options->Projects and Solutions->Web Package Management->External Web Tools, then add the Node install directory to the top of the list
+- VS2017 installs Python36 at C:\Program Files. Be sure to add C:\Program Files\Python36 and C:\Program Files\Python36\Scripts to your PATH
+- If yarn is not there, can use this to get it: npm install -g yarn 
 
 Testing
 -------
