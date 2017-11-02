@@ -40,11 +40,13 @@ class StatsCalculator:
                 previous_previous_event = events[idx-2]
                 previous_event = events[idx-1]
 
-                if previous_event['type'] == 'PASS':
+                if previous_event['type'] == 'PASS' and previous_event['secondActor'] == event['firstActor']:
                     self.add_stat(previous_event['firstActor'], 'assists')
 
                     if previous_previous_event['type'] == 'PASS':
                         self.add_stat(previous_previous_event['firstActor'], 'second_assists')
+                elif previous_event['type'] == 'DEFENSE':
+                    self.add_stat(event['firstActor'], 'callahan')
 
                 # Finish Point
                 offenseScored = event['firstActor'] in offensePlayers
