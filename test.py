@@ -388,10 +388,9 @@ class Test(TestCase):
             else:
                 assert normalized_stats["completions"] == 0
 
-            if player_name in ['Christopher Keates']:
+            if player_name in ['Christopher Keates', 'Benjamin Piper']:
                 assert normalized_stats["catches"] == 2
             elif player_name in ['Justine Price', 
-                                 'Benjamin Piper', 
                                  'Jessie Robinson', 
                                  'Scott Higgins', 
                                  'Martin Cloake',
@@ -414,12 +413,12 @@ class Test(TestCase):
             else:
                 assert normalized_stats["goals"] == 0
 
-            if player_name in ['Justine Price', 'Scott Higgins', 'Benjamin Piper']:
+            if player_name in ['Justine Price', 'Jessie Robinson', 'Scott Higgins', 'Benjamin Piper']:
                 assert normalized_stats["assists"] == 1
             else:
                 assert normalized_stats["assists"] == 0
 
-            if player_name in ['Christopher Keates', 'Brian Kells', 'Patrick McKelvey']:
+            if player_name in ['Christopher Keates', 'Chris Sullivan', 'Brian Kells', 'Patrick McKelvey']:
                 assert normalized_stats["second_assists"] == 1
             else:
                 assert normalized_stats["second_assists"] == 0
@@ -609,14 +608,18 @@ class Test(TestCase):
 
             if player_name in ['Owen Lumley']:
                 assert normalized_stats["completions"] == 3
-            elif player_name in ['Kevin Barford']:
+            elif player_name in ['Kevin Barford', 'Sebastien Belanger']:
                 assert normalized_stats["completions"] == 2
-            elif player_name in ['Michael Colantonio', 'Wing-Leung Chan', 'Sebastien Belanger']:
+            elif player_name in ['Michael Colantonio', 'Wing-Leung Chan']:
                 assert normalized_stats["completions"] == 1
             else:
                 assert normalized_stats["completions"] == 0
 
-            if player_name in ['Kevin Barford', 'Wing-Leung Chan', 'Sina Dee', 'Michael Colantonio']:
+            if player_name in ['Kevin Barford']:
+                assert normalized_stats["catches"] == 3
+            elif player_name in ['Wing-Leung Chan', 'Michael Colantonio']:
+                assert normalized_stats["catches"] == 2
+            elif player_name in ['Stephen Close', 'Sina Dee']:
                 assert normalized_stats["catches"] == 1
             else:
                 assert normalized_stats["catches"] == 0

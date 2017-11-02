@@ -19,8 +19,10 @@ class StatsCalculator:
 
         for idx, event in enumerate(events):
             if event['type'] == 'PASS':
-                self.add_stat(event['firstActor'], 'completions')
-                self.add_stat(event['secondActor'], 'catches')
+                next_event = events[idx+1]
+                if next_event['type'] != 'DROP':
+                    self.add_stat(event['firstActor'], 'completions')
+                    self.add_stat(event['secondActor'], 'catches')
 
             elif event['type'] == 'DROP':
                 previous_event = events[idx-1]
@@ -45,7 +47,7 @@ class StatsCalculator:
 
                     if previous_previous_event['type'] == 'PASS':
                         self.add_stat(previous_previous_event['firstActor'], 'second_assists')
-                elif previous_event['type'] == 'DEFENSE':
+                elif previous_event['type'] == 'DEFENSE' or previous_event['type'] == 'DROP':
                     self.add_stat(event['firstActor'], 'callahan')
 
                 # Finish Point
