@@ -57,13 +57,13 @@ class Test(TestCase):
             normalized_stats["d_points_against"] = 0
 
         print(player_name,
-            "goals:", normalized_stats["goals"],
-            "assists:", normalized_stats["assists"],
-            "second_assists:", normalized_stats["second_assists"],
-            "d_blocks:", normalized_stats["d_blocks"],
-            "completions:", normalized_stats["completions"], 
-            "throw_aways:", normalized_stats["throw_aways"],
-            "threw_drops:", normalized_stats["threw_drops"],
+            "g:", normalized_stats["goals"],
+            "a:", normalized_stats["assists"],
+            "2nd:", normalized_stats["second_assists"],
+            "d:", normalized_stats["d_blocks"],
+            "comp:", normalized_stats["completions"], 
+            "ta:", normalized_stats["throw_aways"],
+            "td:", normalized_stats["threw_drops"],
             "catches:", normalized_stats["catches"],
             "drops", normalized_stats["drops"],
             "pulls:", normalized_stats["pulls"],
@@ -127,6 +127,66 @@ class Test(TestCase):
                 assert normalized_stats["d_points_against"] == 1
             else:
                 assert normalized_stats["d_points_against"] == 0
+
+
+    def test_callahan(self):
+        with open('data/test/callahan.json') as f:
+            game_str = f.read()
+        self.client.post('/upload', data=game_str, content_type='application/json')
+        print("-------- Game: callahan.json")
+
+        game = Game.query.filter_by(week=0).first()
+        rosters = json.loads(game.home_roster) + json.loads(game.away_roster)
+        for player_name in rosters:
+            normalized_stats = self.get_normalized_stats(player_name)
+
+            if player_name == 'Jessie Robinson':
+                assert normalized_stats["pulls"] == 1
+            else:
+                assert normalized_stats["pulls"] == 0
+
+            if player_name in ['Brian Kells', 'Kevin Hughes(S)']:
+                assert normalized_stats["completions"] == 1
+            else:
+                assert normalized_stats["completions"] == 0
+
+            if player_name in ['Kevin Hughes(S)', 'Ashlin Kelly']:
+                assert normalized_stats["catches"] == 1
+            else:
+                assert normalized_stats["catches"] == 0
+
+            if player_name in ['Ashlin Kelly']:
+                assert normalized_stats["throw_aways"] == 1
+            else:
+                assert normalized_stats["throw_aways"] == 0
+
+            if player_name == 'Krys Kudakiewicz':
+                assert normalized_stats["goals"] == 1
+            else:
+                assert normalized_stats["goals"] == 0
+
+            if player_name == 'Krys Kudakiewicz':
+                assert normalized_stats["d_blocks"] == 1
+            else:
+                assert normalized_stats["d_blocks"] == 0
+
+            if player_name == 'Krys Kudakiewicz':
+                assert normalized_stats["callahan"] == 1
+            else:
+                assert normalized_stats["callahan"] == 0
+
+            assert normalized_stats["assists"] == 0
+            assert normalized_stats["second_assists"] == 0
+
+            if player_name in ["Rob Ives", "Brent Burton", "Christopher Keates", "Krys Kudakiewicz", "Justine Price", "Jessie Robinson"]:
+                assert normalized_stats["d_points_for"] == 1
+            else:
+                assert normalized_stats["d_points_for"] == 0
+            
+            if player_name in ["Brian Kells", "Benjamin Piper", "Jim Robinson", "Kevin Hughes(S)", "Ashlin Kelly", "Carrie-Anne Whyte"]:
+                assert normalized_stats["o_points_against"] == 1
+            else:
+                assert normalized_stats["o_points_against"] == 0
 
 
     def test_catch_d(self):
@@ -308,45 +368,118 @@ class Test(TestCase):
         for player_name in rosters:
             normalized_stats = self.get_normalized_stats(player_name)
 
-    #        if player_name in ['Owen Lumley', 'Frederic Caron']:
-    #            assert normalized_stats["pulls"] == 1
-    #        else:
-    #            assert normalized_stats["pulls"] == 0
+            if player_name in ['Brian Kells']:
+                assert normalized_stats["pulls"] == 1
+            else:
+                assert normalized_stats["pulls"] == 0
 
-    #        if player_name in ['Michael O\'Hare', 'Kevin Hughes', 'Will Leckie', 'An Tran', 'Ryan Mussell']:
-    #            assert normalized_stats["completions"] == 1
-    #        else:
-    #            assert normalized_stats["completions"] == 0
+            if player_name in ['Patrick McKelvey']:
+                assert normalized_stats["completions"] == 2
+            elif player_name in ['Christopher Keates', 
+                               'Justine Price', 
+                               'Chris Sullivan', 
+                               'Jessie Robinson',
+                               'Brian Kells',
+                               'Scott Higgins',
+                               'Tim Kealey',
+                               'Benjamin Piper'
+                               ]:
+                assert normalized_stats["completions"] == 1
+            else:
+                assert normalized_stats["completions"] == 0
 
-    #        if player_name in ['Kevin Hughes', 'Will Leckie', 'Andrea Proulx', 'Ryan Mussell', 'Jon Rowe']:
-    #            assert normalized_stats["catches"] == 1
-    #        else:
-    #            assert normalized_stats["catches"] == 0
+            if player_name in ['Christopher Keates']:
+                assert normalized_stats["catches"] == 2
+            elif player_name in ['Justine Price', 
+                                 'Benjamin Piper', 
+                                 'Jessie Robinson', 
+                                 'Scott Higgins', 
+                                 'Martin Cloake',
+                                 'Patrick McKelvey',
+                                 'Jim Robinson'
+                                 ]:
+                assert normalized_stats["catches"] == 1
+            else:
+                assert normalized_stats["catches"] == 0
 
-    #        if player_name in ['Andrea Proulx', 'Jon Rowe']:
-    #            assert normalized_stats["goals"] == 1
-    #        else:
-    #            assert normalized_stats["goals"] == 0
+            if player_name in ['Carrie-Anne Whyte']:
+                assert normalized_stats["drops"] == 1
+            else:
+                assert normalized_stats["drops"] == 0
 
-    #        if player_name in ['Will Leckie', 'Ryan Mussell']:
-    #            assert normalized_stats["assists"] == 1
-    #        else:
-    #            assert normalized_stats["assists"] == 0
+            if player_name in ['Christopher Keates']:
+                assert normalized_stats["goals"] == 2
+            elif player_name in ['Martin Cloake', 'Jim Robinson']:
+                assert normalized_stats["goals"] == 1
+            else:
+                assert normalized_stats["goals"] == 0
 
-    #        if player_name in ['Kevin Hughes', 'An Tran']:
-    #            assert normalized_stats["second_assists"] == 1
-    #        else:
-    #            assert normalized_stats["second_assists"] == 0
+            if player_name in ['Justine Price', 'Scott Higgins', 'Benjamin Piper']:
+                assert normalized_stats["assists"] == 1
+            else:
+                assert normalized_stats["assists"] == 0
 
-    #        if player_name in ["Nicholas Aghajanian", "Kevin Hughes", "Will Leckie", "Michael O'Hare", "Andrea Proulx", "Megan Robb", "Ryan Mussell", "Jon Rowe", "Matthew Schijns", "David Townsend", "Karen Kavanagh", "An Tran"]:
-    #            assert normalized_stats["o_points_for"] == 1
-    #        else:
-    #            assert normalized_stats["o_points_for"] == 0
+            if player_name in ['Christopher Keates', 'Brian Kells', 'Patrick McKelvey']:
+                assert normalized_stats["second_assists"] == 1
+            else:
+                assert normalized_stats["second_assists"] == 0
+
+            if player_name in ["Brent Burton", 
+                               "Jason Fraser", 
+                               "Richard Gregory", 
+                               "Christopher Keates", 
+                               "Justine Price", 
+                               "Meagan Doyle",
+                               "Brian Kells",
+                               "Jonathan Champagne",
+                               "Martin Cloake",
+                               "Scott Higgins",
+                               "Christine Beals",
+                               "Ashlin Kelly",
+                               "Tim Kealey",
+                               "Patrick McKelvey",
+                               "Benjamin Piper",
+                               "Jim Robinson",
+                               "Sam Lee",
+                               "Carrie-Anne Whyte"
+                               ]:
+                assert normalized_stats["o_points_for"] == 1
+            else:
+                assert normalized_stats["o_points_for"] == 0
             
-    #        if player_name in ["Owen Lumley", "Kevin Barford", "Wing-Leung Chan", "Stephen Close", "Heather McCabe", "Darlene Riley", "Jeremy Bryan", "Frederic Caron", "Jonathan Pindur", "Jay Thor Turner", "Sandra Hanson", "Taka Yamada"]:
-    #            assert normalized_stats["d_points_against"] == 1
-    #        else:
-    #            assert normalized_stats["d_points_against"] == 0
+            if player_name in ["Brian Kells", 
+                               "Jonathan Champagne", 
+                               "Martin Cloake", 
+                               "Scott Higgins", 
+                               "Christine Beals", 
+                               "Ashlin Kelly",
+                               "Simon Berry",
+                               "Jason Fraser",
+                               "Richard Gregory",
+                               "Christopher Keates",
+                               "Justine Price",
+                               "Meagan Doyle",
+                               "Rob Ives",
+                               "Brent Burton",
+                               "Krys Kudakiewicz",
+                               "Chris Sullivan",
+                               "Jessie Robinson",
+                               "Michelle Warren"
+                               ]:
+                assert normalized_stats["d_points_against"] == 1
+            else:
+                assert normalized_stats["d_points_against"] == 0
+
+            if player_name in ["Rob Ives", "Christopher Keates", "Krys Kudakiewicz", "Chris Sullivan", "Jessie Robinson", "Michelle Warren"]:
+                assert normalized_stats["d_points_for"] == 1
+            else:
+                assert normalized_stats["d_points_for"] == 0
+
+            if player_name in ["Tim Kealey", "Patrick McKelvey", "Benjamin Piper", "Jim Robinson", "Sam Lee", "Carrie-Anne Whyte"]:
+                assert normalized_stats["o_points_against"] == 1
+            else:
+                assert normalized_stats["o_points_against"] == 0
+
 
 
     def test_mini_game2(self):
@@ -469,50 +602,61 @@ class Test(TestCase):
         for player_name in rosters:
             normalized_stats = self.get_normalized_stats(player_name)
 
-            #if player_name in ['Michael O\'Hare']:
-            #    assert normalized_stats["pulls"] == 1
-            #else:
-            #    assert normalized_stats["pulls"] == 0
+            if player_name in ['Jamie Wildgen']:
+                assert normalized_stats["pulls"] == 1
+            else:
+                assert normalized_stats["pulls"] == 0
 
-            #if player_name in ['Amos Lee', 'Mark Donahue', 'Kevin Hughes', 'Michael O\'Hare']:
-            #    assert normalized_stats["completions"] == 1
-            #else:
-            #    assert normalized_stats["completions"] == 0
+            if player_name in ['Owen Lumley']:
+                assert normalized_stats["completions"] == 3
+            elif player_name in ['Kevin Barford']:
+                assert normalized_stats["completions"] == 2
+            elif player_name in ['Michael Colantonio', 'Wing-Leung Chan', 'Sebastien Belanger']:
+                assert normalized_stats["completions"] == 1
+            else:
+                assert normalized_stats["completions"] == 0
 
-            #if player_name in ['Mark Donahue', 'Greg Probe', 'Michael O\'Hare', 'Will Leckie']:
-            #    assert normalized_stats["catches"] == 1
-            #else:
-            #    assert normalized_stats["catches"] == 0
+            if player_name in ['Kevin Barford', 'Wing-Leung Chan', 'Sina Dee', 'Michael Colantonio']:
+                assert normalized_stats["catches"] == 1
+            else:
+                assert normalized_stats["catches"] == 0
 
-            #if player_name in ['Greg Probe']:
-            #    assert normalized_stats["throw_aways"] == 1
-            #else:
-            #    assert normalized_stats["throw_aways"] == 0
+            if player_name in ['Wing-Leung Chan']:
+                assert normalized_stats["throw_aways"] == 3
+            elif player_name in ['Sina Dee']:
+                assert normalized_stats["throw_aways"] == 3
+            elif player_name in ['Stephen Close']:
+                assert normalized_stats["throw_aways"] == 1
+            else:
+                assert normalized_stats["throw_aways"] == 0
 
-            #if player_name in ['Will Leckie']:
-            #    assert normalized_stats["goals"] == 1
-            #else:
-            #    assert normalized_stats["goals"] == 0
+            if player_name in ['Sina Dee', 'Wing-Leung Chan']:
+                assert normalized_stats["drops"] == 1
+            else:
+                assert normalized_stats["drops"] == 0
 
-            #if player_name in ['Michael O\'Hare']:
-            #    assert normalized_stats["assists"] == 1
-            #else:
-            #    assert normalized_stats["assists"] == 0
+            if player_name in ['Sebastien Belanger']:
+                assert normalized_stats["goals"] == 1
+            else:
+                assert normalized_stats["goals"] == 0
 
-            #if player_name in ['Kevin Hughes']:
-            #    assert normalized_stats["second_assists"] == 1
-            #else:
-            #    assert normalized_stats["second_assists"] == 0
+            if player_name in ['Sebastien Belanger']:
+                assert normalized_stats["callahan"] == 1
+            else:
+                assert normalized_stats["callahan"] == 0
 
-            #if player_name in ["Kevin Hughes", "Will Leckie", "Michael O'Hare", "Jonathan Pindur", "Megan Robb", "Taka Yamada"]:
-            #    assert normalized_stats["d_points_for"] == 1
-            #else:
-            #    assert normalized_stats["d_points_for"] == 0
+            assert normalized_stats["assists"] == 0
+            assert normalized_stats["second_assists"] == 0
+
+            if player_name in ["Jamie Wildgen", "Sebastien Belanger", "Michael Colantonio", "Sina Dee", "Melissa Jess", "Laura Knowles"]:
+                assert normalized_stats["d_points_for"] == 1
+            else:
+                assert normalized_stats["d_points_for"] == 0
             
-            #if player_name in ["Amos Lee", "Mark Donahue", "Greg Probe", "Trevor Stocki", "Angela Mueller", "Paula Saliba"]:
-            #    assert normalized_stats["o_points_against"] == 1
-            #else:
-            #    assert normalized_stats["o_points_against"] == 0
+            if player_name in ["Owen Lumley", "Kevin Barford", "Wing-Leung Chan", "Stephen Close", "Karen Kavanagh", "Heather McCabe"]:
+                assert normalized_stats["o_points_against"] == 1
+            else:
+                assert normalized_stats["o_points_against"] == 0
 
     # def test_stats_calculator(self):
     #     game = json.loads(open('data/ocua_17-18_test.json').read())
