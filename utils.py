@@ -27,7 +27,7 @@ class StatsCalculator:
             elif event['type'] == 'DROP':
                 previous_event = events[idx-1]
                 self.add_stat(event['firstActor'], 'drops')
-                self.add_stat(previous_event['secondActor'], 'threw_drops')
+                self.add_stat(previous_event['firstActor'], 'threw_drops')
 
             elif event['type'] == 'THROWAWAY':
                 self.add_stat(event['firstActor'], 'throw_aways')

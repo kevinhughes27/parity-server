@@ -279,6 +279,11 @@ class Test(TestCase):
             else:
                 assert normalized_stats["drops"] == 0
 
+            if player_name in ['Craig Anderson']:
+                assert normalized_stats["threw_drops"] == 1
+            else:
+                assert normalized_stats["threw_drops"] == 0
+
             if player_name == 'Laura Chambers Storey':
                 assert normalized_stats["goals"] == 1
             else:
@@ -405,6 +410,11 @@ class Test(TestCase):
                 assert normalized_stats["drops"] == 1
             else:
                 assert normalized_stats["drops"] == 0
+
+            if player_name in ['Benjamin Piper']:
+                assert normalized_stats["threw_drops"] == 1
+            else:
+                assert normalized_stats["threw_drops"] == 0
 
             if player_name in ['Christopher Keates']:
                 assert normalized_stats["goals"] == 2
@@ -637,6 +647,11 @@ class Test(TestCase):
                 assert normalized_stats["drops"] == 1
             else:
                 assert normalized_stats["drops"] == 0
+
+            if player_name in ['Michael Colantonio', 'Kevin Barford']:
+                assert normalized_stats["threw_drops"] == 1
+            else:
+                assert normalized_stats["threw_drops"] == 0
 
             if player_name in ['Sebastien Belanger']:
                 assert normalized_stats["goals"] == 1
