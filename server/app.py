@@ -7,7 +7,7 @@ import os
 import json
 import datetime
 
-client_path = 'client/build'
+client_path = '../client/build'
 
 def create_app():
     app = Flask(__name__, static_folder=client_path)
