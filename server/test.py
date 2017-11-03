@@ -5,7 +5,7 @@ import unittest
 import json
 import os
 
-from app import db, create_app
+from app import create_app
 from models import db, Game, Player, Stats
 from utils import StatsCalculator
 
