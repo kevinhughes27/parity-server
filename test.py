@@ -39,6 +39,9 @@ class Test(TestCase):
             normalized_stats["o_points_against"] = stats.o_points_against
             normalized_stats["d_points_for"] = stats.d_points_for
             normalized_stats["d_points_against"] = stats.d_points_against
+            normalized_stats["points_played"] = stats.points_played()
+            normalized_stats["salary_delta"] = stats.salary_delta()
+            normalized_stats["salary_delta_per_point"] = stats.salary_delta_per_point()
         else:
             normalized_stats["goals"] = 0
             normalized_stats["assists"] = 0
@@ -55,6 +58,9 @@ class Test(TestCase):
             normalized_stats["o_points_against"] = 0
             normalized_stats["d_points_for"] = 0
             normalized_stats["d_points_against"] = 0
+            normalized_stats["points_played"] = 0
+            normalized_stats["salary_delta"] = 0
+            normalized_stats["salary_delta_per_point"] = 0
 
         print(player_name,
             "g:", normalized_stats["goals"],
@@ -71,7 +77,10 @@ class Test(TestCase):
             "o_points_for:", normalized_stats["o_points_for"],
             "o_points_against:", normalized_stats["o_points_against"],
             "d_points_for:", normalized_stats["d_points_for"],
-            "d_points_against:", normalized_stats["d_points_against"]
+            "d_points_against:", normalized_stats["d_points_against"],
+            "pp:", normalized_stats["points_played"],
+            "sd:", normalized_stats["salary_delta"],
+            "sdpp:", normalized_stats["salary_delta_per_point"]
             )
 
         return normalized_stats

@@ -47,6 +47,18 @@ class Game(db.Model):
 
 
 class Stats(db.Model):
+    SALARY = {
+        'goals': 10000,
+        'assists': 10000,
+        'second_assists': 8000,
+        'd_blocks': 8000,
+        'throw_aways': -5000,
+        'threw_drops': -2500,
+        'drops': -5000,
+        'completions': 1000,
+        'catches': 1000
+    }
+
     id = db.Column(db.Integer, primary_key=True)
     game_id = db.Column(db.Integer, nullable=False)
     player_id = db.Column(db.Integer, nullable=False)
@@ -65,6 +77,27 @@ class Stats(db.Model):
     o_points_against = db.Column(db.Integer, default=0)
     d_points_for = db.Column(db.Integer, default=0)
     d_points_against = db.Column(db.Integer, default=0)
+
+    def salary_delta(self):
+        return ((self.goals or 0) * self.SALARY['goals']
+                + self.assists * self.SALARY['assists'] 
+                + self.second_assists * self.SALARY['second_assists']
+                + self.d_blocks * self.SALARY['d_blocks']
+                + self.completions * self.SALARY['completions']
+                + self.throw_aways * self.SALARY['throw_aways']
+                + self.threw_drops * self.SALARY['threw_drops']
+                + self.catches * self.SALARY['catches']
+                + self.drops * self.SALARY['drops']
+                )
+    
+    def points_played(self):
+        return self.o_points_for + self.o_points_against + self.d_points_for + self.d_points_against
+
+    def salary_delta_per_point(self):
+        if self.points_played() == 0:
+            return 0
+        else:
+            return self.salary_delta() / self.points_played()
 
     def __init__(self, game_id, player_id):
         self.game_id = game_id
