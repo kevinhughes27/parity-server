@@ -79,7 +79,7 @@ class Stats(db.Model):
     d_points_against = db.Column(db.Integer, default=0)
 
     def salary_delta(self):
-        return ((self.goals or 0) * self.SALARY['goals']
+        return (self.goals * self.SALARY['goals']
                 + self.assists * self.SALARY['assists'] 
                 + self.second_assists * self.SALARY['second_assists']
                 + self.d_blocks * self.SALARY['d_blocks']
