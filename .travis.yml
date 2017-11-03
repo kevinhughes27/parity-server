@@ -9,5 +9,5 @@ install:
   - pip3 install -r requirements.txt
   - cd client && yarn install && cd ..
 script:
-  - python3 test.py
+  - python3 server/test.py
   - cd client && yarn test && cd ..

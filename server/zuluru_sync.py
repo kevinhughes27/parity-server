@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from app import db, create_app
 from models import db, Team, Player
 

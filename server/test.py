@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from flask_testing import TestCase
 import unittest
 import json
@@ -67,7 +69,7 @@ class Test(TestCase):
             "a:", normalized_stats["assists"],
             "2nd:", normalized_stats["second_assists"],
             "d:", normalized_stats["d_blocks"],
-            "comp:", normalized_stats["completions"], 
+            "comp:", normalized_stats["completions"],
             "ta:", normalized_stats["throw_aways"],
             "td:", normalized_stats["threw_drops"],
             "catches:", normalized_stats["catches"],
@@ -131,7 +133,7 @@ class Test(TestCase):
                 assert normalized_stats["o_points_for"] == 1
             else:
                 assert normalized_stats["o_points_for"] == 0
-            
+
             if player_name in ["Owen Lumley", "Kevin Barford", "Wing-Leung Chan", "Stephen Close", "Karen Kavanagh", "Heather McCabe"]:
                 assert normalized_stats["d_points_against"] == 1
             else:
@@ -191,7 +193,7 @@ class Test(TestCase):
                 assert normalized_stats["d_points_for"] == 1
             else:
                 assert normalized_stats["d_points_for"] == 0
-            
+
             if player_name in ["Brian Kells", "Benjamin Piper", "Jim Robinson", "Kevin Hughes(S)", "Ashlin Kelly", "Carrie-Anne Whyte"]:
                 assert normalized_stats["o_points_against"] == 1
             else:
@@ -250,7 +252,7 @@ class Test(TestCase):
                 assert normalized_stats["o_points_against"] == 1
             else:
                 assert normalized_stats["o_points_against"] == 0
-            
+
             if player_name in ["Brian Kells", "Nick Amlin", "Jonathan Champagne", "Martin Cloake", "Hannah Dawson", "Marie-Ange Gravel"]:
                 assert normalized_stats["d_points_for"] == 1
             else:
@@ -312,7 +314,7 @@ class Test(TestCase):
                 assert normalized_stats["o_points_against"] == 1
             else:
                 assert normalized_stats["o_points_against"] == 0
-            
+
             if player_name in ["Marcus Bordage", "Steve Chow", "Morgan Howard", "Jeff Hunt", "Kindha Gorman", "Laura Chambers Storey"]:
                 assert normalized_stats["d_points_for"] == 1
             else:
@@ -364,7 +366,7 @@ class Test(TestCase):
                 assert normalized_stats["o_points_for"] == 1
             else:
                 assert normalized_stats["o_points_for"] == 0
-            
+
             if player_name in ["Owen Lumley", "Kevin Barford", "Wing-Leung Chan", "Stephen Close", "Heather McCabe", "Darlene Riley", "Jeremy Bryan", "Frederic Caron", "Jonathan Pindur", "Jay Thor Turner", "Sandra Hanson", "Taka Yamada"]:
                 assert normalized_stats["d_points_against"] == 1
             else:
@@ -389,9 +391,9 @@ class Test(TestCase):
 
             if player_name in ['Patrick McKelvey']:
                 assert normalized_stats["completions"] == 2
-            elif player_name in ['Christopher Keates', 
-                               'Justine Price', 
-                               'Chris Sullivan', 
+            elif player_name in ['Christopher Keates',
+                               'Justine Price',
+                               'Chris Sullivan',
                                'Jessie Robinson',
                                'Brian Kells',
                                'Scott Higgins',
@@ -404,9 +406,9 @@ class Test(TestCase):
 
             if player_name in ['Christopher Keates', 'Benjamin Piper']:
                 assert normalized_stats["catches"] == 2
-            elif player_name in ['Justine Price', 
-                                 'Jessie Robinson', 
-                                 'Scott Higgins', 
+            elif player_name in ['Justine Price',
+                                 'Jessie Robinson',
+                                 'Scott Higgins',
                                  'Martin Cloake',
                                  'Patrick McKelvey',
                                  'Jim Robinson'
@@ -442,11 +444,11 @@ class Test(TestCase):
             else:
                 assert normalized_stats["second_assists"] == 0
 
-            if player_name in ["Brent Burton", 
-                               "Jason Fraser", 
-                               "Richard Gregory", 
-                               "Christopher Keates", 
-                               "Justine Price", 
+            if player_name in ["Brent Burton",
+                               "Jason Fraser",
+                               "Richard Gregory",
+                               "Christopher Keates",
+                               "Justine Price",
                                "Meagan Doyle",
                                "Brian Kells",
                                "Jonathan Champagne",
@@ -464,12 +466,12 @@ class Test(TestCase):
                 assert normalized_stats["o_points_for"] == 1
             else:
                 assert normalized_stats["o_points_for"] == 0
-            
-            if player_name in ["Brian Kells", 
-                               "Jonathan Champagne", 
-                               "Martin Cloake", 
-                               "Scott Higgins", 
-                               "Christine Beals", 
+
+            if player_name in ["Brian Kells",
+                               "Jonathan Champagne",
+                               "Martin Cloake",
+                               "Scott Higgins",
+                               "Christine Beals",
                                "Ashlin Kelly",
                                "Simon Berry",
                                "Jason Fraser",
@@ -545,7 +547,7 @@ class Test(TestCase):
                 assert normalized_stats["o_points_for"] == 1
             else:
                 assert normalized_stats["o_points_for"] == 0
-            
+
             if player_name in ["Jamie Wildgen", "Sebastien Belanger", "Michael Colantonio", "Sina Dee", "Melissa Jess", "Laura Knowles", "Ryan Mussell", "Jon Rowe", "Matthew Schijns", "David Townsend", "Darlene Riley", "An Tran"]:
                 assert normalized_stats["d_points_against"] == 1
             else:
@@ -602,7 +604,7 @@ class Test(TestCase):
                 assert normalized_stats["d_points_for"] == 1
             else:
                 assert normalized_stats["d_points_for"] == 0
-            
+
             if player_name in ["Amos Lee", "Mark Donahue", "Greg Probe", "Trevor Stocki", "Angela Mueller", "Paula Saliba"]:
                 assert normalized_stats["o_points_against"] == 1
             else:
@@ -679,7 +681,7 @@ class Test(TestCase):
                 assert normalized_stats["d_points_for"] == 1
             else:
                 assert normalized_stats["d_points_for"] == 0
-            
+
             if player_name in ["Owen Lumley", "Kevin Barford", "Wing-Leung Chan", "Stephen Close", "Karen Kavanagh", "Heather McCabe"]:
                 assert normalized_stats["o_points_against"] == 1
             else:
