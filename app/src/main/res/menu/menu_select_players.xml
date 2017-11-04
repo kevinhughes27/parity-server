@@ -3,7 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btnHalf"
+        android:id="@+id/action_edit_players"
+        android:enabled="true"
+        android:title="@string/str_action_edit_players"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_record_half"
         android:enabled="true"
         android:title="Half"
         android:visible="true"

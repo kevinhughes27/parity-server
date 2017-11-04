@@ -154,13 +154,28 @@ public class SelectPlayers extends Activity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.btnHalf:
+            case R.id.action_edit_players:
+                editRosters();
+                return true;
+            case R.id.action_record_half:
                 bookkeeper.recordHalf();
                 Toast.makeText(context, "Half Recorded", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void editRosters() {
+        Intent intent = new Intent(this, EditRosters.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("teams", teams);
+        bundle.putSerializable("bookkeeper", bookkeeper);
+        bundle.putStringArrayList("leftPlayers", leftPlayers);
+        bundle.putStringArrayList("rightPlayers", rightPlayers);
+        intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void playersSelected() {
