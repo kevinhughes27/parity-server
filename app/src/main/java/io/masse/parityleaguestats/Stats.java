@@ -212,6 +212,8 @@ public class Stats extends Activity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("bookkeeper", bookkeeper);
+        bundle.putStringArrayList("leftPlayers", leftPlayers);
+        bundle.putStringArrayList("rightPlayers", rightPlayers);
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
@@ -229,14 +231,14 @@ public class Stats extends Activity {
         if (flipPlayers) {
             HashSet<String> newLeftPlayers = new HashSet<>(leftTeam.getRoster());
             newLeftPlayers.removeAll(leftPlayers);
-            bundle.putSerializable("leftPlayers", new ArrayList<>(newLeftPlayers));
+            bundle.putStringArrayList("leftPlayers", new ArrayList<>(newLeftPlayers));
 
             HashSet<String> newRightPlayers = new HashSet<>(rightTeam.getRoster());
             newRightPlayers.removeAll(rightPlayers);
-            bundle.putSerializable("rightPlayers", new ArrayList<>(newRightPlayers));
+            bundle.putStringArrayList("rightPlayers", new ArrayList<>(newRightPlayers));
         } else {
-            bundle.putSerializable("leftPlayers", leftPlayers);
-            bundle.putSerializable("rightPlayers", rightPlayers);
+            bundle.putStringArrayList("leftPlayers", leftPlayers);
+            bundle.putStringArrayList("rightPlayers", rightPlayers);
         }
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

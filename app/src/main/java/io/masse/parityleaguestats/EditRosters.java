@@ -13,6 +13,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import io.masse.parityleaguestats.customLayout.customLinearLayout;
 import io.masse.parityleaguestats.model.Gender;
 import io.masse.parityleaguestats.model.Team;
@@ -32,6 +34,9 @@ public class EditRosters extends Activity {
     private Team leftTeam;
     private Team rightTeam;
 
+    private ArrayList<String> leftPlayersCache;
+    private ArrayList<String> rightPlayersCache;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +51,12 @@ public class EditRosters extends Activity {
     }
 
     private void loadIntent() {
-        teams = (Teams) this.getIntent().getSerializableExtra("teams");
-        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        Intent intent = this.getIntent();
+        teams = (Teams) intent.getSerializableExtra("teams");
+        bookkeeper = (Bookkeeper) intent.getSerializableExtra("bookkeeper");
+        leftPlayersCache = intent.getStringArrayListExtra("leftPlayers");
+        rightPlayersCache = intent.getStringArrayListExtra("rightPlayers");
+
         leftTeam = bookkeeper.homeTeam;
         rightTeam = bookkeeper.awayTeam;
     }
@@ -130,6 +139,12 @@ public class EditRosters extends Activity {
                                                 Bundle bundle = new Bundle();
                                                 bundle.putSerializable("teams", teams);
                                                 bundle.putSerializable("bookkeeper", bookkeeper);
+                                                if (leftPlayersCache != null) {
+                                                    bundle.putStringArrayList("leftPlayers", leftPlayersCache);
+                                                }
+                                                if (rightPlayersCache != null) {
+                                                    bundle.putStringArrayList("rightPlayers", rightPlayersCache);
+                                                }
                                                 intent.putExtras(bundle);
                                                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                                 startActivity(intent);
