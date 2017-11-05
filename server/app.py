@@ -170,15 +170,14 @@ def create_app():
                     team = game.away_team
 
                 data = player_stats.to_dict()
+                data.update({'team': team})
 
                 if player.name in stats:
-                    x = data
-                    y = stats[player.name]
-                    summed_stats = { k: x.get(k, 0) + y.get(k, 0) for k in set(x) & set(y) }
-                    summed_stats.update({'team': team})
-                    stats[player.name] = summed_stats
+                    existing_data = stats[player.name]
+                    stats_to_sum = data.keys() - ['pay', 'salary', 'salary_per_point']
+                    summed_stats = { s: data.get(s, 0) + existing_data.get(s, 0) for s in stats_to_sum }
+                    stats[player.name].update(summed_stats)
                 else:
-                    data.update({'team': team})
                     stats.update({player.name: data})
 
         # display salary
