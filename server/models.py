@@ -137,7 +137,11 @@ class Stats(db.Model):
     def _avg_salary_per_point_based_on_history(self):
         player_stats = Stats.query.filter_by(player_id=self.player_id)
         salaries = [ps.salary_per_point for ps in player_stats]
-        return sum(salaries) / len(salaries)
+
+        if len(salaries) > 0:
+            return sum(salaries) / len(salaries)
+        else:
+            return 0
 
     def to_dict(self):
         return {
