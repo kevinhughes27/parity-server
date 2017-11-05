@@ -110,24 +110,9 @@ def create_app():
              }
            }
         """
-        stats = {}
-        for game in Game.query.all():
-            for player_stats in Stats.query.filter_by(game_id=game.id):
-                player = Player.query.get(player_stats.player_id)
-
-                if player.name in json.loads(game.home_roster):
-                    team = game.home_team
-                else:
-                    team = game.away_team
-
-                data = player_stats.to_dict()
-                data.update({'team': team})
-
-                item = {}
-                item[player.name] = data
-                stats.update(item)
-
-        return jsonify({"stats": stats})
+        games = Game.query.order_by("week asc")
+        stats = build_stats_response(games)
+        return jsonify({"week": 0, "stats": stats})
 
 
     @app.route('/weeks')
@@ -164,9 +149,18 @@ def create_app():
                "Al Colantonio": {"Pulls": 1, "SalaryDelta": 2000, "Salary": 50000}
              }
            }
-         """
+        """
+        games = Game.query.filter_by(week=num)
+        stats = build_stats_response(games)
+        return jsonify({"week": num, "stats": stats})
+
+
+    def build_stats_response(games):
         stats = {}
-        for game in Game.query.filter_by(week=num):
+        week = 0
+
+        for game in games:
+            week = max(week, game.week)
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
 
@@ -176,13 +170,32 @@ def create_app():
                     team = game.away_team
 
                 data = player_stats.to_dict()
-                data.update({'team': team})
 
-                item = {}
-                item[player.name] = data
-                stats.update(item)
+                if player.name in stats:
+                    x = data
+                    y = stats[player.name]
+                    summed_stats = { k: x.get(k, 0) + y.get(k, 0) for k in set(x) & set(y) }
+                    summed_stats.update({'team': team})
+                    stats[player.name] = summed_stats
+                else:
+                    data.update({'team': team})
+                    stats.update({player.name: data})
 
-        return jsonify({"week": num, "stats": stats})
+        # display salary
+        ## multiply salary by week number for ever growing salary
+        ## add base salary
+        for player in stats:
+            base_salary = 50000 * float(week)
+            pro_rated_salary = stats[player]['salary'] * float(week)
+            stats[player]['salary'] = base_salary + pro_rated_salary
+
+        # display pay
+        for player in stats:
+            base_pay = 50000
+            pay = stats[player]['pay']
+            stats[player]['pay'] = base_pay + pay
+
+        return stats
 
 
     @app.route('/games')
