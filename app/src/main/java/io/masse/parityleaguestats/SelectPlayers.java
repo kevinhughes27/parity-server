@@ -53,13 +53,18 @@ public class SelectPlayers extends Activity {
         leftTeam = bookkeeper.homeTeam;
         rightTeam = bookkeeper.awayTeam;
 
-        leftPlayers = new ArrayList<>();
         if (this.getIntent().hasExtra("leftPlayers")) {
-            leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
+            leftPlayers = this.getIntent().getStringArrayListExtra("leftPlayers");
         }
-        rightPlayers = new ArrayList<>();
+        if (leftPlayers == null) {
+            leftPlayers = new ArrayList<>();
+        }
+
         if (this.getIntent().hasExtra("rightPlayers")) {
-            rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
+            rightPlayers = this.getIntent().getStringArrayListExtra("rightPlayers");
+        }
+        if (rightPlayers == null) {
+            rightPlayers = new ArrayList<>();
         }
     }
 
