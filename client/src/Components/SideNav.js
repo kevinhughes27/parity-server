@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 
 class SideNav extends Component {
   render () {
+    let forumUrl = 'https://www.ocua.ca/forum/33'
+    let podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-2/s-Hka7a'
     let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
 
@@ -22,6 +24,8 @@ class SideNav extends Component {
 
         <li><div className='divider'></div></li>
 
+        <li><a href={forumUrl} target='_blank'>Forum</a></li>
+        <li><a href={podcastUrl} target='_blank'>Podcast</a></li>
         <li><a href={spreadsheetUrl} target='_blank'>Spreadsheets</a></li>
         <li><a href={srcUrl} target='_blank'>Source Code</a></li>
       </div>
