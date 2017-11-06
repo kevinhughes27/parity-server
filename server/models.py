@@ -18,6 +18,7 @@ class Player(db.Model):
     def is_male(self):
         return self.gender == 'male'
 
+
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     league = db.Column(db.Text)
@@ -78,27 +79,6 @@ class Stats(db.Model):
     d_points_for = db.Column(db.Integer, default=0)
     d_points_against = db.Column(db.Integer, default=0)
 
-    def salary_delta(self):
-        return (self.goals * self.SALARY['goals']
-                + self.assists * self.SALARY['assists'] 
-                + self.second_assists * self.SALARY['second_assists']
-                + self.d_blocks * self.SALARY['d_blocks']
-                + self.completions * self.SALARY['completions']
-                + self.throw_aways * self.SALARY['throw_aways']
-                + self.threw_drops * self.SALARY['threw_drops']
-                + self.catches * self.SALARY['catches']
-                + self.drops * self.SALARY['drops']
-                )
-    
-    def points_played(self):
-        return self.o_points_for + self.o_points_against + self.d_points_for + self.d_points_against
-
-    def salary_delta_per_point(self):
-        if self.points_played() == 0:
-            return 0
-        else:
-            return self.salary_delta() / self.points_played()
-
     def __init__(self, game_id, player_id):
         self.game_id = game_id
         self.player_id = player_id
@@ -122,6 +102,47 @@ class Stats(db.Model):
         value = getattr(self, stat)
         setattr(self, stat, value + 1)
 
+    @property
+    def pay(self):
+        total = 0
+        total += self.goals * self.SALARY['goals']
+        total += self.assists * self.SALARY['assists']
+        total += self.second_assists * self.SALARY['second_assists']
+        total += self.d_blocks * self.SALARY['d_blocks']
+        total += self.completions * self.SALARY['completions']
+        total += self.throw_aways * self.SALARY['throw_aways']
+        total += self.threw_drops * self.SALARY['threw_drops']
+        total += self.catches * self.SALARY['catches']
+        total += self.drops * self.SALARY['drops']
+
+        return total
+
+    @property
+    def salary_per_point(self):
+        if self._points_played == 0:
+            return 0
+        else:
+            return self.pay / self._points_played
+
+    @property
+    def _points_played(self):
+        return self.o_points_for + self.o_points_against + self.d_points_for + self.d_points_against
+
+    @property
+    def salary(self):
+        pro_rated_number_of_points = 15
+        return self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
+
+    @property
+    def _avg_salary_per_point_based_on_history(self):
+        player_stats = Stats.query.filter_by(player_id=self.player_id)
+        salaries = [ps.salary_per_point for ps in player_stats]
+
+        if len(salaries) > 0:
+            return sum(salaries) / len(salaries)
+        else:
+            return 0
+
     def to_dict(self):
         return {
             "goals": self.goals,
@@ -138,5 +159,8 @@ class Stats(db.Model):
             "o_points_for": self.o_points_for,
             "o_points_against": self.o_points_against,
             "d_points_for": self.d_points_for,
-            "d_points_against": self.d_points_against
+            "d_points_against": self.d_points_against,
+            "pay": self.salary_per_point,
+            "salary_per_point": self.salary_per_point,
+            "salary": self.salary
         }

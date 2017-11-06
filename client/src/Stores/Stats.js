@@ -39,7 +39,7 @@ export default class Stats {
     let players = []
     _.mapKeys(this.data, (playerStats, playerName) => {
       if (playerStats['team'] === team) {
-        players.push({name: playerName, salary: playerStats['Salary']})
+        players.push({name: playerName, salary: playerStats['salary']})
       }
     })
 
