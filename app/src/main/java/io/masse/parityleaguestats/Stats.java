@@ -363,9 +363,8 @@ public class Stats extends Activity {
                 btnD.setEnabled(false);
                 btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
@@ -386,9 +385,8 @@ public class Stats extends Activity {
                 btnD.setEnabled(false);
                 btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
@@ -409,9 +407,8 @@ public class Stats extends Activity {
                 btnD.setEnabled(true);
                 btnCatchD.setEnabled(true);
                 btnThrowAway.setEnabled(true);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
@@ -433,8 +430,7 @@ public class Stats extends Activity {
                 btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(false);
                 btnPull.setEnabled(false);
-                btnUndo.setEnabled(true);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(true);
                 }
@@ -448,9 +444,8 @@ public class Stats extends Activity {
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
                 btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(true);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(false);
                 }
@@ -465,9 +460,8 @@ public class Stats extends Activity {
                 btnD.setEnabled(false);
                 btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
@@ -488,9 +482,8 @@ public class Stats extends Activity {
                 btnD.setEnabled(false);
                 btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(false);
-                btnUndo.setEnabled(true);
                 btnPull.setEnabled(false);
-                btnMode.setEnabled(true);
+
                 for (int i = 0; i < leftCount; i++){
                     layoutLeft.getChildAt(i).setEnabled(true);
                 }
