@@ -104,6 +104,7 @@ def create_app():
 
         for game in games:
             week = max(week, game.week)
+
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
 
@@ -126,19 +127,10 @@ def create_app():
                 else:
                     stats.update({player.name: data})
 
-        # display salary
-        ## multiply salary by week number for ever growing salary
-        ## add base salary
         for player in stats:
-            base_salary = 50000 * float(week)
             pro_rated_salary = stats[player]['salary'] * float(week)
-            stats[player]['salary'] = base_salary + pro_rated_salary
+            stats[player]['salary'] = pro_rated_salary
 
-        # display pay
-        for player in stats:
-            base_pay = 50000
-            pay = stats[player]['pay']
-            stats[player]['pay'] = base_pay + pay
 
         return stats
 
