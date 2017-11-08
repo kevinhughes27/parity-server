@@ -109,8 +109,11 @@ def create_app():
 
                 if player.name in json.loads(game.home_roster):
                     team = game.home_team
-                else:
+                elif player.name in json.loads(game.away_roster):
                     team = game.away_team
+
+                if "(S)" in player.name:
+                    team = "Substitute"
 
                 data = player_stats.to_dict()
                 data.update({'team': team})
