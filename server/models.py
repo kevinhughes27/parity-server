@@ -35,15 +35,13 @@ class Game(db.Model):
         return {
             "league": self.league,
             "week": self.week,
-            "teams": {
-                "home_team": json.loads(self.home_roster),
-                "away_team": json.loads(self.away_roster)
-            },
-            "score": {
-                "home_team": self.home_score,
-                "away_team": self.away_score
-            },
-            "points": json.loads(self.points),
+            "homeTeam": self.home_team,
+            "homeScore": self.home_score,
+            "homeRoster": json.loads(self.home_roster),
+            "awayTeam": self.away_team,
+            "awayScore": self.away_score,
+            "awayRoster": json.loads(self.away_roster),
+            "points": json.loads(self.points)
         }
 
 

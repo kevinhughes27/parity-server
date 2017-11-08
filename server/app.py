@@ -60,25 +60,6 @@ def create_app():
     # API
     @app.route('/teams')
     def teams():
-        """
-        @api {get} /teams List
-        @apiGroup Teams
-        @apiDescription Scrapes the latest team and roster data from Zuluru
-        @apiSuccess (200) {Object} teams key: team value: array of players
-        @apiSuccessExample {json} Example Response:
-           {
-             "Kindha's Ongoing Disappointments": {
-               "players": ["Kevin Hughes", "Jen Cluthe"],
-               "malePlayers": ["Kevin Hughes"],
-               "femalePlayers": ["Jen Cluthe"],
-             },
-             "Katie Parity": {
-               "players": ["Dan Thomson", "Andrea Proulx"],
-               "malePlayers": ["Dan Thomson"],
-               "femalePlayers": ["Andrea Proulx"],
-             }
-           }
-        """
         teams = {}
         for team in Team.query.all():
             teams[team.name] = {
@@ -98,18 +79,6 @@ def create_app():
 
     @app.route('/stats')
     def stats():
-        """
-        @api {get} /stats Cumulative
-        @apiGroup Weeks
-        @apiDescription Returns the summed stats for all weeks keeping the latest salary. This response is calculated by summing all the games.
-        @apiSuccess (200) {Object} stats returns the summed stats for all weeks
-        @apiSuccessExample {json} Example Response:
-           {
-             "stats": {
-               "Al Colantonio": {"Pulls": 2, "SalaryDelta": 2000, "Salary": 50000}
-             }
-           }
-        """
         games = Game.query.order_by("week asc")
         stats = build_stats_response(games)
         return jsonify({"week": 0, "stats": stats})
@@ -117,18 +86,6 @@ def create_app():
 
     @app.route('/weeks')
     def weeks():
-        """
-        @api {get} /weeks List
-        @apiGroup Weeks
-        @apiDescription Returns an array of week numbers. This is calculated by a distinct query on game.week
-        @apiSuccess (200) {Array} weeks returns an array of week numbers
-        @apiSuccessExample {json} Example Response:
-           [
-             1,
-             2,
-             3
-           ]
-        """
         query = db.session.query(Game.week.distinct().label("week"))
         weeks = [row.week for row in query.all()]
         return jsonify(sorted(weeks))
@@ -136,20 +93,6 @@ def create_app():
 
     @app.route('/weeks/<num>')
     def week(num):
-        """
-        @api {get} /weeks/:week Get
-        @apiGroup Weeks
-        @apiDescription Returns all the stats for the given week. The week is
-        calculated by merging all the games from that week.
-        @apiSuccess (200) {Object} week returns a week
-        @apiSuccessExample {json} Example Response:
-           {
-             "week": 1,
-             "stats": {
-               "Al Colantonio": {"Pulls": 1, "SalaryDelta": 2000, "Salary": 50000}
-             }
-           }
-        """
         games = Game.query.filter_by(week=num)
         stats = build_stats_response(games)
         return jsonify({"week": num, "stats": stats})
@@ -199,12 +142,6 @@ def create_app():
 
     @app.route('/games')
     def games():
-        """
-        @api {get} /games List
-        @apiGroup Games
-        @apiDescription Returns an array of all the games
-        @apiSuccess (200) {Array} games returns an array of games
-        """
         games = []
         for game in Game.query.all():
             games.append(game.to_dict())
@@ -214,27 +151,6 @@ def create_app():
 
     @app.route('/games/<id>')
     def game(id):
-        """
-        @api {get} /games/:id Get
-        @apiGroup Games
-        @apiDescription Returns the data for a single game
-        @apiSuccess (200) {Object} game returns a game
-        @apiSuccessExample {json} Example Response:
-           {
-             "_id": "580bd3896df3906e619cd9f5",
-             "week": 1,
-             "teams": [
-               "Karma Down Under": ["Alison Ward"],
-               "Katie Parity": ["Dan Thomson"]
-             ],
-             "events": [
-               "Pull,Al Colantonio"
-             ],
-             "stats": {
-               "Al Colantonio": {"Pulls": 1, "SalaryDelta": 2000, "Salary": 50000}
-             }
-           }
-        """
         game = Game.query.get(id)
         return jsonify(game.to_dict())
 
