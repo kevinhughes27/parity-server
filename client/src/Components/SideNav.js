@@ -5,7 +5,7 @@ class SideNav extends Component {
   render () {
     let forumUrl = 'https://www.ocua.ca/forum/33'
     let podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-2/s-Hka7a'
-    let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1efPmmiEBjpAcVpSFlicd7b5b-1kDzBSPsAhebpupo7I/edit?usp=sharing'
+    let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1F46H8ZRGP8Jzj1zSW0PT8HerBZ_BlHI5T48A2vp34r0/edit?usp=sharing'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
 
     return (
