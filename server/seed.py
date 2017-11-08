@@ -3,7 +3,10 @@
 import glob, os
 import requests
 
-os.chdir("data/test/")
+# src = "data/test/"
+src = "data/ocua_17-18/"
+
+os.chdir(src)
 
 for file in glob.glob("*.json"):
     url = 'http://localhost:5000/upload'

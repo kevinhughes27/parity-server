@@ -49,6 +49,9 @@ To create the database run `heroku run python server/init_db.py`
 To sync teams from Zuluru run `heroku run python server/zuluru_sync.py`
 
 
+To backup the database (only the raw games data the rest is calculated by the app) run `python server/backup.py`
+
+
 Contributing
 ------------
 
