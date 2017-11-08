@@ -27,7 +27,7 @@ def create_app():
         debug = False
         if debug:
             now = datetime.datetime.now()
-            fo = open('data/test/' + str(now) + '.json', 'wb')
+            fo = open('data/test/' + str(now) + '.json', 'w')
             fo.write(json.dumps(request.json))
             fo.close()
 
