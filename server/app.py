@@ -207,7 +207,7 @@ def create_app():
         """
         games = []
         for game in Game.query.all():
-            games.append(game)
+            games.append(game.to_dict())
 
         return jsonify(games)
 
