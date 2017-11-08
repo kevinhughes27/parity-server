@@ -160,7 +160,7 @@ class Stats(db.Model):
             "o_points_against": self.o_points_against,
             "d_points_for": self.d_points_for,
             "d_points_against": self.d_points_against,
-            "pay": self.salary_per_point,
+            "pay": self.pay,
             "salary_per_point": self.salary_per_point,
             "salary": self.salary
         }
