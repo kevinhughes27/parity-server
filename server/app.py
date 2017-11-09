@@ -151,7 +151,7 @@ def create_app():
 
         for player in stats:
             pro_rated_salary = stats[player]['salary'] * float(week)
-            stats[player]['salary'] = pro_rated_salary
+            stats[player]['salary'] = int(pro_rated_salary)
 
 
         return stats
