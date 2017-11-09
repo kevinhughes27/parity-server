@@ -52,6 +52,9 @@ To sync teams from Zuluru run `heroku run python server/zuluru_sync.py`
 To backup the database (only the raw games data the rest is calculated by the app) run `python server/backup.py`
 
 
+To seed the production database uncomment the production url in `server/seed.py` and run the script locally `python server/seed.py`
+
+
 Contributing
 ------------
 
