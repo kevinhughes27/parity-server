@@ -152,7 +152,8 @@ class Stats(db.Model):
 
     @property
     def salary(self):
-        return Player.query.get(self.player_id).salary
+        player = Player.query.get(self.player_id)
+        return player.salary if player != None else 0
 
     def to_dict(self):
         return {
