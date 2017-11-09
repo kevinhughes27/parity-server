@@ -39,7 +39,17 @@ def sync_team(session, id):
     team_name = soup.findAll('h2')[-1].get_text()
 
     team = get_or_create_team(team_name)
+
+    reset_team_players(team)
     sync_players(soup, team)
+
+
+def reset_team_players(team):
+    for current_player in Player.query.filter_by(team_id=team.id):
+        current_player.team_id = None
+        db.session.add(current_player)
+
+    db.session.commit()
 
 
 def sync_players(soup, team):
@@ -57,7 +67,6 @@ def sync_players(soup, team):
         name = p.get_text()
         gender = 'male' if g == 'Male' else 'female'
         update_or_create_player(zuluru_id, name, gender, team)
-
 
 
 def get_or_create_team(team_name):

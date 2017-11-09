@@ -15,8 +15,28 @@ class Player(db.Model):
     name = db.Column(db.Text)
     gender = db.Column(db.Text)
 
+    @property
     def is_male(self):
         return self.gender == 'male'
+
+    @property
+    def team(self):
+        return Team.query.get(self.team_id)
+
+    @property
+    def salary(self):
+        pro_rated_number_of_points = 15
+        return self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
+
+    @property
+    def _avg_salary_per_point_based_on_history(self):
+        player_stats = Stats.query.filter_by(player_id=self.id)
+        salaries = [ps.salary_per_point for ps in player_stats]
+
+        if len(salaries) > 0:
+            return sum(salaries) / len(salaries)
+        else:
+            return 0
 
 
 class Game(db.Model):
@@ -30,6 +50,10 @@ class Game(db.Model):
     home_score = db.Column(db.Integer)
     away_score = db.Column(db.Integer)
     points = db.Column(db.Text)
+
+    @property
+    def players(self):
+        return json.loads(self.home_roster) + json.loads(self.away_roster)
 
     def to_dict(self):
         return {
@@ -61,21 +85,21 @@ class Stats(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     game_id = db.Column(db.Integer, nullable=False)
     player_id = db.Column(db.Integer, nullable=False)
-    goals = db.Column(db.Integer, default=0)
-    assists = db.Column(db.Integer, default=0)
-    second_assists = db.Column(db.Integer, default=0)
-    d_blocks = db.Column(db.Integer, default=0)
-    completions = db.Column(db.Integer, default=0)
-    throw_aways = db.Column(db.Integer, default=0)
-    threw_drops = db.Column(db.Integer, default=0)
-    catches = db.Column(db.Integer, default=0)
-    drops = db.Column(db.Integer, default=0)
-    pulls = db.Column(db.Integer, default=0)
-    callahan = db.Column(db.Integer, default=0)
-    o_points_for = db.Column(db.Integer, default=0)
-    o_points_against = db.Column(db.Integer, default=0)
-    d_points_for = db.Column(db.Integer, default=0)
-    d_points_against = db.Column(db.Integer, default=0)
+    goals = db.Column(db.Integer)
+    assists = db.Column(db.Integer)
+    second_assists = db.Column(db.Integer)
+    d_blocks = db.Column(db.Integer)
+    completions = db.Column(db.Integer)
+    throw_aways = db.Column(db.Integer)
+    threw_drops = db.Column(db.Integer)
+    catches = db.Column(db.Integer)
+    drops = db.Column(db.Integer)
+    pulls = db.Column(db.Integer)
+    callahan = db.Column(db.Integer)
+    o_points_for = db.Column(db.Integer)
+    o_points_against = db.Column(db.Integer)
+    d_points_for = db.Column(db.Integer)
+    d_points_against = db.Column(db.Integer)
 
     def __init__(self, game_id, player_id):
         self.game_id = game_id
@@ -128,18 +152,8 @@ class Stats(db.Model):
 
     @property
     def salary(self):
-        pro_rated_number_of_points = 15
-        return self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
-
-    @property
-    def _avg_salary_per_point_based_on_history(self):
-        player_stats = Stats.query.filter_by(player_id=self.player_id)
-        salaries = [ps.salary_per_point for ps in player_stats]
-
-        if len(salaries) > 0:
-            return sum(salaries) / len(salaries)
-        else:
-            return 0
+        player = Player.query.get(self.player_id)
+        return player.salary if player != None else 0
 
     def to_dict(self):
         return {
