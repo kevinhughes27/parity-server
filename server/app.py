@@ -141,7 +141,9 @@ def create_app():
             if player.salary > 0:
                 player_stats.update({'salary': player.salary})
             else:
-                avg_salary = 0
+                team_players = Player.query.filter_by(team_id=player.team_id)
+                same_gender_salaries = [p.salary for p in team_players if p.is_male == player.is_male and p.salary > 0]
+                avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
                 player_stats.update({'salary': avg_salary})
 
             stats[player.name] = player_stats
