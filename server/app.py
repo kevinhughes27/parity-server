@@ -69,7 +69,7 @@ def create_app():
             }
             for player in Player.query.filter_by(team_id=team.id):
                 teams[team.name]['players'].append(player.name)
-                if player.is_male():
+                if player.is_male:
                     teams[team.name]['malePlayers'].append(player.name)
                 else:
                     teams[team.name]['femalePlayers'].append(player.name)
@@ -99,11 +99,13 @@ def create_app():
 
 
     def build_stats_response(games):
+        present_players = []
         stats = {}
         week = 0
 
         for game in games:
             week = max(week, game.week)
+            present_players = present_players + game.players
 
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
@@ -126,6 +128,9 @@ def create_app():
                     stats[player.name].update(summed_stats)
                 else:
                     stats.update({player.name: data})
+
+        players = Player.query.filter(Player.team_id != None)
+        absent_players = [player for player in players if player.name not in present_players]
 
         for player in stats:
             pro_rated_salary = stats[player]['salary'] * float(week)

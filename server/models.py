@@ -15,6 +15,7 @@ class Player(db.Model):
     name = db.Column(db.Text)
     gender = db.Column(db.Text)
 
+    @property
     def is_male(self):
         return self.gender == 'male'
 
@@ -30,6 +31,10 @@ class Game(db.Model):
     home_score = db.Column(db.Integer)
     away_score = db.Column(db.Integer)
     points = db.Column(db.Text)
+
+    @property
+    def players(self):
+        return json.loads(self.home_roster) + json.loads(self.away_roster)
 
     def to_dict(self):
         return {
