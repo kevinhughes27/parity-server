@@ -129,8 +129,23 @@ def create_app():
                 else:
                     stats.update({player.name: data})
 
+
         players = Player.query.filter(Player.team_id != None)
         absent_players = [player for player in players if player.name not in present_players]
+
+        for player in absent_players:
+            game_id = -1
+            player_stats = Stats(game_id, player.id).to_dict()
+            player_stats.update({'team': player.team.name})
+
+            if player.salary > 0:
+                player_stats.update({'salary': player.salary})
+            else:
+                avg_salary = 0
+                player_stats.update({'salary': avg_salary})
+
+            stats[player.name] = player_stats
+
 
         for player in stats:
             pro_rated_salary = stats[player]['salary'] * float(week)
