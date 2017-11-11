@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import { browserHistory, Router, Route } from 'react-router'
 
 import App from './Components/App'
+import registerServiceWorker from './registerServiceWorker'
 
 import Leaderboards from './Components/Leaderboards'
 import ComparePlayers from './Components/ComparePlayers'
@@ -35,3 +36,5 @@ ReactDOM.render(
   </Router>,
   document.getElementById('root')
 )
+
+registerServiceWorker()
