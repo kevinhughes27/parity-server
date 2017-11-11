@@ -1,14 +1,30 @@
 // @flow
 
+import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import TopNav from './TopNav'
 import SideNav from './SideNav'
 import Loading from './Loading'
 import StatsTable from './StatsTable'
-import Loader from '../Loader'
+import Stats from '../Stores/Stats'
 
-class App extends Component {
+const fetchWeeks = async () => {
+  let response = await fetch('/weeks')
+  return await response.json()
+}
+
+const fetchStats = async (weekNum: number) => {
+  let url = `/weeks/${weekNum}`
+  if (weekNum === 0) url = '/stats'
+
+  let response = await fetch(url)
+  let json = await response.json()
+  let data = json.stats || {}
+  return new Stats(data)
+}
+
+class StatsProvider extends Component {
   state: {
     loading: boolean,
     weeks: any,
@@ -29,9 +45,9 @@ class App extends Component {
 
   componentDidMount () {
     (async () => {
-      let weeks = await Loader.fetchWeeks()
+      let weeks = await fetchWeeks()
       let week = _.last(weeks) || 0
-      let stats = await Loader.fetchStats(week)
+      let stats = await fetchStats(week)
       this.setState({weeks, week, stats, loading: false})
     })()
   }
@@ -39,7 +55,7 @@ class App extends Component {
   weekChange (week: number) {
     (async () => {
       this.setState({week, loading: true})
-      let stats = await Loader.fetchStats(week)
+      let stats = await fetchStats(week)
       this.setState({ stats, loading: false })
     })()
   }
@@ -81,4 +97,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default StatsProvider
