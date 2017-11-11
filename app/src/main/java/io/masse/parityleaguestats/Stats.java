@@ -443,6 +443,7 @@ public class Stats extends Activity {
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
+                btnCatchD.setEnabled(false);
                 btnThrowAway.setEnabled(false);
                 btnPull.setEnabled(true);
 
