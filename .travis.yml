@@ -1,13 +1,7 @@
 language: python
 python:
   - '3.6'
-node_js: '8'
-cache:
-  directories:
-    - client/node_modules
 install:
   - pip3 install -r requirements.txt
-  - cd client && yarn install && cd ..
 script:
   - python3 server/test.py
-  - cd client && yarn test && cd ..
