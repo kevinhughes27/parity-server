@@ -9,7 +9,7 @@ exports[`test StatsTable renders correctly 1`] = `
       style={null}>
       <input
         name="search"
-        onChange={[Function bound searchChange]}
+        onChange={[Function]}
         placeholder="Search players or team ..."
         type="text"
         value="" />
@@ -27,7 +27,7 @@ exports[`test StatsTable renders correctly 1`] = `
     <div
       className="griddle-body">
       <div
-        onScroll={[Function bound gridScroll]}
+        onScroll={[Function]}
         style={null}>
         <table
           className="highlight responsive-table"
@@ -39,7 +39,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="name"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Name
@@ -48,7 +48,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="team"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Team
@@ -57,7 +57,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="goals"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Goals
@@ -66,7 +66,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="assists"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Assists
@@ -75,7 +75,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="second_assists"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Second assists
@@ -84,7 +84,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="d_blocks"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   D blocks
@@ -93,7 +93,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="catches"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Catches
@@ -102,7 +102,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="completions"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Completions
@@ -111,7 +111,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="throw_aways"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Throw aways
@@ -120,7 +120,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="threw_drops"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Threw drops
@@ -129,7 +129,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="drops"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Drops
@@ -138,7 +138,7 @@ exports[`test StatsTable renders correctly 1`] = `
               <th
                 className=""
                 data-title="pay"
-                onClick={[Function anonymous]}
+                onClick={[Function]}
                 style={Object {}}>
                 <span>
                   Pay
@@ -152,77 +152,77 @@ exports[`test StatsTable renders correctly 1`] = `
               onClick={null}>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 Kevin Hughes
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 Like a Boss
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 2
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 1
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 1
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 1
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 17
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 19
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 1
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 0
               </td>
               <td
                 className={undefined}
-                onClick={[Function bound handleClick]}
+                onClick={[Function]}
                 style={null}>
                 
                 0

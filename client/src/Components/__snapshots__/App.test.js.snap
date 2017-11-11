@@ -16,7 +16,7 @@ exports[`test App renders correctly 1`] = `
           className="material-icons"
           style={
             Object {
-              "paddingLeft": 10
+              "paddingLeft": 10,
             }
           }>
           menu
@@ -34,42 +34,42 @@ exports[`test App renders correctly 1`] = `
                 src="logo.png"
                 style={
                   Object {
-                    "width": 240
+                    "width": 240,
                   }
                 } />
             </div>
           </li>
           <li>
             <a
-              onClick={[Function bound handleClick]}
+              onClick={[Function]}
               style={Object {}}>
               Raw Stats
             </a>
           </li>
           <li>
             <a
-              onClick={[Function bound handleClick]}
+              onClick={[Function]}
               style={Object {}}>
               Leaderboards
             </a>
           </li>
           <li>
             <a
-              onClick={[Function bound handleClick]}
+              onClick={[Function]}
               style={Object {}}>
               Compare Players
             </a>
           </li>
           <li>
             <a
-              onClick={[Function bound handleClick]}
+              onClick={[Function]}
               style={Object {}}>
               Team Dashboard
             </a>
           </li>
           <li>
             <a
-              onClick={[Function bound handleClick]}
+              onClick={[Function]}
               style={Object {}}>
               Trade Simulator
             </a>
@@ -124,7 +124,7 @@ exports[`test App renders correctly 1`] = `
             className="dropdown-content"
             id="dropdown_0">
             <li
-              onClick={[Function onClick]}>
+              onClick={[Function]}>
               <a
                 href={undefined}>
                 All
@@ -143,7 +143,7 @@ exports[`test App renders correctly 1`] = `
         "height": "100%",
         "justifyContent": "center",
         "minHeight": "100%",
-        "paddingBottom": "20%"
+        "paddingBottom": "20%",
       }
     }>
     <div
