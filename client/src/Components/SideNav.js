@@ -12,7 +12,7 @@ class SideNav extends Component {
       <div>
         <li>
           <div className='userView'>
-            <img src='logo.png' style={{width: 240}} role="presentation"/>
+            <img src='logo.png' style={{width: 240}} alt="logo"/>
           </div>
         </li>
 
