@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { browserHistory, Router, Route } from 'react-router'
 
-import App from './Components/App'
+import StatsProvider from './Components/StatsProvider'
 import registerServiceWorker from './registerServiceWorker'
 
 import Leaderboards from './Components/Leaderboards'
@@ -27,7 +27,7 @@ function logPageView () {
 
 ReactDOM.render(
   <Router history={browserHistory} onUpdate={logPageView}>
-    <Route path="/" component={App}>
+    <Route path="/" component={StatsProvider}>
       <Route path="/leaderboards" component={Leaderboards} />
       <Route path="/compare_players" component={ComparePlayers} />
       <Route path="/team_dashboard" component={TeamDashboard} />

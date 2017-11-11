@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer'
 import React from 'react'
-import App from './App'
+import StatsProvider from './StatsProvider'
 
 // stub jquery + materialize.js
 import $ from 'jquery'
@@ -10,7 +10,7 @@ $.fn.sideNav = function () { }
 
 jest.mock('../Loader')
 
-test('App renders correctly', () => {
-  const tree = renderer.create(<App />).toJSON()
+test('StatsProvider renders correctly', () => {
+  const tree = renderer.create(<StatsProvider />).toJSON()
   expect(tree).toMatchSnapshot()
 })

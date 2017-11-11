@@ -8,7 +8,7 @@ import Loading from './Loading'
 import StatsTable from './StatsTable'
 import Loader from '../Loader'
 
-class App extends Component {
+class StatsProvider extends Component {
   state: {
     loading: boolean,
     weeks: any,
@@ -81,4 +81,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default StatsProvider
