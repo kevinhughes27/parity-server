@@ -1,10 +1,10 @@
 // @flow
 
+import format from 'format-number'
+
 import d3 from 'd3'
 import d3Tip from 'd3-tip'
 d3.tip = d3Tip
-
-import format from 'format-number'
 
 export default class PlayerGraph {
   margin: {top: number, right: number, bottom: number, left: number}

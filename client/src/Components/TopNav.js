@@ -43,9 +43,9 @@ class TopNav extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo center hide-on-small-and-down">Parity 2.0</a>
+          <a href="/" className="brand-logo center hide-on-small-and-down">Parity 2.0</a>
 
-          <a href="#" data-activates="sidebar" className="left sidebar-toggle">
+          <a href="#!sidebar-toggle" data-activates="sidebar" className="left sidebar-toggle">
             <i style={{paddingLeft: 10}} className="material-icons">menu</i>
           </a>
 

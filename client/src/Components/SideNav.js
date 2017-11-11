@@ -33,4 +33,4 @@ class SideNav extends Component {
   }
 }
 
-module.exports = SideNav
+export default SideNav

@@ -21,4 +21,5 @@ class Loader {
 }
 
 let loader = new Loader()
-module.exports = loader
+
+export default loader
