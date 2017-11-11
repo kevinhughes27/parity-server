@@ -3,6 +3,7 @@ import { browserHistory, Router, Route } from 'react-router'
 
 import StatsPage from './Components/StatsPage'
 import Leaderboards from './Components/Leaderboards'
+import GamesList from './Components/GamesList'
 import ComparePlayers from './Components/ComparePlayers'
 import TeamDashboard from './Components/TeamDashboard'
 import TradeSimulator from './Components/TradeSimulator'
@@ -21,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
+        <Route path="/games" component={GamesList} />
         <Route path="/" component={StatsPage}>
           <Route path="/leaderboards" component={Leaderboards} />
           <Route path="/compare_players" component={ComparePlayers} />
