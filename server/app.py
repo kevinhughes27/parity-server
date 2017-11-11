@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory
+from flask_caching import Cache
 
 from models import db, Game, Stats, Team, Player
 from utils import StatsCalculator
@@ -9,8 +10,12 @@ import datetime
 
 client_path = '../client/build'
 
+one_hour = 3600 # seconds
+cache_timeout = one_hour
+
 def create_app():
     app = Flask(__name__, static_folder=client_path)
+    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
     if os.environ.get('APP_SETTINGS') == None:
         os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
@@ -98,6 +103,7 @@ def create_app():
         return jsonify({"week": num, "stats": stats})
 
 
+    @cache.cached(timeout=cache_timeout)
     def build_stats_response(games):
         present_players = []
         stats = {}
