@@ -81,6 +81,9 @@ public class Bookkeeper implements Serializable {
         } else if (activePoint.getLastEventType() == Event.Type.DEFENSE && firstActor == null) {
             state = GameState.WhoPickedUpDisc;
 
+        } else if (activePoint.getLastEventType() == Event.Type.DEFENSE) {
+            state = GameState.SecondD;
+
         } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY) {
             state = GameState.WhoPickedUpDisc;
 

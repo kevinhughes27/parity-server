@@ -10,4 +10,5 @@ public class GameState {
     static final int Pull = 4;
     static final int WhoPickedUpDisc = 5;
     static final int FirstThrowQuebecVariant = 6;
+    static final int SecondD = 7;
 }

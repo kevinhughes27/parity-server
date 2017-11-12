@@ -31,8 +31,6 @@ import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
-    private static final int halfState = 7;
-
     private customLinearLayout layoutLeft;
     private customLinearLayout layoutRight;
     private ListView undoHistory;
@@ -471,19 +469,25 @@ public class Stats extends Activity {
                 }
                 break;
 
-            case halfState:
-                btnPoint.setEnabled(false);
+            case GameState.SecondD:
+                btnPoint.setEnabled(true);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
                 btnCatchD.setEnabled(false);
-                btnThrowAway.setEnabled(false);
+                btnThrowAway.setEnabled(true);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
-                    layoutLeft.getChildAt(i).setEnabled(true);
+                for (int i = 0; i < leftCount; i++) {
+                    layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
+                    if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutLeft.getChildAt(i).setEnabled(false);
+                    }
                 }
-                for (int i = 0; i < rightCount; i++){
-                    layoutRight.getChildAt(i).setEnabled(true);
+                for (int i = 0; i < rightCount; i++) {
+                    layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
+                    if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
+                        layoutRight.getChildAt(i).setEnabled(false);
+                    }
                 }
                 break;
         }
