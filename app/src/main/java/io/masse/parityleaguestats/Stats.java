@@ -31,12 +31,6 @@ import io.masse.parityleaguestats.model.Teams;
 import io.masse.parityleaguestats.tasks.uploadGame;
 
 public class Stats extends Activity {
-    private static final int normalState = 1;
-    private static final int firstDState = 2;
-    private static final int startState = 3;
-    private static final int pullState = 4;
-    private static final int whoPickedUpDiscState = 5;
-    private static final int firstThrowQuebecVariantState = 6;
     private static final int halfState = 7;
 
     private customLinearLayout layoutLeft;
@@ -357,7 +351,7 @@ public class Stats extends Activity {
         int rightCount = layoutRight.getChildCount();
 
         switch (state) {
-            case normalState:
+            case GameState.Normal:
                 btnPoint.setEnabled(true);
                 btnDrop.setEnabled(true);
                 btnD.setEnabled(false);
@@ -365,13 +359,13 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(true);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
@@ -379,7 +373,7 @@ public class Stats extends Activity {
                 }
                 break;
 
-            case firstThrowQuebecVariantState:
+            case GameState.FirstThrowQuebecVariant:
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
@@ -387,13 +381,13 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(true);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
@@ -401,7 +395,7 @@ public class Stats extends Activity {
                 }
                 break;
 
-            case firstDState:
+            case GameState.FirstD:
                 btnPoint.setEnabled(true);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(true);
@@ -409,13 +403,13 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(true);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
@@ -423,7 +417,7 @@ public class Stats extends Activity {
                 }
                 break;
 
-            case startState:
+            case GameState.Start:
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
@@ -431,15 +425,15 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(false);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(true);
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(true);
                 }
                 break;
 
-            case pullState:
+            case GameState.Pull:
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
@@ -447,15 +441,15 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(false);
                 btnPull.setEnabled(true);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(false);
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(false);
                 }
                 break;
 
-            case whoPickedUpDiscState:
+            case GameState.WhoPickedUpDisc:
                 btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(false);
@@ -463,13 +457,13 @@ public class Stats extends Activity {
                 btnThrowAway.setEnabled(false);
                 btnPull.setEnabled(false);
 
-                for (int i = 0; i < leftCount; i++){
+                for (int i = 0; i < leftCount; i++) {
                     layoutLeft.getChildAt(i).setEnabled(bookkeeper.homePossession);
                     if (((Button) layoutLeft.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutLeft.getChildAt(i).setEnabled(false);
                     }
                 }
-                for (int i = 0; i < rightCount; i++){
+                for (int i = 0; i < rightCount; i++) {
                     layoutRight.getChildAt(i).setEnabled(!bookkeeper.homePossession);
                     if (((Button) layoutRight.getChildAt(i)).getText().toString() == bookkeeper.firstActor) {
                         layoutRight.getChildAt(i).setEnabled(false);
