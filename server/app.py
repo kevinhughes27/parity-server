@@ -8,6 +8,8 @@ import os
 import json
 import datetime
 
+debug = False
+
 client_path = '../client/build'
 
 one_hour = 3600 # seconds
@@ -29,13 +31,14 @@ def create_app():
     def upload():
         game = Game()
 
-        debug = False
+        # save response to file if debugging
         if debug:
             now = datetime.datetime.now()
             fo = open('data/test/' + str(now) + '.json', 'w')
             fo.write(json.dumps(request.json))
             fo.close()
 
+        # save the game to the database
         game.league = request.json['league']
         game.week = request.json['week']
 
@@ -54,10 +57,14 @@ def create_app():
         db.session.add(game)
         db.session.commit()
 
+        # calculate and save stats
         stats = StatsCalculator(game.id, points).run()
         for stat in stats:
             db.session.add(stat[1])
         db.session.commit()
+
+        # clear the stats cache
+        cache.clear()
 
         return ('', 201)
 
