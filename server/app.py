@@ -89,13 +89,6 @@ def create_app():
         return jsonify(teams)
 
 
-    @app.route('/stats')
-    def stats():
-        games = Game.query.order_by("week asc")
-        stats = build_stats_response(games)
-        return jsonify({"week": 0, "stats": stats})
-
-
     @app.route('/weeks')
     def weeks():
         query = db.session.query(Game.week.distinct().label("week"))
@@ -110,6 +103,13 @@ def create_app():
         return jsonify({"week": num, "stats": stats})
 
 
+    @app.route('/stats')
+    def stats():
+        games = Game.query.order_by("week asc")
+        stats = build_stats_response(games)
+        return jsonify({"week": 0, "stats": stats})
+
+
     @cache.cached(timeout=cache_timeout)
     def build_stats_response(games):
         present_players = []
@@ -122,18 +122,9 @@ def create_app():
 
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
-
-                if player.name in json.loads(game.home_roster):
-                    team = game.home_team
-                elif player.name in json.loads(game.away_roster):
-                    team = game.away_team
-
-                if "(S)" in player.name:
-                    team = "Substitute"
-
                 data = player_stats.to_dict()
-                data.update({'team': team})
 
+                # sum all stats for the player
                 if player.name in stats:
                     existing_data = stats[player.name]
                     stats_to_sum = data.keys() - ['pay', 'salary', 'salary_per_point']
@@ -142,7 +133,18 @@ def create_app():
                 else:
                     stats.update({player.name: data})
 
+                # set the current team for the player
+                if player.name in json.loads(game.home_roster):
+                    team = game.home_team
+                elif player.name in json.loads(game.away_roster):
+                    team = game.away_team
 
+                if "(S)" in player.name:
+                    team = "Substitute"
+
+                data.update({'team': team})
+
+        # handle absent players
         players = Player.query.filter(Player.team_id != None)
         absent_players = [player for player in players if player.name not in present_players]
 
@@ -161,7 +163,7 @@ def create_app():
 
             stats[player.name] = player_stats
 
-
+        # pro rate for the current week
         for player in stats:
             pro_rated_salary = stats[player]['salary'] * float(week)
             stats[player]['salary'] = int(pro_rated_salary)
