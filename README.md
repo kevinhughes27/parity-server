@@ -34,7 +34,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database delete the `db.sqlite` file and restart the python server.
 
-There is also an automated test suite which can be run using the `python test.py` for the python tests and `yarn test` inside the client directory to run javascript tests.
+There is also an automated test suite which can be run using the `python test.py`.
 
 
 Operations
