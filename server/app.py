@@ -127,7 +127,7 @@ def create_app():
                 # sum all stats for the player
                 if player.name in stats:
                     existing_data = stats[player.name]
-                    stats_to_sum = data.keys() - ['pay', 'salary', 'salary_per_point']
+                    stats_to_sum = data.keys() - ['pay', 'salary', 'salary_per_point', 'o_efficiency', 'd_efficiency', 'total_efficiency']
                     summed_stats = { s: data.get(s, 0) + existing_data.get(s, 0) for s in stats_to_sum }
                     stats[player.name].update(summed_stats)
                 else:

@@ -147,13 +147,42 @@ class Stats(db.Model):
             return self.pay / self._points_played
 
     @property
+    def _o_points_played(self):
+        return self.o_points_for + self.o_points_against
+
+    @property
+    def _d_points_played(self):
+        return self.d_points_for + self.d_points_against
+
+    @property
     def _points_played(self):
-        return self.o_points_for + self.o_points_against + self.d_points_for + self.d_points_against
+        return self._o_points_played + self._d_points_played
 
     @property
     def salary(self):
         player = Player.query.get(self.player_id)
         return player.salary if player != None else 0
+
+    @property
+    def o_efficiency(self):
+        if self._o_points_played == 0:
+            return 0
+        else:
+            return self.o_points_for / self._o_points_played
+            
+    @property
+    def d_efficiency(self):
+        if self._d_points_played == 0:
+            return 0
+        else:
+            return self.d_points_for / self._d_points_played
+
+    @property
+    def total_efficiency(self):
+        if self._points_played == 0:
+            return 0
+        else:
+            return (self.o_points_for + self.d_points_for) / self._points_played            
 
     def to_dict(self):
         return {
@@ -174,5 +203,8 @@ class Stats(db.Model):
             "d_points_against": self.d_points_against,
             "pay": self.pay,
             "salary_per_point": self.salary_per_point,
-            "salary": self.salary
+            "salary": self.salary,
+            "o_efficiency": self.o_efficiency,
+            "d_efficiency": self.d_efficiency,
+            "total_efficiency": self.total_efficiency
         }
