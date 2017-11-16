@@ -95,6 +95,7 @@ export default class TeamDashboard extends Component {
     let players = this.playersForCurrentTeam()
     let teamSalary = stats.teamSalary(team)
     let salaryCap = stats.salaryCap()
+    let salaryFloor = stats.salaryFloor()
 
     return (
       <table className='highlight'>
@@ -116,6 +117,14 @@ export default class TeamDashboard extends Component {
           <tr style={{borderTop: '1px solid grey', lineHeight: 0.5}}>
             <td>Current Salary</td>
             <td><MoneyCell data={teamSalary}/></td>
+          </tr>
+          <tr style={{lineHeight: 0.5}}>
+            <td>League Salary Floor</td>
+            <td><MoneyCell data={salaryFloor}/></td>
+          </tr>
+            <tr style={{lineHeight: 0.5}}>
+            <td>Team Floor Clearance</td>
+            <td><MoneyCell data={teamSalary - salaryFloor}/></td>
           </tr>
           <tr style={{lineHeight: 0.5}}>
             <td>League Salary Cap</td>
