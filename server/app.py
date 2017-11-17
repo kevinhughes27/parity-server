@@ -106,12 +106,12 @@ def create_app():
     @app.route('/stats')
     def stats():
         games = Game.query.order_by("week asc")
-        stats = build_stats_response(games)
+        stats = build_stats_response(games, is_all=True)
         return jsonify({"week": 0, "stats": stats})
 
 
     @cache.cached(timeout=cache_timeout)
-    def build_stats_response(games):
+    def build_stats_response(games, is_all=False):
         present_players = []
         stats = {}
         week = 0
@@ -133,14 +133,20 @@ def create_app():
                 else:
                     stats.update({player.name: data})
 
-                # set the current team for the player
-                if player.name in json.loads(game.home_roster):
-                    team = game.home_team
-                elif player.name in json.loads(game.away_roster):
-                    team = game.away_team
+                # set the team for the player
+                if is_all:
+                    if player.team_id:
+                        team = Team.query.get(player.team_id).name
+                    else:
+                        team = "Substitute"
+                else:
+                    if player.name in json.loads(game.home_roster):
+                        team = game.home_team
+                    elif player.name in json.loads(game.away_roster):
+                        team = game.away_team
 
-                if "(S)" in player.name:
-                    team = "Substitute"
+                    if "(S)" in player.name:
+                        team = "Substitute"
 
                 data.update({'team': team})
 
