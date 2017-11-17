@@ -6,22 +6,35 @@ parity-server [![Build Status](https://travis-ci.org/kevinhughes27/parity-server
 production: [https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
 
 
-Setup
------
+Server Setup
+------------
 
-1. You will need `python` (version 3) (with `pip`) and `node` (with `yarn`) and `sqlite` on your local machine.
+1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine.
 2. To install python dependencies run `pip install -r requirements.txt` (You may need Run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
 4. Create your database by running `python server/init_db.py` and then seed it with `python server/seed.py`
-5. Install client dependencies: from the client directory run `yarn install`
-6. Start the client by running `yarn start`
+5. You can inspect the server responses at `http://localhost:5000/weeks/1` and `http://localhost:5000/stats` etc.
 
-Yarn will start a local server on port 3000 for developing on the frontend of the website. The yarn development server will proxy all API requests to port 5000 where it expects the python server to be running. The python server returns data to the frontend. On production the python server serves a static build of the frontend (this can be tested locally by running yarn build and then visiting localhost:5000).
+On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000.
 
+
+Client Setup
+------------
+
+1. You will need to install [node](https://nodejs.org/en/) on your computer
+2. Install `yarn` by running the command `npm install -g yarn`
+3. Install the javascript dependencies by running `yarn install`
+4. Start the client by running `yarn start`. It will open a browser window with the app running on your computer. If you make changes to the code the window will reload with the changes.
+
+Note that the client connects to the production server by default. This is safe to do because the client is read-only. This enables an easier development experience for anyone working only on the frontend. If you need to connect to a local server update the `proxy` to point to the local server `http://localhost:5000` in the `client/package.json` file.
+
+
+Visual Studio 2017
+------------------
 Additional notes for those using Visual Studio 2017, depending on the selected workload
 - VS2017 installs an older version of node. Get the latest version, then ensure it is referenced correctly in the path by going to Tools->Options->Projects and Solutions->Web Package Management->External Web Tools, then add the Node install directory to the top of the list
 - VS2017 installs Python36 at C:\Program Files. Be sure to add C:\Program Files\Python36 and C:\Program Files\Python36\Scripts to your PATH
-- If yarn is not there, can use this to get it: npm install -g yarn
+
 
 Testing
 -------
