@@ -35,7 +35,7 @@ def create_app():
         if debug:
             now = datetime.datetime.now()
             fo = open('data/test/' + str(now) + '.json', 'w')
-            fo.write(json.dumps(request.json))
+            fo.write(json.dumps(request.json, indent=2, sort_keys=True))
             fo.close()
 
         # save the game to the database
