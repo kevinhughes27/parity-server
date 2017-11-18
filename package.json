@@ -11,7 +11,8 @@
   "scripts": {
     "postinstall": "subpkg install",
     "heroku-postbuild": "yarn build",
-    "build": "subpkg build"
+    "build": "subpkg build",
+    "start": "cd client && yarn start"
   },
   "dependencies": {
     "subpackage": "^1.1.0"
