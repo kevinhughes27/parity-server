@@ -394,7 +394,7 @@ public class Stats extends Activity {
                 break;
 
             case GameState.FirstD:
-                btnPoint.setEnabled(true);
+                btnPoint.setEnabled(false);
                 btnDrop.setEnabled(false);
                 btnD.setEnabled(true);
                 btnCatchD.setEnabled(true);
