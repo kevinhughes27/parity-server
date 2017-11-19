@@ -109,6 +109,7 @@ public class Bookkeeper implements Serializable {
                 firstActor = savedFirstActor;
                 if (activePoint.getEventCount() == 0) {
                     activePoint = null; // undo the created point
+                    changePossession(); // undo possession change from scoring team to new offense
                 }
             }
         });
