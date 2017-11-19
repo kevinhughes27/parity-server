@@ -115,6 +115,7 @@ public class Bookkeeper implements Serializable {
                 firstActor = savedFirstActor;
                 if (activePoint.getEventCount() == 0) {
                     activePoint = null; // undo the created point
+                    changePossession(); // undo possession change from scoring team to new offense
                 }
             }
         });
@@ -212,31 +213,35 @@ public class Bookkeeper implements Serializable {
     }
 
     public void recordPoint() {
-        mementos.add(new Memento(firstActor) {
+        mementos.add(new Memento(firstActor, homePlayers, awayPlayers) {
             @Override
             public void apply() {
                 if (homePossession) {
-                    awayScore--;
-                } else {
                     homeScore--;
+                } else {
+                    awayScore--;
                 }
-                changePossession();
-                activePoint = activeGame.getLastPoint();
+
+                activePoint = activeGame.popPoint();
                 activePoint.removeLastEvent();
+                homePlayers = savedHomePlayers;
+                awayPlayers = savedAwayPlayers;
                 firstActor = savedFirstActor;
             }
         });
 
         activePoint.addEvent(new Event(Event.Type.POINT, firstActor));
         activeGame.addPoint(activePoint);
+
         if (homePossession) {
             homeScore++;
         } else {
             awayScore++;
         }
 
-        changePossession();
         activePoint = null;
+        homePlayers = null;
+        awayPlayers = null;
         firstActor = null;
     }
 
@@ -297,9 +302,17 @@ public class Bookkeeper implements Serializable {
     private abstract class Memento implements Serializable {
 
         protected String savedFirstActor;
+        protected List<String> savedHomePlayers;
+        protected List<String> savedAwayPlayers;
 
         public Memento(String savedFirstActor) {
             this.savedFirstActor = savedFirstActor;
+        }
+
+        public Memento(String savedFirstActor, List<String> savedHomePlayers, List<String> savedAwayPlayers) {
+            this.savedFirstActor = savedFirstActor;
+            this.savedHomePlayers = savedHomePlayers;
+            this.savedAwayPlayers = savedAwayPlayers;
         }
 
         public Memento() {}

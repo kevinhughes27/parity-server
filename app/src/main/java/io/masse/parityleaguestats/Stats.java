@@ -324,7 +324,11 @@ public class Stats extends Activity {
                     selectPlayers(true);
 
                 } else if (btn == btnUndo) {
-                    bookkeeper.undo();
+                    if (bookkeeper.activePoint == null) {
+                        selectPlayers();
+                    } else {
+                        bookkeeper.undo();
+                    }
                 }
 
                 runOnUiThread(new Runnable() {

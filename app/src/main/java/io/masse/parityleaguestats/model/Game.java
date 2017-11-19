@@ -21,9 +21,14 @@ public class Game implements Serializable {
         return points.size();
     }
 
-    public Point getLastPoint() {
+    public Point popPoint() {
         if (points.size() > 0) {
-            return points.get(points.size() - 1);
+            int lastPointIdx = points.size() - 1;
+            Point lastPoint = points.get(lastPointIdx);
+
+            points.remove(lastPointIdx);
+
+            return lastPoint;
         }
         return null;
     }
