@@ -48,47 +48,53 @@ public class Bookkeeper implements Serializable {
         mementos = new Stack<>();
     }
 
-    private int state = normalState;
-    private static final int normalState = 1;
-    private static final int firstDState = 2;
-    private static final int startState = 3;
-    private static final int pullState = 4;
-    private static final int whoPickedUpDiscState = 5;
-    private static final int firstThrowQuebecVariantState = 6;
+    private int state = GameState.Normal;
 
     public int gameState() {
         Boolean firstPoint = (activeGame.getPointCount() == pointsAtHalf);
         Boolean firstEvent = (activePoint == null || activePoint.getEventCount() == 0);
 
         if (activePoint == null) {
-            state = startState;
+            state = GameState.Start;
 
         } else if (firstPoint && firstEvent && firstActor == null) {
-            state = startState;
+            state = GameState.Start;
 
         } else if (firstPoint && firstEvent) {
-            state = pullState;
+            state = GameState.Pull;
 
         } else if (activePoint.getLastEventType() == Event.Type.PULL && firstActor == null) {
-            state = whoPickedUpDiscState;
+            state = GameState.WhoPickedUpDisc;
 
         } else if (activePoint.getLastEventType() == Event.Type.PULL) {
-            state = firstThrowQuebecVariantState;
+            state = GameState.FirstThrowQuebecVariant;
 
         } else if (firstEvent && firstActor == null) {
-            state = whoPickedUpDiscState;
+            state = GameState.WhoPickedUpDisc;
 
         } else if (firstEvent) {
-            state = firstThrowQuebecVariantState;
+            state = GameState.FirstThrowQuebecVariant;
 
         } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY && firstActor != null) {
-            state = firstDState;
+            state = GameState.FirstD;
+
+        } else if (activePoint.getLastEventType() == Event.Type.DEFENSE && firstActor == null) {
+            state = GameState.WhoPickedUpDisc;
+
+        } else if (activePoint.getLastEventType() == Event.Type.DEFENSE) {
+            state = GameState.SecondD;
 
         } else if (activePoint.getLastEventType() == Event.Type.THROWAWAY) {
-            state = whoPickedUpDiscState;
+            state = GameState.WhoPickedUpDisc;
+
+        } else if (activePoint.getLastEventType() == Event.Type.DROP && firstActor == null) {
+            state = GameState.WhoPickedUpDisc;
+
+        } else if (activePoint.getLastEventType() == Event.Type.DROP) {
+            state = GameState.SecondD;
 
         } else {
-            state = normalState;
+            state = GameState.Normal;
         }
 
         return state;
