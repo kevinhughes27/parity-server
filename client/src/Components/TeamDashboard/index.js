@@ -4,7 +4,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
-import TeamGraph from './TeamGraph'
+import { Pie } from 'react-chartjs-2'
 import './team-dashboard.css'
 
 type Props = {
@@ -39,25 +39,8 @@ export default class TeamDashboard extends Component {
 
   componentDidMount () {
     window.$('.dropdown-button').dropdown()
-    this.renderD3()
   }
 
-  componentDidUpdate () {
-    this.updateD3()
-  }
-
-  renderD3 () {
-    let players = this.playersForCurrentTeam()
-
-    this.graph = new TeamGraph()
-    this.graph.init(this.node)
-    this.graph.create(players)
-  }
-
-  updateD3 () {
-    let players = this.playersForCurrentTeam()
-    this.graph.update(players)
-  }
 
   renderTeams (teams: Array<any>) {
     return _.map(teams, (team) => {
@@ -140,6 +123,43 @@ export default class TeamDashboard extends Component {
   }
 
   render () {
+    const players = this.playersForCurrentTeam()
+
+    const data = {
+    	labels: players.map (p=>p.name),
+    	datasets: [{
+    		data: players.map (p=>p.salary),
+    		backgroundColor: [
+      		'#FF6384',
+      		'#36A2EB',
+      		'#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56'
+    		],
+    		hoverBackgroundColor: [
+      		'#FF6384',
+      		'#36A2EB',
+      		'#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56'
+    		]
+    	}]
+    };
+
     return (
       <div>
         <div className="row" style={{paddingTop: 20}}>
@@ -148,7 +168,7 @@ export default class TeamDashboard extends Component {
             {this.renderPlayers()}
           </div>
           <div className="col m6">
-            <div id="pie-chart" ref={(node) => { this.node = node }}></div>
+            <Pie data={data} options={{legend: {display: false}}}/>
           </div>
         </div>
       </div>
