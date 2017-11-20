@@ -1,21 +1,22 @@
 apply plugin: 'com.android.application'
 //apply plugin: 'android'
 
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-
-// Initialize a new Properties() object called keystoreProperties.
-def keystoreProperties = new Properties()
-
-// Load your keystore.properties file into the keystoreProperties object.
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
 android {
     signingConfigs {
         release {
-            keyAlias 'parity'
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file('../keystore.jks')
-            storePassword keystoreProperties['storePassword']
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+            if (keystorePropertiesFile.exists()) {
+                // Initialize a new Properties() object called keystoreProperties.
+                def keystoreProperties = new Properties()
+
+                // Load your keystore.properties file into the keystoreProperties object.
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+                keyAlias 'parity'
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file('../keystore.jks')
+                storePassword keystoreProperties['storePassword']
+            }
         }
     }
     compileSdkVersion 25
