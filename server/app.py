@@ -114,10 +114,9 @@ def create_app():
     def build_stats_response(games):
         present_players = []
         stats = {}
-        week = 0
 
+        # rollup stats per game
         for game in games:
-            week = max(week, game.week)
             present_players = present_players + game.players
 
             for player_stats in Stats.query.filter_by(game_id=game.id):
@@ -162,11 +161,6 @@ def create_app():
                 player_stats.update({'salary': avg_salary})
 
             stats[player.name] = player_stats
-
-        # pro rate for the current week
-        for player in stats:
-            pro_rated_salary = stats[player]['salary'] * float(week)
-            stats[player]['salary'] = int(pro_rated_salary)
 
 
         return stats
