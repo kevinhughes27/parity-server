@@ -22,7 +22,7 @@ class SideNav extends Component {
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
         <li><Link to='/trade_simulator'>Trade Simulator</Link></li>
-        <li><Link to='/VolunteerUrl'>Volunteer</Link></li>
+        <li><a href={volunteerUrl} target='_blank'> Volunteer</a></li>
 
         <li><div className='divider'></div></li>
 
