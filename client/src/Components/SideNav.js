@@ -7,6 +7,7 @@ class SideNav extends Component {
     let podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-2/s-Hka7a'
     let spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1F46H8ZRGP8Jzj1zSW0PT8HerBZ_BlHI5T48A2vp34r0/edit?usp=sharing'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
+    let VolunteerUrl = 'https://docs.google.com/spreadsheets/d/1lunhlXMe5_sefD6Dy9OCreQxMtEi2mzDrmHLhBD7Elo/edit?usp=sharing'
 
     return (
       <div>
@@ -21,6 +22,7 @@ class SideNav extends Component {
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
         <li><Link to='/trade_simulator'>Trade Simulator</Link></li>
+        <li><Link to='/VolunteerUrl'>Volunteer</Link></li>
 
         <li><div className='divider'></div></li>
 
