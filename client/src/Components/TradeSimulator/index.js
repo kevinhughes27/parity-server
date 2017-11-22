@@ -117,8 +117,7 @@ export default class TradeSimulator extends Component {
   }
 
   renderGraph () {
-    const { stats, playerA, playerB, trades } = this.state
-    const playerNames = stats.playerNames()
+    const stats = this.state.stats
     const teamNames = stats.teamNames()
 
     const colors = [

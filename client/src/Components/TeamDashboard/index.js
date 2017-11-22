@@ -156,8 +156,6 @@ export default class TeamDashboard extends Component {
   }
 
   render () {
-    const players = this.playersForCurrentTeam()
-
     return (
       <div>
         <div className="row" style={{paddingTop: 20}}>
