@@ -125,9 +125,9 @@ export default class TeamDashboard extends Component {
     const players = this.playersForCurrentTeam()
 
     const data = {
-      labels: players.map (p=>p.name),
+      labels: players.map (p => p.name),
       datasets: [{
-        data: players.map (p=>p.salary),
+        data: players.map (p => p.salary),
         backgroundColor: [
           '#E5F5E0',
           '#D7EDD4',
