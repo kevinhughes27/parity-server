@@ -148,6 +148,12 @@ export default class TeamDashboard extends Component {
       }]
     };
 
+    const options = {
+      legend: {
+        display: false
+      }
+    }
+
     return (
       <div>
         <div className="row" style={{paddingTop: 20}}>
@@ -156,7 +162,7 @@ export default class TeamDashboard extends Component {
             {this.renderPlayers()}
           </div>
           <div className="col m6">
-            <Pie data={data} options={{legend: {display: false}}}/>
+            <Pie data={data} options={options}/>
           </div>
         </div>
       </div>
