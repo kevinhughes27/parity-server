@@ -24,7 +24,7 @@ class WeekPicker extends Component {
   renderWeeks (weeks: Array<any>) {
     return _map(weeks, (week) => {
       return (
-        <NavItem key={week} onClick={() => { this.props.weekChange(week) } }>
+        <NavItem key={week} onClick={() => { this.props.onChange(week) } }>
           {this.weekText(week)}
         </NavItem>
       )
