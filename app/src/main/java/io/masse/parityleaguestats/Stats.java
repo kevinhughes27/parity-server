@@ -104,7 +104,53 @@ public class Stats extends Activity {
         mainOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ButtonPress().execute((Button) view);
+                Button btn = (Button)view;
+                String buttonText = btn.getText().toString();
+                Boolean leftSideButton = btn.getParent() == layoutLeft;
+                Boolean rightSideButton = btn.getParent() == layoutRight;
+
+                if (leftSideButton) {
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
+                    } else {
+                        bookkeeper.recordFirstActor(buttonText, true);
+                    }
+
+                } else if (rightSideButton) {
+                    if (bookkeeper.shouldRecordNewPass()) {
+                        bookkeeper.recordPass(buttonText);
+                    } else {
+                        bookkeeper.recordFirstActor(buttonText, false);
+                    }
+
+                } else if ((btn == btnD)) {
+                    bookkeeper.recordD();
+
+                } else if ((btn == btnCatchD)){
+                    bookkeeper.recordCatchD();
+
+                } else if ((btn == btnDrop)){
+                    bookkeeper.recordDrop();
+
+                } else if ((btn == btnPull)){
+                    bookkeeper.recordPull();
+
+                } else if ((btn == btnThrowAway)){
+                    bookkeeper.recordThrowAway();
+
+                } else if (btn == btnPoint) {
+                    bookkeeper.recordPoint();
+                    selectPlayers(true);
+
+                } else if (btn == btnUndo) {
+                    if (bookkeeper.activePoint == null) {
+                        selectPlayers();
+                    } else {
+                        bookkeeper.undo();
+                    }
+                }
+
+                updateUI();
             }
         };
 
@@ -275,70 +321,6 @@ public class Stats extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private class ButtonPress extends AsyncTask <Button, Button, Long> {
-
-        @SuppressWarnings("ResourceType")
-        @Override
-        protected Long doInBackground(Button... btns) {
-
-            if (btns.length == 1) {
-                Button btn = btns[0];
-                String buttonText = btn.getText().toString();
-                Boolean leftSideButton = btn.getParent() == layoutLeft;
-                Boolean rightSideButton = btn.getParent() == layoutRight;
-
-                if (leftSideButton) {
-                    if (bookkeeper.shouldRecordNewPass()) {
-                        bookkeeper.recordPass(buttonText);
-                    } else {
-                        bookkeeper.recordFirstActor(buttonText, true);
-                    }
-
-                } else if (rightSideButton) {
-                    if (bookkeeper.shouldRecordNewPass()) {
-                        bookkeeper.recordPass(buttonText);
-                    } else {
-                        bookkeeper.recordFirstActor(buttonText, false);
-                    }
-
-                } else if ((btn == btnD)) {
-                    bookkeeper.recordD();
-
-                } else if ((btn == btnCatchD)){
-                    bookkeeper.recordCatchD();
-
-                } else if ((btn == btnDrop)){
-                    bookkeeper.recordDrop();
-
-                } else if ((btn == btnPull)){
-                    bookkeeper.recordPull();
-
-                } else if ((btn == btnThrowAway)){
-                    bookkeeper.recordThrowAway();
-
-                } else if (btn == btnPoint) {
-                    bookkeeper.recordPoint();
-                    selectPlayers(true);
-
-                } else if (btn == btnUndo) {
-                    if (bookkeeper.activePoint == null) {
-                        selectPlayers();
-                    } else {
-                        bookkeeper.undo();
-                    }
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateUI();
-                    }
-                });
-            }
-            return null;
         }
     }
 
