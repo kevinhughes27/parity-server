@@ -1,7 +1,7 @@
 import React from 'react'
 import { browserHistory, Router, Route } from 'react-router'
 
-import StatsProvider from './Components/StatsProvider'
+import StatsPage from './Components/StatsPage'
 import Leaderboards from './Components/Leaderboards'
 import ComparePlayers from './Components/ComparePlayers'
 import TeamDashboard from './Components/TeamDashboard'
@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
-        <Route path="/" component={StatsProvider}>
+        <Route path="/" component={StatsPage}>
           <Route path="/leaderboards" component={Leaderboards} />
           <Route path="/compare_players" component={ComparePlayers} />
           <Route path="/team_dashboard" component={TeamDashboard} />

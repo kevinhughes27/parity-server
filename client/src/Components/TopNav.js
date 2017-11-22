@@ -17,9 +17,19 @@ class TopNav extends Component {
     window.$('.sidebar-toggle').sideNav({closeOnClick: true})
   }
 
-  render () {
+  renderRightNav () {
     const { week, weeks, weekChange } = this.props
 
+    if (week) {
+      return (
+        <ul className="right">
+          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
+        </ul>
+      )
+    }
+  }
+
+  render () {
     return (
       <nav>
         <div className="nav-wrapper">
@@ -33,9 +43,7 @@ class TopNav extends Component {
             {this.props.children}
           </ul>
 
-          <ul className="right">
-            <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
-          </ul>
+          { this.renderRightNav() }
         </div>
       </nav>
     )
