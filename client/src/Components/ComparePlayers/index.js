@@ -4,8 +4,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
-import PlayerGraph from './PlayerGraph'
-import './compare-players.css'
+import { Bar } from 'react-chartjs-2'
 
 const STATS = [
   'goals',
@@ -26,8 +25,6 @@ type Props = {
 
 export default class ComparePlayers extends Component {
   props: Props
-  graph: PlayerGraph
-  node: Node
   state: {
     week: number,
     stats: Stats,
@@ -48,33 +45,6 @@ export default class ComparePlayers extends Component {
     }
   }
 
-  componentDidMount () {
-    this.renderD3()
-  }
-
-  componentDidUpdate () {
-    this.updateD3()
-  }
-
-  renderD3 () {
-    this.graph = new PlayerGraph()
-    this.graph.init(this.node)
-
-    let { playerAName, playerBName, stats } = this.state
-    let playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
-    let playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
-
-    this.graph.create(playerAStats, playerBStats, STATS)
-  }
-
-  updateD3 () {
-    let { playerAName, playerBName, stats } = this.state
-    let playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
-    let playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
-
-    this.graph.update(playerAStats, playerBStats, STATS)
-  }
-
   playerAChanged (value: string) {
     this.setState({playerAName: value})
   }
@@ -84,12 +54,38 @@ export default class ComparePlayers extends Component {
   }
 
   render () {
-    let playerNames = this.state.stats.playerNames()
-    let { playerAName, playerBName } = this.state
+    const { stats, playerAName, playerBName } = this.state
+    const playerNames = stats.playerNames()
+    const playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
+    const playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
+
+    const data = {
+      labels: STATS,
+      datasets: [
+        {
+          label: playerAName,
+          data: Object.values(playerAStats),
+          backgroundColor: '#98abc5'
+        },
+        {
+          label: playerBName,
+          data: Object.values(playerBStats),
+          backgroundColor: '#ff8c00'
+        }
+      ]
+    }
+
+    const options = {
+      legend: {
+        display: false
+      }
+    }
 
     return (
       <div>
-        <div id="chart" ref={(node) => { this.node = node }}></div>
+        <div style={{paddingTop: '20px'}}>
+          <Bar data={data} redraw={true} options={options}/>
+        </div>
         <div className="row">
           <div className="col m2 s4">
             <PlayerSelect

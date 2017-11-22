@@ -154,8 +154,6 @@ export default class TradeSimulator extends Component {
       }))
     }
 
-    debugger
-
     const options = {
       legend: {
         display: false
