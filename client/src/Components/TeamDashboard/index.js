@@ -126,27 +126,13 @@ export default class TeamDashboard extends Component {
     const players = this.playersForCurrentTeam()
 
     const data = {
-    	labels: players.map (p=>p.name),
-    	datasets: [{
-    		data: players.map (p=>p.salary),
-    		backgroundColor: [
-      		'#FF6384',
-      		'#36A2EB',
-      		'#FFCE56',
+      labels: players.map (p=>p.name),
+      datasets: [{
+        data: players.map (p=>p.salary),
+        backgroundColor: [
           '#FF6384',
           '#36A2EB',
           '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56'
-    		],
-    		hoverBackgroundColor: [
-      		'#FF6384',
-      		'#36A2EB',
-      		'#FFCE56',
           '#FF6384',
           '#36A2EB',
           '#FFCE56',
@@ -156,8 +142,22 @@ export default class TeamDashboard extends Component {
           '#FF6384',
           '#36A2EB',
           '#FFCE56'
-    		]
-    	}]
+        ],
+        hoverBackgroundColor: [
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56'
+        ]
+      }]
     };
 
     return (
