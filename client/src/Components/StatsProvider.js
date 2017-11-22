@@ -10,13 +10,13 @@ import StatsTable from './StatsTable'
 import Stats from '../Stores/Stats'
 
 const fetchWeeks = async () => {
-  let response = await fetch('/weeks')
+  let response = await fetch('/api/weeks')
   return await response.json()
 }
 
 const fetchStats = async (weekNum: number) => {
-  let url = `/weeks/${weekNum}`
-  if (weekNum === 0) url = '/stats'
+  let url = `/api/weeks/${weekNum}`
+  if (weekNum === 0) url = '/api/stats'
 
   let response = await fetch(url)
   let json = await response.json()

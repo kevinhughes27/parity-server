@@ -70,7 +70,7 @@ def create_app():
 
 
     # API
-    @app.route('/teams')
+    @app.route('/api/teams')
     def teams():
         teams = {}
         for team in Team.query.all():
@@ -89,21 +89,21 @@ def create_app():
         return jsonify(teams)
 
 
-    @app.route('/weeks')
+    @app.route('/api/weeks')
     def weeks():
         query = db.session.query(Game.week.distinct().label("week"))
         weeks = [row.week for row in query.all()]
         return jsonify(sorted(weeks))
 
 
-    @app.route('/weeks/<num>')
+    @app.route('/api/weeks/<num>')
     def week(num):
         games = Game.query.filter_by(week=num)
         stats = build_stats_response(games)
         return jsonify({"week": num, "stats": stats})
 
 
-    @app.route('/stats')
+    @app.route('/api/stats')
     def stats():
         games = Game.query.order_by("week asc")
         stats = build_stats_response(games, is_all=True)
@@ -172,7 +172,7 @@ def create_app():
         return stats
 
 
-    @app.route('/games')
+    @app.route('/api/games')
     def games():
         games = []
         for game in Game.query.all():
@@ -181,7 +181,7 @@ def create_app():
         return jsonify(games)
 
 
-    @app.route('/games/<id>')
+    @app.route('/api/games/<id>')
     def game(id):
         game = Game.query.get(id)
         return jsonify(game.to_dict())
