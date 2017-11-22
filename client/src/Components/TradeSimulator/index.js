@@ -25,8 +25,6 @@ type Trade = {
 
 export default class TradeSimulator extends Component {
   props: Props
-  graph: LeagueGraph
-  node: Node
   state: {
     week: number,
     stats: Stats,

@@ -13,8 +13,6 @@ type Props = {
 
 export default class TeamDashboard extends Component {
   props: Props
-  graph: TeamGraph
-  node: Node
   state: {
     week: number,
     stats: Stats,
