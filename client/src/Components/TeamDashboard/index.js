@@ -162,7 +162,7 @@ export default class TeamDashboard extends Component {
             {this.renderPlayers()}
           </div>
           <div className="col m6">
-            <Pie data={data} options={options}/>
+            <Pie data={data} height={400} options={options}/>
           </div>
         </div>
       </div>
