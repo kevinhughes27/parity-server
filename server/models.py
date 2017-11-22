@@ -26,7 +26,8 @@ class Player(db.Model):
     @property
     def salary(self):
         pro_rated_number_of_points = 15
-        return self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
+        pro_rated_salary = self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
+        return round(pro_rated_salary)
 
     @property
     def _avg_salary_per_point_based_on_history(self):
@@ -169,7 +170,7 @@ class Stats(db.Model):
             return 0
         else:
             return self.o_points_for / self._o_points_played
-            
+
     @property
     def d_efficiency(self):
         if self._d_points_played == 0:
@@ -182,7 +183,7 @@ class Stats(db.Model):
         if self._points_played == 0:
             return 0
         else:
-            return (self.o_points_for + self.d_points_for) / self._points_played            
+            return (self.o_points_for + self.d_points_for) / self._points_played
 
     def to_dict(self):
         return {
