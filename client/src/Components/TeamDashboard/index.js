@@ -130,32 +130,21 @@ export default class TeamDashboard extends Component {
       datasets: [{
         data: players.map (p=>p.salary),
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56'
-        ],
-        hoverBackgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56'
+          '#E5F5E0',
+          '#D7EDD4',
+          '#C9E5C9',
+          '#BBDEBE',
+          '#ADD6B3',
+          '#9FCFA8',
+          '#91C79D',
+          '#84C092',
+          '#76B887',
+          '#68B07C',
+          '#5AA971',
+          '#4CA166',
+          '#3E9A5B',
+          '#309250',
+          '#238B45'
         ]
       }]
     };
