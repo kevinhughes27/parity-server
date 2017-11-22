@@ -116,10 +116,11 @@ export default class TradeSimulator extends Component {
     })
   }
 
-  render () {
+  renderGraph () {
     const { stats, playerA, playerB, trades } = this.state
     const playerNames = stats.playerNames()
     const teamNames = stats.teamNames()
+
     const colors = [
       '#E5F5E0',
       '#D7EDD4',
@@ -199,6 +200,13 @@ export default class TradeSimulator extends Component {
       }
     }
 
+    return <Bar data={data} redraw={true} options={options}/>
+  }
+
+  render () {
+    const { stats, playerA, playerB, trades } = this.state
+    const playerNames = stats.playerNames()
+
     return (
       <div>
         <div className="row" style={{paddingTop: 20}}>
@@ -231,7 +239,7 @@ export default class TradeSimulator extends Component {
         </div>
 
         <div className="row" style={{paddingTop: 10}}>
-          <Bar data={data} redraw={true} options={options}/>
+          { this.renderGraph() }
         </div>
       </div>
     )

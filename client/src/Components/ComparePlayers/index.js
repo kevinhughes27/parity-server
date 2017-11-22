@@ -53,9 +53,8 @@ export default class ComparePlayers extends Component {
     this.setState({playerBName: value})
   }
 
-  render () {
+  renderGraph () {
     const { stats, playerAName, playerBName } = this.state
-    const playerNames = stats.playerNames()
     const playerAStats = _.pick(stats.forPlayer(playerAName), STATS)
     const playerBStats = _.pick(stats.forPlayer(playerBName), STATS)
 
@@ -81,10 +80,17 @@ export default class ComparePlayers extends Component {
       }
     }
 
+    return <Bar data={data} redraw={true} options={options}/>
+  }
+
+  render () {
+    const { stats, playerAName, playerBName } = this.state
+    const playerNames = stats.playerNames()
+
     return (
       <div>
         <div style={{paddingTop: '20px'}}>
-          <Bar data={data} redraw={true} options={options}/>
+          { this.renderGraph() }
         </div>
         <div className="row">
           <div className="col m2 s4">
