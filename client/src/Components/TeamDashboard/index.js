@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
 import { Pie } from 'react-chartjs-2'
-import './team-dashboard.css'
 
 type Props = {
   week: number,
