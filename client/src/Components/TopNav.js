@@ -1,32 +1,12 @@
 // @flow
 
 import React, { Component } from 'react'
-import WeekPicker from './WeekPicker'
-
-type Props = {
-  week: number,
-  weeks: Array<any>,
-  weekChange: (week: number) => void,
-  children?: React$Element<any>
-};
+import SideNav from './SideNav'
 
 class TopNav extends Component {
-  props: Props
 
   componentDidMount () {
     window.$('.sidebar-toggle').sideNav({closeOnClick: true})
-  }
-
-  renderRightNav () {
-    const { week, weeks, weekChange } = this.props
-
-    if (week) {
-      return (
-        <ul className="right">
-          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
-        </ul>
-      )
-    }
   }
 
   render () {
@@ -40,10 +20,10 @@ class TopNav extends Component {
           </a>
 
           <ul className="side-nav" id="sidebar">
-            {this.props.children}
+            <SideNav/>
           </ul>
 
-          { this.renderRightNav() }
+          {this.props.children}
         </div>
       </nav>
     )

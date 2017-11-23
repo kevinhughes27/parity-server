@@ -4,8 +4,8 @@ import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import TopNav from './TopNav'
-import SideNav from './SideNav'
 import Loading from './Loading'
+import WeekPicker from './WeekPicker'
 import StatsTable from './StatsTable'
 import Stats from '../Stores/Stats'
 
@@ -66,8 +66,10 @@ class StatsProvider extends Component {
     let weekChange = this.weekChange.bind(this)
 
     return (
-      <TopNav week={week} weeks={weeks} weekChange={weekChange}>
-        <SideNav/>
+      <TopNav>
+        <ul className="right">
+          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
+        </ul>
       </TopNav>
     )
   }
