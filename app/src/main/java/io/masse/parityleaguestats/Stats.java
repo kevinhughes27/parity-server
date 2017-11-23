@@ -287,7 +287,7 @@ public class Stats extends Activity {
     private void uploadGame() {
         try {
             String json = bookkeeper.serialize().toString();
-            saveBackup();
+            saveBackup(json);
             new uploadGame(context).execute(json);
 
         } catch (Exception e) {
@@ -296,10 +296,8 @@ public class Stats extends Activity {
         }
     }
 
-    private void saveBackup() {
+    private void saveBackup(String json) {
         try {
-            String json = bookkeeper.serialize().toString();
-
             File pathToExternalStorage = Environment.getExternalStorageDirectory();
             File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats");
 
