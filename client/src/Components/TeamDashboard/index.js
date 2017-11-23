@@ -13,8 +13,6 @@ type Props = {
 
 export default class TeamDashboard extends Component {
   props: Props
-  graph: TeamGraph
-  node: Node
   state: {
     week: number,
     stats: Stats,
@@ -121,7 +119,7 @@ export default class TeamDashboard extends Component {
     )
   }
 
-  render () {
+  renderGraph () {
     const players = this.playersForCurrentTeam()
 
     const data = {
@@ -154,6 +152,10 @@ export default class TeamDashboard extends Component {
       }
     }
 
+    return <Pie data={data} height={400} options={options}/>
+  }
+
+  render () {
     return (
       <div>
         <div className="row" style={{paddingTop: 20}}>
@@ -162,7 +164,7 @@ export default class TeamDashboard extends Component {
             {this.renderPlayers()}
           </div>
           <div className="col m6">
-            <Pie data={data} height={400} options={options}/>
+            { this.renderGraph() }
           </div>
         </div>
       </div>

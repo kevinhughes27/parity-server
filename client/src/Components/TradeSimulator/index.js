@@ -4,7 +4,8 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
-import LeagueGraph from './LeagueGraph'
+import { Bar } from 'react-chartjs-2'
+import 'chartjs-plugin-annotation'
 
 type Props = {
   week: number,
@@ -24,8 +25,6 @@ type Trade = {
 
 export default class TradeSimulator extends Component {
   props: Props
-  graph: LeagueGraph
-  node: Node
   state: {
     week: number,
     stats: Stats,
@@ -37,36 +36,16 @@ export default class TradeSimulator extends Component {
   constructor (props: Props) {
     super(props)
 
-    let players = this.props.stats.playerNames()
+    const { week, stats } = this.props
+    const players = stats.playerNames()
 
     this.state = {
-      week: this.props.week,
-      stats: this.props.stats,
+      week: week,
+      stats: stats,
       playerA: players[0],
       playerB: players[1],
       trades: []
     }
-  }
-
-  componentDidMount () {
-    this.renderD3()
-  }
-
-  componentDidUpdate () {
-    this.updateD3()
-  }
-
-  renderD3 () {
-    let stats = this.state.stats
-
-    this.graph = new LeagueGraph()
-    this.graph.init(this.node)
-    this.graph.create(stats.teamNames(), stats, stats.salaryCap(), stats.salaryFloor())
-  }
-
-  updateD3 () {
-    let stats = this.state.stats
-    this.graph.update(stats.teamNames(), stats, stats.salaryCap())
   }
 
   playerAChanged (value: string) {
@@ -128,7 +107,7 @@ export default class TradeSimulator extends Component {
           </div>
 
           <div className="col m1">
-            <a href="" onClick={() => { this.deleteTrade(trade) } }>
+            <a style={{cursor: 'pointer'}} onClick={() => {this.deleteTrade(trade) }}>
               <i className="material-icons" style={{paddingTop: 40}}>delete</i>
             </a>
           </div>
@@ -137,9 +116,95 @@ export default class TradeSimulator extends Component {
     })
   }
 
+  renderGraph () {
+    const stats = this.state.stats
+    const teamNames = stats.teamNames()
+
+    const colors = [
+      '#E5F5E0',
+      '#D7EDD4',
+      '#C9E5C9',
+      '#BBDEBE',
+      '#ADD6B3',
+      '#9FCFA8',
+      '#91C79D',
+      '#84C092',
+      '#76B887',
+      '#68B07C',
+      '#5AA971',
+      '#4CA166',
+      '#3E9A5B',
+      '#309250',
+      '#238B45'
+    ]
+
+    const data = {
+      labels: teamNames,
+      datasets: _.flatten(teamNames.map(team => {
+        return stats.playersFor(team).map((player, idx) => {
+          return {
+            type: 'bar',
+            label: player.name,
+            stack: team,
+            data: [player.salary],
+            backgroundColor: colors[idx],
+            hoverBackgroundColor: colors[idx]
+          }
+        })
+      }))
+    }
+
+    const options = {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          title: (tooltipItem, data) => {
+            const item = data.datasets[tooltipItem[0].datasetIndex]
+            return item.stack
+          }
+        }
+      },
+      scales: {
+        xAxes: [{
+          barPercentage: 0.6,
+          categoryPercentage: 1.0,
+          ticks: {
+            autoSkip: false
+          }
+        }],
+        yAxes: [{
+          stacked: true
+        }]
+      },
+      animation: {
+        duration: 0
+      },
+      annotation: {
+        annotations: [{
+          type: 'line',
+          mode: 'horizontal',
+          scaleID: 'y-axis-0',
+          value: stats.salaryCap(),
+          borderColor: 'black',
+          borderWidth: 2,
+          label: {
+            position: 'right',
+            backgroundColor: 'black',
+            content: 'Salary Cap',
+            enabled: true
+          }
+        }]
+      }
+    }
+
+    return <Bar data={data} redraw={true} options={options}/>
+  }
+
   render () {
-    let playerNames = this.state.stats.playerNames()
-    let { playerA, playerB, trades } = this.state
+    const { stats, playerA, playerB, trades } = this.state
+    const playerNames = stats.playerNames()
 
     return (
       <div>
@@ -173,7 +238,7 @@ export default class TradeSimulator extends Component {
         </div>
 
         <div className="row" style={{paddingTop: 10}}>
-          <div id="chart" ref={(node) => { this.node = node }}></div>
+          { this.renderGraph() }
         </div>
       </div>
     )
