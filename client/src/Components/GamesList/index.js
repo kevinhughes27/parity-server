@@ -1,6 +1,7 @@
 import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 
@@ -38,13 +39,20 @@ export default class GamesList extends Component {
       <div key={week}>
         <h5>Week {week}</h5>
         <ul className='collection'>
-          { games.map(game =>
-            <li key={game.id} className='collection-item'>
-              { game.homeTeam } vs {game.awayTeam}
-            </li>
-          )}
+          { games.map(this.renderGame) }
         </ul>
       </div>
+    )
+  }
+
+  renderGame (game) {
+    return (
+      <Link key={game.id} className='collection-item' to={`/games/${game.id}`}>
+        { game.homeTeam } vs { game.awayTeam }
+        <span className='secondary-content'>
+          { game.homeScore } - { game.awayScore }
+        </span>
+      </Link>
     )
   }
 
@@ -54,7 +62,7 @@ export default class GamesList extends Component {
     if (loading) return (<Loading />)
 
     return (
-      <div className="container">
+      <div className='container'>
         { this.renderGames(games) }
       </div>
     )
@@ -63,7 +71,7 @@ export default class GamesList extends Component {
   render () {
     return (
       <div>
-        <TopNav/>
+        <TopNav />
         { this.renderMain() }
       </div>
     )
