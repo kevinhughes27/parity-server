@@ -58,6 +58,7 @@ class Game(db.Model):
 
     def to_dict(self):
         return {
+            "id": self.id,
             "league": self.league,
             "week": self.week,
             "homeTeam": self.home_team,
