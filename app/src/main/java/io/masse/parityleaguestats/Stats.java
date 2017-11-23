@@ -223,16 +223,11 @@ public class Stats extends Activity {
                 return true;
             case R.id.action_save_game:
                 new AlertDialog.Builder(context)
-                        .setTitle("Save and Clear")
-                        .setMessage("Are you sure sure?" )
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setTitle("Submit Game")
+                        .setMessage("Submit this game?")
+                        .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 uploadGame();
-                                resetApp();
-                            }
-                        }).setNeutralButton("Clear", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                saveBackup();
                                 resetApp();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
