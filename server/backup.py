@@ -26,6 +26,6 @@ def fetch_games(src_url):
 
 
 if __name__ == "__main__":
-    src_url = "https://parity-server.herokuapp.com/games"
+    src_url = "https://parity-server.herokuapp.com/api/games"
     target_dir = "data/ocua_17-18"
     backup(src_url, target_dir)
