@@ -33,7 +33,7 @@ public class fetchRoster extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
-        String strRosterUrl = "http://parity-server.herokuapp.com/teams";
+        String strRosterUrl = "http://parity-server.herokuapp.com/api/teams";
         String resString = "";
 
         try {
