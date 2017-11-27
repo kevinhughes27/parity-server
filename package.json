@@ -15,7 +15,8 @@
     "start": "cd client && yarn start"
   },
   "dependencies": {
-    "subpackage": "^1.1.0"
+    "subpackage": "^1.1.0",
+    "timediff": "^1.1.1"
   },
   "cacheDirectories": [
     "node_modules",

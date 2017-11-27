@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import timediff from 'timediff'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 
@@ -71,13 +72,16 @@ export default class Game extends Component {
 
   renderPoint (point, idx) {
     const game = this.state.game
-    const player = _.last(point.events).firstActor
+    const firstEvent = point.events[0]
+    const lastEvent = _.last(point.events)
+    const player = lastEvent.firstActor
     const team = _.includes(game.homeRoster, player) ? game.homeTeam : game.awayTeam
+    const duration = timediff(firstEvent.timestamp, lastEvent.timestamp, 'mS')
 
     return (
       <li key={idx}>
         <div className="collapsible-header">
-          Point <strong>{team}</strong> by {player}
+          Point <strong>{team}</strong> by {player} ({duration.minutes}:{duration.seconds} minutes)
         </div>
         <div className="collapsible-body">
           <ul className="collection" style={{paddingLeft: 40}}>
