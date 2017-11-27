@@ -112,7 +112,7 @@ export default class Game extends Component {
     if (event.type === 'POINT') {
       return (
         <li key={idx} className="collection-item">
-          {event.firstActor} scored!
+          <i className='fa fa-trophy'/>  {event.firstActor} scored!
         </li>
       )
     }
@@ -120,7 +120,7 @@ export default class Game extends Component {
     if (event.type === 'DEFENSE') {
       return (
         <li key={idx} className="collection-item">
-          {event.firstActor} got a block
+          <i className='fa fa-shield' /> {event.firstActor} got a block
         </li>
       )
     }
@@ -128,7 +128,7 @@ export default class Game extends Component {
     if (event.type === 'THROWAWAY') {
       return (
         <li key={idx} className="collection-item">
-          {event.firstActor} threw it away
+          <i className='fa fa-level-down'/> {event.firstActor} threw it away
         </li>
       )
     }
@@ -136,7 +136,7 @@ export default class Game extends Component {
     if (event.type === 'DROP') {
       return (
         <li key={idx} className="collection-item">
-          {event.firstActor} dropped it
+          <i className='fa fa-level-down'/> {event.firstActor} dropped it
         </li>
       )
     }
