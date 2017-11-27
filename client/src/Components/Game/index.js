@@ -27,7 +27,11 @@ export default class Game extends Component {
     window.$('.collapsible').collapsible()
   }
 
-  renderMain (game) {
+  renderMain () {
+    const { loading, game } = this.state
+
+    if (loading) return (<Loading />)
+
     return (
       <div className='container'>
         <div className='center-align'>
@@ -39,6 +43,7 @@ export default class Game extends Component {
           { this.renderRoster('Away', game.awayRoster) }
         </div>
         <div className='row'>
+          <h5>Points</h5>
           <ul className='collapsible' data-collapsible='expandable'>
             { game.points.map(this.renderPoint) }
           </ul>
@@ -49,21 +54,17 @@ export default class Game extends Component {
 
   renderRoster (title, roster) {
     return (
-      <div className='col m6'>
-        <div className='card-panel' style={{height: 520}}>
-          <h5>{title}</h5>
-          <table className='highlight'>
-            <tbody>
-              { _.map(roster, (player) => {
-                return (
-                  <tr key={player} style={{lineHeight: 0.5}}>
-                    <td>{player}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
+      <div className='col s6'>
+        <h5>{title}</h5>
+        <ul className='collection'>
+          { _.map(roster, (player) => {
+            return (
+              <li className='collection-item' key={player}>
+                {player}
+              </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }
@@ -138,14 +139,10 @@ export default class Game extends Component {
   }
 
   render () {
-    const { loading, game } = this.state
-
-    if (loading) return (<Loading />)
-
     return (
       <div>
         <TopNav />
-        { this.renderMain(game) }
+        { this.renderMain() }
       </div>
     )
   }
