@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
-import glob, os
+import glob, os, sys
 import requests
 
 # src = "data/test/"
 src = "data/ocua_17-18/"
 
 url = 'http://localhost:5000/upload'
-# url = 'https://parity-server.herokuapp.com/upload'
+if len(sys.argv) > 1 and sys.argv[1] == 'prod':
+    url = 'https://parity-server.herokuapp.com/upload'
 
 os.chdir(src)
 
