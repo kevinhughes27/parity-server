@@ -13,7 +13,7 @@ Server Setup
 2. To install python dependencies run `pip install -r requirements.txt` (You may need Run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
 4. Create your database by running `python server/init_db.py` and then seed it with `python server/seed.py`
-5. You can inspect the server responses at `http://localhost:5000/weeks/1` and `http://localhost:5000/stats` etc.
+5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
 
 On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000.
 
