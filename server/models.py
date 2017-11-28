@@ -25,6 +25,24 @@ class Player(db.Model):
 
     @property
     def salary(self):
+        if self.name == 'Heather Wallace':
+            return self._heather_salary()
+        else:
+            return self._normal_player_salary()
+
+    def _heather_salary(self):
+        real_salary = self._normal_player_salary()
+
+        if real_salary < self._allan_salary():
+            return self._allan_salary() + 5
+        else:
+            return real_salary
+
+    def _allan_salary(self):
+        allan = Player.query.filter_by(name='Allan Godding').first()
+        return allan.salary
+
+    def _normal_player_salary(self):
         pro_rated_number_of_points = 15
         pro_rated_salary = self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
         return round(pro_rated_salary)
