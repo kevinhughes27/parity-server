@@ -14,6 +14,8 @@ def backup(src_url, target_dir):
         game_counts[week] += 1
         game_num = str(game_counts[week])
 
+        del game['id']
+
         file_name = "week" + week + "_game" + game_num + ".json"
         fo = open(os.path.join(target_dir, file_name), "w")
         fo.write(json.dumps(game, indent=2, sort_keys=True))
