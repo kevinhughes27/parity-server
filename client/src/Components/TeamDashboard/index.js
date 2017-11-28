@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
 import { Pie } from 'react-chartjs-2'
+import { colors, warnColors } from '../gradients'
 
 type Props = {
   week: number,
@@ -29,15 +30,9 @@ export default class TeamDashboard extends Component {
     }
   }
 
-  playersForCurrentTeam () {
-    let { team, stats } = this.state
-    return stats.playersFor(team).reverse()
-  }
-
   componentDidMount () {
     window.$('.dropdown-button').dropdown()
   }
-
 
   renderTeams (teams: Array<any>) {
     return _.map(teams, (team) => {
@@ -72,7 +67,7 @@ export default class TeamDashboard extends Component {
 
   renderPlayers () {
     let { team, stats } = this.state
-    let players = this.playersForCurrentTeam()
+    let players = stats.playersFor(team).reverse()
     let teamSalary = stats.teamSalary(team)
     let salaryCap = stats.salaryCap()
     let salaryFloor = stats.salaryFloor()
@@ -120,29 +115,14 @@ export default class TeamDashboard extends Component {
   }
 
   renderGraph () {
-    const players = this.playersForCurrentTeam()
+    let { team, stats } = this.state
+    const players = stats.playersFor(team).reverse()
 
     const data = {
       labels: players.map (p => p.name),
       datasets: [{
         data: players.map (p => p.salary),
-        backgroundColor: [
-          '#E5F5E0',
-          '#D7EDD4',
-          '#C9E5C9',
-          '#BBDEBE',
-          '#ADD6B3',
-          '#9FCFA8',
-          '#91C79D',
-          '#84C092',
-          '#76B887',
-          '#68B07C',
-          '#5AA971',
-          '#4CA166',
-          '#3E9A5B',
-          '#309250',
-          '#238B45'
-        ]
+        backgroundColor: stats.teamOverCap(team) ? warnColors : colors
       }]
     };
 
