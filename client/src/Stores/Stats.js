@@ -80,4 +80,8 @@ export default class Stats {
   salaryFloor () {
     return _.floor(this.averageTeamSalary() * 0.99)
   }
+
+  teamOverCap(team) {
+    return this.teamSalary(team) > this.salaryCap()
+  }
 }

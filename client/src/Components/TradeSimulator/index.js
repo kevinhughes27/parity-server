@@ -138,6 +138,24 @@ export default class TradeSimulator extends Component {
       '#238B45'
     ]
 
+    const warnColors = [
+      '#FFF9C4',
+      '#FEF6B9',
+      '#FEF4AF',
+      '#FEF1A5',
+      '#FEEF9B',
+      '#FEED90',
+      '#FEEA86',
+      '#FEE87C',
+      '#FDE672',
+      '#FDE368',
+      '#FDE15D',
+      '#FDDF53',
+      '#FDDC49',
+      '#FDDA3F',
+      '#FDD835'
+    ]
+
     const data = {
       labels: teamNames,
       datasets: _.flatten(teamNames.map(team => {
@@ -147,8 +165,8 @@ export default class TradeSimulator extends Component {
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: colors[idx],
-            hoverBackgroundColor: colors[idx]
+            backgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx],
+            hoverBackgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx]
           }
         })
       }))
