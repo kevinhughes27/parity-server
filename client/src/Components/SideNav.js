@@ -13,11 +13,12 @@ class SideNav extends Component {
       <div>
         <li>
           <div className='userView'>
-            <img src='logo.png' style={{width: 240}} alt="logo"/>
+            <img src='/logo.png' style={{width: 240}} alt="logo"/>
           </div>
         </li>
 
-        <li><Link to='/'>Raw Stats</Link></li>
+        <li><Link to='/games'>Games</Link></li>
+        <li><Link to='/'>Player Stats</Link></li>
         <li><Link to='/leaderboards'>Leaderboards</Link></li>
         <li><Link to='/compare_players'>Compare Players</Link></li>
         <li><Link to='/team_dashboard'>Team Dashboard</Link></li>
