@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
 import { Bar } from 'react-chartjs-2'
+import { colors, warnColors } from '../gradients'
 import 'chartjs-plugin-annotation'
 
 type Props = {
@@ -120,24 +121,6 @@ export default class TradeSimulator extends Component {
     const stats = this.state.stats
     const teamNames = stats.teamNames()
 
-    const colors = [
-      '#E5F5E0',
-      '#D7EDD4',
-      '#C9E5C9',
-      '#BBDEBE',
-      '#ADD6B3',
-      '#9FCFA8',
-      '#91C79D',
-      '#84C092',
-      '#76B887',
-      '#68B07C',
-      '#5AA971',
-      '#4CA166',
-      '#3E9A5B',
-      '#309250',
-      '#238B45'
-    ]
-
     const data = {
       labels: teamNames,
       datasets: _.flatten(teamNames.map(team => {
@@ -147,8 +130,8 @@ export default class TradeSimulator extends Component {
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: colors[idx],
-            hoverBackgroundColor: colors[idx]
+            backgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx],
+            hoverBackgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx]
           }
         })
       }))
