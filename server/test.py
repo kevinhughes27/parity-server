@@ -631,6 +631,26 @@ class Test(TestCase):
             else:
                 assert normalized_stats["o_points_against"] == 0
 
+    def test_api_endpoints(self):
+        with open('data/test/mini_game2.json') as f:
+            game_str = f.read()
+
+        self.client.post('/upload', data=game_str, content_type='application/json')
+
+        response = self.client.get('/api/weeks')
+        assert response.status_code == 200
+
+        response = self.client.get('/api/weeks/1')
+        assert response.status_code == 200
+
+        response = self.client.get('/api/stats')
+        assert response.status_code == 200
+
+        response = self.client.get('/api/games')
+        assert response.status_code == 200
+
+        response = self.client.get('/api/games/1')
+        assert response.status_code == 200
 
 if __name__ == '__main__':
     os.environ['APP_SETTINGS'] = 'config.TestingConfig'
