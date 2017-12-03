@@ -7,7 +7,6 @@ import os
 
 from app import create_app
 from models import db, Game, Player, Stats
-from utils import StatsCalculator
 
 class Test(TestCase):
     def create_app(self):
