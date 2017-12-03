@@ -10,7 +10,7 @@ Server Setup
 ------------
 
 1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine.
-2. To install python dependencies run `pip install -r requirements.txt` (You may need Run as administrator depending on your security settings)
+2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
 4. Create your database by running `python server/init_db.py` and then seed it with `python server/seed.py`
 5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
