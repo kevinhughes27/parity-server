@@ -13,24 +13,24 @@ class Game(db.Model):
     away_score = db.Column(db.Integer)
     points = db.Column(db.Text)
 
-@property
-def players(self):
-    return json.loads(self.home_roster) + json.loads(self.away_roster)
+    @property
+    def players(self):
+        return json.loads(self.home_roster) + json.loads(self.away_roster)
 
-def to_dict(self, include_points=False):
-    output = {
-        "id": self.id,
-        "league": self.league,
-        "week": self.week,
-        "homeTeam": self.home_team,
-        "homeScore": self.home_score,
-        "homeRoster": json.loads(self.home_roster),
-        "awayTeam": self.away_team,
-        "awayScore": self.away_score,
-        "awayRoster": json.loads(self.away_roster)
-    }
+    def to_dict(self, include_points=False):
+        output = {
+            "id": self.id,
+            "league": self.league,
+            "week": self.week,
+            "homeTeam": self.home_team,
+            "homeScore": self.home_score,
+            "homeRoster": json.loads(self.home_roster),
+            "awayTeam": self.away_team,
+            "awayScore": self.away_score,
+            "awayRoster": json.loads(self.away_roster)
+        }
 
-    if include_points:
-        output["points"] = json.loads(self.points)
+        if include_points:
+            output["points"] = json.loads(self.points)
 
-    return output
+        return output

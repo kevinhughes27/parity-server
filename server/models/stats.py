@@ -91,11 +91,6 @@ class Stats(db.Model):
         return self._o_points_played + self._d_points_played
 
     @property
-    def salary(self):
-        player = Player.query.get(self.player_id)
-        return player.salary if player != None else 0
-
-    @property
     def o_efficiency(self):
         if self._o_points_played == 0:
             return 0
@@ -133,10 +128,9 @@ class Stats(db.Model):
             "o_points_against": self.o_points_against,
             "d_points_for": self.d_points_for,
             "d_points_against": self.d_points_against,
-            "pay": self.pay,
-            "salary_per_point": self.salary_per_point,
-            "salary": self.salary,
             "o_efficiency": self.o_efficiency,
             "d_efficiency": self.d_efficiency,
-            "total_efficiency": self.total_efficiency
+            "total_efficiency": self.total_efficiency,
+            "pay": self.pay,
+            "salary_per_point": self.salary_per_point
         }

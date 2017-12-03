@@ -1,4 +1,6 @@
 from .db import db
+from .team import Team
+from .stats import Stats
 import json
 
 class Player(db.Model):
@@ -14,6 +16,7 @@ class Player(db.Model):
 
     @property
     def team(self):
+        from .team import Team
         return Team.query.get(self.team_id)
 
     @property

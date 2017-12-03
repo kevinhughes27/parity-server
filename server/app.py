@@ -126,9 +126,12 @@ def create_app():
                 # sum all stats for the player
                 if player.name in stats:
                     existing_data = stats[player.name]
-                    stats_to_sum = data.keys() - ['pay', 'salary', 'salary_per_point', 'o_efficiency', 'd_efficiency', 'total_efficiency']
+                    stats_to_average = ['pay', 'salary_per_point', 'o_efficiency', 'd_efficiency', 'total_efficiency']
+                    stats_to_sum = data.keys() - stats_to_average
                     summed_stats = { s: data.get(s, 0) + existing_data.get(s, 0) for s in stats_to_sum }
                     stats[player.name].update(summed_stats)
+                    averaged_stats = { s: data.get(s, 0) + existing_data.get(s, 0) for s in stats_to_average }
+                    stats[player.name].update(averaged_stats)
                 else:
                     stats.update({player.name: data})
 
@@ -147,7 +150,11 @@ def create_app():
                     if "(S)" in player.name:
                         team = "Substitute"
 
-                data.update({'team': team})
+                stats[player.name].update({'team': team})
+
+                # set the salary for the player
+                stats[player.name].update({'salary': player.salary})
+
 
         # handle absent players
         players = Player.query.filter(Player.team_id != None)
