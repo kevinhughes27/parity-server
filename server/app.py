@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
 from models import db, Game, Stats, Team, Player
-from utils import StatsCalculator
+from upload import StatsCalculator
 
 import os
 import json
