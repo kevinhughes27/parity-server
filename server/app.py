@@ -112,15 +112,16 @@ def create_app():
 
     @cache.cached(timeout=cache_timeout)
     def build_stats_response(games, is_all=False):
-        present_players = []
+        present_players = set()
         stats = {}
 
         # rollup stats per game
         for game in games:
-            present_players = present_players + game.players
+            [ present_players.add(player_name) for player_name in game.players ]
 
             for player_stats in Stats.query.filter_by(game_id=game.id):
                 player = Player.query.get(player_stats.player_id)
+                present_players.add(player.name)
                 data = player_stats.to_dict()
 
                 # sum all stats for the player
@@ -142,13 +143,16 @@ def create_app():
                     else:
                         team = "Substitute"
                 else:
-                    if player.name in json.loads(game.home_roster):
+                    if "(S)" in player.name:
+                        team = "Substitute"
+                    elif player.name in json.loads(game.home_roster):
                         team = game.home_team
                     elif player.name in json.loads(game.away_roster):
                         team = game.away_team
-
-                    if "(S)" in player.name:
-                        team = "Substitute"
+                    elif player.team_id:
+                        team = Team.query.get(player.team_id).name
+                    else:
+                        team = 'Unknown'
 
                 stats[player.name].update({'team': team})
 
