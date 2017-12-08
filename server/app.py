@@ -75,6 +75,7 @@ def create_app():
         teams = {}
         for team in Team.query.all():
             teams[team.name] = {
+                'id': team.zuluru_id,
                 'players': [],
                 'malePlayers': [],
                 'femalePlayers': []
