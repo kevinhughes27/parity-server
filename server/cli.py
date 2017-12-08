@@ -112,11 +112,11 @@ def get_team_ids(session, league_id):
     return ids
 
 
-def sync_team(session, id):
-    soup = get_soup(session, team_path + str(id))
-    team_name = soup.findAll('h2')[-1].get_text()
+def sync_team(session, zuluru_id):
+    soup = get_soup(session, team_path + str(zuluru_id))
+    name = soup.findAll('h2')[-1].get_text()
 
-    team = get_or_create_team(team_name)
+    team = update_or_create_team(zuluru_id, name)
 
     reset_team_players(team)
     sync_players(soup, team)
@@ -147,17 +147,22 @@ def sync_players(soup, team):
         update_or_create_player(zuluru_id, name, gender, team)
 
 
-def get_or_create_team(team_name):
-    instance = Team.query.filter_by(name=team_name).first()
+def update_or_create_team(zuluru_id, name):
+    instance = Team.query.filter_by(name=name).first()
+
     if instance:
-        print('Found Team: ', team_name)
-        return instance
+        print('Found Team: ', name)
     else:
-        print('Creating Team: ', team_name)
-        instance = Team(name=team_name)
-        db.session.add(instance)
-        db.session.commit()
-        return instance
+        print('Creating Team: ', name)
+        instance = Team(name=name)
+
+    instance.name = name
+    instance.zuluru_id = zuluru_id
+
+    db.session.add(instance)
+    db.session.commit()
+
+    return instance
 
 
 def update_or_create_player(zuluru_id, name, gender, team):
