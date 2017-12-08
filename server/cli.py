@@ -148,16 +148,15 @@ def sync_players(soup, team):
 
 
 def update_or_create_team(zuluru_id, name):
-    instance = Team.query.filter_by(name=name).first()
+    instance = Team.query.filter_by(zuluru_id=zuluru_id).first()
 
     if instance:
         print('Found Team: ', name)
     else:
         print('Creating Team: ', name)
-        instance = Team(name=name)
+        instance = Team(zuluru_id=zuluru_id)
 
     instance.name = name
-    instance.zuluru_id = zuluru_id
 
     db.session.add(instance)
     db.session.commit()
