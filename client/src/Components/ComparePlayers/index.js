@@ -1,6 +1,7 @@
 // @flow
 
 import _ from 'lodash'
+import ls from 'local-storage'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
@@ -40,16 +41,18 @@ export default class ComparePlayers extends Component {
     this.state = {
       week: this.props.week,
       stats: this.props.stats,
-      playerAName: players[0],
-      playerBName: players[1]
+      playerAName: ls.get('playerA') || players[0],
+      playerBName: ls.get('playerB') || players[1]
     }
   }
 
   playerAChanged (value: string) {
+    ls.set('playerA', value)
     this.setState({playerAName: value})
   }
 
   playerBChanged (value: string) {
+    ls.set('playerB', value)
     this.setState({playerBName: value})
   }
 

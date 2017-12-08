@@ -1,6 +1,7 @@
 // @flow
 
 import _ from 'lodash'
+import ls from 'local-storage'
 import React, { Component } from 'react'
 import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
@@ -26,7 +27,7 @@ export default class TeamDashboard extends Component {
     this.state = {
       week: this.props.week,
       stats: this.props.stats,
-      team: this.props.stats.teamNames()[0]
+      team: ls.get('team') || this.props.stats.teamNames()[0]
     }
   }
 
@@ -34,11 +35,16 @@ export default class TeamDashboard extends Component {
     window.$('.dropdown-button').dropdown()
   }
 
+  teamChanged (teamName) {
+    ls.set('team', teamName)
+    this.setState({team: teamName})
+  }
+
   renderTeams (teams: Array<any>) {
     return _.map(teams, (team) => {
       return (
         <li key={team}>
-         <a onClick={() => { this.setState({team}) } }>
+         <a onClick={() => { this.teamChanged(team) }}>
             {team}
           </a>
         </li>
