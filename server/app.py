@@ -195,7 +195,7 @@ def create_app():
     @app.route('/api/games/<id>')
     def game(id):
         game = Game.query.get(id)
-        return jsonify(game.to_dict())
+        return jsonify(game.to_dict(include_points=True))
 
 
     # Client
