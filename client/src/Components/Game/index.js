@@ -4,6 +4,9 @@ import timediff from 'timediff'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 
+import Roster from './Roster'
+import Event from './Event'
+
 export default class Game extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +19,7 @@ export default class Game extends Component {
     }
   }
 
-  componentWillMount() {
+  componentWillMount () {
     const gameId = this.props.params.gameId
 
     fetch(`/api/games/${gameId}`)
@@ -40,8 +43,8 @@ export default class Game extends Component {
           <h5><strong>{ game.homeScore } - { game.awayScore }</strong></h5>
         </div>
         <div className='row'>
-          { this.renderRoster('Home', game.homeRoster) }
-          { this.renderRoster('Away', game.awayRoster) }
+          <Roster title={'Home'} players={game.homeRoster} />
+          <Roster title={'Away'} players={game.awayRoster} />
         </div>
         <div className='row'>
           <h5>Points</h5>
@@ -49,23 +52,6 @@ export default class Game extends Component {
             { game.points.map(this.renderPoint) }
           </ul>
         </div>
-      </div>
-    )
-  }
-
-  renderRoster (title, roster) {
-    return (
-      <div className='col s6'>
-        <h5>{title}</h5>
-        <ul className='collection'>
-          { _.map(roster, (player) => {
-            return (
-              <li className='collection-item' key={player}>
-                {player}
-              </li>
-            )
-          })}
-        </ul>
       </div>
     )
   }
@@ -85,61 +71,11 @@ export default class Game extends Component {
         </div>
         <div className="collapsible-body">
           <ul className="collection" style={{paddingLeft: 40}}>
-            { point.events.map(this.renderEvent) }
+            { point.events.map((ev, idx) => <Event key={idx} event={ev} />) }
           </ul>
         </div>
       </li>
     )
-  }
-
-  renderEvent (event, idx) {
-    if (event.type === 'PULL') {
-      return (
-        <li key={idx} className="collection-item">
-          {event.firstActor} pulled
-        </li>
-      )
-    }
-
-    if (event.type === 'PASS') {
-      return (
-        <li key={idx} className="collection-item">
-          {event.firstActor} passed to {event.secondActor}
-        </li>
-      )
-    }
-
-    if (event.type === 'POINT') {
-      return (
-        <li key={idx} className="collection-item">
-          <i className='fa fa-trophy'/>  {event.firstActor} scored!
-        </li>
-      )
-    }
-
-    if (event.type === 'DEFENSE') {
-      return (
-        <li key={idx} className="collection-item">
-          <i className='fa fa-shield' /> {event.firstActor} got a block
-        </li>
-      )
-    }
-
-    if (event.type === 'THROWAWAY') {
-      return (
-        <li key={idx} className="collection-item">
-          <i className='fa fa-level-down'/> {event.firstActor} threw it away
-        </li>
-      )
-    }
-
-    if (event.type === 'DROP') {
-      return (
-        <li key={idx} className="collection-item">
-          <i className='fa fa-level-down'/> {event.firstActor} dropped it
-        </li>
-      )
-    }
   }
 
   render () {
