@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.Teams;
+import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.model.Team;
+import org.ocua.parity.model.Teams;
 
 public class SelectPlayers extends Activity {
     private customLinearLayout layoutLeft;

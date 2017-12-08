@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.tasks;
+package org.ocua.parity.tasks;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,7 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import io.masse.parityleaguestats.ChooseTeams;
+import org.ocua.parity.ChooseTeams;
 
 public class fetchRoster extends AsyncTask<String, String, Long> {
 

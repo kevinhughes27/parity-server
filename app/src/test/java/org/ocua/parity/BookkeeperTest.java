@@ -1,12 +1,12 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
-import io.masse.parityleaguestats.model.Event;
-import io.masse.parityleaguestats.model.Team;
+import org.ocua.parity.model.Event;
+import org.ocua.parity.model.Team;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;

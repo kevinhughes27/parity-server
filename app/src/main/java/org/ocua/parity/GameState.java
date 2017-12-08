@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 /**
  * Created by kenzie on 11/11/17.
  */
