@@ -1,13 +1,21 @@
 package io.masse.parityleaguestats;
 
 
+import android.os.Environment;
+import android.webkit.DateSorter;
+
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Stack;
 
@@ -36,6 +44,8 @@ public class Bookkeeper implements Serializable {
     public Integer awayScore;
 
     private int pointsAtHalf;
+    private String datestamp;
+    private String timestamp;
 
     public void startGame(Team leftTeam, Team rightTeam) {
         activeGame = new Game();
@@ -46,6 +56,8 @@ public class Bookkeeper implements Serializable {
         pointsAtHalf = 0;
         homePossession = true;
         mementos = new Stack<>();
+        datestamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        timestamp = new SimpleDateFormat("HH-mm").format(new Date());
     }
 
     private int state = GameState.Normal;
@@ -243,6 +255,8 @@ public class Bookkeeper implements Serializable {
         homePlayers = null;
         awayPlayers = null;
         firstActor = null;
+
+        saveAutoBackup();
     }
 
     public void recordHalf() {
@@ -283,6 +297,35 @@ public class Bookkeeper implements Serializable {
         }
 
         return jsonObject;
+    }
+
+    private void saveAutoBackup() {
+        try {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        String data = serialize().toString();
+                        String gameName = homeTeam.name + "-" + awayTeam.name;
+                        String fileName = timestamp + "_" + gameName + ".json";
+
+                        File pathToExternalStorage = Environment.getExternalStorageDirectory();
+                        File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats" + File.separator + "autosave" + File.separator + datestamp);
+
+                        backupDirectory.mkdirs();
+
+                        File file = new File(backupDirectory, fileName);
+                        FileOutputStream fos = new FileOutputStream(file);
+                        fos.write(data.getBytes());
+                        fos.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void undo() {
