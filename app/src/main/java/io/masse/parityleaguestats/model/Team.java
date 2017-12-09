@@ -5,11 +5,15 @@ import java.io.Serializable;
 
 public class Team implements Serializable {
     public String name = "";
+    public final int id;
+
     public ArrayList<String> arlGuys = new ArrayList<>();
     public ArrayList<String> arlGirls = new ArrayList<>();
 
-    public Team(String teamName, String teamMember, Boolean isMale){
+    public Team(String teamName, int teamId, String teamMember, Boolean isMale){
         name = teamName;
+        id = teamId;
+
         if (isMale){
             arlGuys.add(teamMember);
         }else{
