@@ -19,8 +19,8 @@ export default class SearchBar extends Component {
 
   searchChange (event: any) {
     let query = event.target.value
-    this.props.changeFilter(query)
     ls.set(storageKey, query)
+    this.props.changeFilter(query)
   }
 
   render () {
