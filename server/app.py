@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
+from flask_graphql import GraphQLView
 
 from models import db, Game, Stats, Team, Player
 from upload import StatsCalculator
+from schema import schema
 
 import os
 import json
@@ -68,6 +70,18 @@ def upload():
 
 
 # API
+## GraphQL
+app.add_url_rule(
+    '/graphql',
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True
+    )
+)
+
+
+## REST
 @cache.cached()
 @app.route('/api/teams')
 def teams():
