@@ -15,12 +15,14 @@ client_path = '../client/build'
 
 def create_app():
     app = Flask(__name__, static_folder=client_path)
+
     cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
     if os.environ.get('APP_SETTINGS') == None:
         os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
 
     app.config.from_object(os.environ['APP_SETTINGS'])
+
     db.init_app(app)
 
 
@@ -188,12 +190,14 @@ def create_app():
     return app
 
 
-# Development Server
+# Expose `app` for gunicorn
+app = create_app()
+
+
+# Boot server for Development / Test
 if __name__ == '__main__':
-    os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
 
-    app = create_app()
-
+    # Auto create development database
     if app.config.get('DEVELOPMENT'):
         with app.app_context():
             db.create_all()
