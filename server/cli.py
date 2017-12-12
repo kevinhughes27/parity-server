@@ -50,7 +50,8 @@ def seed(prod):
 
 
 @cli.command()
-def backup():
+@click.option('--week', default=1)
+def backup(week):
     click.echo('Downloading database...')
 
     src_url = "https://parity-server.herokuapp.com/api/games"
@@ -61,7 +62,15 @@ def backup():
     with urllib.request.urlopen(src_url) as url:
         games = json.loads(url.read().decode())
 
+    if week:
+        games = [game for game in games if game['week'] == week]
+
     for game in games:
+        game_url = src_url + '/' + str(game['id'])
+
+        with urllib.request.urlopen(game_url) as url:
+            game = json.loads(url.read().decode())
+
         week = str(game["week"])
         game_counts[week] += 1
         game_num = str(game_counts[week])
