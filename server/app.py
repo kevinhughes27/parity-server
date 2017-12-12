@@ -8,10 +8,7 @@ import os
 import json
 import datetime
 
-debug = False
-
 client_path = '../client/build'
-
 
 def create_app():
     app = Flask(__name__, static_folder=client_path)
@@ -32,6 +29,7 @@ def create_app():
         game = Game()
 
         # save response to file if debugging
+        debug = False
         if debug:
             now = datetime.datetime.now()
             fo = open('data/test/' + str(now) + '.json', 'w')
