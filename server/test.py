@@ -6,13 +6,12 @@ import unittest
 import json
 import os
 
-from app import create_app
+from app import app
 from models import db, Game, Player, Stats
 
 class ServerTests(FlaskTest, SnapShotTest):
 
     def create_app(self):
-        app = create_app()
         return app
 
     def setUp(self):

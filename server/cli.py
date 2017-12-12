@@ -8,7 +8,7 @@ import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
 from flask_caching import Cache
 
-from app import db, create_app
+from app import app
 from models import db, Team, Player
 
 
@@ -20,8 +20,6 @@ def cli():
 @cli.command()
 def init_db():
     click.echo('Initializing database...')
-
-    app = create_app()
 
     with app.app_context():
         db.create_all()
@@ -88,8 +86,6 @@ def backup(week):
 
 @cli.command()
 def zuluru_sync():
-    app = create_app()
-
     with app.app_context():
         ZuluruSync().sync_teams(league_id=596)
 
