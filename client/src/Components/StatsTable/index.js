@@ -55,23 +55,13 @@ export default class StatsTable extends Component {
     this.columns = columns.slice()
     this.columnsMeta = columnsMeta.slice()
 
-    if (this.props.week === 0) {
-      this.columns.push('salary')
-      this.columnsMeta.push({
-        columnName: 'salary',
-        displayName: 'Salary',
-        order: STATS.length + 2,
-        customComponent: MoneyCell
-      })
-    } else {
-      this.columns.push('pay')
-      this.columnsMeta.push({
-        columnName: 'pay',
-        displayName: 'Pay',
-        order: STATS.length + 2,
-        customComponent: MoneyCell
-      })
-    }
+    this.columns.push('pay')
+    this.columnsMeta.push({
+      columnName: 'pay',
+      displayName: 'Pay',
+      order: STATS.length + 2,
+      customComponent: MoneyCell
+    })
 
     this.state = {
       week: this.props.week,

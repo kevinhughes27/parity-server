@@ -76,7 +76,7 @@ class Stats(db.Model):
         if self._points_played == 0:
             return 0
         else:
-            return self.pay / self._points_played
+            return round(self.pay / self._points_played)
 
     @property
     def _o_points_played(self):

@@ -29,7 +29,7 @@ export default class Leaderboards extends Component {
   renderBoard (stat: string) {
     let stats = this.state.stats
     let players = stats.topPlayers(stat, 10)
-    let statTitle = capitalize(stat.replace('_', ' '))
+    let statTitle = capitalize.words(stat.replace(/_/g, ' '))
 
     return (
       <div key={stat} className="card-panel" style={{minWidth: 300, margin: 20}}>
@@ -53,6 +53,8 @@ export default class Leaderboards extends Component {
   render () {
     return (
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
+        { this.renderBoard('pay') }
+        { this.renderBoard('salary_per_point') }
         { this.renderBoard('goals') }
         { this.renderBoard('assists') }
         { this.renderBoard('catches') }
