@@ -26,11 +26,27 @@ class Player(db.Model):
         return round(pro_rated_salary)
 
     @property
-    def _avg_salary_per_point_based_on_history(self):
-        player_stats = Stats.query.filter_by(player_id=self.id)
-        salaries = [ps.salary_per_point for ps in player_stats]
+    def has_stats(self):
+        self.stats = Stats.query.filter_by(player_id=self.id)
+        return len(self.stats) > 0
 
-        if len(salaries) > 0:
+    @property
+    def _avg_salary_per_point_based_on_history(self):
+        if self.has_stats:
+            salaries = [ps.salary_per_point for ps in self.stats]
             return sum(salaries) / len(salaries)
         else:
-            return 0
+            return self._fallback_salary
+
+    @property
+    def _fallback_salary(self):
+        team_mates = Player.query.filter_by(team_id=self.team_id)
+        same_gender_salaries = [p.salary for p in team_mates if p.is_male == self.is_male and p.has_stats]
+        avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "team": self.team.name,
+            "salary": self.salary
+        }
