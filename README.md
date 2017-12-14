@@ -53,7 +53,7 @@ There is also an automated test suite which can be run using the `python test.py
 Operations
 ----------
 
-This app is deployed to Heroku.
+This app is deployed to Heroku via a git push. This happens automatically when a branch is merged into master.
 
 
 To create the database run `heroku run python server/init_db.py`
@@ -62,11 +62,23 @@ To create the database run `heroku run python server/init_db.py`
 To sync teams from Zuluru run `heroku run python server/cli.py zuluru_sync`
 
 
-To backup the database (only the raw games data the rest is calculated by the app) run `python server/cli.py backup`
+To backup the database (only the raw games data the rest is calculated by the app) run `python server/cli.py backup`. This script also supports a `--week` option to backup a certain week.
 
 
-To seed the production database use the seed script with the `prod` command line argument `python server/cli.py seed --prod`
+To seed the production database use the seed script with the `prod` command line argument `python server/cli.py seed --prod`. This script also supports a `--week` option to seed a certain week.
 
+
+To correct errors in the most recent week of stats do the following:
+
+1. First backup the data locally `python server/cli.py backup --week 6`
+
+2. Then remove the data from the production database:
+```sql
+DELETE FROM stats WHERE game_id IN (SELECT id FROM game WHERE week = 6);
+DELETE FROM game WHERE week = 6;
+```
+
+3. Lastly re-seed the given week after making the edits `python server/cli.py seed --prod --week 6`
 
 Contributing
 ------------

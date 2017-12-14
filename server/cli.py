@@ -30,18 +30,18 @@ def init_db():
 
 @cli.command()
 @click.option('--prod', is_flag=True)
-def seed(prod):
+@click.option('--week', default=0)
+def seed(prod, week):
     click.echo('Seeding database...')
 
+    url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
+
     src = "data/ocua_17-18/"
-
-    url = 'http://localhost:5000/upload'
-    if prod:
-        url = 'https://parity-server.herokuapp.com/upload'
-
     os.chdir(src)
 
-    for file in glob.glob("*.json"):
+    pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
+
+    for file in glob.glob(pattern):
         headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
         r = requests.post(url, data=open(file, 'rb'), headers=headers)
         print(file, r.status_code)
@@ -50,7 +50,7 @@ def seed(prod):
 
 
 @cli.command()
-@click.option('--week', default=1)
+@click.option('--week', default=0)
 def backup(week):
     click.echo('Downloading database...')
 
@@ -62,7 +62,7 @@ def backup(week):
     with urllib.request.urlopen(src_url) as url:
         games = json.loads(url.read().decode())
 
-    if week:
+    if week > 0:
         games = [game for game in games if game['week'] == week]
 
     for game in games:
