@@ -2,51 +2,30 @@
 
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
+import TopNav from '../TopNav'
+import Loading from '../Loading'
 import { Bar } from 'react-chartjs-2'
 import { colors, warnColors } from '../gradients'
 import 'chartjs-plugin-annotation'
 
-type Props = {
-  week: number,
-  stats: Stats
-}
-
-type Trade = {
-  playerA: {
-    name: string,
-    team: string,
-  },
-  playerB: {
-    name: string,
-    team: string
-  }
-}
-
 export default class TradeSimulator extends Component {
-  props: Props
-  state: {
-    week: number,
-    stats: Stats,
-    playerA: string,
-    playerB: string,
-    trades: Array<Trade>
-  }
-
-  constructor (props: Props) {
+  constructor (props) {
     super(props)
 
-    const { week, stats } = this.props
-    const players = stats.playerNames()
-
     this.state = {
-      week: week,
-      stats: stats,
-      playerA: players[0],
-      playerB: players[1],
-      trades: []
+      loading: true,
+      players: [],
+      trades: [],
+      playerA: '',
+      playerB: '',
     }
+  }
+
+  componentWillMount() {
+    fetch('/api/players')
+      .then(response => response.json())
+      .then(players => { this.setState({loading: false, players: players}) })
   }
 
   playerAChanged (value: string) {
@@ -62,7 +41,14 @@ export default class TradeSimulator extends Component {
     let teamA = stats.forPlayer(playerA)['Team']
     let teamB = stats.forPlayer(playerB)['Team']
 
-    stats.applyTrade(playerA, playerB)
+    // stats.applyTrade(playerA, playerB)
+    // applyTrade (playerA: string, playerB: string) {
+    //   let teamA = this.data[playerA]['team']
+    //   let teamB = this.data[playerB]['team']
+    //
+    //   this.data[playerA]['team'] = teamB
+    //   this.data[playerB]['team'] = teamA
+    // }
 
     trades.push({
       playerA: {
@@ -118,20 +104,25 @@ export default class TradeSimulator extends Component {
   }
 
   renderGraph () {
-    const stats = this.state.stats
-    const teamNames = stats.teamNames()
+    const players = this.state.players;
+    const teamNames = _.uniq(players.map(p => p.team));
+    const salaryCap = _.sum(_.map(players, (p) => p.salary)) / 8 * 1.01
 
     const data = {
       labels: teamNames,
       datasets: _.flatten(teamNames.map(team => {
-        return stats.playersFor(team).map((player, idx) => {
+        const teamPlayers = _.sortBy(players.filter((p) => p.team === team), (p) => p.salary)
+        return teamPlayers.map((player, idx) => {
+          const teamSalary = _.sum(_.map(teamPlayers, (p) => p.salary))
+          const overCap = teamSalary > salaryCap
+
           return {
             type: 'bar',
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx],
-            hoverBackgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx]
+            backgroundColor: overCap ? warnColors[idx] : colors[idx],
+            hoverBackgroundColor: overCap ? warnColors[idx] : colors[idx]
           }
         })
       }))
@@ -169,7 +160,7 @@ export default class TradeSimulator extends Component {
           type: 'line',
           mode: 'horizontal',
           scaleID: 'y-axis-0',
-          value: stats.salaryCap(),
+          value: salaryCap,
           borderColor: 'black',
           borderWidth: 2,
           label: {
@@ -185,9 +176,9 @@ export default class TradeSimulator extends Component {
     return <Bar data={data} redraw={true} options={options}/>
   }
 
-  render () {
-    const { stats, playerA, playerB, trades } = this.state
-    const playerNames = stats.playerNames()
+  renderMain () {
+    const { players, playerA, playerB, trades } = this.state
+    const playerNames = players.map(p => p.name)
 
     return (
       <div>
@@ -222,6 +213,21 @@ export default class TradeSimulator extends Component {
 
         <div className="row" style={{paddingTop: 10}}>
           { this.renderGraph() }
+        </div>
+      </div>
+    )
+  }
+
+  render () {
+    const loading = this.state.loading
+
+    if (loading) return (<Loading />)
+
+    return (
+      <div>
+        <TopNav />
+        <div className='container'>
+          { this.renderMain() }
         </div>
       </div>
     )

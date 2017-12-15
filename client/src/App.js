@@ -29,9 +29,9 @@ class App extends React.Component {
         <Route path="/" component={StatsPage}>
           <Route path="/leaderboards" component={Leaderboards} />
           <Route path="/compare_players" component={ComparePlayers} />
-          <Route path="/team_dashboard" component={TeamDashboard} />
-          <Route path="/trade_simulator" component={TradeSimulator} />
         </Route>
+        <Route path="/team_dashboard" component={TeamDashboard} />
+        <Route path="/trade_simulator" component={TradeSimulator} />
       </Router>
     )
   }
