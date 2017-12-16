@@ -9,7 +9,7 @@ production: [https://parity-server.herokuapp.com/](https://parity-server.herokua
 Server Setup
 ------------
 
-1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine.
+1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine. (See Python and SQLite notes below)
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
 4. Create your database by running `python server/cli.py init_db` and then seed it with `python server/cli.py seed`
@@ -32,8 +32,29 @@ Note that the client connects to the production server by default. This is safe 
 Visual Studio 2017
 ------------------
 Additional notes for those using Visual Studio 2017, depending on the selected workload
+- If you are initially setting up VS2017, the initial setup wizard will walk you through setting up workloads.
+- If you have an existing VS2017, you can access the workloads configuration at Tools->Get Tools and Features.
+- You will need the following workloads:
+  - Python development
+  - Node.js development
+- Optionally, you may also want the following Individual components:
+  - Git for Windows
+  - GitHub Extension for Visual Studio
+- Note down the Location setting in the Modifying Visual Studio (ie: workloads configuration) screen. By default, the Community (free) edition is set to C:\Program Files (x86)\Microsoft Visual Studio\2017\Community
+- VS2017 installs Python36 under the Shared folder hierarchy one level up from the VS2017 executable folder (eg: C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64). Therefore, be sure to add the following to your PATH:
+  - C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64
+  - C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts
 - VS2017 installs an older version of node. Get the latest version, then ensure it is referenced correctly in the path by going to Tools->Options->Projects and Solutions->Web Package Management->External Web Tools, then add the Node install directory to the top of the list
-- VS2017 installs Python36 at C:\Program Files. Be sure to add C:\Program Files\Python36 and C:\Program Files\Python36\Scripts to your PATH
+
+Python and SQLite
+-----------------
+- Python36 includes sqlite. You can check by running the following:
+  python
+  import sqlite3
+  sqlite3.version # gets the adapter version
+  sqlite3.sqlite_version # gets the DB engine version <- this is the version number you should really need
+  sqlite3.__path__ # gets the location for sqlite
+- If you need to upgrade sqlite, you can download the zip from https://www.sqlite.org/download.html and unpack the sqlite3.dll into Python's DLLs folder (eg: C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\DLLs)
 
 
 Testing
