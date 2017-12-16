@@ -1,9 +1,6 @@
-// @flow
-
 import _ from 'lodash'
 import React, { Component } from 'react'
 import Griddle from 'griddle-react'
-import Stats from '../../Stores/Stats'
 import MoneyCell from '../MoneyCell'
 import SearchBar from './SearchBar'
 import capitalize from 'capitalize'
@@ -34,34 +31,17 @@ const columnsMeta = _.map(columns, (col, idx) => {
   }
 })
 
-type Props = {
-  week: number,
-  stats: Stats
-}
+columns.push('pay')
+columnsMeta.push({
+  columnName: 'pay',
+  displayName: 'Pay',
+  order: STATS.length + 2,
+  customComponent: MoneyCell
+})
 
 export default class StatsTable extends Component {
-  props: Props
-  columns: Array<string>
-  columnsMeta: Array<any>
-
-  state: {
-    week: number,
-    stats: Stats
-  }
-
-  constructor (props: Props) {
+  constructor (props) {
     super(props)
-
-    this.columns = columns.slice()
-    this.columnsMeta = columnsMeta.slice()
-
-    this.columns.push('pay')
-    this.columnsMeta.push({
-      columnName: 'pay',
-      displayName: 'Pay',
-      order: STATS.length + 2,
-      customComponent: MoneyCell
-    })
 
     this.state = {
       week: this.props.week,
@@ -70,15 +50,18 @@ export default class StatsTable extends Component {
   }
 
   render () {
-    let statsArray = this.state.stats.playersWithStats()
+    const stats = this.state.stats
+    const statsArray = _.map(_.keys(stats), (k) => {
+      return { name: k, ...stats[k] }
+    })
 
     return (
       <Griddle
         results={statsArray}
         resultsPerPage={statsArray.length}
         tableClassName='highlight responsive-table'
-        columns={this.columns}
-        columnMetadata={this.columnsMeta}
+        columns={columns}
+        columnMetadata={columnsMeta}
         showFilter={true}
         showPager={false}
         useGriddleStyles={false}

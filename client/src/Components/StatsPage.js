@@ -1,5 +1,3 @@
-// @flow
-
 import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
@@ -7,32 +5,24 @@ import TopNav from './TopNav'
 import Loading from './Loading'
 import WeekPicker from './WeekPicker'
 import StatsTable from './StatsTable'
-import Stats from '../Stores/Stats'
 
 const fetchWeeks = async () => {
-  let response = await fetch('/api/weeks')
+  const response = await fetch('/api/weeks')
   return await response.json()
 }
 
-const fetchStats = async (weekNum: number) => {
+const fetchStats = async (weekNum) => {
   let url = `/api/weeks/${weekNum}`
   if (weekNum === 0) url = '/api/stats'
 
-  let response = await fetch(url)
-  let json = await response.json()
-  let data = json.stats || {}
-  return new Stats(data)
+  const response = await fetch(url)
+  const json = await response.json()
+  const data = json.stats || {}
+  return data
 }
 
 class StatsProvider extends Component {
-  state: {
-    loading: boolean,
-    weeks: any,
-    week: number,
-    stats: any
-  }
-
-  constructor (props: any) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -45,25 +35,25 @@ class StatsProvider extends Component {
 
   componentDidMount () {
     (async () => {
-      let weeks = await fetchWeeks()
-      let week = _.last(weeks) || 0
-      let stats = await fetchStats(week)
+      const weeks = await fetchWeeks()
+      const week = _.last(weeks) || 0
+      const stats = await fetchStats(week)
       this.setState({weeks, week, stats, loading: false})
     })()
   }
 
-  weekChange (week: number) {
+  weekChange (week) {
     (async () => {
       this.setState({week, loading: true})
-      let stats = await fetchStats(week)
+      const stats = await fetchStats(week)
       this.setState({ stats, loading: false })
     })()
   }
 
   renderNav () {
-    let week = this.state.week
-    let weeks = [0, ...this.state.weeks]
-    let weekChange = this.weekChange.bind(this)
+    const week = this.state.week
+    const weeks = [0, ...this.state.weeks]
+    const weekChange = this.weekChange.bind(this)
 
     return (
       <TopNav>
@@ -77,7 +67,7 @@ class StatsProvider extends Component {
   renderMain () {
     if (this.state.loading) return (<Loading />)
 
-    let { week, stats } = this.state
+    const { week, stats } = this.state
 
     return (
       <div className="container" style={{height: '100%', minHeight: '100%'}}>
