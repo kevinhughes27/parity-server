@@ -92,7 +92,8 @@ def create_app():
     @cache.cached()
     @app.route('/api/players')
     def players():
-        players = [player.to_dict() for player in Player.query.all()]
+        query = Player.query.filter(Player.team_id != None).all()
+        players = [player.to_dict() for player in query]
         return jsonify(players)
 
 

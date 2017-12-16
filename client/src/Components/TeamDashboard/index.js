@@ -1,13 +1,12 @@
-// @flow
-
 import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
-import MoneyCell from '../MoneyCell'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
-import { Pie } from 'react-chartjs-2'
-import { colors, warnColors } from '../gradients'
+import TeamPicker from './TeamPicker'
+import Table from './Table'
+import Chart from './Chart'
+import { calcSalaryCap, calcSalaryFloor } from '../../helpers'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -16,23 +15,22 @@ export default class TeamDashboard extends Component {
     this.state = {
       loading: true,
       players: [],
-      teams: [],
       team: null
     }
+
+    this.teamChanged = this.teamChanged.bind(this)
   }
 
   componentWillMount() {
     fetch('/api/players')
       .then(response => response.json())
       .then(players => {
-        const teams = _.uniq(players.map(p => p.team));
+
         this.setState({
           loading: false,
           players: players,
-          teams: teams,
-          team: ls.get('team') || teams[0]
+          team: ls.get('team') || players[0].team
         })
-        window.$('.dropdown-button').dropdown()
       })
   }
 
@@ -41,114 +39,19 @@ export default class TeamDashboard extends Component {
     this.setState({team: teamName})
   }
 
-  renderTeams () {
-    const teams = this.state.teams
-
-    return teams.map(team => {
-      return (
-        <li key={team}>
-         <a onClick={() => { this.teamChanged(team) }}>
-            {team}
-          </a>
-        </li>
-      )
-    })
-  }
-
-  renderTeamsDropdown () {
-    const team = this.state.team
-
-    return (
-      <div>
-        <a className='dropdown-button btn'
-           style={{minWidth: '100%'}}
-           data-activates='team-dropdown'>
-          {team}
-        </a>
-
-        <ul id='team-dropdown' className='dropdown-content'>
-          {this.renderTeams()}
-        </ul>
-      </div>
-    )
-  }
-
-  renderPlayers () {
-    const players = _.sortBy(this.state.players.filter(p => p.team === this.state.team), (p) => p.salary).reverse()
-    const teamSalary = _.sum(_.map(players, (p) => p.salary))
-    const salaryCap = _.sum(_.map(this.state.players, (p) => p.salary)) / 8 * 1.01
-    const salaryFloor = _.sum(_.map(this.state.players, (p) => p.salary)) / 8 * 0.99
-
-    return (
-      <table className='highlight'>
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>Salary</th>
-        </tr>
-      </thead>
-        <tbody>
-          { _.map(players, (player) => {
-            return (
-              <tr key={player.name} style={{lineHeight: 0.5}}>
-                <td>{player.name}</td>
-                <td><MoneyCell data={player.salary}/></td>
-              </tr>
-            )
-          })}
-          <tr style={{borderTop: '1px solid grey', lineHeight: 0.5}}>
-            <td>Current Salary</td>
-            <td><MoneyCell data={teamSalary}/></td>
-          </tr>
-          <tr style={{lineHeight: 0.5}}>
-            <td>League Salary Floor</td>
-            <td><MoneyCell data={salaryFloor}/></td>
-          </tr>
-            <tr style={{lineHeight: 0.5}}>
-            <td>Team Floor Clearance</td>
-            <td><MoneyCell data={teamSalary - salaryFloor}/></td>
-          </tr>
-          <tr style={{lineHeight: 0.5}}>
-            <td>League Salary Cap</td>
-            <td><MoneyCell data={salaryCap}/></td>
-          </tr>
-          <tr style={{lineHeight: 0.5}}>
-            <td><b>Team Cap Space</b></td>
-            <td><MoneyCell data={salaryCap - teamSalary}/></td>
-          </tr>
-        </tbody>
-      </table>
-    )
-  }
-
-  renderGraph () {
-    const players = _.sortBy(this.state.players.filter(p => p.team === this.state.team), (p) => p.salary).reverse()
-    const teamSalary = _.sum(_.map(players, (p) => p.salary))
-    const salaryCap = _.sum(_.map(this.state.players, (p) => p.salary)) / 8 * 1.01
-
-    const overCap = teamSalary > salaryCap
-
-    const data = {
-      labels: players.map (p => p.name),
-      datasets: [{
-        data: players.map (p => p.salary),
-        backgroundColor: overCap ? warnColors : colors
-      }]
-    };
-
-    const options = {
-      legend: {
-        display: false
-      }
-    }
-
-    return <Pie data={data} height={400} options={options}/>
-  }
-
   render () {
     const loading = this.state.loading
 
     if (loading) return (<Loading />)
+
+    const {team, players: allPlayers } = this.state;
+    const teamPlayers = allPlayers.filter(p => p.team === team);
+    const sortedPlayers = _.sortBy(teamPlayers, (p) => p.salary).reverse();
+    const salaries = _.map(sortedPlayers, (p) => p.salary);
+    const teamSalary = _.sum(salaries);
+    const salaryCap = calcSalaryCap(allPlayers);
+    const salaryFloor = calcSalaryFloor(allPlayers);
+    const overCap = teamSalary > salaryCap;
 
     return (
       <div>
@@ -156,11 +59,23 @@ export default class TeamDashboard extends Component {
         <div className='container'>
           <div className="row" style={{paddingTop: 20}}>
             <div className="col m6">
-              {this.renderTeamsDropdown()}
-              {this.renderPlayers()}
+              <TeamPicker
+                allPlayers={allPlayers}
+                team={team}
+                onChange={this.teamChanged}
+              />
+              <Table
+                players={sortedPlayers}
+                teamSalary={teamSalary}
+                salaryCap={salaryCap}
+                salaryFloor={salaryFloor}
+              />
             </div>
             <div className="col m6">
-              { this.renderGraph() }
+              <Chart
+                players={sortedPlayers}
+                overCap={overCap}
+              />
             </div>
           </div>
         </div>
