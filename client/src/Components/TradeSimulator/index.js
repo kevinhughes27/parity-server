@@ -4,7 +4,7 @@ import PlayerSelect from '../PlayerSelect'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 import Chart from './Chart'
-import { calcSalaryCap } from '../../helpers'
+import { calcSalaryCap } from '../helpers'
 
 export default class TradeSimulator extends Component {
   constructor (props) {

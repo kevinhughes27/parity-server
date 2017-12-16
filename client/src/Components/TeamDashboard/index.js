@@ -6,7 +6,7 @@ import Loading from '../Loading'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
-import { calcSalaryCap, calcSalaryFloor } from '../../helpers'
+import { calcSalaryCap, calcSalaryFloor } from '../helpers'
 
 export default class TeamDashboard extends Component {
   constructor (props) {

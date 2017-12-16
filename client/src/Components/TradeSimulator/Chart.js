@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
-import { colors, warnColors } from '../gradients'
+import { colors, warnColors } from '../helpers'
 import 'chartjs-plugin-annotation'
 
 export default class Chart extends Component {
