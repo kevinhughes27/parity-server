@@ -1,22 +1,8 @@
-// @flow
-
 import React, { Component } from 'react'
 import Autosuggest from 'react-autosuggest'
 
-type Props = {
-  value: string,
-  players: Array<string>,
-  onChange: any
-}
-
 export default class PlayerSelect extends Component {
-  props: Props
-  state: {
-    value: string,
-    suggestions: Array<string>
-  }
-
-  constructor (props: Props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -25,7 +11,7 @@ export default class PlayerSelect extends Component {
     }
   }
 
-  onChange = (event: any, suggestion: any) => {
+  onChange = (event, suggestion) => {
     let newValue = suggestion.newValue
     this.setState({ value: newValue })
     this.props.onChange(newValue)
@@ -38,7 +24,7 @@ export default class PlayerSelect extends Component {
     })
   }
 
-  onSuggestionsFetchRequested = (event: any) => {
+  onSuggestionsFetchRequested = (event) => {
     this.setState({ suggestions: this.getSuggestions(event.value) })
   }
 
@@ -46,7 +32,7 @@ export default class PlayerSelect extends Component {
     this.setState({ suggestions: [] })
   }
 
-  getSuggestions = (value: string) => {
+  getSuggestions = (value) => {
     const inputValue = value.trim().toLowerCase()
     const inputLength = inputValue.length
     const players = this.props.players
@@ -56,9 +42,9 @@ export default class PlayerSelect extends Component {
     })
   }
 
-  getSuggestionValue = (suggestion: string) => suggestion
+  getSuggestionValue = (suggestion) => suggestion
 
-  renderSuggestion = (suggestion: string) => (<div>{suggestion}</div>)
+  renderSuggestion = (suggestion) => (<div>{suggestion}</div>)
 
   render () {
     const { value, suggestions } = this.state
