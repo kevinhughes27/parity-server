@@ -1,10 +1,7 @@
-// @flow
-
 import React, { Component } from 'react'
 import SideNav from './SideNav'
 
 class TopNav extends Component {
-
   componentDidMount () {
     window.$('.sidebar-toggle').sideNav({closeOnClick: true})
   }

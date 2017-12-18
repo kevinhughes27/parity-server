@@ -1,19 +1,9 @@
-// @flow
-
 import _map from 'lodash/map'
 import React, { Component } from 'react'
-import {Dropdown, NavItem} from 'react-materialize'
-
-type Props = {
-  week: number,
-  weeks: Array<any>,
-  onChange: (week: number) => void,
-};
+import { Dropdown, NavItem } from 'react-materialize'
 
 class WeekPicker extends Component {
-  props: Props
-
-  weekText (num: number) {
+  weekText (num) {
     if (num === 0) {
       return 'All'
     } else {
@@ -21,7 +11,7 @@ class WeekPicker extends Component {
     }
   }
 
-  renderWeeks (weeks: Array<any>) {
+  renderWeeks (weeks) {
     return _map(weeks, (week) => {
       return (
         <NavItem key={week} onClick={() => { this.props.onChange(week) } }>

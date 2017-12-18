@@ -1,65 +1,21 @@
-// @flow
-
-import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from '../../Stores/Stats'
-import capitalize from 'capitalize'
-
-type Props = {
-  week: number,
-  stats: Stats
-}
+import Table from './Table'
 
 export default class Leaderboards extends Component {
-  props: Props
-  state: {
-    week: number,
-    stats: Stats
-  }
-
-  constructor (props: Props) {
-    super(props)
-
-    this.state = {
-      week: this.props.week,
-      stats: this.props.stats
-    }
-  }
-
-  renderBoard (stat: string) {
-    let stats = this.state.stats
-    let players = stats.topPlayers(stat, 10)
-    let statTitle = capitalize(stat.replace('_', ' '))
-
-    return (
-      <div key={stat} className="card-panel" style={{minWidth: 300, margin: 20}}>
-        <h5>{statTitle}</h5>
-        <table className='highlight'>
-          <tbody>
-            { _.map(players, (player) => {
-              return (
-                <tr key={player['name']} style={{lineHeight: 0.5}}>
-                  <td>{player['name']}</td>
-                  <td>{player[stat]}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>
-    )
-  }
-
   render () {
+    const stats = this.props.stats
+
     return (
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        { this.renderBoard('goals') }
-        { this.renderBoard('assists') }
-        { this.renderBoard('catches') }
-        { this.renderBoard('completions') }
-        { this.renderBoard('d_blocks') }
-        { this.renderBoard('throw_aways') }
-        { this.renderBoard('drops') }
+        <Table stat='pay' stats={stats} />
+        <Table stat='salary_per_point' stats={stats} />
+        <Table stat='goals' stats={stats} />
+        <Table stat='assists' stats={stats} />
+        <Table stat='catches' stats={stats} />
+        <Table stat='completions' stats={stats} />
+        <Table stat='d_blocks' stats={stats} />
+        <Table stat='throw_aways' stats={stats} />
+        <Table stat='drops' stats={stats} />
       </div>
     )
   }

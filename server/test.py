@@ -152,6 +152,9 @@ class ServerTests(FlaskTest, SnapShotTest):
         response = self.client.get('/api/games/1')
         assert response.status_code == 200
 
+        response = self.client.get('/api/players')
+        assert response.status_code == 200
+
 
 if __name__ == '__main__':
     os.environ['APP_SETTINGS'] = 'config.TestingConfig'

@@ -1,52 +1,28 @@
-// @flow
-
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Stats from '../../Stores/Stats'
 import PlayerSelect from '../PlayerSelect'
-import { Bar } from 'react-chartjs-2'
-import { colors, warnColors } from '../gradients'
-import 'chartjs-plugin-annotation'
-
-type Props = {
-  week: number,
-  stats: Stats
-}
-
-type Trade = {
-  playerA: {
-    name: string,
-    team: string,
-  },
-  playerB: {
-    name: string,
-    team: string
-  }
-}
+import TopNav from '../TopNav'
+import Loading from '../Loading'
+import Chart from './Chart'
+import { calcSalaryCap } from '../helpers'
 
 export default class TradeSimulator extends Component {
-  props: Props
-  state: {
-    week: number,
-    stats: Stats,
-    playerA: string,
-    playerB: string,
-    trades: Array<Trade>
-  }
-
-  constructor (props: Props) {
+  constructor (props) {
     super(props)
 
-    const { week, stats } = this.props
-    const players = stats.playerNames()
-
     this.state = {
-      week: week,
-      stats: stats,
-      playerA: players[0],
-      playerB: players[1],
-      trades: []
+      loading: true,
+      players: [],
+      trades: [],
+      playerA: '',
+      playerB: '',
     }
+  }
+
+  componentWillMount() {
+    fetch('/api/players')
+      .then(response => response.json())
+      .then(players => { this.setState({loading: false, players: players}) })
   }
 
   playerAChanged (value: string) {
@@ -58,11 +34,16 @@ export default class TradeSimulator extends Component {
   }
 
   applyTrade () {
-    let { playerA, playerB, stats, trades } = this.state
-    let teamA = stats.forPlayer(playerA)['Team']
-    let teamB = stats.forPlayer(playerB)['Team']
+    const { players, trades, playerA, playerB } = this.state
 
-    stats.applyTrade(playerA, playerB)
+    const playerAIdx = _.findIndex(players, (p) => p.name === playerA)
+    const playerBIdx = _.findIndex(players, (p) => p.name === playerB)
+
+    const teamA = players[playerAIdx]['team']
+    const teamB = players[playerBIdx]['team']
+
+    players[playerAIdx]['team'] = teamB
+    players[playerBIdx]['team'] = teamA
 
     trades.push({
       playerA: {
@@ -75,18 +56,26 @@ export default class TradeSimulator extends Component {
       }
     })
 
-    this.setState({stats: stats, trades: trades})
+    this.setState({players: players, trades: trades})
   }
 
-  deleteTrade (trade: Trade) {
-    let { stats, trades } = this.state
-    let playerA = trade.playerA.name
-    let playerB = trade.playerB.name
+  deleteTrade (trade) {
+    const { players, trades } = this.state
+    const playerA = trade.playerA.name
+    const playerB = trade.playerB.name
 
-    stats.applyTrade(playerB, playerA)
+    const playerAIdx = _.findIndex(players, (p) => p.name === playerA)
+    const playerBIdx = _.findIndex(players, (p) => p.name === playerB)
+
+    const teamA = players[playerAIdx]['team']
+    const teamB = players[playerBIdx]['team']
+
+    players[playerAIdx]['team'] = teamB
+    players[playerBIdx]['team'] = teamA
+
     _.remove(trades, (t) => _.isEqual(t, trade))
 
-    this.setState({stats: stats, trades: trades})
+    this.setState({players: players, trades: trades})
   }
 
   renderTrades (trades: Array<any>) {
@@ -117,77 +106,11 @@ export default class TradeSimulator extends Component {
     })
   }
 
-  renderGraph () {
-    const stats = this.state.stats
-    const teamNames = stats.teamNames()
-
-    const data = {
-      labels: teamNames,
-      datasets: _.flatten(teamNames.map(team => {
-        return stats.playersFor(team).map((player, idx) => {
-          return {
-            type: 'bar',
-            label: player.name,
-            stack: team,
-            data: [player.salary],
-            backgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx],
-            hoverBackgroundColor: stats.teamOverCap(team) ? warnColors[idx] : colors[idx]
-          }
-        })
-      }))
-    }
-
-    const options = {
-      legend: {
-        display: false
-      },
-      tooltips: {
-        callbacks: {
-          title: (tooltipItem, data) => {
-            const item = data.datasets[tooltipItem[0].datasetIndex]
-            return item.stack
-          }
-        }
-      },
-      scales: {
-        xAxes: [{
-          barPercentage: 0.6,
-          categoryPercentage: 1.0,
-          ticks: {
-            autoSkip: false
-          }
-        }],
-        yAxes: [{
-          stacked: true
-        }]
-      },
-      animation: {
-        duration: 0
-      },
-      annotation: {
-        annotations: [{
-          type: 'line',
-          mode: 'horizontal',
-          scaleID: 'y-axis-0',
-          value: stats.salaryCap(),
-          borderColor: 'black',
-          borderWidth: 2,
-          label: {
-            position: 'right',
-            backgroundColor: 'black',
-            content: 'Salary Cap',
-            enabled: true
-          }
-        }]
-      }
-    }
-
-    return <Bar data={data} redraw={true} options={options}/>
-  }
-
-  render () {
-    const { stats, playerA, playerB, trades } = this.state
-    const playerNames = stats.playerNames()
+  renderMain () {
+    const { players, playerA, playerB, trades } = this.state
+    const teamNames = _.uniq(players.map(p => p.team));
+    const playerNames = players.map(p => p.name)
+    const salaryCap = calcSalaryCap(players);
 
     return (
       <div>
@@ -221,7 +144,26 @@ export default class TradeSimulator extends Component {
         </div>
 
         <div className="row" style={{paddingTop: 10}}>
-          { this.renderGraph() }
+          <Chart
+            players={players}
+            teamNames={teamNames}
+            salaryCap={salaryCap}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  render () {
+    const loading = this.state.loading
+
+    if (loading) return (<Loading />)
+
+    return (
+      <div>
+        <TopNav />
+        <div className='container'>
+          { this.renderMain() }
         </div>
       </div>
     )

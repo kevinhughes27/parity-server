@@ -16,21 +16,56 @@ class Player(db.Model):
 
     @property
     def team(self):
-        from .team import Team
-        return Team.query.get(self.team_id)
+        if self.team_id:
+            from .team import Team
+            return Team.query.get(self.team_id)
+        else:
+            return None
+
+    @property
+    def team_name(self):
+        if self.team:
+            return self.team.name
+        else:
+            'Substitute'
 
     @property
     def salary(self):
-        pro_rated_number_of_points = 15
-        pro_rated_salary = self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
-        return round(pro_rated_salary)
+        if self.has_stats:
+            pro_rated_number_of_points = 15
+            pro_rated_salary = self._avg_salary_per_point_based_on_history * pro_rated_number_of_points
+            return round(pro_rated_salary)
+        else:
+            return self._fallback_salary
+
+    @property
+    def stats(self):
+        if not hasattr(self, '_stats'):
+            self._stats = Stats.query.filter_by(player_id=self.id).all()
+        return self._stats
+
+    @property
+    def has_stats(self):
+        return len(self.stats) > 0
 
     @property
     def _avg_salary_per_point_based_on_history(self):
-        player_stats = Stats.query.filter_by(player_id=self.id)
-        salaries = [ps.salary_per_point for ps in player_stats]
+        salaries = [ps.salary_per_point for ps in self.stats]
+        return sum(salaries) / len(salaries)
 
-        if len(salaries) > 0:
-            return sum(salaries) / len(salaries)
+    @property
+    def _fallback_salary(self):
+        if self.team_id:
+            team_mates = Player.query.filter_by(team_id=self.team_id).all()
+            same_gender_salaries = [p.salary for p in team_mates if p.is_male == self.is_male and p.has_stats]
+            avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
+            return avg_salary
         else:
             return 0
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "team": self.team_name,
+            "salary": self.salary
+        }
