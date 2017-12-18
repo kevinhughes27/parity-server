@@ -39,7 +39,7 @@ export default class TeamDashboard extends Component {
     this.setState({team: teamName})
   }
 
-  render () {
+  renderMain () {
     const loading = this.state.loading
 
     if (loading) return (<Loading />)
@@ -54,31 +54,37 @@ export default class TeamDashboard extends Component {
     const overCap = teamSalary > salaryCap;
 
     return (
-      <div>
-        <TopNav />
-        <div className='container'>
-          <div className="row" style={{paddingTop: 20}}>
-            <div className="col m6">
-              <TeamPicker
-                allPlayers={allPlayers}
-                team={team}
-                onChange={this.teamChanged}
-              />
-              <Table
-                players={sortedPlayers}
-                teamSalary={teamSalary}
-                salaryCap={salaryCap}
-                salaryFloor={salaryFloor}
-              />
-            </div>
-            <div className="col m6">
-              <Chart
-                players={sortedPlayers}
-                overCap={overCap}
-              />
-            </div>
+      <div className='container'>
+        <div className="row" style={{paddingTop: 20}}>
+          <div className="col m6">
+            <TeamPicker
+              allPlayers={allPlayers}
+              team={team}
+              onChange={this.teamChanged}
+            />
+            <Table
+              players={sortedPlayers}
+              teamSalary={teamSalary}
+              salaryCap={salaryCap}
+              salaryFloor={salaryFloor}
+            />
+          </div>
+          <div className="col m6">
+            <Chart
+              players={sortedPlayers}
+              overCap={overCap}
+            />
           </div>
         </div>
+      </div>
+    )
+  }
+
+  render () {
+    return (
+      <div>
+        <TopNav />
+        { this.renderMain() }
       </div>
     )
   }

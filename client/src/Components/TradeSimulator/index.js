@@ -107,13 +107,17 @@ export default class TradeSimulator extends Component {
   }
 
   renderMain () {
+    const loading = this.state.loading
+
+    if (loading) return (<Loading />)
+
     const { players, playerA, playerB, trades } = this.state
     const teamNames = _.uniq(players.map(p => p.team));
     const playerNames = players.map(p => p.name)
     const salaryCap = calcSalaryCap(players);
 
     return (
-      <div>
+      <div className='container'>
         <div className="row" style={{paddingTop: 20}}>
           <div className="col m3">
             <PlayerSelect
@@ -155,16 +159,10 @@ export default class TradeSimulator extends Component {
   }
 
   render () {
-    const loading = this.state.loading
-
-    if (loading) return (<Loading />)
-
     return (
       <div>
         <TopNav />
-        <div className='container'>
-          { this.renderMain() }
-        </div>
+        { this.renderMain() }
       </div>
     )
   }
