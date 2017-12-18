@@ -15,7 +15,7 @@ Server Setup
 4. Create your database by running `python server/cli.py init_db` and then seed it with `python server/cli.py seed`
 5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
 
-On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000.
+On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python app.py`)
 
 
 Client Setup
