@@ -1,8 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import PlayerSelect from '../PlayerSelect'
-import TopNav from '../TopNav'
-import Loading from '../Loading'
 import Chart from './Chart'
 import { calcSalaryCap } from '../helpers'
 
@@ -12,7 +10,7 @@ export default class TradeSimulator extends Component {
 
     this.state = {
       loading: true,
-      players: [],
+      players: this.props.players,
       trades: [],
       playerA: '',
       playerB: '',
@@ -106,18 +104,14 @@ export default class TradeSimulator extends Component {
     })
   }
 
-  renderMain () {
-    const loading = this.state.loading
-
-    if (loading) return (<Loading />)
-
+  render () {
     const { players, playerA, playerB, trades } = this.state
     const teamNames = _.uniq(players.map(p => p.team));
     const playerNames = players.map(p => p.name)
     const salaryCap = calcSalaryCap(players);
 
     return (
-      <div className='container'>
+      <div>
         <div className="row" style={{paddingTop: 20}}>
           <div className="col m3">
             <PlayerSelect
@@ -154,15 +148,6 @@ export default class TradeSimulator extends Component {
             salaryCap={salaryCap}
           />
         </div>
-      </div>
-    )
-  }
-
-  render () {
-    return (
-      <div>
-        <TopNav />
-        { this.renderMain() }
       </div>
     )
   }

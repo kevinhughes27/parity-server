@@ -7,6 +7,8 @@ import Game from './Components/Game'
 import StatsPage from './Components/StatsPage'
 import Leaderboards from './Components/Leaderboards'
 import ComparePlayers from './Components/ComparePlayers'
+
+import SalaryPage from './Components/SalaryPage'
 import TeamDashboard from './Components/TeamDashboard'
 import TradeSimulator from './Components/TradeSimulator'
 
@@ -30,8 +32,10 @@ class App extends React.Component {
           <Route path="/leaderboards" component={Leaderboards} />
           <Route path="/compare_players" component={ComparePlayers} />
         </Route>
-        <Route path="/team_dashboard" component={TeamDashboard} />
-        <Route path="/trade_simulator" component={TradeSimulator} />
+        <Route component={SalaryPage} >
+          <Route path="/team_dashboard" component={TeamDashboard} />
+          <Route path="/trade_simulator" component={TradeSimulator} />
+        </Route>
       </Router>
     )
   }

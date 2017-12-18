@@ -1,8 +1,6 @@
 import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
-import TopNav from '../TopNav'
-import Loading from '../Loading'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
@@ -14,24 +12,11 @@ export default class TeamDashboard extends Component {
 
     this.state = {
       loading: true,
-      players: [],
-      team: null
+      players: this.props.players,
+      team: ls.get('team') || this.props.players[0].team
     }
 
     this.teamChanged = this.teamChanged.bind(this)
-  }
-
-  componentWillMount() {
-    fetch('/api/players')
-      .then(response => response.json())
-      .then(players => {
-
-        this.setState({
-          loading: false,
-          players: players,
-          team: ls.get('team') || players[0].team
-        })
-      })
   }
 
   teamChanged (teamName) {
@@ -39,11 +24,7 @@ export default class TeamDashboard extends Component {
     this.setState({team: teamName})
   }
 
-  renderMain () {
-    const loading = this.state.loading
-
-    if (loading) return (<Loading />)
-
+  render () {
     const {team, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
     const sortedPlayers = _.sortBy(teamPlayers, (p) => p.salary).reverse();
@@ -54,7 +35,7 @@ export default class TeamDashboard extends Component {
     const overCap = teamSalary > salaryCap;
 
     return (
-      <div className='container'>
+      <div>
         <div className="row" style={{paddingTop: 20}}>
           <div className="col m6">
             <TeamPicker
@@ -76,15 +57,6 @@ export default class TeamDashboard extends Component {
             />
           </div>
         </div>
-      </div>
-    )
-  }
-
-  render () {
-    return (
-      <div>
-        <TopNav />
-        { this.renderMain() }
       </div>
     )
   }
