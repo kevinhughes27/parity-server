@@ -281,6 +281,7 @@ public class Stats extends Activity {
 
     private void resetApp() {
         Intent intent = new Intent(myself, ChooseTeams.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
