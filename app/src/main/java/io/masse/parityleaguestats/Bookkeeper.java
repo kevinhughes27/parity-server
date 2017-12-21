@@ -2,7 +2,6 @@ package io.masse.parityleaguestats;
 
 
 import android.os.Environment;
-import android.webkit.DateSorter;
 
 import com.google.gson.Gson;
 
@@ -11,7 +10,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
