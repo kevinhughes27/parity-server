@@ -25,16 +25,39 @@ export default class Points extends Component {
 
   renderPoint (point, idx) {
     const game = this.props.game
-    const firstEvent = point.events[0]
-    const lastEvent = _.last(point.events)
-    const player = lastEvent.firstActor
-    const team = _.includes(game.homeRoster, player) ? game.homeTeam : game.awayTeam
+
+    const events = point.events;
+    const firstEvent = events[0]
+    const lastEvent = _.last(events)
+    const secondLastEvent = events[events.length - 2]
+
+    const receiver = lastEvent.firstActor
+
+    const thrower = secondLastEvent.type === 'PASS'
+      ? secondLastEvent.firstActor
+      : null
+
+    const teamName = _.includes(game.homeRoster, receiver)
+      ? game.homeTeam
+      : game.awayTeam
+
+    const breakPoint = _.includes(point.defensePlayers, receiver)
+
+    const whatCopy = breakPoint
+      ? 'Break Point'
+      : 'Point'
+
+    const whoCopy = thrower
+      ? `${thrower} to ${receiver}`
+      : receiver
+
     const duration = timediff(firstEvent.timestamp, lastEvent.timestamp, 'mS')
+    const durationCopy = `(${duration.minutes}:${duration.seconds} minutes)`
 
     return (
       <li key={idx}>
         <div className="collapsible-header">
-          Point <strong>{team}</strong> by {player} ({duration.minutes}:{duration.seconds} minutes)
+          {whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}
         </div>
         <div className="collapsible-body">
           <ul className="collection" style={{paddingLeft: 40}}>
