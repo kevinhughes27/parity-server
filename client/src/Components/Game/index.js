@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 
-import Roster from './Roster'
+import Team from './Team'
 import Points from './Points'
 
 export default class Game extends Component {
@@ -30,13 +30,23 @@ export default class Game extends Component {
 
     return (
       <div className='container'>
-        <div className='center-align'>
-          <h5>{ game.homeTeam } vs { game.awayTeam }</h5>
-          <h5><strong>{ game.homeScore } - { game.awayScore }</strong></h5>
-        </div>
         <div className='row'>
-          <Roster title={'Home'} players={game.homeRoster} />
-          <Roster title={'Away'} players={game.awayRoster} />
+          <div className='col s6'>
+            <Team
+              team={game.homeTeam}
+              score={game.homeScore}
+              winner={game.homeScore > game.awayScore}
+              players={game.homeRoster}
+              game={game} />
+          </div>
+          <div className='col s6'>
+            <Team
+              team={game.awayTeam}
+              score={game.awayScore}
+              winner={game.awayScore > game.homeScore}
+              players={game.awayRoster}
+              game={game} />
+          </div>
         </div>
         <div className='row'>
           <h5>Points</h5>
