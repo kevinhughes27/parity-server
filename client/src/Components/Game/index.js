@@ -28,12 +28,29 @@ export default class Game extends Component {
 
     if (loading) return (<Loading />)
 
+    const homeWon = game.homeScore > game.awayScore
+    const homeJsx = homeWon
+      ? <h5><i className="fa fa-star" /> {game.homeTeam}</h5>
+      : <h5>{game.homeTeam}</h5>
+
+    const awayWon = game.awayScore > game.homeScore
+    const awayJsx = awayWon
+      ? <h5><i className="fa fa-star" /> {game.awayTeam}</h5>
+      : <h5>{game.awayTeam}</h5>
+
     return (
       <div className='container'>
         <div className='row'>
           <div className='col s6'>
+            {homeJsx}
+          </div>
+          <div className='col s6'>
+            {awayJsx}
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col s6'>
             <Team
-              team={game.homeTeam}
               score={game.homeScore}
               winner={game.homeScore > game.awayScore}
               players={game.homeRoster}
@@ -41,7 +58,6 @@ export default class Game extends Component {
           </div>
           <div className='col s6'>
             <Team
-              team={game.awayTeam}
               score={game.awayScore}
               winner={game.awayScore > game.homeScore}
               players={game.awayRoster}

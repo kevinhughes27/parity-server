@@ -2,14 +2,9 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import Roster from './Roster'
 
-
 export default class Team extends Component {
   render () {
-    const { team, score, winner, players, game } = this.props
-
-    const iconJsx = winner
-      ? <i className="fa fa-star" />
-      : null
+    const { score, players, game } = this.props
 
     const events = _.flatten(_.map(game.points, (p) => p.events))
     const teamEvents = _.filter(events, (ev) => {
@@ -23,8 +18,6 @@ export default class Team extends Component {
 
     return (
       <div>
-        <h5>{iconJsx} {team}</h5>
-
         <ul className='collection'>
           { this.renderStat('Points', score, true) }
           { this.renderStat('Defense', defenseEvents.length) }

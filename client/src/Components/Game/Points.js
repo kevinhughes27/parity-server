@@ -83,7 +83,7 @@ export default class Points extends Component {
         <div className="collapsible-header">
           <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
             <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
-            <span>{scoreCopy}</span>
+            <span style={{minWidth: 44}}>{scoreCopy}</span>
           </div>
         </div>
         <div className="collapsible-body">
