@@ -4,11 +4,6 @@ import timediff from 'timediff'
 import Event from './Event'
 
 export default class Points extends Component {
-  constructor(props) {
-    super(props)
-    this.renderPoint = this.renderPoint.bind(this)
-  }
-
   componentDidMount () {
     window.$('.collapsible').collapsible()
   }
@@ -16,14 +11,22 @@ export default class Points extends Component {
   render () {
     const game = this.props.game
 
+    let homeScore = 0
+    let awayScore = 0
+
     return (
       <ul className='collapsible' data-collapsible='expandable'>
-        { game.points.map(this.renderPoint) }
+        { game.points.map((point, idx) => {
+          const result = this.renderPoint(point, homeScore, awayScore, idx)
+          homeScore = result.homeScore
+          awayScore = result.awayScore
+          return result.jsx
+        })}
       </ul>
     )
   }
 
-  renderPoint (point, idx) {
+  renderPoint (point, homeScore, awayScore, idx) {
     const game = this.props.game
 
     const events = point.events;
@@ -37,7 +40,8 @@ export default class Points extends Component {
       ? secondLastEvent.firstActor
       : null
 
-    const teamName = _.includes(game.homeRoster, receiver)
+    const homeScored = _.includes(game.homeRoster, receiver)
+    const teamName = homeScored
       ? game.homeTeam
       : game.awayTeam
 
@@ -54,10 +58,21 @@ export default class Points extends Component {
     const duration = timediff(firstEvent.timestamp, lastEvent.timestamp, 'mS')
     const durationCopy = `(${duration.minutes}:${duration.seconds} minutes)`
 
-    return (
+    if (homeScored) {
+      homeScore = homeScore + 1
+    } else {
+      awayScore = awayScore + 1
+    }
+
+    const scoreCopy = `${homeScore} - ${awayScore}`
+
+    const pointsJsx = (
       <li key={idx}>
         <div className="collapsible-header">
-          {whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}
+          <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
+            <span>{whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}</span>
+            <span>{scoreCopy}</span>
+          </div>
         </div>
         <div className="collapsible-body">
           <ul className="collection" style={{paddingLeft: 40}}>
@@ -66,5 +81,11 @@ export default class Points extends Component {
         </div>
       </li>
     )
+
+    return {
+      homeScore,
+      awayScore,
+      jsx: pointsJsx
+    }
   }
 }
