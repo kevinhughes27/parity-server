@@ -1,17 +1,13 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import timediff from 'timediff'
 import TopNav from '../TopNav'
 import Loading from '../Loading'
 
 import Roster from './Roster'
-import Event from './Event'
+import Points from './Points'
 
 export default class Game extends Component {
   constructor(props) {
     super(props)
-
-    this.renderPoint = this.renderPoint.bind(this)
 
     this.state = {
       loading: true,
@@ -25,10 +21,6 @@ export default class Game extends Component {
     fetch(`/api/games/${gameId}`)
       .then(response => response.json())
       .then(game => { this.setState({loading: false, game: game}) })
-  }
-
-  componentDidUpdate () {
-    window.$('.collapsible').collapsible()
   }
 
   renderMain () {
@@ -48,33 +40,9 @@ export default class Game extends Component {
         </div>
         <div className='row'>
           <h5>Points</h5>
-          <ul className='collapsible' data-collapsible='expandable'>
-            { game.points.map(this.renderPoint) }
-          </ul>
+          <Points game={game} />
         </div>
       </div>
-    )
-  }
-
-  renderPoint (point, idx) {
-    const game = this.state.game
-    const firstEvent = point.events[0]
-    const lastEvent = _.last(point.events)
-    const player = lastEvent.firstActor
-    const team = _.includes(game.homeRoster, player) ? game.homeTeam : game.awayTeam
-    const duration = timediff(firstEvent.timestamp, lastEvent.timestamp, 'mS')
-
-    return (
-      <li key={idx}>
-        <div className="collapsible-header">
-          Point <strong>{team}</strong> by {player} ({duration.minutes}:{duration.seconds} minutes)
-        </div>
-        <div className="collapsible-body">
-          <ul className="collection" style={{paddingLeft: 40}}>
-            { point.events.map((ev, idx) => <Event key={idx} event={ev} />) }
-          </ul>
-        </div>
-      </li>
     )
   }
 
