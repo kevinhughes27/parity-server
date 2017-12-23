@@ -45,13 +45,21 @@ export default class Points extends Component {
       ? game.homeTeam
       : game.awayTeam
 
+    const homeColor = '#98abc5'
+    const awayColor = '#ff8c00'
+    const teamColor = homeScored
+      ? homeColor
+      : awayColor
+
+    const teamJsx = <strong style={{color: teamColor}}>{teamName}</strong>
+
     const breakPoint = _.includes(point.defensePlayers, receiver)
 
     const whatCopy = breakPoint
       ? 'Break Point'
       : 'Point'
 
-    const icon = breakPoint
+    const iconJsx = breakPoint
       ? (<i className="fa fa-bolt" style={{marginRight: 0}}/>)
       : null
 
@@ -74,7 +82,7 @@ export default class Points extends Component {
       <li key={idx}>
         <div className="collapsible-header">
           <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
-            <span>{icon} {whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}</span>
+            <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
             <span>{scoreCopy}</span>
           </div>
         </div>
