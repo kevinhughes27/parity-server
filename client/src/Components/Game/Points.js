@@ -51,6 +51,10 @@ export default class Points extends Component {
       ? 'Break Point'
       : 'Point'
 
+    const icon = breakPoint
+      ? (<i className="fa fa-bolt" style={{marginRight: 0}}/>)
+      : null
+
     const whoCopy = thrower
       ? `${thrower} to ${receiver}`
       : receiver
@@ -70,7 +74,7 @@ export default class Points extends Component {
       <li key={idx}>
         <div className="collapsible-header">
           <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
-            <span>{whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}</span>
+            <span>{icon} {whatCopy} <strong>{teamName}</strong> {whoCopy} {durationCopy}</span>
             <span>{scoreCopy}</span>
           </div>
         </div>
