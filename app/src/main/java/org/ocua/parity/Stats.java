@@ -24,14 +24,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
-import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.customLayout.CustomLinearLayout;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
-import org.ocua.parity.tasks.uploadGame;
+import org.ocua.parity.tasks.UploadGame;
 
 public class Stats extends Activity {
-    private customLinearLayout layoutLeft;
-    private customLinearLayout layoutRight;
+    private CustomLinearLayout layoutLeft;
+    private CustomLinearLayout layoutRight;
     private ListView undoHistory;
     private Context context;
 
@@ -162,8 +162,8 @@ public class Stats extends Activity {
     }
 
     private void renderPlayers() {
-        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
-        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+        layoutLeft = (CustomLinearLayout) findViewById(R.id.layoutLeftNames);
+        layoutRight = (CustomLinearLayout) findViewById(R.id.layoutRightNames);
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, mainOnClickListener, leftTeam, true);
@@ -290,7 +290,7 @@ public class Stats extends Activity {
         try {
             String json = bookkeeper.serialize().toString();
             saveBackup(json);
-            new uploadGame(context).execute(json);
+            new UploadGame(context).execute(json);
 
         } catch (Exception e) {
             e.printStackTrace();

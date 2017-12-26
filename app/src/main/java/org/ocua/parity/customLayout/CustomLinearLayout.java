@@ -8,17 +8,17 @@ import android.widget.LinearLayout;
 /**
  * Created by mmasse on 14-12-07.
  */
-public class customLinearLayout extends LinearLayout {
+public class CustomLinearLayout extends LinearLayout {
 
-    public customLinearLayout(Context context) {
+    public CustomLinearLayout(Context context) {
         super(context);
     }
 
-    public customLinearLayout(Context context, AttributeSet attrs) {
+    public CustomLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public customLinearLayout(Context context, AttributeSet attrs, int defStyle) {
+    public CustomLinearLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

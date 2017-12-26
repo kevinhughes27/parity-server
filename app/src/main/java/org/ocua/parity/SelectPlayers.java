@@ -15,13 +15,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.customLayout.CustomLinearLayout;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 
 public class SelectPlayers extends Activity {
-    private customLinearLayout layoutLeft;
-    private customLinearLayout layoutRight;
+    private CustomLinearLayout layoutLeft;
+    private CustomLinearLayout layoutRight;
     private TextView leftTeamName, rightTeamName, leftScore, rightScore;
     private View.OnClickListener toggleUserListener;
     private Context context;
@@ -97,8 +97,8 @@ public class SelectPlayers extends Activity {
     }
 
     private void renderPlayers() {
-        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
-        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+        layoutLeft = (CustomLinearLayout) findViewById(R.id.layoutLeftNames);
+        layoutRight = (CustomLinearLayout) findViewById(R.id.layoutRightNames);
 
         leftTeamName.setText(leftTeam.name);
         Utils.draw_players(context, layoutLeft, toggleUserListener, leftTeam, true);

@@ -15,15 +15,15 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.customLayout.CustomLinearLayout;
 import org.ocua.parity.model.Gender;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 
 public class EditRosters extends Activity {
     TextView leftTeamName, rightTeamName;
-    private customLinearLayout layoutLeft;
-    private customLinearLayout layoutRight;
+    private CustomLinearLayout layoutLeft;
+    private CustomLinearLayout layoutRight;
     private Button btnLastButtonClicked;
     private View.OnClickListener teamEditListener;
     private Context context;
@@ -65,8 +65,8 @@ public class EditRosters extends Activity {
         leftTeamName = (TextView) findViewById(R.id.leftTeam);
         rightTeamName = (TextView) findViewById(R.id.rightTeam);
 
-        layoutLeft = (customLinearLayout) findViewById(R.id.layoutLeftNames);
-        layoutRight = (customLinearLayout) findViewById(R.id.layoutRightNames);
+        layoutLeft = (CustomLinearLayout) findViewById(R.id.layoutLeftNames);
+        layoutRight = (CustomLinearLayout) findViewById(R.id.layoutRightNames);
     }
 
     private void bindEvents() {
