@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.model;
+package org.ocua.parity.model;
 
 import java.util.ArrayList;
 import java.io.Serializable;

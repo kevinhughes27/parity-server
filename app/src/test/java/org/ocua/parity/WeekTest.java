@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import io.masse.parityleaguestats.model.Week;
+import org.ocua.parity.model.Week;
 
 import static junit.framework.Assert.assertEquals;
 

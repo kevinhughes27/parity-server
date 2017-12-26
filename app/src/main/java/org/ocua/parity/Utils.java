@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import android.graphics.Typeface;
 import android.view.View;
@@ -11,8 +11,8 @@ import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
 
-import io.masse.parityleaguestats.model.Gender;
-import io.masse.parityleaguestats.model.Team;
+import org.ocua.parity.model.Gender;
+import org.ocua.parity.model.Team;
 
 public class Utils {
     public static void draw_players(Context context, LinearLayout layout, OnClickListener listener, Team team, boolean isLeft) {

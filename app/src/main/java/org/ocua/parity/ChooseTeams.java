@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.os.Bundle;
 
 import org.json.JSONObject;
 
-import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.Teams;
-import io.masse.parityleaguestats.tasks.fetchRoster;
+import org.ocua.parity.model.Team;
+import org.ocua.parity.model.Teams;
+import org.ocua.parity.tasks.fetchRoster;
 
 public class ChooseTeams extends Activity {
     private Context context;

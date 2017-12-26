@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,10 +15,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Gender;
-import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.Teams;
+import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.model.Gender;
+import org.ocua.parity.model.Team;
+import org.ocua.parity.model.Teams;
 
 public class EditRosters extends Activity {
     TextView leftTeamName, rightTeamName;

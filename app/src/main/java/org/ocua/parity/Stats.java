@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,10 +24,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
-import io.masse.parityleaguestats.customLayout.customLinearLayout;
-import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.Teams;
-import io.masse.parityleaguestats.tasks.uploadGame;
+import org.ocua.parity.customLayout.customLinearLayout;
+import org.ocua.parity.model.Team;
+import org.ocua.parity.model.Teams;
+import org.ocua.parity.tasks.uploadGame;
 
 public class Stats extends Activity {
     private customLinearLayout layoutLeft;

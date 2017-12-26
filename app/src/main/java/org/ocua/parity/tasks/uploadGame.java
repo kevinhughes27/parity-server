@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.tasks;
+package org.ocua.parity.tasks;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,7 +10,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import io.masse.parityleaguestats.BuildConfig;
+import org.ocua.parity.BuildConfig;
 
 public class uploadGame extends AsyncTask<String, String, Long> {
 

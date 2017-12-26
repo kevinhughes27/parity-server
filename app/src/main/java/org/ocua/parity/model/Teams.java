@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.model;
+package org.ocua.parity.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

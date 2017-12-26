@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.customLayout;
+package org.ocua.parity.customLayout;
 
 import android.content.Context;
 import android.util.AttributeSet;

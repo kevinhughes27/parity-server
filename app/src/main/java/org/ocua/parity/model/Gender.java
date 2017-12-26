@@ -1,6 +1,6 @@
-package io.masse.parityleaguestats.model;
+package org.ocua.parity.model;
 
-import io.masse.parityleaguestats.R;
+import org.ocua.parity.R;
 
 public enum Gender {
     Unknown(R.color.manualEntryButtonColour),

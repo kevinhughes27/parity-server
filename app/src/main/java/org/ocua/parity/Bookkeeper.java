@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats;
+package org.ocua.parity;
 
 
 import android.os.Environment;
@@ -17,12 +17,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Stack;
 
-import io.masse.parityleaguestats.model.Event;
-import io.masse.parityleaguestats.model.Game;
-import io.masse.parityleaguestats.model.League;
-import io.masse.parityleaguestats.model.Point;
-import io.masse.parityleaguestats.model.Team;
-import io.masse.parityleaguestats.model.Week;
+import org.ocua.parity.model.Event;
+import org.ocua.parity.model.Game;
+import org.ocua.parity.model.League;
+import org.ocua.parity.model.Point;
+import org.ocua.parity.model.Team;
+import org.ocua.parity.model.Week;
 
 public class Bookkeeper implements Serializable {
     Team homeTeam;
