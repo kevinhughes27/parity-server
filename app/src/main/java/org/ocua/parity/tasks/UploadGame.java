@@ -12,12 +12,12 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import org.ocua.parity.BuildConfig;
 
-public class uploadGame extends AsyncTask<String, String, Long> {
+public class UploadGame extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;
 
-    public uploadGame(Context context) {
+    public UploadGame(Context context) {
         this.context = context;
         this.dialog = new ProgressDialog(context);
     }

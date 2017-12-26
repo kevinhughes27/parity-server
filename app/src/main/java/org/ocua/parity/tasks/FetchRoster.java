@@ -12,14 +12,14 @@ import org.json.JSONObject;
 
 import org.ocua.parity.ChooseTeams;
 
-public class fetchRoster extends AsyncTask<String, String, Long> {
+public class FetchRoster extends AsyncTask<String, String, Long> {
 
     public Context context;
     private ProgressDialog dialog;
     private ChooseTeams parent;
     private JSONObject json;
 
-    public fetchRoster(Context context, ChooseTeams parent) {
+    public FetchRoster(Context context, ChooseTeams parent) {
         this.context = context;
         this.parent = parent;
         this.dialog = new ProgressDialog(context);

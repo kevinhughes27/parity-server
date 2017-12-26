@@ -88,7 +88,7 @@
         android:baselineAligned="false"
         tools:context=".Stats">
 
-        <org.ocua.parity.customLayout.customLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                          xmlns:tools="http://schemas.android.com/tools"
                                                          android:id="@+id/layoutLeftNames"
                                                          android:layout_width="fill_parent"
@@ -97,14 +97,14 @@
                                                          android:layout_weight="10"
                                                          tools:context=".Stats">
 
-        </org.ocua.parity.customLayout.customLinearLayout>
+        </org.ocua.parity.customLayout.CustomLinearLayout>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_weight="10" />
 
-        <org.ocua.parity.customLayout.customLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                          xmlns:tools="http://schemas.android.com/tools"
                                                          android:id="@+id/layoutRightNames"
                                                          android:layout_width="fill_parent"
@@ -113,7 +113,7 @@
                                                          android:layout_weight="10"
                                                          tools:context=".Stats">
 
-        </org.ocua.parity.customLayout.customLinearLayout>
+        </org.ocua.parity.customLayout.CustomLinearLayout>
 
     </LinearLayout>
 

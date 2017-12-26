@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
-import org.ocua.parity.tasks.fetchRoster;
+import org.ocua.parity.tasks.FetchRoster;
 
 public class ChooseTeams extends Activity {
     private Context context;
@@ -30,7 +30,7 @@ public class ChooseTeams extends Activity {
     protected void onStart() {
         super.onStart();
         teams = new Teams();
-        new fetchRoster(this, myself).execute();
+        new FetchRoster(this, myself).execute();
     }
 
     public void initTeams(JSONObject response) {
