@@ -19,10 +19,10 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 
 import org.ocua.parity.customLayout.customLinearLayout;
 import org.ocua.parity.model.Team;
@@ -279,7 +279,10 @@ public class Stats extends Activity {
     }
 
     private void resetApp() {
+        bookkeeper = null;
+        
         Intent intent = new Intent(myself, ChooseTeams.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 

@@ -26,7 +26,6 @@ public class uploadGame extends AsyncTask<String, String, Long> {
     protected void onPreExecute() {
         this.dialog.setMessage("Uploading game");
         this.dialog.show();
-
     }
 
     @Override

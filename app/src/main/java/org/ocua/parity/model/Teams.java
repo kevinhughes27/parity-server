@@ -25,15 +25,16 @@ public class Teams implements Serializable {
             while(iter.hasNext()) {
                 String teamName = iter.next();
                 JSONObject teamObject = json.getJSONObject(teamName);
+                int teamId = teamObject.getInt("id");
                 JSONArray malePlayers = teamObject.getJSONArray("malePlayers");
                 JSONArray femalePlayers = teamObject.getJSONArray("femalePlayers");
 
                 for( int i = 0; i < malePlayers.length(); i++) {
-                    addPlayer(teamName, malePlayers.getString(i), true);
+                    addPlayer(teamName, teamId, malePlayers.getString(i), true);
                 }
 
                 for( int i = 0; i < femalePlayers.length(); i++) {
-                    addPlayer(teamName, femalePlayers.getString(i), false);
+                    addPlayer(teamName, teamId, femalePlayers.getString(i), false);
                 }
             }
 
@@ -42,9 +43,9 @@ public class Teams implements Serializable {
         }
     }
 
-    private void addPlayer(String teamName, String playerName, Boolean isMale) {
+    private void addPlayer(String teamName, int teamId, String playerName, Boolean isMale) {
         if (teamsArray.isEmpty()) {
-            teamsArray.add(new Team(teamName, playerName, isMale));
+            teamsArray.add(new Team(teamName, teamId, playerName, isMale));
         } else {
             boolean match = false;
 
@@ -57,7 +58,7 @@ public class Teams implements Serializable {
             }
 
             if (!match){
-                teamsArray.add(new Team(teamName, playerName, isMale));
+                teamsArray.add(new Team(teamName, teamId, playerName, isMale));
             }
         }
     }
