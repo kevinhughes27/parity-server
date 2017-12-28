@@ -1,12 +1,9 @@
 package org.ocua.parity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,17 +14,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 
 import org.ocua.parity.customLayout.CustomLinearLayout;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
-import org.ocua.parity.tasks.UploadGame;
 
 public class Stats extends Activity {
     private CustomLinearLayout layoutLeft;
@@ -40,8 +32,6 @@ public class Stats extends Activity {
 
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeModeListener;
-
-    private final Stats myself = this;
 
     private Teams teams;
     private Bookkeeper bookkeeper;
@@ -214,26 +204,15 @@ public class Stats extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_select_players:
-                selectPlayers();
-                return true;
             case R.id.action_edit_players:
                 editRosters();
                 return true;
+            case R.id.action_record_half:
+                bookkeeper.recordHalf();
+                Toast.makeText(context, "Half Recorded", Toast.LENGTH_LONG).show();
+                return true;
             case R.id.action_save_game:
-                new AlertDialog.Builder(context)
-                        .setTitle("Submit Game")
-                        .setMessage("Submit this game?")
-                        .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                uploadGame();
-                                resetApp();
-                            }
-                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                // do nothing
-                            }
-                        }).show();
+                submitGame();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -241,7 +220,7 @@ public class Stats extends Activity {
     }
 
     private void editRosters() {
-        Intent intent = new Intent(myself, EditRosters.class);
+        Intent intent = new Intent(this, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("bookkeeper", bookkeeper);
@@ -249,6 +228,14 @@ public class Stats extends Activity {
         bundle.putStringArrayList("rightPlayers", rightPlayers);
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void submitGame() {
+        Intent intent = new Intent(this, SubmitGame.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("bookkeeper", bookkeeper);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
@@ -276,47 +263,6 @@ public class Stats extends Activity {
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
-    }
-
-    private void resetApp() {
-        bookkeeper = null;
-        
-        Intent intent = new Intent(myself, ChooseTeams.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-    private void uploadGame() {
-        try {
-            String json = bookkeeper.serialize().toString();
-            saveBackup(json);
-            new UploadGame(context).execute(json);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private void saveBackup(String json) {
-        try {
-            File pathToExternalStorage = Environment.getExternalStorageDirectory();
-            File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats");
-
-            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-
-            String fileName = "ParityBackup_" + timestamp + ".json";
-
-            backupDirectory.mkdir();
-
-            File file = new File(backupDirectory, fileName);
-            FileOutputStream fos = new FileOutputStream(file);
-            fos.write(json.getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
-        }
     }
 
     private void updateUI() {

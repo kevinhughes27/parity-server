@@ -258,6 +258,11 @@ public class Bookkeeper implements Serializable {
     }
 
     public void recordHalf() {
+        // idempotent
+        if (pointsAtHalf > 0) {
+            return;
+        }
+
         mementos.add(new Memento(firstActor) {
             @Override
             public void apply() {

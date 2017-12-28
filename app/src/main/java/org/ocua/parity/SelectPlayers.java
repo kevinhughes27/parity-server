@@ -148,7 +148,7 @@ public class SelectPlayers extends Activity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_select_players, menu);
+        inflater.inflate(R.menu.menu_stats, menu);
         return true;
     }
 
@@ -160,6 +160,9 @@ public class SelectPlayers extends Activity {
             case R.id.action_record_half:
                 bookkeeper.recordHalf();
                 Toast.makeText(context, "Half Recorded", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.action_save_game:
+                submitGame();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -175,6 +178,14 @@ public class SelectPlayers extends Activity {
         bundle.putStringArrayList("rightPlayers", rightPlayers);
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void submitGame() {
+        Intent intent = new Intent(this, SubmitGame.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("bookkeeper", bookkeeper);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
