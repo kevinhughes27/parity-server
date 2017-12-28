@@ -71,20 +71,22 @@ def upload():
 @cache.cached()
 @app.route('/api/teams')
 def teams():
-    teams = {}
+    teams = []
     for team in Team.query.all():
-        teams[team.name] = {
-            'id': team.zuluru_id,
-            'players': [],
-            'malePlayers': [],
-            'femalePlayers': []
-        }
+        players = []
+
         for player in Player.query.filter_by(team_id=team.id):
-            teams[team.name]['players'].append(player.name)
-            if player.is_male:
-                teams[team.name]['malePlayers'].append(player.name)
-            else:
-                teams[team.name]['femalePlayers'].append(player.name)
+            players.append({
+                'id': player.zuluru_id,
+                'name': player.name,
+                'is_male': player.is_male
+            })
+
+        teams.append({
+            'id': team.zuluru_id,
+            'name': team.name,
+            'players': players
+        })
 
     return jsonify(teams)
 
