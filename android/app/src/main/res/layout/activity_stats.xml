@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context=".Stats">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats">
+
+        <TextView
+            android:id="@+id/leftTeam"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:text="@string/str_DefaultLeftTeam"
+            android:ellipsize="none"
+            android:gravity="start"
+            android:singleLine="true"
+            />
+        <!--android:inputType="text"-->
+        <TextView
+            android:id="@+id/leftScore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/str_Zero"
+            android:textSize="40sp"
+            android:gravity="end"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="40sp"
+            android:text="@string/str_Separator"/>
+        <TextView
+            android:id="@+id/rightScore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/str_Zero"
+            android:textSize="40sp"
+            />
+        <TextView
+            android:id="@+id/rightTeam"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:text="@string/str_DefaultRightTeam"
+            android:ellipsize="none"
+            android:gravity="end"
+            android:singleLine="true"
+            />
+        <!--android:inputType="text"-->
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats"
+        style="?android:attr/buttonBarButtonStyle">
+
+        <Button
+            android:id="@+id/btnPull"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_btnPull"
+            android:background="@color/pullColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btnPoint"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_OActionsPoint"
+            android:background="@color/oActionsColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btnDrop"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_OActionsDrop"
+            android:background="@color/oActionsColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btnThrowAway"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_OActionsThrowAway"
+            android:background="@color/oActionsColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btnCatchD"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_DActionsCatchD"
+            android:background="@color/dActionsColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btnD"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/str_DActionsD"
+            android:background="@color/dActionsColour"
+            android:layout_margin="@dimen/button_all_margin"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats">
+
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:id="@+id/layoutLeftNames"
+                                                         android:layout_width="fill_parent"
+                                                         android:layout_height="fill_parent"
+                                                         android:orientation="vertical"
+                                                         android:layout_weight="10"
+                                                         tools:context=".Stats">
+
+        </org.ocua.parity.customLayout.CustomLinearLayout>
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/listPlayByPlay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="8" />
+
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:id="@+id/layoutRightNames"
+                                                         android:layout_width="fill_parent"
+                                                         android:layout_height="fill_parent"
+                                                         android:orientation="vertical"
+                                                         android:layout_weight="10"
+                                                         tools:context=".Stats">
+
+        </org.ocua.parity.customLayout.CustomLinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats">
+
+        <Button
+            android:id="@+id/btnMode"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/mode_button_edit"
+            android:layout_weight="5"/>
+
+        <Button
+            android:id="@+id/btnUndo"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_UndoButton"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+</LinearLayout>
