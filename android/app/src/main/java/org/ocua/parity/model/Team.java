@@ -10,15 +10,9 @@ public class Team implements Serializable {
     public ArrayList<String> arlGuys = new ArrayList<>();
     public ArrayList<String> arlGirls = new ArrayList<>();
 
-    public Team(String teamName, int teamId, String teamMember, Boolean isMale){
-        name = teamName;
-        id = teamId;
-
-        if (isMale){
-            arlGuys.add(teamMember);
-        }else{
-            arlGirls.add(teamMember);
-        }
+    public Team(String teamName, int teamId) {
+        this.name = teamName;
+        this.id = teamId;
     }
 
     public void addPlayer(String playerName, Gender gender){

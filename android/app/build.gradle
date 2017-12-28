@@ -35,11 +35,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "SERVER_URL", "\"https://parity-server.herokuapp.com/upload\""
+            buildConfigField "String", "UPLOAD_URL", "\"https://parity-server.herokuapp.com/upload\""
+            buildConfigField "String", "TEAMS_URL", "\"https://parity-server.herokuapp.com/api/teams\""
             signingConfig signingConfigs.release
         }
         debug {
-            buildConfigField "String", "SERVER_URL", "\"http://10.0.2.2:5000/upload\""
+            buildConfigField "String", "UPLOAD_URL", "\"http://10.0.2.2:5000/upload\""
+            buildConfigField "String", "TEAMS_URL", "\"https://parity-server.herokuapp.com/api/teams\""
+            buildConfigField "String", "LOCAL_TEAMS_URL", "\"http://10.0.2.2:5000/api/teams\""
         }
     }
     productFlavors {

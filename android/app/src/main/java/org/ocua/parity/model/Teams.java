@@ -5,7 +5,6 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 class TeamsLoadError extends RuntimeException {
     public TeamsLoadError(String msg) {
@@ -16,50 +15,30 @@ class TeamsLoadError extends RuntimeException {
 public class Teams implements Serializable {
     private ArrayList<Team> teamsArray = new ArrayList<>();
 
-    // SelectPlayers Schema:
-    // https://parity-server.herokuapp.com/docs/#api-Teams-GetTeams
-    public void load(JSONObject json) {
+    public void load(JSONArray json) {
         try {
-            Iterator<String> iter = json.keys();
+            for (int teamIndex = 0; teamIndex < json.length(); teamIndex++) {
+                JSONObject teamObject = json.getJSONObject(teamIndex);
 
-            while(iter.hasNext()) {
-                String teamName = iter.next();
-                JSONObject teamObject = json.getJSONObject(teamName);
+                String teamName = teamObject.getString("name");
                 int teamId = teamObject.getInt("id");
-                JSONArray malePlayers = teamObject.getJSONArray("malePlayers");
-                JSONArray femalePlayers = teamObject.getJSONArray("femalePlayers");
 
-                for( int i = 0; i < malePlayers.length(); i++) {
-                    addPlayer(teamName, teamId, malePlayers.getString(i), true);
+                JSONArray teamPlayers = teamObject.getJSONArray("players");
+                Team team = new Team(teamName, teamId);
+
+                for (int playerIndex = 0; playerIndex < teamPlayers.length(); playerIndex++) {
+                    JSONObject player = teamPlayers.getJSONObject(playerIndex);
+
+                    String playerName = player.getString("name");
+                    boolean isMale = player.getBoolean("is_male");
+                    team.addPlayer(playerName, isMale);
                 }
 
-                for( int i = 0; i < femalePlayers.length(); i++) {
-                    addPlayer(teamName, teamId, femalePlayers.getString(i), false);
-                }
+                teamsArray.add(team);
             }
 
         } catch (Exception e) {
             throw new TeamsLoadError(e.getMessage());
-        }
-    }
-
-    private void addPlayer(String teamName, int teamId, String playerName, Boolean isMale) {
-        if (teamsArray.isEmpty()) {
-            teamsArray.add(new Team(teamName, teamId, playerName, isMale));
-        } else {
-            boolean match = false;
-
-            for (Team team: teamsArray) {
-                if (team.name.equals(teamName)){
-                    match = true;
-                    team.addPlayer(playerName, isMale);
-                    break;
-                }
-            }
-
-            if (!match){
-                teamsArray.add(new Team(teamName, teamId, playerName, isMale));
-            }
         }
     }
 
