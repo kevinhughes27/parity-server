@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import io.masse.parityleaguestats.tasks.UploadGame;
+import org.ocua.parity.tasks.UploadGame;
 
 
 public class SubmitGame extends Activity {

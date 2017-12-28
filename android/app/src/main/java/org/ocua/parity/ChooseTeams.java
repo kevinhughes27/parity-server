@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import org.json.JSONObject;
+import org.json.JSONArray;
 
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
@@ -33,7 +33,7 @@ public class ChooseTeams extends Activity {
         new FetchRoster(this, myself).execute();
     }
 
-    public void initTeams(JSONObject response) {
+    public void initTeams(JSONArray response) {
         teams.load(response);
     }
 

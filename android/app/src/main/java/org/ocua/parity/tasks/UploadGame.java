@@ -1,4 +1,4 @@
-package io.masse.parityleaguestats.tasks;
+package org.ocua.parity.tasks;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -93,7 +93,7 @@ public class UploadGame extends AsyncTask<String, String, String> {
     }
 
     private boolean upload(String json) {
-        String url = BuildConfig.SERVER_URL;
+        String url = BuildConfig.UPLOAD_URL;
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
