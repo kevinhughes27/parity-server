@@ -42,10 +42,23 @@ android {
         debug {
             buildConfigField "String", "UPLOAD_URL", "\"http://10.0.2.2:5000/upload\""
             buildConfigField "String", "TEAMS_URL", "\"https://parity-server.herokuapp.com/api/teams\""
-            buildConfigField "String", "LOCAL_TEAMS_URL", "\"http://10.0.2.2:5000/api/teams\""
         }
     }
+
+    flavorDimensions( "parity" )
     productFlavors {
+        league {
+            buildConfigField "Integer", "MAX_FEMALES", "2"
+            buildConfigField "Integer", "MAX_MALES", "4"
+
+            dimension = "parity"
+        }
+        tournament {
+            buildConfigField "Integer", "MAX_FEMALES", "2"
+            buildConfigField "Integer", "MAX_MALES", "3"
+
+            dimension = "parity"
+        }
     }
     android.sourceSets {
         main.res.srcDirs = ['src/main/res', 'src/ColorPicker/res']
