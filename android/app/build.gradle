@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android'
+
+android {
+    signingConfigs {
+        release {
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+            if (keystorePropertiesFile.exists()) {
+                // Initialize a new Properties() object called keystoreProperties.
+                def keystoreProperties = new Properties()
+
+                // Load your keystore.properties file into the keystoreProperties object.
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+                keyAlias 'parity'
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file('../keystore.jks')
+                storePassword keystoreProperties['storePassword']
+            }
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId 'io.masse.parityleaguestats'
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 6
+        versionName '1.6'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+    useLibrary 'org.apache.http.legacy'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SERVER_URL", "\"https://parity-server.herokuapp.com/upload\""
+            signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "String", "SERVER_URL", "\"http://10.0.2.2:5000/upload\""
+        }
+    }
+    productFlavors {
+    }
+    android.sourceSets {
+        main.res.srcDirs = ['src/main/res', 'src/ColorPicker/res']
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:support-annotations:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:25.3.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+}

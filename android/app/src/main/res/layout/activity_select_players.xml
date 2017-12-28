@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context=".SelectPlayers">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".SelectPlayers">
+
+        <TextView
+            android:id="@+id/leftTeam"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:text="@string/str_DefaultLeftTeam"
+            android:ellipsize="none"
+            android:gravity="start"
+            android:singleLine="true"
+            />
+        <!--android:inputType="text"-->
+        <TextView
+            android:id="@+id/leftScore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/str_Zero"
+            android:textSize="40sp"
+            android:gravity="end"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="40sp"
+            android:text="@string/str_Separator"/>
+        <TextView
+            android:id="@+id/rightScore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/str_Zero"
+            android:textSize="40sp"
+            />
+        <TextView
+            android:id="@+id/rightTeam"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:text="@string/str_DefaultRightTeam"
+            android:ellipsize="none"
+            android:gravity="end"
+            android:singleLine="true"
+            />
+        <!--android:inputType="text"-->
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats"
+        style="?android:attr/buttonBarButtonStyle">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="Select the players who are on the field" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats">
+
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:id="@+id/layoutLeftNames"
+                                                         android:layout_width="fill_parent"
+                                                         android:layout_height="fill_parent"
+                                                         android:orientation="vertical"
+                                                         android:layout_weight="10"
+                                                         tools:context=".Stats">
+
+        </org.ocua.parity.customLayout.CustomLinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="10" />
+
+        <org.ocua.parity.customLayout.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:id="@+id/layoutRightNames"
+                                                         android:layout_width="fill_parent"
+                                                         android:layout_height="fill_parent"
+                                                         android:orientation="vertical"
+                                                         android:layout_weight="10"
+                                                         tools:context=".Stats">
+
+        </org.ocua.parity.customLayout.CustomLinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:context=".Stats">
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="1065dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="Done" />
+
+        <Button
+            android:id="@+id/btnUndo"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_UndoButton"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+</LinearLayout>
