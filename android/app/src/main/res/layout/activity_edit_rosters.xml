@@ -109,6 +109,13 @@
             android:text="Add Player" />
 
         <Button
+            android:id="@+id/btnAddSubPlayer"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="Add Substitute" />
+
+        <Button
             android:id="@+id/btnFinish"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
