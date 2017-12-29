@@ -211,7 +211,7 @@ public class SelectPlayers extends Activity {
             }
         }
 
-        int teamSize = 6;
+        int teamSize = BuildConfig.MAX_FEMALES + BuildConfig.MAX_MALES;
 
         boolean leftCorrectNumPlayers = leftPlayers.size() == teamSize;
         boolean rightCorrectNumPlayers = rightPlayers.size() == teamSize;
