@@ -48,7 +48,7 @@ android {
     productFlavors {
     }
     android.sourceSets {
-        main.res.srcDirs = ['src/main/res', 'src/ColorPicker/res']
+        main.res.srcDirs = ['src/main/res']
     }
 }
 
