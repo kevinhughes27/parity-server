@@ -8,8 +8,8 @@ import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
 from flask_caching import Cache
 
-from app import app
-from models import db, Team, Player
+from app import app, db
+from models import Team, Player
 
 
 @click.group()
