@@ -33,9 +33,10 @@ def init_db():
 def seed(prod, week):
     click.echo('Seeding database...')
 
-    url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
+    # url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
+    url = 'https://parity-tournament.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
 
-    src = "data/ocua_17-18/"
+    src = "data/tournament/"
     os.chdir(src)
 
     pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
@@ -53,8 +54,9 @@ def seed(prod, week):
 def backup(week):
     click.echo('Downloading database...')
 
-    src_url = "https://parity-server.herokuapp.com/api/games"
-    target_dir = "data/ocua_17-18"
+    # src_url = "https://parity-server.herokuapp.com/api/games"
+    src_url = "https://parity-tournament.herokuapp.com/api/games"
+    target_dir = "data/tournament"
 
     game_counts = defaultdict(int)
 
@@ -70,13 +72,13 @@ def backup(week):
         with urllib.request.urlopen(game_url) as url:
             game = json.loads(url.read().decode())
 
-        week = str(game["week"])
+        # week = str(game["week"])
         game_counts[week] += 1
         game_num = str(game_counts[week])
 
         del game['id']
 
-        file_name = "week" + week + "_game" + game_num + ".json"
+        file_name = "game" + game_num + ".json"
         fo = open(os.path.join(target_dir, file_name), "w")
         fo.write(json.dumps(game, indent=2, sort_keys=True))
         fo.close()
