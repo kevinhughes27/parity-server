@@ -193,11 +193,10 @@ class ZuluruSync:
 
 
     def login(self):
-        print('Username:')
-        username = input()
-        password = getpass.getpass()
+        username = os.environ.get('ZULURU_USER') or self.get_user()
+        password = os.environ.get('ZULURU_PASSWORD') or getpass.getpass()
 
-        #Extract nonce
+        # Extract nonce
         session = requests.Session()
         soup = self.get_soup(session, self.login_url)
         nonce = soup.find(attrs={'name':'form_build_id'}).get('value')
@@ -214,6 +213,11 @@ class ZuluruSync:
         print('Logging in')
         r = session.post(self.login_url, data=login_data)
         return session
+
+
+    def get_user(self):
+        print('Username:')
+        return input()
 
 
     def get_soup(self, session, url):
