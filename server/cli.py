@@ -148,10 +148,20 @@ class ZuluruSync:
             print('No players found. Login probably failed.')
             return
 
-        gender_elems = soup.findAll(text=re.compile('(Male|Female)'))
+        table = soup.find('table', {'class': 'list'})
+
+        genders_regex = '(Male|Female)'
+        gender_elems = table.findAll(text=re.compile(genders_regex))
         assert(len(player_elems) == len(gender_elems))
 
-        for p,g in zip(player_elems, gender_elems):
+        roles_regex = '(Regular player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
+        role_elems = table.findAll(text=re.compile(roles_regex))
+        assert(len(player_elems) == len(role_elems))
+
+        for p,r,g in zip(player_elems, role_elems, gender_elems):
+            if r == 'Non-playing coach':
+                continue
+
             zuluru_id = int(p.get('id').replace(self.player_id_preamble, ''))
             name = p.get_text()
             gender = 'male' if g == 'Male' else 'female'
@@ -193,11 +203,10 @@ class ZuluruSync:
 
 
     def login(self):
-        print('Username:')
-        username = input()
-        password = getpass.getpass()
+        username = os.environ.get('ZULURU_USER') or self.get_user()
+        password = os.environ.get('ZULURU_PASSWORD') or getpass.getpass()
 
-        #Extract nonce
+        # Extract nonce
         session = requests.Session()
         soup = self.get_soup(session, self.login_url)
         nonce = soup.find(attrs={'name':'form_build_id'}).get('value')
@@ -214,6 +223,11 @@ class ZuluruSync:
         print('Logging in')
         r = session.post(self.login_url, data=login_data)
         return session
+
+
+    def get_user(self):
+        print('Username:')
+        return input()
 
 
     def get_soup(self, session, url):
