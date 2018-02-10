@@ -87,7 +87,7 @@ def backup(week):
 @cli.command()
 def zuluru_sync():
     with app.app_context():
-        ZuluruSync().sync_teams(league_id=596)
+        ZuluruSync().sync_teams(league_id=615)
 
     db.session.remove()
 
