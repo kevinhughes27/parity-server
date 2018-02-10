@@ -17,7 +17,7 @@ react_app_path = '../web/build'
 
 
 # Init
-app = Flask(__name__, static_folder=client_path)
+app = Flask(__name__, static_folder=react_app_path)
 app.config.from_object(os.environ['APP_SETTINGS'])
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 db.init_app(app)
