@@ -13,7 +13,7 @@ import datetime
 if os.environ.get('APP_SETTINGS') == None:
     os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
 
-client_path = '../client/build'
+react_app_path = '../web/build'
 
 
 # Init
@@ -182,17 +182,17 @@ def build_stats_response(games):
     return stats
 
 
-# Client
+# React App
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def client(path):
+def react_app(path):
     if(path == ""):
-        return send_from_directory(client_path, 'index.html')
+        return send_from_directory(react_app_path, 'index.html')
     else:
-        if(os.path.exists(client_path + '/' + path)):
-            return send_from_directory(client_path, path)
+        if(os.path.exists(react_app_path + '/' + path)):
+            return send_from_directory(react_app_path, path)
         else:
-            return send_from_directory(client_path, 'index.html')
+            return send_from_directory(react_app_path, 'index.html')
 
 
 # Boot server for Development / Test
