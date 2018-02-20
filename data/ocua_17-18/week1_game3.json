@@ -1,3328 +1,2938 @@
 {
   "awayRoster": [
-    "Hannah Dawson",
-    "Marie-Ange Gravel",
-    "Katherine Matheson",
-    "Carrie-Anne Whyte",
-    "Brian Kells",
-    "Nick Amlin",
-    "Martin Cloake",
-    "Ben Curran",
-    "Tim Kealey",
-    "Andrew Spearin",
-    "Jamie Wildgen"
+    "Tanya Gallant",
+    "Josee Guibord",
+    "Ashlin Kelly(S)",
+    "Frederic Caron",
+    "Richard Gregory",
+    "Jonathan Pindur",
+    "Matthew Schijns",
+    "Nicholas Aghajanian",
+    "Lance Blackstock"
   ],
-  "awayScore": 19,
-  "awayTeam": "Stack Over Flow",
+  "awayScore": 12,
+  "awayTeam": "The Australian Outback",
   "homeRoster": [
-    "Kristie Ellis",
-    "Vanessa Mann",
-    "Angela Mueller",
-    "Andrea Proulx",
-    "Christopher Keates",
-    "Kevin Barford",
+    "Alisha Zhao",
+    "Jessie Robinson",
+    "Rachel Ng(S)",
     "Patrick Kenzie",
-    "Brian Perry",
-    "Rob Tyson",
-    "Michael Wong",
-    "Kevin Hughes(S)"
+    "Nick Klimowicz",
+    "Jim Robinson",
+    "Geofford Seaborn",
+    "Edwin Wong",
+    "Allan Godding"
   ],
-  "homeScore": 17,
-  "homeTeam": "Huck and Hope Handler Academy",
+  "homeScore": 24,
+  "homeTeam": "Pew-Pew",
   "league": "ocua_17-18",
   "points": [
     {
       "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Ben Curran",
-        "Tim Kealey",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
       ],
       "events": [
         {
-          "firstActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:07:09 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 9:51:34 PM",
           "type": "PULL"
         },
         {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:07:59 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 9:52:15 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Angela Mueller",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:08:01 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 9:52:18 PM",
           "type": "PASS"
         },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:08:07 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:08:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:08:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:08:31 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:08:34 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:08:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:08:40 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Brian Perry",
-        "Rob Tyson",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Vanessa Mann"
-      ],
-      "events": [
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:09:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:09:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:09:40 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:09:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:09:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:09:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:09:50 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Martin Cloake",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Ben Curran",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:10:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:11:05 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:11:08 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:11:08 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:11:12 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:11:13 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Kevin Barford",
-        "Brian Perry",
-        "Rob Tyson",
-        "Michael Wong",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ],
-      "events": [
         {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 7:12:14 PM",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:52:22 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 7:12:15 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 9:52:27 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:52:29 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:52:41 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 9:52:45 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 9:52:48 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 9:52:50 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 9:52:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 9:53:07 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 9:53:11 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 9:54:07 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 9:54:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 9:54:21 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 9:55:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 9:55:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 9:55:34 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 9:55:35 PM",
           "type": "DROP"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:12:22 PM",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 9:56:06 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:12:23 PM",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 9:56:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 9:56:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 9:56:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 9:56:25 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 9:56:26 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Christopher Keates",
-        "Patrick Kenzie",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Nick Amlin",
-        "Martin Cloake",
-        "Ben Curran",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
       ],
       "events": [
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:13:12 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 9:57:16 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:13:17 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 9:57:23 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:13:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:13:27 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:13:31 PM",
+          "firstActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 9:57:28 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Ben Curran",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:13:50 PM",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 9:57:46 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:13:51 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:13:56 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:13:58 PM",
+          "firstActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 9:57:52 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:14:01 PM",
+          "firstActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 9:57:53 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:14:07 PM",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 9:57:56 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:14:12 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 9:57:59 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:14:13 PM",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 9:58:02 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 9:58:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 9:58:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 9:58:14 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:58:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 9:58:31 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:58:33 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:58:39 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 9:58:41 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 9:58:52 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 9:58:57 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 9:58:59 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:59:14 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 9:59:19 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 9:59:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 9:59:25 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 9:59:30 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 9:59:31 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Kevin Barford",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
         "Patrick Kenzie",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ],
       "events": [
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:14:58 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:00:11 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:15:02 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:00:14 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:15:05 PM",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:00:18 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:15:09 PM",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:00:24 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:15:13 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:00:25 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:01:09 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:15:13 PM",
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:01:16 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:01:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:01:23 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:01:27 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:01:30 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:01:39 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:01:40 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:02:37 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:02:38 PM",
           "type": "DROP"
         },
         {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:15:19 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:15:42 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:15:47 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:02:51 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:15:49 PM",
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:02:58 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:15:54 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:16:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:16:08 PM",
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:02:59 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
         "Patrick Kenzie",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ],
       "events": [
         {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:16:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:16:45 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:16:49 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:16:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:16:55 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:16:57 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:17:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:17:07 PM",
+          "firstActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:03:47 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:17:11 PM",
+          "firstActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:03:48 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:17:17 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:03:53 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:17:18 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:17:19 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:17:21 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:17:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:17:28 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:17:32 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:17:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:17:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:17:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:17:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:17:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:17:50 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:17:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:18:16 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:18:19 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:18:23 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
+          "firstActor": "Alisha Zhao",
           "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:18:25 PM",
+          "timestamp": "Feb 12, 2018 10:04:00 PM",
           "type": "PASS"
         },
         {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:18:27 PM",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:04:03 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:18:30 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:04:08 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:18:31 PM",
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:04:09 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Martin Cloake",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
       ]
     },
     {
       "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:19:20 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Nick Amlin",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:19:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:19:28 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:19:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 7:19:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 7:19:39 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Martin Cloake",
-        "Ben Curran",
-        "Tim Kealey",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:20:19 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:20:22 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:20:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:20:28 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:20:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:20:45 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:20:49 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:20:52 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:20:54 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:21:04 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:21:32 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:21:34 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:21:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:21:40 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Kevin Barford",
         "Patrick Kenzie",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
       ],
       "events": [
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:22:17 PM",
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:04:49 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Ben Curran",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:22:21 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:04:54 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:22:27 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:05:00 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:05:03 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:05:07 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:22:29 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:22:43 PM",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:05:17 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:22:49 PM",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:05:20 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:22:53 PM",
+          "firstActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:05:28 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:22:55 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:05:41 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:05:50 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:05:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:06:04 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:06:14 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:06:16 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:22:57 PM",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:06:19 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:23:00 PM",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:06:21 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:23:04 PM",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:06:27 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Nick Amlin",
-          "secondActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 7:23:10 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 7:23:12 PM",
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:06:27 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Tim Kealey",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ],
       "events": [
         {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:09:53 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:10:01 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:10:04 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:10:06 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:10:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:10:10 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:10:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:10:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:10:21 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:11:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:11:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:11:20 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:11:24 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:11:25 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:12:10 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:12:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:12:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:12:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:12:23 PM",
+          "type": "PASS"
+        },
+        {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:23:56 PM",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:12:31 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Angela Mueller",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:24:02 PM",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:12:32 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:24:02 PM",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:12:34 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:12:40 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:12:41 PM",
           "type": "DROP"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:24:10 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:12:45 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:24:15 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:12:46 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:24:20 PM",
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:12:53 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:12:56 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:13:02 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:24:28 PM",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:13:11 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:24:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:24:32 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:24:33 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Patrick Kenzie",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Nick Amlin",
-        "Ben Curran",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
+          "firstActor": "Allan Godding",
           "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:25:17 PM",
+          "timestamp": "Feb 12, 2018 10:13:20 PM",
           "type": "PASS"
         },
         {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:25:21 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:25:25 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:25:27 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:25:32 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:25:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:25:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:25:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:25:45 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:26:25 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:26:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:26:30 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:26:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:26:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:26:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:26:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:26:50 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:26:53 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:26:57 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:27:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:27:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:27:10 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:27:16 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:27:17 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:27:18 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:27:22 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:27:25 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:27:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:27:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:27:36 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:27:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:27:40 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:27:42 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Ben Curran",
-        "Tim Kealey",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:28:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:28:40 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:28:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:28:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:28:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:28:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:28:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:28:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:28:54 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Patrick Kenzie",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Kevin Barford",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:29:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:29:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:29:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:29:51 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:30:10 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:30:14 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:30:17 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:30:19 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:30:22 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:30:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:30:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:30:37 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:30:39 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:30:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:30:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:30:59 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:31:02 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:31:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:31:18 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:31:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:31:30 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Martin Cloake",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:32:14 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:32:23 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:32:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:32:41 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Martin Cloake",
-        "Ben Curran",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:33:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:33:28 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:33:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:33:36 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:33:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:33:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:33:51 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:33:56 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:33:58 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:34:01 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:34:10 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:34:11 PM",
+          "timestamp": "Feb 12, 2018 10:13:21 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
         "Patrick Kenzie",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Nick Amlin",
-        "Martin Cloake",
-        "Ben Curran",
-        "Tim Kealey",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ],
       "events": [
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:35:01 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:14:13 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:35:05 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:14:17 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:35:06 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:14:22 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:14:23 PM",
           "type": "DROP"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:36:44 PM",
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:14:37 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:14:43 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:36:46 PM",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:14:46 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:14:54 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:15:11 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:15:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:15:19 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:16:02 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:16:04 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:16:09 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Nick Amlin",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
       ],
       "events": [
         {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:37:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:37:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:37:33 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:16:56 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:37:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:37:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:37:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:37:48 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:37:50 PM",
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:16:57 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:38:24 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:17:03 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:38:25 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:17:05 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:17:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:17:16 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:38:30 PM",
+          "firstActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:17:18 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:38:48 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:17:28 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:38:49 PM",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:17:34 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:38:50 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:17:40 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:38:51 PM",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:17:44 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:38:53 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:39:21 PM",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:17:49 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:39:25 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:39:30 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:39:33 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:39:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 7:39:40 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:39:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 7:39:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:39:52 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:39:53 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:17:50 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Kevin Barford",
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:18:36 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:18:42 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:18:45 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:18:49 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:19:13 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:19:14 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:19:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:19:21 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
         "Patrick Kenzie",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ]
     },
     {
       "defensePlayers": [
-        "Christopher Keates",
-        "Brian Perry",
-        "Rob Tyson",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
       ],
       "events": [
         {
-          "firstActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:40:33 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:20:03 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:20:08 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:40:40 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:20:35 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:40:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:40:47 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Rob Tyson",
-          "timestamp": "Nov 6, 2017 7:40:49 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Rob Tyson",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:40:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 7:40:58 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Vanessa Mann",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:41:03 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:41:04 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Martin Cloake",
-        "Tim Kealey",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Brian Perry",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:41:54 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:41:57 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:42:01 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:42:07 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:42:10 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:42:11 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Ben Curran",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Martin Cloake",
-        "Tim Kealey",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:42:58 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:43:02 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:43:05 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:43:10 PM",
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:20:35 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:43:26 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:20:42 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:43:29 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:20:53 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 7:43:30 PM",
-          "type": "DROP"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:43:40 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:20:58 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:43:45 PM",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:21:03 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:43:46 PM",
-          "type": "DROP"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:44:02 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:21:11 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:44:06 PM",
+          "firstActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:21:21 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:21:23 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:21:35 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:44:11 PM",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:21:38 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:21:44 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:21:54 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:21:55 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Brian Perry",
-        "Rob Tyson",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
         "Patrick Kenzie",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ],
       "events": [
         {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:49:22 PM",
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:26:19 PM",
           "type": "PULL"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:50:23 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:26:49 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Ben Curran",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:50:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:50:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:50:32 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:50:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:50:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:50:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:50:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:50:45 PM",
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:26:52 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:50:47 PM",
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:26:54 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:50:48 PM",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:26:59 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:50:57 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:51:12 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:27:04 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:51:17 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:27:06 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:51:23 PM",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:27:09 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:51:27 PM",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:27:13 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:51:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:51:33 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:51:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:51:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:51:50 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:51:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Nick Amlin",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:51:56 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:52:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:52:01 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Nick Amlin",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Ben Curran",
-        "Tim Kealey",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 7:52:49 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:52:52 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 7:52:56 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:53:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 7:53:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:53:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:53:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:53:49 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Nick Amlin",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:54:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:54:31 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
+          "firstActor": "Jim Robinson",
           "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 7:54:39 PM",
+          "timestamp": "Feb 12, 2018 10:27:15 PM",
           "type": "PASS"
         },
         {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 7:54:47 PM",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:27:20 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:54:49 PM",
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:27:21 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:28:13 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:28:14 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:28:32 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 7:54:57 PM",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:28:40 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Vanessa Mann",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:54:59 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:28:44 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:55:00 PM",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:28:45 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:28:48 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:28:53 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:28:55 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:29:05 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:29:10 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:29:13 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:29:27 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:29:30 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:29:35 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:29:41 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:29:43 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:29:48 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:30:18 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:30:22 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:30:32 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:30:36 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:30:40 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:30:41 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:30:49 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:30:50 PM",
           "type": "DROP"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:55:18 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:31:02 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 7:55:20 PM",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:31:05 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:55:23 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:31:08 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 7:55:30 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:31:12 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Nick Amlin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:55:34 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:31:21 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:55:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:55:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:55:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:55:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:55:50 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:55:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:55:55 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:56:00 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:56:01 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:56:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:56:07 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:56:28 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:56:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:56:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:56:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:56:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 7:56:48 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:57:21 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 7:57:23 PM",
-          "type": "DROP"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:57:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 7:57:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:57:40 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 7:57:45 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:57:51 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 7:57:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:57:59 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 7:58:00 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:31:22 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Kevin Barford",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:32:14 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:32:23 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:32:25 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:32:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:32:28 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:32:29 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:32:32 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:32:35 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:32:46 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:32:47 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ]
+    },
+    {
+      "defensePlayers": [
         "Patrick Kenzie",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Brian Perry",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
       ],
       "events": [
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 7:58:53 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:33:35 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 7:59:00 PM",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:33:40 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:59:51 PM",
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:33:43 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 7:59:52 PM",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:33:48 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:33:49 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Tim Kealey",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
       ],
       "events": [
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 8:00:32 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:34:44 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Vanessa Mann",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:00:34 PM",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:34:48 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
+          "firstActor": "Jessie Robinson",
           "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 8:00:40 PM",
+          "timestamp": "Feb 12, 2018 10:34:54 PM",
           "type": "PASS"
         },
         {
           "firstActor": "Patrick Kenzie",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:00:46 PM",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:34:56 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Michael Wong",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 8:00:49 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 8:00:51 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 8:00:56 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:01:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:01:01 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Patrick Kenzie",
-        "Rob Tyson",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 8:02:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:02:09 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 8:02:15 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Katherine Matheson",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 8:02:16 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:02:18 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:02:21 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:02:26 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:02:34 PM",
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:35:07 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 8:02:36 PM",
+          "firstActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:35:08 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 8:02:50 PM",
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:35:25 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 8:02:55 PM",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:35:28 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 8:03:04 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:03:15 PM",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:35:39 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:03:20 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:03:22 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Angela Mueller",
-          "timestamp": "Nov 6, 2017 8:03:29 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Angela Mueller",
-          "secondActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 8:03:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 8:03:38 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 8:03:41 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:03:50 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:03:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:03:57 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:04:11 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:04:14 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Martin Cloake",
-        "Ben Curran",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 8:04:53 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Vanessa Mann",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 8:04:55 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:04:58 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:05:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:05:05 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:05:07 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Nick Amlin",
-          "timestamp": "Nov 6, 2017 8:05:33 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Nick Amlin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:05:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:05:41 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:05:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:05:47 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:05:49 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 8:06:13 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 8:06:15 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Brian Perry",
-        "Michael Wong",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Patrick Kenzie",
-        "Rob Tyson",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 8:07:20 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:07:22 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:07:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Marie-Ange Gravel",
-          "timestamp": "Nov 6, 2017 8:07:30 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Marie-Ange Gravel",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:07:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 8:07:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 8:07:46 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Martin Cloake",
-        "Ben Curran",
-        "Tim Kealey",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:08:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 8:08:58 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 8:08:59 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Brian Perry",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Kevin Barford",
-        "Rob Tyson",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Martin Cloake",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:09:43 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:09:46 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:09:55 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "timestamp": "Nov 6, 2017 8:09:57 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Kevin Hughes(S)",
-          "secondActor": "Kevin Barford",
-          "timestamp": "Nov 6, 2017 8:10:04 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Kevin Barford",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:10:12 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:10:14 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Nick Amlin",
-        "Martin Cloake",
-        "Ben Curran",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Brian Perry",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:12:30 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:12:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 8:12:39 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:12:42 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:12:45 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:12:48 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 8:12:51 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 8:12:53 PM",
-          "type": "DROP"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:13:00 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Vanessa Mann",
-          "timestamp": "Nov 6, 2017 8:13:02 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Vanessa Mann",
-          "secondActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 8:13:05 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Patrick Kenzie",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:13:07 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Andrea Proulx",
-          "timestamp": "Nov 6, 2017 8:13:10 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrea Proulx",
-          "secondActor": "Christopher Keates",
-          "timestamp": "Nov 6, 2017 8:13:11 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Christopher Keates",
-          "secondActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:13:19 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "timestamp": "Nov 6, 2017 8:13:20 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Martin Cloake",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Brian Perry",
-        "Rob Tyson",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 8:14:16 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Katherine Matheson",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 8:14:20 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:14:24 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:14:27 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:14:29 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Perry",
-          "secondActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:14:34 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Michael Wong",
-          "timestamp": "Nov 6, 2017 8:14:35 PM",
-          "type": "POINT"
-        }
-      ],
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Ben Curran",
-        "Jamie Wildgen",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
-      ]
-    },
-    {
-      "defensePlayers": [
-        "Christopher Keates",
-        "Kevin Barford",
-        "Patrick Kenzie",
-        "Rob Tyson",
-        "Vanessa Mann",
-        "Andrea Proulx"
-      ],
-      "events": [
-        {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:15:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:15:35 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Carrie-Anne Whyte",
-          "timestamp": "Nov 6, 2017 8:15:36 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Carrie-Anne Whyte",
-          "secondActor": "Tim Kealey",
-          "timestamp": "Nov 6, 2017 8:15:38 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:15:44 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:16:05 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:16:06 PM",
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:35:40 PM",
           "type": "DROP"
         },
         {
           "firstActor": "Patrick Kenzie",
-          "timestamp": "Nov 6, 2017 8:16:19 PM",
+          "timestamp": "Feb 12, 2018 10:35:48 PM",
           "type": "THROWAWAY"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:16:20 PM",
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:35:50 PM",
           "type": "DEFENSE"
         },
         {
-          "firstActor": "Tim Kealey",
-          "secondActor": "Andrew Spearin",
-          "timestamp": "Nov 6, 2017 8:16:25 PM",
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:35:53 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Andrew Spearin",
-          "secondActor": "Hannah Dawson",
-          "timestamp": "Nov 6, 2017 8:16:32 PM",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:35:59 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Hannah Dawson",
-          "secondActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:16:37 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Jamie Wildgen",
-          "timestamp": "Nov 6, 2017 8:16:39 PM",
+          "firstActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:36:03 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Martin Cloake",
-        "Tim Kealey",
-        "Andrew Spearin",
-        "Jamie Wildgen",
-        "Hannah Dawson",
-        "Carrie-Anne Whyte"
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
       ]
     },
     {
       "defensePlayers": [
-        "Brian Kells",
-        "Nick Amlin",
-        "Martin Cloake",
-        "Ben Curran",
-        "Marie-Ange Gravel",
-        "Katherine Matheson"
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
       ],
       "events": [
         {
-          "firstActor": "Brian Perry",
-          "secondActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 8:17:30 PM",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:36:55 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Kristie Ellis",
-          "timestamp": "Nov 6, 2017 8:17:33 PM",
-          "type": "THROWAWAY"
-        },
-        {
-          "firstActor": "Ben Curran",
-          "timestamp": "Nov 6, 2017 8:17:35 PM",
-          "type": "DEFENSE"
-        },
-        {
-          "firstActor": "Brian Kells",
-          "secondActor": "Katherine Matheson",
-          "timestamp": "Nov 6, 2017 8:18:11 PM",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:36:57 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Katherine Matheson",
-          "secondActor": "Brian Kells",
-          "timestamp": "Nov 6, 2017 8:18:13 PM",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:37:03 PM",
           "type": "PASS"
         },
         {
-          "firstActor": "Brian Kells",
-          "secondActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:18:30 PM",
-          "type": "PASS"
-        },
-        {
-          "firstActor": "Martin Cloake",
-          "timestamp": "Nov 6, 2017 8:18:31 PM",
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:37:03 PM",
           "type": "POINT"
         }
       ],
       "offensePlayers": [
-        "Christopher Keates",
-        "Brian Perry",
-        "Michael Wong",
-        "Kevin Hughes(S)",
-        "Kristie Ellis",
-        "Angela Mueller"
+        "Patrick Kenzie",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:37:58 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:38:01 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:38:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:38:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:38:18 PM",
+          "type": "DROP"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:38:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:38:28 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:38:31 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:38:39 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:38:41 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:38:42 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:39:32 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:39:35 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:39:39 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:39:49 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:39:50 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:39:54 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:39:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:40:03 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:40:04 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:40:53 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:40:59 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:41:00 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:41:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:41:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:41:14 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:41:59 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:42:07 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:42:10 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:42:17 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:43:23 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:43:31 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:43:41 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:43:49 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:43:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:43:59 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:44:05 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:44:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:44:14 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:45:04 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:45:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:45:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:45:17 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:46:00 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:46:03 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:46:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:46:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:46:15 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:46:58 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:47:02 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:47:08 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:47:08 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:47:58 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:48:02 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:48:04 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:48:12 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:48:19 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:48:25 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:48:30 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:48:35 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:48:38 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:48:44 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:49:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:49:07 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:49:53 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:49:55 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:50:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:50:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:50:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:50:20 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:50:21 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:51:06 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:51:14 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:51:35 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:51:40 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:51:50 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:51:53 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:51:55 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:51:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:51:59 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:52:05 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:52:05 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:52:48 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Matthew Schijns",
+          "timestamp": "Feb 12, 2018 10:52:51 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:52:54 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:52:58 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Geofford Seaborn",
+          "timestamp": "Feb 12, 2018 10:52:59 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:53:38 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:53:40 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:53:47 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur",
+          "timestamp": "Feb 12, 2018 10:53:50 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:53:57 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:54:09 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Frederic Caron",
+          "timestamp": "Feb 12, 2018 10:54:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Frederic Caron",
+          "secondActor": "Josee Guibord",
+          "timestamp": "Feb 12, 2018 10:54:15 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Josee Guibord",
+          "secondActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:54:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nicholas Aghajanian",
+          "timestamp": "Feb 12, 2018 10:54:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:54:28 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:54:29 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Frederic Caron",
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Frederic Caron",
+        "Matthew Schijns",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:55:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Rachel Ng(S)",
+          "timestamp": "Feb 12, 2018 10:55:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Rachel Ng(S)",
+          "secondActor": "Nick Klimowicz",
+          "timestamp": "Feb 12, 2018 10:55:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:55:29 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:55:30 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Jim Robinson",
+        "Geofford Seaborn",
+        "Edwin Wong",
+        "Alisha Zhao",
+        "Rachel Ng(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Patrick Kenzie",
+        "Nick Klimowicz",
+        "Geofford Seaborn",
+        "Allan Godding",
+        "Jessie Robinson",
+        "Rachel Ng(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:56:12 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:56:16 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "secondActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:56:20 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Tanya Gallant",
+          "timestamp": "Feb 12, 2018 10:56:20 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Matthew Schijns",
+        "Lance Blackstock",
+        "Tanya Gallant",
+        "Ashlin Kelly(S)"
+      ]
+    },
+    {
+      "defensePlayers": [
+        "Richard Gregory",
+        "Jonathan Pindur",
+        "Nicholas Aghajanian",
+        "Lance Blackstock",
+        "Josee Guibord",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:57:08 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:57:13 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:57:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:57:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:57:21 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:57:36 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Ashlin Kelly(S)",
+          "timestamp": "Feb 12, 2018 10:57:38 PM",
+          "type": "DEFENSE"
+        },
+        {
+          "firstActor": "Richard Gregory",
+          "timestamp": "Feb 12, 2018 10:57:54 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:58:07 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Edwin Wong",
+          "timestamp": "Feb 12, 2018 10:58:12 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Edwin Wong",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:58:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:58:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "secondActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:58:29 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "timestamp": "Feb 12, 2018 10:58:40 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Lance Blackstock",
+          "timestamp": "Feb 12, 2018 10:59:02 PM",
+          "type": "THROWAWAY"
+        },
+        {
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding",
+          "timestamp": "Feb 12, 2018 10:59:17 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Allan Godding",
+          "secondActor": "Alisha Zhao",
+          "timestamp": "Feb 12, 2018 10:59:18 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie",
+          "timestamp": "Feb 12, 2018 10:59:22 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:59:26 PM",
+          "type": "PASS"
+        },
+        {
+          "firstActor": "Jim Robinson",
+          "timestamp": "Feb 12, 2018 10:59:29 PM",
+          "type": "POINT"
+        }
+      ],
+      "offensePlayers": [
+        "Patrick Kenzie",
+        "Jim Robinson",
+        "Edwin Wong",
+        "Allan Godding",
+        "Alisha Zhao",
+        "Jessie Robinson"
       ]
     }
   ],
