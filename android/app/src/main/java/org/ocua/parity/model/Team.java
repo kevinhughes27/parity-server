@@ -2,6 +2,7 @@ package org.ocua.parity.model;
 
 import java.util.ArrayList;
 import java.io.Serializable;
+import java.util.HashSet;
 
 public class Team implements Serializable {
     public String name = "";
@@ -10,22 +11,24 @@ public class Team implements Serializable {
     public ArrayList<String> arlGuys = new ArrayList<>();
     public ArrayList<String> arlGirls = new ArrayList<>();
 
+    private HashSet<String> roster = new HashSet<>();
+
     public Team(String teamName, int teamId) {
         this.name = teamName;
         this.id = teamId;
     }
 
     public void addPlayer(String playerName, Gender gender){
-        boolean isMale = (gender == Gender.Male);
-        addPlayer(playerName, isMale);
-    }
-
-    public void addPlayer(String playerName, Boolean isMale){
-        if (isMale){
+        if (gender == Gender.Male){
             arlGuys.add(playerName);
         } else {
             arlGirls.add(playerName);
         }
+    }
+
+    public void addRosterPlayer(String playerName, Boolean isMale){
+        addPlayer(playerName, isMale ? Gender.Male : Gender.Female);
+        roster.add(playerName);
     }
 
     public void removePlayer(String playerName, Boolean isMale) {
@@ -34,6 +37,10 @@ public class Team implements Serializable {
         } else {
             arlGirls.remove(playerName);
         }
+    }
+
+    public boolean isOnRoster(String playerName) {
+        return roster.contains(playerName);
     }
 
     public ArrayList<String> getRoster(){

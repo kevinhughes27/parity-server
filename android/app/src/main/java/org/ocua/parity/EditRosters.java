@@ -101,11 +101,6 @@ public class EditRosters extends Activity {
             }
         };
 
-
-
-        Button addPlayerButton = (Button) findViewById(R.id.btnAddPlayer);
-        addPlayerButton.setOnClickListener(addPlayerListener);
-
         Button addSubButton = (Button) findViewById(R.id.btnAddSubPlayer);
         addSubButton.setOnClickListener(addPlayerListener);
 
@@ -139,18 +134,16 @@ public class EditRosters extends Activity {
                     rightTeam.name
             };
 
-            final boolean isSubPlayer = v.getId() == R.id.btnAddSubPlayer;
-
             new AlertDialog.Builder(context)
                     .setTitle("Choose Team")
                     .setItems(teams, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             switch (which) {
                                 case 0:
-                                    addPlayer(input, leftTeam, isSubPlayer);
+                                    addPlayer(input, leftTeam);
                                     break;
                                 case 1:
-                                    addPlayer(input, rightTeam, isSubPlayer);
+                                    addPlayer(input, rightTeam);
                                     break;
                             }
                         }
@@ -158,24 +151,23 @@ public class EditRosters extends Activity {
         }
     };
 
-    private void addPlayer(final AutoCompleteTextView input, final Team team, boolean isSubPlayer) {
+    private void addPlayer(final AutoCompleteTextView input, final Team team) {
         input.setAdapter(new ArrayAdapter<>(
                 context,
                 android.R.layout.simple_dropdown_item_1line,
                 teams.allPlayers())
         );
 
-        final String playerSuffix = isSubPlayer ? "(S)" : "";
-        final String title = isSubPlayer ? "Add Substitute Player" : "Add Player";
-
         new AlertDialog.Builder(context)
-                .setTitle(title)
+                .setTitle("Add Player")
                 .setMessage("Player Name")
                 .setView(input)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        final String playerName = input.getText().toString() + playerSuffix;
-                        final Gender gender = teams.getPlayerGender(input.getText().toString());
+                        String enteredPlayer = input.getText().toString();
+                        final Gender gender = teams.getPlayerGender(enteredPlayer);
+                        final String playerSuffix = team.isOnRoster(enteredPlayer) ? "" : "(S)";
+                        final String playerName = enteredPlayer + playerSuffix;
 
                         if (gender == Gender.Unknown) {
                             new AlertDialog.Builder(context)
