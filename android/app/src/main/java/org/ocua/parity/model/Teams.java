@@ -31,7 +31,7 @@ public class Teams implements Serializable {
 
                     String playerName = player.getString("name");
                     boolean isMale = player.getBoolean("is_male");
-                    team.addPlayer(playerName, isMale);
+                    team.addRosterPlayer(playerName, isMale);
                 }
 
                 teamsArray.add(team);
