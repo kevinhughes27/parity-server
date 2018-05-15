@@ -25,15 +25,32 @@ public class TeamData {
     public static TeamData Stella() {
         TeamData data = new TeamData("Stella", Gender.Female);
 
-        data.addPlayer("Hannah Dawson");
+        data.addPlayer("Abby Millar");
+        data.addPlayer("Ainsley Shannon");
+        data.addPlayer("Alicia Racine");
         data.addPlayer("Alisha Zhao");
-        data.addPlayer("Stella 1");
-        data.addPlayer("Stella 2");
-        data.addPlayer("Stella 3");
-        data.addPlayer("Stella 4");
-        data.addPlayer("Stella 5");
-        data.addPlayer("Stella 6");
-        data.addPlayer("Stella 7");
+        data.addPlayer("Allison Flynn");
+        data.addPlayer("Allison Verney");
+        data.addPlayer("Anika Gnaedinger");
+        data.addPlayer("Brianna Jaffray");
+        data.addPlayer("Brittney Cooke");
+        data.addPlayer("Cassandra Jaffray");
+        data.addPlayer("Danielle Cantal");
+        data.addPlayer("Emily Scott");
+        data.addPlayer("Galadrielle Michaud");
+        data.addPlayer("Hannah Dawson");
+        data.addPlayer("Hannah Lewis");
+        data.addPlayer("Jessie Robinson");
+        data.addPlayer("Julie Boisvert");
+        data.addPlayer("Kate Achtell");
+        data.addPlayer("Kristie Ellis");
+        data.addPlayer("Marie-Eve Gauvin");
+        data.addPlayer("Marti Doucet");
+        data.addPlayer("Marie-Christine Jacques");
+        data.addPlayer("Sam Green");
+        data.addPlayer("Steph Mandal");
+        data.addPlayer("Taylor Stanojev");
+        data.addPlayer("Wynne Gee");
 
         return data;
     }
