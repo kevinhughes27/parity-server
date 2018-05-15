@@ -2,6 +2,7 @@ package org.ocua.parity.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.ocua.parity.TeamData;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,6 +15,16 @@ class TeamsLoadError extends RuntimeException {
 
 public class Teams implements Serializable {
     private ArrayList<Team> teamsArray = new ArrayList<>();
+
+    public void addTeam(TeamData data){
+        Team team = new Team(data.teamName, teamsArray.size());
+
+        for (String player : data.players) {
+            team.addRosterPlayer(player, data.gender == Gender.Male);
+        }
+
+        teamsArray.add(team);
+    }
 
     public void load(JSONArray json) {
         try {

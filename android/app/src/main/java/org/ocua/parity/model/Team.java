@@ -18,6 +18,19 @@ public class Team implements Serializable {
         this.id = teamId;
     }
 
+    public Team deepCopy() {
+        Team newTeam = new Team(this.name,  this.id);
+        for(String player : this.arlGuys) {
+            newTeam.addRosterPlayer(player, true);
+        }
+
+        for(String player : this.arlGirls) {
+            newTeam.addRosterPlayer(player, false);
+        }
+
+        return newTeam;
+    }
+
     public void addPlayer(String playerName, Gender gender){
         if (gender == Gender.Male){
             arlGuys.add(playerName);

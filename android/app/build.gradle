@@ -53,6 +53,8 @@ android {
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/upload\""
             buildConfigField "String", "TEAMS_URL", "\"" + baseUrl + "/api/teams\""
 
+            buildConfigField "String", "APP_FOLDER_NAME", "\"ParityLeagueStats\""
+            buildConfigField "boolean", "SAVE_CSV", "false"
             dimension = "parity"
         }
         tournament {
@@ -62,6 +64,22 @@ android {
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/upload\""
             buildConfigField "String", "TEAMS_URL", "\"" + baseUrl + "/api/teams\""
+
+            buildConfigField "String", "APP_FOLDER_NAME", "\"ParityLeagueStats\""
+            buildConfigField "boolean", "SAVE_CSV", "false"
+            dimension = "parity"
+        }
+        team {
+            buildConfigField "Integer", "MAX_FEMALES", "7"
+            buildConfigField "Integer", "MAX_MALES", "0"
+
+            def baseUrl = "https://parity-server.herokuapp.com"
+
+            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/calc\""
+            buildConfigField "String", "TEAMS_URL", "\"\""
+
+            buildConfigField "String", "APP_FOLDER_NAME", "\"TeamStats\""
+            buildConfigField "boolean", "SAVE_CSV", "true"
             dimension = "parity"
         }
     }

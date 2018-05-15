@@ -13,6 +13,8 @@ import org.json.JSONArray;
 
 import org.ocua.parity.BuildConfig;
 import org.ocua.parity.ChooseTeams;
+import org.ocua.parity.TeamData;
+import org.ocua.parity.model.Gender;
 
 public class FetchRoster extends AsyncTask<String, String, Long> {
 
@@ -35,6 +37,12 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
+        if (BuildConfig.FLAVOR.equalsIgnoreCase("team")){
+            // Per team
+            parent.createTeam(TeamData.Stella());
+            return null;
+        }
+
         String strRosterUrl = BuildConfig.TEAMS_URL;
         String resString = "";
 
@@ -56,7 +64,11 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
     protected void onPostExecute(Long result) {
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
-            parent.initTeams(json);
+            if (json == null) {
+
+            } else {
+                parent.initTeams(json);
+            }
             parent.openDialog();
         }
     }

@@ -316,7 +316,7 @@ public class Bookkeeper implements Serializable {
                         String fileName = timestamp + "_" + gameName + ".json";
 
                         File pathToExternalStorage = Environment.getExternalStorageDirectory();
-                        File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats" + File.separator + "autosave" + File.separator + datestamp);
+                        File backupDirectory = new File(pathToExternalStorage, BuildConfig.APP_FOLDER_NAME + File.separator + "autosave" + File.separator + datestamp);
 
                         backupDirectory.mkdirs();
 

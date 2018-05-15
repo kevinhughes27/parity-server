@@ -213,8 +213,8 @@ public class SelectPlayers extends Activity {
 
         int teamSize = BuildConfig.MAX_FEMALES + BuildConfig.MAX_MALES;
 
-        boolean leftCorrectNumPlayers = leftPlayers.size() == teamSize;
-        boolean rightCorrectNumPlayers = rightPlayers.size() == teamSize;
+        boolean leftCorrectNumPlayers = leftPlayers.size() <= teamSize;
+        boolean rightCorrectNumPlayers = rightPlayers.size() <= teamSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
             bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);

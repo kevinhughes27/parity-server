@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import org.json.JSONArray;
 
+import org.ocua.parity.model.Gender;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 import org.ocua.parity.tasks.FetchRoster;
@@ -33,6 +34,10 @@ public class ChooseTeams extends Activity {
         new FetchRoster(this, myself).execute();
     }
 
+    public void createTeam(TeamData data){
+        teams.addTeam(data);
+    }
+
     public void initTeams(JSONArray response) {
         teams.load(response);
     }
@@ -42,12 +47,12 @@ public class ChooseTeams extends Activity {
                 .setTitle("Choose Home Team")
                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        final Team homeTeam = teams.getTeam(which);
+                        final Team homeTeam = teams.getTeam(which).deepCopy();
                         new AlertDialog.Builder(context)
                                 .setTitle("Choose Away Team")
                                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Team awayTeam = teams.getTeam(which);
+                                        Team awayTeam = teams.getTeam(which).deepCopy();
                                         editRosters(homeTeam, awayTeam);
                                     }
                                 }).show();
