@@ -134,3 +134,29 @@ class Stats(db.Model):
             "pay": self.pay,
             "salary_per_point": self.salary_per_point
         }
+
+    def to_csv(self):
+        data = [
+            self.goals,
+            self.assists,
+            self.second_assists,
+            self.d_blocks,
+            self.completions,
+            self.throw_aways,
+            self.threw_drops,
+            self.catches,
+            self.drops,
+            self.pulls,
+            self.callahan,
+            self.o_points_for,
+            self.o_points_against,
+            self.d_points_for,
+            self.d_points_against,
+            self.o_efficiency,
+            self.d_efficiency,
+            self.total_efficiency,
+            self.pay,
+            self.salary_per_point
+        ]
+
+        return ','.join(map(str, data)) + "\n"

@@ -56,15 +56,36 @@ def upload():
     db.session.commit()
 
     # calculate and save stats
-    stats = StatsCalculator(game.id, points).run()
-    for stat in stats:
-        db.session.add(stat[1])
+    stats = StatsCalculator(points, game.id).run()
+    for name, player_stats in stats:
+        db.session.add(player_stats)
     db.session.commit()
 
     # clear the stats cache
     cache.clear()
 
     return ('', 201)
+
+
+# Calc
+@app.route('/calc', methods=['POST'])
+def calc():
+    points = request.json['points']
+    stats = StatsCalculator(points).run()
+
+    csv = ""
+
+    header = "name, goals, assists, second_assists, d_blocks, completions, throw_aways,\
+    threw_drops, catches, drops, pulls, callahan, o_points_for, o_points_against, d_points_for,\
+    d_points_against, o_efficiency, d_efficiency, total_efficiency, pay, salary_per_point\n"
+
+    csv += header
+
+    for name, player_stats in stats:
+        row = name + ',' + player_stats.to_csv()
+        csv += row
+
+    return (csv, 200)
 
 
 # API
