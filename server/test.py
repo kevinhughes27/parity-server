@@ -129,6 +129,16 @@ class ServerTests(FlaskTest, SnapShotTest):
 
         self.assertMatchSnapshot(stats)
 
+    def test_calc_endpoint(self):
+        with open('data/test/basic_point.json') as f:
+            game_str = f.read()
+
+        response = self.client.post('/calc', data=game_str, content_type='application/json')
+
+        rows = str(response.data).split("\\n")[1:]
+        sortedlist = sorted(rows, key=lambda row: row.split(",")[0])
+
+        self.assertMatchSnapshot(sortedlist)
 
     def test_api_endpoints(self):
         with open('data/test/mini_game2.json') as f:
