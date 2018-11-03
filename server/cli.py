@@ -11,6 +11,7 @@ from flask_caching import Cache
 from app import app
 from models import db, Team, Player
 
+data_folder = "data/ocua_18-19/"
 
 @click.group()
 def cli():
@@ -35,7 +36,7 @@ def seed(prod, week):
 
     url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
 
-    src = "data/ocua_17-18/"
+    src = data_folder
     os.chdir(src)
 
     pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
@@ -54,7 +55,7 @@ def backup(week):
     click.echo('Downloading database...')
 
     src_url = "https://parity-server.herokuapp.com/api/games"
-    target_dir = "data/ocua_17-18"
+    target_dir = data_folder
 
     game_counts = defaultdict(int)
 
