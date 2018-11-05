@@ -58,8 +58,12 @@ class Player(db.Model):
         if self.team_id:
             team_mates = Player.query.filter_by(team_id=self.team_id).all()
             same_gender_salaries = [p.salary for p in team_mates if p.is_male == self.is_male and p.has_stats]
-            avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
-            return avg_salary
+
+            if len(same_gender_salaries) == 0:
+                return 0
+            else:
+                avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
+                return avg_salary
         else:
             return 0
 
