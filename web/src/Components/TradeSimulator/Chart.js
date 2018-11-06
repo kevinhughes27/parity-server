@@ -6,7 +6,7 @@ import 'chartjs-plugin-annotation'
 
 export default class Chart extends Component {
   render () {
-    const { players, teamNames, salaryCap } = this.props
+    const { players, teamNames, salaryCap, salaryFloor } = this.props
 
     const data = {
       labels: teamNames,
@@ -67,6 +67,20 @@ export default class Chart extends Component {
             position: 'right',
             backgroundColor: 'black',
             content: 'Salary Cap',
+            enabled: true
+          }
+        },
+        {
+          type: 'line',
+          mode: 'horizontal',
+          scaleID: 'y-axis-0',
+          value: salaryFloor,
+          borderColor: 'black',
+          borderWidth: 2,
+          label: {
+            position: 'left',
+            backgroundColor: 'black',
+            content: 'Salary Floor',
             enabled: true
           }
         }]
