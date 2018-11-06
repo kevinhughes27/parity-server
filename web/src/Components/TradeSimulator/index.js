@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import PlayerSelect from '../PlayerSelect'
 import Chart from './Chart'
-import { calcSalaryCap } from '../helpers'
+import { calcSalaryLimits } from '../helpers'
 
 export default class TradeSimulator extends Component {
   constructor (props) {
@@ -108,7 +108,7 @@ export default class TradeSimulator extends Component {
     const { players, playerA, playerB, trades } = this.state
     const teamNames = _.uniq(players.map(p => p.team));
     const playerNames = players.map(p => p.name)
-    const salaryCap = calcSalaryCap(players);
+    const { salaryCap, salaryFloor } = calcSalaryLimits(players);
 
     return (
       <div>
@@ -146,6 +146,7 @@ export default class TradeSimulator extends Component {
             players={players}
             teamNames={teamNames}
             salaryCap={salaryCap}
+            salaryFloor={salaryFloor}
           />
         </div>
       </div>

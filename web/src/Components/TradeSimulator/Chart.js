@@ -6,7 +6,7 @@ import 'chartjs-plugin-annotation'
 
 export default class Chart extends Component {
   render () {
-    const { players, teamNames, salaryCap } = this.props
+    const { players, teamNames, salaryCap, salaryFloor } = this.props
 
     const data = {
       labels: teamNames,
@@ -14,15 +14,15 @@ export default class Chart extends Component {
         const teamPlayers = _.sortBy(players.filter((p) => p.team === team), (p) => p.salary)
         return teamPlayers.map((player, idx) => {
           const teamSalary = _.sum(_.map(teamPlayers, (p) => p.salary))
-          const overCap = teamSalary > salaryCap
+          const outsideLimits = teamSalary > salaryCap || teamSalary < salaryFloor
 
           return {
             type: 'bar',
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: overCap ? warnColors[idx] : colors[idx],
-            hoverBackgroundColor: overCap ? warnColors[idx] : colors[idx]
+            backgroundColor: outsideLimits ? warnColors[idx] : colors[idx],
+            hoverBackgroundColor: outsideLimits ? warnColors[idx] : colors[idx]
           }
         })
       }))
@@ -67,6 +67,20 @@ export default class Chart extends Component {
             position: 'right',
             backgroundColor: 'black',
             content: 'Salary Cap',
+            enabled: true
+          }
+        },
+        {
+          type: 'line',
+          mode: 'horizontal',
+          scaleID: 'y-axis-0',
+          value: salaryFloor,
+          borderColor: 'black',
+          borderWidth: 2,
+          label: {
+            position: 'left',
+            backgroundColor: 'black',
+            content: 'Salary Floor',
             enabled: true
           }
         }]
