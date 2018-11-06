@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
-import { calcSalaryCap, calcSalaryFloor } from '../helpers'
+import { calcSalaryLimits } from '../helpers'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -30,8 +30,7 @@ export default class TeamDashboard extends Component {
     const sortedPlayers = _.sortBy(teamPlayers, (p) => p.salary).reverse();
     const salaries = _.map(sortedPlayers, (p) => p.salary);
     const teamSalary = _.sum(salaries);
-    const salaryCap = calcSalaryCap(allPlayers);
-    const salaryFloor = calcSalaryFloor(allPlayers);
+    const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
     const overCap = teamSalary > salaryCap;
 
     return (

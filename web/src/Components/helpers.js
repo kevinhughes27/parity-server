@@ -1,17 +1,15 @@
 import _ from 'lodash'
 
-export function calcSalaryCap(players) {
+export function calcSalaryLimits(players) {
   const numTeams = 10
   const salaryCapVariance = 0.02
   const salaries = _.map(players, (p) => p.salary)
-  return _.sum(salaries) / numTeams * (1 + salaryCapVariance)
-}
-
-export function calcSalaryFloor(players) {
-  const numTeams = 10
-  const salaryCapVariance = 0.02
-  const salaries = _.map(players, (p) => p.salary)
-  return _.sum(salaries) / numTeams * (1 - salaryCapVariance)
+  const salaryAvg = _.sum(salaries) / numTeams;
+  
+  return {
+    salaryCap: salaryAvg * (1 + salaryCapVariance),
+    salaryFloor: salaryAvg * (1 - salaryCapVariance),
+  }
 }
 
 export const colors = [
