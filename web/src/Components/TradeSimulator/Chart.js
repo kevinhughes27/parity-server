@@ -14,15 +14,15 @@ export default class Chart extends Component {
         const teamPlayers = _.sortBy(players.filter((p) => p.team === team), (p) => p.salary)
         return teamPlayers.map((player, idx) => {
           const teamSalary = _.sum(_.map(teamPlayers, (p) => p.salary))
-          const overCap = teamSalary > salaryCap
+          const outsideLimits = teamSalary > salaryCap || teamSalary < salaryFloor
 
           return {
             type: 'bar',
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: overCap ? warnColors[idx] : colors[idx],
-            hoverBackgroundColor: overCap ? warnColors[idx] : colors[idx]
+            backgroundColor: outsideLimits ? warnColors[idx] : colors[idx],
+            hoverBackgroundColor: outsideLimits ? warnColors[idx] : colors[idx]
           }
         })
       }))
