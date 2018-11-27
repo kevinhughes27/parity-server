@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
-import { colors, warnColors } from '../helpers'
+import { colors, warnColors, dangerColors } from '../helpers'
 import 'chartjs-plugin-annotation'
 
 export default class Chart extends Component {
@@ -14,15 +14,22 @@ export default class Chart extends Component {
         const teamPlayers = _.sortBy(players.filter((p) => p.team === team), (p) => p.salary)
         return teamPlayers.map((player, idx) => {
           const teamSalary = _.sum(_.map(teamPlayers, (p) => p.salary))
-          const outsideLimits = teamSalary > salaryCap || teamSalary < salaryFloor
+
+          let teamColors = colors;
+
+          if (teamSalary > salaryCap) {
+            teamColors = dangerColors;
+          } else if (teamSalary < salaryFloor) {
+            teamColors = warnColors;
+          }
 
           return {
             type: 'bar',
             label: player.name,
             stack: team,
             data: [player.salary],
-            backgroundColor: outsideLimits ? warnColors[idx] : colors[idx],
-            hoverBackgroundColor: outsideLimits ? warnColors[idx] : colors[idx]
+            backgroundColor: teamColors[idx],
+            hoverBackgroundColor: teamColors[idx]
           }
         })
       }))

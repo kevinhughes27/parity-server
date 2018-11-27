@@ -31,7 +31,8 @@ export default class TeamDashboard extends Component {
     const salaries = _.map(sortedPlayers, (p) => p.salary);
     const teamSalary = _.sum(salaries);
     const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
-    const overCap = teamSalary > salaryCap || teamSalary < salaryFloor;
+    const overCap = teamSalary > salaryCap;
+    const underFloor = teamSalary < salaryFloor;
 
     return (
       <div>
@@ -53,6 +54,7 @@ export default class TeamDashboard extends Component {
             <Chart
               players={sortedPlayers}
               overCap={overCap}
+              underFloor={underFloor}
             />
           </div>
         </div>

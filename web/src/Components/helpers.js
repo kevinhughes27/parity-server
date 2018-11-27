@@ -13,37 +13,49 @@ export function calcSalaryLimits(players) {
 }
 
 export const colors = [
-  '#E5F5E0',
-  '#D7EDD4',
-  '#C9E5C9',
-  '#BBDEBE',
-  '#ADD6B3',
-  '#9FCFA8',
-  '#91C79D',
-  '#84C092',
-  '#76B887',
-  '#68B07C',
-  '#5AA971',
-  '#4CA166',
-  '#3E9A5B',
-  '#309250',
-  '#238B45'
+  '#C8E6C9',
+  '#BDE0BE',
+  '#B2DAB3',
+  '#A7D4A8',
+  '#9CCF9E',
+  '#91C993',
+  '#85C388',
+  '#7ABD7D',
+  '#6FB772',
+  '#64B168',
+  '#59AC5D',
+  '#4EA652',
+  '#43A047'
 ]
 
 export const warnColors = [
   '#FFF9C4',
-  '#FEF6B9',
-  '#FEF4AF',
-  '#FEF1A5',
-  '#FEEF9B',
-  '#FEED90',
-  '#FEEA86',
-  '#FEE87C',
-  '#FDE672',
-  '#FDE368',
-  '#FDE15D',
-  '#FDDF53',
-  '#FDDC49',
-  '#FDDA3F',
+  '#FFF6B8',
+  '#FFF4AC',
+  '#FEF1A0',
+  '#FEEE94',
+  '#FEEB88',
+  '#FEE87D',
+  '#FEE671',
+  '#FEE365',
+  '#FDE059',
+  '#FDDE4D',
+  '#FDDB41',
   '#FDD835'
+]
+
+export const dangerColors = [
+  '#FFCDD2',
+  '#FDC1C5',
+  '#FBB4B8',
+  '#F8A8AB',
+  '#F69C9E',
+  '#F48F91',
+  '#F28384',
+  '#F07776',
+  '#EE6A69',
+  '#EB5E5C',
+  '#E9524F',
+  '#E74542',
+  '#E53935'
 ]
