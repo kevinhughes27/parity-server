@@ -98,7 +98,7 @@ public class UploadGame extends AsyncTask<String, String, String> {
         try {
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(url);
-            StringEntity se = new StringEntity(json);
+            StringEntity se = new StringEntity(json, "UTF-8");
             httpPost.setEntity(se);
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");
