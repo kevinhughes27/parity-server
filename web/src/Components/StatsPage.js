@@ -90,10 +90,10 @@ class StatsProvider extends Component {
     const stats = this.filteredStats(filter, this.state.stats)
 
     return (
-      <div className="container" style={{height: '100%', minHeight: '100%'}}>
+      <div className="container" key={filter} style={{height: '100%', minHeight: '100%'}}>
         { this.props.children
           ? React.cloneElement(this.props.children, {week: week, stats: stats})
-          : <StatsTable key={filter} week={week} stats={stats}/>
+          : <StatsTable week={week} stats={stats}/>
         }
       </div>
     )
