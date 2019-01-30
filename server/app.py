@@ -191,7 +191,9 @@ def build_stats_response(games):
                 team = 'Unknown'
 
             stats[player.name].update({'team': team})
-            stats[player.name].update({'gender': player.gender})
+
+            if player.gender:
+                stats[player.name].update({'gender': player.gender})
 
     # resolve averages
     for player in stats:
