@@ -44,7 +44,7 @@ export default class ComparePlayers extends Component {
     const { stats, playerAName, playerBName } = this.state
     const playerAStats = _.pick(stats[playerAName], STATS)
     const playerBStats = _.pick(stats[playerBName], STATS)
-    const playerNames = _.keys(stats)
+    const playerNames = _.keys(this.props.stats)
 
     return (
       <div>
