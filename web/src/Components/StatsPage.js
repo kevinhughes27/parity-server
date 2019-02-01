@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import TopNav from './TopNav'
 import Loading from './Loading'
 import WeekPicker from './WeekPicker'
+import GenderFilter from './GenderFilter'
 import StatsTable from './StatsTable'
 
 const fetchWeeks = async () => {
@@ -29,7 +30,8 @@ class StatsProvider extends Component {
       loading: true,
       weeks: [],
       week: 0,
-      stats: {}
+      stats: {},
+      filter: '',
     }
   }
 
@@ -42,6 +44,16 @@ class StatsProvider extends Component {
     })()
   }
 
+  filteredStats(filter, stats) {
+    if (filter === '') {
+      return stats;
+    }
+
+    return _.pickBy(stats, (statEntry) => {
+      return statEntry.gender === filter;
+    })
+  }
+
   weekChange (week) {
     (async () => {
       this.setState({week, loading: true})
@@ -50,14 +62,21 @@ class StatsProvider extends Component {
     })()
   }
 
+  genderChange (filter) {
+    this.setState({ filter })
+  }
+
   renderNav () {
     const week = this.state.week
     const weeks = [0, ...this.state.weeks]
     const weekChange = this.weekChange.bind(this)
+    const genderFilter = this.state.filter
+    const genderChange = this.genderChange.bind(this)
 
     return (
       <TopNav>
-        <ul className="right">
+        <ul className="right top-nav">
+          <GenderFilter filter={genderFilter} onChange={genderChange} />
           <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
         </ul>
       </TopNav>
@@ -67,7 +86,8 @@ class StatsProvider extends Component {
   renderMain () {
     if (this.state.loading) return (<Loading />)
 
-    const { week, stats } = this.state
+    const { week, filter } = this.state
+    const stats = this.filteredStats(filter, this.state.stats)
 
     return (
       <div className="container" style={{height: '100%', minHeight: '100%'}}>

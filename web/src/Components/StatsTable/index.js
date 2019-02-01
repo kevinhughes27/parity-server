@@ -40,17 +40,8 @@ columnsMeta.push({
 })
 
 export default class StatsTable extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      week: this.props.week,
-      stats: this.props.stats
-    }
-  }
-
   render () {
-    const stats = this.state.stats
+    const stats = this.props.stats
     const statsArray = _.map(_.keys(stats), (k) => {
       return { name: k, ...stats[k] }
     })

@@ -192,10 +192,14 @@ def build_stats_response(games):
 
             stats[player.name].update({'team': team})
 
+            if player.gender:
+                stats[player.name].update({'gender': player.gender})
+
     # resolve averages
     for player in stats:
         for stat in stats_to_average:
             stats[player][stat] = stats[player][stat] / stats[player]['games_played']
+
         stats[player]['pay'] = round(stats[player]['pay'])
         stats[player]['salary_per_point'] = round(stats[player]['salary_per_point'])
         stats[player].pop('games_played')
