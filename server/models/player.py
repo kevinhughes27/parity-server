@@ -9,6 +9,7 @@ class Player(db.Model):
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     name = db.Column(db.Text)
     gender = db.Column(db.Text)
+    fallback_salary = db.Column(db.Integer)
 
     @property
     def is_male(self):
@@ -55,6 +56,9 @@ class Player(db.Model):
 
     @property
     def _fallback_salary(self):
+        if self.fallback_salary:
+            return self.fallback_salary
+
         if self.team_id:
             team_mates = Player.query.filter_by(team_id=self.team_id).all()
             same_gender_salaries = [p.salary for p in team_mates if p.is_male == self.is_male and p.has_stats]
