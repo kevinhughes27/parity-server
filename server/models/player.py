@@ -59,17 +59,14 @@ class Player(db.Model):
         if self.fallback_salary:
             return self.fallback_salary
 
-        if self.team_id:
-            all_players = Player.query.all()
-            same_gender_salaries = [p.salary for p in all_players if p.is_male == self.is_male and p.has_stats]
+        all_players = Player.query.all()
+        same_gender_salaries = [p.salary for p in all_players if p.is_male == self.is_male and p.has_stats]
 
-            if len(same_gender_salaries) == 0:
-                return 0
-            else:
-                avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
-                return round(avg_salary)
-        else:
+        if len(same_gender_salaries) == 0:
             return 0
+        else:
+            avg_salary = sum(same_gender_salaries) / len(same_gender_salaries)
+            return round(avg_salary)
 
     def to_dict(self):
         return {
