@@ -106,7 +106,7 @@ export default class TradeSimulator extends Component {
 
   render () {
     const { players, playerA, playerB, trades } = this.state
-    const teamNames = _.uniq(players.map(p => p.team));
+    const teamNames = _.sortBy(_.uniq(players.map(p => p.team)));
     const playerNames = players.map(p => p.name)
     const { salaryCap, salaryFloor } = calcSalaryLimits(players);
 
