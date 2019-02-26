@@ -20,7 +20,7 @@ export default class TeamPicker extends Component {
 
   render () {
     const { team, allPlayers, onChange }  = this.props;
-    const teams = _.uniq(allPlayers.map(p => p.team));
+    const teams = _.sortBy(_.uniq(allPlayers.map(p => p.team)));
 
     return (
       <div>
