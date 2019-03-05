@@ -59,7 +59,7 @@ class Player(db.Model):
         if self.fallback_salary:
             return self.fallback_salary
 
-        all_players = Player.query.all()
+        all_players = Player.query.filter(Player.team_id.isnot(None)).all()
         same_gender_salaries = [p.salary for p in all_players if p.is_male == self.is_male and p.has_stats]
 
         if len(same_gender_salaries) == 0:
