@@ -153,7 +153,7 @@ def week(num):
 @cache.cached()
 @app.route('/api/stats')
 def stats():
-    games = Game.query.order_by("week asc")
+    games = Game.query.order_by(Game.week.asc())
     stats = build_stats_response(games)
     return jsonify({"week": 0, "stats": stats})
 
