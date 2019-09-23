@@ -5,7 +5,7 @@ import { Collapsible, CollapsibleItem } from 'react-materialize'
 class SideNav extends Component {
   render () {
     let forumUrl = 'https://www.ocua.ca/forum/33'
-    let podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-2/s-Hka7a'
+    let podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-4/s-KvCFa'
     let srcUrl = 'https://github.com/kevinhughes27/parity-server'
     let volunteerUrl = 'https://docs.google.com/spreadsheets/d/1lunhlXMe5_sefD6Dy9OCreQxMtEi2mzDrmHLhBD7Elo/edit?usp=sharing'
 
