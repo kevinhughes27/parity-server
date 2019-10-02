@@ -16,7 +16,7 @@ class StatsProvider extends Component {
       weeks: [],
       week: 0,
       stats: {},
-      filter: '',
+      filter: 'any',
     }
   }
 
@@ -30,7 +30,7 @@ class StatsProvider extends Component {
   }
 
   filteredStats(filter, stats) {
-    if (filter === '') {
+    if (filter === 'any') {
       return stats;
     }
 
@@ -39,15 +39,17 @@ class StatsProvider extends Component {
     })
   }
 
-  weekChange (week) {
-    (async () => {
+  weekChange (event) {
+    const week = event.target.value
+    return (async () => {
       this.setState({week, loading: true})
       const stats = await fetchStats(week)
       this.setState({ stats, loading: false })
     })()
   }
 
-  genderChange (filter) {
+  genderChange (event) {
+    const filter = event.target.value
     this.setState({ filter })
   }
 
@@ -60,10 +62,8 @@ class StatsProvider extends Component {
 
     return (
       <TopNav>
-        <ul className="right top-nav">
-          <GenderFilter filter={genderFilter} onChange={genderChange} />
-          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
-        </ul>
+        <GenderFilter filter={genderFilter} onChange={genderChange} />
+        <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
       </TopNav>
     )
   }

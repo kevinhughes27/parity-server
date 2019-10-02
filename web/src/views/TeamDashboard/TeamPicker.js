@@ -1,40 +1,38 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
+import MenuItem from '@material-ui/core/MenuItem'
+import Select from '@material-ui/core/Select'
+import { uniq, sortBy } from 'lodash'
+
+const styles = {
+  width: '100%',
+  marginBottom: 10
+}
 
 function renderTeams (teams, change) {
   return teams.map(team => {
     return (
-      <li key={team}>
-       <a href='# ' onClick={() => { change(team) }}>
-          {team}
-        </a>
-      </li>
+      <MenuItem key={team} value={team}>
+        {team}
+      </MenuItem>
     )
   })
 }
 
 export default class TeamPicker extends Component {
-  componentDidMount() {
-    window.$('.dropdown-button').dropdown()
-  }
-
   render () {
     const { team, allPlayers, onChange }  = this.props;
-    const teams = _.sortBy(_.uniq(allPlayers.map(p => p.team)));
+    const teams = sortBy(uniq(allPlayers.map(p => p.team)));
 
     return (
-      <div>
-        <a href='# '
-           className='dropdown-button btn'
-           style={{minWidth: '100%'}}
-           data-activates='team-dropdown'>
-          {team}
-        </a>
-
-        <ul id='team-dropdown' className='dropdown-content'>
-          { renderTeams(teams, onChange) }
-        </ul>
-      </div>
+      <Select
+        value={team}
+        onChange={onChange}
+        variant='filled'
+        margin='dense'
+        style={styles}
+      >
+        { renderTeams(teams, onChange) }
+      </Select>
     )
   }
 }

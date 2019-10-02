@@ -1,29 +1,44 @@
 import React, { Component } from 'react'
-import { Dropdown, NavItem } from 'react-materialize'
-import capitalize from 'capitalize'
+import { withStyles } from '@material-ui/styles'
+import MenuItem from '@material-ui/core/MenuItem'
+import Select from '@material-ui/core/Select'
 
-export default class GenderFilter extends Component {
-  filterOption (display, filter) {
-    return (
-      <NavItem key={filter} onClick={() => { this.props.onChange(filter)}}>
-        {display}
-      </NavItem>
-    )
+const styles = {
+  selectRoot: {
+    color: 'white',
+    fontSize: 14,
+    minWidth: 80
+  },
+  icon: {
+    color: 'white'
   }
+}
 
+class GenderFilter extends Component {
   render () {
-    const { filter } = this.props;
+    const { classes, filter, onChange } = this.props
+
     return (
-      <Dropdown trigger={
-        <a href='# ' className='dropdown-button'>
-          Gender: {capitalize(filter) || 'Any'}
-          <i className='material-icons right'>arrow_drop_down</i>
-        </a>
-      }>
-        {this.filterOption('Any', '')}
-        {this.filterOption('Female', 'female')}
-        {this.filterOption('Male', 'male')}
-      </Dropdown>
+      <div style={{paddingRight: 20}}>
+        <Select
+          value={filter || 'any'}
+          onChange={onChange}
+          classes={{ root: classes.selectRoot }}
+          className={classes.select}
+          disableUnderline
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+            }
+          }}
+        >
+          <MenuItem value='any'>Gender: Any</MenuItem>
+          <MenuItem value={'female'}>Female</MenuItem>
+          <MenuItem value={'male'}>Male</MenuItem>
+        </Select>
+      </div>
     )
   }
 }
+
+export default withStyles(styles)(GenderFilter)

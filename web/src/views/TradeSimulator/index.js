@@ -1,9 +1,10 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
+import { Grid, Container, Button } from '@material-ui/core'
 import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 import { calcSalaryLimits } from '../../helpers'
 import { fetchPlayers } from "../../api"
+import { findIndex, sortBy, uniq, remove, isEqual, map } from 'lodash'
 
 export default class TradeSimulator extends Component {
   constructor (props) {
@@ -33,11 +34,11 @@ export default class TradeSimulator extends Component {
     this.setState({playerB: value})
   }
 
-  applyTrade () {
+  applyTrade = () => {
     const { players, trades, playerA, playerB } = this.state
 
-    const playerAIdx = _.findIndex(players, (p) => p.name === playerA)
-    const playerBIdx = _.findIndex(players, (p) => p.name === playerB)
+    const playerAIdx = findIndex(players, (p) => p.name === playerA)
+    const playerBIdx = findIndex(players, (p) => p.name === playerB)
 
     const teamA = players[playerAIdx]['team']
     const teamB = players[playerBIdx]['team']
@@ -64,8 +65,8 @@ export default class TradeSimulator extends Component {
     const playerA = trade.playerA.name
     const playerB = trade.playerB.name
 
-    const playerAIdx = _.findIndex(players, (p) => p.name === playerA)
-    const playerBIdx = _.findIndex(players, (p) => p.name === playerB)
+    const playerAIdx = findIndex(players, (p) => p.name === playerA)
+    const playerBIdx = findIndex(players, (p) => p.name === playerB)
 
     const teamA = players[playerAIdx]['team']
     const teamB = players[playerBIdx]['team']
@@ -73,77 +74,75 @@ export default class TradeSimulator extends Component {
     players[playerAIdx]['team'] = teamB
     players[playerBIdx]['team'] = teamA
 
-    _.remove(trades, (t) => _.isEqual(t, trade))
+    remove(trades, (t) => isEqual(t, trade))
 
     this.setState({players: players, trades: trades})
   }
 
   renderTrades (trades: Array<any>) {
-    return _.map(trades, (trade, idx) => {
+    return map(trades, (trade, idx) => {
       return (
-        <div className="row" style={{paddingLeft: 10}} key={idx}>
-          <div className="col m3">
+        <Grid key={idx} container spacing={3}>
+           <Grid item xs={3}>
             <p>{trade.playerA.team}</p>
             <p>{trade.playerA.name}</p>
-          </div>
+          </Grid>
 
-          <div className="col m1">
+           <Grid item xs={1}>
             <i className="material-icons" style={{paddingTop: 40}}>swap_horiz</i>
-          </div>
+          </Grid>
 
-          <div className="col m3">
+           <Grid item xs={3}>
             <p>{trade.playerB.team}</p>
             <p>{trade.playerB.name}</p>
-          </div>
+          </Grid>
 
-          <div className="col m1">
+           <Grid item xs={1}>
             <a href='# ' style={{cursor: 'pointer'}} onClick={() => {this.deleteTrade(trade) }}>
               <i className="material-icons" style={{paddingTop: 40}}>delete</i>
             </a>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       )
     })
   }
 
   render () {
     const { players, playerA, playerB, trades } = this.state
-    const teamNames = _.sortBy(_.uniq(players.map(p => p.team)));
+    const teamNames = sortBy(uniq(players.map(p => p.team)));
     const playerNames = players.map(p => p.name)
     const { salaryCap, salaryFloor } = calcSalaryLimits(players);
 
     return (
-      <div>
-        <div className="row" style={{paddingTop: 20}}>
-          <div className="col m3">
+      <Container fixed>
+        <Grid container spacing={3} justify="flex-start" style={{paddingTop: 14}}>
+          <Grid item xs={3}>
             <PlayerSelect
               value={playerA}
               players={playerNames}
               onChange={(event) => this.playerAChanged(event)}
             />
-          </div>
-          <div className="col m1 center">
+          </Grid>
+          <Grid item xs={1}>
             <i className="material-icons" style={{paddingTop: 10}}>swap_horiz</i>
-          </div>
-          <div className="col m3">
+          </Grid>
+          <Grid item xs={3}>
             <PlayerSelect
               value={playerB}
               players={playerNames}
               onChange={(event) => this.playerBChanged(event)}
             />
-          </div>
-          <div className="col m1">
-            <a href='# ' className="btn" onClick={() => { this.applyTrade() } }>
+          </Grid>
+          <Grid item xs={1}>
+            <Button variant="contained" color="secondary" onClick={this.applyTrade}>
               Trade
-            </a>
-          </div>
-        </div>
+            </Button>
+          </Grid>
+        </Grid>
 
-        <div className="row">
-          {this.renderTrades(trades)}
-        </div>
+        {this.renderTrades(trades)}
 
-        <div className="row" style={{paddingTop: 10}}>
+        <div style={{paddingTop: 10}}>
           <Chart
             players={players}
             teamNames={teamNames}
@@ -151,7 +150,7 @@ export default class TradeSimulator extends Component {
             salaryFloor={salaryFloor}
           />
         </div>
-      </div>
+      </Container>
     )
   }
 }

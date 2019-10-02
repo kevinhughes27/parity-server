@@ -29,36 +29,34 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
-        <div>
-          <Route exact path="/games" component={GamesList} />
-          <Route path="/games/:gameId" component={Game} />
+        <Route exact path="/games" component={GamesList} />
+        <Route path="/games/:gameId" component={Game} />
 
-          <Route exact path="/" component={StatsPage} />
+        <Route exact path="/" component={StatsPage} />
 
-          <Route path="/leaderboards">
-            <StatsPage>
-              <Leaderboards />
-            </StatsPage>
-          </Route>
+        <Route path="/leaderboards">
+          <StatsPage>
+            <Leaderboards />
+          </StatsPage>
+        </Route>
 
-          <Route path="/compare_players">
-            <StatsPage>
-              <ComparePlayers />
-            </StatsPage>
-          </Route>
+        <Route path="/compare_players">
+          <StatsPage>
+            <ComparePlayers />
+          </StatsPage>
+        </Route>
 
-          <Route path="/team_dashboard">
-            <SalaryPage>
-              <TeamDashboard />
-            </SalaryPage>
-          </Route>
+        <Route path="/team_dashboard">
+          <SalaryPage>
+            <TeamDashboard />
+          </SalaryPage>
+        </Route>
 
-          <Route path="/trade_simulator">
-            <SalaryPage>
-              <TradeSimulator />
-            </SalaryPage>
-          </Route>
-        </div>
+        <Route path="/trade_simulator">
+          <SalaryPage>
+            <TradeSimulator />
+          </SalaryPage>
+        </Route>
       </Router>
     )
   }

@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
-import { fetchGame } from "../../api"
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import Team from './Team'
 import Points from './Points'
+import { fetchGame } from "../../api"
 
 export default class Game extends Component {
   constructor(props) {
@@ -32,45 +37,40 @@ export default class Game extends Component {
 
     const homeWon = game.homeScore > game.awayScore
     const homeJsx = homeWon
-      ? <h5><i className="fa fa-star" /> {game.homeTeam}</h5>
-      : <h5>{game.homeTeam}</h5>
+      ? <span><FontAwesomeIcon icon={faStar} /> {game.homeTeam}</span>
+      : <span>{game.homeTeam}</span>
 
     const awayWon = game.awayScore > game.homeScore
     const awayJsx = awayWon
-      ? <h5><i className="fa fa-star" /> {game.awayTeam}</h5>
-      : <h5>{game.awayTeam}</h5>
+      ? <span><FontAwesomeIcon icon={faStar} /> {game.awayTeam}</span>
+      : <span>{game.awayTeam}</span>
 
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col s6'>
-            {homeJsx}
-          </div>
-          <div className='col s6'>
-            {awayJsx}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col s6'>
+      <Container style={{marginTop: 10}}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h5" gutterBottom={true}>
+              {homeJsx}
+            </Typography>
             <Team
               score={game.homeScore}
               winner={game.homeScore > game.awayScore}
               players={game.homeRoster}
               game={game} />
-          </div>
-          <div className='col s6'>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h5" gutterBottom={true}>
+              {awayJsx}
+            </Typography>
             <Team
               score={game.awayScore}
               winner={game.awayScore > game.homeScore}
               players={game.awayRoster}
               game={game} />
-          </div>
-        </div>
-        <div className='row'>
-          <h5>Points</h5>
-          <Points game={game} />
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+        <Points game={game} />
+      </Container>
     )
   }
 

@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import ListItem from '@material-ui/core/ListItem'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrophy, faShieldAlt, faLevelDownAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default class Event extends Component {
   render () {
@@ -6,49 +9,49 @@ export default class Event extends Component {
 
     if (event.type === 'PULL') {
       return (
-        <li className="collection-item">
+        <ListItem className="collection-item">
           {event.firstActor} pulled
-        </li>
+        </ListItem>
       )
     }
 
     if (event.type === 'PASS') {
       return (
-        <li className="collection-item">
+        <ListItem className="collection-item">
           {event.firstActor} passed to {event.secondActor}
-        </li>
+        </ListItem>
       )
     }
 
     if (event.type === 'POINT') {
       return (
-        <li className="collection-item">
-          <i className='fa fa-trophy'/>  {event.firstActor} scored!
-        </li>
+        <ListItem className="collection-item">
+          <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {event.firstActor} scored!
+        </ListItem>
       )
     }
 
     if (event.type === 'DEFENSE') {
       return (
-        <li className="collection-item">
-          <i className='fa fa-shield' /> {event.firstActor} got a block
-        </li>
+        <ListItem className="collection-item">
+          <FontAwesomeIcon icon={faShieldAlt} style={{marginRight: 5}}/> {event.firstActor} got a block
+        </ListItem>
       )
     }
 
     if (event.type === 'THROWAWAY') {
       return (
-        <li className="collection-item">
-          <i className='fa fa-level-down'/> {event.firstActor} threw it away
-        </li>
+        <ListItem className="collection-item">
+          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} threw it away
+        </ListItem>
       )
     }
 
     if (event.type === 'DROP') {
       return (
-        <li className="collection-item">
-          <i className='fa fa-level-down'/> {event.firstActor} dropped it
-        </li>
+        <ListItem className="collection-item">
+          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} dropped it
+        </ListItem>
       )
     }
   }
