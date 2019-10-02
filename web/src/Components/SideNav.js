@@ -31,19 +31,25 @@ class SideNav extends Component {
 
         <li><div className='divider'></div></li>
 
-        <li><a href={volunteerUrl} target='_blank'>Volunteer</a></li>
-        <li><a href={forumUrl} target='_blank'>Forum</a></li>
-        <li><a href={podcastUrl} target='_blank'>Podcast</a></li>
+        <li><a href={volunteerUrl} target='_blank' rel='noopener noreferrer'>Volunteer</a></li>
+        <li><a href={forumUrl} target='_blank' rel='noopener noreferrer'>Forum</a></li>
+        <li><a href={podcastUrl} target='_blank' rel='noopener noreferrer'>Podcast</a></li>
 
         <li>
           <Collapsible>
             <CollapsibleItem header="Spreadsheets">
-              {spreadsheets.map(sheet => <li key={sheet.name}><a href={sheet.url} target="_blank">{sheet.name}</a></li>)}
+              {spreadsheets.map(sheet => {
+                return (
+                  <li key={sheet.name}>
+                    <a href={sheet.url} target="_blank" rel='noopener noreferrer'>{sheet.name}</a>
+                  </li>
+                )
+              })}
             </CollapsibleItem>
           </Collapsible>
         </li>
 
-        <li><a href={srcUrl} target='_blank'>Source Code</a></li>
+        <li><a href={srcUrl} target='_blank' rel='noopener noreferrer'>Source Code</a></li>
       </div>
     )
   }

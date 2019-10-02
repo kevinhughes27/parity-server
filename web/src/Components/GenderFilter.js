@@ -15,7 +15,7 @@ export default class GenderFilter extends Component {
     const { filter } = this.props;
     return (
       <Dropdown trigger={
-        <a className='dropdown-button'>
+        <a href='# ' className='dropdown-button'>
           Gender: {capitalize(filter) || 'Any'}
           <i className='material-icons right'>arrow_drop_down</i>
         </a>
