@@ -15,7 +15,7 @@ export default class GamesList extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('/api/games')
       .then(response => response.json())
       .then(games => { this.setState({loading: false, games: games}) })

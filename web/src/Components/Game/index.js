@@ -15,7 +15,7 @@ export default class Game extends Component {
     }
   }
 
-  componentWillMount () {
+  componentDidMount () {
     const gameId = this.props.params.gameId
 
     fetch(`/api/games/${gameId}`)

@@ -17,7 +17,7 @@ export default class TradeSimulator extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('/api/players')
       .then(response => response.json())
       .then(players => { this.setState({loading: false, players: players}) })
