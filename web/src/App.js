@@ -1,5 +1,6 @@
 import React from 'react'
-import { browserHistory, Router, Route } from 'react-router'
+import { Router, Route } from 'react-router'
+import { createBrowserHistory } from 'history';
 
 import GamesList from './Components/GamesList'
 import Game from './Components/Game'
@@ -22,20 +23,42 @@ function logPageView () {
   }
 }
 
+const browserHistory = createBrowserHistory();
+
 class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
-        <Route path="/games" component={GamesList} />
-        <Route path="/games/:gameId" component={Game} />
-        <Route path="/" component={StatsPage}>
-          <Route path="/leaderboards" component={Leaderboards} />
-          <Route path="/compare_players" component={ComparePlayers} />
-        </Route>
-        <Route component={SalaryPage} >
-          <Route path="/team_dashboard" component={TeamDashboard} />
-          <Route path="/trade_simulator" component={TradeSimulator} />
-        </Route>
+        <div>
+          <Route exact path="/games" component={GamesList} />
+          <Route path="/games/:gameId" component={Game} />
+
+          <Route exact path="/" component={StatsPage} />
+
+          <Route path="/leaderboards">
+            <StatsPage>
+              <Leaderboards />
+            </StatsPage>
+          </Route>
+
+          <Route path="/compare_players">
+            <StatsPage>
+              <ComparePlayers />
+            </StatsPage>
+          </Route>
+
+          <Route path="/team_dashboard">
+            <SalaryPage>
+              <TeamDashboard />
+            </SalaryPage>
+          </Route>
+
+          <Route path="/trade_simulator">
+            <SalaryPage>
+              <TradeSimulator />
+            </SalaryPage>
+          </Route>
+        </div>
       </Router>
     )
   }
