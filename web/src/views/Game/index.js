@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TopNav from '../TopNav'
-import Loading from '../Loading'
+import TopNav from '../../layout/TopNav'
+import Loading from '../../components/Loading'
 
 import Team from './Team'
 import Points from './Points'

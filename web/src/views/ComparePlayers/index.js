@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
-import PlayerSelect from '../PlayerSelect'
+import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 
 const STATS = [

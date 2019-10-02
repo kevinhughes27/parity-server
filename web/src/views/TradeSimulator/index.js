@@ -1,8 +1,8 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import PlayerSelect from '../PlayerSelect'
+import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
-import { calcSalaryLimits } from '../helpers'
+import { calcSalaryLimits } from '../../helpers'
 
 export default class TradeSimulator extends Component {
   constructor (props) {

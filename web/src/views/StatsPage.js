@@ -1,11 +1,11 @@
 import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
-import TopNav from './TopNav'
-import Loading from './Loading'
-import WeekPicker from './WeekPicker'
-import GenderFilter from './GenderFilter'
-import StatsTable from './StatsTable'
+import TopNav from '../layout/TopNav'
+import Loading from '../components/Loading'
+import WeekPicker from '../components/WeekPicker'
+import GenderFilter from '../components/GenderFilter'
+import StatsTable from '../components/StatsTable'
 
 const fetchWeeks = async () => {
   const response = await fetch('/api/weeks')

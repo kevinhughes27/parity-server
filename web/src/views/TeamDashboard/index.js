@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
-import { calcSalaryLimits } from '../helpers'
+import { calcSalaryLimits } from '../../helpers'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
