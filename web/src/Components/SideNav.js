@@ -38,7 +38,7 @@ class SideNav extends Component {
         <li>
           <Collapsible>
             <CollapsibleItem header="Spreadsheets">
-              {spreadsheets.map(sheet => <li><a href={sheet.url} target="_blank">{sheet.name}</a></li>)}
+              {spreadsheets.map(sheet => <li key={sheet.name}><a href={sheet.url} target="_blank">{sheet.name}</a></li>)}
             </CollapsibleItem>
           </Collapsible>
         </li>
