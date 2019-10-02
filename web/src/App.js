@@ -2,16 +2,16 @@ import React from 'react'
 import { Router, Route } from 'react-router'
 import { createBrowserHistory } from 'history';
 
-import GamesList from './Components/GamesList'
-import Game from './Components/Game'
+import GamesList from './views/GamesList'
+import Game from './views/Game'
 
-import StatsPage from './Components/StatsPage'
-import Leaderboards from './Components/Leaderboards'
-import ComparePlayers from './Components/ComparePlayers'
+import StatsPage from './views/StatsPage'
+import Leaderboards from './views/Leaderboards'
+import ComparePlayers from './views/ComparePlayers'
 
-import SalaryPage from './Components/SalaryPage'
-import TeamDashboard from './Components/TeamDashboard'
-import TradeSimulator from './Components/TradeSimulator'
+import SalaryPage from './views/SalaryPage'
+import TeamDashboard from './views/TeamDashboard'
+import TradeSimulator from './views/TradeSimulator'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')

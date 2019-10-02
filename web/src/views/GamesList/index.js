@@ -2,8 +2,8 @@ import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import TopNav from '../TopNav'
-import Loading from '../Loading'
+import TopNav from '../../layout/TopNav'
+import Loading from '../../components/Loading'
 
 export default class GamesList extends Component {
   constructor(props) {

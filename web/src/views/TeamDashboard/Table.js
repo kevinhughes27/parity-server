@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import MoneyCell from '../MoneyCell'
+import MoneyCell from '../../components/MoneyCell'
 
 export default class Table extends Component {
   render () {
