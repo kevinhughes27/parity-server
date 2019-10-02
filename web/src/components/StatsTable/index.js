@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import Griddle from 'griddle-react'
+// import Griddle from 'griddle-react'
 import MoneyCell from '../MoneyCell'
 import SearchBar from './SearchBar'
 import capitalize from 'capitalize'
@@ -46,19 +46,21 @@ export default class StatsTable extends Component {
       return { name: k, ...stats[k] }
     })
 
-    return (
-      <Griddle
-        results={statsArray}
-        resultsPerPage={statsArray.length}
-        tableClassName='highlight responsive-table'
-        columns={columns}
-        columnMetadata={columnsMeta}
-        showFilter={true}
-        showPager={false}
-        useGriddleStyles={false}
-        useCustomFilterComponent={true}
-        customFilterComponent={SearchBar}
-      />
-    )
+    return <div>Stats</div>
+
+    // return (
+    //   <Griddle
+    //     results={statsArray}
+    //     resultsPerPage={statsArray.length}
+    //     tableClassName='highlight responsive-table'
+    //     columns={columns}
+    //     columnMetadata={columnsMeta}
+    //     showFilter={true}
+    //     showPager={false}
+    //     useGriddleStyles={false}
+    //     useCustomFilterComponent={true}
+    //     customFilterComponent={SearchBar}
+    //   />
+    // )
   }
 }
