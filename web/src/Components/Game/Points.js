@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import timediff from 'timediff'
+import differenceInMilliseconds from 'date-fns/differenceInMilliseconds'
 import Event from './Event'
 
 export default class Points extends Component {
@@ -67,7 +67,10 @@ export default class Points extends Component {
       ? `${thrower} to ${receiver}`
       : receiver
 
-    const duration = timediff(firstEvent.timestamp, lastEvent.timestamp, 'mS')
+    const duration = differenceInMilliseconds(
+      new Date(firstEvent.timestamp),
+      new Date(lastEvent.timestamp)
+    )
     const durationCopy = `(${duration.minutes}:${duration.seconds} minutes)`
 
     if (homeScored) {

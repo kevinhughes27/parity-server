@@ -16,7 +16,7 @@ export default class Game extends Component {
   }
 
   componentDidMount () {
-    const gameId = this.props.params.gameId
+    const gameId = this.props.match.params.gameId
 
     fetch(`/api/games/${gameId}`)
       .then(response => response.json())
