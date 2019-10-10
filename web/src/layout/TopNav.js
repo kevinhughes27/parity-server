@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { TopNav as styles } from '../styles';
+import { withStyles } from '@material-ui/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -20,17 +22,20 @@ class TopNav extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
+
     return (
       <>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.bar}>
           <Toolbar>
             <IconButton
               id="side-bar"
-              onClick={this.props.openNav}
+              className={classes.menuButton}
+              onClick={this.openNav}
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6">
+            <Typography variant="h5" className={classes.title}>
               Parity 2.0
             </Typography>
             <div>
@@ -48,4 +53,4 @@ class TopNav extends React.Component {
   }
 }
 
-export default TopNav;
+export default withStyles(styles)(TopNav);
