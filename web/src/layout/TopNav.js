@@ -38,9 +38,7 @@ class TopNav extends React.Component {
             <Typography variant="h5" className={classes.title}>
               Parity 2.0
             </Typography>
-            <div>
-              {this.props.children}
-            </div>
+            {this.props.children}
           </Toolbar>
         </AppBar>
         <SideNav

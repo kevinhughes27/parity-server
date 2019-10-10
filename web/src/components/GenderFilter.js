@@ -1,25 +1,44 @@
 import React, { Component } from 'react'
-import InputLabel from '@material-ui/core/InputLabel'
+import { withStyles } from '@material-ui/styles'
 import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 
-export default class GenderFilter extends Component {
+const styles = {
+  selectRoot: {
+    color: 'white',
+    fontSize: 14,
+    minWidth: 80
+  },
+  icon: {
+    color: 'white'
+  }
+}
+
+class GenderFilter extends Component {
   render () {
-    const { filter, onChange } = this.props
+    const { classes, filter, onChange } = this.props
 
     return (
-      <FormControl>
-        <InputLabel>Gender: </InputLabel>
+      <div style={{paddingRight: 20}}>
         <Select
           value={filter || 'any'}
           onChange={onChange}
+          classes={{ root: classes.selectRoot }}
+          className={classes.select}
+          disableUnderline
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+            }
+          }}
         >
-          <MenuItem value={''}>Any</MenuItem>
+          <MenuItem value='any'>Gender: Any</MenuItem>
           <MenuItem value={'female'}>Female</MenuItem>
           <MenuItem value={'male'}>Male</MenuItem>
         </Select>
-      </FormControl>
+      </div>
     )
   }
 }
+
+export default withStyles(styles)(GenderFilter)

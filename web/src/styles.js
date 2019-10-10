@@ -35,7 +35,8 @@ const TopNav = {
   },
   title: {
     flex: 1,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
   },
   menuButton: {
     color: 'white',

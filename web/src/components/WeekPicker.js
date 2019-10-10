@@ -1,8 +1,19 @@
-import _map from 'lodash/map'
 import React, { Component } from 'react'
+import { withStyles } from '@material-ui/styles'
 import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import _map from 'lodash/map'
+
+const styles = {
+  selectRoot: {
+    color: 'white',
+    fontSize: 14,
+    minWidth: 80
+  },
+  icon: {
+    color: 'white'
+  }
+}
 
 class WeekPicker extends Component {
   weekText (num) {
@@ -24,19 +35,24 @@ class WeekPicker extends Component {
   }
 
   render () {
-    const { week, weeks, onChange } = this.props
+    const { classes, week, weeks, onChange } = this.props
 
     return (
-      <FormControl>
         <Select
           value={week}
           onChange={onChange}
+          classes={{ root: classes.selectRoot }}
+          disableUnderline
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+            }
+          }}
         >
           {this.renderWeeks(weeks)}
         </Select>
-      </FormControl>
     )
   }
 }
 
-export default WeekPicker
+export default withStyles(styles)(WeekPicker)
