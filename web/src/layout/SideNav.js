@@ -10,14 +10,7 @@ class SideNav extends React.Component {
         onClose={this.props.handleClose}
         onOpen={this.props.handleOpen}
       >
-        <div
-          tabIndex={0}
-          role="button"
-          onClick={this.props.handleClose}
-          onKeyDown={this.props.handleClose}
-        >
-          <NavItems />
-        </div>
+        <NavItems />
       </SwipeableDrawer>
     );
   }
