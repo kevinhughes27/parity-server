@@ -22,7 +22,7 @@ class Loading extends Component {
       <div className={classes.container}>
         <CircularProgress
           className={classes.spinner}
-          color="primary"
+          color="secondary"
           size={70}
           thickness={2}
         />

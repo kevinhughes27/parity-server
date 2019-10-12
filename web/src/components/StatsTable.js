@@ -46,12 +46,17 @@ export default class StatsTable extends Component {
       <MaterialTable
         columns={columnsMeta}
         data={statsArray}
+        style={{
+          maxWidth: '98vw',
+          margin: 'auto',
+          marginTop: 20
+        }}
         options={{
           showTitle: false,
           search: true,
           searchFieldAlignment: 'left',
           searchFieldStyle: {
-            width: '96vw'
+            width: '95vw',
           },
           sorting: true,
           paging: false
