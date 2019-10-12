@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import Container from '@material-ui/core/Container'
 import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 import { calcSalaryLimits } from '../../helpers'
@@ -111,7 +112,7 @@ export default class TradeSimulator extends Component {
     const { salaryCap, salaryFloor } = calcSalaryLimits(players);
 
     return (
-      <div>
+      <Container fixed>
         <div className="row" style={{paddingTop: 20}}>
           <div className="col m3">
             <PlayerSelect
@@ -149,7 +150,7 @@ export default class TradeSimulator extends Component {
             salaryFloor={salaryFloor}
           />
         </div>
-      </div>
+      </Container>
     )
   }
 }

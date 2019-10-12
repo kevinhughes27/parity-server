@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import _map from 'lodash/map'
+import { map } from 'lodash'
 
 const styles = {
   selectRoot: {
@@ -25,7 +25,7 @@ class WeekPicker extends Component {
   }
 
   renderWeeks (weeks) {
-    return _map(weeks, (week) => {
+    return map(weeks, (week) => {
       return (
         <MenuItem key={week} value={week}>
           {this.weekText(week)}

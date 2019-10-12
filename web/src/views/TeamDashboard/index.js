@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
+import Container from '@material-ui/core/Container'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
@@ -19,7 +20,8 @@ export default class TeamDashboard extends Component {
     this.teamChanged = this.teamChanged.bind(this)
   }
 
-  teamChanged (teamName) {
+  teamChanged (event) {
+    const teamName = event.target.value
     ls.set('team', teamName)
     this.setState({team: teamName})
   }
@@ -35,9 +37,9 @@ export default class TeamDashboard extends Component {
     const underFloor = teamSalary < salaryFloor;
 
     return (
-      <div>
-        <div className="row" style={{paddingTop: 20}}>
-          <div className="col m6">
+      <Container fixed>
+        <div style={{display: 'flex', paddingTop: 20, height: '100%'}}>
+          <div style={{flexGrow: 1}}>
             <TeamPicker
               allPlayers={allPlayers}
               team={team}
@@ -50,7 +52,7 @@ export default class TeamDashboard extends Component {
               salaryFloor={salaryFloor}
             />
           </div>
-          <div className="col m6">
+          <div style={{flexGrow: 1}}>
             <Chart
               players={sortedPlayers}
               overCap={overCap}
@@ -58,7 +60,7 @@ export default class TeamDashboard extends Component {
             />
           </div>
         </div>
-      </div>
+      </Container>
     )
   }
 }
