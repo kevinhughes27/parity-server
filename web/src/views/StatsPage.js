@@ -31,7 +31,7 @@ class StatsProvider extends Component {
       weeks: [],
       week: 0,
       stats: {},
-      filter: '',
+      filter: 'any',
     }
   }
 
@@ -45,7 +45,7 @@ class StatsProvider extends Component {
   }
 
   filteredStats(filter, stats) {
-    if (filter === '') {
+    if (filter === 'any') {
       return stats;
     }
 
