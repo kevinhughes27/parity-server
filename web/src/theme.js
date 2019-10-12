@@ -29,23 +29,7 @@ function withTheme(Component) {
   return WithTheme;
 }
 
-const TopNav = {
-  bar: {
-    height: 64
-  },
-  title: {
-    flex: 1,
-    color: 'white',
-    textAlign: 'center'
-  },
-  menuButton: {
-    color: 'white',
-    marginLeft: -12,
-    marginRight: 20
-  }
-};
 
 export {
-  withTheme,
-  TopNav
+  withTheme
 }
