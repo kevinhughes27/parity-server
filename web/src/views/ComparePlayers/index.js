@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
+import Container from '@material-ui/core/Container'
 import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 
@@ -47,7 +48,7 @@ export default class ComparePlayers extends Component {
     const playerNames = _.keys(this.props.stats)
 
     return (
-      <div>
+      <Container fixed>
         <div style={{paddingTop: '20px'}}>
           <Chart
             labels={STATS}
@@ -57,24 +58,20 @@ export default class ComparePlayers extends Component {
             playerBStats={playerBStats}
           />
         </div>
-        <div className="row">
-          <div className="col m2 s4">
-            <PlayerSelect
-              value={playerAName}
-              players={playerNames}
-              onChange={(event) => this.playerAChanged(event)}
-            />
-          </div>
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <PlayerSelect
+            value={playerAName}
+            players={playerNames}
+            onChange={(event) => this.playerAChanged(event)}
+          />
 
-          <div className="col m2 s4 right">
-            <PlayerSelect
-              value={playerBName}
-              players={playerNames}
-              onChange={(event) => this.playerBChanged(event)}
-            />
-          </div>
+          <PlayerSelect
+            value={playerBName}
+            players={playerNames}
+            onChange={(event) => this.playerBChanged(event)}
+          />
         </div>
-      </div>
+      </Container>
     )
   }
 }

@@ -4,10 +4,6 @@ import differenceInMilliseconds from 'date-fns/differenceInMilliseconds'
 import Event from './Event'
 
 export default class Points extends Component {
-  componentDidMount () {
-    window.$('.collapsible').collapsible()
-  }
-
   render () {
     const game = this.props.game
 
