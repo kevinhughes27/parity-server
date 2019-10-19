@@ -9,7 +9,6 @@ export default class Chart extends Component {
     const { players, teamNames, salaryCap, salaryFloor } = this.props
 
     const data = {
-      labels: teamNames,
       datasets: flatten(teamNames.map(team => {
         const teamPlayers = sortBy(players.filter((p) => p.team === team), (p) => p.salary)
         return teamPlayers.map((player, idx) => {
@@ -50,13 +49,14 @@ export default class Chart extends Component {
       scales: {
         xAxes: [{
           barPercentage: 0.6,
-          categoryPercentage: 1.0,
-          ticks: {
-            autoSkip: false
-          }
+          categoryPercentage: 1.0
         }],
         yAxes: [{
-          stacked: true
+          stacked: true,
+          ticks: {
+            min: 0,
+            suggestedMax: Math.round(salaryCap * 1.1)
+          }
         }]
       },
       animation: {
