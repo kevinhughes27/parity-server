@@ -1,8 +1,8 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
 import { colors, warnColors, dangerColors } from '../../helpers'
 import 'chartjs-plugin-annotation'
+import { flatten, sortBy, sum, map } from 'lodash'
 
 export default class Chart extends Component {
   render () {
@@ -10,10 +10,10 @@ export default class Chart extends Component {
 
     const data = {
       labels: teamNames,
-      datasets: _.flatten(teamNames.map(team => {
-        const teamPlayers = _.sortBy(players.filter((p) => p.team === team), (p) => p.salary)
+      datasets: flatten(teamNames.map(team => {
+        const teamPlayers = sortBy(players.filter((p) => p.team === team), (p) => p.salary)
         return teamPlayers.map((player, idx) => {
-          const teamSalary = _.sum(_.map(teamPlayers, (p) => p.salary))
+          const teamSalary = sum(map(teamPlayers, (p) => p.salary))
 
           let teamColors = colors;
 
