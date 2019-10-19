@@ -3,7 +3,7 @@ import json
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    league = db.Column(db.Text)
+    league = db.Column(db.Text, nullable=False)
     week = db.Column(db.Integer)
     home_team = db.Column(db.Text)
     away_team = db.Column(db.Text)

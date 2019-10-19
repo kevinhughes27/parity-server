@@ -9,6 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
 import 'whatwg-fetch'
+import { league } from "../../helpers"
 
 const styles = {
   list: {
@@ -32,7 +33,7 @@ class GamesList extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/games')
+    fetch(`/api/${league}/games`)
       .then(response => response.json())
       .then(games => { this.setState({loading: false, games: games}) })
   }

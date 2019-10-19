@@ -4,6 +4,7 @@ import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 import { calcSalaryLimits } from '../../helpers'
 import { findIndex, sortBy, uniq, remove, isEqual, map } from 'lodash'
+import { league } from "../../helpers"
 
 export default class TradeSimulator extends Component {
   constructor (props) {
@@ -19,7 +20,7 @@ export default class TradeSimulator extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/players')
+    fetch(`/api/${league}/players`)
       .then(response => response.json())
       .then(players => { this.setState({loading: false, players: players}) })
   }

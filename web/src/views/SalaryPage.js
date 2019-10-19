@@ -2,9 +2,10 @@ import 'whatwg-fetch'
 import React, { Component } from 'react'
 import TopNav from '../layout/TopNav'
 import Loading from '../components/Loading'
+import { league } from "../helpers"
 
 const fetchPlayers = async () => {
-  const response = await fetch('/api/players')
+  const response = await fetch(`/api/${league}/players`)
   return await response.json()
 }
 

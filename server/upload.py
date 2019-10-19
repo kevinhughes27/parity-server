@@ -1,7 +1,8 @@
 from models import db, Stats, Player
 
 class StatsCalculator:
-    def __init__(self, points, game_id=-1):
+    def __init__(self, league, game_id, points):
+        self.league = league
         self.game_id = game_id
         self.points = points
         self.stats = {}
@@ -68,17 +69,17 @@ class StatsCalculator:
         player = self.get_or_create_player(player_name)
 
         if player.name not in self.stats:
-            self.stats[player.name] = Stats(self.game_id, player.id)
+            self.stats[player.name] = Stats(self.league, self.game_id, player.id)
 
         self.stats[player.name].count_stat(stat)
 
     #TODO the create portion of this can be removed after we get scraping working
     def get_or_create_player(self, player_name):
-        instance = Player.query.filter_by(name=player_name).first()
+        instance = Player.query.filter_by(name=player_name, league=self.league).first()
         if instance:
             return instance
         else:
-            instance = Player(name=player_name)
+            instance = Player(name=player_name, league=self.league)
             db.session.add(instance)
             db.session.commit()
             return instance

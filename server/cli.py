@@ -11,6 +11,7 @@ from flask_caching import Cache
 from app import app
 from models import db, Team, Player
 
+league = "ocua_18-19"
 data_folder = "data/ocua_18-19/"
 
 @click.group()
@@ -176,7 +177,7 @@ class ZuluruSync:
             print('Found Team: ', name)
         else:
             print('Creating Team: ', name)
-            instance = Team(zuluru_id=zuluru_id)
+            instance = Team(league=league, zuluru_id=zuluru_id)
 
         instance.name = name
 

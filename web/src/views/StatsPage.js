@@ -6,15 +6,16 @@ import Loading from '../components/Loading'
 import WeekPicker from '../components/WeekPicker'
 import GenderFilter from '../components/GenderFilter'
 import StatsTable from '../components/StatsTable'
+import { league } from "../helpers"
 
 const fetchWeeks = async () => {
-  const response = await fetch('/api/weeks')
+  const response = await fetch(`/api/${league}/weeks`)
   return await response.json()
 }
 
 const fetchStats = async (weekNum) => {
-  let url = `/api/weeks/${weekNum}`
-  if (weekNum === 0) url = '/api/stats'
+  let url = `/api/${league}/weeks/${weekNum}`
+  if (weekNum === 0) url = `/api/${league}/stats`
 
   const response = await fetch(url)
   const json = await response.json()
