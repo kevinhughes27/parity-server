@@ -14,6 +14,10 @@ const styles = {
   list: {
     maxWidth: 800,
     margin: 'auto'
+  },
+  listItem: {
+    color: "#26a69a",
+    textDecoration: "none"
   }
 }
 
@@ -37,19 +41,19 @@ class GamesList extends Component {
     const gamesByWeek = groupBy(games, game => game.week)
 
     return (
-      <div>
+      <>
         { Object.keys(gamesByWeek).map(week => {
           const games = gamesByWeek[week]
           return this.renderGameGroup(week, games)
         })}
-      </div>
+      </>
     )
   }
 
   renderGameGroup (week, games) {
     return (
       <>
-        <ListItem>
+        <ListItem key={week} divider>
           <ListItemText>
             Week {week}
           </ListItemText>
@@ -61,8 +65,8 @@ class GamesList extends Component {
 
   renderGame (game) {
     return (
-      <NavLink key={game.id} to={`/games/${game.id}`}>
-        <ListItem button>
+      <NavLink key={game.id} to={`/games/${game.id}`} style={styles.listItem}>
+        <ListItem divider button>
           <ListItemText>
             { game.homeTeam } vs { game.awayTeam }
             <ListItemSecondaryAction>
@@ -89,10 +93,10 @@ class GamesList extends Component {
 
   render () {
     return (
-      <div>
+      <>
         <TopNav />
         { this.renderMain() }
-      </div>
+      </>
     )
   }
 }
