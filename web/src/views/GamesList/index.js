@@ -39,10 +39,11 @@ class GamesList extends Component {
 
   renderGames (games) {
     const gamesByWeek = groupBy(games, game => game.week)
+    const weeksInOrder = Object.keys(gamesByWeek).reverse()
 
     return (
       <>
-        { Object.keys(gamesByWeek).map(week => {
+        { weeksInOrder.map(week => {
           const games = gamesByWeek[week]
           return this.renderGameGroup(week, games)
         })}
