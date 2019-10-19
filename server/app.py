@@ -72,54 +72,54 @@ def save_game(upload_json):
 
 # API
 @cache.cached()
-@app.route('/api/teams')
-def teams():
-    teams = build_teams_response()
+@app.route('/api/<league>/teams')
+def teams(league):
+    teams = build_teams_response(league)
     return jsonify(teams)
 
 
 @cache.cached()
-@app.route('/api/players')
-def players():
-    query = Player.query.filter(Player.team_id != None)
+@app.route('/api/<league>/players')
+def players(league):
+    query = Player.query.filter(Player.league == league, Player.team_id != None)
     players = [player.to_dict() for player in query.all()]
     return jsonify(players)
 
 
 @cache.cached()
-@app.route('/api/games')
-def games():
-    games = [game.to_dict() for game in Game.query.all()]
+@app.route('/api/<league>/games')
+def games(league):
+    games = [game.to_dict() for game in Game.query.filter_by(league=league)]
     return jsonify(games)
 
 
 @cache.cached()
-@app.route('/api/games/<id>')
-def game(id):
-    game = Game.query.get(id)
+@app.route('/api/<league>/games/<id>')
+def game(league, id):
+    game = Game.query.filter_by(league=league, id=id).first()
     return jsonify(game.to_dict(include_points=True))
 
 
 @cache.cached()
-@app.route('/api/weeks')
-def weeks():
-    query = db.session.query(Game.week.distinct().label("week"))
-    weeks = [row.week for row in query.all()]
+@app.route('/api/<league>/weeks')
+def weeks(league):
+    games = Game.query.filter_by(league=league).all()
+    weeks = [game.week for game in games]
     return jsonify(sorted(weeks))
 
 
 @cache.cached()
-@app.route('/api/weeks/<num>')
-def week(num):
-    games = Game.query.filter_by(week=num)
+@app.route('/api/<league>/weeks/<num>')
+def week(league, num):
+    games = Game.query.filter_by(league=league, week=num)
     stats = build_stats_response(games)
     return jsonify({"week": num, "stats": stats})
 
 
 @cache.cached()
-@app.route('/api/stats')
-def stats():
-    games = Game.query.order_by(Game.week.asc())
+@app.route('/api/<league>/stats')
+def stats(league):
+    games = Game.query.filter_by(league=league).order_by(Game.week.asc())
     stats = build_stats_response(games)
     return jsonify({"week": 0, "stats": stats})
 

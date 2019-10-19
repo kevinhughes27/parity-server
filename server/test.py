@@ -32,7 +32,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_basic_point(self):
         self.upload_game('data/test/basic_point.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -41,7 +41,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_callahan(self):
         self.upload_game('data/test/callahan.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -50,7 +50,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_catch_d(self):
         self.upload_game('data/test/catch_d.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -59,7 +59,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_drop(self):
         self.upload_game('data/test/drop.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -68,7 +68,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_half(self):
         self.upload_game('data/test/half.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -78,7 +78,7 @@ class ServerTests(FlaskTest, SnapShotTest):
         self.upload_game('data/test/mini_game.json')
 
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -86,7 +86,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_mini_game2(self):
         self.upload_game('data/test/mini_game2.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -95,7 +95,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_throw_away(self):
         self.upload_game('data/test/throw_away.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -104,7 +104,7 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_turnovers(self):
         self.upload_game('data/test/turnovers.json')
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         stats = response.json
 
         self.assertMatchSnapshot(stats)
@@ -113,22 +113,22 @@ class ServerTests(FlaskTest, SnapShotTest):
     def test_api_endpoints(self):
         self.upload_game('data/test/mini_game2.json')
 
-        response = self.client.get('/api/weeks')
+        response = self.client.get('/api/test/weeks')
         assert response.status_code == 200
 
-        response = self.client.get('/api/weeks/1')
+        response = self.client.get('/api/test/weeks/1')
         assert response.status_code == 200
 
-        response = self.client.get('/api/stats')
+        response = self.client.get('/api/test/stats')
         assert response.status_code == 200
 
-        response = self.client.get('/api/games')
+        response = self.client.get('/api/test/games')
         assert response.status_code == 200
 
-        response = self.client.get('/api/games/1')
+        response = self.client.get('/api/test/games/1')
         assert response.status_code == 200
 
-        response = self.client.get('/api/players')
+        response = self.client.get('/api/test/players')
         assert response.status_code == 200
 
 

@@ -1,5 +1,7 @@
 import 'whatwg-fetch'
 
+const league = "ocua_18-19"
+
 const dataCache = {}
 
 const cachedFetch = (url, _options) => {
@@ -25,28 +27,28 @@ const cachedFetch = (url, _options) => {
 }
 
 const fetchGames = async () => {
-  const response = await cachedFetch('/api/games')
+  const response = await cachedFetch(`/api/${league}/games`)
   return await response.json()
 }
 
 const fetchGame = async (gameId) => {
-  const response = await cachedFetch(`/api/games/${gameId}`)
+  const response = await cachedFetch(`/api/${league}/games/${gameId}`)
   return await response.json()
 }
 
 const fetchPlayers = async () => {
-  const response = await cachedFetch('/api/players')
+  const response = await cachedFetch(`/api/${league}/players`)
   return await response.json()
 }
 
 const fetchWeeks = async () => {
-  const response = await cachedFetch('/api/weeks')
+  const response = await cachedFetch(`/api/${league}/weeks`)
   return await response.json()
 }
 
 const fetchStats = async (weekNum) => {
-  let url = `/api/weeks/${weekNum}`
-  if (weekNum === 0) url = '/api/stats'
+  let url = `/api/${league}/weeks/${weekNum}`
+  if (weekNum === 0) url = `/api/${league}/stats`
 
   const response = await cachedFetch(url)
   const json = await response.json()

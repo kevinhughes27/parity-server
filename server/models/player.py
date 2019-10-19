@@ -4,6 +4,7 @@ from .stats import Stats
 
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    league = db.Column(db.Text, nullable=False)
     zuluru_id = db.Column(db.Integer, unique=True)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     name = db.Column(db.Text)
