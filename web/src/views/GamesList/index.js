@@ -1,9 +1,9 @@
-import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
+import { fetchGames } from "../../api"
 
 export default class GamesList extends Component {
   constructor(props) {
@@ -15,10 +15,11 @@ export default class GamesList extends Component {
     }
   }
 
-  componentWillMount() {
-    fetch('/api/games')
-      .then(response => response.json())
-      .then(games => { this.setState({loading: false, games: games}) })
+  componentDidMount () {
+    (async () => {
+      const games = await fetchGames()
+      this.setState({games, loading: false})
+    })()
   }
 
   renderGames (games) {
