@@ -1,24 +1,15 @@
 {
   "name": "parity-server",
-  "private": "true",
+  "private": true,
   "engines": {
     "node": ">= 6.11.1",
     "yarn": ">= 0.24.5"
   },
-  "subPackages": [
+  "workspaces": [
     "web"
   ],
   "scripts": {
-    "postinstall": "subpkg install",
-    "heroku-postbuild": "yarn build",
-    "build": "subpkg build",
+    "build": "cd web && yarn build",
     "start": "cd web && yarn start"
-  },
-  "dependencies": {
-    "subpackage": "^1.1.0"
-  },
-  "cacheDirectories": [
-    "node_modules",
-    "web/node_modules"
-  ]
+  }
 }
