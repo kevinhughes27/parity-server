@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import TopNav from '../TopNav'
-import Loading from '../Loading'
+import TopNav from '../../layout/TopNav'
+import Loading from '../../components/Loading'
+import { fetchGame } from "../../api"
 
 import Team from './Team'
 import Points from './Points'
@@ -15,12 +16,13 @@ export default class Game extends Component {
     }
   }
 
-  componentWillMount () {
-    const gameId = this.props.params.gameId
+  componentDidMount () {
+    const gameId = this.props.match.params.gameId
 
-    fetch(`/api/games/${gameId}`)
-      .then(response => response.json())
-      .then(game => { this.setState({loading: false, game: game}) })
+    return (async () => {
+      const game = await fetchGame(gameId)
+      this.setState({game, loading: false})
+    })()
   }
 
   renderMain () {

@@ -1,16 +1,17 @@
 import React from 'react'
-import { browserHistory, Router, Route } from 'react-router'
+import { Router, Route } from 'react-router'
+import { createBrowserHistory } from 'history';
 
-import GamesList from './Components/GamesList'
-import Game from './Components/Game'
+import GamesList from './views/GamesList'
+import Game from './views/Game'
 
-import StatsPage from './Components/StatsPage'
-import Leaderboards from './Components/Leaderboards'
-import ComparePlayers from './Components/ComparePlayers'
+import StatsPage from './views/StatsPage'
+import Leaderboards from './views/Leaderboards'
+import ComparePlayers from './views/ComparePlayers'
 
-import SalaryPage from './Components/SalaryPage'
-import TeamDashboard from './Components/TeamDashboard'
-import TradeSimulator from './Components/TradeSimulator'
+import SalaryPage from './views/SalaryPage'
+import TeamDashboard from './views/TeamDashboard'
+import TradeSimulator from './views/TradeSimulator'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')
@@ -22,20 +23,42 @@ function logPageView () {
   }
 }
 
+const browserHistory = createBrowserHistory();
+
 class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
-        <Route path="/games" component={GamesList} />
-        <Route path="/games/:gameId" component={Game} />
-        <Route path="/" component={StatsPage}>
-          <Route path="/leaderboards" component={Leaderboards} />
-          <Route path="/compare_players" component={ComparePlayers} />
-        </Route>
-        <Route component={SalaryPage} >
-          <Route path="/team_dashboard" component={TeamDashboard} />
-          <Route path="/trade_simulator" component={TradeSimulator} />
-        </Route>
+        <div>
+          <Route exact path="/games" component={GamesList} />
+          <Route path="/games/:gameId" component={Game} />
+
+          <Route exact path="/" component={StatsPage} />
+
+          <Route path="/leaderboards">
+            <StatsPage>
+              <Leaderboards />
+            </StatsPage>
+          </Route>
+
+          <Route path="/compare_players">
+            <StatsPage>
+              <ComparePlayers />
+            </StatsPage>
+          </Route>
+
+          <Route path="/team_dashboard">
+            <SalaryPage>
+              <TeamDashboard />
+            </SalaryPage>
+          </Route>
+
+          <Route path="/trade_simulator">
+            <SalaryPage>
+              <TradeSimulator />
+            </SalaryPage>
+          </Route>
+        </div>
       </Router>
     )
   }

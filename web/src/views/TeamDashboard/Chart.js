@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs-2'
-import { colors, warnColors, dangerColors } from '../helpers'
+import { colors, warnColors, dangerColors } from '../../helpers'
 
 export default class Chart extends Component {
   render () {

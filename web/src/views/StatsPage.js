@@ -1,26 +1,11 @@
-import 'whatwg-fetch'
 import _ from 'lodash'
 import React, { Component } from 'react'
-import TopNav from './TopNav'
-import Loading from './Loading'
-import WeekPicker from './WeekPicker'
-import GenderFilter from './GenderFilter'
-import StatsTable from './StatsTable'
-
-const fetchWeeks = async () => {
-  const response = await fetch('/api/weeks')
-  return await response.json()
-}
-
-const fetchStats = async (weekNum) => {
-  let url = `/api/weeks/${weekNum}`
-  if (weekNum === 0) url = '/api/stats'
-
-  const response = await fetch(url)
-  const json = await response.json()
-  const data = json.stats || {}
-  return data
-}
+import TopNav from '../layout/TopNav'
+import Loading from '../components/Loading'
+import WeekPicker from '../components/WeekPicker'
+import GenderFilter from '../components/GenderFilter'
+import StatsTable from '../components/StatsTable'
+import { fetchWeeks, fetchStats } from "../api"
 
 class StatsProvider extends Component {
   constructor (props) {

@@ -1,8 +1,9 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import PlayerSelect from '../PlayerSelect'
+import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
-import { calcSalaryLimits } from '../helpers'
+import { calcSalaryLimits } from '../../helpers'
+import { fetchPlayers } from "../../api"
 
 export default class TradeSimulator extends Component {
   constructor (props) {
@@ -17,10 +18,11 @@ export default class TradeSimulator extends Component {
     }
   }
 
-  componentWillMount() {
-    fetch('/api/players')
-      .then(response => response.json())
-      .then(players => { this.setState({loading: false, players: players}) })
+  componentDidMount () {
+    (async () => {
+      const players = await fetchPlayers()
+      this.setState({players, loading: false})
+    })()
   }
 
   playerAChanged (value: string) {

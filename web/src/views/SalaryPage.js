@@ -1,12 +1,7 @@
-import 'whatwg-fetch'
 import React, { Component } from 'react'
-import TopNav from './TopNav'
-import Loading from './Loading'
-
-const fetchPlayers = async () => {
-  const response = await fetch('/api/players')
-  return await response.json()
-}
+import TopNav from '../layout/TopNav'
+import Loading from '../components/Loading'
+import { fetchPlayers } from "../api"
 
 class SalaryProvider extends Component {
   constructor (props) {
