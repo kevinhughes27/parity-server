@@ -1559,10 +1559,10 @@ caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000792:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000999.tgz#427253a69ad7bea4aa8d8345687b8eec51ca0e43"
   integrity sha512-1CUyKyecPeksKwXZvYw0tEoaMCo/RwBlXmEtN5vVnabvO0KPd9RQLcaAuR9/1F+KDMv6esmOFWlsXuzDk+8rxg==
 
-capitalize@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/capitalize/-/capitalize-1.0.0.tgz#dc802c580aee101929020d2ca14b4ca8a0ae44be"
-  integrity sha1-3IAsWAruEBkpAg0soUtMqKCuRL4=
+capitalize@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/capitalize/-/capitalize-2.0.0.tgz#61859dd952aba244f03541b23e11470ada097f4b"
+  integrity sha512-HwGrAbSn44Tm5Nz+m02oQHf+9y771rmb/cTbXFcoADy29LFRCj4PhWBT54qxfY2HJBWBplwx17Pd4ek6OFbr/Q==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -3364,10 +3364,10 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
-format-number@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/format-number/-/format-number-2.0.2.tgz#8be2aa6fa6ef5ec43830892b1daee72705f9b462"
-  integrity sha1-i+Kqb6bvXsQ4MIkrHa7nJwX5tGI=
+format-number@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/format-number/-/format-number-3.0.0.tgz#92bbf34ce5e04eb637a9a3a4f65980d5af137393"
+  integrity sha512-RWcbtINcRZ2DWCo4EcJgOJUYIwtsY5LKlTtL5OX1vfGsxEEK5mKaGxZC0p4Mgy63vXR12rut3lnjwCQ8YIlRMw==
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -5084,10 +5084,10 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-local-storage@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/local-storage/-/local-storage-1.4.2.tgz#7ec2d3fb7f1ea91a85b160d3a785058f87bfbfa5"
-  integrity sha1-fsLT+38eqRqFsWDTp4UFj4e/v6U=
+local-storage@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/local-storage/-/local-storage-2.0.0.tgz#748b7d041b197f46f3ec7393640851c175b64db8"
+  integrity sha512-/0sRoeijw7yr/igbVVygDuq6dlYCmtsuTmmpnweVlVtl/s10pf5BCq8LWBxW/AMyFJ3MhMUuggMZiYlx6qr9tw==
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -7959,7 +7959,7 @@ tar-pack@^3.4.0:
     tar "^2.2.1"
     uid-number "^0.0.6"
 
-tar@2.2.2, tar@^2.2.1:
+tar@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/tar/-/tar-2.2.2.tgz#0ca8848562c7299b8b446ff6a4d60cdbb23edc40"
   integrity sha512-FCEhQ/4rE1zYv9rYXJw/msRqsnmlje5jHP6huWeBZ704jUTy02c5AZyWujpMR1ax6mVw9NyJMfuK2CMDWVIfgA==
@@ -8590,15 +8590,10 @@ whatwg-fetch@2.0.3:
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
   integrity sha1-nITsLc9oGH/wC8ZOEnS0QhduHIQ=
 
-whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
-
-whatwg-fetch@^2.0.1:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
-  integrity sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
 
 whatwg-url@^4.3.0:
   version "4.8.0"
