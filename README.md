@@ -12,7 +12,7 @@ Server Setup
 1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine. (See Python and SQLite notes below)
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
-4. Create your database by running `python server/cli.py init_db` and then seed it with `python server/cli.py seed`
+4. Create your database by running `python server/cli.py init-db` and then seed it with `python server/cli.py seed`
 5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
 
 On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python app.py`)
@@ -77,10 +77,10 @@ Operations
 This app is deployed to Heroku via a git push. This happens automatically when a branch is merged into master.
 
 
-To create the database run `heroku run python server/init_db.py`
+To create the database run `heroku run python server/init-db.py`
 
 
-To sync teams from Zuluru run `heroku run python server/cli.py zuluru_sync`
+To sync teams from Zuluru run `heroku run python server/cli.py zuluru-sync`
 
 
 To backup the database (only the raw games data the rest is calculated by the app) run `python server/cli.py backup`. This script also supports a `--week` option to backup a certain week.
