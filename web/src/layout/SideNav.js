@@ -10,8 +10,9 @@ class SideNav extends Component {
     let volunteerUrl = 'https://docs.google.com/spreadsheets/d/1lunhlXMe5_sefD6Dy9OCreQxMtEi2mzDrmHLhBD7Elo/edit?usp=sharing'
 
     let spreadsheets = [
-      {name: '2017-2018', url: 'https://docs.google.com/spreadsheets/d/1F46H8ZRGP8Jzj1zSW0PT8HerBZ_BlHI5T48A2vp34r0' },
-      {name: '2018-2019', url: 'https://docs.google.com/spreadsheets/d/1KTFwydcZrVoHqEGej1uyZk8rO58RDr_1tUMIh08yZN8' }
+      {name: '2019-2020', url: 'https://docs.google.com/spreadsheets/d/1ijmSykLC4LM0vfvnKyAqymp7wZRXWkAeejNvBgukOj0'},
+      {name: '2018-2019', url: 'https://docs.google.com/spreadsheets/d/1KTFwydcZrVoHqEGej1uyZk8rO58RDr_1tUMIh08yZN8' },
+      // {name: '2017-2018', url: 'https://docs.google.com/spreadsheets/d/1F46H8ZRGP8Jzj1zSW0PT8HerBZ_BlHI5T48A2vp34r0' },
     ];
 
     return (
@@ -35,10 +36,12 @@ class SideNav extends Component {
         <li><a href={forumUrl} target="_blank" rel="noopener noreferrer">Forum</a></li>
         <li><a href={podcastUrl} target="_blank" rel="noopener noreferrer">Podcast</a></li>
 
-        <li>
+        <li style={{marginLeft: -15}}>
           <Collapsible>
             <CollapsibleItem header="Spreadsheets">
-              {spreadsheets.map(sheet => <li key={sheet.name}><a href={sheet.url} target="_blank" rel="noopener noreferrer">{sheet.name}</a></li>)}
+              <ul style={{marginTop: -30, marginLeft: -15, marginBottom: -30}}>
+                {spreadsheets.map(sheet => <li key={sheet.name}><a href={sheet.url} target="_blank" rel="noopener noreferrer">{sheet.name}</a></li>)}
+              </ul>
             </CollapsibleItem>
           </Collapsible>
         </li>
