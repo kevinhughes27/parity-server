@@ -26,7 +26,7 @@ class WeekPicker extends Component {
 
     return (
       <Dropdown trigger={
-          <a className="dropdown-button">
+          <a href='# ' className="dropdown-button">
             {this.weekText(week)}
             <i className="material-icons right">arrow_drop_down</i>
           </a>

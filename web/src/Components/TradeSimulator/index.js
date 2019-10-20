@@ -95,7 +95,7 @@ export default class TradeSimulator extends Component {
           </div>
 
           <div className="col m1">
-            <a style={{cursor: 'pointer'}} onClick={() => {this.deleteTrade(trade) }}>
+            <a href='# ' style={{cursor: 'pointer'}} onClick={() => {this.deleteTrade(trade) }}>
               <i className="material-icons" style={{paddingTop: 40}}>delete</i>
             </a>
           </div>
@@ -131,7 +131,7 @@ export default class TradeSimulator extends Component {
             />
           </div>
           <div className="col m1">
-            <a className="btn" onClick={() => { this.applyTrade() } }>
+            <a href='# ' className="btn" onClick={() => { this.applyTrade() } }>
               Trade
             </a>
           </div>

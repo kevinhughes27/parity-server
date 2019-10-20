@@ -5,7 +5,7 @@ function renderTeams (teams, change) {
   return teams.map(team => {
     return (
       <li key={team}>
-       <a onClick={() => { change(team) }}>
+       <a href='# ' onClick={() => { change(team) }}>
           {team}
         </a>
       </li>
@@ -24,7 +24,8 @@ export default class TeamPicker extends Component {
 
     return (
       <div>
-        <a className='dropdown-button btn'
+        <a href='# '
+           className='dropdown-button btn'
            style={{minWidth: '100%'}}
            data-activates='team-dropdown'>
           {team}
