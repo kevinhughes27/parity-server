@@ -56,7 +56,11 @@ export default class Chart extends Component {
           }
         }],
         yAxes: [{
-          stacked: true
+          stacked: true,
+          ticks: {
+            min: 0,
+            suggestedMax: Math.round(salaryCap * 1.1)
+          }
         }]
       },
       animation: {
