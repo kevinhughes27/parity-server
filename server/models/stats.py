@@ -78,11 +78,13 @@ class Stats(db.Model):
         total += self.assists * self.SALARY['assists']
         total += self.second_assists * self.SALARY['second_assists']
         total += self.d_blocks * self.SALARY['d_blocks']
-        total += self.completions * self.SALARY['completions']
+        total += self.drops * self.SALARY['drops']
         total += self.throw_aways * self.SALARY['throw_aways']
         total += self.threw_drops * self.SALARY['threw_drops']
+        total += self.completions * self.SALARY['completions']
         total += self.catches * self.SALARY['catches']
-        total += self.drops * self.SALARY['drops']
+        total += self.o_points_for * self.SALARY['o_points_for']
+        total += self.d_points_for * self.SALARY['d_points_for']
 
         return total
 
