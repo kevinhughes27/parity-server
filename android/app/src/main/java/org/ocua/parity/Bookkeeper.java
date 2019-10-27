@@ -281,17 +281,14 @@ public class Bookkeeper implements Serializable {
 
             jsonObject.accumulate("week", Week.current());
 
-            jsonObject.accumulate("homeTeam", homeTeam.name);
-            jsonObject.accumulate("awayTeam", awayTeam.name);
+            jsonObject.accumulate("homeTeam", homeTeam);
+            jsonObject.accumulate("awayTeam", awayTeam);
 
             jsonObject.accumulate("homeRoster", new JSONArray(homeTeam.getRoster()));
             jsonObject.accumulate("awayRoster", new JSONArray(awayTeam.getRoster()));
 
             jsonObject.accumulate("homeScore", homeScore.toString());
             jsonObject.accumulate("awayScore", awayScore.toString());
-
-            jsonObject.accumulate("homeTeamId", homeTeam.id);
-            jsonObject.accumulate("awayTeamId", awayTeam.id);
 
             // Points
             Gson gson = new Gson();
