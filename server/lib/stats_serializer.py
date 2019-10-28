@@ -24,9 +24,9 @@ def build_stats_response(games):
             if "(S)" in player.name:
                 team = "Substitute"
             elif player.name in game.home_roster:
-                team = game.home_team
+                team = game.home_team['name']
             elif player.name in game.away_roster:
-                team = game.away_team
+                team = game.away_team['name']
             elif player.team_id:
                 team = Team.query.get(player.team_id).name
             else:
