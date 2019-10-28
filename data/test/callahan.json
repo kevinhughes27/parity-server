@@ -2,9 +2,15 @@
   "week": 1,
   "league": "ocua_17-18",
   "awayScore": "1",
-  "homeTeam": "Kells Angels Bicycle Club",
+  "homeTeam": {
+    "name": "Kells Angels Bicycle Club",
+    "id": 5
+  },
   "homeScore": "0",
-  "awayTeam": "99 Problems",
+  "awayTeam": {
+    "name": "99 Problems",
+    "id": 6
+  },
   "points": [
     {
       "defensePlayers": [

@@ -4,7 +4,7 @@ require 'pp'
 require 'byebug'
 
 def data_directory
-  'data/ocua_18-19/session2'
+  'data/test'
 end
 
 def each_file
@@ -31,18 +31,32 @@ def print_all_team_names
 end
 
 def team_id_lookup
-  [
-    { rules: [/Wu-hoo!/, /Heat/], zid: 11060 },
-    { rules: [/Shantay, You Stay/, /Laura/], zid: 11059 },
-    { rules: [/TooTrains TootFurious/, /Railroad Ties: The Last Spike/, /2Toot/], zid: 11056 },
-    { rules: [/Pad Tie/, /Nat/], zid: 11058 },
-    { rules: [/Tie Hard/, /Travis/], zid: 11055 },
-    { rules: [/#TimesUp/, /Two ties don't make a right/, /Kindha/], zid: 11061 },
-    { rules: [/Higher Seed/, /Bossy/], zid: 11052 },
-    { rules: [/S2: E12 Nowhere to Hyde/, /Ra-Ro/], zid: 11053 },
-    { rules: [/Tied Pod Challenge/, /Jon/], zid: 11054 },
-    { rules: [/Even/, /Adam/], zid: 11057 },
-  ]
+  {
+    'data/ocua_18-19/session2' => [
+      { rules: [/Wu-hoo!/, /Heat/], zid: 11060 },
+      { rules: [/Shantay, You Stay/, /Laura/], zid: 11059 },
+      { rules: [/TooTrains TootFurious/, /Railroad Ties: The Last Spike/, /2Toot/], zid: 11056 },
+      { rules: [/Pad Tie/, /Nat/], zid: 11058 },
+      { rules: [/Tie Hard/, /Travis/], zid: 11055 },
+      { rules: [/#TimesUp/, /Two ties don't make a right/, /Kindha/], zid: 11061 },
+      { rules: [/Higher Seed/, /Bossy/], zid: 11052 },
+      { rules: [/S2: E12 Nowhere to Hyde/, /Ra-Ro/], zid: 11053 },
+      { rules: [/Tied Pod Challenge/, /Jon/], zid: 11054 },
+      { rules: [/Even/, /Adam/], zid: 11057 },
+    ],
+    'data/test' => [
+      { rules: [/Betty White/], zid: 1 },
+      { rules: [/Katy Parity/], zid: 2 },
+      { rules: [/lumleysexuals/], zid: 3 },
+      { rules: [/Soho/], zid: 4 },
+      { rules: [/Kells Angels Bicycle Club/], zid: 5 },
+      { rules: [/99 Problems/], zid: 6 },
+      { rules: [/Nautical Disaster - Man Overboard!/], zid: 7 },
+      { rules: [/Attack/], zid: 8 },
+      { rules: [/Huck and Hope School of Handling/], zid: 9 },
+      { rules: [/Ultra Tide: Don an unsullied hue/], zid: 10 },
+    ]
+  }[data_directory]
 end
 
 def rollback
@@ -89,5 +103,5 @@ rescue => e
 end
 
 
-
+# print_all_team_names
 backfill

@@ -2,9 +2,15 @@
   "week": 1,
   "league": "ocua_17-18",
   "awayScore": "1",
-  "homeTeam": "Betty White (B-Dub)",
+  "homeTeam": {
+    "name": "Betty White (B-Dub)",
+    "id": 1
+  },
   "homeScore": "0",
-  "awayTeam": "Katy Parity (back by popular demand)",
+  "awayTeam": {
+    "name": "Katy Parity (back by popular demand)",
+    "id": 2
+  },
   "points": [
     {
       "defensePlayers": [
