@@ -42,8 +42,8 @@ export default class Points extends Component {
 
     const homeScored = _.includes(game.homeRoster, receiver)
     const teamName = homeScored
-      ? game.homeTeam
-      : game.awayTeam
+      ? game.homeTeam.name
+      : game.awayTeam.name
 
     const homeColor = '#98abc5'
     const awayColor = '#ff8c00'

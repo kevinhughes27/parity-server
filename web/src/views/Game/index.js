@@ -32,13 +32,13 @@ export default class Game extends Component {
 
     const homeWon = game.homeScore > game.awayScore
     const homeJsx = homeWon
-      ? <h5><i className="fa fa-star" /> {game.homeTeam}</h5>
-      : <h5>{game.homeTeam}</h5>
+      ? <h5><i className="fa fa-star" /> {game.homeTeam.name}</h5>
+      : <h5>{game.homeTeam.name}</h5>
 
     const awayWon = game.awayScore > game.homeScore
     const awayJsx = awayWon
-      ? <h5><i className="fa fa-star" /> {game.awayTeam}</h5>
-      : <h5>{game.awayTeam}</h5>
+      ? <h5><i className="fa fa-star" /> {game.awayTeam.name}</h5>
+      : <h5>{game.awayTeam.name}</h5>
 
     return (
       <div className='container'>

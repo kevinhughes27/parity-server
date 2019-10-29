@@ -50,7 +50,7 @@ export default class GamesList extends Component {
   renderGame (game) {
     return (
       <Link key={game.id} className='collection-item' to={`/games/${game.id}`}>
-        { game.homeTeam } vs { game.awayTeam }
+        { game.homeTeam.name } vs { game.awayTeam.name }
         <span className='secondary-content'>
           { game.homeScore } - { game.awayScore }
         </span>
