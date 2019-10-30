@@ -1,4 +1,4 @@
-from models import Stats, Player
+from models import Stats, Player, Team
 
 def build_stats_response(games):
     stats = {}
