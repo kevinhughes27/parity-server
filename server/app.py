@@ -67,27 +67,6 @@ def upload():
     return ('', 201)
 
 
-# Calc
-@app.route('/calc', methods=['POST'])
-def calc():
-    points = request.json['points']
-    stats = StatsCalculator(points).run()
-
-    csv = ""
-
-    header = "name, goals, assists, second_assists, d_blocks, completions, throw_aways,\
-    threw_drops, catches, drops, pulls, callahan, o_points_for, o_points_against, d_points_for,\
-    d_points_against, o_efficiency, d_efficiency, total_efficiency, pay, salary_per_point\n"
-
-    csv += header
-
-    for name, player_stats in stats:
-        row = name + ',' + player_stats.to_csv()
-        csv += row
-
-    return (csv, 200)
-
-
 # API
 @cache.cached()
 @app.route('/api/teams')
