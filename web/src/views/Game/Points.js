@@ -60,7 +60,7 @@ export default class Points extends Component {
       : 'Point'
 
     const iconJsx = breakPoint
-      ? (<i className="fa fa-bolt" style={{marginRight: 0}}/>)
+      ? (<i className="fa fa-bolt" style={{marginRight: 0, marginLeft: -10, marginTop: -10, height: 20}}/>)
       : null
 
     const whoCopy = thrower

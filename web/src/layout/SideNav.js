@@ -36,7 +36,7 @@ class SideNav extends Component {
         <li><a href={forumUrl} target="_blank" rel="noopener noreferrer">Forum</a></li>
         <li><a href={podcastUrl} target="_blank" rel="noopener noreferrer">Podcast</a></li>
 
-        <li style={{marginLeft: -15}}>
+        <li>
           <Collapsible>
             <CollapsibleItem header="Spreadsheets">
               <ul style={{marginTop: -30, marginLeft: -15, marginBottom: -30}}>
