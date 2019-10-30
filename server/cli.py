@@ -11,7 +11,7 @@ from flask_caching import Cache
 from app import app
 from models import db, Team, Player
 
-data_folder = "data/ocua_18-19/"
+data_folder = "data/ocua_18-19/session2"
 
 @click.group()
 def cli():
@@ -41,7 +41,10 @@ def seed(prod, week):
 
     pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
 
-    for file in glob.glob(pattern):
+    files = glob.glob(pattern)
+    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
+
+    for file in files:
         headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
         r = requests.post(url, data=open(file, 'rb'), headers=headers)
         print(file, r.status_code)
