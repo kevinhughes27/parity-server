@@ -1,7 +1,6 @@
 from .db import db
 from .team import Team
 from .stats import Stats
-import json
 
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)

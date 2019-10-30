@@ -1,5 +1,4 @@
 from models import Stats, Player
-import json
 
 def build_stats_response(games):
     stats = {}
@@ -24,9 +23,9 @@ def build_stats_response(games):
             # set the team for the player
             if "(S)" in player.name:
                 team = "Substitute"
-            elif player.name in json.loads(game.home_roster):
+            elif player.name in game.home_roster:
                 team = game.home_team
-            elif player.name in json.loads(game.away_roster):
+            elif player.name in game.away_roster:
                 team = game.away_team
             elif player.team_id:
                 team = Team.query.get(player.team_id).name

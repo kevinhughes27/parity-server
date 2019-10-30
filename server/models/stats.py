@@ -1,5 +1,4 @@
 from .db import db
-import json
 
 class Stats(db.Model):
     SALARY = {

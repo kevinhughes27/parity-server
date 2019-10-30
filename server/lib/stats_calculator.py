@@ -1,10 +1,9 @@
 from models import db, Stats, Player
-import json
 
 class StatsCalculator:
     def __init__(self, game):
         self.game = game
-        self.points = json.loads(game.points)
+        self.points = game.points
 
 
     def run(self):

@@ -59,11 +59,10 @@ def save_game(upload_json):
     game.home_score = upload_json['homeScore']
     game.away_score = upload_json['awayScore']
 
-    game.home_roster = json.dumps(upload_json['homeRoster'])
-    game.away_roster = json.dumps(upload_json['awayRoster'])
+    game.home_roster = upload_json['homeRoster']
+    game.away_roster = upload_json['awayRoster']
 
-    points = upload_json['points']
-    game.points = json.dumps(points)
+    game.points = upload_json['points']
 
     db.session.add(game)
     db.session.commit()
