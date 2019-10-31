@@ -88,7 +88,6 @@ def backup(week):
 
 @cli.command()
 def zuluru_sync():
-    # 2018-2019_session2: 662
     with app.app_context():
         ZuluruSync().sync_teams(league_id=702)
 
