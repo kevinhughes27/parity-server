@@ -60,9 +60,9 @@ class ZuluruSync:
             print('No players found. Login probably failed.')
             return
 
-        table = soup.find('table', {'class': 'list'})
+        table = soup.find('table', {'class': 'table-striped'})
 
-        genders_regex = '(Male|Female)'
+        genders_regex = '(Open|Woman)'
         gender_elems = table.findAll(text=re.compile(genders_regex))
         assert(len(player_elems) == len(gender_elems))
 
@@ -76,7 +76,7 @@ class ZuluruSync:
 
             zuluru_id = int(p.get('id').replace(self.player_id_preamble, ''))
             name = p.get_text()
-            gender = 'male' if g == 'Male' else 'female'
+            gender = 'male' if g == 'Open' else 'female'
             self.update_or_create_player(zuluru_id, name, gender, team)
 
 
