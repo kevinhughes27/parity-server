@@ -19,7 +19,10 @@ class ZuluruSync:
         session = self.login()
 
         print('Fetching Teams')
+
         team_ids = self.get_team_ids(session, league_id)
+
+        print(f"Found {len(team_ids)} Teams")
 
         for x in team_ids:
             self.sync_team(session, x)
@@ -81,9 +84,9 @@ class ZuluruSync:
         instance = Team.query.filter_by(zuluru_id=zuluru_id).first()
 
         if instance:
-            print('Found Team: ', name)
+            print(f'Updating Team: {name}')
         else:
-            print('Creating Team: ', name)
+            print(f'Creating Team: {name}')
             instance = Team(zuluru_id=zuluru_id)
 
         instance.name = name
@@ -98,9 +101,9 @@ class ZuluruSync:
         instance = Player.query.filter_by(zuluru_id=zuluru_id).first()
 
         if instance:
-            print('Found Player: ', name)
+            print(f'Updating Player: {name}')
         else:
-            print('Creating Player: ', name)
+            print(f'Creating Player: {name}')
             instance = Player(zuluru_id=zuluru_id)
 
         instance.name = name
