@@ -1,30 +1,73 @@
-import React, { Component } from 'react'
-import SideNav from './SideNav'
+import * as React from 'react';
+import { withStyles } from '@material-ui/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Hidden from '@material-ui/core/Hidden';
 
-class TopNav extends Component {
-  componentDidMount () {
-    window.$('.sidebar-toggle').sideNav({closeOnClick: true})
+import SideNav from './SideNav';
+
+const styles = {
+  bar: {
+    height: 64
+  },
+  title: {
+    flex: 1,
+    color: 'white',
+    textAlign: 'center'
+  },
+  menuButton: {
+    color: 'white',
+    marginLeft: -12,
+    marginRight: 20
   }
+};
 
-  render () {
+class TopNav extends React.Component {
+  state = {
+    navOpen: false
+  };
+
+  openNav = () => {
+    this.setState({ navOpen: true });
+  };
+
+  closeNave = () => {
+    this.setState({ navOpen: false });
+  };
+
+  render() {
+    const { classes } = this.props;
+
     return (
-      <nav>
-        <div className="nav-wrapper">
-          <a href="/" className="brand-logo center hide-on-small-and-down">Parity 2.0</a>
+      <>
+        <AppBar position="static" className={classes.bar}>
+          <Toolbar>
+            <IconButton
+              id="side-bar"
+              className={classes.menuButton}
+              onClick={this.openNav}
+            >
+              <MenuIcon />
+            </IconButton>
 
-          <a href="#!sidebar-toggle" data-activates="sidebar" className="left sidebar-toggle">
-            <i style={{paddingLeft: 10}} className="material-icons">menu</i>
-          </a>
+            <Typography variant="h5" className={classes.title}>
+              <Hidden smDown >Parity 2.0 </Hidden>
+            </Typography>
 
-          <ul className="side-nav" id="sidebar">
-            <SideNav/>
-          </ul>
-
-          {this.props.children}
-        </div>
-      </nav>
-    )
+            {this.props.children}
+          </Toolbar>
+        </AppBar>
+        <SideNav
+          open={this.state.navOpen}
+          handleOpen={this.openNav}
+          handleClose={this.closeNave}
+        />
+      </>
+    );
   }
 }
 
-export default TopNav
+export default withStyles(styles)(TopNav);

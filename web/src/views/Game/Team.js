@@ -1,5 +1,10 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import Paper from '@material-ui/core/Paper'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableRow from '@material-ui/core/TableRow'
 import Roster from './Roster'
 
 export default class Team extends Component {
@@ -17,33 +22,44 @@ export default class Team extends Component {
     const dropEvents = _.filter(teamEvents, (ev) => ev.type === 'DROP')
 
     return (
-      <div>
-        <ul className='collection'>
-          { this.renderStat('Points', score, true) }
-          { this.renderStat('Defense', defenseEvents.length) }
-          { this.renderStat('Completions', passEvents.length) }
-          { this.renderStat('Throw Aways', throwAwayEvents.length) }
-          { this.renderStat('Drops', dropEvents.length) }
-        </ul>
+      <React.Fragment>
+        <Paper style={{marginBottom: 20}}>
+          <Table size="small">
+            <TableBody>
+              <TableRow hover>
+                <TableCell>
+                  <strong>Points</strong>
+                </TableCell>
+                <TableCell>
+                  <strong>{score}</strong>
+                </TableCell>
+              </TableRow>
 
-        <strong>Roster:</strong>
-        <Roster players={players} />
-      </div>
+              { this.renderStat('Defense', defenseEvents.length) }
+              { this.renderStat('Completions', passEvents.length) }
+              { this.renderStat('Throw Aways', throwAwayEvents.length) }
+              { this.renderStat('Drops', dropEvents.length) }
+            </TableBody>
+          </Table>
+        </Paper>
+
+        <Paper>
+          <Roster players={players} />
+        </Paper>
+      </React.Fragment>
     )
   }
 
-  renderStat(name, value, bold) {
-    const styles = {display: 'flex', flex: 1, justifyContent: 'space-between'}
-
-    if (bold) {
-      styles['fontWeight'] = 'bold'
-    }
-
+  renderStat(name, value) {
     return (
-      <li className='collection-item' style={styles}>
-        <span>{ name }</span>
-        <span>{ value }</span>
-      </li>
+      <TableRow hover>
+        <TableCell>
+          {name}
+        </TableCell>
+        <TableCell>
+          {value}
+        </TableCell>
+      </TableRow>
     )
   }
 }

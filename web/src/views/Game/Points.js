@@ -1,11 +1,32 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
+import Collapse from '@material-ui/core/Collapse'
+import ExpandLess from '@material-ui/icons/ExpandLess'
+import ExpandMore from '@material-ui/icons/ExpandMore'
+import Typography from '@material-ui/core/Typography'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import format from 'date-fns/format'
 import Event from './Event'
 
 export default class Points extends Component {
-  componentDidMount () {
-    window.$('.collapsible').collapsible()
+  state = {
+    expanded: []
+  }
+
+  handleClick = (expanded, idx) => {
+    if (expanded) {
+      this.setState({
+        expanded:  this.state.expanded.filter(x => x !== idx)
+      })
+    } else {
+      this.setState({
+        expanded: [...this.state.expanded, idx]
+      })
+    }
   }
 
   render () {
@@ -15,14 +36,19 @@ export default class Points extends Component {
     let awayScore = 0
 
     return (
-      <ul className='collapsible' data-collapsible='expandable'>
-        { game.points.map((point, idx) => {
-          const result = this.renderPoint(point, homeScore, awayScore, idx)
-          homeScore = result.homeScore
-          awayScore = result.awayScore
-          return result.jsx
-        })}
-      </ul>
+      <React.Fragment>
+        <Typography variant="h5" style={{marginTop: 15}}>
+          Points
+        </Typography>
+        <List>
+          { game.points.map((point, idx) => {
+            const result = this.renderPoint(point, homeScore, awayScore, idx)
+            homeScore = result.homeScore
+            awayScore = result.awayScore
+            return result.jsx
+          })}
+        </List>
+      </React.Fragment>
     )
   }
 
@@ -60,7 +86,7 @@ export default class Points extends Component {
       : 'Point'
 
     const iconJsx = breakPoint
-      ? (<i className="fa fa-bolt" style={{marginRight: 0, marginLeft: -10, marginTop: -10, height: 20}}/>)
+      ? (<FontAwesomeIcon icon={faBolt}/>)
       : null
 
     const whoCopy = thrower
@@ -81,20 +107,26 @@ export default class Points extends Component {
 
     const scoreCopy = `${homeScore} - ${awayScore}`
 
+    const expanded = _.includes(this.state.expanded, idx)
+
     const pointsJsx = (
-      <li key={idx}>
-        <div className="collapsible-header">
-          <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
-            <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
-            <span style={{minWidth: 44}}>{scoreCopy}</span>
-          </div>
-        </div>
-        <div className="collapsible-body">
-          <ul className="collection" style={{paddingLeft: 40}}>
+      <React.Fragment key={idx}>
+        <ListItem button onClick={() => this.handleClick(expanded, idx)}>
+          <ListItemText>
+            <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
+              <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
+              <span style={{minWidth: 44}}>{scoreCopy}</span>
+            </div>
+          </ListItemText>
+          {expanded ? <ExpandLess /> : <ExpandMore />}
+        </ListItem>
+
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <List style={{paddingLeft: 20}}>
             { point.events.map((ev, idx) => <Event key={idx} event={ev} />) }
-          </ul>
-        </div>
-      </li>
+          </List>
+        </Collapse>
+      </React.Fragment>
     )
 
     return {

@@ -1,60 +1,34 @@
 import React, { Component } from 'react'
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class Stats extends Component {
-  render () {
-    let layoutClass = {
-      height: '100%',
-      minHeight: '100%',
-      paddingBottom: '20%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
+const styles = {
+  container: {
+    display: 'flex',
+    height: '92vh',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  spinner: {
+    marginBottom: 80
+  }
+};
+
+class Loading extends Component {
+  render() {
+    const { classes } = this.props;
 
     return (
-      <div style={layoutClass}>
-        <div className="preloader-wrapper big active">
-          <div className="spinner-layer spinner-blue">
-            <div className="circle-clipper left">
-              <div className="circle"></div>
-            </div><div className="gap-patch">
-              <div className="circle"></div>
-            </div><div className="circle-clipper right">
-              <div className="circle"></div>
-            </div>
-          </div>
-
-          <div className="spinner-layer spinner-red">
-            <div className="circle-clipper left">
-              <div className="circle"></div>
-            </div><div className="gap-patch">
-              <div className="circle"></div>
-            </div><div className="circle-clipper right">
-              <div className="circle"></div>
-            </div>
-          </div>
-
-          <div className="spinner-layer spinner-yellow">
-            <div className="circle-clipper left">
-              <div className="circle"></div>
-            </div><div className="gap-patch">
-              <div className="circle"></div>
-            </div><div className="circle-clipper right">
-              <div className="circle"></div>
-            </div>
-          </div>
-
-          <div className="spinner-layer spinner-green">
-            <div className="circle-clipper left">
-              <div className="circle"></div>
-            </div><div className="gap-patch">
-              <div className="circle"></div>
-            </div><div className="circle-clipper right">
-              <div className="circle"></div>
-            </div>
-          </div>
-        </div>
+      <div className={classes.container}>
+        <CircularProgress
+          className={classes.spinner}
+          color="secondary"
+          size={70}
+          thickness={2}
+        />
       </div>
-    )
+    );
   }
 }
+
+export default withStyles(styles)(Loading);

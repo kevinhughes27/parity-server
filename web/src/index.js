@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'materialize-css/dist/css/materialize.css'
-import './index.css'
+import './index.scss'
 import App from './App'
+import { withTheme } from './theme'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const ThemedApp = withTheme(App);
+
+ReactDOM.render(<ThemedApp />, document.getElementById('root'))

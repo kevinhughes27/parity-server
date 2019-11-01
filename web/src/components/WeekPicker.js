@@ -1,6 +1,19 @@
-import _map from 'lodash/map'
 import React, { Component } from 'react'
-import { Dropdown, NavItem } from 'react-materialize'
+import { withStyles } from '@material-ui/styles'
+import MenuItem from '@material-ui/core/MenuItem'
+import Select from '@material-ui/core/Select'
+import { map } from 'lodash'
+
+const styles = {
+  selectRoot: {
+    color: 'white',
+    fontSize: 14,
+    minWidth: 80
+  },
+  icon: {
+    color: 'white'
+  }
+}
 
 class WeekPicker extends Component {
   weekText (num) {
@@ -12,29 +25,34 @@ class WeekPicker extends Component {
   }
 
   renderWeeks (weeks) {
-    return _map(weeks, (week) => {
+    return map(weeks, (week) => {
       return (
-        <NavItem key={week} onClick={() => { this.props.onChange(week) } }>
+        <MenuItem key={week} value={week}>
           {this.weekText(week)}
-        </NavItem>
+        </MenuItem>
       )
     })
   }
 
   render () {
-    const { week, weeks } = this.props
+    const { classes, week, weeks, onChange } = this.props
 
     return (
-      <Dropdown trigger={
-          <a href='# ' className="dropdown-button">
-            {this.weekText(week)}
-            <i className="material-icons right">arrow_drop_down</i>
-          </a>
-        }>
-        {this.renderWeeks(weeks)}
-      </Dropdown>
+        <Select
+          value={week}
+          onChange={onChange}
+          classes={{ root: classes.selectRoot }}
+          disableUnderline
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+            }
+          }}
+        >
+          {this.renderWeeks(weeks)}
+        </Select>
     )
   }
 }
 
-export default WeekPicker
+export default withStyles(styles)(WeekPicker)
