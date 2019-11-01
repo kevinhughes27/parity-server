@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import click
+import requests
 import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
 from flask_caching import Cache
@@ -9,7 +10,6 @@ from app import app
 from models import db, Leagues
 from lib import ZuluruSync, PlayerDb
 
-data_folder = "data/ocua_18-19/session2"
 
 @click.group()
 def cli():
@@ -27,25 +27,38 @@ def init_db():
 
 
 @cli.command()
-@click.option('--prod', is_flag=True)
-@click.option('--week', default=0)
-def seed(prod, week):
+def roster_sync():
+    with app.app_context():
+        for league in Leagues:
+            player_db = PlayerDb(league.player_db_path).load()
+            ZuluruSync(league=league, player_db=player_db).sync_teams()
+
+    db.session.remove()
+
+    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+    cache.clear()
+
+
+@cli.command()
+def seed():
     click.echo('Seeding database...')
 
-    url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
+    url = 'http://localhost:5000/upload'
+    curdir = os.getcwd()
 
-    src = data_folder
-    os.chdir(src)
+    for league in Leagues:
+        os.chdir(league.data_folder)
 
-    pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
+        files = glob.glob("week*.json")
+        files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
 
-    files = glob.glob(pattern)
-    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
+        for file in files:
+            headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
+            r = requests.post(url, data=open(file, 'rb'), headers=headers)
+            print(league.data_root, file, r.status_code)
 
-    for file in files:
-        headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
-        r = requests.post(url, data=open(file, 'rb'), headers=headers)
-        print(file, r.status_code)
+        # reset working dir
+        os.chdir(curdir)
 
     click.echo('Done')
 
@@ -56,7 +69,7 @@ def backup(week):
     click.echo('Downloading database...')
 
     src_url = "https://parity-server.herokuapp.com/api/games"
-    target_dir = data_folder
+    target_dir = "data/ocua_19-20"
 
     game_counts = defaultdict(int)
 
@@ -84,19 +97,6 @@ def backup(week):
         fo.close()
 
     click.echo('Done')
-
-
-@cli.command()
-def roster_sync():
-    with app.app_context():
-        for league in Leagues:
-            player_db = PlayerDb(league.data_folder + "/players_db.csv").load()
-            ZuluruSync(league=league, player_db=player_db).sync_teams()
-
-    db.session.remove()
-
-    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
-    cache.clear()
 
 
 if __name__ == "__main__":
