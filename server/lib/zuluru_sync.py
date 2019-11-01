@@ -5,13 +5,14 @@ from bs4 import BeautifulSoup
 from models import db, Team, Player
 
 class ZuluruSync:
-    def __init__(self, league_id, player_db={}):
-        self.league_id = league_id
+    def __init__(self, league, player_db={}):
+        self.league_id = league.zuluru_id
         self.player_db = player_db
 
         self.base_url = 'https://www.ocua.ca/zuluru'
         self.login_url = 'https://www.ocua.ca/user/login'
-        self.league_path = self.base_url + '/leagues/view/league:' + str(self.league_id)
+
+        self.league_path = self.base_url + league.zuluru_path + str(self.league_id)
         self.team_path = self.base_url + '/teams/view/team:'
 
         self.team_id_preamble = 'teams_team_'

@@ -91,7 +91,7 @@ def roster_sync():
     with app.app_context():
         for league in Leagues:
             player_db = PlayerDb(league.data_folder + "/players_db.csv").load()
-            ZuluruSync(league_id=league.zuluru_id, player_db=player_db).sync_teams()
+            ZuluruSync(league=league, player_db=player_db).sync_teams()
 
     db.session.remove()
 
