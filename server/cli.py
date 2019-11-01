@@ -6,8 +6,8 @@ from collections import defaultdict
 from flask_caching import Cache
 
 from app import app
-from models import db
-from lib import ZuluruSync
+from models import db, Leagues
+from lib import ZuluruSync, PlayerDb
 
 data_folder = "data/ocua_18-19/session2"
 
@@ -87,9 +87,11 @@ def backup(week):
 
 
 @cli.command()
-def zuluru_sync():
+def roster_sync():
     with app.app_context():
-        ZuluruSync().sync_teams(league_id=702)
+        for league in Leagues:
+            player_db = PlayerDb(league.data_folder + "/players_db.csv").load()
+            ZuluruSync(league_id=league.zuluru_id, player_db=player_db).sync_teams()
 
     db.session.remove()
 

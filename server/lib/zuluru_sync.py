@@ -5,22 +5,25 @@ from bs4 import BeautifulSoup
 from models import db, Team, Player
 
 class ZuluruSync:
-    def __init__(self):
+    def __init__(self, league_id, player_db={}):
+        self.league_id = league_id
+        self.player_db = player_db
+
         self.base_url = 'https://www.ocua.ca/zuluru'
         self.login_url = 'https://www.ocua.ca/user/login'
-        self.league_path = self.base_url + '/leagues/view/league:'
+        self.league_path = self.base_url + '/leagues/view/league:' + str(self.league_id)
         self.team_path = self.base_url + '/teams/view/team:'
 
         self.team_id_preamble = 'teams_team_'
         self.player_id_preamble = 'people_person_'
 
 
-    def sync_teams(self, league_id):
+    def sync_teams(self):
         session = self.login()
 
         print('Fetching Teams')
 
-        team_ids = self.get_team_ids(session, league_id)
+        team_ids = self.get_team_ids(session, self.league_id)
 
         print(f"Found {len(team_ids)} Teams")
 
@@ -29,7 +32,7 @@ class ZuluruSync:
 
 
     def get_team_ids(self, session, league_id):
-        soup = self.get_soup(session, self.league_path + str(league_id))
+        soup = self.get_soup(session, self.league_path)
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                soup.findAll(id=re.compile(self.team_id_preamble + '\d+'))]
         return ids
@@ -62,9 +65,18 @@ class ZuluruSync:
 
         table = soup.find('table', {'class': 'table-striped'})
 
-        genders_regex = '(Open|Woman)'
-        gender_elems = table.findAll(text=re.compile(genders_regex))
-        assert(len(player_elems) == len(gender_elems))
+        zuluru_has_genders = soup.text.find('Roster Designation') > 0
+
+        if zuluru_has_genders:
+            genders_regex = '(Open|Woman)'
+            gender_elems = table.findAll(text=re.compile(genders_regex))
+            assert(len(player_elems) == len(gender_elems))
+        else:
+            gender_elems = []
+            for p in player_elems:
+                zuluru_id = p.get('id').replace(self.player_id_preamble, '')
+                gender_elems.append( self.player_db[zuluru_id]['gender'] )
+
 
         roles_regex = '(Regular player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
         role_elems = table.findAll(text=re.compile(roles_regex))
@@ -81,13 +93,13 @@ class ZuluruSync:
 
 
     def update_or_create_team(self, zuluru_id, name):
-        instance = Team.query.filter_by(zuluru_id=zuluru_id).first()
+        instance = Team.query.filter_by(league=self.league_id, zuluru_id=zuluru_id).first()
 
         if instance:
             print(f'Updating Team: {name}')
         else:
             print(f'Creating Team: {name}')
-            instance = Team(zuluru_id=zuluru_id)
+            instance = Team(league=self.league_id, zuluru_id=zuluru_id)
 
         instance.name = name
 
@@ -98,13 +110,13 @@ class ZuluruSync:
 
 
     def update_or_create_player(self, zuluru_id, name, gender, team):
-        instance = Player.query.filter_by(zuluru_id=zuluru_id).first()
+        instance = Player.query.filter_by(league=self.league_id, zuluru_id=zuluru_id).first()
 
         if instance:
             print(f'Updating Player: {name}')
         else:
             print(f'Creating Player: {name}')
-            instance = Player(zuluru_id=zuluru_id)
+            instance = Player(league=self.league_id, zuluru_id=zuluru_id)
 
         instance.name = name
         instance.gender = gender
