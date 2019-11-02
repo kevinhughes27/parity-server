@@ -23,11 +23,9 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 db.init_app(app)
 
 
-# Upload
-@app.route('/upload', methods=['POST'])
+# Submit Game
+@app.route('/submit_game', methods=['POST'])
 def upload():
-    # debug_upload(request.json)
-
     # save the game to the database
     game = save_game(request.json)
 
@@ -40,17 +38,10 @@ def upload():
     return ('', 201)
 
 
-def debug_upload(upload_json):
-    now = datetime.datetime.now()
-    fo = open('data/test/' + str(now) + '.json', 'w')
-    fo.write(json.dumps(request.json, indent=2, sort_keys=True))
-    fo.close()
-
-
 def save_game(upload_json):
     game = Game()
 
-    game.league = upload_json['league']
+    game.league_id = upload_json['league_id']
     game.week = upload_json['week']
 
     game.home_team = upload_json['homeTeam']

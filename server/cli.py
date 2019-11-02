@@ -78,7 +78,7 @@ def roster_sync():
 
 @cli.command()
 def game_sync():
-    url = 'http://localhost:5000/upload'
+    url = 'http://localhost:5000/submit_game'
 
     curdir = os.getcwd()
 

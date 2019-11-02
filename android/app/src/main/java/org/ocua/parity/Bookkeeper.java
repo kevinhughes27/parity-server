@@ -278,6 +278,7 @@ public class Bookkeeper implements Serializable {
 
         try {
             jsonObject.accumulate("league", League.name);
+            jsonObject.accumulate("league_id", League.id);
 
             jsonObject.accumulate("week", Week.current());
 

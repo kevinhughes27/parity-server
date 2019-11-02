@@ -39,7 +39,7 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
-            buildConfigField "String", "UPLOAD_URL", "\"http://10.0.2.2:5000/upload\""
+            buildConfigField "String", "UPLOAD_URL", "\"http://10.0.2.2:5000/submit_game\""
         }
     }
 
@@ -50,18 +50,9 @@ android {
             buildConfigField "Integer", "MAX_MALES", "4"
             def baseUrl = "https://parity-server.herokuapp.com"
 
-            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/upload\""
+            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
             buildConfigField "String", "TEAMS_URL", "\"" + baseUrl + "/api/teams\""
 
-            dimension = "parity"
-        }
-        tournament {
-            buildConfigField "Integer", "MAX_FEMALES", "2"
-            buildConfigField "Integer", "MAX_MALES", "3"
-            def baseUrl = "https://parity-tournament.herokuapp.com"
-
-            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/upload\""
-            buildConfigField "String", "TEAMS_URL", "\"" + baseUrl + "/api/teams\""
             dimension = "parity"
         }
     }

@@ -63,7 +63,7 @@ Testing
 To test locally by uploading a json file run:
 
 ```sh
-curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http://localhost:5000/upload
+curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http://localhost:5000/submit_game
 ```
 
 To reset your local database delete the `db.sqlite` file and restart the python server.

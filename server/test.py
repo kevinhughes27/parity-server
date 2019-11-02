@@ -25,7 +25,7 @@ class ServerTests(FlaskTest, SnapShotTest):
         with open(data_file) as f:
             game_str = f.read()
 
-        response = self.client.post('/upload', data=game_str, content_type='application/json')
+        response = self.client.post('/submit_game', data=game_str, content_type='application/json')
         assert response.status_code == 201
 
 
