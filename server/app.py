@@ -63,61 +63,64 @@ def save_game(upload_json):
 
 # API
 @cache.cached()
-@app.route('/api/<league>/teams')
-def teams(league):
-    teams = build_teams_response(league)
+@app.route('/api/<league_id>/teams')
+def teams(league_id):
+    teams = build_teams_response(league_id)
     return jsonify(teams)
 
 
 @cache.cached()
-@app.route('/api/<league>/players')
-def players(league):
-    query = Player.query.filter(Player.league == league, Player.team_id != None)
+@app.route('/api/<league_id>/players')
+def players(league_id):
+    query = Player.query.filter(Player.league_id == league_id, Player.team_id != None)
     players = [player.to_dict() for player in query.all()]
     return jsonify(players)
 
 
 @cache.cached()
-@app.route('/api/<league>/games')
-def games(league):
-    games = [game.to_dict() for game in Game.query.filter_by(league=league)]
+@app.route('/api/<league_id>/games')
+def games(league_id):
+    games = [game.to_dict() for game in Game.query.filter_by(league_id=league_id)]
     return jsonify(games)
 
 
 @cache.cached()
-@app.route('/api/<league>/games/<id>')
-def game(league, id):
-    game = Game.query.filter_by(league=league, id=id).first()
+@app.route('/api/<league_id>/games/<id>')
+def game(league_id, id):
+    game = Game.query.filter_by(league_id=league_id, id=id).first()
     return jsonify(game.to_dict(include_points=True))
 
 
 @cache.cached()
 @app.route('/api/leagues')
 def leagues():
-    leagues = [league.to_dict() for league in League.query.order_by(League.zuluru_id.desc()).all()]
+    # 6 and 7 need their data format updated and then synced
+    league_ids = [1,2,3,4,5]
+    query = League.query.filter(League.id.in_(league_ids)).order_by(League.zuluru_id.desc())
+    leagues = [league.to_dict() for league in query]
     return jsonify(leagues)
 
 
 @cache.cached()
-@app.route('/api/<league>/weeks')
-def weeks(league):
-    games = Game.query.filter_by(league=league).all()
+@app.route('/api/<league_id>/weeks')
+def weeks(league_id):
+    games = Game.query.filter_by(league_id=league_id).all()
     weeks = [game.week for game in games]
     return jsonify(sorted(weeks))
 
 
 @cache.cached()
-@app.route('/api/<league>/weeks/<num>')
-def week(league, num):
-    games = Game.query.filter_by(league=league, week=num)
+@app.route('/api/<league_id>/weeks/<num>')
+def week(league_id, num):
+    games = Game.query.filter_by(league_id=league_id, week=num)
     stats = build_stats_response(games)
     return jsonify({"week": num, "stats": stats})
 
 
 @cache.cached()
-@app.route('/api/<league>/stats')
-def stats(league):
-    games = Game.query.filter_by(league=league).order_by(Game.week.asc())
+@app.route('/api/<league_id>/stats')
+def stats(league_id):
+    games = Game.query.filter_by(league_id=league_id).order_by(Game.week.asc())
     stats = build_stats_response(games)
     return jsonify({"week": 0, "stats": stats})
 

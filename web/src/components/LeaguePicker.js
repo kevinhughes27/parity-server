@@ -19,7 +19,7 @@ class LeaguePicker extends Component {
   renderLeagues (leagues) {
     return map(leagues, (league) => {
       return (
-        <MenuItem key={league.zuluru_id} value={league.league}>
+        <MenuItem key={league.id} value={league.id}>
           {league.name}
         </MenuItem>
       )

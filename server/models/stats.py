@@ -48,8 +48,8 @@ class Stats(db.Model):
     d_points_for = db.Column(db.Integer)
     d_points_against = db.Column(db.Integer)
 
-    def __init__(self, league, game_id, player_id):
-        self.league = league
+    def __init__(self, league_id, game_id, player_id):
+        self.league_id = league_id
         self.game_id = game_id
         self.player_id = player_id
         self.goals = 0

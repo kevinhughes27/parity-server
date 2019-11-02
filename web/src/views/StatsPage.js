@@ -8,6 +8,8 @@ import GenderFilter from '../components/GenderFilter'
 import StatsTable from '../components/StatsTable'
 import { fetchLeagues, fetchWeeks, fetchStats } from "../api"
 
+const defaultLeague = 1
+
 class StatsProvider extends Component {
   constructor (props) {
     super(props)
@@ -15,7 +17,7 @@ class StatsProvider extends Component {
     this.state = {
       loading: true,
       leagues: [],
-      league: '',
+      league: defaultLeague,
       weeks: [],
       week: 0,
       stats: {},
@@ -26,11 +28,10 @@ class StatsProvider extends Component {
   componentDidMount () {
     (async () => {
       const leagues = await fetchLeagues()
-      const league = _.first(leagues).league
-      const weeks = await fetchWeeks(league)
+      const weeks = await fetchWeeks(this.state.league)
       const week = _.last(weeks) || 0
-      const stats = await fetchStats(week, league)
-      this.setState({leagues, league, weeks, week, stats, loading: false})
+      const stats = await fetchStats(week, this.state.league)
+      this.setState({leagues, weeks, week, stats, loading: false})
     })()
   }
 
@@ -48,8 +49,10 @@ class StatsProvider extends Component {
     const league = event.target.value
     return (async () => {
       this.setState({league, loading: true})
+      const weeks = await fetchWeeks(this.state.league)
+      const week = _.last(weeks) || 0
       const stats = await fetchStats(this.state.week, league)
-      this.setState({ stats, loading: false })
+      this.setState({ weeks, week, stats, loading: false })
     })()
   }
 

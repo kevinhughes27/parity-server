@@ -83,13 +83,13 @@ def game_sync():
     curdir = os.getcwd()
 
     leagues = [
-        # { 'zuluru_id': 702 },
-        { 'zuluru_id': 662, 'data_folder': 'data/ocua_18-19/session2' },
-        { 'zuluru_id': 647, 'data_folder': 'data/ocua_18-19/session1' },
-        { 'zuluru_id': 615, 'data_folder': 'data/ocua_17-18/session2' },
-        { 'zuluru_id': 596, 'data_folder': 'data/ocua_17-18/session1' },
-        # { 'zuluru_id': 941, 'data_folder': 'data/ocua_16-17/session2' },
-        # { 'zuluru_id': 940, 'data_folder': 'data/ocua_16-17/session1' }
+        # { 'id': 1 }, nothing to sync
+        { 'id': 2, 'data_folder': 'data/ocua_18-19/session2' },
+        { 'id': 3, 'data_folder': 'data/ocua_18-19/session1' },
+        { 'id': 4, 'data_folder': 'data/ocua_17-18/session2' },
+        { 'id': 5, 'data_folder': 'data/ocua_17-18/session1' },
+        # { 'id': 6, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
+        # { 'id': 7, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
     ]
 
     for league in leagues:

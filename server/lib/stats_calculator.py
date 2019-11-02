@@ -2,7 +2,7 @@ from models import db, Stats, Player
 
 class StatsCalculator:
     def __init__(self, game):
-        self.league = game.league
+        self.league_id = game.league_id
         self.game = game
         self.points = game.points
 
@@ -79,18 +79,18 @@ class StatsCalculator:
         player = self.get_or_create_player(player_name)
 
         if player.name not in self.stats:
-            self.stats[player.name] = Stats(self.league, self.game.id, player.id)
+            self.stats[player.name] = Stats(self.league_id, self.game.id, player.id)
 
         self.stats[player.name].count_stat(stat)
 
 
     def get_or_create_player(self, player_name):
-        instance = Player.query.filter_by(name=player_name, league=self.league).first()
+        instance = Player.query.filter_by(name=player_name, league_id=self.league_id).first()
 
         if instance:
             return instance
         else:
-            instance = Player(name=player_name, league=self.league)
+            instance = Player(name=player_name, league_id=self.league_id)
             db.session.add(instance)
             db.session.commit()
             return instance
