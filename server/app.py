@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, Stats, Team, Player
+from models import db, Game, Stats, Team, Player, League
 from lib import StatsCalculator, build_stats_response, build_teams_response
 
 import os
@@ -98,6 +98,13 @@ def games(league):
 def game(league, id):
     game = Game.query.filter_by(league=league, id=id).first()
     return jsonify(game.to_dict(include_points=True))
+
+
+@cache.cached()
+@app.route('/api/leagues')
+def leagues():
+    leagues = [league.to_dict() for league in League.query.order_by(League.zuluru_id.desc()).all()]
+    return jsonify(leagues)
 
 
 @cache.cached()

@@ -1,6 +1,6 @@
 import 'whatwg-fetch'
 
-const league = "ocua_18-19"
+const defaultLeague = "ocua_18-19"
 
 const dataCache = {}
 
@@ -26,27 +26,32 @@ const cachedFetch = (url, _options) => {
   })
 }
 
-const fetchGames = async () => {
+const fetchGames = async (league = defaultLeague) => {
   const response = await cachedFetch(`/api/${league}/games`)
   return await response.json()
 }
 
-const fetchGame = async (gameId) => {
+const fetchGame = async (gameId, league = defaultLeague) => {
   const response = await cachedFetch(`/api/${league}/games/${gameId}`)
   return await response.json()
 }
 
-const fetchPlayers = async () => {
+const fetchLeagues = async (league = defaultLeague) => {
+  const response = await cachedFetch(`/api/leagues`)
+  return await response.json()
+}
+
+const fetchPlayers = async (league = defaultLeague) => {
   const response = await cachedFetch(`/api/${league}/players`)
   return await response.json()
 }
 
-const fetchWeeks = async () => {
+const fetchWeeks = async (league = defaultLeague) => {
   const response = await cachedFetch(`/api/${league}/weeks`)
   return await response.json()
 }
 
-const fetchStats = async (weekNum) => {
+const fetchStats = async (weekNum, league = defaultLeague) => {
   let url = `/api/${league}/weeks/${weekNum}`
   if (weekNum === 0) url = `/api/${league}/stats`
 
@@ -59,6 +64,7 @@ const fetchStats = async (weekNum) => {
 export {
   fetchGames,
   fetchGame,
+  fetchLeagues,
   fetchPlayers,
   fetchWeeks,
   fetchStats
