@@ -29,7 +29,7 @@ class Stats(db.Model):
     # }
 
     id = db.Column(db.Integer, primary_key=True)
-    league = db.Column(db.Text, nullable=False)
+    league_id = db.Column(db.Integer, nullable=False)
     game_id = db.Column(db.Integer, nullable=False)
     player_id = db.Column(db.Integer, nullable=False)
     goals = db.Column(db.Integer)

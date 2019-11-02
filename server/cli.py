@@ -7,7 +7,7 @@ from collections import defaultdict
 from flask_caching import Cache
 
 from app import app
-from models import db, Leagues
+from models import db, League
 from lib import ZuluruSync, PlayerDb
 
 
@@ -27,11 +27,48 @@ def init_db():
 
 
 @cli.command()
+def seed_leagues():
+    with app.app_context():
+        league_params = [
+            { 'zuluru_id': 702, 'name': '2019/2020 Session 1'},
+            { 'zuluru_id': 662, 'name': '2018/2019 Session 2' },
+            { 'zuluru_id': 647, 'name': '2018/2019 Session 1' },
+            { 'zuluru_id': 615, 'name': '2017/2018 Session 2' },
+            { 'zuluru_id': 596, 'name': '2017/2018 Session 1' },
+            { 'zuluru_id': 941, 'name': '2016/2017 Session 2' },
+            { 'zuluru_id': 940, 'name': '2016/2017 Session 1' }
+        ]
+
+        for params in league_params:
+            league = League()
+            league.zuluru_id = params['zuluru_id']
+            league.name = params['name']
+            db.session.add(league)
+
+        db.session.commit()
+        db.session.remove()
+
+
+@cli.command()
 def roster_sync():
     with app.app_context():
-        for league in Leagues:
-            player_db = PlayerDb(league.player_db_path).load()
-            ZuluruSync(league=league, player_db=player_db).sync_teams()
+
+        leagues = [
+            { 'zuluru_id': 702, 'player_db_path': '', 'division': False },
+            { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
+            { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
+            { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
+            { 'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
+            { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True },
+            { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True }
+        ]
+
+        for league in leagues:
+            ZuluruSync(
+                league=League.query.filter_by(zuluru_id=league['zuluru_id']).first(),
+                player_db=PlayerDb(league['player_db_path']).load(),
+                division=league['division']
+            ).sync_teams()
 
     db.session.remove()
 
@@ -40,14 +77,23 @@ def roster_sync():
 
 
 @cli.command()
-def seed():
-    click.echo('Seeding database...')
-
+def game_sync():
     url = 'http://localhost:5000/upload'
+
     curdir = os.getcwd()
 
-    for league in Leagues:
-        os.chdir(league.data_folder)
+    leagues = [
+        # { 'zuluru_id': 702 },
+        { 'zuluru_id': 662, 'data_folder': 'data/ocua_18-19/session2' },
+        { 'zuluru_id': 647, 'data_folder': 'data/ocua_18-19/session1' },
+        { 'zuluru_id': 615, 'data_folder': 'data/ocua_17-18/session2' },
+        { 'zuluru_id': 596, 'data_folder': 'data/ocua_17-18/session1' },
+        # { 'zuluru_id': 941, 'data_folder': 'data/ocua_16-17/session2' },
+        # { 'zuluru_id': 940, 'data_folder': 'data/ocua_16-17/session1' }
+    ]
+
+    for league in leagues:
+        os.chdir(league['data_folder'])
 
         files = glob.glob("week*.json")
         files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
@@ -55,7 +101,7 @@ def seed():
         for file in files:
             headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
             r = requests.post(url, data=open(file, 'rb'), headers=headers)
-            print(league.data_root, file, r.status_code)
+            print(league['data_folder'], file, r.status_code)
 
         # reset working dir
         os.chdir(curdir)

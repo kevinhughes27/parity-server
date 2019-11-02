@@ -4,11 +4,11 @@ from .stats import Stats
 
 class Player(db.Model):
     __table_args__ = (
-        db.UniqueConstraint('league', 'zuluru_id', name='unique_zuluru_player_per_league'),
+        db.UniqueConstraint('league_id', 'zuluru_id', name='unique_zuluru_player_per_league'),
     )
 
     id = db.Column(db.Integer, primary_key=True)
-    league = db.Column(db.Text, nullable=False)
+    league_id = db.Column(db.Integer, nullable=False)
     zuluru_id = db.Column(db.Integer)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     name = db.Column(db.Text)
