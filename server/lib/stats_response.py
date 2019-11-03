@@ -4,7 +4,13 @@ import json
 
 def build_stats_response(games):
     stats = {}
-    stats_to_average = ['pay', 'salary_per_point', 'o_efficiency', 'd_efficiency', 'total_efficiency']
+    stats_to_average = [
+        'pay',
+        'salary_per_point',
+        'o_efficiency',
+        'd_efficiency',
+        'total_efficiency'
+    ]
 
     # rollup stats per game
     for game in games:
@@ -25,9 +31,9 @@ def build_stats_response(games):
             # set the team for the player
             if "(S)" in player.name:
                 team = "Substitute"
-            elif player.name in json.loads(game.home_roster):
+            elif player.name in game.home_roster:
                 team = game.home_team
-            elif player.name in json.loads(game.away_roster):
+            elif player.name in game.away_roster:
                 team = game.away_team
             elif player.team_id:
                 team = Team.query.get(player.team_id).name

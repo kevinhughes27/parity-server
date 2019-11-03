@@ -18,7 +18,6 @@ class Game(db.Model):
     def league(self):
         return League.query.get(self.league_id)
 
-
     @property
     def players(self):
         return self.home_roster + self.away_roster

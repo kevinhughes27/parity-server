@@ -4,16 +4,14 @@ require 'pp'
 require 'byebug'
 
 
-# these IDs are wrong now
 def backfill
   leagues = [
-    # { id: 1 },
-    { id: 2, data_directory: 'data/ocua_18-19/session2' },
-    { id: 3, data_directory: 'data/ocua_18-19/session1' },
-    { id: 4, data_directory: 'data/ocua_17-18/session2' },
-    { id: 5, data_directory: 'data/ocua_17-18/session1' },
-    { id: 6, data_directory: 'data/ocua_16-17/session2' },
-    { id: 7, data_directory: 'data/ocua_16-17/session1' },
+    { id: 9, data_directory: 'data/ocua_18-19/session2' },
+    { id: 8, data_directory: 'data/ocua_18-19/session1' },
+    { id: 7, data_directory: 'data/ocua_17-18/session2' },
+    { id: 6, data_directory: 'data/ocua_17-18/session1' },
+    { id: 5, data_directory: 'data/ocua_16-17/session2' },
+    { id: 4, data_directory: 'data/ocua_16-17/session1' },
   ]
 
   leagues.each do |league|

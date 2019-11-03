@@ -94,9 +94,8 @@ def game(league_id, id):
 @cache.cached()
 @app.route('/api/leagues')
 def leagues():
-    # these ids are wrong
-    # 6 and 7 need their data format updated and then synced
-    league_ids = [1,2,3,4,5]
+    # earlier leagues are not ready yet
+    league_ids = [6,7,8,9,10]
     query = League.query.filter(League.id.in_(league_ids)).order_by(League.zuluru_id.desc())
     leagues = [league.to_dict() for league in query]
     return jsonify(leagues)
@@ -106,7 +105,7 @@ def leagues():
 @app.route('/api/<league_id>/weeks')
 def weeks(league_id):
     games = Game.query.filter_by(league_id=league_id).all()
-    weeks = [game.week for game in games]
+    weeks = set([game.week for game in games])
     return jsonify(sorted(weeks))
 
 

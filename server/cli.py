@@ -40,13 +40,15 @@ def seed_leagues():
             { 'zuluru_id': 494, 'name': '2015/2016 Winter', 'salary_version': 'v1' },
             { 'zuluru_id': 438, 'name': '2014/2015 Winter', 'salary_version': 'v1' },
             { 'zuluru_id': 404, 'name': '2014 Spring', 'salary_version': 'v1' },
-        ].reverse()
+        ]
+
+        league_params.reverse()
 
         for params in league_params:
             league = League()
             league.zuluru_id = params['zuluru_id']
             league.name = params['name']
-            league.salaray_version = params['salaray_version']
+            league.salary_version = params['salary_version']
             db.session.add(league)
 
         db.session.commit()
@@ -87,13 +89,13 @@ def game_sync():
     curdir = os.getcwd()
 
     leagues = [
-        # { 'id': 1 }, nothing to sync
-        { 'id': 2, 'data_folder': 'data/ocua_18-19/session2' },
-        { 'id': 3, 'data_folder': 'data/ocua_18-19/session1' },
-        { 'id': 4, 'data_folder': 'data/ocua_17-18/session2' },
-        { 'id': 5, 'data_folder': 'data/ocua_17-18/session1' },
-        # { 'id': 6, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
-        # { 'id': 7, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
+        # { 'id': 10 }, nothing to sync
+        { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
+        { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
+        { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
+        { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
+        # { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
+        # { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
     ]
 
     for league in leagues:
