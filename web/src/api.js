@@ -1,6 +1,6 @@
 import 'whatwg-fetch'
 
-const defaultLeague = "ocua_18-19"
+const defaultLeague = "10"
 
 const dataCache = {}
 
