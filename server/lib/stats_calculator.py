@@ -2,15 +2,17 @@ from models import db, Stats, Player
 
 class StatsCalculator:
     def __init__(self, game):
-        self.league_id = game.league_id
         self.game = game
-        self.points = game.points
+
+        league = game.league
+        self.league_id = league.id
+        self.salary_version = league.salary_version
 
 
     def run(self):
         self.stats = {}
 
-        for point in self.points:
+        for point in self.game.points:
             self.process_point(point)
 
         for name, player_stats in self.stats.items():
@@ -79,7 +81,7 @@ class StatsCalculator:
         player = self.get_or_create_player(player_name)
 
         if player.name not in self.stats:
-            self.stats[player.name] = Stats(self.league_id, self.game.id, player.id)
+            self.stats[player.name] = Stats(self.league_id, self.game.id, player.id, self.salary_version)
 
         self.stats[player.name].count_stat(stat)
 

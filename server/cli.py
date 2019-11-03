@@ -30,22 +30,23 @@ def init_db():
 def seed_leagues():
     with app.app_context():
         league_params = [
-            { 'zuluru_id': 702, 'name': '2019/2020 Session 1'},
-            { 'zuluru_id': 662, 'name': '2018/2019 Session 2' },
-            { 'zuluru_id': 647, 'name': '2018/2019 Session 1' },
-            { 'zuluru_id': 615, 'name': '2017/2018 Session 2' },
-            { 'zuluru_id': 596, 'name': '2017/2018 Session 1' },
-            { 'zuluru_id': 941, 'name': '2016/2017 Session 2' },
-            { 'zuluru_id': 940, 'name': '2016/2017 Session 1' }
-            { 'zuluru_id': 494, 'name': '2015/2016 Winter' },
-            { 'zuluru_id': 438, 'name': '2014/2015 Winter' },
-            { 'zuluru_id': 404, 'name': '2014 Spring' },
+            { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'salary_version': 'v2'},
+            { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'salary_version': 'v1' },
+            { 'zuluru_id': 615, 'name': '2017/2018 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 596, 'name': '2017/2018 Session 1', 'salary_version': 'v1' },
+            { 'zuluru_id': 941, 'name': '2016/2017 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 940, 'name': '2016/2017 Session 1', 'salary_version': 'v1'},
+            { 'zuluru_id': 494, 'name': '2015/2016 Winter', 'salary_version': 'v1' },
+            { 'zuluru_id': 438, 'name': '2014/2015 Winter', 'salary_version': 'v1' },
+            { 'zuluru_id': 404, 'name': '2014 Spring', 'salary_version': 'v1' },
         ].reverse()
 
         for params in league_params:
             league = League()
             league.zuluru_id = params['zuluru_id']
             league.name = params['name']
+            league.salaray_version = params['salaray_version']
             db.session.add(league)
 
         db.session.commit()

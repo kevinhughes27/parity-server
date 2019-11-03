@@ -8,9 +8,10 @@ class Player(db.Model):
     )
 
     id = db.Column(db.Integer, primary_key=True)
-    league_id = db.Column(db.Integer, nullable=False)
     zuluru_id = db.Column(db.Integer)
+    league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+
     name = db.Column(db.Text)
     gender = db.Column(db.Text)
     fallback_salary = db.Column(db.Integer)
@@ -22,7 +23,6 @@ class Player(db.Model):
     @property
     def team(self):
         if self.team_id:
-            from .team import Team
             return Team.query.get(self.team_id)
         else:
             return None

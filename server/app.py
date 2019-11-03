@@ -94,6 +94,7 @@ def game(league_id, id):
 @cache.cached()
 @app.route('/api/leagues')
 def leagues():
+    # these ids are wrong
     # 6 and 7 need their data format updated and then synced
     league_ids = [1,2,3,4,5]
     query = League.query.filter(League.id.in_(league_ids)).order_by(League.zuluru_id.desc())

@@ -4,6 +4,7 @@ require 'pp'
 require 'byebug'
 
 
+# these IDs are wrong now
 def backfill
   leagues = [
     # { id: 1 },

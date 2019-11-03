@@ -3,7 +3,8 @@ from .db import db
 class League(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     zuluru_id = db.Column(db.Integer, unique=True)
-    name = db.Column(db.Text)
+    name = db.Column(db.Text, nullable=False)
+    salary_version = db.Column(db.Text, nullable=False)
 
     def to_dict(self):
         return {
