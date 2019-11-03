@@ -13,6 +13,7 @@ import org.json.JSONArray;
 
 import org.ocua.parity.BuildConfig;
 import org.ocua.parity.ChooseTeams;
+import org.ocua.parity.model.League;
 
 public class FetchRoster extends AsyncTask<String, String, Long> {
 
@@ -35,7 +36,7 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
-        String strRosterUrl = BuildConfig.TEAMS_URL;
+        String strRosterUrl = String.format(BuildConfig.TEAMS_URL, League.id);
         String resString = "";
 
         try {

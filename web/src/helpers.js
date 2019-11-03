@@ -5,7 +5,7 @@ export function calcSalaryLimits(players) {
   const salaryCapVariance = 0.02
   const salaries = _.map(players, (p) => p.salary)
   const salaryAvg = _.sum(salaries) / numTeams;
-  
+
   return {
     salaryCap: salaryAvg * (1 + salaryCapVariance),
     salaryFloor: salaryAvg * (1 - salaryCapVariance),

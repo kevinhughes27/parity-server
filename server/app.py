@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, Stats, Team, Player
+from models import db, Game, Stats, Team, Player, League
 from lib import StatsCalculator, build_stats_response, build_teams_response
 
 import os
@@ -23,11 +23,9 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 db.init_app(app)
 
 
-# Upload
-@app.route('/upload', methods=['POST'])
+# Submit Game
+@app.route('/submit_game', methods=['POST'])
 def upload():
-    # debug_upload(request.json)
-
     # save the game to the database
     game = save_game(request.json)
 
@@ -40,17 +38,10 @@ def upload():
     return ('', 201)
 
 
-def debug_upload(upload_json):
-    now = datetime.datetime.now()
-    fo = open('data/test/' + str(now) + '.json', 'w')
-    fo.write(json.dumps(request.json, indent=2, sort_keys=True))
-    fo.close()
-
-
 def save_game(upload_json):
     game = Game()
 
-    game.league = upload_json['league']
+    game.league_id = upload_json['league_id']
     game.week = upload_json['week']
 
     game.home_team = upload_json['homeTeam']
@@ -72,54 +63,64 @@ def save_game(upload_json):
 
 # API
 @cache.cached()
-@app.route('/api/teams')
-def teams():
-    teams = build_teams_response()
+@app.route('/api/<league_id>/teams')
+def teams(league_id):
+    teams = build_teams_response(league_id)
     return jsonify(teams)
 
 
 @cache.cached()
-@app.route('/api/players')
-def players():
-    query = Player.query.filter(Player.team_id != None)
+@app.route('/api/<league_id>/players')
+def players(league_id):
+    query = Player.query.filter(Player.league_id == league_id, Player.team_id != None)
     players = [player.to_dict() for player in query.all()]
     return jsonify(players)
 
 
 @cache.cached()
-@app.route('/api/games')
-def games():
-    games = [game.to_dict() for game in Game.query.all()]
+@app.route('/api/<league_id>/games')
+def games(league_id):
+    games = [game.to_dict() for game in Game.query.filter_by(league_id=league_id)]
     return jsonify(games)
 
 
 @cache.cached()
-@app.route('/api/games/<id>')
-def game(id):
-    game = Game.query.get(id)
+@app.route('/api/<league_id>/games/<id>')
+def game(league_id, id):
+    game = Game.query.filter_by(league_id=league_id, id=id).first()
     return jsonify(game.to_dict(include_points=True))
 
 
 @cache.cached()
-@app.route('/api/weeks')
-def weeks():
-    query = db.session.query(Game.week.distinct().label("week"))
-    weeks = [row.week for row in query.all()]
+@app.route('/api/leagues')
+def leagues():
+    # earlier leagues are not ready yet
+    league_ids = [6,7,8,9,10]
+    query = League.query.filter(League.id.in_(league_ids)).order_by(League.zuluru_id.desc())
+    leagues = [league.to_dict() for league in query]
+    return jsonify(leagues)
+
+
+@cache.cached()
+@app.route('/api/<league_id>/weeks')
+def weeks(league_id):
+    games = Game.query.filter_by(league_id=league_id).all()
+    weeks = set([game.week for game in games])
     return jsonify(sorted(weeks))
 
 
 @cache.cached()
-@app.route('/api/weeks/<num>')
-def week(num):
-    games = Game.query.filter_by(week=num)
+@app.route('/api/<league_id>/weeks/<num>')
+def week(league_id, num):
+    games = Game.query.filter_by(league_id=league_id, week=num)
     stats = build_stats_response(games)
     return jsonify({"week": num, "stats": stats})
 
 
 @cache.cached()
-@app.route('/api/stats')
-def stats():
-    games = Game.query.order_by(Game.week.asc())
+@app.route('/api/<league_id>/stats')
+def stats(league_id):
+    games = Game.query.filter_by(league_id=league_id).order_by(Game.week.asc())
     stats = build_stats_response(games)
     return jsonify({"week": 0, "stats": stats})
 

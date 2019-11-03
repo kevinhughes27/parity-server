@@ -1,36 +1,13 @@
 from .db import db
 
 class Stats(db.Model):
-    SALARY = {
-        'goals': 10000,
-        'assists': 10000,
-        'second_assists': 8000,
-        'd_blocks': 8000,
-        'throw_aways': -5000,
-        'threw_drops': -1000,
-        'drops': -4000,
-        'completions': 500,
-        'catches': 500,
-        'o_points_for': 1000,
-        'd_points_for': 2000
-    }
-
-    # 2016 - 2019
-    # SALARY = {
-    #     'goals': 10000,
-    #     'assists': 10000,
-    #     'second_assists': 8000,
-    #     'd_blocks': 8000,
-    #     'throw_aways': -5000,
-    #     'threw_drops': -2500,
-    #     'drops': -5000,
-    #     'completions': 1000,
-    #     'catches': 1000
-    # }
-
     id = db.Column(db.Integer, primary_key=True)
-    game_id = db.Column(db.Integer, nullable=False)
-    player_id = db.Column(db.Integer, nullable=False)
+    league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
+    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
+    player_id = db.Column(db.Integer, db.ForeignKey('player.id'), nullable=False)
+
+    salary_version = db.Column(db.Text, nullable=False)
+
     goals = db.Column(db.Integer)
     assists = db.Column(db.Integer)
     second_assists = db.Column(db.Integer)
@@ -47,9 +24,40 @@ class Stats(db.Model):
     d_points_for = db.Column(db.Integer)
     d_points_against = db.Column(db.Integer)
 
-    def __init__(self, game_id, player_id):
+    SALARY = {
+        'v2': {
+            'goals': 10000,
+            'assists': 10000,
+            'second_assists': 8000,
+            'd_blocks': 8000,
+            'throw_aways': -5000,
+            'threw_drops': -1000,
+            'drops': -4000,
+            'completions': 500,
+            'catches': 500,
+            'o_points_for': 1000,
+            'd_points_for': 2000
+        },
+        'v1': {
+            'goals': 10000,
+            'assists': 10000,
+            'second_assists': 8000,
+            'd_blocks': 8000,
+            'throw_aways': -5000,
+            'threw_drops': -2500,
+            'drops': -5000,
+            'completions': 1000,
+            'catches': 1000
+        }
+    }
+
+    def __init__(self, league_id, game_id, player_id, salary_version):
+        self.league_id = league_id
         self.game_id = game_id
         self.player_id = player_id
+
+        self.salary_version = salary_version
+
         self.goals = 0
         self.assists = 0
         self.second_assists = 0
@@ -73,17 +81,9 @@ class Stats(db.Model):
     @property
     def pay(self):
         total = 0
-        total += self.goals * self.SALARY['goals']
-        total += self.assists * self.SALARY['assists']
-        total += self.second_assists * self.SALARY['second_assists']
-        total += self.d_blocks * self.SALARY['d_blocks']
-        total += self.drops * self.SALARY['drops']
-        total += self.throw_aways * self.SALARY['throw_aways']
-        total += self.threw_drops * self.SALARY['threw_drops']
-        total += self.completions * self.SALARY['completions']
-        total += self.catches * self.SALARY['catches']
-        total += self.o_points_for * self.SALARY['o_points_for']
-        total += self.d_points_for * self.SALARY['d_points_for']
+
+        for stat, value in self.SALARY[self.salary_version].items():
+            total += getattr(self, stat) * value
 
         return total
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
 import click
+import requests
 import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
 from flask_caching import Cache
 
 from app import app
-from models import db
-from lib import ZuluruSync
+from models import db, League
+from lib import ZuluruSync, PlayerDb
 
-data_folder = "data/ocua_18-19/session2"
 
 @click.group()
 def cli():
@@ -27,25 +27,90 @@ def init_db():
 
 
 @cli.command()
-@click.option('--prod', is_flag=True)
-@click.option('--week', default=0)
-def seed(prod, week):
-    click.echo('Seeding database...')
+def seed_leagues():
+    with app.app_context():
+        league_params = [
+            { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'salary_version': 'v2'},
+            { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'salary_version': 'v1' },
+            { 'zuluru_id': 615, 'name': '2017/2018 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 596, 'name': '2017/2018 Session 1', 'salary_version': 'v1' },
+            { 'zuluru_id': 941, 'name': '2016/2017 Session 2', 'salary_version': 'v1' },
+            { 'zuluru_id': 940, 'name': '2016/2017 Session 1', 'salary_version': 'v1'},
+            { 'zuluru_id': 494, 'name': '2015/2016 Winter', 'salary_version': 'v1' },
+            { 'zuluru_id': 438, 'name': '2014/2015 Winter', 'salary_version': 'v1' },
+            { 'zuluru_id': 404, 'name': '2014 Spring', 'salary_version': 'v1' },
+        ]
 
-    url = 'https://parity-server.herokuapp.com/upload' if prod else 'http://localhost:5000/upload'
+        league_params.reverse()
 
-    src = data_folder
-    os.chdir(src)
+        for params in league_params:
+            league = League()
+            league.zuluru_id = params['zuluru_id']
+            league.name = params['name']
+            league.salary_version = params['salary_version']
+            db.session.add(league)
 
-    pattern = "week{:d}*.json".format(week) if week > 0 else "*.json"
+        db.session.commit()
+        db.session.remove()
 
-    files = glob.glob(pattern)
-    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
 
-    for file in files:
-        headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
-        r = requests.post(url, data=open(file, 'rb'), headers=headers)
-        print(file, r.status_code)
+@cli.command()
+def roster_sync():
+    with app.app_context():
+
+        leagues = [
+            { 'zuluru_id': 702, 'player_db_path': '', 'division': False },
+            { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
+            { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
+            { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
+            { 'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
+            { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True },
+            { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True }
+        ]
+
+        for league in leagues:
+            ZuluruSync(
+                league=League.query.filter_by(zuluru_id=league['zuluru_id']).first(),
+                player_db=PlayerDb(league['player_db_path']).load(),
+                division=league['division']
+            ).sync_teams()
+
+    db.session.remove()
+
+    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+    cache.clear()
+
+
+@cli.command()
+def game_sync():
+    url = 'http://localhost:5000/submit_game'
+
+    curdir = os.getcwd()
+
+    leagues = [
+        # { 'id': 10 }, nothing to sync
+        { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
+        { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
+        { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
+        { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
+        # { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
+        # { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
+    ]
+
+    for league in leagues:
+        os.chdir(league['data_folder'])
+
+        files = glob.glob("week*.json")
+        files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
+
+        for file in files:
+            headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
+            r = requests.post(url, data=open(file, 'rb'), headers=headers)
+            print(league['data_folder'], file, r.status_code)
+
+        # reset working dir
+        os.chdir(curdir)
 
     click.echo('Done')
 
@@ -56,7 +121,7 @@ def backup(week):
     click.echo('Downloading database...')
 
     src_url = "https://parity-server.herokuapp.com/api/games"
-    target_dir = data_folder
+    target_dir = "data/ocua_19-20"
 
     game_counts = defaultdict(int)
 
@@ -84,17 +149,6 @@ def backup(week):
         fo.close()
 
     click.echo('Done')
-
-
-@cli.command()
-def zuluru_sync():
-    with app.app_context():
-        ZuluruSync().sync_teams(league_id=702)
-
-    db.session.remove()
-
-    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
-    cache.clear()
 
 
 if __name__ == "__main__":

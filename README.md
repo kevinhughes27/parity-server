@@ -12,8 +12,14 @@ Server Setup
 1. You will need `python` (version 3) (with `pip`) and `sqlite` on your local machine. (See Python and SQLite notes below)
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the python server with this command `python server/app.py`
-4. Create your database by running `python server/cli.py init-db` and then seed it with `python server/cli.py seed`
+4. Create your database by running `python server/cli.py init-db` and then populate it with:
+    * `python server/cli.py seed-leagues`
+    * `python server/cli.py roster-sync`
+    * `python server/cli.py game-sync`
 5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
+
+Roster sync requires certain zuluru privileges and some offline saved player data. If you need a full database ask for a sqlite file in #parity-dev and someone
+will help you out.
 
 On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python app.py`)
 
@@ -63,7 +69,7 @@ Testing
 To test locally by uploading a json file run:
 
 ```sh
-curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http://localhost:5000/upload
+curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http://localhost:5000/submit_game
 ```
 
 To reset your local database delete the `db.sqlite` file and restart the python server.
