@@ -10,6 +10,7 @@ import Leaderboards from './views/Leaderboards'
 import ComparePlayers from './views/ComparePlayers'
 
 import SalaryPage from './views/SalaryPage'
+import StatsTable from './views/StatsTable'
 import TeamDashboard from './views/TeamDashboard'
 import TradeSimulator from './views/TradeSimulator'
 
@@ -32,7 +33,11 @@ class App extends React.Component {
         <Route exact path="/games" component={GamesList} />
         <Route path="/games/:gameId" component={Game} />
 
-        <Route exact path="/" component={StatsPage} />
+        <Route exact path="/" >
+          <StatsPage>
+            <StatsTable />
+          </StatsPage>
+        </Route>
 
         <Route path="/leaderboards">
           <StatsPage>
