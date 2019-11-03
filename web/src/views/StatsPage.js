@@ -4,7 +4,6 @@ import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
 import GenderFilter from '../components/GenderFilter'
-import StatsTable from '../components/StatsTable'
 import { last, pickBy } from 'lodash'
 import { fetchLeagues, fetchWeeks, fetchStats } from "../api"
 
@@ -97,11 +96,8 @@ class StatsProvider extends Component {
     const stats = this.filteredStats(filter, this.state.stats)
 
     return (
-      <div className="container" style={{height: '100%', minHeight: '100%'}}>
-        { this.props.children
-          ? React.cloneElement(this.props.children, {week: week, stats: stats})
-          : <StatsTable week={week} stats={stats}/>
-        }
+      <div style={{height: '100%', minHeight: '100%'}}>
+        { React.cloneElement(this.props.children, {week: week, stats: stats}) }
       </div>
     )
   }
