@@ -37,7 +37,10 @@ def seed_leagues():
             { 'zuluru_id': 596, 'name': '2017/2018 Session 1' },
             { 'zuluru_id': 941, 'name': '2016/2017 Session 2' },
             { 'zuluru_id': 940, 'name': '2016/2017 Session 1' }
-        ]
+            { 'zuluru_id': 494, 'name': '2015/2016 Winter' },
+            { 'zuluru_id': 438, 'name': '2014/2015 Winter' },
+            { 'zuluru_id': 404, 'name': '2014 Spring' },
+        ].reverse()
 
         for params in league_params:
             league = League()
