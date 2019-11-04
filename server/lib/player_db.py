@@ -14,15 +14,10 @@ class PlayerDb:
                 csv_reader = csv.DictReader(csv_file)
 
                 for row in csv_reader:
-                    if row['Roster Designation'] == 'Open':
-                      gender = "male"
-                    else:
-                        gender = "female"
-
                     players[row['User ID']] = {
                       'zuluru_id': row['User ID'],
                       'name': row['First Name'] + " " + row["Last Name"],
-                      'gender': gender
+                      'gender': row['Roster Designation']
                     }
 
         return players

@@ -84,8 +84,8 @@ class ZuluruSync:
             gender_elems = []
             for p in player_elems:
                 zuluru_id = p.get('id').replace(self.player_id_preamble, '')
-                gender_elems.append( self.player_db[zuluru_id]['gender'] )
-
+                gender = self.player_db[zuluru_id]['gender']
+                gender_elems.append(gender)
 
         roles_regex = '(Regular player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
         role_elems = table.findAll(text=re.compile(roles_regex))
