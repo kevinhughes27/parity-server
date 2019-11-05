@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
+import { currentLeague, setLeague, fetchLeagues } from '../api'
 import { map } from 'lodash'
 
 const styles = {
@@ -16,6 +17,19 @@ const styles = {
 }
 
 class LeaguePicker extends Component {
+  state = {
+    loading: true,
+    leagues: [],
+    league: currentLeague(),
+  }
+
+  componentDidMount () {
+    return (async () => {
+      const leagues = await fetchLeagues()
+      this.setState({leagues, loading: false})
+    })()
+  }
+
   renderLeagues (leagues) {
     return map(leagues, (league) => {
       return (
@@ -26,14 +40,24 @@ class LeaguePicker extends Component {
     })
   }
 
+  onChange = (ev) => {
+    const league = ev.target.value
+    setLeague(league)
+    this.setState({league})
+    this.props.onChange(league)
+  }
+
   render () {
-    const { classes, league, leagues, onChange } = this.props
+    const { classes } = this.props
+    const { league, leagues, loading } = this.state
+
+    if (loading) return null
 
     return (
       <div style={{paddingRight: 20}}>
         <Select
           value={league}
-          onChange={onChange}
+          onChange={this.onChange}
           classes={{ root: classes.selectRoot }}
           disableUnderline
           inputProps={{

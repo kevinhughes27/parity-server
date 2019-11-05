@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
-import { fetchLeagues, fetchGames } from '../../api'
+import { currentLeague, fetchGames } from '../../api'
 
 const styles = {
   list: {
@@ -22,33 +22,27 @@ const styles = {
   }
 }
 
-const defaultLeague = 10
-
 class GamesList extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       loading: true,
-      leagues: [],
-      league: '',
       games: []
     }
   }
 
   componentDidMount () {
-    const league = defaultLeague
+    const league = currentLeague()
     return (async () => {
-      const leagues = await fetchLeagues()
       const games = await fetchGames(league)
-      this.setState({leagues, league, games, loading: false})
+      this.setState({games, loading: false})
     })()
   }
 
-  leagueChange (event) {
-    const league = event.target.value
+  leagueChange (league) {
     return (async () => {
-      this.setState({league, loading: true})
+      this.setState({loading: true})
       const games = await fetchGames(league)
       this.setState({ games, loading: false })
     })()
@@ -82,7 +76,6 @@ class GamesList extends Component {
   }
 
   renderGame (game) {
-    debugger
     return (
       <NavLink key={game.id} to={`${game.league_id}/games/${game.id}`} style={styles.listItem}>
         <ListItem divider button>
@@ -111,14 +104,12 @@ class GamesList extends Component {
   }
 
   render () {
-    const league = this.state.league
-    const leagues = [...this.state.leagues]
     const leagueChange = this.leagueChange.bind(this)
 
     return (
       <React.Fragment>
         <TopNav>
-          <LeaguePicker league={league} leagues={leagues} onChange={leagueChange} />
+          <LeaguePicker onChange={leagueChange} />
         </TopNav>
         { this.renderMain() }
       </React.Fragment>
