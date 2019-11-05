@@ -3,7 +3,6 @@ import { Grid, Container, Button } from '@material-ui/core'
 import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
 import { calcSalaryLimits } from '../../helpers'
-import { fetchPlayers } from "../../api"
 import { findIndex, sortBy, uniq, remove, isEqual, map } from 'lodash'
 
 export default class TradeSimulator extends Component {
@@ -17,13 +16,6 @@ export default class TradeSimulator extends Component {
       playerA: '',
       playerB: '',
     }
-  }
-
-  componentDidMount () {
-    (async () => {
-      const players = await fetchPlayers()
-      this.setState({players, loading: false})
-    })()
   }
 
   playerAChanged (value: string) {

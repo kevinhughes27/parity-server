@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import TopNav from '../layout/TopNav'
 import Loading from '../components/Loading'
-import { fetchPlayers } from "../api"
+import LeaguePicker from '../components/LeaguePicker'
+import { fetchLeagues, fetchPlayers } from "../api"
+
+const defaultLeague = 10
 
 class SalaryProvider extends Component {
   constructor (props) {
@@ -9,14 +12,27 @@ class SalaryProvider extends Component {
 
     this.state = {
       loading: true,
+      leagues: [],
+      league: '',
       players: [],
     }
   }
 
   componentDidMount () {
-    (async () => {
-      const players = await fetchPlayers()
-      this.setState({players, loading: false})
+    const league = defaultLeague
+    return (async () => {
+      const leagues = await fetchLeagues()
+      const players = await fetchPlayers(league)
+      this.setState({leagues, league, players, loading: false})
+    })()
+  }
+
+  leagueChange (event) {
+    const league = event.target.value
+    return (async () => {
+      this.setState({league, loading: true})
+      const players = await fetchPlayers(league)
+      this.setState({ players, loading: false })
     })()
   }
 
@@ -33,9 +49,15 @@ class SalaryProvider extends Component {
   }
 
   render () {
+    const league = this.state.league
+    const leagues = [...this.state.leagues]
+    const leagueChange = this.leagueChange.bind(this)
+
     return (
       <div>
-        <TopNav />
+        <TopNav>
+          <LeaguePicker league={league} leagues={leagues} onChange={leagueChange} />
+        </TopNav>
         { this.renderMain() }
       </div>
     )
