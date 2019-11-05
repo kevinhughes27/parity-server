@@ -1,11 +1,10 @@
-import _ from 'lodash'
-import ls from 'local-storage'
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
 import Chart from './Chart'
 import { calcSalaryLimits } from '../../helpers'
+import { map, sum, sortBy } from 'lodash'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -14,7 +13,7 @@ export default class TeamDashboard extends Component {
     this.state = {
       loading: true,
       players: this.props.players,
-      team: ls.get('team') || this.props.players[0].team
+      team: this.props.players[0].team
     }
 
     this.teamChanged = this.teamChanged.bind(this)
@@ -22,16 +21,15 @@ export default class TeamDashboard extends Component {
 
   teamChanged (event) {
     const teamName = event.target.value
-    ls.set('team', teamName)
     this.setState({team: teamName})
   }
 
   render () {
     const {team, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
-    const sortedPlayers = _.sortBy(teamPlayers, (p) => p.salary).reverse();
-    const salaries = _.map(sortedPlayers, (p) => p.salary);
-    const teamSalary = _.sum(salaries);
+    const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
+    const salaries = map(sortedPlayers, (p) => p.salary);
+    const teamSalary = sum(salaries);
     const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
     const overCap = teamSalary > salaryCap;
     const underFloor = teamSalary < salaryFloor;

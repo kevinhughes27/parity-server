@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <Router history={browserHistory} onUpdate={logPageView}>
         <Route exact path="/games" component={GamesList} />
-        <Route path="/games/:gameId" component={Game} />
+        <Route path="/:leagueId/games/:gameId" component={Game} />
 
         <Route exact path="/" >
           <StatsPage>
