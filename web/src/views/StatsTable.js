@@ -62,6 +62,18 @@ const columnsMeta = [
     searchable: false
   },
   {
+    field: 'o_efficiency',
+    title: 'Holds',
+    searchable: false,
+    render: rowData => rowData.o_points_for + '/' + (rowData.o_points_against + rowData.o_points_for)
+  },
+  {
+    field: 'd_efficiency',
+    title: 'Breaks',
+    searchable: false,
+    render: rowData => rowData.d_points_for + '/' + (rowData.d_points_against + rowData.d_points_for)
+  },
+  {
     field: 'pay',
     title: 'Pay',
     type: 'currency',
