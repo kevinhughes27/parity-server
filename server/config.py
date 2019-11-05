@@ -25,7 +25,7 @@ class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = development_database_path()
-
+    # SQLALCHEMY_ECHO = True
 
 class TestingConfig(Config):
     TESTING = True
