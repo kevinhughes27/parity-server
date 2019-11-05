@@ -6,12 +6,10 @@ def build_players_response(league_id):
 
     # Calculate Salaries 👍
     for player in players:
-        player_has_stats = any(s.player_id == player.id for s in stats)
-
-        if player_has_stats == False:
-            continue
-
         player_stats = [s for s in stats if s.player_id == player.id]
+
+        if len(player_stats) == 0:
+            continue
 
         salaries = [ps.salary_per_point for ps in player_stats]
         average_salary_per_point = sum(salaries) / len(salaries)
