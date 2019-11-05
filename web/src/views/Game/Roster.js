@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React from 'react'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -13,7 +12,7 @@ const Roster = ({players}) => (
           <strong>Roster</strong>
         </TableCell>
       </TableRow>
-      { _.map(players, (player) => {
+      { players.map((player) => {
         return (
           <TableRow key={player} hover>
             <TableCell>
