@@ -3,12 +3,13 @@ import { withStyles } from '@material-ui/styles'
 import { NavLink } from 'react-router-dom'
 import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
+import LeaguePicker from '../../components/LeaguePicker'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
-import { fetchGames } from '../../api'
+import { currentLeague, fetchGames } from '../../api'
 
 const styles = {
   list: {
@@ -32,9 +33,18 @@ class GamesList extends Component {
   }
 
   componentDidMount () {
-    (async () => {
-      const games = await fetchGames()
+    const league = currentLeague()
+    return (async () => {
+      const games = await fetchGames(league)
       this.setState({games, loading: false})
+    })()
+  }
+
+  leagueChange (league) {
+    return (async () => {
+      this.setState({loading: true})
+      const games = await fetchGames(league)
+      this.setState({ games, loading: false })
     })()
   }
 
@@ -67,7 +77,7 @@ class GamesList extends Component {
 
   renderGame (game) {
     return (
-      <NavLink key={game.id} to={`/games/${game.id}`} style={styles.listItem}>
+      <NavLink key={game.id} to={`${game.league_id}/games/${game.id}`} style={styles.listItem}>
         <ListItem divider button>
           <ListItemText>
             { game.homeTeam } vs { game.awayTeam }
@@ -94,9 +104,13 @@ class GamesList extends Component {
   }
 
   render () {
+    const leagueChange = this.leagueChange.bind(this)
+
     return (
       <React.Fragment>
-        <TopNav />
+        <TopNav>
+          <LeaguePicker onChange={leagueChange} />
+        </TopNav>
         { this.renderMain() }
       </React.Fragment>
     )

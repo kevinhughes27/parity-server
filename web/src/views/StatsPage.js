@@ -5,9 +5,7 @@ import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
 import GenderFilter from '../components/GenderFilter'
 import { last, pickBy } from 'lodash'
-import { fetchLeagues, fetchWeeks, fetchStats } from "../api"
-
-const defaultLeague = 10
+import { currentLeague, fetchWeeks, fetchStats } from "../api"
 
 class StatsProvider extends Component {
   constructor (props) {
@@ -15,8 +13,6 @@ class StatsProvider extends Component {
 
     this.state = {
       loading: true,
-      leagues: [],
-      league: '',
       weeks: [],
       week: 0,
       stats: {},
@@ -25,20 +21,18 @@ class StatsProvider extends Component {
   }
 
   componentDidMount () {
-    const league = defaultLeague
+    const league = currentLeague()
     return (async () => {
-      const leagues = await fetchLeagues()
       const weeks = await fetchWeeks(league)
       const week = last(weeks) || 0
       const stats = await fetchStats(week, league)
-      this.setState({leagues, league, weeks, week, stats, loading: false})
+      this.setState({weeks, week, stats, loading: false})
     })()
   }
 
-  leagueChange (event) {
-    const league = event.target.value
+  leagueChange (league) {
     return (async () => {
-      this.setState({league, loading: true})
+      this.setState({loading: true})
       const weeks = await fetchWeeks(league)
       const week = last(weeks) || 0
       const stats = await fetchStats(week, league)
@@ -71,8 +65,6 @@ class StatsProvider extends Component {
   }
 
   renderNav () {
-    const league = this.state.league
-    const leagues = [...this.state.leagues]
     const leagueChange = this.leagueChange.bind(this)
     const week = this.state.week
     const weeks = [0, ...this.state.weeks]
@@ -82,7 +74,7 @@ class StatsProvider extends Component {
 
     return (
       <TopNav>
-        <LeaguePicker league={league} leagues={leagues} onChange={leagueChange} />
+        <LeaguePicker onChange={leagueChange} />
         <GenderFilter filter={genderFilter} onChange={genderChange} />
         <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
       </TopNav>

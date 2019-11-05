@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
 import Table from '@material-ui/core/Table'
 import TableHead from '@material-ui/core/TableHead'
@@ -20,7 +19,7 @@ export default class TeamTable extends Component {
         </TableRow>
       </TableHead>
         <TableBody>
-          { _.map(players, (player) => {
+          { players.map((player) => {
             return (
               <TableRow key={player.name} hover>
                 <TableCell>{player.name}</TableCell>

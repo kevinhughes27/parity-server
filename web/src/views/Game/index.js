@@ -22,10 +22,11 @@ export default class Game extends Component {
   }
 
   componentDidMount () {
+    const leagueId = this.props.match.params.leagueId
     const gameId = this.props.match.params.gameId
 
     return (async () => {
-      const game = await fetchGame(gameId)
+      const game = await fetchGame(gameId, leagueId)
       this.setState({game, loading: false})
     })()
   }
