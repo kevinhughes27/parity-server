@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -11,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import format from 'date-fns/format'
 import Event from './Event'
+import { last, includes } from 'lodash'
 
 export default class Points extends Component {
   state = {
@@ -57,7 +57,7 @@ export default class Points extends Component {
 
     const events = point.events;
     const firstEvent = events[0]
-    const lastEvent = _.last(events)
+    const lastEvent = last(events)
     const secondLastEvent = events[events.length - 2]
 
     const receiver = lastEvent.firstActor
@@ -66,7 +66,7 @@ export default class Points extends Component {
       ? secondLastEvent.firstActor
       : null
 
-    const homeScored = _.includes(game.homeRoster, receiver)
+    const homeScored = includes(game.homeRoster, receiver)
     const teamName = homeScored
       ? game.homeTeam
       : game.awayTeam
@@ -79,7 +79,7 @@ export default class Points extends Component {
 
     const teamJsx = <strong style={{color: teamColor}}>{teamName}</strong>
 
-    const breakPoint = _.includes(point.defensePlayers, receiver)
+    const breakPoint = includes(point.defensePlayers, receiver)
 
     const whatCopy = breakPoint
       ? 'Break Point'
@@ -107,7 +107,7 @@ export default class Points extends Component {
 
     const scoreCopy = `${homeScore} - ${awayScore}`
 
-    const expanded = _.includes(this.state.expanded, idx)
+    const expanded = includes(this.state.expanded, idx)
 
     const pointsJsx = (
       <React.Fragment key={idx}>

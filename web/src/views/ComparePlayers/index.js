@@ -1,9 +1,9 @@
-import _ from 'lodash'
 import ls from 'local-storage'
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
 import PlayerSelect from '../../components/PlayerSelect'
 import Chart from './Chart'
+import { keys, pick } from 'lodash'
 
 const STATS = [
   'goals',
@@ -21,7 +21,7 @@ export default class ComparePlayers extends Component {
   constructor (props) {
     super(props)
 
-    const playerNames = _.keys(this.props.stats)
+    const playerNames = keys(this.props.stats)
 
     this.state = {
       week: this.props.week,
@@ -43,9 +43,9 @@ export default class ComparePlayers extends Component {
 
   render () {
     const { stats, playerAName, playerBName } = this.state
-    const playerAStats = _.pick(stats[playerAName], STATS)
-    const playerBStats = _.pick(stats[playerBName], STATS)
-    const playerNames = _.keys(this.props.stats)
+    const playerAStats = pick(stats[playerAName], STATS)
+    const playerBStats = pick(stats[playerBName], STATS)
+    const playerNames = keys(this.props.stats)
 
     return (
       <Container fixed>
