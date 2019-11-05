@@ -2,7 +2,8 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
 from models import db, Game, Stats, Team, Player, League
-from lib import StatsCalculator, build_stats_response, build_teams_response
+from lib import StatsCalculator
+from lib import build_stats_response, build_teams_response, build_players_response
 
 import os
 import json
@@ -72,8 +73,7 @@ def teams(league_id):
 @cache.cached()
 @app.route('/api/<league_id>/players')
 def players(league_id):
-    query = Player.query.filter(Player.league_id == league_id, Player.team_id != None)
-    players = [player.to_dict() for player in query.all()]
+    players = build_players_response(league_id)
     return jsonify(players)
 
 
