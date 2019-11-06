@@ -11,10 +11,22 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import format from 'date-fns/format'
 import Event from './Event'
 import { last, includes } from 'lodash'
+import { Button } from '@material-ui/core'
 
 export default class Points extends Component {
   state = {
     expanded: []
+  }
+
+  expandAll = () => {
+    const game = this.props.game
+    const points = game.points
+    const expanded = points.map((p, idx) => idx)
+    this.setState({expanded})
+  }
+
+  collapseAll = () => {
+    this.setState({expanded: []})
   }
 
   handleClick = (expanded, idx) => {
@@ -31,17 +43,21 @@ export default class Points extends Component {
 
   render () {
     const game = this.props.game
+    const points = game.points
 
     let homeScore = 0
     let awayScore = 0
 
     return (
       <React.Fragment>
-        <Typography variant="h5" style={{marginTop: 15}}>
-          Points
-        </Typography>
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <Typography variant="h5" style={{marginTop: 15}}>
+            Points
+          </Typography>
+          { this.renderButton() }
+        </div>
         <List>
-          { game.points.map((point, idx) => {
+          { points.map((point, idx) => {
             const result = this.renderPoint(point, homeScore, awayScore, idx)
             homeScore = result.homeScore
             awayScore = result.awayScore
@@ -50,6 +66,25 @@ export default class Points extends Component {
         </List>
       </React.Fragment>
     )
+  }
+
+  renderButton () {
+    const game = this.props.game
+    const points = game.points
+
+    if (points.length === this.state.expanded.length) {
+      return (
+        <Button onClick={this.collapseAll}>
+          Collapse All <ExpandLess />
+        </Button>
+      )
+    } else {
+      return (
+        <Button onClick={this.expandAll}>
+          Expand All <ExpandMore />
+        </Button>
+      )
+    }
   }
 
   renderPoint (point, homeScore, awayScore, idx) {
