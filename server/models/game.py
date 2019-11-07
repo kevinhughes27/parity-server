@@ -3,7 +3,7 @@ from .league import League
 from .json_column import JsonColumn
 
 class Game(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
     week = db.Column(db.Integer)
     home_team = db.Column(db.Text)
