@@ -8,7 +8,7 @@ import PieChart from './PieChart'
 import BarChart from './BarChart'
 import LeagueChart from './LeagueChart'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy, uniq } from 'lodash'
+import { map, sum, sortBy, findIndex, uniq } from 'lodash'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -18,11 +18,13 @@ export default class TeamDashboard extends Component {
       loading: true,
       players: this.props.players,
       team: this.props.players[0].team,
+      trades: [],
       tab: 0
     }
 
     this.teamChanged = this.teamChanged.bind(this)
     this.tabChanged = this.tabChanged.bind(this)
+    this.applyTrade = this.applyTrade.bind(this)
   }
 
   teamChanged (event) {
@@ -32,6 +34,32 @@ export default class TeamDashboard extends Component {
 
   tabChanged (_event, tab) {
     this.setState({tab})
+  }
+
+  applyTrade = (playerA, playerB) => {
+    const { players, trades } = this.state
+
+    const playerAIdx = findIndex(players, (p) => p.name === playerA)
+    const playerBIdx = findIndex(players, (p) => p.name === playerB)
+
+    const teamA = players[playerAIdx]['team']
+    const teamB = players[playerBIdx]['team']
+
+    players[playerAIdx]['team'] = teamB
+    players[playerBIdx]['team'] = teamA
+
+    trades.push({
+      playerA: {
+        name: playerA,
+        team: teamA
+      },
+      playerB: {
+        name: playerB,
+        team: teamB
+      }
+    })
+
+    this.setState({players: players, trades: trades})
   }
 
   render () {
@@ -67,10 +95,12 @@ export default class TeamDashboard extends Component {
               onChange={this.teamChanged}
             />
             <Table
-              players={sortedPlayers}
+              allPlayers={allPlayers}
+              teamPlayers={sortedPlayers}
               teamSalary={teamSalary}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
+              applyTrade={this.applyTrade}
             />
           </div>
           <div style={chartStyle}>
