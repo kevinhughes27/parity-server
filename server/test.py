@@ -5,6 +5,8 @@ from snapshottest import TestCase as SnapShotTest
 import unittest
 import os
 
+os.environ['APP_SETTINGS'] = 'config.TestingConfig'
+
 from app import app
 from models import db, Game, Player, Stats, League
 
@@ -119,5 +121,4 @@ class ServerTests(FlaskTest, SnapShotTest):
 
 
 if __name__ == '__main__':
-    os.environ['APP_SETTINGS'] = 'config.TestingConfig'
     unittest.main()
