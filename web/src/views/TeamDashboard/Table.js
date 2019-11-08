@@ -6,21 +6,22 @@ import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
 import MoneyCell from './MoneyCell'
 import TradeModal from './TradeModal'
-import { difference } from 'lodash'
+import { find, difference } from 'lodash'
 
 export default class TeamTable extends Component {
   state = {
     trading: false,
-    playerA: '',
-    playerB: ''
+    playerA: { name: '' },
+    playerB: { name: '' }
   }
 
   openTradeModal = (player) => {
-    this.setState({trading: true, playerA: player.name})
+    this.setState({trading: true, playerA: player})
   }
 
-  playerBChanged = (_event, value) => {
-    this.setState({playerB: value})
+  updateTrade = (_event, value) => {
+    const player = find(this.props.allPlayers, (p) => p.name === value)
+    this.setState({playerB: player})
   }
 
   submitTrade = () => {
@@ -87,7 +88,7 @@ export default class TeamTable extends Component {
           players={otherPlayers}
           playerA={this.state.playerA}
           playerB={this.state.playerB}
-          playerBChanged={this.playerBChanged}
+          updateTrade={this.updateTrade}
           submitTrade={this.submitTrade}
           onClose={this.closeTradeModal}
         />

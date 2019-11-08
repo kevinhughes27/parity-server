@@ -39,8 +39,8 @@ export default class TeamDashboard extends Component {
   applyTrade = (playerA, playerB) => {
     const { players, trades } = this.state
 
-    const playerAIdx = findIndex(players, (p) => p.name === playerA)
-    const playerBIdx = findIndex(players, (p) => p.name === playerB)
+    const playerAIdx = findIndex(players, (p) => p.name === playerA.name)
+    const playerBIdx = findIndex(players, (p) => p.name === playerB.name)
 
     const teamA = players[playerAIdx]['team']
     const teamB = players[playerBIdx]['team']

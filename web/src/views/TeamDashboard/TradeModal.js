@@ -28,16 +28,15 @@ export default class TeamTable extends Component {
         >
         { this.props.open &&
           <React.Fragment>
-            <DialogTitle>Trade {playerA} </DialogTitle>
+            <DialogTitle>Trades</DialogTitle>
             <DialogContent style={{minHeight: 200}}>
               <DialogContentText>
-                Trade {playerA} for:
+                Trade {playerA.name} for:
               </DialogContentText>
               <Autocomplete
-                value={playerB}
+                value={playerB.name}
                 options={playerNames}
-                onChange={this.props.playerBChanged}
-                style={{ width: 300 }}
+                onChange={this.props.updateTrade}
                 renderInput={params => (
                   <TextField {...params} variant="outlined" fullWidth />
                 )}
