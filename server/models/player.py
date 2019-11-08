@@ -7,7 +7,7 @@ class Player(db.Model):
         db.UniqueConstraint('league_id', 'zuluru_id', name='unique_zuluru_player_per_league'),
     )
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     zuluru_id = db.Column(db.Integer)
     league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
