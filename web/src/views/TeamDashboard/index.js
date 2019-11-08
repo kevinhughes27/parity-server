@@ -6,8 +6,9 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import PieChart from './PieChart'
 import BarChart from './BarChart'
+import LeagueChart from './LeagueChart'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy } from 'lodash'
+import { map, sum, sortBy, uniq } from 'lodash'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -36,6 +37,7 @@ export default class TeamDashboard extends Component {
   render () {
     const {tab, team, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
+    const teamNames = sortBy(uniq(allPlayers.map(p => p.team)));
     const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
     const salaries = map(sortedPlayers, (p) => p.salary);
     const teamSalary = sum(salaries);
@@ -81,6 +83,7 @@ export default class TeamDashboard extends Component {
             >
               <Tab label="Bar Chart" />
               <Tab label="Pie Chart" />
+              <Tab label="League Chart" />
             </Tabs>
             { tab === 0 &&
               <BarChart
@@ -94,6 +97,14 @@ export default class TeamDashboard extends Component {
                 players={sortedPlayers}
                 overCap={overCap}
                 underFloor={underFloor}
+              />
+            }
+            { tab === 2 &&
+              <LeagueChart
+                players={allPlayers}
+                teamNames={teamNames}
+                salaryCap={salaryCap}
+                salaryFloor={salaryFloor}
               />
             }
           </div>
