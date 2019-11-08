@@ -27,7 +27,7 @@ export default class TeamTable extends Component {
               </TableRow>
             )
           })}
-          <TableRow style={{borderTop: '1px solid grey', lineHeight: 0.5}} hover>
+          <TableRow style={{borderTop: '3px solid grey', lineHeight: 0.5}} hover>
             <TableCell>Current Salary</TableCell>
             <TableCell><MoneyCell data={teamSalary}/></TableCell>
           </TableRow>
