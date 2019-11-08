@@ -65,11 +65,12 @@ $table-border-color: rgba(0,0,0,.12) !default;
       th {
         display: block;
         text-align: right;
+        height: 58px;
       }
       td {
         display: block;
-        min-height: 1.25em;
         text-align: left;
+        height: 58px;
       }
       tr {
         border-bottom: none;
