@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs-2'
+import format from 'format-number'
 import { colors, warnColors, dangerColors } from '../../helpers'
 
-export default class Chart extends Component {
+export default class PieChart extends Component {
   render () {
     const { players, overCap, underFloor } = this.props;
 
@@ -27,9 +28,22 @@ export default class Chart extends Component {
     const options = {
       legend: {
         display: false
-      }
+      },
+      tooltips: {
+        callbacks: {
+          label: (tooltipItem, data) => {
+            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+            const label = data.labels[tooltipItem.index]
+
+            const salary = Math.round(value)
+            const text = format({prefix: '$'})(salary)
+
+            return label + ' ' + text
+          }
+        }
+      },
     }
 
-    return <Pie data={data} height={400} options={options}/>
+    return <Pie data={data} height={340} options={options}/>
   }
 }
