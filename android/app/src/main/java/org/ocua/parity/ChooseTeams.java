@@ -53,7 +53,7 @@ public class ChooseTeams extends Activity {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                     new AlertDialog.Builder(context)
                             .setTitle("Storage Permissions")
-                            .setMessage("Storage is used to save game backups Stats data could be lost without this!")
+                            .setMessage("Storage is used to save game backups. Stats data could be lost without this!")
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
