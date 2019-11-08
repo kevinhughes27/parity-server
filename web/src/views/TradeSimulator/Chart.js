@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
-import { colors, warnColors, dangerColors } from '../../helpers'
+import format from 'format-number'
 import 'chartjs-plugin-annotation'
 import { flatten, sortBy, map, sum } from 'lodash'
+import { colors, warnColors, dangerColors } from '../../helpers'
 
 export default class Chart extends Component {
   render () {
@@ -44,6 +45,15 @@ export default class Chart extends Component {
           title: (tooltipItem, data) => {
             const item = data.datasets[tooltipItem[0].datasetIndex]
             return item.stack
+          },
+          label: (tooltipItem, data) => {
+            const item = data.datasets[tooltipItem.datasetIndex]
+            const value = item.data[tooltipItem.index]
+
+            const salary = Math.round(value)
+            const text = format({prefix: '$'})(salary)
+
+            return item.label + ' ' + text
           }
         }
       },
@@ -59,7 +69,12 @@ export default class Chart extends Component {
           stacked: true,
           ticks: {
             min: 0,
-            suggestedMax: Math.round(salaryCap * 1.1)
+            suggestedMax: Math.round(salaryCap * 1.1),
+            callback: (data) => {
+              const value = Math.round(data)
+              const text = format({prefix: '$'})(value)
+              return  text
+            }
           }
         }]
       },

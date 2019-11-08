@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
 import TeamPicker from './TeamPicker'
 import Table from './Table'
-import Chart from './Chart'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import PieChart from './PieChart'
+import BarChart from './BarChart'
 import { calcSalaryLimits } from '../../helpers'
 import { map, sum, sortBy } from 'lodash'
 
@@ -13,10 +16,12 @@ export default class TeamDashboard extends Component {
     this.state = {
       loading: true,
       players: this.props.players,
-      team: this.props.players[0].team
+      team: this.props.players[0].team,
+      tab: 0
     }
 
     this.teamChanged = this.teamChanged.bind(this)
+    this.tabChanged = this.tabChanged.bind(this)
   }
 
   teamChanged (event) {
@@ -24,8 +29,12 @@ export default class TeamDashboard extends Component {
     this.setState({team: teamName})
   }
 
+  tabChanged (_event, tab) {
+    this.setState({tab})
+  }
+
   render () {
-    const {team, players: allPlayers } = this.state;
+    const {tab, team, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
     const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
     const salaries = map(sortedPlayers, (p) => p.salary);
@@ -38,21 +47,18 @@ export default class TeamDashboard extends Component {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-around',
-      paddingTop: 20,
-      height: '100%'
+      paddingTop: 20
     }
 
     const chartStyle = {
       flexGrow: 1,
-      maxWidth: '50%',
-      marginLeft: 50,
-      marginRight: 50
+      maxWidth: 500
     }
 
     return (
       <Container fixed>
         <div style={layoutStyle}>
-          <div style={{minWidth: 240}}>
+          <div style={{minWidth: 240, paddingBottom: 20}}>
             <TeamPicker
               allPlayers={allPlayers}
               team={team}
@@ -66,11 +72,30 @@ export default class TeamDashboard extends Component {
             />
           </div>
           <div style={chartStyle}>
-            <Chart
-              players={sortedPlayers}
-              overCap={overCap}
-              underFloor={underFloor}
-            />
+            <Tabs
+              value={tab}
+              onChange={this.tabChanged}
+              indicatorColor="primary"
+              textColor="primary"
+              variant="fullWidth"
+            >
+              <Tab label="Bar Chart" />
+              <Tab label="Pie Chart" />
+            </Tabs>
+            { tab === 0 &&
+              <BarChart
+                players={sortedPlayers}
+                overCap={overCap}
+                underFloor={underFloor}
+              />
+            }
+            { tab === 1 &&
+              <PieChart
+                players={sortedPlayers}
+                overCap={overCap}
+                underFloor={underFloor}
+              />
+            }
           </div>
         </div>
       </Container>
