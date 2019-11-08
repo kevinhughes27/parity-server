@@ -12,7 +12,6 @@ import ComparePlayers from './views/ComparePlayers'
 import SalaryPage from './views/SalaryPage'
 import StatsTable from './views/StatsTable'
 import TeamDashboard from './views/TeamDashboard'
-import TradeSimulator from './views/TradeSimulator'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')
@@ -54,12 +53,6 @@ class App extends React.Component {
         <Route path="/team_dashboard">
           <SalaryPage>
             <TeamDashboard />
-          </SalaryPage>
-        </Route>
-
-        <Route path="/trade_simulator">
-          <SalaryPage>
-            <TradeSimulator />
           </SalaryPage>
         </Route>
       </Router>

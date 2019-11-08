@@ -56,7 +56,6 @@ class NavItems extends Component {
         { NavItem('/leaderboards', "Leaderboards") }
         { NavItem('/compare_players', "Compare Players") }
         { NavItem('/team_dashboard', "Team Dashboard") }
-        { NavItem('/trade_simulator', "Trade Simulator") }
 
         <Divider />
 
