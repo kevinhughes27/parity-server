@@ -13,7 +13,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-import PlayerSelect from '../../components/PlayerSelect';
+import TextField from '@material-ui/core/TextField'
+import Autocomplete from '@material-ui/lab/Autocomplete'
 
 export default class TeamTable extends Component {
   constructor (props) {
@@ -29,7 +30,7 @@ export default class TeamTable extends Component {
     this.setState({open: true, playerA: player.name})
   }
 
-  playerBChanged (value) {
+  playerBChanged = (_event, value) => {
     this.setState({playerB: value})
   }
 
@@ -99,14 +100,18 @@ export default class TeamTable extends Component {
           { this.state.open &&
             <React.Fragment>
               <DialogTitle>Trade {this.state.playerA} </DialogTitle>
-              <DialogContent style={{minHeight: 300}}>
+              <DialogContent style={{minHeight: 200}}>
                 <DialogContentText>
                   Trade {this.state.playerA} for:
                 </DialogContentText>
-                <PlayerSelect
+                <Autocomplete
                   value={this.state.playerB}
-                  players={playerNames}
-                  onChange={(event) => this.playerBChanged(event)}
+                  options={playerNames}
+                  onChange={this.playerBChanged}
+                  style={{ width: 300 }}
+                  renderInput={params => (
+                    <TextField {...params} variant="outlined" fullWidth />
+                  )}
                 />
               </DialogContent>
               <DialogActions>

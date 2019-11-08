@@ -1,7 +1,8 @@
 import ls from 'local-storage'
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
-import PlayerSelect from '../../components/PlayerSelect'
+import TextField from '@material-ui/core/TextField'
+import Autocomplete from '@material-ui/lab/Autocomplete'
 import Chart from './Chart'
 import { keys, pick } from 'lodash'
 
@@ -31,12 +32,12 @@ export default class ComparePlayers extends Component {
     }
   }
 
-  playerAChanged (value: string) {
+  playerAChanged = (_event, value) => {
     ls.set('playerA', value)
     this.setState({playerAName: value})
   }
 
-  playerBChanged (value: string) {
+  playerBChanged = (_event, value) => {
     ls.set('playerB', value)
     this.setState({playerBName: value})
   }
@@ -58,17 +59,24 @@ export default class ComparePlayers extends Component {
             playerBStats={playerBStats}
           />
         </div>
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
-          <PlayerSelect
+        <div style={{display: 'flex', justifyContent: 'space-between', paddingTop: 20}}>
+          <Autocomplete
             value={playerAName}
-            players={playerNames}
-            onChange={(event) => this.playerAChanged(event)}
+            options={playerNames}
+            onChange={this.playerAChanged}
+            style={{ width: 300 }}
+            renderInput={params => (
+              <TextField {...params} variant="outlined" fullWidth />
+            )}
           />
-
-          <PlayerSelect
+          <Autocomplete
             value={playerBName}
-            players={playerNames}
-            onChange={(event) => this.playerBChanged(event)}
+            options={playerNames}
+            onChange={this.playerBChanged}
+            style={{ width: 300 }}
+            renderInput={params => (
+              <TextField {...params} variant="outlined" fullWidth />
+            )}
           />
         </div>
       </Container>
