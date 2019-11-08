@@ -69,6 +69,8 @@ def roster_sync():
             { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True }
         ]
 
+        leagues.reverse()
+
         for league in leagues:
             ZuluruSync(
                 league=League.query.filter_by(zuluru_id=league['zuluru_id']).first(),
@@ -85,6 +87,7 @@ def roster_sync():
 @cli.command()
 def game_sync():
     url = 'http://localhost:5000/submit_game'
+    # url = 'https://parity-server.herokuapp.com/submit_game'
 
     curdir = os.getcwd()
 
@@ -97,6 +100,8 @@ def game_sync():
         # # { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
         # # { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
     ]
+
+    leagues.reverse()
 
     for league in leagues:
         os.chdir(league['data_folder'])
