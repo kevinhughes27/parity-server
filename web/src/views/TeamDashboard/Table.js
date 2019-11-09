@@ -85,11 +85,13 @@ export default class TeamTable extends Component {
 
         <TradeModal
           open={this.state.trading}
+          trades={this.props.trades}
           players={otherPlayers}
           playerA={this.state.playerA}
           playerB={this.state.playerB}
           updateTrade={this.updateTrade}
           submitTrade={this.submitTrade}
+          removeTrade={this.props.removeTrade}
           onClose={this.closeTradeModal}
         />
       </React.Fragment>

@@ -8,7 +8,7 @@ import PieChart from './PieChart'
 import BarChart from './BarChart'
 import LeagueChart from './LeagueChart'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy, findIndex, uniq } from 'lodash'
+import { map, sum, sortBy, findIndex, uniq, remove, isEqual } from 'lodash'
 
 export default class TeamDashboard extends Component {
   constructor (props) {
@@ -48,22 +48,33 @@ export default class TeamDashboard extends Component {
     players[playerAIdx]['team'] = teamB
     players[playerBIdx]['team'] = teamA
 
-    trades.push({
-      playerA: {
-        name: playerA,
-        team: teamA
-      },
-      playerB: {
-        name: playerB,
-        team: teamB
-      }
-    })
+    trades.push({playerA, playerB})
+
+    this.setState({players: players, trades: trades})
+  }
+
+  removeTrade = (trade) => {
+    const { players, trades } = this.state
+
+    const playerA = trade.playerA
+    const playerB = trade.playerB
+
+    const playerAIdx = findIndex(players, (p) => p.name === playerA.name)
+    const playerBIdx = findIndex(players, (p) => p.name === playerB.name)
+
+    const teamA = players[playerAIdx]['team']
+    const teamB = players[playerBIdx]['team']
+
+    players[playerAIdx]['team'] = teamB
+    players[playerBIdx]['team'] = teamA
+
+    remove(trades, (t) => isEqual(t, trade))
 
     this.setState({players: players, trades: trades})
   }
 
   render () {
-    const {tab, team, players: allPlayers } = this.state;
+    const {tab, team, trades, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
     const teamNames = sortBy(uniq(allPlayers.map(p => p.team)));
     const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
@@ -95,12 +106,14 @@ export default class TeamDashboard extends Component {
               onChange={this.teamChanged}
             />
             <Table
+              trades={trades}
               allPlayers={allPlayers}
               teamPlayers={sortedPlayers}
               teamSalary={teamSalary}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
               applyTrade={this.applyTrade}
+              removeTrade={this.removeTrade}
             />
           </div>
           <div style={chartStyle}>
