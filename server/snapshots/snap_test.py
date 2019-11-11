@@ -516,7 +516,7 @@ snapshots['ServerTests::test_callahan 1'] = {
             'pulls': 0,
             'salary_per_point': 1000,
             'second_assists': 0,
-            'team': 'Substitute',
+            'team': 'Kells Angels Bicycle Club',
             'threw_drops': 0,
             'throw_aways': 0,
             'total_efficiency': 0.0
