@@ -42,9 +42,10 @@ class StatsProvider extends Component {
 
   weekChange (event) {
     const week = event.target.value
+    const league = currentLeague()
     return (async () => {
       this.setState({week, loading: true})
-      const stats = await fetchStats(week, this.state.league)
+      const stats = await fetchStats(week, league)
       this.setState({ stats, loading: false })
     })()
   }
