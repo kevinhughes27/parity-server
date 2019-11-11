@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
 import format from 'format-number'
-import { colors, warnColors, dangerColors } from '../../helpers'
+import { colors, underColors, overColors } from '../../helpers'
 
 const chartStyle = {
   marginTop: 20
@@ -12,20 +12,18 @@ export default class BarChart extends Component {
     const { players, maxSalary, overCap, underFloor } = this.props;
 
     let teamColors = colors;
-    if (overCap) {
-      teamColors = dangerColors;
-    } else if (underFloor) {
-      teamColors = warnColors;
-    }
 
-    const altColors = overCap ? warnColors : dangerColors;
-    const chartColors = players.map((p, i) => p.salary < 0 ? altColors[i] : teamColors[i]);
+    if (overCap) {
+      teamColors = overColors;
+    } else if (underFloor) {
+      teamColors = underColors;
+    }
 
     const data = {
       labels: players.map (p => p.name),
       datasets: [{
         data: players.map (p => Math.abs(p.salary)),
-        backgroundColor: chartColors
+        backgroundColor: teamColors
       }]
     };
 

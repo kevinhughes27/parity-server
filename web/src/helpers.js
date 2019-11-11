@@ -28,23 +28,22 @@ export const colors = [
   '#43A047'
 ]
 
-export const warnColors = [
-  '#FFF9C4',
-  '#FFF6B8',
-  '#FFF4AC',
-  '#FEF1A0',
-  '#FEEE94',
-  '#FEEB88',
-  '#FEE87D',
-  '#FEE671',
-  '#FEE365',
-  '#FDE059',
-  '#FDDE4D',
-  '#FDDB41',
-  '#FDD835'
+export const underColors = [
+  '#bbdefb',
+  '#abd3f5',
+  '#9cc8f0',
+  '#8dbdea',
+  '#7eb2e5',
+  '#6fa7e0',
+  '#609cda',
+  '#5191d5',
+  '#4286d0',
+  '#337bca',
+  '#2470c5',
+  '#1565c0',
 ]
 
-export const dangerColors = [
+export const overColors = [
   '#FFCDD2',
   '#FDC1C5',
   '#FBB4B8',

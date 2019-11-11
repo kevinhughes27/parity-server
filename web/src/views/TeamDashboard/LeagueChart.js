@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import format from 'format-number'
 import 'chartjs-plugin-annotation'
 import { flatten, sortBy, map, sum } from 'lodash'
-import { colors, warnColors, dangerColors } from '../../helpers'
+import { colors, underColors, overColors } from '../../helpers'
 
 const chartStyle = {
   marginTop: 20
@@ -23,9 +23,9 @@ export default class Chart extends Component {
           let teamColors = colors;
 
           if (teamSalary > salaryCap) {
-            teamColors = dangerColors;
+            teamColors = overColors;
           } else if (teamSalary < salaryFloor) {
-            teamColors = warnColors;
+            teamColors = underColors;
           }
 
           return {
