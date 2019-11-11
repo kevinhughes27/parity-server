@@ -56,6 +56,19 @@ def seed_leagues():
 
 
 @cli.command()
+def zuluru_sync():
+    with app.app_context():
+        league_zid = 702
+        league = League.query.filter_by(zuluru_id=league_zid).first()
+        ZuluruSync(league).sync_teams()
+
+        db.session.remove()
+
+        cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+        cache.clear()
+
+
+@cli.command()
 def roster_sync():
     with app.app_context():
 
