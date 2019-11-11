@@ -25,8 +25,8 @@ export default function TeamTable (props) {
   const moreExpensivePlayers = sortedPlayers.slice(tradeeIdx, -1)
 
   const options = props.overCap
-    ? moreExpensivePlayers.concat(lessExpensivePlayers.reverse())
-    : lessExpensivePlayers.reverse().concat(moreExpensivePlayers)
+    ? lessExpensivePlayers.reverse().concat(moreExpensivePlayers)
+    : moreExpensivePlayers.concat(lessExpensivePlayers.reverse())
 
   const disabled = (playerB.name === '')
 
@@ -53,7 +53,7 @@ export default function TeamTable (props) {
               )}
               getOptionLabel={option => option.name}
               renderOption={option => {
-                const diff = playerA.salary - option.salary
+                const diff = option.salary - playerA.salary
                 const color = diff >= 0 ? '#00e676' : '#f44336'
                 const prefix = diff >= 0 ? '+ $' : '- $'
                 const value = Math.abs(diff)
