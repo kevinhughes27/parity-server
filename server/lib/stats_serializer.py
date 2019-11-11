@@ -1,13 +1,22 @@
 from models import Stats, Player, Team
 
-def build_stats_response(games):
+def build_stats_response(league_id, games):
+    players = Player.query.filter_by(league_id=league_id).all()
+    teams = Team.query.filter_by(league_id=league_id).all()
+
     stats = {}
-    stats_to_average = ['pay', 'salary_per_point', 'o_efficiency', 'd_efficiency', 'total_efficiency']
+    stats_to_average = [
+        'pay',
+        'salary_per_point',
+        'o_efficiency',
+        'd_efficiency',
+        'total_efficiency'
+    ]
 
     # rollup stats per game
     for game in games:
         for player_stats in Stats.query.filter_by(game_id=game.id):
-            player = Player.query.get(player_stats.player_id)
+            player = [p for p in players if p.id == player_stats.player_id][0]
             data = player_stats.to_dict()
 
             # aggregate all stats for the player
@@ -21,14 +30,12 @@ def build_stats_response(games):
                 stats[player.name]['games_played'] = 1
 
             # set the team for the player
-            if "(S)" in player.name:
-                team = "Substitute"
-            elif player.name in game.home_roster:
+            if player.name in game.home_roster:
                 team = game.home_team
             elif player.name in game.away_roster:
                 team = game.away_team
             elif player.team_id:
-                team = Team.query.get(player.team_id).name
+                team = [t for t in teams if t.id == player.team_id][0].name
             else:
                 team = 'Unknown'
 
