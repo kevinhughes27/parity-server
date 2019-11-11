@@ -7,8 +7,8 @@ export default class Leaderboards extends Component {
 
     return (
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        <Card stat='pay' stats={stats} />
-        <Card stat='salary_per_point' stats={stats} />
+        <Card stat='pay' stats={stats} money={true} />
+        <Card stat='salary_per_point' stats={stats} money={true} />
         <Card stat='goals' stats={stats} />
         <Card stat='assists' stats={stats} />
         <Card stat='catches' stats={stats} />

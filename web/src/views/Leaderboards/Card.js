@@ -7,6 +7,7 @@ import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
 import capitalize from 'capitalize'
+import format from 'format-number'
 import { map, keys, sortBy } from 'lodash'
 
 const styles = {
@@ -26,7 +27,7 @@ function topPlayers(stats, stat, num) {
 
 class Card extends Component {
   render () {
-    const { classes, stat, stats } = this.props
+    const { classes, stat, stats, money } = this.props
 
     const statsArray = map(keys(stats), (k) => {
       return { name: k, ...stats[k] }
@@ -43,10 +44,15 @@ class Card extends Component {
         <Table size="small">
           <TableBody>
             { map(players, (player) => {
+              let value = player[stat]
+              if (money) {
+                value = format({prefix: '$'})(value)
+              }
+
               return (
                 <TableRow key={player['name']} hover>
                   <TableCell>{player['name']}</TableCell>
-                  <TableCell>{player[stat]}</TableCell>
+                  <TableCell>{value}</TableCell>
                 </TableRow>
               )
             })}
