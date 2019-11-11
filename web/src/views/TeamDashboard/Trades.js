@@ -3,7 +3,6 @@ import IconButton from '@material-ui/core/IconButton'
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz'
 import DeleteIcon from '@material-ui/icons/Delete'
 
-
 const tradeStyles = {
   display: 'flex',
   justifyContent: 'space-around',
@@ -26,6 +25,15 @@ export default class Trades extends Component {
 
   render () {
     const { trades, removeTrade } = this.props;
+
+    if (trades.length === 0) {
+      return (
+        <div>
+          <p>Click on a player to make a trade.</p>
+          <p>None of this data is saved except in your browser tab to help you explore your options</p>
+        </div>
+      )
+    }
 
     return (
       <div>
