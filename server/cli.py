@@ -8,7 +8,7 @@ from flask_caching import Cache
 
 from app import app
 from models import db, League
-from lib import ZuluruSync, PlayerDb
+from lib import ZuluruSync, PlayerDb, ScheduleSync
 
 
 @click.group()
@@ -169,6 +169,13 @@ def backup(week):
         fo.close()
 
     click.echo('Done')
+
+@cli.command()
+def schedule_sync():
+    with app.app_context():
+        sync = ScheduleSync(702)
+
+        print(sync.load_schedule())
 
 
 if __name__ == "__main__":
