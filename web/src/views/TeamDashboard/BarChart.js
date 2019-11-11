@@ -9,7 +9,7 @@ const chartStyle = {
 
 export default class BarChart extends Component {
   render () {
-    const { players, overCap, underFloor } = this.props;
+    const { players, maxSalary, overCap, underFloor } = this.props;
 
     let teamColors = colors;
     if (overCap) {
@@ -52,6 +52,7 @@ export default class BarChart extends Component {
         yAxes: [{
           ticks: {
             min: 0,
+            max: maxSalary,
             callback: (data) => {
               const value = Math.round(data)
               const text = format({prefix: '$'})(value)

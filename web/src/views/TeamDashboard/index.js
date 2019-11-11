@@ -10,7 +10,7 @@ import LeagueChart from './LeagueChart'
 import Trades from './Trades'
 import TradeModal from './TradeModal'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy, findIndex, uniq, remove, isEqual, difference, includes, find } from 'lodash'
+import { map, max, sum, sortBy, findIndex, uniq, remove, isEqual, difference, includes, find } from 'lodash'
 import ls from 'local-storage'
 
 const storageKey = 'currentTeam'
@@ -110,7 +110,8 @@ export default class TeamDashboard extends Component {
   render () {
     const {tab, team, trades, trading, playerA, playerB, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
-    const otherPlayers = difference(allPlayers, teamPlayers)
+    const otherPlayers = difference(allPlayers, teamPlayers);
+    const maxSalary = max(map(allPlayers, (p) => p.salary));
 
     const teamNames = sortBy(uniq(allPlayers.map(p => p.team)));
     const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
@@ -165,6 +166,7 @@ export default class TeamDashboard extends Component {
             { tab === 0 &&
               <BarChart
                 players={sortedPlayers}
+                maxSalary={maxSalary}
                 overCap={overCap}
                 underFloor={underFloor}
               />
