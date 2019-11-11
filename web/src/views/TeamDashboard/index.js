@@ -10,8 +10,10 @@ import LeagueChart from './LeagueChart'
 import Trades from './Trades'
 import TradeModal from './TradeModal'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy, findIndex, uniq, remove, isEqual, difference, find } from 'lodash'
+import { map, sum, sortBy, findIndex, uniq, remove, isEqual, difference, includes, find } from 'lodash'
+import ls from 'local-storage'
 
+const storageKey = 'currentTeam'
 const defaultPlayer = {name: ''}
 
 export default class TeamDashboard extends Component {
@@ -19,7 +21,15 @@ export default class TeamDashboard extends Component {
     super(props)
 
     const players = this.props.players
-    const currentTeam = this.props.players[0].team
+    const teamNames = sortBy(uniq(players.map(p => p.team)));
+    const defaultTeam = teamNames[0]
+
+    let currentTeam = ls.get(storageKey)
+    const validTeam = includes(teamNames, currentTeam)
+
+    if (!validTeam) {
+      currentTeam = defaultTeam
+    }
 
     this.state = {
       players: players,
@@ -38,6 +48,7 @@ export default class TeamDashboard extends Component {
 
   teamChanged (event) {
     const teamName = event.target.value
+    ls.set(storageKey, teamName)
     this.setState({team: teamName})
   }
 
