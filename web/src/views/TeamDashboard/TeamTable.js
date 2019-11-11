@@ -40,7 +40,7 @@ export default class TeamTable extends Component {
   }
 
   render () {
-    const { allPlayers, teamPlayers, teamSalary, salaryCap, salaryFloor } = this.props;
+    const { allPlayers, teamPlayers, teamSalary, salaryCap, salaryFloor, overCap } = this.props;
     const otherPlayers = difference(allPlayers, teamPlayers)
 
     return (
@@ -91,6 +91,7 @@ export default class TeamTable extends Component {
           players={otherPlayers}
           playerA={this.state.playerA}
           playerB={this.state.playerB}
+          overCap={overCap}
           updateTrade={this.updateTrade}
           submitTrade={this.submitTrade}
           removeTrade={this.props.removeTrade}

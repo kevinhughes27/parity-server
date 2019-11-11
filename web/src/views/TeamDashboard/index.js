@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
 import TeamPicker from './TeamPicker'
-import Table from './Table'
+import TeamTable from './TeamTable'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import PieChart from './PieChart'
@@ -106,12 +106,13 @@ export default class TeamDashboard extends Component {
               team={team}
               onChange={this.teamChanged}
             />
-            <Table
+            <TeamTable
               allPlayers={allPlayers}
               teamPlayers={sortedPlayers}
               teamSalary={teamSalary}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
+              overCap={overCap}
               applyTrade={this.applyTrade}
             />
           </div>
