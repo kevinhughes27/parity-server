@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import PieChart from './PieChart'
 import BarChart from './BarChart'
 import LeagueChart from './LeagueChart'
+import Trades from './Trades'
 import { calcSalaryLimits } from '../../helpers'
 import { map, sum, sortBy, findIndex, uniq, remove, isEqual } from 'lodash'
 
@@ -93,7 +94,7 @@ export default class TeamDashboard extends Component {
 
     const chartStyle = {
       flexGrow: 1,
-      maxWidth: 500
+      maxWidth: 640
     }
 
     return (
@@ -106,14 +107,12 @@ export default class TeamDashboard extends Component {
               onChange={this.teamChanged}
             />
             <Table
-              trades={trades}
               allPlayers={allPlayers}
               teamPlayers={sortedPlayers}
               teamSalary={teamSalary}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
               applyTrade={this.applyTrade}
-              removeTrade={this.removeTrade}
             />
           </div>
           <div style={chartStyle}>
@@ -127,6 +126,7 @@ export default class TeamDashboard extends Component {
               <Tab label="Bar Chart" />
               <Tab label="Pie Chart" />
               <Tab label="League Chart" />
+              <Tab label="Trades" />
             </Tabs>
             { tab === 0 &&
               <BarChart
@@ -148,6 +148,12 @@ export default class TeamDashboard extends Component {
                 teamNames={teamNames}
                 salaryCap={salaryCap}
                 salaryFloor={salaryFloor}
+              />
+            }
+            { tab === 3 &&
+              <Trades
+                trades={trades}
+                removeTrade={this.removeTrade}
               />
             }
           </div>
