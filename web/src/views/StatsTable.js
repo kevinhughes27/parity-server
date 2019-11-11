@@ -77,6 +77,7 @@ const columnsMeta = [
     field: 'pay',
     title: 'Pay',
     type: 'currency',
+    defaultSort: 'desc',
     searchable: false
   }
 ]
