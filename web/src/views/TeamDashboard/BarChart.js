@@ -51,6 +51,7 @@ export default class BarChart extends Component {
         }],
         yAxes: [{
           ticks: {
+            min: 0,
             callback: (data) => {
               const value = Math.round(data)
               const text = format({prefix: '$'})(value)

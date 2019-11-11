@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Table from '@material-ui/core/Table'
 import TableHead from '@material-ui/core/TableHead'
 import TableBody from '@material-ui/core/TableBody'
@@ -6,22 +6,29 @@ import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
 import MoneyCell from './MoneyCell'
 
-export default class TeamTable extends Component {
-  render () {
-    const { players, teamSalary, salaryCap, salaryFloor } = this.props;
+export default function TeamTable (props) {
+  const {
+    teamPlayers,
+    teamSalary,
+    salaryCap,
+    salaryFloor,
+    openTradeModal
+  } = props;
 
-    return (
+  return (
+    <React.Fragment>
       <Table size="small">
-      <TableHead>
-        <TableRow>
-          <TableCell>Player</TableCell>
-          <TableCell>Salary</TableCell>
-        </TableRow>
-      </TableHead>
+        <TableHead>
+          <TableRow>
+            <TableCell>Player</TableCell>
+            <TableCell>Salary</TableCell>
+          </TableRow>
+        </TableHead>
+
         <TableBody>
-          { players.map((player) => {
+          { teamPlayers.map((player) => {
             return (
-              <TableRow key={player.name} hover>
+              <TableRow key={player.name} hover onClick={() => openTradeModal(player)}>
                 <TableCell>{player.name}</TableCell>
                 <TableCell><MoneyCell data={player.salary}/></TableCell>
               </TableRow>
@@ -49,6 +56,6 @@ export default class TeamTable extends Component {
           </TableRow>
         </TableBody>
       </Table>
-    )
-  }
+    </React.Fragment>
+  )
 }

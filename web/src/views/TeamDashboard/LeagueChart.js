@@ -5,6 +5,10 @@ import 'chartjs-plugin-annotation'
 import { flatten, sortBy, map, sum } from 'lodash'
 import { colors, warnColors, dangerColors } from '../../helpers'
 
+const chartStyle = {
+  marginTop: 20
+}
+
 export default class Chart extends Component {
   render () {
     const { players, teamNames, salaryCap, salaryFloor } = this.props
@@ -61,9 +65,7 @@ export default class Chart extends Component {
         xAxes: [{
           barPercentage: 0.6,
           categoryPercentage: 1.0,
-          ticks: {
-            autoSkip: false
-          }
+          display: false
         }],
         yAxes: [{
           stacked: true,
@@ -113,6 +115,10 @@ export default class Chart extends Component {
       }
     }
 
-    return <Bar data={data} redraw={true} options={options}/>
+    return (
+      <div style={chartStyle}>
+        <Bar data={data} height={300} redraw={true} options={options}/>
+      </div>
+    )
   }
 }
