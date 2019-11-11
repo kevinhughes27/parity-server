@@ -8,17 +8,25 @@ import PieChart from './PieChart'
 import BarChart from './BarChart'
 import LeagueChart from './LeagueChart'
 import Trades from './Trades'
+import TradeModal from './TradeModal'
 import { calcSalaryLimits } from '../../helpers'
-import { map, sum, sortBy, findIndex, uniq, remove, isEqual } from 'lodash'
+import { map, sum, sortBy, findIndex, uniq, remove, isEqual, difference, find } from 'lodash'
+
+const defaultPlayer = {name: ''}
 
 export default class TeamDashboard extends Component {
   constructor (props) {
     super(props)
 
+    const players = this.props.players
+    const currentTeam = this.props.players[0].team
+
     this.state = {
-      loading: true,
-      players: this.props.players,
-      team: this.props.players[0].team,
+      players: players,
+      team: currentTeam,
+      trading: false,
+      playerA: defaultPlayer,
+      playerB: defaultPlayer,
       trades: [],
       tab: 0
     }
@@ -37,8 +45,22 @@ export default class TeamDashboard extends Component {
     this.setState({tab})
   }
 
-  applyTrade = (playerA, playerB) => {
-    const { players, trades } = this.state
+  openTradeModal = (player) => {
+    this.setState({trading: true, playerA: player, playerB: defaultPlayer})
+  }
+
+  closeTradeModal = () => {
+    this.setState({trading: false, playerA: defaultPlayer, playerB: defaultPlayer})
+  }
+
+  updateTrade = (_event, player) => {
+    const allPlayers = this.state.players
+    const playerB = find(allPlayers, (p) => p.name === player.name) || defaultPlayer
+    this.setState({playerB})
+  }
+
+  applyTrade = () => {
+    const { players, playerA, playerB, trades } = this.state
 
     const playerAIdx = findIndex(players, (p) => p.name === playerA.name)
     const playerBIdx = findIndex(players, (p) => p.name === playerB.name)
@@ -51,7 +73,7 @@ export default class TeamDashboard extends Component {
 
     trades.push({playerA, playerB})
 
-    this.setState({players: players, trades: trades})
+    this.setState({players: players, trades: trades, trading: false})
   }
 
   removeTrade = (trade) => {
@@ -75,8 +97,10 @@ export default class TeamDashboard extends Component {
   }
 
   render () {
-    const {tab, team, trades, players: allPlayers } = this.state;
+    const {tab, team, trades, trading, playerA, playerB, players: allPlayers } = this.state;
     const teamPlayers = allPlayers.filter(p => p.team === team);
+    const otherPlayers = difference(allPlayers, teamPlayers)
+
     const teamNames = sortBy(uniq(allPlayers.map(p => p.team)));
     const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
     const salaries = map(sortedPlayers, (p) => p.salary);
@@ -107,13 +131,11 @@ export default class TeamDashboard extends Component {
               onChange={this.teamChanged}
             />
             <TeamTable
-              allPlayers={allPlayers}
               teamPlayers={sortedPlayers}
               teamSalary={teamSalary}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
-              overCap={overCap}
-              applyTrade={this.applyTrade}
+              openTradeModal={this.openTradeModal}
             />
           </div>
           <div style={chartStyle}>
@@ -159,6 +181,18 @@ export default class TeamDashboard extends Component {
             }
           </div>
         </div>
+        <TradeModal
+          open={trading}
+          trades={trades}
+          players={otherPlayers}
+          playerA={playerA}
+          playerB={playerB}
+          overCap={overCap}
+          updateTrade={this.updateTrade}
+          submitTrade={this.applyTrade}
+          removeTrade={this.removeTrade}
+          onClose={this.closeTradeModal}
+        />
       </Container>
     )
   }

@@ -45,12 +45,13 @@ export default function TeamTable (props) {
               Trade {playerA.name} for:
             </DialogContentText>
             <Autocomplete
-              value={playerB.name}
+              value={playerB}
               options={options}
               onChange={props.updateTrade}
               renderInput={params => (
                 <TextField {...params} variant="outlined" fullWidth />
               )}
+              getOptionLabel={option => option.name}
               renderOption={option => {
                 const diff = playerA.salary - option.salary
                 const color = diff >= 0 ? '#00e676' : '#f44336'
