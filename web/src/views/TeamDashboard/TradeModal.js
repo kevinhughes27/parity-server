@@ -11,13 +11,10 @@ import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 
 export default class TeamTable extends Component {
-  state = {
-    playerB: ''
-  }
-
   render () {
     const { players, playerA, playerB } = this.props;
     const playerNames = players.map(p => p.name)
+    const disabled = (playerB.name === '')
 
     return (
       <Dialog
@@ -46,7 +43,7 @@ export default class TeamTable extends Component {
               <Button onClick={this.props.onClose} color="primary">
                 Cancel
               </Button>
-              <Button onClick={this.props.submitTrade} color="primary">
+              <Button onClick={this.props.submitTrade} disabled={disabled} color="primary">
                 Trade
               </Button>
             </DialogActions>

@@ -8,11 +8,13 @@ import MoneyCell from './MoneyCell'
 import TradeModal from './TradeModal'
 import { find, difference } from 'lodash'
 
+const defaultPlayer = {name: ''}
+
 export default class TeamTable extends Component {
   state = {
     trading: false,
-    playerA: { name: '' },
-    playerB: { name: '' }
+    playerA: defaultPlayer,
+    playerB: defaultPlayer
   }
 
   openTradeModal = (player) => {
@@ -20,7 +22,7 @@ export default class TeamTable extends Component {
   }
 
   updateTrade = (_event, value) => {
-    const player = find(this.props.allPlayers, (p) => p.name === value)
+    const player = find(this.props.allPlayers, (p) => p.name === value) || defaultPlayer
     this.setState({playerB: player})
   }
 
