@@ -134,6 +134,24 @@ def game_sync():
 
 
 @cli.command()
+@click.option('--week')
+def re_upload(week):
+    url = 'https://parity-server.herokuapp.com/submit_game'
+
+    league_folder = 'data/ocua_19-20'
+
+    files = glob.glob(f"{league_folder}/week{week}_game*.json")
+    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
+
+    for file in files:
+        headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
+        r = requests.post(url, data=open(file, 'rb'), headers=headers)
+        print(file, r.status_code)
+
+    click.echo('Done')
+
+
+@cli.command()
 @click.option('--week', default=0)
 def backup(week):
     click.echo('Downloading database...')
