@@ -138,7 +138,9 @@ def game_sync():
 def backup(week):
     click.echo('Downloading database...')
 
-    src_url = "https://parity-server.herokuapp.com/api/games"
+    league_id = 10
+
+    src_url = f"https://parity-server.herokuapp.com/api/{league_id}/games"
     target_dir = "data/ocua_19-20"
 
     game_counts = defaultdict(int)
