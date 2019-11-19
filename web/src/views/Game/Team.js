@@ -20,6 +20,7 @@ export default class Team extends Component {
     const passEvents = filter(teamEvents, (ev) => ev.type === 'PASS')
     const throwAwayEvents = filter(teamEvents, (ev) => ev.type === 'THROWAWAY')
     const dropEvents = filter(teamEvents, (ev) => ev.type === 'DROP')
+    const completions = passEvents.length - dropEvents.length
 
     return (
       <React.Fragment>
@@ -36,7 +37,7 @@ export default class Team extends Component {
               </TableRow>
 
               { this.renderStat('Defense', defenseEvents.length) }
-              { this.renderStat('Completions', passEvents.length) }
+              { this.renderStat('Completions', completions) }
               { this.renderStat('Throw Aways', throwAwayEvents.length) }
               { this.renderStat('Drops', dropEvents.length) }
             </TableBody>
