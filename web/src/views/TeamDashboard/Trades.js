@@ -28,7 +28,7 @@ export default class Trades extends Component {
 
     if (trades.length === 0) {
       return (
-        <div>
+        <div style={{minHeight: 385}}>
           <p>Click on a player to make a trade.</p>
           <p>None of this data is saved except in your browser tab to help you explore your options</p>
         </div>
