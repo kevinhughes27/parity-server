@@ -154,7 +154,7 @@ def re_upload(week):
 @cli.command()
 @click.option('--week', default=0)
 def backup(week):
-    click.echo('Downloading database...')
+    click.echo('Downloading games...')
 
     league_id = 10
 
