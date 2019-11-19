@@ -84,4 +84,12 @@ $table-border-color: rgba(0,0,0,.12) !default;
       }
     }
   }
+
+  .MuiTableSortLabel-iconDirectionDesc {
+    transform: rotate(270deg) !important;
+  }
+
+  .MuiTableSortLabel-iconDirectionAsc {
+    transform: rotate(90deg) !important;
+  }
 }
