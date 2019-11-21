@@ -4,6 +4,9 @@ import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
 import GenderFilter from '../components/GenderFilter'
+import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core'
+import FilterListIcon from '@material-ui/icons/FilterList'
+import withSizes from 'react-sizes'
 import { last, pickBy } from 'lodash'
 import { currentLeague, fetchWeeks, fetchStats } from "../api"
 
@@ -13,6 +16,7 @@ class StatsProvider extends Component {
 
     this.state = {
       loading: true,
+      filtersOpen: false,
       weeks: [],
       week: 0,
       stats: {},
@@ -30,7 +34,7 @@ class StatsProvider extends Component {
     })()
   }
 
-  leagueChange (league) {
+  leagueChange = (league) => {
     return (async () => {
       this.setState({loading: true})
       const weeks = await fetchWeeks(league)
@@ -40,7 +44,7 @@ class StatsProvider extends Component {
     })()
   }
 
-  weekChange (event) {
+  weekChange = (event) => {
     const week = event.target.value
     const league = currentLeague()
     return (async () => {
@@ -50,9 +54,17 @@ class StatsProvider extends Component {
     })()
   }
 
-  genderChange (event) {
+  genderChange = (event) => {
     const filter = event.target.value
     this.setState({ filter })
+  }
+
+  openFilters = () => {
+    this.setState({filtersOpen: true})
+  }
+
+  closeFilters = () => {
+    this.setState({filtersOpen: false})
   }
 
   filteredStats(filter, stats) {
@@ -65,21 +77,48 @@ class StatsProvider extends Component {
     })
   }
 
-  renderNav () {
-    const leagueChange = this.leagueChange.bind(this)
+  renderFilters () {
     const week = this.state.week
     const weeks = [0, ...this.state.weeks]
-    const weekChange = this.weekChange.bind(this)
     const genderFilter = this.state.filter
-    const genderChange = this.genderChange.bind(this)
 
-    return (
-      <TopNav>
-        <LeaguePicker onChange={leagueChange} />
-        <GenderFilter filter={genderFilter} onChange={genderChange} />
-        <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
-      </TopNav>
-    )
+    if (this.props.isMobile) {
+      return (
+        <React.Fragment>
+          <IconButton onClick={this.openFilters}>
+            <FilterListIcon style={{color: "white"}} />
+          </IconButton>
+          <Dialog
+            disableBackdropClick
+            disableEscapeKeyDown
+            maxWidth="sm"
+            fullWidth={true}
+            open={this.state.filtersOpen}
+            onClose={this.closeFilters}
+          >
+            <DialogTitle>Filters</DialogTitle>
+            <DialogContent className="filters">
+              <LeaguePicker onChange={this.leagueChange} />
+              <GenderFilter filter={genderFilter} onChange={this.genderChange} />
+              <WeekPicker week={week} weeks={weeks} onChange={this.weekChange} />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.closeFilters} color="primary">
+                Close
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </React.Fragment>
+      )
+    } else {
+      return (
+        <React.Fragment>
+          <LeaguePicker onChange={this.leagueChange} />
+          <GenderFilter filter={genderFilter} onChange={this.genderChange} />
+          <WeekPicker week={week} weeks={weeks} onChange={this.weekChange} />
+        </React.Fragment>
+      )
+    }
   }
 
   renderMain () {
@@ -98,11 +137,17 @@ class StatsProvider extends Component {
   render () {
     return (
       <div>
-        { this.renderNav() }
+        <TopNav>
+          { this.renderFilters() }
+        </TopNav>
         { this.renderMain() }
       </div>
     )
   }
 }
 
-export default StatsProvider
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 480,
+})
+
+export default withSizes(mapSizesToProps)(StatsProvider)

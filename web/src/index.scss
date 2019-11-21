@@ -16,6 +16,29 @@ $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 // Tables
 $table-border-color: rgba(0,0,0,.12) !default;
 
+.filters {
+  margin: auto;
+
+  .MuiInputBase-inputSelect {
+    color: black !important;
+    width: 160px;
+    border: rgba(0, 0, 0, 0.87);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+  }
+
+  .MuiSelect-icon {
+    color: black !important;
+    top: 12px;
+    right: 6px;
+  }
+}
+
 // Responsive Table
 @media #{$medium-and-down} {
   .responsive-table {
