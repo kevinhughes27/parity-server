@@ -71,6 +71,13 @@ def teams(league_id):
 
 
 @cache.cached()
+@app.route('/api/<league_id>/schedule')
+def teams(league_id):
+    teams = build_teams_response(league_id)
+    return jsonify(teams)
+
+
+@cache.cached()
 @app.route('/api/<league_id>/players')
 def players(league_id):
     players = build_players_response(league_id)

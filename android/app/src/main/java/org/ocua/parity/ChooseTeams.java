@@ -12,11 +12,20 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.PermissionChecker;
 
+import com.google.gson.JsonArray;
+
 import org.json.JSONArray;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.ocua.parity.model.Matchup;
+import org.ocua.parity.model.Matchups;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 import org.ocua.parity.tasks.FetchRoster;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class ChooseTeams extends Activity {
     private Context context;
@@ -67,8 +76,33 @@ public class ChooseTeams extends Activity {
         }
     }
 
-    public void initTeams(JSONArray response) {
-        teams.load(response);
+    public void loadSchedule(JSONObject response) {
+        try {
+            teams.load(response.getJSONArray("teams"));
+            final ArrayList<Matchup> games = Matchups.load(response.getJSONArray("schedule"));
+
+            Map<Integer,String> names = teams.teamNames();
+
+            new AlertDialog.Builder(context)
+                    .setTitle("Choose Game")
+                    .setItems(Matchups.matchupList(games, names), new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            if (which >= games.size()) {
+                                openDialog();
+                                return;
+                            }
+
+                            Matchup game = games.get(which);
+
+                            Team homeTeam = teams.findTeam(game.homeTeamId);
+                            Team awayTeam = teams.findTeam(game.awayTeamId);
+
+                            editRosters(homeTeam, awayTeam);
+                        }
+                    }).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void openDialog() {

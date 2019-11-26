@@ -51,7 +51,7 @@ android {
             def baseUrl = "https://parity-server.herokuapp.com"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
-            buildConfigField "String", "TEAMS_URL", "\"" + baseUrl + "/api/%s/teams\""
+            buildConfigField "String", "SCHEDULE_URL", "\"" + baseUrl + "/api/%s/schedule\""
 
             dimension = "parity"
         }

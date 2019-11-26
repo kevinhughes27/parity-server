@@ -11,6 +11,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 
+import org.json.JSONObject;
 import org.ocua.parity.BuildConfig;
 import org.ocua.parity.ChooseTeams;
 import org.ocua.parity.model.League;
@@ -20,7 +21,7 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
     public Context context;
     private ProgressDialog dialog;
     private ChooseTeams parent;
-    private JSONArray json;
+    private JSONObject json;
 
     public FetchRoster(Context context, ChooseTeams parent) {
         this.context = context;
@@ -36,7 +37,7 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
-        String strRosterUrl = String.format(BuildConfig.TEAMS_URL, League.id);
+        String strRosterUrl = String.format(BuildConfig.SCHEDULE_URL, League.id);
         String resString = "";
 
         try {
@@ -45,7 +46,7 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
             HttpResponse response = httpclient.execute(httpget);
 
             resString = EntityUtils.toString(response.getEntity());
-            json = new JSONArray(resString.toString());
+            json = new JSONObject(resString);
         } catch (Exception e) {
             this.dialog.setMessage(resString);
             e.printStackTrace();
@@ -57,8 +58,7 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
     protected void onPostExecute(Long result) {
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
-            parent.initTeams(json);
-            parent.openDialog();
+            parent.loadSchedule(json);
         }
     }
 }

@@ -2,6 +2,7 @@ from datetime import datetime
 import re
 import requests
 from bs4 import BeautifulSoup
+from .matchup import Matchup
 
 class ScheduleSync:
     def __init__(self, league_id):
@@ -37,10 +38,8 @@ class ScheduleSync:
                 week = week + 1
                 game_slot = 1
             else:
-                game = self.parse_game(row, week, game_slot)
-                if game:
-                    schedule.append(game)
-                    game_slot = game_slot + 1
+                schedule.append(self.parse_game(row, week, game_slot))
+                game_slot = game_slot + 1
 
         return schedule
 
@@ -49,12 +48,10 @@ class ScheduleSync:
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
-        if len(ids) < 2:
-            return None
-
-        return {
-            'week': week,
-            'game': game,
-            'home_team_id': ids[0],
-            'away_team_id': ids[1]
-        }
+        matchup = Matchup()
+        matchup.league_id = self.league_id
+        matchup.home_team_id = ids[0]
+        matchup.away_team_id = ids[1]
+        matchup.week = week
+        matchup.game = game
+        return matchup
