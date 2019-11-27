@@ -88,7 +88,7 @@ def games(league_id):
 @app.route('/api/<league_id>/games/<id>')
 def game(league_id, id):
     game = Game.query.filter_by(league_id=league_id, id=id).first()
-    return jsonify(game.to_dict(include_points=True))
+    return jsonify(game.to_dict(include_points=True, include_stats=True))
 
 
 @cache.cached()
