@@ -14,8 +14,6 @@ class Game(db.Model):
     away_score = db.Column(db.Integer)
     points = db.Column(JsonColumn)
 
-    stats = db.relationship('Stats', backref='game', lazy=True)
-
     @property
     def league(self):
         return League.query.get(self.league_id)
@@ -24,7 +22,7 @@ class Game(db.Model):
     def players(self):
         return self.home_roster + self.away_roster
 
-    def to_dict(self, include_points=False, include_stats=False):
+    def to_dict(self, include_points=False):
         output = {
             "id": self.id,
             "league_id": self.league_id,
@@ -39,8 +37,5 @@ class Game(db.Model):
 
         if include_points:
             output["points"] = self.points
-
-        if include_stats:
-            output["stats"] = self.stats
 
         return output
