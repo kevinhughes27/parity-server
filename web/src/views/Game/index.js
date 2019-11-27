@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
+import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-import Team from './Team'
+import Roster from './Roster'
+import TeamStats from './TeamStats'
 import Points from './Points'
 import { fetchGame } from "../../api"
 
@@ -53,7 +55,10 @@ export default class Game extends Component {
             <Typography variant="h5" gutterBottom={true}>
               {homeJsx}
             </Typography>
-            <Team
+            <Paper>
+              <Roster players={game.homeRoster} />
+            </Paper>
+            <TeamStats
               score={game.homeScore}
               winner={game.homeScore > game.awayScore}
               players={game.homeRoster}
@@ -63,7 +68,10 @@ export default class Game extends Component {
             <Typography variant="h5" gutterBottom={true}>
               {awayJsx}
             </Typography>
-            <Team
+            <Paper>
+              <Roster players={game.awayRoster} />
+            </Paper>
+            <TeamStats
               score={game.awayScore}
               winner={game.awayScore > game.homeScore}
               players={game.awayRoster}

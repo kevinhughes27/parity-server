@@ -4,10 +4,9 @@ import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
-import Roster from './Roster'
 import { flatten, filter, includes, map } from 'lodash'
 
-export default class Team extends Component {
+export default class TeamStats extends Component {
   render () {
     const { score, players, game } = this.props
 
@@ -42,10 +41,6 @@ export default class Team extends Component {
               { this.renderStat('Drops', dropEvents.length) }
             </TableBody>
           </Table>
-        </Paper>
-
-        <Paper>
-          <Roster players={players} />
         </Paper>
       </React.Fragment>
     )
