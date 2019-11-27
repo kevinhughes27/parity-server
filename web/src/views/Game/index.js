@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-import Roster from './Roster'
-import TeamStats from './TeamStats'
+import Team from './Team'
 import Points from './Points'
 import { fetchGame } from "../../api"
 
@@ -49,33 +47,33 @@ export default class Game extends Component {
       : <span>{game.awayTeam}</span>
 
     return (
-      <Container style={{marginTop: 10}}>
+      <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <Typography variant="h5" gutterBottom={true}>
               {homeJsx}
             </Typography>
-            <Paper>
-              <Roster players={game.homeRoster} />
-            </Paper>
-            <TeamStats
-              score={game.homeScore}
-              winner={game.homeScore > game.awayScore}
-              players={game.homeRoster}
-              game={game} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="h5" gutterBottom={true}>
               {awayJsx}
             </Typography>
-            <Paper>
-              <Roster players={game.awayRoster} />
-            </Paper>
-            <TeamStats
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <Team
+              score={game.homeScore}
+              players={game.homeRoster}
+              points={game.points}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Team
               score={game.awayScore}
-              winner={game.awayScore > game.homeScore}
               players={game.awayRoster}
-              game={game} />
+              points={game.points}
+            />
           </Grid>
         </Grid>
         <Points game={game} />

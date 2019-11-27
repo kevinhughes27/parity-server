@@ -8,9 +8,9 @@ import { flatten, filter, includes, map } from 'lodash'
 
 export default class TeamStats extends Component {
   render () {
-    const { score, players, game } = this.props
+    const { score, players, points } = this.props
 
-    const events = flatten(map(game.points, (p) => p.events))
+    const events = flatten(map(points, (p) => p.events))
     const teamEvents = filter(events, (ev) => {
       return includes(players, ev.firstActor)
     })
