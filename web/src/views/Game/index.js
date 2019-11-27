@@ -10,6 +10,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Team from './Team'
 import Points from './Points'
 import { fetchGame } from "../../api"
+import { pickBy, includes } from 'lodash'
 
 export default class Game extends Component {
   constructor(props) {
@@ -46,6 +47,9 @@ export default class Game extends Component {
       ? <span><FontAwesomeIcon icon={faStar} /> {game.awayTeam}</span>
       : <span>{game.awayTeam}</span>
 
+    const homeStats = pickBy(game.stats, (_stat, player) => includes(game.homeRoster, player))
+    const awayStats = pickBy(game.stats, (_stat, player) => includes(game.awayRoster, player))
+
     return (
       <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
@@ -66,6 +70,7 @@ export default class Game extends Component {
               score={game.homeScore}
               players={game.homeRoster}
               points={game.points}
+              stats={homeStats}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -73,6 +78,7 @@ export default class Game extends Component {
               score={game.awayScore}
               players={game.awayRoster}
               points={game.points}
+              stats={awayStats}
             />
           </Grid>
         </Grid>

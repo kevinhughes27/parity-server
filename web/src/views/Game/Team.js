@@ -4,6 +4,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Roster from './Roster'
 import TeamStats from './TeamStats'
+import Chart from './Chart'
 
 export default class Team extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class Team extends Component {
   }
 
   render () {
-    const { score, players, points } = this.props
+    const { score, players, stats, points } = this.props
     const { tab } = this.state
 
     return (
@@ -43,7 +44,7 @@ export default class Team extends Component {
           points={points} />
         }
         { tab === 2 &&
-          <div>Coming soon</div>
+          <Chart stats={stats} stat="goals" />
         }
       </div>
     )
