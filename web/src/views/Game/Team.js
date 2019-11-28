@@ -16,11 +16,11 @@ export default class Team extends Component {
   }
 
   render () {
-    const { score, players, stats, points, colors } = this.props
+    const { score, players, stats, points, colors, statMaxes } = this.props
     const { tab } = this.state
 
     return (
-      <div style={{height: 480}}>
+      <div style={{height: 500}}>
         <Tabs
           value={tab}
           onChange={this.tabChanged}
@@ -44,7 +44,7 @@ export default class Team extends Component {
           points={points} />
         }
         { tab === 2 &&
-          <Chart stats={stats} colors={colors} />
+          <Chart stats={stats} statMaxes={statMaxes} colors={colors} />
         }
       </div>
     )

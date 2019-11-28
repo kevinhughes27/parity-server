@@ -11,7 +11,7 @@ import Team from './Team'
 import Points from './Points'
 import { fetchGame } from "../../api"
 import { homeColors, awayColors } from '../../helpers'
-import { pickBy, includes } from 'lodash'
+import { pickBy, includes, forIn } from 'lodash'
 
 export default class Game extends Component {
   constructor(props) {
@@ -51,6 +51,14 @@ export default class Game extends Component {
     const homeStats = pickBy(game.stats, (_stat, player) => includes(game.homeRoster, player))
     const awayStats = pickBy(game.stats, (_stat, player) => includes(game.awayRoster, player))
 
+    const statMaxes = {}
+    forIn(game.stats, (stats) => {
+      forIn(stats, (value, key) => {
+        const max = Math.max(value, statMaxes[key] || 0)
+        statMaxes[key] = max
+      })
+    })
+
     return (
       <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
@@ -73,6 +81,7 @@ export default class Game extends Component {
               points={game.points}
               stats={homeStats}
               colors={homeColors}
+              statMaxes={statMaxes}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -82,6 +91,7 @@ export default class Game extends Component {
               points={game.points}
               stats={awayStats}
               colors={awayColors}
+              statMaxes={statMaxes}
             />
           </Grid>
         </Grid>
