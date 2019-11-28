@@ -5,7 +5,6 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import { Bar } from 'react-chartjs-2'
-import { overColors as colors } from '../../helpers'
 import { map, keys, sortBy } from 'lodash'
 
 const useStyles = makeStyles(theme => ({
@@ -42,7 +41,7 @@ export default function BarChart (props) {
     labels: sortedPlayers.map (p => p.name),
     datasets: [{
       data: sortedPlayers.map (p => p[stat]),
-      backgroundColor: colors
+      backgroundColor: props.colors
     }]
   };
 

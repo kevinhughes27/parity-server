@@ -10,6 +10,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Team from './Team'
 import Points from './Points'
 import { fetchGame } from "../../api"
+import { homeColors, awayColors } from '../../helpers'
 import { pickBy, includes } from 'lodash'
 
 export default class Game extends Component {
@@ -71,6 +72,7 @@ export default class Game extends Component {
               players={game.homeRoster}
               points={game.points}
               stats={homeStats}
+              colors={homeColors}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -79,6 +81,7 @@ export default class Game extends Component {
               players={game.awayRoster}
               points={game.points}
               stats={awayStats}
+              colors={awayColors}
             />
           </Grid>
         </Grid>

@@ -16,7 +16,7 @@ export default class Team extends Component {
   }
 
   render () {
-    const { score, players, stats, points } = this.props
+    const { score, players, stats, points, colors } = this.props
     const { tab } = this.state
 
     return (
@@ -44,7 +44,7 @@ export default class Team extends Component {
           points={points} />
         }
         { tab === 2 &&
-          <Chart stats={stats} />
+          <Chart stats={stats} colors={colors} />
         }
       </div>
     )

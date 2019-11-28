@@ -6,12 +6,13 @@ import Collapse from '@material-ui/core/Collapse'
 import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import format from 'date-fns/format'
 import Event from './Event'
 import { last, includes } from 'lodash'
-import { Button } from '@material-ui/core'
+import { homeColors, awayColors } from '../../helpers'
 
 export default class Points extends Component {
   state = {
@@ -106,8 +107,8 @@ export default class Points extends Component {
       ? game.homeTeam
       : game.awayTeam
 
-    const homeColor = '#98abc5'
-    const awayColor = '#ff8c00'
+    const homeColor = homeColors[8]
+    const awayColor = awayColors[8]
     const teamColor = homeScored
       ? homeColor
       : awayColor
