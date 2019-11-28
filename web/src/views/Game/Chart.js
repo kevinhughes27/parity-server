@@ -68,8 +68,7 @@ export default function BarChart (props) {
       yAxes: [{
         ticks: {
           min: 0,
-          max: props.statMaxes[stat],
-          stepSize: 1
+          max: props.statMaxes[stat]
         }
       }]
     }
