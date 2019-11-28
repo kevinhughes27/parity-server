@@ -44,7 +44,7 @@ export default class Team extends Component {
           points={points} />
         }
         { tab === 2 &&
-          <Chart stats={stats} stat="goals" />
+          <Chart stats={stats} />
         }
       </div>
     )

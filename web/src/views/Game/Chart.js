@@ -1,66 +1,109 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import InputLabel from '@material-ui/core/InputLabel'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormControl from '@material-ui/core/FormControl'
+import Select from '@material-ui/core/Select'
 import { Bar } from 'react-chartjs-2'
-import format from 'format-number'
-import { overColors } from '../../helpers'
+import { overColors as colors } from '../../helpers'
 import { map, keys, sortBy } from 'lodash'
 
-const chartStyle = {
-  marginTop: 20
-}
+const useStyles = makeStyles(theme => ({
+  container: {
+    marginTop: 20,
+    textAlign: 'right',
+    position: 'relative'
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    background: 'white'
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
-export default class BarChart extends Component {
-  render () {
-    const { stats, stat } = this.props;
+export default function BarChart (props) {
+  const classes = useStyles();
 
-    const teamColors = overColors;
+  const [stat, setStat] = React.useState('goals');
 
-    const players = map(keys(stats), (k) => {
-      return { name: k, ...stats[k] }
-    })
+  const players = map(keys(props.stats), (k) => {
+    return { name: k, ...props.stats[k] }
+  })
 
-    const sortedPlayers = sortBy(players, (p) => -p[stat])
+  const sortedPlayers = sortBy(players, (p) => -p[stat])
 
-    const data = {
-      labels: sortedPlayers.map (p => p.name),
-      datasets: [{
-        data: sortedPlayers.map (p => p[stat]),
-        backgroundColor: teamColors
-      }]
-    };
+  const data = {
+    labels: sortedPlayers.map (p => p.name),
+    datasets: [{
+      data: sortedPlayers.map (p => p[stat]),
+      backgroundColor: colors
+    }]
+  };
 
-    const options = {
-      legend: {
-        display: false
-      },
-      tooltips: {
-        callbacks: {
-          label: (tooltipItem, data) => {
-            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
-            // const salary = Math.round(value)
-            // const text = format({prefix: '$'})(salary)
-            const text = format(value)
-            return text
-          }
+  const options = {
+    legend: {
+      display: false
+    },
+    tooltips: {
+      callbacks: {
+        label: (tooltipItem, data) => {
+          return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
         }
-      },
-      scales: {
-        xAxes: [{
-          ticks: {
-            autoSkip: false
-          }
-        }],
-        yAxes: [{
-          ticks: {
-            min: 0
-          }
-        }]
       }
+    },
+    scales: {
+      xAxes: [{
+        ticks: {
+          autoSkip: false
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          min: 0
+        }
+      }]
     }
-
-    return (
-      <div style={chartStyle}>
-        <Bar data={data} height={280} options={options}/>
-      </div>
-    )
   }
+
+  const inputLabel = React.useRef(null);
+  const [labelWidth, setLabelWidth] = React.useState(0);
+  React.useEffect(() => {
+    setLabelWidth(inputLabel.current.offsetWidth);
+  }, []);
+
+  const handleChange = event => {
+    setStat(event.target.value);
+  };
+
+  return (
+    <div className={classes.container}>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel ref={inputLabel}>
+          Stat
+        </InputLabel>
+        <Select
+          value={stat}
+          onChange={handleChange}
+          labelWidth={labelWidth}
+        >
+          <MenuItem value={'goals'}>Goals</MenuItem>
+          <MenuItem value={'assists'}>Assists</MenuItem>
+          <MenuItem value={'second_assists'}>Second Assists</MenuItem>
+          <MenuItem value={'d_blocks'}>D Blocks</MenuItem>
+          <MenuItem value={'catches'}>Catches</MenuItem>
+          <MenuItem value={'completions'}>Completions</MenuItem>
+          <MenuItem value={'throw_aways'}>Throw Aways</MenuItem>
+          <MenuItem value={'threw_drops'}>Threw Drops</MenuItem>
+          <MenuItem value={'drops'}>Drops</MenuItem>
+        </Select>
+      </FormControl>
+      <Bar data={data} height={280} options={options}/>
+    </div>
+  )
 }
