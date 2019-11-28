@@ -62,13 +62,14 @@ export default function BarChart (props) {
     scales: {
       xAxes: [{
         ticks: {
-          autoSkip: false
+          display: false
         }
       }],
       yAxes: [{
         ticks: {
           min: 0,
-          max: props.statMaxes[stat]
+          max: props.statMaxes[stat],
+          stepSize: 1
         }
       }]
     }
@@ -107,7 +108,7 @@ export default function BarChart (props) {
           <MenuItem value={'drops'}>Drops</MenuItem>
         </Select>
       </FormControl>
-      <Bar data={data} height={280} options={options}/>
+      <Bar data={data} height={200} options={options}/>
     </div>
   )
 }

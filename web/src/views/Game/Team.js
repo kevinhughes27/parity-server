@@ -20,7 +20,7 @@ export default class Team extends Component {
     const { tab } = this.state
 
     return (
-      <div style={{height: 500}}>
+      <div style={{height: 480}}>
         <Tabs
           value={tab}
           onChange={this.tabChanged}
