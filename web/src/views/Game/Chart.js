@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
     right: 20,
     background: 'white'
   },
+  select: {
+    textAlign: 'left'
+  },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
@@ -91,6 +94,7 @@ export default function BarChart (props) {
           value={stat}
           onChange={handleChange}
           labelWidth={labelWidth}
+          className={classes.select}
         >
           <MenuItem value={'goals'}>Goals</MenuItem>
           <MenuItem value={'assists'}>Assists</MenuItem>
