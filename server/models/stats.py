@@ -92,7 +92,7 @@ class Stats(db.Model):
         if self.points_played == 0:
             return 0
         else:
-            return round(self.pay / self._points_played)
+            return round(self.pay / self.points_played)
 
     @property
     def _o_points_played(self):
@@ -122,10 +122,10 @@ class Stats(db.Model):
 
     @property
     def total_efficiency(self):
-        if self._points_played == 0:
+        if self.points_played == 0:
             return 0
         else:
-            return (self.o_points_for + self.d_points_for) / self._points_played
+            return (self.o_points_for + self.d_points_for) / self.points_played
 
     def to_dict(self):
         return {
@@ -147,32 +147,7 @@ class Stats(db.Model):
             "o_efficiency": self.o_efficiency,
             "d_efficiency": self.d_efficiency,
             "total_efficiency": self.total_efficiency,
+            "points_played": self.points_played,
             "pay": self.pay,
             "salary_per_point": self.salary_per_point
         }
-
-    def to_csv(self):
-        data = [
-            self.goals,
-            self.assists,
-            self.second_assists,
-            self.d_blocks,
-            self.completions,
-            self.throw_aways,
-            self.threw_drops,
-            self.catches,
-            self.drops,
-            self.pulls,
-            self.callahan,
-            self.o_points_for,
-            self.o_points_against,
-            self.d_points_for,
-            self.d_points_against,
-            self.o_efficiency,
-            self.d_efficiency,
-            self.total_efficiency,
-            self.pay,
-            self.salary_per_point
-        ]
-
-        return ','.join(map(str, data)) + "\n"
