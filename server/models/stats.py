@@ -89,7 +89,7 @@ class Stats(db.Model):
 
     @property
     def salary_per_point(self):
-        if self._points_played == 0:
+        if self.points_played == 0:
             return 0
         else:
             return round(self.pay / self._points_played)
@@ -103,7 +103,7 @@ class Stats(db.Model):
         return self.d_points_for + self.d_points_against
 
     @property
-    def _points_played(self):
+    def points_played(self):
         return self._o_points_played + self._d_points_played
 
     @property
