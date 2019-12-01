@@ -202,8 +202,8 @@ export default class Points extends Component {
               }
 
               return (
-                <ListItem style={styles}>
-                  <Event key={idx} event={ev}/>
+                <ListItem key={idx} style={styles}>
+                  <Event event={ev}/>
                 </ListItem>
               )
             })}
