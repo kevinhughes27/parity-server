@@ -188,7 +188,25 @@ export default class Points extends Component {
 
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <List style={{paddingLeft: 20}}>
-            { point.events.map((ev, idx) => <Event key={idx} event={ev} focus={this.state.focus} />) }
+            { point.events.map((ev, idx) => {
+              const focus = this.state.focus
+              const highlight = ev.firstActor === focus || ev.secondActor === focus
+              const mute = focus && !highlight
+
+              const styles = {}
+
+              if (highlight) {
+                styles['fontWeight'] = 'bold'
+              } else if (mute) {
+                styles['color'] = 'grey'
+              }
+
+              return (
+                <ListItem style={styles}>
+                  <Event key={idx} event={ev}/>
+                </ListItem>
+              )
+            })}
           </List>
         </Collapse>
       </React.Fragment>
