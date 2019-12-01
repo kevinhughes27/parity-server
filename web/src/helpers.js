@@ -1,6 +1,4 @@
-import { map,
-   sum,
-   uniq } from 'lodash'
+import { map, sum, uniq } from 'lodash'
 
 export function calcSalaryLimits(players) {
   const numTeams = uniq(players.map(p => p.team)).length
