@@ -3,7 +3,6 @@ import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
@@ -62,20 +61,9 @@ export default class Game extends Component {
     return (
       <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h5" gutterBottom={true}>
-              {homeJsx}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h5" gutterBottom={true}>
-              {awayJsx}
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} md={6}>
             <Team
+              teamName={homeJsx}
               score={game.homeScore}
               players={game.homeRoster}
               points={game.points}
@@ -84,8 +72,9 @@ export default class Game extends Component {
               statMaxes={statMaxes}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} md={6}>
             <Team
+              teamName={awayJsx}
               score={game.awayScore}
               players={game.awayRoster}
               points={game.points}
@@ -102,10 +91,10 @@ export default class Game extends Component {
 
   render () {
     return (
-      <div>
+      <React.Fragment>
         <TopNav />
         { this.renderMain() }
-      </div>
+      </React.Fragment>
     )
   }
 }

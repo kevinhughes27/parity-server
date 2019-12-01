@@ -69,12 +69,12 @@ export default class Points extends Component {
 
     return (
       <React.Fragment>
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
-          <Typography variant="h5" style={{marginTop: 15}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+          <Typography variant='h5' className={'game-points-title'} style={{marginTop: 15}}>
             Points
           </Typography>
           <div style={{display: 'flex', flexDirection: 'row'}}>
-            <Typography variant="button" style={{marginTop: 15, marginRight: 20}}>
+            <Typography variant='button' style={{marginTop: 15, marginRight: 20, marginLeft: 8}}>
               Focus Player:
             </Typography>
             <Autocomplete
