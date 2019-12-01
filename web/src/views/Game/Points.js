@@ -188,7 +188,7 @@ export default class Points extends Component {
 
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <List style={{paddingLeft: 20}}>
-            { point.events.map((ev, idx) => <Event key={idx} event={ev} />) }
+            { point.events.map((ev, idx) => <Event key={idx} event={ev} focus={this.state.focus} />) }
           </List>
         </Collapse>
       </React.Fragment>

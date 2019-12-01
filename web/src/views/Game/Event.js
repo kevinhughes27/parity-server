@@ -4,13 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrophy, faShieldAlt, faLevelDownAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default class Event extends Component {
+  renderActor = (actor) => {
+    if (actor === this.props.focus) {
+      return <strong>{actor}</strong>
+    } else {
+      return actor
+    }
+  }
+
   render () {
-    const event = this.props.event
+    const { event, focus } = this.props
 
     if (event.type === 'PULL') {
       return (
         <ListItem className="collection-item">
-          {event.firstActor} pulled
+          {this.renderActor(event.firstActor)} pulled
         </ListItem>
       )
     }
@@ -18,7 +26,7 @@ export default class Event extends Component {
     if (event.type === 'PASS') {
       return (
         <ListItem className="collection-item">
-          {event.firstActor} passed to {event.secondActor}
+          <span>{this.renderActor(event.firstActor)} passed to {this.renderActor(event.secondActor)}</span>
         </ListItem>
       )
     }
@@ -26,7 +34,7 @@ export default class Event extends Component {
     if (event.type === 'POINT') {
       return (
         <ListItem className="collection-item">
-          <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {event.firstActor} scored!
+          <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {this.renderActor(event.firstActor)} scored!
         </ListItem>
       )
     }
@@ -34,7 +42,7 @@ export default class Event extends Component {
     if (event.type === 'DEFENSE') {
       return (
         <ListItem className="collection-item">
-          <FontAwesomeIcon icon={faShieldAlt} style={{marginRight: 5}}/> {event.firstActor} got a block
+          <FontAwesomeIcon icon={faShieldAlt} style={{marginRight: 5}}/> {this.renderActor(event.firstActor)} got a block
         </ListItem>
       )
     }
@@ -42,7 +50,7 @@ export default class Event extends Component {
     if (event.type === 'THROWAWAY') {
       return (
         <ListItem className="collection-item">
-          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} threw it away
+          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {this.renderActor(event.firstActor)} threw it away
         </ListItem>
       )
     }
@@ -50,7 +58,7 @@ export default class Event extends Component {
     if (event.type === 'DROP') {
       return (
         <ListItem className="collection-item">
-          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} dropped it
+          <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {this.renderActor(event.firstActor)} dropped it
         </ListItem>
       )
     }
