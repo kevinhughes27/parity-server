@@ -2,7 +2,7 @@ from datetime import datetime
 import re
 import requests
 from bs4 import BeautifulSoup
-from .matchup import Matchup
+from models import db, League, Matchup
 
 class ScheduleSync:
     def __init__(self, league_id):
@@ -18,7 +18,8 @@ class ScheduleSync:
     def load_schedule(self):
         print('Fetching schedule')
 
-        league_params = {'league': self.league_id}
+        league = League.query.filter_by(id=self.league_id).first()
+        league_params = {'league': league.zuluru_id}
         page = requests.get(self.schedule_path, params = league_params)
 
         soup = BeautifulSoup(page.text, 'html.parser')
@@ -38,8 +39,12 @@ class ScheduleSync:
                 week = week + 1
                 game_slot = 1
             else:
-                schedule.append(self.parse_game(row, week, game_slot))
-                game_slot = game_slot + 1
+                game = self.parse_game(row, week, game_slot)
+                if game:
+                    schedule.append(game)
+                    game_slot = game_slot + 1
+                else:
+                    break;
 
         return schedule
 
@@ -48,6 +53,9 @@ class ScheduleSync:
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
+        if len(ids) < 2:
+            return None
+
         matchup = Matchup()
         matchup.league_id = self.league_id
         matchup.home_team_id = ids[0]
@@ -55,3 +63,15 @@ class ScheduleSync:
         matchup.week = week
         matchup.game = game
         return matchup
+
+
+    def update_schedule(self):
+        db.session.query(Matchup).filter_by(league_id = self.league_id).delete()
+
+        matchups = self.load_schedule()
+        print (len(matchups), "games retrieved")
+
+        for matchup in matchups:
+            db.session.add(matchup)
+
+        db.session.commit()

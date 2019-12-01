@@ -172,10 +172,11 @@ def backup(week):
 
 @cli.command()
 def schedule_sync():
+    league_id = 10
     with app.app_context():
-        sync = ScheduleSync(702)
+        sync = ScheduleSync(league_id)
 
-        print(sync.load_schedule())
+        sync.update_schedule()
 
 
 if __name__ == "__main__":
