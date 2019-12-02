@@ -16,19 +16,19 @@ import TeamDashboard from './views/TeamDashboard'
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-87669001-1')
 
-function logPageView () {
-  if (window.location.hostname !== 'localhost') {
-    ReactGA.set({ page: window.location.pathname })
-    ReactGA.pageview(window.location.pathname)
-  }
-}
+const history = createBrowserHistory();
 
-const browserHistory = createBrowserHistory();
+history.listen((location) => {
+  if (window.location.hostname !== 'localhost') {
+    ReactGA.set({ page: location.pathname })
+    ReactGA.pageview(location.pathname)
+  }
+})
 
 class App extends React.Component {
   render() {
     return (
-      <Router history={browserHistory} onUpdate={logPageView}>
+      <Router history={history}>
         <Route exact path="/games" component={GamesList} />
         <Route path="/:leagueId/games/:gameId" component={Game} />
 

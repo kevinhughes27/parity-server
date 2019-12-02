@@ -3,13 +3,14 @@ import TopNav from '../../layout/TopNav'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import Team from './Team'
 import Points from './Points'
 import { fetchGame } from "../../api"
+import { homeColors, awayColors } from '../../helpers'
+import { pickBy, includes, forIn } from 'lodash'
 
 export default class Game extends Component {
   constructor(props) {
@@ -46,28 +47,41 @@ export default class Game extends Component {
       ? <span><FontAwesomeIcon icon={faStar} /> {game.awayTeam}</span>
       : <span>{game.awayTeam}</span>
 
+    const homeStats = pickBy(game.stats, (_stat, player) => includes(game.homeRoster, player))
+    const awayStats = pickBy(game.stats, (_stat, player) => includes(game.awayRoster, player))
+
+    const statMaxes = {}
+    forIn(game.stats, (stats) => {
+      forIn(stats, (value, key) => {
+        const max = Math.max(value, statMaxes[key] || 0)
+        statMaxes[key] = max
+      })
+    })
+
     return (
-      <Container style={{marginTop: 10}}>
+      <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h5" gutterBottom={true}>
-              {homeJsx}
-            </Typography>
+          <Grid item xs={12} md={6}>
             <Team
+              teamName={homeJsx}
               score={game.homeScore}
-              winner={game.homeScore > game.awayScore}
               players={game.homeRoster}
-              game={game} />
+              points={game.points}
+              stats={homeStats}
+              colors={homeColors}
+              statMaxes={statMaxes}
+            />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h5" gutterBottom={true}>
-              {awayJsx}
-            </Typography>
+          <Grid item xs={12} md={6}>
             <Team
+              teamName={awayJsx}
               score={game.awayScore}
-              winner={game.awayScore > game.homeScore}
               players={game.awayRoster}
-              game={game} />
+              points={game.points}
+              stats={awayStats}
+              colors={awayColors}
+              statMaxes={statMaxes}
+            />
           </Grid>
         </Grid>
         <Points game={game} />
@@ -77,10 +91,10 @@ export default class Game extends Component {
 
   render () {
     return (
-      <div>
+      <React.Fragment>
         <TopNav />
         { this.renderMain() }
-      </div>
+      </React.Fragment>
     )
   }
 }
