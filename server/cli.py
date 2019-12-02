@@ -135,8 +135,12 @@ def game_sync():
 
 @cli.command()
 @click.option('--week')
-def re_upload(week):
-    url = 'https://parity-server.herokuapp.com/submit_game'
+@click.option('--prod', default=False)
+def re_upload(week, prod):
+    if prod:
+        url = 'https://parity-server.herokuapp.com/submit_game'
+    else:
+        url = 'http://localhost:5000/submit_game'
 
     league_folder = 'data/ocua_19-20'
 
@@ -187,6 +191,28 @@ def backup(week):
         fo.close()
 
     click.echo('Done')
+
+
+@cli.command()
+def salary_diff():
+    prod_url = "https://parity-server.herokuapp.com/api/10/players"
+    local_url = "http://localhost:5000/api/10/players"
+
+    with urllib.request.urlopen(prod_url) as url:
+        prod_players = json.loads(url.read().decode())
+
+    with urllib.request.urlopen(local_url) as url:
+        local_players = json.loads(url.read().decode())
+
+    prod_salaries = { player['name']:player['salary'] for player in prod_players }
+    local_salaries = { player['name']:player['salary'] for player in local_players }
+
+    diff = {}
+    for (name, salary) in prod_salaries.items():
+        if local_salaries[name] != salary:
+            diff[name] = f"{salary} -> {local_salaries[name]}"
+
+    print(diff)
 
 
 if __name__ == "__main__":
