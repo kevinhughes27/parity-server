@@ -80,7 +80,9 @@ def players(league_id):
 @cache.cached()
 @app.route('/api/<league_id>/games')
 def games(league_id):
-    games = [game.to_dict() for game in Game.query.filter_by(league_id=league_id)]
+    include_points = request.args.get('includePoints') == 'true'
+    query = Game.query.filter_by(league_id=league_id)
+    games = [game.to_dict(include_points=include_points) for game in query]
     return jsonify(games)
 
 
@@ -89,7 +91,6 @@ def games(league_id):
 def game(league_id, id):
     game = Game.query.filter_by(league_id=league_id, id=id).first()
     stats = build_stats_response(league_id, [game])
-
     return jsonify({**game.to_dict(include_points=True), "stats": stats})
 
 
