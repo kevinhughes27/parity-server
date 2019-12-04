@@ -30,7 +30,7 @@ public class Matchups {
     }
 
     public static String[] matchupList(ArrayList<Matchup> games, Map<Integer, String> teamNames) {
-        ArrayList<String> options = new ArrayList<String>();
+        ArrayList<String> options = new ArrayList<>();
 
         for (int i = 0; i < games.size(); i++) {
             options.add(games.get(i).description(teamNames));
@@ -38,6 +38,6 @@ public class Matchups {
 
         options.add("Other");
 
-        return (String[]) options.toArray();
+        return options.toArray(new String[0]);
     }
 }

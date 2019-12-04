@@ -42,10 +42,12 @@ public class Bookkeeper implements Serializable {
     public Integer awayScore;
 
     private int pointsAtHalf;
+    private int week;
     private String datestamp;
     private String timestamp;
 
-    public void startGame(Team leftTeam, Team rightTeam) {
+    public void startGame(int week, Team leftTeam, Team rightTeam) {
+        this.week = week;
         activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
@@ -279,7 +281,7 @@ public class Bookkeeper implements Serializable {
         try {
             jsonObject.accumulate("league_id", League.id);
 
-            jsonObject.accumulate("week", Week.current());
+            jsonObject.accumulate("week", week);
 
             jsonObject.accumulate("homeTeam", homeTeam.name);
             jsonObject.accumulate("awayTeam", awayTeam.name);

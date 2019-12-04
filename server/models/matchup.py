@@ -8,6 +8,7 @@ class Matchup(db.Model):
     away_team_id = db.Column(db.Integer, db.ForeignKey('team.id'), nullable=False)
     week = db.Column(db.Integer)
     game = db.Column(db.Integer)
+    date = db.Column(db.DateTime)
 
     def to_dict(self):
         return {
@@ -17,4 +18,5 @@ class Matchup(db.Model):
             "away_team": self.away_team_id,
             "week": self.week,
             "game": self.game,
+            "date": self.date
         }

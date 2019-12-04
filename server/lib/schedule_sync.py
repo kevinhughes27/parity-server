@@ -27,29 +27,29 @@ class ScheduleSync:
         tbody = soup.find('div', {'class': 'schedule'}).find('tbody')
 
         schedule = []
-        #date = datetime.today().date()
+        date = datetime.today().date()
         week = 0
-        game_slot = 0
+        game = 0
 
         for row in tbody.find_all('tr'):
             ths = row.find_all('th')
             if ths:
-                #date_raw = ths[0].a['name']
-                #date = datetime.strptime(date_raw, '%Y-%m-%d').date()
-                week = week + 1
-                game_slot = 1
+                date_raw = ths[0].a['name']
+                date = datetime.strptime(date_raw, '%Y-%m-%d').date()
+                week += 1
+                game = 1
             else:
-                game = self.parse_game(row, week, game_slot)
-                if game:
-                    schedule.append(game)
-                    game_slot = game_slot + 1
+                matchup = self.parse_matchup(row, week, date, game)
+                if matchup:
+                    schedule.append(matchup)
+                    game += 1
                 else:
                     break;
 
         return schedule
 
 
-    def parse_game(self, row, week, game):
+    def parse_matchup(self, row, week, date, game):
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
@@ -62,6 +62,7 @@ class ScheduleSync:
         matchup.away_team_id = ids[1]
         matchup.week = week
         matchup.game = game
+        matchup.date = date
         return matchup
 
 

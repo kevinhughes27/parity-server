@@ -73,13 +73,15 @@ def teams(league_id):
 @cache.cached()
 @app.route('/api/<league_id>/schedule')
 def schedule(league_id):
-    last_week = db.session.query(db.func.max(Game.week)).filter_by(league_id=league_id).scalar()
-    week = last_week + 1
-
-    matchups = [matchup.to_dict() for matchup in Matchup.query.filter_by(league_id=league_id, week=week)]
     teams = build_teams_response(league_id)
 
-    return jsonify({"teams": teams, "week": week, "matchups": matchups})
+    matchup_count = len(teams) / 2
+    today = datetime.datetime.now().date()
+    query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.date >= today).limit(matchup_count)
+
+    matchups = [matchup.to_dict() for matchup in query]
+
+    return jsonify({"teams": teams, "matchups": matchups})
 
 
 @cache.cached()

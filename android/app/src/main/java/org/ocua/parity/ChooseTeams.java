@@ -79,7 +79,8 @@ public class ChooseTeams extends Activity {
     public void loadSchedule(JSONObject response) {
         try {
             teams.load(response.getJSONArray("teams"));
-            final ArrayList<Matchup> games = Matchups.load(response.getJSONArray("schedule"));
+            final int week = response.optInt("week", 1);
+            final ArrayList<Matchup> games = Matchups.load(response.getJSONArray("matchups"));
 
             Map<Integer,String> names = teams.teamNames();
 
@@ -88,7 +89,7 @@ public class ChooseTeams extends Activity {
                     .setItems(Matchups.matchupList(games, names), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             if (which >= games.size()) {
-                                openDialog();
+                                openDialog(week);
                                 return;
                             }
 
@@ -97,7 +98,7 @@ public class ChooseTeams extends Activity {
                             Team homeTeam = teams.findTeam(game.homeTeamId);
                             Team awayTeam = teams.findTeam(game.awayTeamId);
 
-                            editRosters(homeTeam, awayTeam);
+                            editRosters(week, homeTeam, awayTeam);
                         }
                     }).show();
         } catch (JSONException e) {
@@ -105,7 +106,7 @@ public class ChooseTeams extends Activity {
         }
     }
 
-    public void openDialog() {
+    public void openDialog(final int week) {
         new AlertDialog.Builder(context)
                 .setTitle("Choose Home Team")
                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
@@ -116,20 +117,20 @@ public class ChooseTeams extends Activity {
                                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         Team awayTeam = teams.getTeam(which);
-                                        editRosters(homeTeam, awayTeam);
+                                        editRosters(week, homeTeam, awayTeam);
                                     }
                                 }).show();
                     }
                 }).show();
     }
 
-    private void editRosters(Team homeTeam, Team awayTeam) {
+    private void editRosters(int week, Team homeTeam, Team awayTeam) {
         Intent intent = new Intent(context, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
 
         Bookkeeper bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(homeTeam, awayTeam);
+        bookkeeper.startGame(week, homeTeam, awayTeam);
         bundle.putSerializable("bookkeeper", bookkeeper);
 
         intent.putExtras(bundle);
