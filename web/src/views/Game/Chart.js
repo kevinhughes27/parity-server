@@ -4,6 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import withSizes from 'react-sizes'
 import { Bar } from 'react-chartjs-2'
 import { map, keys, sortBy } from 'lodash'
 
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function BarChart (props) {
+function BarChart (props) {
   const classes = useStyles();
 
   const [stat, setStat] = React.useState('goals');
@@ -49,6 +50,9 @@ export default function BarChart (props) {
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: 1,
     legend: {
       display: false
     },
@@ -68,11 +72,16 @@ export default function BarChart (props) {
       yAxes: [{
         ticks: {
           min: 0,
+          stepSize: 1,
           max: props.statMaxes[stat]
         }
       }]
     }
   }
+
+  const chartProps = props.isMobile
+    ? { height: 200, width: props.width - 20 }
+    : { height: 340 }
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -107,7 +116,14 @@ export default function BarChart (props) {
           <MenuItem value={'drops'}>Drops</MenuItem>
         </Select>
       </FormControl>
-      <Bar data={data} height={200} options={options}/>
+      <Bar data={data} {...chartProps} options={options}/>
     </div>
   )
 }
+
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 780,
+  width: width
+})
+
+export default withSizes(mapSizesToProps)(BarChart)
