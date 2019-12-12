@@ -49,6 +49,7 @@ android {
             buildConfigField "Integer", "MAX_FEMALES", "2"
             buildConfigField "Integer", "MAX_MALES", "4"
             def baseUrl = "https://parity-server.herokuapp.com"
+            baseUrl = "http://10.0.2.2:5000"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
             buildConfigField "String", "SCHEDULE_URL", "\"" + baseUrl + "/api/%s/schedule\""

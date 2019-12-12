@@ -10,11 +10,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.PermissionChecker;
-
-import com.google.gson.JsonArray;
-
-import org.json.JSONArray;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,10 +20,8 @@ import org.ocua.parity.model.Teams;
 import org.ocua.parity.tasks.FetchRoster;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class ChooseTeams extends Activity {
-    private Context context;
     private final ChooseTeams myself = this;
     private final int permissionRequestCode = 647662;
 
@@ -38,14 +31,13 @@ public class ChooseTeams extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_teams);
-        context = this;
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         teams = new Teams();
-        new FetchRoster(this, myself).execute();
+        new FetchRoster(myself).execute();
 
         int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (result != PackageManager.PERMISSION_GRANTED) {
@@ -60,7 +52,7 @@ public class ChooseTeams extends Activity {
                 // happy path
             } else {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                    new AlertDialog.Builder(context)
+                    new AlertDialog.Builder(myself)
                             .setTitle("Storage Permissions")
                             .setMessage("Storage is used to save game backups. Stats data could be lost without this!")
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -78,15 +70,41 @@ public class ChooseTeams extends Activity {
 
     public void loadSchedule(JSONObject response) {
         try {
+            if (response == null) {
+                new AlertDialog.Builder(this)
+                        .setTitle("Error")
+                        .setMessage("Failed to load teams. Retry?")
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                new FetchRoster(myself).execute();
+                            }
+                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                myself.finish();
+                            }
+                        }).show();
+
+                return;
+            }
+
             teams.load(response.getJSONArray("teams"));
-            final int week = response.optInt("week", 1);
+//            final int week = response.optInt("week", 1);
             final ArrayList<Matchup> games = Matchups.load(response.getJSONArray("matchups"));
 
-            Map<Integer,String> names = teams.teamNames();
+            if (games.size() < 1){
+                openDialog(1);
+                return;
+            }
 
-            new AlertDialog.Builder(context)
+            final int week = games.get(0).week;
+
+            String[] matchups = Matchups.matchupList(games, teams.teamNames());
+
+            new AlertDialog.Builder(myself)
                     .setTitle("Choose Game")
-                    .setItems(Matchups.matchupList(games, names), new DialogInterface.OnClickListener() {
+                    .setItems(matchups, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             if (which >= games.size()) {
                                 openDialog(week);
@@ -107,12 +125,12 @@ public class ChooseTeams extends Activity {
     }
 
     public void openDialog(final int week) {
-        new AlertDialog.Builder(context)
+        new AlertDialog.Builder(myself)
                 .setTitle("Choose Home Team")
                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         final Team homeTeam = teams.getTeam(which);
-                        new AlertDialog.Builder(context)
+                        new AlertDialog.Builder(myself)
                                 .setTitle("Choose Away Team")
                                 .setItems(teams.getNames(), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
@@ -125,7 +143,7 @@ public class ChooseTeams extends Activity {
     }
 
     private void editRosters(int week, Team homeTeam, Team awayTeam) {
-        Intent intent = new Intent(context, EditRosters.class);
+        Intent intent = new Intent(myself, EditRosters.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("teams", teams);
 

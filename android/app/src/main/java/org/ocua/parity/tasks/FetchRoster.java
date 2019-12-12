@@ -17,16 +17,13 @@ import org.ocua.parity.ChooseTeams;
 import org.ocua.parity.model.League;
 
 public class FetchRoster extends AsyncTask<String, String, Long> {
-
-    public Context context;
     private ProgressDialog dialog;
     private ChooseTeams parent;
     private JSONObject json;
 
-    public FetchRoster(Context context, ChooseTeams parent) {
-        this.context = context;
+    public FetchRoster(ChooseTeams parent) {
         this.parent = parent;
-        this.dialog = new ProgressDialog(context);
+        this.dialog = new ProgressDialog(parent);
     }
 
     @Override
@@ -37,12 +34,12 @@ public class FetchRoster extends AsyncTask<String, String, Long> {
 
     @Override
     protected Long doInBackground(String... strings) {
-        String strRosterUrl = String.format(BuildConfig.SCHEDULE_URL, League.id);
+        String scheduleUrl = String.format(BuildConfig.SCHEDULE_URL, League.id);
         String resString = "";
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpGet httpget = new HttpGet(strRosterUrl);
+            HttpGet httpget = new HttpGet(scheduleUrl);
             HttpResponse response = httpclient.execute(httpget);
 
             resString = EntityUtils.toString(response.getEntity());

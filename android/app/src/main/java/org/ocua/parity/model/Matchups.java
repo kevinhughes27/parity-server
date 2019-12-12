@@ -16,11 +16,12 @@ public class Matchups {
             for (int i = 0; i < json.length(); i++) {
                 JSONObject matchupJson = json.getJSONObject(i);
 
+                int week = matchupJson.getInt("week");
                 int gameSlot = matchupJson.getInt("game");
                 int homeId = matchupJson.getInt("home_team");
                 int awayId = matchupJson.getInt("away_team");
 
-                schedule.add(new Matchup(gameSlot, homeId, awayId));
+                schedule.add(new Matchup(week, gameSlot, homeId, awayId));
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -36,7 +37,7 @@ public class Matchups {
             options.add(games.get(i).description(teamNames));
         }
 
-        options.add("Other");
+        options.add("Other Matchup");
 
         return options.toArray(new String[0]);
     }
