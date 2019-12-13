@@ -14,6 +14,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Stack;
 
@@ -45,12 +46,17 @@ public class Bookkeeper implements Serializable {
     private String datestamp;
     private String timestamp;
 
+    private HashSet<String> homeParticipants;
+    private HashSet<String> awayParticipants;
+
     public void startGame(Team leftTeam, Team rightTeam) {
         activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
         homeScore = 0;
         awayScore = 0;
+        homeParticipants = new HashSet<>();
+        awayParticipants = new HashSet<>();
         pointsAtHalf = 0;
         homePossession = true;
         mementos = new Stack<>();
@@ -152,7 +158,6 @@ public class Bookkeeper implements Serializable {
         }
 
         activePoint = new Point(offensePlayers, defensePlayers);
-
     }
 
     public void recordActivePlayers(List<String> activeHomePlayers, List<String> activeAwayPlayers) {
@@ -249,6 +254,9 @@ public class Bookkeeper implements Serializable {
             awayScore++;
         }
 
+        homeParticipants.addAll(homePlayers);
+        awayParticipants.addAll(awayPlayers);
+
         activePoint = null;
         homePlayers = null;
         awayPlayers = null;
@@ -284,8 +292,8 @@ public class Bookkeeper implements Serializable {
             jsonObject.accumulate("homeTeam", homeTeam.name);
             jsonObject.accumulate("awayTeam", awayTeam.name);
 
-            jsonObject.accumulate("homeRoster", new JSONArray(homeTeam.getRoster()));
-            jsonObject.accumulate("awayRoster", new JSONArray(awayTeam.getRoster()));
+            jsonObject.accumulate("homeRoster", new JSONArray(homeParticipants));
+            jsonObject.accumulate("awayRoster", new JSONArray(awayParticipants));
 
             jsonObject.accumulate("homeScore", homeScore.toString());
             jsonObject.accumulate("awayScore", awayScore.toString());
