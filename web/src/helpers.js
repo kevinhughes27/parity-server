@@ -2,8 +2,9 @@ import { map, sum, uniq } from 'lodash'
 
 export function calcSalaryLimits(players) {
   const numTeams = uniq(players.map(p => p.team)).length
-  const salaryCapVariance = 0.02
-  const salaries = map(players, (p) => p.salary)
+  const salaryCapVariance = 0.015
+  const salaries = map(players,
+     (p) => p.salary)
   const salaryAvg = sum(salaries) / numTeams;
 
   return {
@@ -11,6 +12,9 @@ export function calcSalaryLimits(players) {
     salaryFloor: salaryAvg * (1 - salaryCapVariance),
   }
 }
+
+// hex gradient maker:
+// https://www.strangeplanet.fr/work/gradient-generator/index.php
 
 export const colors = [
   '#C8E6C9',
@@ -57,4 +61,34 @@ export const overColors = [
   '#E9524F',
   '#E74542',
   '#E53935'
+]
+
+export const homeColors = [
+  "#90CAF9",
+  "#84BEF1",
+  "#78B2E9",
+  "#6CA6E1",
+  "#609AD9",
+  "#548ED1",
+  "#4882C9",
+  "#3C76C1",
+  "#306AB9",
+  "#245EB1",
+  "#1852A9",
+  "#0D47A1"
+]
+
+export const awayColors = [
+  "#FFCC80",
+  "#FDC374",
+  "#FCBA68",
+  "#FAB15D",
+  "#F9A951",
+  "#F7A045",
+  "#F6973A",
+  "#F48E2E",
+  "#F38622",
+  "#F17D17",
+  "#F0740B",
+  "#EF6C00"
 ]

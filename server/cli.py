@@ -134,9 +134,31 @@ def game_sync():
 
 
 @cli.command()
+@click.option('--week')
+@click.option('--prod', default=False)
+def re_upload(week, prod):
+    if prod:
+        url = 'https://parity-server.herokuapp.com/submit_game'
+    else:
+        url = 'http://localhost:5000/submit_game'
+
+    league_folder = 'data/ocua_19-20'
+
+    files = glob.glob(f"{league_folder}/week{week}_game*.json")
+    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
+
+    for file in files:
+        headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
+        r = requests.post(url, data=open(file, 'rb'), headers=headers)
+        print(file, r.status_code)
+
+    click.echo('Done')
+
+
+@cli.command()
 @click.option('--week', default=0)
 def backup(week):
-    click.echo('Downloading database...')
+    click.echo('Downloading games...')
 
     league_id = 10
 
@@ -177,6 +199,28 @@ def schedule_sync():
         sync = ScheduleSync(league_id)
 
         sync.update_schedule()
+
+
+@cli.command()
+def salary_diff():
+    prod_url = "https://parity-server.herokuapp.com/api/10/players"
+    local_url = "http://localhost:5000/api/10/players"
+
+    with urllib.request.urlopen(prod_url) as url:
+        prod_players = json.loads(url.read().decode())
+
+    with urllib.request.urlopen(local_url) as url:
+        local_players = json.loads(url.read().decode())
+
+    prod_salaries = { player['name']:player['salary'] for player in prod_players }
+    local_salaries = { player['name']:player['salary'] for player in local_players }
+
+    diff = {}
+    for (name, salary) in prod_salaries.items():
+        if local_salaries[name] != salary:
+            diff[name] = f"{salary} -> {local_salaries[name]}"
+
+    print(diff)
 
 
 if __name__ == "__main__":

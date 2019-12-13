@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import { NavLink } from 'react-router-dom'
-import TopNav from '../../layout/TopNav'
-import Loading from '../../components/Loading'
-import LeaguePicker from '../../components/LeaguePicker'
+import TopNav from '../layout/TopNav'
+import Loading from '../components/Loading'
+import LeaguePicker from '../components/LeaguePicker'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
-import { currentLeague, fetchGames } from '../../api'
+import { currentLeague, fetchGames } from '../api'
 
 const styles = {
   list: {

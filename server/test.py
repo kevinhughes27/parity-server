@@ -113,6 +113,9 @@ class ServerTests(FlaskTest, SnapShotTest):
         response = self.client.get('/api/1/games')
         assert response.status_code == 200
 
+        response = self.client.get('/api/1/games?includePoints=true')
+        assert response.status_code == 200
+
         response = self.client.get('/api/1/games/1')
         assert response.status_code == 200
 

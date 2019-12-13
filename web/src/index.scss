@@ -12,9 +12,33 @@ html, body, #root {
 // Media Query Ranges
 $medium-screen: 992px !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-and-up: "only screen and (min-width : #{$medium-screen})" !default;
 
 // Tables
 $table-border-color: rgba(0,0,0,.12) !default;
+
+.filters {
+  margin: auto;
+
+  .MuiInputBase-inputSelect {
+    color: black !important;
+    width: 160px;
+    border: rgba(0, 0, 0, 0.87);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+  }
+
+  .MuiSelect-icon {
+    color: black !important;
+    top: 12px;
+    right: 6px;
+  }
+}
 
 // Responsive Table
 @media #{$medium-and-down} {
@@ -83,5 +107,34 @@ $table-border-color: rgba(0,0,0,.12) !default;
         border-right: 1px solid $table-border-color;
       }
     }
+  }
+
+  .MuiTableSortLabel-iconDirectionDesc {
+    transform: rotate(270deg) !important;
+  }
+
+  .MuiTableSortLabel-iconDirectionAsc {
+    transform: rotate(90deg) !important;
+  }
+}
+
+// Game Show
+.game-tabs {
+  min-height: 300px;
+}
+
+@media #{$medium-and-up} {
+  .game-title {
+    min-height: 70px;
+  }
+
+  .game-tabs {
+    min-height: 480px;
+  }
+}
+
+@media #{$medium-and-down} {
+  .game-points-title {
+    min-width: 100%
   }
 }
