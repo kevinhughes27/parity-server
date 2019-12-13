@@ -22,7 +22,6 @@ import org.ocua.parity.model.Game;
 import org.ocua.parity.model.League;
 import org.ocua.parity.model.Point;
 import org.ocua.parity.model.Team;
-import org.ocua.parity.model.Week;
 
 public class Bookkeeper implements Serializable {
     Team homeTeam;
