@@ -27,7 +27,7 @@ def init_db():
 
 
 @cli.command()
-def seed_leagues():
+def create_leagues():
     with app.app_context():
         league_params = [
             { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'salary_version': 'v2'},
@@ -72,7 +72,7 @@ def zuluru_sync():
 
 
 @cli.command()
-def roster_sync():
+def zuluru_sync_all():
     with app.app_context():
 
         leagues = [
@@ -103,18 +103,17 @@ def roster_sync():
 @cli.command()
 def game_sync():
     url = 'http://localhost:5000/submit_game'
-    # url = 'https://parity-server.herokuapp.com/submit_game'
 
     curdir = os.getcwd()
 
     leagues = [
-        { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
-        { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
-        { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
-        { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
-        { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
-        # # { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' }, # older upload format needs to be fixed
-        # # { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }, # older upload format needs to be fixed
+        # { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
+        # { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
+        # { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
+        # { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
+        # { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
+        # { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
+        { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }
     ]
 
     leagues.reverse()
