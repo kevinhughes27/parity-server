@@ -3,7 +3,10 @@ require 'set'
 require 'pp'
 require 'byebug'
 
-data_directory = 'data/ocua_16-17/session1'
+data_directories = [
+  'data/ocua_16-17/session1',
+  'data/ocua_16-17/session2'
+]
 
 def backfill(data_directory)
   Dir.glob("#{data_directory}/*.json").sort.each do |file|
@@ -64,6 +67,24 @@ def backfill(data_directory)
       elsif e[0] == "Direction"
         direction_left = (e[1] == ">>>>>>")
       end
+    end
+
+    # handle last point which may not have finished
+    # we don't know who was on the field because this data
+    # was only added when the point was finished.
+    # the old parse would still calc stats from this
+    # unfinished point.
+    #
+    # what will adding this break?
+    #
+    ended_on_point = (point_start_idx + 1 == game_string.length)
+    if !ended_on_point
+      event_string = game_string[point_start_idx..-1]
+      points << {
+        "offensePlayers" => [],
+        "defensePlayers" => [],
+        "event_string" => event_string
+      }
     end
 
     # the data is now grouped by point
@@ -157,6 +178,9 @@ def backfill(data_directory)
       data["points"].each do |point|
         last_event = point["events"].last
 
+        # old data doesn't always end on a point
+        next unless last_event["type"] == "POINT"
+
         scorer = last_event["firstActor"]
         sub_scored = scorer.include?("(S)")
 
@@ -187,7 +211,7 @@ def backfill(data_directory)
 end
 
 if ARGV[0] == "undo"
-  `git checkout #{data_directory}`
+  data_directories.each { |data_directory| `git checkout #{data_directory}` }
 else
-  backfill(data_directory)
+  data_directories.each { |data_directory| backfill(data_directory) }
 end

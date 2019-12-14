@@ -35,12 +35,22 @@ Dir.glob("#{data_directory}/*.json").sort.each_with_index do |file, idx|
     compare_stats(old_stats["Goals"], new_stats["goals"], player, "goals")
     compare_stats(old_stats["Assists"], new_stats["assists"], player, "assists")
     compare_stats(old_stats["2nd Assist"], new_stats["second_assists"], player, "second_assists")
+    compare_stats(old_stats["D-Blocks"], new_stats["d_blocks"], player, "d_blocks")
 
-    # compare_stats(old_stats["Drops"], new_stats["drops"], player, "drops")
-    # missing two drops because the game didn't end in a point so I chomped the end of the data
-
-    # compare_stats(old_stats["ThrewDrop"], new_stats["threw_drops"], player, "threw_drops")
+    compare_stats(old_stats["Drops"], new_stats["drops"], player, "drops")
+    compare_stats(old_stats["ThrewDrop"], new_stats["threw_drops"], player, "threw_drops")
     compare_stats(old_stats["Throwaways"], new_stats["throw_aways"], player, "throw_aways")
+
+    # a lot of these are off by 1 - I am pretty sure this is a bug in the old stats
+    # related to the fact that games didn't always end with a point.
+    #
+    # compare_stats(old_stats["OPointsFor"], new_stats["o_points_for"], player, "o_points_for")
+    # compare_stats(old_stats["OPointsAgainst"], new_stats["o_points_against"], player, "o_points_against")
+    # compare_stats(old_stats["DPointsFor"], new_stats["d_points_for"], player, "d_points_for")
+    # compare_stats(old_stats["DPointsAgainst"], new_stats["d_points_against"], player, "d_points_against")
+
+    # ~5 differences of +/- 1000
+    # compare_stats(old_stats["SalaryDelta"], new_stats["pay"], player, "pay")
   end
 
 rescue => e
