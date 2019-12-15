@@ -16,19 +16,19 @@ import org.ocua.parity.BuildConfig;
 import org.ocua.parity.ChooseTeams;
 import org.ocua.parity.model.League;
 
-public class FetchRoster extends AsyncTask<String, String, Long> {
+public class LoadSchedule extends AsyncTask<String, String, Long> {
     private ProgressDialog dialog;
     private ChooseTeams parent;
     private JSONObject json;
 
-    public FetchRoster(ChooseTeams parent) {
+    public LoadSchedule(ChooseTeams parent) {
         this.parent = parent;
         this.dialog = new ProgressDialog(parent);
     }
 
     @Override
     protected void onPreExecute() {
-        this.dialog.setMessage("Fetching latest rosters");
+        this.dialog.setMessage("Loading schedule");
         this.dialog.show();
     }
 

@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import org.ocua.parity.model.Matchup;
 import org.ocua.parity.model.Matchups;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
-import org.ocua.parity.tasks.FetchRoster;
+import org.ocua.parity.tasks.LoadSchedule;
 
 import java.util.ArrayList;
 
@@ -37,7 +36,7 @@ public class ChooseTeams extends Activity {
     protected void onStart() {
         super.onStart();
         teams = new Teams();
-        new FetchRoster(myself).execute();
+        new LoadSchedule(myself).execute();
 
         int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (result != PackageManager.PERMISSION_GRANTED) {
@@ -73,11 +72,11 @@ public class ChooseTeams extends Activity {
             if (response == null) {
                 new AlertDialog.Builder(this)
                         .setTitle("Error")
-                        .setMessage("Failed to load teams. Retry?")
+                        .setMessage("Failed to load schedule. Please try again.")
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                new FetchRoster(myself).execute();
+                                new LoadSchedule(myself).execute();
                             }
                         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
