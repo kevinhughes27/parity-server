@@ -17,7 +17,7 @@ public class Matchups {
                 JSONObject matchupJson = json.getJSONObject(i);
 
                 int week = matchupJson.getInt("week");
-                int gameSlot = matchupJson.getInt("game");
+                int gameSlot = matchupJson.getInt("game_slot");
                 int homeId = matchupJson.getInt("home_team");
                 int awayId = matchupJson.getInt("away_team");
 
