@@ -14,8 +14,8 @@ Server Setup
 3. Start the required services run `sudo docker-compose up -d`
 3. Run the python server with this command `python server/app.py`
 4. Create your database by running `python server/cli.py init-db` and then populate it with:
-    * `python server/cli.py seed-leagues`
-    * `python server/cli.py roster-sync`
+    * `python server/cli.py create-leagues`
+    * `python server/cli.py zuluru-sync`
     * `python server/cli.py game-sync`
 5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
 
