@@ -122,6 +122,8 @@ class ServerTests(FlaskTest, SnapShotTest):
         response = self.client.get('/api/1/players')
         assert response.status_code == 200
 
+        response = self.client.get('/api/1/schedule')
+        assert response.status_code == 200
 
 if __name__ == '__main__':
     unittest.main()
