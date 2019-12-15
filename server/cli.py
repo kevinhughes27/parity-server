@@ -30,16 +30,16 @@ def init_db():
 def create_leagues():
     with app.app_context():
         league_params = [
-            { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'salary_version': 'v2'},
-            { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'salary_version': 'v1' },
-            { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'salary_version': 'v1' },
-            { 'zuluru_id': 615, 'name': '2017/2018 Session 2', 'salary_version': 'v1' },
-            { 'zuluru_id': 596, 'name': '2017/2018 Session 1', 'salary_version': 'v1' },
-            { 'zuluru_id': 941, 'name': '2016/2017 Session 2', 'salary_version': 'v1' },
-            { 'zuluru_id': 940, 'name': '2016/2017 Session 1', 'salary_version': 'v1'},
-            { 'zuluru_id': 494, 'name': '2015/2016 Winter', 'salary_version': 'v1' },
-            { 'zuluru_id': 438, 'name': '2014/2015 Winter', 'salary_version': 'v1' },
-            { 'zuluru_id': 404, 'name': '2014 Spring', 'salary_version': 'v1' },
+            { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': 615, 'name': '2017/2018 Session 2', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': 596, 'name': '2017/2018 Session 1', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': 941, 'name': '2016/2017 Session 2', 'stat_values': 'v1', 'salary_calc': 'sum' },
+            { 'zuluru_id': 940, 'name': '2016/2017 Session 1', 'stat_values': 'v1', 'salary_calc': 'sum' },
+            { 'zuluru_id': 494, 'name': '2015/2016 Winter', 'stat_values': 'v1', 'salary_calc': 'sum' },
+            { 'zuluru_id': 438, 'name': '2014/2015 Winter', 'stat_values': 'v1', 'salary_calc': 'sum' },
+            { 'zuluru_id': 404, 'name': '2014 Spring', 'stat_values': 'v1', 'salary_calc': 'sum' },
         ]
 
         league_params.reverse()
@@ -48,7 +48,8 @@ def create_leagues():
             league = League()
             league.zuluru_id = params['zuluru_id']
             league.name = params['name']
-            league.salary_version = params['salary_version']
+            league.stat_values = params['stat_values']
+            league.salary_calc = params['salary_calc']
             db.session.add(league)
 
         db.session.commit()
@@ -107,11 +108,11 @@ def game_sync():
     curdir = os.getcwd()
 
     leagues = [
-        # { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
-        # { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
-        # { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
-        # { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
-        # { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
+        { 'id': 10, 'data_folder': 'data/ocua_19-20' },
+        { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
+        { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
+        { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
+        { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
         { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
         { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }
     ]

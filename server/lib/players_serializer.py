@@ -1,6 +1,7 @@
 from models import Player, Stats
 
 def build_players_response(league_id):
+    league = League.query.filter_by(id=league_id).first()
     players = Player.query.filter(Player.league_id == league_id, Player.team_id != None).all()
     stats = Stats.query.filter_by(league_id=league_id).all()
 
@@ -11,13 +12,20 @@ def build_players_response(league_id):
         if len(player_stats) == 0:
             continue
 
-        salaries = [ps.salary_per_point for ps in player_stats if ps.points_played > 3]
-        average_salary_per_point = sum(salaries) / len(salaries)
+        if league.salary_calc == "pro_rate":
+            salaries = [ps.salary_per_point for ps in player_stats if ps.points_played > 3]
+            average_salary_per_point = sum(salaries) / len(salaries)
 
-        pro_rated_number_of_points = 15
-        pro_rated_salary = average_salary_per_point * pro_rated_number_of_points
+            pro_rated_number_of_points = 15
+            pro_rated_salary = average_salary_per_point * pro_rated_number_of_points
 
-        player.salary = round(pro_rated_salary)
+            player.salary = round(pro_rated_salary)
+
+        elif league.salary_calc == "sum":
+            earnings = [ps.pay for ps in player_stats]
+            total_earnings = sum(earnings)
+
+            player.salary = total_earnings
 
 
     # Estimate Salaries 👎

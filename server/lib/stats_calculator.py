@@ -6,7 +6,7 @@ class StatsCalculator:
 
         league = game.league
         self.league_id = league.id
-        self.salary_version = league.salary_version
+        self.stat_values = league.stat_values
 
 
     def run(self):
@@ -81,7 +81,7 @@ class StatsCalculator:
         player = self.get_or_create_player(player_name)
 
         if player.name not in self.stats:
-            self.stats[player.name] = Stats(self.league_id, self.game.id, player.id, self.salary_version)
+            self.stats[player.name] = Stats(self.league_id, self.game.id, player.id, self.stat_values)
 
         self.stats[player.name].count_stat(stat)
 
