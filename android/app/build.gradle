@@ -56,7 +56,7 @@ android {
 
             dimension = "parity"
         }
-    submit_game}
+    }
     android.sourceSets {
         main.res.srcDirs = ['src/main/res']
     }
