@@ -8,7 +8,7 @@ from flask_caching import Cache
 
 from app import app
 from models import db, League
-from lib import ZuluruSync, PlayerDb, ScheduleSync
+from lib import ZuluruSync, PlayerDb
 
 
 @click.group()
@@ -60,7 +60,10 @@ def zuluru_sync():
     with app.app_context():
         league_zid = 702
         league = League.query.filter_by(zuluru_id=league_zid).first()
-        ZuluruSync(league).sync_teams()
+
+        zuluru_sync = ZuluruSync(league)
+        zuluru_sync.sync_teams()
+        zuluru_sync.sync_schedule()
 
         db.session.remove()
 
@@ -192,13 +195,15 @@ def backup(week):
 
     click.echo('Done')
 
+
 @cli.command()
 def schedule_sync():
-    league_id = 10
     with app.app_context():
-        sync = ScheduleSync(league_id)
+        league_zid = 702
+        league = League.query.filter_by(zuluru_id=league_zid).first()
 
-        sync.update_schedule()
+        zuluru_sync = ZuluruSync(league)
+        zuluru_sync.sync_schedule()
 
 
 @cli.command()
