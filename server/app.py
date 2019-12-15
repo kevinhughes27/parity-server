@@ -113,7 +113,7 @@ def game(league_id, id):
 def leagues():
     # earlier leagues are not ready yet
     league_ids = [4,5,6,7,8,9,10]
-    query = League.query.filter(League.id.in_(league_ids)).order_by(League.zuluru_id.desc())
+    query = League.query.filter(League.id.in_(league_ids)).order_by(League.id.desc())
     leagues = [league.to_dict() for league in query]
     return jsonify(leagues)
 
