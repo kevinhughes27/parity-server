@@ -1,7 +1,7 @@
 import os
 
 def development_database_path():
-    use_postgres = False
+    use_postgres = True
 
     base_dir = os.path.abspath(os.path.dirname(__file__))
     db_path = os.path.join(base_dir, 'db.sqlite')
