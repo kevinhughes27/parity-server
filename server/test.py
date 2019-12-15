@@ -27,7 +27,8 @@ class ServerTests(FlaskTest, SnapShotTest):
         league.id = 1
         league.zuluru_id = 1
         league.name = 'Test'
-        league.salary_version = 'v2'
+        league.stat_values = 'v2'
+        league.salary_calc = 'pro_rate'
         db.session.add(league)
         db.session.commit()
 
