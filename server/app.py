@@ -77,7 +77,7 @@ def schedule(league_id):
 
     matchup_count = len(teams) / 2
     today = datetime.datetime.now().date()
-    query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.date >= today).limit(matchup_count)
+    query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.game_start >= today).limit(matchup_count)
 
     matchups = [matchup.to_dict() for matchup in query]
 

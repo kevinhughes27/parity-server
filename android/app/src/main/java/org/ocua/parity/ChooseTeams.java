@@ -89,7 +89,6 @@ public class ChooseTeams extends Activity {
             }
 
             teams.load(response.getJSONArray("teams"));
-//            final int week = response.optInt("week", 1);
             final ArrayList<Matchup> games = Matchups.load(response.getJSONArray("matchups"));
 
             if (games.size() < 1){

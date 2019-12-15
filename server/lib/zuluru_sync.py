@@ -54,7 +54,6 @@ class ZuluruSync:
         schedule = []
         date = datetime.today().date()
         week = 0
-        game_slot = 0
 
         for row in tbody.find_all('tr'):
             ths = row.find_all('th')
@@ -62,32 +61,33 @@ class ZuluruSync:
                 date_raw = ths[0].a['name']
                 date = datetime.strptime(date_raw, '%Y-%m-%d').date()
                 week += 1
-                game_slot = 1
             else:
-                matchup = self.parse_matchup(row, week, date, game_slot)
+                matchup = self.parse_matchup(row, week, date)
                 if matchup:
                     schedule.append(matchup)
-                    game_slot += 1
                 else:
                     break;
 
         return schedule
 
 
-    def parse_matchup(self, row, week, date, game_slot):
+    def parse_matchup(self, row, week, date):
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
         if len(ids) < 2:
             return None
 
+        time_values = row.find(href=re.compile('games/view')).text.split('-')
+        game_times = [datetime.strptime(value, '%I:%M%p').time() for value in time_values]
+
         matchup = Matchup()
         matchup.league_id = self.league_id
         matchup.home_team_id = ids[0]
         matchup.away_team_id = ids[1]
         matchup.week = week
-        matchup.game_slot = game_slot
-        matchup.date = date
+        matchup.game_start = datetime.combine(date, game_times[0])
+        matchup.game_end = datetime.combine(date, game_times[1])
         return matchup
 
 

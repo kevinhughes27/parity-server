@@ -1,3 +1,4 @@
+from datetime import datetime
 from .db import db
 from .league import League
 
@@ -7,8 +8,8 @@ class Matchup(db.Model):
     home_team_id = db.Column(db.Integer, db.ForeignKey('team.id'), nullable=False)
     away_team_id = db.Column(db.Integer, db.ForeignKey('team.id'), nullable=False)
     week = db.Column(db.Integer)
-    game_slot = db.Column(db.Integer)
-    date = db.Column(db.DateTime)
+    game_start = db.Column(db.DateTime)
+    game_end = db.Column(db.DateTime)
 
     def to_dict(self):
         return {
@@ -17,6 +18,6 @@ class Matchup(db.Model):
             "home_team": self.home_team_id,
             "away_team": self.away_team_id,
             "week": self.week,
-            "game_slot": self.game_slot,
-            "date": self.date
+            "game_start": self.game_start.isoformat('_'),
+            "game_end": self.game_end.isoformat('_')
         }
