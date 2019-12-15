@@ -24,10 +24,11 @@ public class BookkeeperTest {
 
     @Before
     public void before() {
-        home = new Team("Team A", PLAYER1, true);
-        away = new Team("Team B", PLAYER2, true);
+        int week = 1;
+        home = new Team("Team A", 1);
+        away = new Team("Team B", 2);
         bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(home, away);
+        bookkeeper.startGame(week, home, away);
     }
 
     @Test

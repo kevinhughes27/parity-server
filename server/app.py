@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, Stats, Team, Player, League
+from models import db, Game, Stats, Team, Player, League, Matchup
 from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
 
@@ -68,6 +68,20 @@ def save_game(upload_json):
 def teams(league_id):
     teams = build_teams_response(league_id)
     return jsonify(teams)
+
+
+@cache.cached()
+@app.route('/api/<league_id>/schedule')
+def schedule(league_id):
+    teams = build_teams_response(league_id)
+
+    matchup_count = len(teams) / 2
+    today = datetime.datetime.now().date()
+    query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.game_start >= today).limit(matchup_count)
+
+    matchups = [matchup.to_dict() for matchup in query]
+
+    return jsonify({"teams": teams, "matchups": matchups})
 
 
 @cache.cached()

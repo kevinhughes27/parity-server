@@ -5,6 +5,9 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 class TeamsLoadError extends RuntimeException {
     public TeamsLoadError(String msg) {
@@ -56,6 +59,16 @@ public class Teams implements Serializable {
         return teamsArray.get(teamNumber);
     }
 
+    public Team findTeam(int teamId) {
+        for (Team team : teamsArray) {
+            if (team.id == teamId) {
+                return team;
+            }
+        }
+
+        return null;
+    }
+
     public Gender getPlayerGender(String playerName) {
         for (Team team : teamsArray) {
             if (team.arlGirls.contains(playerName)) {
@@ -87,6 +100,15 @@ public class Teams implements Serializable {
         }
 
         return teamNames;
+    }
+
+    public Map<Integer, String> teamNames() {
+        Map<Integer, String> names = new HashMap<>();
+        for (Team team : teamsArray) {
+            names.put(team.id, team.name);
+        }
+
+        return names;
     }
 
     private boolean substituteExists() {
