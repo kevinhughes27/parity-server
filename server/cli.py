@@ -6,9 +6,9 @@ import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
 from flask_caching import Cache
 
-from app import app
+from app import app, save_game
 from models import db, League
-from lib import ZuluruSync, PlayerDb
+from lib import ZuluruSync, PlayerDb, StatsCalculator
 
 
 @click.group()
@@ -103,35 +103,30 @@ def zuluru_sync_all():
 
 @cli.command()
 def game_sync():
-    url = 'http://localhost:5000/submit_game'
+    with app.app_context():
 
-    curdir = os.getcwd()
+        leagues = [
+            { 'id': 10, 'data_folder': 'data/ocua_19-20' },
+            { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
+            { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
+            { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
+            { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
+            { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
+            { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }
+        ]
 
-    leagues = [
-        { 'id': 10, 'data_folder': 'data/ocua_19-20' },
-        { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
-        { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
-        { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
-        { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
-        { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
-        { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' }
-    ]
+        leagues.reverse()
 
-    leagues.reverse()
+        for league in leagues:
 
-    for league in leagues:
-        os.chdir(league['data_folder'])
+            files = glob.glob(f"{league['data_folder']}/week*_game*.json")
+            files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
 
-        files = glob.glob("week*.json")
-        files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
-
-        for file in files:
-            headers = {'Accept' : 'application/json', 'Content-Type' : 'application/json'}
-            r = requests.post(url, data=open(file, 'rb'), headers=headers)
-            print(league['data_folder'], file, r.status_code)
-
-        # reset working dir
-        os.chdir(curdir)
+            for file in files:
+                print(file)
+                data = json.load(open(file))
+                game = save_game(data)
+                stats = StatsCalculator(game).run()
 
     click.echo('Done')
 
