@@ -4,7 +4,7 @@ require 'json'
 require 'byebug'
 
 LEAGUE_ID = 3
-data_directory = 'data/ocua_15'
+data_directory = 'data/ocua_15-16'
 
 def rewrite_event_string(game_string)
   points = []
@@ -231,8 +231,6 @@ def transform(data_directory)
 
     data.gsub!(",Direction,>>>>>>,", ",Direction,>>>>>>\n,")
     data.gsub!(",Direction,<<<<<<,", ",Direction,<<<<<<\n,")
-
-    File.write("wat", data)
 
     csv = CSV.parse(data)
 
