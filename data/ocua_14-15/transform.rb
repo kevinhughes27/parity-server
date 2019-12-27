@@ -1,3 +1,15 @@
+# This script transforms the 2014-2015 raw csv data into the modern format
+# as part of the transform it performs a few sanity checks:
+#
+# * I enforce 0 overlap between the parsed rosters to try and catch roster
+#   parsing bugs or inconsistencies in the original data
+#
+# * I re-calculate the score from the modern data and newly parsed rosters
+#   and confirm this score matches the recorded score in the original CSV
+#
+# The transformed data is then uploaded, stats are calculated using the current
+# server then we can validate the results against the original stats csv files.
+
 require 'csv'
 require 'set'
 require 'json'
@@ -5,6 +17,7 @@ require 'byebug'
 
 LEAGUE_ID = 2
 data_directory = 'data/ocua_14-15'
+validation_dir = 'validation/ocua_14-15'
 
 def rewrite_event_string(game_string)
   # 1. Group the game_string by Point
@@ -33,10 +46,10 @@ def rewrite_event_string(game_string)
 
   point_strings.each do |point_string|
     direction = nil
-    left_is_offsense = nil
+    left_is_offense = nil
 
-    leftPlayers = []
-    rightPlayers = []
+    leftPlayers = Set.new
+    rightPlayers = Set.new
     event_string = []
 
     stat_keywords = [
@@ -44,7 +57,9 @@ def rewrite_event_string(game_string)
       "POINT",
       "Drop",
       "D",
-      "Pass"
+      "Pass",
+      "Sides",
+      "Switch"
     ]
 
     point_string.each_with_index do |line, idx|
@@ -53,30 +68,42 @@ def rewrite_event_string(game_string)
 
       if line[0] == "Pull"
         next_line = point_string[idx+1]
-        direction = next_line.compact[1] == ">>>>>>" ? "left" : "right"
+        next_direction = next_line.compact[1] == ">>>>>>" ? "left" : "right"
+
+        puller = line[1]
+        if next_direction == "left"
+          rightPlayers.add puller
+        else
+          leftPlayers.add puller
+        end
 
       elsif line[0] == "Direction"
-        direction = line[1] == "<<<<<<" ? "left" : "right"
+        direction = line[1] == ">>>>>>" ? "left" : "right"
 
       else
         players = line.reject { |w| stat_keywords.include?(w) }
 
         if direction == "left"
-          leftPlayers += players
+          leftPlayers += players.to_set
         else
-          rightPlayers += players
+          rightPlayers += players.to_set
+        end
+
+        # there should be no overlap
+        if (leftPlayers & rightPlayers).size >= 1
+          byebug
         end
       end
 
-      if left_is_offsense.nil?
-        left_is_offsense = direction == "left"
+      if left_is_offense.nil?
+        left_is_offense = direction == "left"
       end
     end
 
     offensePlayers = []
     defensePlayers = []
 
-    if left_is_offsense
+    if left_is_offense
       offensePlayers = leftPlayers.uniq
       defensePlayers = rightPlayers.uniq
     else
@@ -84,11 +111,35 @@ def rewrite_event_string(game_string)
       defensePlayers = leftPlayers.uniq
     end
 
-    points << {
-      "offensePlayers" => offensePlayers,
-      "defensePlayers" => defensePlayers,
-      "event_string" => event_string
-    }
+    # useful for sanity check but subs can happen
+    # there is one point with 10 people but it isn't
+    # an overlap bug
+    # if offensePlayers.size > 7
+    #   byebug
+    # end
+
+    # if defensePlayers.size > 7
+    #   byebug
+    # end
+
+    if (offensePlayers.to_set & defensePlayers.to_set).size >= 1
+      byebug
+    end
+
+    # remove empty arrays from the event string
+    event_string = event_string.reject { |ev| ev == [] }
+
+    # only append valid event strings
+    valid_event_string =
+      event_string.size > 0 && event_string != [["Direction", ">>>>>>"]] && event_string != [["Direction", "<<<<<<"]]
+
+    if valid_event_string
+      points << {
+        "offensePlayers" => offensePlayers,
+        "defensePlayers" => defensePlayers,
+        "event_string" => event_string
+      }
+    end
   end
 
   # 3. The data is now grouped by point shaped like this:
@@ -150,7 +201,111 @@ def rewrite_event_string(game_string)
   points
 end
 
-def transform(data_directory)
+# load rosters from validation data
+def load_rosters(validation_dir, week, homeTeam, awayTeam)
+  homeRoster = []
+  awayRoster = []
+
+  raw_stats = File.read("#{validation_dir}/week#{week}.csv")
+  stats = CSV.parse(raw_stats)
+  stats_start = 15
+  stats[stats_start..-1].each do |row|
+    player = row[0]
+    team = row[1]
+    if team == homeTeam
+      homeRoster << player
+    elsif team == awayTeam
+      awayRoster << player
+    end
+  end
+
+  return homeRoster, awayRoster
+end
+
+# unlike 2015-2016 where we recorded who was on the field I can't bootstrap
+# the rosters from the first 2 points reliably. Load the rosters from the stats sheet to
+# start
+def build_rosters(points, loadedHomeRoster, loadedAwayRoster, loadedHomeScore, loadedAwayScore)
+  loadedHomeRoster = loadedHomeRoster.to_set
+  loadedAwayRoster = loadedAwayRoster.to_set
+
+  homeRoster = Set.new
+  awayRoster = Set.new
+
+  # rosters should be basically correct now
+  # fill in against the rest of the game
+  points.each do |point|
+    offensePlayers = point["offensePlayers"].to_set
+    defensePlayers = point["defensePlayers"].to_set
+
+    home_roster_overlap = (loadedHomeRoster & offensePlayers).size
+    away_roster_overlap = (loadedAwayRoster & offensePlayers).size
+
+    home_is_offense = if home_roster_overlap >= 1 && away_roster_overlap == 0
+      true
+    elsif home_roster_overlap == 0 && away_roster_overlap >= 1
+      false
+    else
+      # we know nothing. skip
+      nil
+    end
+
+    next if home_is_offense.nil?
+
+    if home_is_offense
+      homeRoster += offensePlayers
+      awayRoster += defensePlayers
+    else
+      homeRoster += defensePlayers
+      awayRoster += offensePlayers
+    end
+
+    if (homeRoster & awayRoster).size > 0
+      byebug
+      raise "roster overlap"
+    end
+  end
+
+  # re-score the game to check if I got home and away right
+  homeScore = 0
+  awayScore = 0
+
+  points.each do |point|
+    byebug if point["events"] == []
+    next unless point["events"].last["type"] == "POINT"
+    scorer = point["events"].last["firstActor"]
+    home_scored = homeRoster.include?(scorer)
+    if home_scored
+      homeScore += 1
+    else
+      awayScore += 1
+    end
+  end
+
+  score = "#{loadedHomeScore} - #{loadedAwayScore}"
+  calcScore = "#{homeScore} - #{awayScore}"
+  revScore = "#{awayScore} - #{homeScore}"
+
+  if score != calcScore
+    if score == revScore
+      tmpRoster = homeRoster
+      homeRoster = awayRoster
+      awayRoster = tmpRoster
+    else
+      # yay the score calc always matches!!
+      raise "score mismatch"
+    end
+  end
+
+  return {
+    homeRoster: homeRoster.to_a,
+    homeScore: homeScore,
+    awayRoster: awayRoster.to_a,
+    awayScore: awayScore
+  }
+end
+
+def transform(data_directory, validation_dir)
   csv_files = Dir.glob("#{data_directory}/*.csv")
 
   csv_files.sort.each do |file|
@@ -164,14 +319,13 @@ def transform(data_directory)
     csv.each_with_index do |row, idx|
       row = row.compact
       if row[0]
-        game_name_rows << idx if row[0].include?("vs") || row[0].include?("_VS_")
+        game_name_rows << idx if row[0].include?("vs")
       end
     end
 
     # Each Game in the CSV
     game_name_rows.each_with_index do |idx, j|
       game_name = csv[idx].compact[0]
-      game_name = game_name.gsub("vs.", "vs").gsub("_VS_", " vs ")
       homeTeam = game_name.split(" vs ").first
       awayTeam = game_name.split(" vs ").last
 
@@ -189,20 +343,21 @@ def transform(data_directory)
 
       game_num = j + 1
 
+      puts "week#{week}_game#{game_num}"
       points = rewrite_event_string(csv[game_start..game_end])
 
-      homeRoster = []
-      awayRoster = []
+      homeRoster, awayRoster = load_rosters(validation_dir, week, homeTeam, awayTeam)
+      data = build_rosters(points, homeRoster, awayRoster, homeScore, awayScore)
 
       game = {
         "league_id" => LEAGUE_ID,
         "week" => week,
         "homeTeam" => homeTeam,
         "homeScore" => homeScore,
-        "homeRoster" => homeRoster,
+        "homeRoster" => data[:homeRoster],
         "awayTeam" => awayTeam,
         "awayScore" => awayScore,
-        "awayRoster" => awayRoster,
+        "awayRoster" => data[:awayRoster],
         "points" => points
       }
 
@@ -243,20 +398,21 @@ def transform(data_directory)
 
         game_num = j + 1
 
+        puts "week#{week}_game#{game_num}"
         points = rewrite_event_string(csv[game_start..game_end])
 
-        homeRoster = []
-        awayRoster = []
+        homeRoster, awayRoster = load_rosters(validation_dir, week, homeTeam, awayTeam)
+        data = build_rosters(points, homeRoster, awayRoster, homeScore, awayScore)
 
         game = {
           "league_id" => LEAGUE_ID,
           "week" => week,
           "homeTeam" => homeTeam,
           "homeScore" => homeScore,
-          "homeRoster" => homeRoster,
+          "homeRoster" => data[:homeRoster],
           "awayTeam" => awayTeam,
           "awayScore" => awayScore,
-          "awayRoster" => awayRoster,
+          "awayRoster" => data[:awayRoster],
           "points" => points
         }
 
@@ -269,5 +425,5 @@ end
 if ARGV[0] == "undo"
   `find #{data_directory} -name "*.json" -type f|xargs rm -f `
 else
-  transform(data_directory)
+  transform(data_directory, validation_dir)
 end

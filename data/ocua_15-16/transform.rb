@@ -116,7 +116,7 @@ def rewrite_event_string(game_string)
   points
 end
 
-def build_rosters(points)
+def build_rosters(points, week, game_num, loadedHomeScore, loadedAwayScore)
   homeRoster = Set.new
   awayRoster = Set.new
 
@@ -150,6 +150,10 @@ def build_rosters(points)
       homeRoster += defensePlayers
       awayRoster += offensePlayers
     end
+
+    if (homeRoster & awayRoster).size > 0
+      raise "roster overlap"
+    end
   end
 
   # re-score the game to check if I got home and away right
@@ -167,8 +171,20 @@ def build_rosters(points)
     end
   end
 
-  if (homeRoster & awayRoster).size > 0
-    raise "roster overlap"
+  score = "#{loadedHomeScore} - #{loadedAwayScore}"
+  calcScore = "#{homeScore} - #{awayScore}"
+  revScore = "#{awayScore} - #{homeScore}"
+
+  if score != calcScore
+    if score == revScore
+      tmpRoster = homeRoster
+      homeRoster = awayRoster
+      awayRoster = tmpRoster
+    else
+      # yay the score calc always matches!!
+      # except for 1 instance of bad data
+      raise "score mismatch" unless week == 4 && game_num == 1
+    end
   end
 
   return {
@@ -190,23 +206,7 @@ def build_game_json(week:, game_num:, home_row:, away_row:, event_string:)
 
   points = rewrite_event_string(event_string)
 
-  data = build_rosters(points)
-
-  score = "#{homeScore} - #{awayScore}"
-  calcScore = "#{data[:homeScore]} - #{data[:awayScore]}"
-  revScore = "#{data[:awayScore]} - #{data[:homeScore]}"
-
-  if score != calcScore
-    if score == revScore
-      tmpRoster = data[:homeRoster]
-      data[:homeRoster] = data[:awayRoster]
-      data[:awayRoster] = tmpRoster
-    else
-      # yay the score calc always matches!!
-      # except for 1 instance of bad data
-      raise "score mismatch" unless week == 4 && game_num == 1
-    end
-  end
+  data = build_rosters(points, week, game_num, homeScore, awayScore)
 
   return {
     "league_id" => LEAGUE_ID,
@@ -249,13 +249,12 @@ def transform(data_directory)
       home_row_idx = team_row_nums[idx]
       away_row_idx = team_row_nums[idx+1]
 
-      game_string_start = team_row_nums[idx+1] + 1
-      game_string_end = team_row_nums[idx+2]
-
-      if game_string_end.nil?
-        game_string_end = -1
+      game_start = team_row_nums[idx+1] + 1
+      next_game_start = team_row_nums[idx+2]
+      game_end = if next_game_start.nil?
+        -1
       else
-        game_string_end -= 1
+        next_game_start - 1
       end
 
       game_num = j + 1
@@ -265,7 +264,7 @@ def transform(data_directory)
         game_num: game_num,
         home_row: csv[home_row_idx],
         away_row: csv[away_row_idx],
-        event_string: csv[game_string_start..game_string_end]
+        event_string: csv[game_start..game_end]
       )
 
       File.write("#{data_directory}/week#{week}_game#{game_num}.json", JSON.pretty_generate(game) + "\n")
