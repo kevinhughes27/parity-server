@@ -113,7 +113,8 @@ def game_sync():
             { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
             { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
             { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' },
-            { 'id': 3, 'data_folder': 'data/ocua_15' }
+            { 'id': 3, 'data_folder': 'data/ocua_15-16' },
+            { 'id': 2, 'data_folder': 'data/ocua_14-15' }
         ]
 
         leagues.reverse()
