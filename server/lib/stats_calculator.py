@@ -32,10 +32,12 @@ class StatsCalculator:
 
     def process_event(self, idx, event, events, offensePlayers, defensePlayers):
         if event['type'] == 'PASS':
-            next_event = events[idx+1]
-            if next_event['type'] != 'DROP':
-                self.add_stat(event['firstActor'], 'completions')
-                self.add_stat(event['secondActor'], 'catches')
+            more_events = idx + 1 < len(events)
+            if more_events:
+                next_event = events[idx+1]
+                if next_event['type'] != 'DROP':
+                    self.add_stat(event['firstActor'], 'completions')
+                    self.add_stat(event['secondActor'], 'catches')
 
         elif event['type'] == 'DROP':
             previous_event = events[idx-1]
