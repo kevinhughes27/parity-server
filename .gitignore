@@ -1,12 +1,17 @@
-.env
-.cache
 __pycache__
 *.pyc
-*.sqlite
-server/postgres
-docs
+
 node_modules
-/.vs/
 yarn-error.log
+
+# sqlite files
+*.sqlite
+
+# files to help with backfilling old roster syncs
 *players_db.csv
-parity_db_pgdump
+
+# docker volume
+server/postgres
+
+# saved pg_dumps
+server/pgdump*

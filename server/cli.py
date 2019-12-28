@@ -75,22 +75,30 @@ def zuluru_sync_all():
     with app.app_context():
 
         leagues = [
-            { 'zuluru_id': 702, 'player_db_path': '', 'division': False },
-            { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
-            { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv', 'division': False },
-            { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
-            { 'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv', 'division': False },
-            { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True },
-            { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv', 'division': True }
+            { 'zuluru_id': 702, 'player_db_path': ''},
+            { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
+            { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
+            { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv' },
+            { 'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv' },
+            { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
+            { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
+            { 'zuluru_id': 494, 'player_db_path': 'data/ocua_15-16/players_db.csv' },
+            { 'zuluru_id': 438, 'player_db_path': 'data/ocua_14-15/players_db.csv' }
         ]
 
         leagues.reverse()
 
+        is_division = [941, 940]
+        simple_player_db = [494, 438]
+
         for league in leagues:
+            division = league['zuluru_id'] in is_division
+            simple = league['zuluru_id'] in simple_player_db
+
             ZuluruSync(
                 league=League.query.filter_by(zuluru_id=league['zuluru_id']).first(),
-                player_db=PlayerDb(league['player_db_path']).load(),
-                division=league['division']
+                player_db=PlayerDb(league['player_db_path']).load(simple),
+                division=division
             ).sync_teams()
 
     db.session.remove()
