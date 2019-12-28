@@ -111,8 +111,7 @@ def game(league_id, id):
 @cache.cached()
 @app.route('/api/leagues')
 def leagues():
-    # earlier leagues are not ready yet
-    league_ids = [3,4,5,6,7,8,9,10]
+    league_ids = [2,3,4,5,6,7,8,9,10]
     query = League.query.filter(League.id.in_(league_ids)).order_by(League.id.desc())
     leagues = [league.to_dict() for league in query]
     return jsonify(leagues)

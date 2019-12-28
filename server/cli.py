@@ -4,9 +4,8 @@ import click
 import requests
 import urllib.request, json, glob, sys, os, re
 from collections import defaultdict
-from flask_caching import Cache
 
-from app import app, save_game
+from app import app, save_game, cache
 from models import db, League
 from lib import ZuluruSync, PlayerDb, StatsCalculator
 
@@ -68,7 +67,6 @@ def zuluru_sync():
 
         db.session.remove()
 
-        cache = Cache(app, config={'CACHE_TYPE': 'simple'})
         cache.clear()
 
 
@@ -97,13 +95,14 @@ def zuluru_sync_all():
 
     db.session.remove()
 
-    cache = Cache(app, config={'CACHE_TYPE': 'simple'})
     cache.clear()
 
 
 @cli.command()
 def game_sync():
     with app.app_context():
+
+        db.engine.execute("TRUNCATE game CASCADE;")
 
         leagues = [
             { 'id': 10, 'data_folder': 'data/ocua_19-20' },
@@ -130,6 +129,7 @@ def game_sync():
                 game = save_game(data)
                 stats = StatsCalculator(game).run()
 
+    cache.clear()
     click.echo('Done')
 
 
