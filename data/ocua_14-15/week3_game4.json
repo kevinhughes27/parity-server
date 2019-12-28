@@ -1,0 +1,3114 @@
+{
+  "league_id": 2,
+  "week": 3,
+  "homeTeam": "Game of Throws",
+  "homeScore": "26",
+  "homeRoster": [
+    "Sebastien Belanger",
+    "Justine Price",
+    "Nick Vetvut",
+    "Jamie Wildgen",
+    "Steve Chow",
+    "Kevin Hughes",
+    "Christine Beals",
+    "Edwin Wong",
+    "Chris Tran",
+    "Stephanie White",
+    "Christopher LaFleur"
+  ],
+  "awayTeam": "Conflict of Interests",
+  "awayScore": "18",
+  "awayRoster": [
+    "Alex Bush",
+    "Stephen Close",
+    "Christopher Keates",
+    "Geofford Seaborn",
+    "Elise Milbradt",
+    "David Townsend",
+    "Kindha Gorman",
+    "Wynne Gee",
+    "Jason Fraser",
+    "Saskia Vanderloo",
+    "Matthew Smith"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Justine Price",
+        "Nick Vetvut"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Stephen Close",
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Steve Chow",
+        "Kevin Hughes",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Jason Fraser",
+        "Geofford Seaborn",
+        "Stephen Close",
+        "Alex Bush",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Chris Tran",
+        "Justine Price",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "Saskia Vanderloo",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Elise Milbradt",
+        "Matthew Smith",
+        "Wynne Gee",
+        "Alex Bush",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Alex Bush",
+        "Kindha Gorman",
+        "Christopher Keates",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Nick Vetvut",
+        "Christine Beals",
+        "Chris Tran",
+        "Justine Price",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Elise Milbradt",
+        "Jason Fraser",
+        "David Townsend",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Stephen Close",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher LaFleur",
+        "Steve Chow",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "Jason Fraser",
+        "Wynne Gee",
+        "Elise Milbradt",
+        "David Townsend",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Christine Beals",
+        "Christopher LaFleur"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Elise Milbradt",
+        "Jason Fraser",
+        "Stephen Close",
+        "Christopher Keates",
+        "Matthew Smith"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Jamie Wildgen",
+        "Justine Price",
+        "Steve Chow",
+        "Kevin Hughes",
+        "Christopher LaFleur"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Wynne Gee",
+        "Matthew Smith",
+        "Stephen Close",
+        "Elise Milbradt",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Chris Tran",
+        "Justine Price",
+        "Sebastien Belanger",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Jason Fraser",
+        "Saskia Vanderloo",
+        "Kindha Gorman",
+        "Alex Bush",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Vetvut",
+        "Stephanie White",
+        "Sebastien Belanger",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Matthew Smith",
+        "Christopher Keates",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christine Beals",
+        "Kevin Hughes",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Justine Price",
+        "Chris Tran",
+        "Sebastien Belanger",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "Kindha Gorman",
+        "Christopher Keates",
+        "Stephen Close",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Christine Beals",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "David Townsend",
+        "Wynne Gee",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Justine Price",
+        "Jamie Wildgen",
+        "Kevin Hughes",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Vetvut",
+        "Justine Price",
+        "Sebastien Belanger",
+        "Edwin Wong",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Elise Milbradt",
+        "Stephen Close",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Kindha Gorman",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Stephanie White",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "David Townsend",
+        "Wynne Gee",
+        "Matthew Smith",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Chris Tran",
+        "Justine Price",
+        "Edwin Wong",
+        "Stephanie White",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Kevin Hughes",
+        "Jamie Wildgen",
+        "Steve Chow",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Alex Bush",
+        "Christopher Keates",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Christopher LaFleur"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Jason Fraser",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christine Beals",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "Geofford Seaborn",
+        "Kindha Gorman",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Justine Price",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Wynne Gee",
+        "Elise Milbradt",
+        "Alex Bush",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Justine Price",
+        "Christine Beals",
+        "Christopher LaFleur",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Alex Bush",
+        "David Townsend",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Jamie Wildgen",
+        "Steve Chow",
+        "Justine Price",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Alex Bush",
+        "Christopher Keates",
+        "Jason Fraser",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Nick Vetvut",
+        "Justine Price",
+        "Sebastien Belanger",
+        "Chris Tran"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "David Townsend",
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Steve Chow",
+        "Christine Beals",
+        "Christopher LaFleur"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Christopher Keates",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "David Townsend",
+        "Alex Bush",
+        "Saskia Vanderloo",
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Christine Beals",
+        "Nick Vetvut",
+        "Stephanie White",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Belanger"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Stephen Close",
+        "Saskia Vanderloo",
+        "Kindha Gorman",
+        "Matthew Smith",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Stephen Close",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Christine Beals",
+        "Kevin Hughes",
+        "Jamie Wildgen",
+        "Steve Chow",
+        "Christopher LaFleur"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Geofford Seaborn",
+        "Matthew Smith",
+        "Wynne Gee",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Stephen Close",
+        "David Townsend",
+        "Geofford Seaborn",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Nick Vetvut",
+        "Justine Price",
+        "Edwin Wong",
+        "Chris Tran",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Wynne Gee",
+        "Elise Milbradt",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Justine Price",
+        "Christine Beals",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2527 @@
+{
+  "league_id": 2,
+  "week": 2,
+  "homeTeam": "Huck Huck Goose",
+  "homeScore": "23",
+  "homeRoster": [
+    "Erik Burton",
+    "Amos Lee",
+    "Geoff Liu",
+    "Megan Berry",
+    "Nick Theriault",
+    "Matthew Smith",
+    "Tanya Gallant",
+    "Greg Probe",
+    "Neena Sidhu",
+    "Andrew Smith",
+    "Jay Thor Turner"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "18",
+  "awayRoster": [
+    "Mark Donahue",
+    "Marc Gobeil",
+    "Al Colantonio",
+    "Cassandra Cheung",
+    "Sandra Hanson",
+    "Will Leckie",
+    "Kirsten Querbach",
+    "Christopher Kraft",
+    "Matt Masse",
+    "Christopher Vickers",
+    "Jonathan Champagne",
+    "Stephanie Fowler"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Erik Burton",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Mark Donahue",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Erik Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Cassandra Cheung",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Megan Berry",
+        "Nick Theriault",
+        "Matthew Smith",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Mark Donahue",
+        "Marc Gobeil",
+        "Kirsten Querbach",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Megan Berry",
+        "Erik Burton",
+        "Amos Lee",
+        "Greg Probe",
+        "Neena Sidhu",
+        "Andrew Smith"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Matt Masse",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Jay Thor Turner",
+        "Tanya Gallant",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Will Leckie",
+        "Marc Gobeil",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Christopher Vickers",
+        "Mark Donahue",
+        "Will Leckie",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Vickers"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Erik Burton",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Sandra Hanson",
+        "Christopher Vickers",
+        "Marc Gobeil",
+        "Will Leckie"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Andrew Smith",
+        "Erik Burton"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Matt Masse",
+        "Al Colantonio",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Erik Burton",
+        "Tanya Gallant",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson",
+        "Mark Donahue",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Jonathan Champagne",
+        "Al Colantonio",
+        "Kirsten Querbach",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Amos Lee",
+        "Neena Sidhu",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Jonathan Champagne"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Matthew Smith",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie Fowler",
+        "Mark Donahue",
+        "Christopher Vickers",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Nick Theriault",
+        "Neena Sidhu",
+        "Jay Thor Turner"
+      ],
+      "defensePlayers": [
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Andrew Smith",
+        "Erik Burton",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Al Colantonio",
+        "Mark Donahue",
+        "Will Leckie",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Jay Thor Turner",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Amos Lee",
+        "Megan Berry",
+        "Greg Probe",
+        "Erik Burton"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Stephanie Fowler",
+        "Kirsten Querbach",
+        "Matt Masse",
+        "Christopher Kraft",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Megan Berry",
+        "Matthew Smith",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie Fowler",
+        "Al Colantonio",
+        "Christopher Vickers",
+        "Christopher Kraft",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Neena Sidhu",
+        "Megan Berry",
+        "Jay Thor Turner",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Marc Gobeil",
+        "Sandra Hanson",
+        "Will Leckie"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Probe",
+        "Andrew Smith",
+        "Amos Lee",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Megan Berry",
+        "Tanya Gallant",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Al Colantonio",
+        "Christopher Vickers",
+        "Stephanie Fowler",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Geoff Liu",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Mark Donahue",
+        "Marc Gobeil",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Tanya Gallant",
+        "Andrew Smith",
+        "Greg Probe",
+        "Erik Burton",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Stephanie Fowler",
+        "Al Colantonio",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Erik Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Cassandra Cheung",
+        "Mark Donahue",
+        "Marc Gobeil",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Matthew Smith",
+        "Nick Theriault",
+        "Geoff Liu",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Probe",
+        "Andrew Smith",
+        "Amos Lee",
+        "Erik Burton"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Stephanie Fowler",
+        "Jonathan Champagne",
+        "Christopher Kraft",
+        "Christopher Vickers",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Sandra Hanson",
+        "Will Leckie",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Geoff Liu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Matthew Smith",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geoff Liu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Christopher Kraft",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Erik Burton",
+        "Megan Berry",
+        "Neena Sidhu",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Erik Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Matthew Smith",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Tanya Gallant",
+        "Megan Berry",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Matt Masse",
+        "Marc Gobeil",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Tanya Gallant",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Stephanie Fowler",
+        "Christopher Vickers",
+        "Al Colantonio",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Tanya Gallant",
+        "Geoff Liu",
+        "Megan Berry",
+        "Matthew Smith",
+        "Jay Thor Turner"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Marc Gobeil",
+        "Matt Masse",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Christopher Kraft",
+        "Christopher Vickers"
+      ],
+      "defensePlayers": [
+        "Erik Burton",
+        "Amos Lee",
+        "Greg Probe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Erik Burton",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Erik Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Erik Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Erik Burton"
+        }
+      ]
+    }
+  ]
+}

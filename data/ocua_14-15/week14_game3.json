@@ -1,0 +1,2648 @@
+{
+  "league_id": 2,
+  "week": 14,
+  "homeTeam": "Huck Huck Goose",
+  "homeScore": "19",
+  "homeRoster": [
+    "Megan Berry",
+    "Douglas Brierley",
+    "Jim Robinson",
+    "Clare Gee",
+    "Aleks Ostojic(S)",
+    "Greg Probe",
+    "Eric Jacques",
+    "Jamie Wildgen",
+    "Wynne Gee",
+    "Mackenzie King",
+    "Andrew Smith"
+  ],
+  "awayTeam": "Conflict of Interests",
+  "awayScore": "22",
+  "awayRoster": [
+    "Geofford Seaborn",
+    "Alex Bush",
+    "Laura Knowles",
+    "Jay Thor Turner",
+    "Jason Fraser",
+    "Neena Sidhu",
+    "Christopher Keates",
+    "Kindha Gorman",
+    "Justin To",
+    "Christopher Kraft"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jim Robinson",
+        "Clare Gee",
+        "Aleks Ostojic(S)",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Jim Robinson",
+        "Eric Jacques",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Alex Bush",
+        "Laura Knowles",
+        "Jay Thor Turner",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Jim Robinson",
+        "Aleks Ostojic(S)",
+        "Eric Jacques",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleks Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Neena Sidhu",
+        "Christopher Keates",
+        "Kindha Gorman",
+        "Jay Thor Turner",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Jamie Wildgen",
+        "Wynne Gee",
+        "Greg Probe",
+        "Douglas Brierley",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Clare Gee",
+        "Douglas Brierley",
+        "Megan Berry",
+        "Mackenzie King",
+        "Jim Robinson"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Jason Fraser",
+        "Alex Bush",
+        "Justin To"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Eric Jacques",
+        "Jamie Wildgen",
+        "Greg Probe",
+        "Aleks Ostojic(S)",
+        "Andrew Smith"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Jay Thor Turner",
+        "Geofford Seaborn",
+        "Neena Sidhu",
+        "Jason Fraser",
+        "Laura Knowles",
+        "Justin To"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justin To"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Megan Berry",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Christopher Kraft",
+        "Jason Fraser",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Eric Jacques",
+        "Jim Robinson",
+        "Jamie Wildgen",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Neena Sidhu",
+        "Geofford Seaborn",
+        "Christopher Keates",
+        "Justin To",
+        "Jason Fraser",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Aleks Ostojic(S)",
+        "Douglas Brierley",
+        "Andrew Smith",
+        "Wynne Gee",
+        "Mackenzie King",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleks Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Christopher Keates",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Megan Berry",
+        "Jim Robinson",
+        "Clare Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Jason Fraser",
+        "Christopher Keates",
+        "Justin To",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Jim Robinson",
+        "Clare Gee",
+        "Jamie Wildgen",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Probe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Justin To",
+        "Alex Bush",
+        "Kindha Gorman",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Wynne Gee",
+        "Andrew Smith",
+        "Eric Jacques",
+        "Aleks Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Eric Jacques"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Geofford Seaborn",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Jamie Wildgen",
+        "Eric Jacques",
+        "Clare Gee",
+        "Jim Robinson",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Justin To",
+        "Jason Fraser",
+        "Kindha Gorman",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Jim Robinson",
+        "Eric Jacques",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Kindha Gorman",
+        "Justin To"
+      ],
+      "defensePlayers": [
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justin To",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justin To"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Jim Robinson",
+        "Eric Jacques",
+        "Aleks Ostojic(S)",
+        "Mackenzie King",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Justin To",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Justin To",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Megan Berry",
+        "Douglas Brierley",
+        "Clare Gee",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Christopher Kraft",
+        "Christopher Keates",
+        "Laura Knowles",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Eric Jacques"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Alex Bush",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Neena Sidhu",
+        "Jason Fraser",
+        "Geofford Seaborn",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Jason Fraser",
+        "Alex Bush",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Aleks Ostojic(S)",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Christopher Keates",
+        "Christopher Kraft",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Eric Jacques",
+        "Megan Berry",
+        "Jim Robinson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Douglas Brierley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Jason Fraser",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Laura Knowles",
+        "Christopher Kraft",
+        "Christopher Keates",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Mackenzie King",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Geofford Seaborn",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Aleks Ostojic(S)",
+        "Jamie Wildgen",
+        "Mackenzie King",
+        "Jim Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Christopher Keates",
+        "Kindha Gorman",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Greg Probe",
+        "Aleks Ostojic(S)",
+        "Eric Jacques",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Neena Sidhu",
+        "Christopher Keates",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleks Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kindha Gorman",
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Jim Robinson",
+        "Jamie Wildgen",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Eric Jacques"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kindha Gorman",
+        "Jason Fraser",
+        "Christopher Keates",
+        "Laura Knowles",
+        "Alex Bush",
+        "Justin To",
+        "Jay Thor Turner"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Jamie Wildgen",
+        "Greg Probe",
+        "Douglas Brierley",
+        "Clare Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jim Robinson",
+        "Eric Jacques",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Jim Robinson",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    }
+  ]
+}

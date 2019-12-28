@@ -1,0 +1,2413 @@
+{
+  "league_id": 2,
+  "week": 3,
+  "homeTeam": "Karma Down Under",
+  "homeScore": "11",
+  "homeRoster": [
+    "Andrew W Cameron",
+    "Shubho Bo Biswas",
+    "Carissa Wong",
+    "Christian Hamel",
+    "Mehmet Karman",
+    "Graham Brown",
+    "Amelia Keenan",
+    "Jean Surette",
+    "Douglas Brierley",
+    "Dan Shaver",
+    "Andrea Proulx",
+    "Maya Popovic"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "17",
+  "awayRoster": [
+    "Al Colantonio",
+    "Will Leckie",
+    "Matt Masse",
+    "Mark Donahue",
+    "Sandra Hanson",
+    "Celine Dumais",
+    "Christopher Vickers",
+    "James King",
+    "Christopher Kraft",
+    "Kirsten Querbach"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Will Leckie",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Christian Hamel",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Al Colantonio",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Carissa Wong",
+        "Christian Hamel",
+        "Jean Surette",
+        "Douglas Brierley",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Christopher Vickers",
+        "Will Leckie",
+        "James King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jean Surette"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Al Colantonio",
+        "Will Leckie",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Douglas Brierley",
+        "Amelia Keenan",
+        "Carissa Wong",
+        "Christian Hamel",
+        "Jean Surette"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Sandra Hanson",
+        "James King",
+        "Christopher Vickers",
+        "Celine Dumais",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Shubho Bo Biswas",
+        "Carissa Wong",
+        "Dan Shaver"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Al Colantonio",
+        "Will Leckie",
+        "Mark Donahue",
+        "Celine Dumais",
+        "James King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christian Hamel",
+        "Mehmet Karman",
+        "Carissa Wong",
+        "Amelia Keenan",
+        "Douglas Brierley",
+        "Jean Surette"
+      ],
+      "defensePlayers": [
+        "Christopher Vickers",
+        "Matt Masse",
+        "Christopher Kraft",
+        "Kirsten Querbach",
+        "Sandra Hanson",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King",
+        "Will Leckie",
+        "Sandra Hanson",
+        "Christopher Kraft",
+        "Celine Dumais",
+        "Mark Donahue"
+      ],
+      "defensePlayers": [
+        "Dan Shaver",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "James King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Jean Surette",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Mark Donahue",
+        "Matt Masse",
+        "Christopher Vickers",
+        "Celine Dumais"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Matt Masse",
+        "Mark Donahue"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Jean Surette",
+        "Andrea Proulx",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio",
+        "James King"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Andrea Proulx",
+        "Jean Surette"
+      ],
+      "defensePlayers": [
+        "Christopher Vickers",
+        "Will Leckie",
+        "Sandra Hanson",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Amelia Keenan",
+        "Douglas Brierley",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Mark Donahue",
+        "Will Leckie",
+        "Al Colantonio",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "James King",
+        "Christopher Kraft",
+        "Matt Masse",
+        "Kirsten Querbach",
+        "Celine Dumais",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King",
+        "Sandra Hanson",
+        "Will Leckie",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Shubho Bo Biswas",
+        "Dan Shaver"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Andrea Proulx",
+        "Mehmet Karman",
+        "Carissa Wong",
+        "Christian Hamel",
+        "Jean Surette",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Christopher Vickers",
+        "Celine Dumais",
+        "Sandra Hanson",
+        "Matt Masse",
+        "Christopher Kraft",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christian Hamel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King",
+        "Al Colantonio",
+        "Kirsten Querbach",
+        "Will Leckie"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Shubho Bo Biswas",
+        "Douglas Brierley",
+        "Dan Shaver",
+        "Maya Popovic",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Shaver"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Christian Hamel",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christian Hamel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Mark Donahue",
+        "Will Leckie",
+        "James King",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Dan Shaver",
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Shaver"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio",
+        "Kirsten Querbach",
+        "Mark Donahue",
+        "Christopher Kraft",
+        "Christopher Vickers"
+      ],
+      "defensePlayers": [
+        "Christian Hamel",
+        "Carissa Wong",
+        "Jean Surette",
+        "Mehmet Karman",
+        "Graham Brown",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Shubho Bo Biswas",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Will Leckie",
+        "James King",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Jean Surette",
+        "Christian Hamel",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Mark Donahue",
+        "Kirsten Querbach",
+        "Christopher Vickers",
+        "Will Leckie",
+        "Christopher Kraft",
+        "Celine Dumais"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Shaver",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Shaver"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "James King",
+        "Kirsten Querbach",
+        "Christopher Vickers",
+        "Celine Dumais",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Carissa Wong",
+        "Andrea Proulx",
+        "Christian Hamel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Vickers"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Dan Shaver",
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Will Leckie",
+        "Christopher Kraft",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Vickers"
+        }
+      ]
+    }
+  ]
+}

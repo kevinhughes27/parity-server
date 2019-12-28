@@ -1,0 +1,2531 @@
+{
+  "league_id": 2,
+  "week": 6,
+  "homeTeam": "Game of Throws",
+  "homeScore": "16",
+  "homeRoster": [
+    "Kyle Sprysa",
+    "Chris Tran",
+    "Melissa Martel",
+    "Nick Vetvut",
+    "Justine Price",
+    "Kevin Hughes",
+    "Sebastien Belanger",
+    "Christine Beals",
+    "Edwin Wong",
+    "Carissa Wong"
+  ],
+  "awayTeam": "Scoobers in Paris",
+  "awayScore": "17",
+  "awayRoster": [
+    "Max Angel",
+    "Elise Milbradt",
+    "Mackenzie King",
+    "Jonathan Champagne",
+    "Jen Cluthe",
+    "Sina Dee",
+    "David Townsend",
+    "Sebastien Benard",
+    "Heather Wallace",
+    "Matt Trouble Andruff",
+    "Yingdi Wu"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Kyle Sprysa",
+        "Chris Tran",
+        "Melissa Martel",
+        "Nick Vetvut",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Max Angel",
+        "Elise Milbradt",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Martel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Jen Cluthe",
+        "Sina Dee",
+        "David Townsend",
+        "Elise Milbradt",
+        "Sebastien Benard"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kyle Sprysa",
+        "Justine Price",
+        "Kevin Hughes",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Jen Cluthe",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kyle Sprysa",
+        "Christine Beals",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Sebastien Benard",
+        "Jen Cluthe",
+        "Elise Milbradt",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Kyle Sprysa",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "Mackenzie King",
+        "Heather Wallace",
+        "David Townsend",
+        "Max Angel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Max Angel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Melissa Martel",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Nick Vetvut",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "David Townsend",
+        "Jen Cluthe",
+        "Max Angel",
+        "Mackenzie King",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Kevin Hughes",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Heather Wallace",
+        "Elise Milbradt",
+        "Sebastien Benard",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Nick Vetvut",
+        "Kevin Hughes",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Nick Vetvut",
+        "Justine Price",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Christine Beals",
+        "Kyle Sprysa",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Kyle Sprysa",
+        "Kevin Hughes",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Mackenzie King",
+        "Max Angel",
+        "Sebastien Benard"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Christine Beals",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Melissa Martel",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Max Angel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Hughes",
+        "Kyle Sprysa",
+        "Justine Price",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Sina Dee",
+        "Yingdi Wu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Sina Dee",
+        "Matt Trouble Andruff",
+        "Jonathan Champagne",
+        "Yingdi Wu"
+      ],
+      "defensePlayers": [
+        "Justine Price",
+        "Chris Tran"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Kevin Hughes",
+        "Edwin Wong",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Martel"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "Max Angel",
+        "Mackenzie King",
+        "Heather Wallace",
+        "Jen Cluthe",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kyle Sprysa",
+        "Kevin Hughes",
+        "Justine Price",
+        "Nick Vetvut"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Sina Dee",
+        "Jen Cluthe",
+        "Sebastien Benard",
+        "David Townsend",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Kevin Hughes",
+        "Melissa Martel",
+        "Nick Vetvut",
+        "Christine Beals",
+        "Chris Tran",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Kyle Sprysa",
+        "Chris Tran",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Yingdi Wu",
+        "Matt Trouble Andruff"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Sebastien Benard",
+        "Heather Wallace",
+        "Sina Dee",
+        "David Townsend",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Kyle Sprysa",
+        "Sebastien Belanger",
+        "Justine Price",
+        "Edwin Wong",
+        "Nick Vetvut",
+        "Christine Beals",
+        "Melissa Martel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Martel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Heather Wallace",
+        "Yingdi Wu",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Kevin Hughes"
+      ],
+      "defensePlayers": [
+        "Jen Cluthe",
+        "Sebastien Benard",
+        "David Townsend",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Kyle Sprysa",
+        "Justine Price",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "David Townsend",
+        "Jen Cluthe",
+        "Sebastien Benard",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Kevin Hughes",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Jonathan Champagne",
+        "Yingdi Wu"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Heather Wallace",
+        "Sina Dee",
+        "Sebastien Benard"
+      ],
+      "defensePlayers": [
+        "Kevin Hughes",
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Melissa Martel",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Martel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mackenzie King",
+        "Matt Trouble Andruff",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Carissa Wong",
+        "Justine Price",
+        "Kyle Sprysa",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Kevin Hughes",
+        "Chris Tran",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Matt Trouble Andruff",
+        "Elise Milbradt",
+        "Yingdi Wu",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Kevin Hughes",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Vetvut",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "Heather Wallace",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Kevin Hughes",
+        "Chris Tran",
+        "Carissa Wong",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Jonathan Champagne",
+        "Yingdi Wu",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    }
+  ]
+}

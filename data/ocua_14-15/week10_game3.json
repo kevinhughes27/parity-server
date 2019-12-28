@@ -1,0 +1,3272 @@
+{
+  "league_id": 2,
+  "week": 10,
+  "homeTeam": "Karma Down Under",
+  "homeScore": "25",
+  "homeRoster": [
+    "Mehmet Karman",
+    "Matt Masse",
+    "Amelia Keenan",
+    "Stephanie Fowler",
+    "Stanley Kent",
+    "Richard Gregory",
+    "Andrew W Cameron",
+    "Maya Popovic",
+    "Marc Gobeil",
+    "Andrea Proulx"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "23",
+  "awayRoster": [
+    "Al Colantonio",
+    "Will Leckie",
+    "Nick Theriault",
+    "Cassandra Cheung",
+    "Dan Shaver",
+    "Catherine Horvath",
+    "Jay Thor Turner",
+    "Celine Dumais",
+    "Christopher Kraft",
+    "Andrew McGregor",
+    "Patrick Gauvin"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Will Leckie",
+        "Nick Theriault",
+        "Cassandra Cheung",
+        "Dan Shaver"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Stephanie Fowler",
+        "Stanley Kent",
+        "Richard Gregory",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Catherine Horvath",
+        "Jay Thor Turner",
+        "Celine Dumais",
+        "Christopher Kraft",
+        "Andrew McGregor",
+        "Patrick Gauvin"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Shaver",
+        "Will Leckie",
+        "Nick Theriault",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Shaver"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Amelia Keenan",
+        "Maya Popovic",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Richard Gregory",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Patrick Gauvin",
+        "Jay Thor Turner",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Marc Gobeil",
+        "Matt Masse",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Cassandra Cheung",
+        "Al Colantonio",
+        "Dan Shaver",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Richard Gregory",
+        "Stanley Kent",
+        "Andrea Proulx",
+        "Stephanie Fowler",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Matt Masse",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Jay Thor Turner",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Catherine Horvath",
+        "Will Leckie",
+        "Al Colantonio",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Cassandra Cheung",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Andrew W Cameron",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Cassandra Cheung",
+        "Dan Shaver"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Richard Gregory",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Catherine Horvath",
+        "Will Leckie",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Andrew McGregor",
+        "Christopher Kraft",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Nick Theriault",
+        "Celine Dumais",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Amelia Keenan",
+        "Matt Masse",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Catherine Horvath",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Nick Theriault",
+        "Dan Shaver",
+        "Al Colantonio",
+        "Catherine Horvath"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Marc Gobeil",
+        "Stephanie Fowler",
+        "Richard Gregory",
+        "Stanley Kent",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Catherine Horvath",
+        "Christopher Kraft",
+        "Patrick Gauvin",
+        "Andrew McGregor",
+        "Jay Thor Turner",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Maya Popovic",
+        "Richard Gregory",
+        "Matt Masse",
+        "Amelia Keenan",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Al Colantonio",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Richard Gregory",
+        "Matt Masse",
+        "Stephanie Fowler",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Jay Thor Turner",
+        "Andrew McGregor",
+        "Patrick Gauvin",
+        "Celine Dumais"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Amelia Keenan",
+        "Maya Popovic",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Stephanie Fowler",
+        "Marc Gobeil",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Patrick Gauvin",
+        "Cassandra Cheung",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Nick Theriault",
+        "Al Colantonio",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Maya Popovic",
+        "Matt Masse",
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Christopher Kraft",
+        "Patrick Gauvin",
+        "Jay Thor Turner",
+        "Catherine Horvath",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Matt Masse",
+        "Andrea Proulx",
+        "Stephanie Fowler",
+        "Andrew W Cameron",
+        "Stanley Kent",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Dan Shaver",
+        "Will Leckie",
+        "Al Colantonio",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Mehmet Karman",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Jay Thor Turner",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Andrew McGregor",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Patrick Gauvin",
+        "Andrew McGregor",
+        "Christopher Kraft",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Richard Gregory",
+        "Matt Masse",
+        "Stephanie Fowler",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Celine Dumais",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Mehmet Karman",
+        "Stanley Kent",
+        "Andrea Proulx",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Andrew McGregor",
+        "Christopher Kraft",
+        "Cassandra Cheung",
+        "Patrick Gauvin"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Maya Popovic",
+        "Matt Masse",
+        "Stanley Kent",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Jay Thor Turner",
+        "Patrick Gauvin",
+        "Cassandra Cheung",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew McGregor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Amelia Keenan",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Catherine Horvath",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Cassandra Cheung",
+        "Dan Shaver"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Stephanie Fowler",
+        "Andrea Proulx",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Amelia Keenan",
+        "Matt Masse",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Cassandra Cheung",
+        "Catherine Horvath",
+        "Jay Thor Turner",
+        "Andrew McGregor",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Stephanie Fowler",
+        "Richard Gregory",
+        "Mehmet Karman",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Shaver",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Will Leckie",
+        "Catherine Horvath",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Stanley Kent",
+        "Matt Masse",
+        "Stephanie Fowler"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Jay Thor Turner",
+        "Christopher Kraft",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Will Leckie",
+        "Cassandra Cheung",
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Amelia Keenan",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Stanley Kent",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Andrew McGregor",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Nick Theriault",
+        "Will Leckie"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    }
+  ]
+}

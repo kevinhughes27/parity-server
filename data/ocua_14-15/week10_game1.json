@@ -1,0 +1,2822 @@
+{
+  "league_id": 2,
+  "week": 10,
+  "homeTeam": "Scoobers in Paris",
+  "homeScore": "23",
+  "homeRoster": [
+    "Sina Dee",
+    "Vanessa Lyon",
+    "Adam Cockburn",
+    "Sebastien Benard",
+    "Jen Cluthe",
+    "Matt Trouble Andruff",
+    "Yingdi Wu",
+    "Heather Wallace",
+    "Nick Ierullo",
+    "Sandra Hanson(S)",
+    "Jonathan Champagne"
+  ],
+  "awayTeam": "Huck Huck Goose",
+  "awayScore": "20",
+  "awayRoster": [
+    "Kinley Gee",
+    "Douglas Brierley",
+    "Megan Berry",
+    "Eric Jacques",
+    "John Zwanenburg",
+    "Hope Celani(S)",
+    "Amos Lee",
+    "Clare Gee",
+    "Elise Milbradt",
+    "Ivan Sabourin",
+    "Greg Kung",
+    "Andrew Smith"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Kinley Gee",
+        "Douglas Brierley",
+        "Megan Berry",
+        "Eric Jacques",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam Cockburn",
+        "Sebastien Benard",
+        "Jen Cluthe",
+        "Matt Trouble Andruff"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adam Cockburn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Hope Celani(S)",
+        "Douglas Brierley",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Hope Celani(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Megan Berry",
+        "John Zwanenburg",
+        "Douglas Brierley",
+        "Eric Jacques"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Matt Trouble Andruff"
+      ],
+      "defensePlayers": [
+        "Clare Gee",
+        "Eric Jacques",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "Vanessa Lyon",
+        "Sina Dee",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Megan Berry",
+        "Amos Lee",
+        "Kinley Gee",
+        "John Zwanenburg",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Kinley Gee",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Jen Cluthe",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Sina Dee",
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Vanessa Lyon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Kinley Gee",
+        "Clare Gee",
+        "Eric Jacques"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Sebastien Benard",
+        "Adam Cockburn",
+        "Nick Ierullo",
+        "Sandra Hanson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Kung",
+        "Douglas Brierley",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Matt Trouble Andruff",
+        "Heather Wallace",
+        "Sina Dee",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "John Zwanenburg",
+        "Greg Kung",
+        "Megan Berry",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "Jen Cluthe",
+        "Nick Ierullo",
+        "Sandra Hanson(S)",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Yingdi Wu",
+        "Matt Trouble Andruff",
+        "Vanessa Lyon",
+        "Adam Cockburn",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Andrew Smith",
+        "Hope Celani(S)",
+        "Kinley Gee",
+        "Clare Gee",
+        "Ivan Sabourin"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Hope Celani(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani(S)",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Hope Celani(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Vanessa Lyon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Amos Lee",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Yingdi Wu",
+        "Sina Dee",
+        "Vanessa Lyon",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+        "Andrew Smith",
+        "Clare Gee",
+        "Kinley Gee",
+        "Eric Jacques"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Eric Jacques"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam Cockburn",
+        "Sebastien Benard",
+        "Sandra Hanson(S)",
+        "Jonathan Champagne",
+        "Matt Trouble Andruff",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adam Cockburn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Adam Cockburn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Eric Jacques",
+        "Ivan Sabourin",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Nick Ierullo",
+        "Sina Dee",
+        "Vanessa Lyon",
+        "Yingdi Wu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Ierullo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Amos Lee",
+        "John Zwanenburg",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Jonathan Champagne",
+        "Sandra Hanson(S)",
+        "Matt Trouble Andruff",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Sebastien Benard",
+        "Adam Cockburn",
+        "Matt Trouble Andruff"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Amos Lee",
+        "Megan Berry",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Nick Ierullo"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Douglas Brierley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Yingdi Wu",
+        "Matt Trouble Andruff",
+        "Heather Wallace",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Andrew Smith",
+        "Eric Jacques",
+        "Ivan Sabourin",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam Cockburn",
+        "Jen Cluthe",
+        "Sina Dee",
+        "Sandra Hanson(S)",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Megan Berry",
+        "Greg Kung",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Vanessa Lyon",
+        "Jonathan Champagne",
+        "Sebastien Benard"
+      ],
+      "defensePlayers": [
+        "Kinley Gee",
+        "Eric Jacques",
+        "Ivan Sabourin"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jen Cluthe",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee",
+        "Eric Jacques",
+        "Andrew Smith"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jen Cluthe",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Amos Lee",
+        "John Zwanenburg",
+        "Megan Berry",
+        "Greg Kung",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam Cockburn",
+        "Heather Wallace",
+        "Vanessa Lyon",
+        "Matt Trouble Andruff"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adam Cockburn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Nick Ierullo",
+        "Yingdi Wu",
+        "Jen Cluthe",
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Vanessa Lyon",
+        "Sandra Hanson(S)",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Vanessa Lyon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "John Zwanenburg"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Sebastien Benard"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Amos Lee",
+        "Eric Jacques",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "John Zwanenburg",
+        "Greg Kung",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "John Zwanenburg"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Yingdi Wu",
+        "Adam Cockburn",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Elise Milbradt",
+        "John Zwanenburg"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Adam Cockburn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Hope Celani(S)",
+        "Ivan Sabourin",
+        "Amos Lee",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Hope Celani(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Sina Dee",
+        "Yingdi Wu",
+        "Adam Cockburn",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Greg Kung",
+        "Megan Berry",
+        "Andrew Smith"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Eric Jacques",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Nick Ierullo",
+        "Sebastien Benard",
+        "Yingdi Wu",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Hope Celani(S)",
+        "John Zwanenburg"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Adam Cockburn",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Hope Celani(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Adam Cockburn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam Cockburn",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Kung",
+        "Eric Jacques",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Sina Dee",
+        "Sandra Hanson(S)",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Eric Jacques",
+        "Megan Berry",
+        "Greg Kung",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    }
+  ]
+}
