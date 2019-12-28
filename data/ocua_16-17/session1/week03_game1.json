@@ -1,3148 +1,4 @@
 {
-  "score": {
-    "Hindsight Hooligans": "13",
-    "F Bombs": "18"
-  },
-  "teams": {
-    "Hindsight Hooligans": [
-      "Julia Laforge",
-      "Aleksandra Ostojic",
-      "Maya Popovic",
-      "Carrie-Anne Whyte",
-      "Amos Lee",
-      "Kevin Barford",
-      "Jason Fraser",
-      "Hadrian Mertins-Kirkwood",
-      "Michael O'Hare",
-      "Andre Scott",
-      "Jay Thor Turner",
-      "Geofford seaborn"
-    ],
-    "F Bombs": [
-      "Hope Celani",
-      "Janet Ibit",
-      "Justine Price",
-      "Nina Ramic",
-      "Rob Ives",
-      "Chris Sullivan",
-      "Simon Berry",
-      "Brent Burton",
-      "Martin Cloake",
-      "Mark Donahue",
-      "Richard Gregory",
-      "Ariel Untiveros"
-    ]
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 21, 2016 7:03:19 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:03:52 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:03:55 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:01 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:08 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:11 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:18 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:20 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:04:24 PM",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:04:26 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:31 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:33 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:38 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:41 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:45 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:04:51 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:04:55 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:04:58 PM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:05:51 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:05:55 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:06:00 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:06:01 PM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:06:11 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:06:15 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:06:22 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:06:24 PM",
-          "firstActor": "Rob Ives"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:07:26 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:07:27 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:07:30 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:07:32 PM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:07:42 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:00 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:03 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:06 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:14 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:19 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:24 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:08:33 PM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:08:35 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:49 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:52 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:08:55 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:08:56 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:09:50 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:09:54 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:09:59 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:02 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:04 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:07 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:09 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:19 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:21 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:24 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:10:42 PM"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:52 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:53 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:10:59 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:11:00 PM",
-          "firstActor": "Ariel Untiveros"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Brent Burton",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:07 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:10 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:15 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:18 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:26 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:34 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:12:49 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:12:53 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:13:04 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:13:18 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:13:19 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:13:30 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:13:36 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:13:55 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:13:57 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:14:11 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:14:16 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:14:18 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:17:30 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:17:33 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:17:38 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:17:43 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:17:44 PM",
-          "firstActor": "Julia Laforge"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:36 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:41 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:44 PM",
-          "secondActor": "Hope Celani",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:47 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Hope Celani"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:53 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:55 PM",
-          "secondActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:18:56 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:19:01 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:19:02 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:19:43 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:19:46 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:19:53 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:19:57 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:20:02 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:20:09 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:20:17 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:20:17 PM",
-          "firstActor": "Jay Thor Turner"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:08 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:15 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:18 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:21:26 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:38 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:42 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:21:46 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:22:01 PM"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:22:05 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:22:13 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:22:13 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:22:17 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:22:18 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:22:19 PM",
-          "firstActor": "Ariel Untiveros"
-        }
-      ],
-      "defensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:22:57 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:23:00 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:23:03 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:23:05 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:23:09 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:23:13 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:23:14 PM",
-          "firstActor": "Jay Thor Turner"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:24:03 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:24:26 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:24:48 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:24:57 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:03 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:05 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:25:14 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:34 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:39 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:44 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:25:45 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:25:58 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:01 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:05 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:11 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:14 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:24 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:50 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:53 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:56 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:26:58 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:27:06 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:27:09 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:27:13 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:27:14 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:28:19 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:28:26 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:28:27 PM",
-          "firstActor": "Ariel Untiveros"
-        }
-      ],
-      "defensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:29:12 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:29:16 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:29:21 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:29:24 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:29:25 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:29:38 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:29:39 PM",
-          "firstActor": "Mark Donahue"
-        }
-      ],
-      "defensePlayers": [
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:30:21 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:30:26 PM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:30:28 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:30:30 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:30:33 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:30:36 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:21 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:26 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:33 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:40 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:47 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:31:53 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:31:59 PM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:32:15 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:32:16 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Brent Burton",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:00 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:03 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:07 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:09 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:12 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:16 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:19 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:33:24 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:33:25 PM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:34:25 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:34:31 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:34:33 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:34:47 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:34:53 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:34:56 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:35:07 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:35:15 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:35:30 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:35:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:35:39 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:35:41 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:22 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:26 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:29 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:31 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:35 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:42 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:47 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:50 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:52 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:36:54 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:37:13 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:37:20 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:37:23 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:37:24 PM",
-          "firstActor": "Geofford seaborn"
-        }
-      ],
-      "defensePlayers": [
-        "Simon Berry",
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 21, 2016 7:41:31 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:42:12 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:42:16 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:04 PM",
-          "secondActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:06 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:10 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:15 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:22 PM",
-          "secondActor": "Hope Celani",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:43:23 PM",
-          "firstActor": "Hope Celani"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:39 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:43 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:49 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:52 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:43:56 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:03 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:08 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:13 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:18 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:20 PM",
-          "secondActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:26 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:28 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:44:32 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:44:49 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:44:53 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:20 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:24 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:30 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:34 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:40 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:44 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:45:48 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:45:49 PM",
-          "firstActor": "Jay Thor Turner"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:46:45 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:46:51 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:46:53 PM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:46:55 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:46:56 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:47:01 PM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:47:04 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:09 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:13 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:18 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:21 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:23 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:26 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:47:29 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:47:30 PM",
-          "firstActor": "Rob Ives"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:48:22 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:48:26 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:48:27 PM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:48:33 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:48:33 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:25 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:49:28 PM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:49:31 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:32 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:37 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:44 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:54 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:49:59 PM",
-          "secondActor": "Hope Celani",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:07 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Hope Celani"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:50:08 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:12 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:15 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:24 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:27 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:33 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:37 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:40 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:43 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:50:49 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:50:50 PM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Mark Donahue",
-        "Hope Celani",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:51:37 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:51:46 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:51:55 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:51:57 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:51:58 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:51:59 PM",
-          "firstActor": "Benjamin Piper(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Martin Cloake",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:52:43 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:52:49 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:52:52 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:52:58 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:53:02 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:53:17 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:53:30 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 7:53:32 PM",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:53:43 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:53:44 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:54:49 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:54:53 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:54:57 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:55:05 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:55:12 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:55:15 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:55:20 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:55:23 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:55:31 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:01 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:05 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:08 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:10 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:16 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:56:20 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 7:56:22 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:24 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:27 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:30 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:32 PM",
-          "secondActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:56:34 PM",
-          "secondActor": "Hope Celani",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:56:35 PM",
-          "firstActor": "Hope Celani"
-        }
-      ],
-      "defensePlayers": [
-        "Simon Berry",
-        "Brent Burton",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:22 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:27 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:36 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:41 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:44 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:49 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:57:51 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 7:58:03 PM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:58:20 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:58:22 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:58:24 PM",
-          "secondActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:58:28 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:58:34 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 7:58:35 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Martin Cloake",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:59:54 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 7:59:58 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:02 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:06 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:11 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:14 PM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:20 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:00:22 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:00:23 PM",
-          "firstActor": "Benjamin Piper(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Simon Berry",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Brent Burton",
-        "Martin Cloake",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:01:11 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:01:14 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:01:18 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 8:01:22 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:01:56 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:02:03 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:02:08 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:02:12 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:02:15 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:02:19 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:02:19 PM",
-          "firstActor": "Geofford seaborn"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Mark Donahue",
-        "Hope Celani",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:03:09 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:03:15 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 8:03:17 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:03:40 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:03:41 PM",
-          "firstActor": "Benjamin Piper(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Jason Fraser",
-        "Jay Thor Turner",
-        "Maya Popovic",
-        "Carrie-Anne Whyte",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 8:04:34 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:38 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:42 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:46 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:54 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 8:04:55 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:05 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:07 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:14 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:05:19 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:05:31 PM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 8:05:33 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:28 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:31 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:36 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:42 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:04 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:06 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:09 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:14 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:18 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:51 PM",
-          "secondActor": "Ariel Untiveros"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:08:51 PM",
-          "firstActor": "Ariel Untiveros"
-        }
-      ],
-      "defensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brent Burton",
-        "Martin Cloake",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 8:04:34 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:38 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:42 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:46 PM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:04:54 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 21, 2016 8:04:55 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:05 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:07 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:05:14 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:05:19 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:05:31 PM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 21, 2016 8:05:33 PM",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:28 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:31 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:33 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:36 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:07:42 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:04 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:06 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:09 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Ariel Untiveros"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:14 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:18 PM",
-          "secondActor": "Ariel Untiveros",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:08:51 PM",
-          "secondActor": "Ariel Untiveros"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:08:51 PM",
-          "firstActor": "Ariel Untiveros"
-        }
-      ],
-      "defensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Jay Thor Turner",
-        "Geofford seaborn",
-        "Maya Popovic",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:09:25 PM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:09:27 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:09:31 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:09:37 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:09:38 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:09:42 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:09:44 PM",
-          "firstActor": "Simon Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Hope Celani",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jason Fraser",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic",
-        "Benjamin Piper(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:10:40 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:10:45 PM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:10:56 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:10:59 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:12:08 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:12:43 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:12:47 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 21, 2016 8:12:51 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:13:39 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:13:42 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:13:49 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:13:51 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:13:59 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:14:04 PM",
-          "secondActor": "Jason Fraser",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:14:08 PM",
-          "secondActor": "Benjamin Piper(S)",
-          "firstActor": "Jason Fraser"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:14:10 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Benjamin Piper(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 21, 2016 8:14:12 PM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 21, 2016 8:14:16 PM",
-          "firstActor": "Julia Laforge"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Mark Donahue",
-        "Ariel Untiveros",
-        "Hope Celani",
-        "Justine Price"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Chris Sullivan,",
@@ -3671,5 +527,2436 @@
   ],
   "time": "2016-11-22T01:21:07.749Z",
   "week": 3,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Ariel Untiveros",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Brent Burton",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Julia Laforge"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Ariel Untiveros",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Brent Burton",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Simon Berry",
+        "Brent Burton",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Mark Donahue",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Martin Cloake",
+        "Ariel Untiveros",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Simon Berry",
+        "Brent Burton",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Martin Cloake",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Simon Berry",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Brent Burton",
+        "Martin Cloake",
+        "Ariel Untiveros",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Mark Donahue",
+        "Hope Celani",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Maya Popovic",
+        "Carrie-Anne Whyte",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Martin Cloake",
+        "Mark Donahue",
+        "Ariel Untiveros",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic",
+        "Benjamin Piper(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benjamin Piper(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper(S)",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Hope Celani",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Simon Berry"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Hindsight Hooligans",
+  "homeRoster": [
+    "Julia Laforge",
+    "Aleksandra Ostojic",
+    "Maya Popovic",
+    "Carrie-Anne Whyte",
+    "Amos Lee",
+    "Kevin Barford",
+    "Jason Fraser",
+    "Hadrian Mertins-Kirkwood",
+    "Michael O'Hare",
+    "Andre Scott",
+    "Jay Thor Turner",
+    "Geofford seaborn"
+  ],
+  "awayTeam": "F Bombs",
+  "awayRoster": [
+    "Hope Celani",
+    "Janet Ibit",
+    "Justine Price",
+    "Nina Ramic",
+    "Rob Ives",
+    "Chris Sullivan",
+    "Simon Berry",
+    "Brent Burton",
+    "Martin Cloake",
+    "Mark Donahue",
+    "Richard Gregory",
+    "Ariel Untiveros"
+  ],
+  "awayScore": "18",
+  "homeScore": "13"
 }

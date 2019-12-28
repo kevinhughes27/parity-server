@@ -146,7 +146,8 @@ def backfill(data_directory)
 
     # write new points
     data["points"] = points
-    data.delete("event_string")
+    # keep the event string
+    # data.delete("event_string")
 
     # backfill teams to homeTeam and awayTeam
     home_team = data["teams"].keys[0]

@@ -1,3354 +1,4 @@
 {
-  "teams": {
-    "Mike and the Milburys": [
-      "Laura Chambers Storey",
-      "Tanya Gallant",
-      "Laura Knowles",
-      "Heather McCabe",
-      "Brian Kells",
-      "Alessandro Colonnier",
-      "Tim Kealey",
-      "Will Leckie",
-      "Mike Lee",
-      "Greg Probe",
-      "Peter Roebuck",
-      "Andrew Spearin"
-    ],
-    "Kaboom": [
-      "Sandra Hanson",
-      "Sam Lee",
-      "Darlene Riley",
-      "Stacey Wowchuk",
-      "Jamie Wildgen",
-      "Christopher Keates",
-      "Ethan Brady",
-      "Frederic Caron",
-      "Jeff Hunt",
-      "Tyler Mulcock",
-      "Matthew Schijns",
-      "David Townsend"
-    ]
-  },
-  "events": {
-    "points": [
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Jan 9, 2017 7:11:12 PM",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:17 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:22 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:24 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:28 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:11:32 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:11:35 PM",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:38 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:40 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:42 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:11:47 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:11:48 PM",
-            "firstActor": "Matthew Schijns"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:12:54 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:13:00 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:13:06 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:13:12 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:13:13 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Ethan Brady",
-          "David Townsend",
-          "Darlene Riley",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:12 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:15 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:21 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 9, 2017 7:14:22 PM",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:27 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:37 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:41 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:14:45 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:14:48 PM",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:14:55 PM",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:15:03 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:15:04 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:15:53 PM",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:15:58 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:03 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:04 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:07 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:12 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:20 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:25 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:32 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:37 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:16:45 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:16:46 PM",
-            "firstActor": "Brian Kells"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:24 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:32 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:37 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:41 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:49 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:53 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:53 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:17:57 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:17:58 PM",
-            "firstActor": "Jeff Hunt"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:18:42 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:18:46 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:18:51 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:18:54 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:18:59 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:19:02 PM",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:06 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:09 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:11 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:17 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:22 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:26 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:31 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:19:34 PM",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:19:38 PM",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:44 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:49 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:57 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:19:59 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:20:03 PM",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:29 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:36 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:39 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:43 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:46 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:49 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:51 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:20:56 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:20:58 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:21:48 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:21:51 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:21:56 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:21:57 PM",
-            "firstActor": "Alessandro Colonnier"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "Jeff Hunt",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:22:51 PM",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:23:00 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:23:14 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:23:21 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:23:25 PM",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:14 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:17 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:20 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:24 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:26 PM",
-            "secondActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:29 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:32 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:24:36 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:24:37 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:26 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:30 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:35 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:37 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:41 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:44 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:25:47 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:25:54 PM",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:16 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:19 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:21 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:24 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:29 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:26:37 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:26:39 PM",
-            "firstActor": "Ashlin Kelly(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:27:16 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:27:24 PM",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:27:37 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:27:40 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:27:47 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:28:16 PM",
-            "firstActor": "Amos Lee(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:01 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:05 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:07 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 9, 2017 7:29:09 PM",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:20 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:26 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:30 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:29:33 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:29:34 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Darlene Riley",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:30:19 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:30:22 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:30:23 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:30:28 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:30:31 PM",
-            "firstActor": "Matthew Schijns"
-          }
-        ],
-        "defensePlayers": [
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:09 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:13 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:31:18 PM",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:23 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:31:27 PM",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:31:30 PM",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:40 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:43 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:49 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:53 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:31:58 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:32:00 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:32:05 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:32:19 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:32:24 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:32:28 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:32:32 PM",
-            "firstActor": "Stacey Wowchuk"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Andrew Spearin",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:20 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:27 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:33:29 PM",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:33:32 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:34 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:35 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:37 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:40 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:43 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:46 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:33:50 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:33:51 PM",
-            "firstActor": "Scott Higgins(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Ethan Brady",
-          "Matthew Schijns",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:34:28 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:34:35 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:34:44 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:34:46 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:34:47 PM",
-            "firstActor": "Greg Probe"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:35:29 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:35:35 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:35:38 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:35:39 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:35:47 PM",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:36:11 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:36:17 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:36:19 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:36:20 PM",
-            "firstActor": "Jamie Wildgen"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:05 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:37:10 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:37:12 PM",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:13 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:15 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:18 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:22 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:24 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:27 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:29 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:37:32 PM",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:37:34 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:38 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:42 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:44 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:49 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:37:51 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:38:01 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:38:05 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:38:12 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:38:22 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:38:23 PM",
-            "firstActor": "Ashlin Kelly(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:39:08 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:39:15 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:39:16 PM",
-            "firstActor": "David Townsend"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Jan 9, 2017 7:42:51 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:10 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:14 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:19 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:24 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:28 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:34 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:39 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:41 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:46 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:50 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:54 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:56 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:01 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:06 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:10 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:44:13 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:43 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:47 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:45:48 PM",
-            "firstActor": "Andrew Spearin"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Jan 9, 2017 7:42:51 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:10 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:14 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:19 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:24 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:28 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:34 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:39 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:41 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:46 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:50 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:54 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:43:56 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:01 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:06 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:10 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:44:13 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:43 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:44:47 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:45:48 PM",
-            "firstActor": "Andrew Spearin"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:46:15 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:46:22 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:46:22 PM",
-            "firstActor": "Matthew Schijns"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:12 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:18 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:47:21 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:30 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:36 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:38 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:47:45 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:47:45 PM",
-            "firstActor": "Jamie Wildgen"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "Jeff Hunt",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:34 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:39 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:41 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:50 PM",
-            "secondActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:54 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:48:59 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 9, 2017 7:49:01 PM",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:49:11 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:49:13 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:49:18 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:49:21 PM",
-            "firstActor": "Scott Higgins(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:08 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:11 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:50:14 PM",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:23 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:26 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:30 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:34 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:50:38 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:50:39 PM",
-            "firstActor": "Jeff Hunt"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Jeff Hunt",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:51:29 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:51:33 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:51:37 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:51:39 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:51:58 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:03 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:52:07 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:52:26 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:52:29 PM",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:30 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:52:33 PM",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 7:52:35 PM",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:45 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:49 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:53 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:52:58 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:53:01 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:53:08 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:53:19 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "David Townsend",
-          "Darlene Riley",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:53:53 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:53:59 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:54:05 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:54:06 PM",
-            "firstActor": "Jamie Wildgen"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:54:57 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:01 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:55:05 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:16 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:22 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:25 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:29 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:30 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:55:33 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:55:34 PM",
-            "firstActor": "David Townsend"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Jeff Hunt",
-          "David Townsend",
-          "Darlene Riley",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:31 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:37 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:40 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:42 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:50 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:56:54 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:00 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:04 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:07 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:13 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:16 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:22 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:57:29 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:57:30 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk",
-          "Scott Higgins(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:58:16 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:58:19 PM",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 7:58:33 PM",
-            "firstActor": "Ashlin Kelly(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:58:54 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:58:58 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:59:01 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:59:05 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:59:08 PM",
-            "secondActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 7:59:11 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 7:59:13 PM",
-            "firstActor": "Angela Mueller(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:00:02 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:00:07 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:00:09 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:00:16 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 8:00:20 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:00:32 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:00:35 PM",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:00:46 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:00:57 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:00 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:03 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:09 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:11 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:01:16 PM",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 8:01:20 PM",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:26 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:01:27 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:40 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:43 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:48 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:51 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:54 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:01:57 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:02:00 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:02:00 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:02:57 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:00 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:03 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:10 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:15 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:20 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:26 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:03:32 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:03:34 PM",
-            "firstActor": "Peter Roebuck"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Jeff Hunt",
-          "David Townsend",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:04:20 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:04:26 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:04:29 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:04:32 PM",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 9, 2017 8:04:34 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:04:44 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:04:50 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:04:52 PM",
-            "firstActor": "Alessandro Colonnier"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:05:38 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:05:40 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:05:44 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:05:49 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:05:56 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:06:02 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:06:03 PM",
-            "firstActor": "Jamie Wildgen"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Amos Lee(S)",
-          "Aleksandra Ostojic(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:06:50 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:06:52 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:06:57 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:00 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:03 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:05 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:11 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:14 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:19 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:23 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:53 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:55 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:07:59 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:08:01 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:08:03 PM",
-            "firstActor": "Andrew Spearin"
-          }
-        ],
-        "defensePlayers": [
-          "Ethan Brady",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Ethan Brady",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:08:54 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:08:58 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:02 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:08 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:13 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:18 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:21 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:24 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:28 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:09:32 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:09:35 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Knowles",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:10:33 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:10:38 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:10:44 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:10:46 PM",
-            "secondActor": "Ashlin Kelly(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:10:48 PM",
-            "firstActor": "Ashlin Kelly(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Jeff Hunt",
-          "Matthew Schijns",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Jamie Wildgen",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:41 PM",
-            "secondActor": "Scott Higgins(S)",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:45 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:51 PM",
-            "secondActor": "Ethan Brady",
-            "firstActor": "Angela Mueller(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:54 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:57 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:12:59 PM",
-            "secondActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:13:03 PM",
-            "secondActor": "Angela Mueller(S)",
-            "firstActor": "Scott Higgins(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:13:05 PM",
-            "firstActor": "Angela Mueller(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Kirsten Querbach(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Amos Lee(S)",
-          "Ashlin Kelly(S)",
-          "Kirsten Querbach(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:13:50 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:14:07 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:14:11 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:14:19 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:14:25 PM",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:14:42 PM",
-            "secondActor": "Kirsten Querbach(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:14:44 PM",
-            "firstActor": "Kirsten Querbach(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:06 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:11 PM",
-            "secondActor": "Jamie Wildgen",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:15 PM",
-            "secondActor": "Sam Lee",
-            "firstActor": "Jamie Wildgen"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:24 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Sam Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:29 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 9, 2017 8:15:33 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:43 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:50 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:15:55 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:00 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:05 PM",
-            "secondActor": "Amos Lee(S)",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:08 PM",
-            "secondActor": "Kirsten Querbach(S)",
-            "firstActor": "Amos Lee(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:16:10 PM",
-            "firstActor": "Kirsten Querbach(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Jamie Wildgen",
-          "Christopher Keates",
-          "Jeff Hunt",
-          "David Townsend",
-          "Sam Lee",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Ethan Brady",
-          "Matthew Schijns",
-          "Darlene Riley",
-          "Scott Higgins(S)",
-          "Angela Mueller(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:52 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Ethan Brady"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:56 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 9, 2017 8:16:59 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 9, 2017 8:17:00 PM",
-            "firstActor": "Darlene Riley"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Ashlin Kelly(S)"
-        ]
-      }
-    ]
-  },
   "event_string": [
     "",
     "Pull,Christopher Keates,",
@@ -3991,5 +641,2782 @@
   ],
   "time": "2017-01-10T01:17:34.602Z",
   "week": 8,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Schijns"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Ethan Brady",
+        "David Townsend",
+        "Darlene Riley",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "Jeff Hunt",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "David Townsend",
+        "Darlene Riley",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Schijns"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sam Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stacey Wowchuk"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Andrew Spearin",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Ethan Brady",
+        "Matthew Schijns",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Scott Higgins(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Probe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ethan Brady"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Schijns"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "Jeff Hunt",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Scott Higgins(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Jeff Hunt",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly(S)",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "David Townsend",
+        "Darlene Riley",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Jeff Hunt",
+        "David Townsend",
+        "Darlene Riley",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk",
+        "Scott Higgins(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ethan Brady"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Jeff Hunt",
+        "David Townsend",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Peter Roebuck"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Amos Lee(S)",
+        "Aleksandra Ostojic(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Ethan Brady",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Ethan Brady",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Knowles",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Matthew Schijns",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Ashlin Kelly(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Kirsten Querbach(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller(S)",
+          "secondActor": "Ethan Brady"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Scott Higgins(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins(S)",
+          "secondActor": "Angela Mueller(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Amos Lee(S)",
+        "Ashlin Kelly(S)",
+        "Kirsten Querbach(S)"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Christopher Keates",
+        "Jeff Hunt",
+        "David Townsend",
+        "Sam Lee",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kirsten Querbach(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sam Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sam Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Amos Lee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee(S)",
+          "secondActor": "Kirsten Querbach(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Ethan Brady",
+        "Matthew Schijns",
+        "Darlene Riley",
+        "Scott Higgins(S)",
+        "Angela Mueller(S)"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Ashlin Kelly(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ethan Brady",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Mike and the Milburys",
+  "homeRoster": [
+    "Laura Chambers Storey",
+    "Tanya Gallant",
+    "Laura Knowles",
+    "Heather McCabe",
+    "Brian Kells",
+    "Alessandro Colonnier",
+    "Tim Kealey",
+    "Will Leckie",
+    "Mike Lee",
+    "Greg Probe",
+    "Peter Roebuck",
+    "Andrew Spearin"
+  ],
+  "awayTeam": "Kaboom",
+  "awayRoster": [
+    "Sandra Hanson",
+    "Sam Lee",
+    "Darlene Riley",
+    "Stacey Wowchuk",
+    "Jamie Wildgen",
+    "Christopher Keates",
+    "Ethan Brady",
+    "Frederic Caron",
+    "Jeff Hunt",
+    "Tyler Mulcock",
+    "Matthew Schijns",
+    "David Townsend"
+  ],
+  "awayScore": 29,
+  "homeScore": 9
 }

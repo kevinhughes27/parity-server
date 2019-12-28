@@ -1,3454 +1,5 @@
 {
   "week": 2,
-  "teams": {
-    "Basket of Deplorables (Basket)": [
-      "Melissa Jess",
-      "Kirsten Querbach",
-      "Darlene Riley",
-      "Taka Yamada",
-      "Owen Lumley",
-      "Steve Bisang",
-      "Steve Chow",
-      "Scott Higgins",
-      "Stanley Kent",
-      "Jim Robinson",
-      "Rob Tyson",
-      "Calvin Wiebe"
-    ],
-    "Mike and the Milburys": [
-      "CarolAnne Black",
-      "Laura Chambers Storey",
-      "Laura Knowles",
-      "Heather McCabe",
-      "Brian Kells",
-      "Alessandro Colonnier",
-      "Nick Klimowicz",
-      "Will Leckie",
-      "Mike Lee",
-      "Greg Probe",
-      "Peter Roebuck",
-      "Andrew Spearin"
-    ]
-  },
-  "score": {
-    "Basket of Deplorables (Basket)": 27,
-    "Mike and the Milburys": 20
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 14, 2016 10:00:58 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:01:19 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:01:23 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:01:26 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:01:27 PM",
-          "firstActor": "Owen Lumley"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:02:33 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:02:35 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:02:37 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:02:43 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:02:46 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:02:47 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:03:39 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:03:46 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:03:50 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:03:58 PM",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:04:20 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:04:27 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:04:28 PM",
-          "firstActor": "Alessandro Colonnier"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Will Leckie",
-        "Peter Roebuck",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:05:25 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:05:28 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:05:31 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:05:34 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:05:35 PM",
-          "firstActor": "Stanley Kent"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:06:17 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:06:22 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:06:27 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:06:28 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:06:29 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:25 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:29 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:29 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:30 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:40 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:43 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:46 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:07:48 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:07:49 PM",
-          "firstActor": "Steve Chow"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Will Leckie",
-        "Peter Roebuck",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:08:55 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:08:56 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:08:59 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:09:06 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:09:10 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:09:16 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:09:19 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:09:20 PM",
-          "firstActor": "Scott Higgins"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Will Leckie",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:10 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:13 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:16 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:10:24 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:10:30 PM",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:36 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:37 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:10:41 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:10:42 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Peter Roebuck",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:11:34 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:11:37 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:11:44 PM",
-          "secondActor": "Peter Roebuck",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:11:47 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Peter Roebuck"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:11:59 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:12:01 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:12:01 PM",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:12:24 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:12:25 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:12:27 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:12:28 PM",
-          "firstActor": "Steve Chow"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:13:18 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:13:24 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:13:27 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:13:43 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:13:43 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:13:50 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:13:51 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:19 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:28 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:35 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:37 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:38 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:44 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:14:47 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:15:00 PM",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:21 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:30 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:31 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:36 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:42 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:45 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:15:50 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:16:02 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:16:03 PM",
-          "firstActor": "Stanley Kent"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:18:50 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:18:56 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:18:59 PM",
-          "firstActor": "Andrew Spearin"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:19:54 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:20:01 PM",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:07 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:08 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:08 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:11 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:15 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:20:18 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:20:19 PM",
-          "firstActor": "Alessandro Colonnier"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Peter Roebuck",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:21:08 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:21:14 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:21:54 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:21:56 PM",
-          "firstActor": "Melissa Jess"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:22:58 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:23:03 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:23:07 PM",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:23:28 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:23:31 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:23:34 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:23:39 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:24:04 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:24:08 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:24:10 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:24:13 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:24:14 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:24:16 PM",
-          "secondActor": "Stanley Kent"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:24:17 PM",
-          "firstActor": "Stanley Kent"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Peter Roebuck",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:24:55 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:07 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:12 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:15 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:18 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:21 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:25:27 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:25:28 PM",
-          "firstActor": "Steve Chow"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Peter Roebuck",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:24 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:28 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:35 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:43 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:46 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:48 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:51 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:52 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:26:55 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:27:02 PM",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:27:11 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:27:44 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:27:48 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:27:49 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:29:21 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:29:26 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:29:35 PM",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:29:38 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:29:43 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:29:48 PM",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:29:51 PM",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:30:01 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:30:04 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:30:07 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:30:11 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:30:12 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:30:56 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:02 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:07 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:16 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:22 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:25 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:28 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:31:33 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:31:35 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:32:20 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:32:24 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:32:31 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:32:32 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:24 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:26 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:32 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:38 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:43 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:48 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:52 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:33:58 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:34:07 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:34:09 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:34:11 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:00 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:03 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:06 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:09 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:13 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:35:14 PM",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:18 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:20 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:25 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:28 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:35:31 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:35:38 PM",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:35:58 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:36:09 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:36:11 PM",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:36:14 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:36:15 PM",
-          "firstActor": "Sina Dee(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:36:55 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:03 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:05 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:11 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:37:13 PM",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:26 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:29 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:33 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:35 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:37 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:43 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:50 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:37:56 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:38:01 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:38:02 PM",
-          "firstActor": "Laura Chambers Storey"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 14, 2016 10:41:57 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:30 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:32 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:35 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:37 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:39 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:42:47 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:42:52 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:42:59 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:43:06 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:43:07 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:43:09 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:43:56 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:43:59 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:44:02 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:44:05 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:44:11 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:44:12 PM",
-          "firstActor": "Heather McCabe"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:44:59 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:45:02 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:45:05 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:45:08 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:45:15 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:45:16 PM",
-          "firstActor": "Owen Lumley"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:46:04 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:46:13 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:46:15 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:46:16 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:47:11 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:47:17 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:47:22 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:47:25 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:47:36 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:47:37 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:48:21 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:48:26 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:48:37 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:48:39 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:48:41 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:48:47 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:48:48 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:49:30 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:49:33 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:49:36 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:49:39 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:49:43 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:49:45 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:50:30 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:50:36 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:50:37 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:51:28 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:51:31 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:51:48 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:51:50 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:51:52 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:51:56 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:51:57 PM",
-          "firstActor": "Darlene Riley"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:52:58 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:00 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:04 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:06 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:08 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:15 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:23 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:25 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:53:32 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:53:54 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:54:00 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:54:02 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:54:11 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:54:15 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:54:17 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:54:18 PM",
-          "firstActor": "Alessandro Colonnier"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:01 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:05 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:09 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:12 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:14 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:55:22 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:55:24 PM",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:26 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:33 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:55:34 PM",
-          "secondActor": "Laura Chambers Storey",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:55:39 PM",
-          "firstActor": "Laura Chambers Storey"
-        }
-      ],
-      "defensePlayers": [
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:56:16 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:56:19 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:56:23 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:56:28 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:56:34 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:56:35 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:57:24 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 10:57:25 PM",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:57:35 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:57:39 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:57:47 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:57:50 PM",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 10:58:15 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 10:58:16 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 10:59:02 PM",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 10:59:11 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:00:46 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:00:59 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 11:01:00 PM",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:01:06 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:01:06 PM",
-          "firstActor": "Dan Thomson(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:01:56 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:02:01 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:02:03 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:02:11 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:02:16 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:02:18 PM",
-          "firstActor": "Stanley Kent"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:03 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:07 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:15 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:17 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:03:17 PM",
-          "firstActor": "Brian Kells"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:57 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:03:59 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:01 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:03 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:18 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:21 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:26 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:28 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:33 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 14, 2016 11:04:34 PM",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:46 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:51 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:55 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:04:58 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:04:59 PM",
-          "firstActor": "Alessandro Colonnier"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:39 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:43 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:46 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:50 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:54 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:05:56 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:05:57 PM",
-          "firstActor": "Owen Lumley"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:41 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:44 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:47 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Andrew Spearin"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:49 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:52 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:06:56 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:07:00 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:07:07 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:07:13 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:07:14 PM",
-          "firstActor": "Nick Klimowicz"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:07:52 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:07:58 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:08:05 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:08:07 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:08:10 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:08:14 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:08:15 PM",
-          "firstActor": "Owen Lumley"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:08:57 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Laura Chambers Storey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:00 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:09:11 PM",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 11:09:16 PM",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:17 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:19 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:09:23 PM",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 11:09:26 PM",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:28 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:31 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:09:35 PM",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 11:09:38 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:42 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:44 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:46 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:55 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:57 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:09:58 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:10:00 PM",
-          "firstActor": "Melissa Jess"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:10:47 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:10:50 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:10:54 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:10:59 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:02 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:06 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:08 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:11 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:14 PM",
-          "secondActor": "Andrew Spearin",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:11:15 PM",
-          "firstActor": "Andrew Spearin"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Owen Lumley",
-        "Steve Chow",
-        "Jim Robinson",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:54 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:11:59 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:12:01 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:12:04 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:12:12 PM",
-          "secondActor": "Owen Lumley",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:12:13 PM",
-          "firstActor": "Owen Lumley"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Alessandro Colonnier",
-        "Andrew Spearin",
-        "Laura Chambers Storey",
-        "Heather McCabe",
-        "Dan Thomson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colonnier",
-        "Nick Klimowicz",
-        "Laura Chambers Storey",
-        "Laura Knowles",
-        "Sina Dee(S)",
-        "Dan Thomson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:13:07 PM",
-          "secondActor": "Dan Thomson(S)",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:13:11 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Dan Thomson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:13:17 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:13:22 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:13:27 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Owen Lumley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:13:34 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:13:35 PM",
-          "firstActor": "Stanley Kent"
-        }
-      ],
-      "defensePlayers": [
-        "Owen Lumley",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Rob Tyson",
-        "Kirsten Querbach",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Nick Klimowicz",
-        "Andrew Spearin",
-        "Laura Knowles",
-        "Heather McCabe",
-        "Sina Dee(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:20 PM",
-          "secondActor": "Heather McCabe",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:23 PM",
-          "secondActor": "Sina Dee(S)",
-          "firstActor": "Heather McCabe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:25 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:14:28 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 11:14:31 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:38 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:40 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:41 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:14:48 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:14:54 PM",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 14, 2016 11:15:00 PM",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 14, 2016 11:15:05 PM",
-          "firstActor": "Sina Dee(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:23 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:25 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:33 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:35 PM",
-          "secondActor": "Stanley Kent",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:42 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Stanley Kent"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:46 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:53 PM",
-          "secondActor": "Darlene Riley",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:55 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Darlene Riley"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:15:57 PM",
-          "secondActor": "Steve Chow",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 14, 2016 11:16:02 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Steve Chow"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 14, 2016 11:16:03 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Chow",
-        "Scott Higgins",
-        "Stanley Kent",
-        "Jim Robinson",
-        "Melissa Jess",
-        "Darlene Riley"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Brian Kells,",
@@ -4205,5 +756,3019 @@
     "+1,Darlene Riley,",
     "Direction,>>>>>>,"
   ],
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Scott Higgins"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Will Leckie",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather McCabe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Steve Chow",
+        "Jim Robinson",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Heather McCabe",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Nick Klimowicz",
+        "Laura Chambers Storey",
+        "Laura Knowles",
+        "Sina Dee(S)",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Nick Klimowicz",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Heather McCabe",
+        "Sina Dee(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Scott Higgins",
+        "Stanley Kent",
+        "Jim Robinson",
+        "Melissa Jess",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee(S)",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Basket of Deplorables (Basket)",
+  "homeRoster": [
+    "Melissa Jess",
+    "Kirsten Querbach",
+    "Darlene Riley",
+    "Taka Yamada",
+    "Owen Lumley",
+    "Steve Bisang",
+    "Steve Chow",
+    "Scott Higgins",
+    "Stanley Kent",
+    "Jim Robinson",
+    "Rob Tyson",
+    "Calvin Wiebe"
+  ],
+  "awayTeam": "Mike and the Milburys",
+  "awayRoster": [
+    "CarolAnne Black",
+    "Laura Chambers Storey",
+    "Laura Knowles",
+    "Heather McCabe",
+    "Brian Kells",
+    "Alessandro Colonnier",
+    "Nick Klimowicz",
+    "Will Leckie",
+    "Mike Lee",
+    "Greg Probe",
+    "Peter Roebuck",
+    "Andrew Spearin"
+  ],
+  "awayScore": 20,
+  "homeScore": 27
 }
