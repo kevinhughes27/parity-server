@@ -107,6 +107,16 @@ def zuluru_sync_all():
 
 
 @cli.command()
+def schedule_sync():
+    with app.app_context():
+        league_zid = 702
+        league = League.query.filter_by(zuluru_id=league_zid).first()
+
+        zuluru_sync = ZuluruSync(league)
+        zuluru_sync.sync_schedule()
+
+
+@cli.command()
 def game_sync():
     with app.app_context():
 
@@ -199,16 +209,6 @@ def backup(week):
         fo.close()
 
     click.echo('Done')
-
-
-@cli.command()
-def schedule_sync():
-    with app.app_context():
-        league_zid = 702
-        league = League.query.filter_by(zuluru_id=league_zid).first()
-
-        zuluru_sync = ZuluruSync(league)
-        zuluru_sync.sync_schedule()
 
 
 @cli.command()
