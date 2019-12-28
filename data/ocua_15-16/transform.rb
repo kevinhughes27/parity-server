@@ -1,3 +1,15 @@
+# This script transforms the 2015-2016 raw csv data into the modern format
+# as part of the transform it performs a few sanity checks:
+#
+# * I enforce 0 overlap between the parsed rosters to try and catch roster
+#   parsing bugs or inconsistencies in the original data
+#
+# * I re-calculate the score from the modern data and newly parsed rosters
+#   and confirm this score matches the recorded score in the original CSV
+#
+# The transformed data is then uploaded, stats are calculated using the current
+# server then we can validate the results against the original stats csv files.
+
 require 'csv'
 require 'set'
 require 'json'
@@ -25,11 +37,14 @@ def rewrite_event_string(game_string)
         defensePlayers << players_row[3]
       end
 
+      offensePlayers = offensePlayers.compact.reject { |p| p == "BLANK" }
+      defensePlayers = defensePlayers.compact.reject { |p| p == "BLANK" }
+
       point_string = game_string[point_start_idx..point_end_idx]
 
       points << {
-        "offensePlayers" => offensePlayers.compact,
-        "defensePlayers" => defensePlayers.compact,
+        "offensePlayers" => offensePlayers,
+        "defensePlayers" => defensePlayers,
         "event_string" => point_string
       }
 
@@ -185,6 +200,13 @@ def build_rosters(points, week, game_num, loadedHomeScore, loadedAwayScore)
       # except for 1 instance of bad data
       raise "score mismatch" unless week == 4 && game_num == 1
     end
+  end
+
+  # swap rosters for tie games that need it
+  if (week == 6 && game_num == 3) || (week == 12 && game_num == 4)
+    tmpRoster = homeRoster
+    homeRoster = awayRoster
+    awayRoster = tmpRoster
   end
 
   return {
