@@ -1,39 +1,5 @@
 {
   "week": 3,
-  "score": {
-    "lumleysexuals": "23",
-    "Aimlessly Sullied": "15"
-  },
-  "teams": {
-    "lumleysexuals": [
-      "An Tran",
-      "Owen Lumley",
-      "David Townsend",
-      "Trevor Ryan",
-      "Stephen Close",
-      "Jon Rowe",
-      "Ryan Mussell",
-      "Heather McCabe",
-      "Kevin Barford",
-      "Wing-Leung Chan",
-      "Darlene Riley",
-      "Karen Kavanagh"
-    ],
-    "Aimlessly Sullied": [
-      "Amos Lee",
-      "Tom Newman",
-      "Stacey Wowchuk",
-      "Aleksandra Ostojic",
-      "Chris Sullivan",
-      "Matthew Schijns",
-      "Wynne Gee",
-      "Nick Klimowicz",
-      "Nina Ramic",
-      "Greg Probe",
-      "Sonny Kim",
-      "Trevor Stocki"
-    ]
-  },
   "event_string": [
     "",
     "Pull,Chris Sullivan",
@@ -661,5 +627,2460 @@
     "Direction,<<<<<<",
     "Time,Half"
   ],
-  "league_id": 5
+  "league_id": 5,
+  "points": [
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather McCabe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wing-Leung Chan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ryan Mussell"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Karen Kavanagh"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Trevor Ryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Karen Kavanagh"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Trevor Stocki"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tom Newman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Ryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Jon Rowe",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wing-Leung Chan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Trevor Ryan",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Wing-Leung Chan",
+        "Stephen Close",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Kevin Barford",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Stephen Close",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sonny Kim"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Kevin Barford",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Wing-Leung Chan",
+        "Stephen Close",
+        "Ryan Mussell",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Kevin Barford",
+        "Stephen Close",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Ryan Mussell",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ryan Mussell"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather McCabe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Owen Lumley",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Schijns"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Trevor Ryan",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Ryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Stephen Close",
+        "Ryan Mussell",
+        "David Townsend",
+        "Heather McCabe",
+        "Darlene Riley"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Aleksandra Ostojic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Ryan Mussell",
+        "Trevor Ryan",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Owen Lumley",
+        "Stephen Close",
+        "Trevor Ryan",
+        "David Townsend",
+        "Karen Kavanagh",
+        "Heather McCabe"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Matthew Schijns",
+        "Trevor Stocki",
+        "Chris Sullivan",
+        "Wynne Gee",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather McCabe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Heather McCabe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Trevor Ryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Ryan",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Sonny Kim",
+        "Tom Newman",
+        "Greg Probe",
+        "Wynne Gee",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Stephen Close",
+        "Ryan Mussell",
+        "Karen Kavanagh",
+        "Darlene Riley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tom Newman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tom Newman",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ryan Mussell",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+
+      ]
+    }
+  ],
+  "homeTeam": "lumleysexuals",
+  "homeRoster": [
+    "An Tran",
+    "Owen Lumley",
+    "David Townsend",
+    "Trevor Ryan",
+    "Stephen Close",
+    "Jon Rowe",
+    "Ryan Mussell",
+    "Heather McCabe",
+    "Kevin Barford",
+    "Wing-Leung Chan",
+    "Darlene Riley",
+    "Karen Kavanagh"
+  ],
+  "awayTeam": "Aimlessly Sullied",
+  "awayRoster": [
+    "Amos Lee",
+    "Tom Newman",
+    "Stacey Wowchuk",
+    "Aleksandra Ostojic",
+    "Chris Sullivan",
+    "Matthew Schijns",
+    "Wynne Gee",
+    "Nick Klimowicz",
+    "Nina Ramic",
+    "Greg Probe",
+    "Sonny Kim",
+    "Trevor Stocki"
+  ],
+  "awayScore": "15",
+  "homeScore": "23"
 }

@@ -1,3293 +1,4 @@
 {
-  "teams": {
-    "Mike and the Milburys": [
-      "Laura Chambers Storey",
-      "Tanya Gallant",
-      "Laura Knowles",
-      "Heather McCabe",
-      "Brian Kells",
-      "Alessandro Colonnier",
-      "Tim Kealey",
-      "Will Leckie",
-      "Mike Lee",
-      "Greg Probe",
-      "Peter Roebuck",
-      "Andrew Spearin"
-    ],
-    "SOS - Man Overboard (SOS)": [
-      "Andrea Proulx",
-      "Christine Beals",
-      "Melissa Berry",
-      "Angela Mueller",
-      "Nicholas Aghajanian",
-      "Sina Dee",
-      "Morgan Howard",
-      "Nick Klimowicz",
-      "Benjamin Piper",
-      "Jon Rowe",
-      "Dan Thomson",
-      "Chris Tran"
-    ]
-  },
-  "events": {
-    "points": [
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Jan 16, 2017 8:23:27 PM",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:23:57 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:23:58 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 8:23:59 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:24:05 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:24:06 PM",
-            "firstActor": "Sina Dee"
-          }
-        ],
-        "defensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:13 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:25 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:26 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:28 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:31 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:34 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:36 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:25:38 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:25:39 PM",
-            "firstActor": "Peter Roebuck"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Jon Rowe",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:20 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:21 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:26 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:29 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:31 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:26:38 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:26:39 PM",
-            "firstActor": "Benjamin Piper"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:28:19 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:28:20 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:28:22 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:28:36 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:28:37 PM",
-            "firstActor": "Andrea Proulx"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:29:22 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:29:27 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:29:28 PM",
-            "firstActor": "Will Leckie"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:30:12 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:30:18 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:30:48 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:30:50 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:30:54 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:31:00 PM",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:31:09 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:31:11 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:31:13 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:31:17 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:31:19 PM",
-            "firstActor": "Benjamin Piper"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:14 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:17 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:23 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:25 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:30 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:32:34 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:32:39 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:32:46 PM",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:02 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:05 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:08 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:10 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:13 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:20 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:33:24 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:33:25 PM",
-            "firstActor": "Nicholas Aghajanian"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:17 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:21 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:28 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:33 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:34 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:37 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:46 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:48 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:52 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:34:59 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:35:03 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:35:04 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:03 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:08 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:12 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:19 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:21 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:36:24 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:01 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:07 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:08 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:15 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:21 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:23 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:29 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:37:31 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:37:34 PM",
-            "firstActor": "Sina Dee"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:38:52 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:38:57 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:04 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:08 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:12 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:15 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:21 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:25 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:33 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:39 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:39:46 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 8:39:48 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:01 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:06 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:07 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:10 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:12 PM",
-            "secondActor": "Christine Beals"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:40:16 PM",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:40:18 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:32 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:37 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:40 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:45 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:40:49 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:40:50 PM",
-            "firstActor": "Andrew Spearin"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Jon Rowe",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:41:38 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:41:39 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:41:45 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:41:46 PM",
-            "secondActor": "Nick Klimowicz"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:41:48 PM",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:41:52 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:41:56 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:42:00 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:42:02 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Will Leckie",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:45:28 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:45:29 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:45:31 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:45:38 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:45:57 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:45:59 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:02 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:05 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:46:14 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:46:18 PM",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:33 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:38 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:44 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:49 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:46:51 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:46:52 PM",
-            "firstActor": "Jon Rowe"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:47:37 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:47:42 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:47:47 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:47:50 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:47:57 PM",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:48:00 PM",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:48:06 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:48:13 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:48:17 PM",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:48:28 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:48:30 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:48:32 PM",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:48:47 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:48:49 PM",
-            "firstActor": "Benjamin Piper"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:49:34 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:49:45 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:49:49 PM",
-            "secondActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 8:49:49 PM",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:49:53 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:50:00 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:50:05 PM",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:51:23 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:51:37 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:51:38 PM",
-            "firstActor": "Morgan Howard"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:52:19 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:52:25 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:52:33 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:52:43 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:52:48 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:52:53 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:52:54 PM",
-            "firstActor": "Sina Dee"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Greg Probe",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:53:42 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:53:44 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:53:50 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 8:53:53 PM",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:53:55 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:17 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:21 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:28 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:31 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:38 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:40 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:45 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:50 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:54:56 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:55:00 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:55:04 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:55:09 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:55:10 PM",
-            "firstActor": "Andrea Proulx"
-          }
-        ],
-        "defensePlayers": [
-          "Sina Dee",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:57:52 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:58:03 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:58:09 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 8:58:10 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:58:19 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:58:20 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:58:27 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:58:27 PM",
-            "firstActor": "Morgan Howard"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:12 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:13 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:17 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:20 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:22 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:27 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:29 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 8:59:32 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:39 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 8:59:49 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 8:59:49 PM",
-            "firstActor": "Angela Mueller"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Christine Beals",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Christine Beals"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Jan 16, 2017 9:03:47 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:03:57 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:01 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:11 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 9:04:12 PM",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:24 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:30 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:04:35 PM",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:56 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:04:58 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 9:05:00 PM",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:09 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:18 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:23 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:05:31 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:05:35 PM",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:39 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:40 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:05:46 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:05:47 PM",
-            "firstActor": "Andrea Proulx"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:06:37 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:06:42 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:06:44 PM",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:06:48 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:06:53 PM",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:06:56 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:07:19 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:07:23 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:07:24 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:08:10 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:08:13 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:08:16 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:08:19 PM",
-            "firstActor": "Benjamin Piper"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:12 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:14 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:24 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:25 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:27 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:30 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:37 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:45 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:09:48 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:10:14 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:10:19 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:10:21 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:07 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:10 PM",
-            "secondActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:11 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:11 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:14 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:27 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:11:56 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:11:59 PM",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:12:02 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:14 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:22 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:25 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:29 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:32 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:12:34 PM"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:12:37 PM",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:39 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:12:40 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:12:43 PM",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:00 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:04 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:08 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:11 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:16 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:22 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:13:31 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:13:33 PM",
-            "firstActor": "Will Leckie"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:18 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:20 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:22 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:28 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:31 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:37 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:40 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:43 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:48 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:53 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:14:54 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:14:57 PM",
-            "firstActor": "Sina Dee"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:15:45 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:15:49 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:15:52 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:15:56 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:15:59 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Andrea Proulx",
-          "Christine Beals"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:17:39 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:17:55 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:18:09 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:18:10 PM",
-            "secondActor": "Benjamin Piper",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:18:11 PM",
-            "firstActor": "Benjamin Piper"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:18:45 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:18:51 PM",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:12 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:19 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:24 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:28 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:31 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:35 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:19:48 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:19:51 PM",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:55 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:19:59 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:20:03 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:26 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:29 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:35 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:36 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:40 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:44 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:49 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:52 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:20:57 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:11 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:14 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:17 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:18 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:24 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:25 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Christine Beals"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:27 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:31 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:21:39 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:21:43 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:22:04 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:22:05 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:22:13 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:22:14 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Andrea Proulx",
-          "Christine Beals"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:23:03 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:23:09 PM",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:23:12 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:23:17 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:23:22 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:23:27 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:23:29 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:23:30 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Will Leckie",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Morgan Howard",
-          "Jon Rowe",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:18 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:21 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:26 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 9:24:27 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:41 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:45 PM",
-            "secondActor": "Peter Roebuck",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:47 PM",
-            "secondActor": "Greg Probe",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:24:53 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:24:55 PM",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:24:58 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:25:00 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:25:08 PM"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:25:11 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:25:35 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:25:39 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:25:41 PM",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:25:42 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:00 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:01 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:05 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:26:06 PM",
-            "firstActor": "Jon Rowe"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:45 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:49 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:54 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:26:57 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:26:58 PM",
-            "firstActor": "Alessandro Colonnier"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Chris Tran",
-          "Christine Beals",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Sina Dee",
-          "Morgan Howard",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Andrea Proulx",
-          "Christine Beals"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:37 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:39 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:45 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:46 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:27:49 PM"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:54 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:27:58 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:00 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:05 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:07 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:12 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:22 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:22 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:25 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:29 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:28:35 PM",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:41 PM",
-            "secondActor": "Jon Rowe",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:28:46 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Jon Rowe"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:28:47 PM",
-            "firstActor": "Andrea Proulx"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Greg Probe",
-          "Peter Roebuck",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:29:37 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:29:39 PM",
-            "secondActor": "Will Leckie",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:29:44 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Will Leckie"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:29:52 PM",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:29:57 PM",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:02 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:05 PM",
-            "secondActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:30:11 PM",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:30:32 PM",
-            "firstActor": "Greg Probe"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:30:35 PM",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:48 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:50 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:55 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:30:58 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:31:04 PM",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:23 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Jan 16, 2017 9:31:25 PM",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:36 PM",
-            "secondActor": "Nick Klimowicz",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:39 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Nick Klimowicz"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:42 PM",
-            "secondActor": "Angela Mueller",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:44 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Angela Mueller"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:31:47 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:31:47 PM",
-            "firstActor": "Andrea Proulx"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Morgan Howard",
-          "Nick Klimowicz",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Brian Kells",
-          "Alessandro Colonnier",
-          "Tim Kealey",
-          "Andrew Spearin",
-          "Laura Chambers Storey",
-          "Laura Knowles"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:32:39 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Brian Kells"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:32:44 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:32:46 PM",
-            "secondActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:32:48 PM",
-            "secondActor": "Brian Kells",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:32:49 PM",
-            "firstActor": "Brian Kells"
-          }
-        ],
-        "defensePlayers": [
-          "Sina Dee",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Christine Beals",
-          "Angela Mueller"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Nicholas Aghajanian",
-          "Sina Dee",
-          "Morgan Howard",
-          "Chris Tran",
-          "Andrea Proulx",
-          "Christine Beals"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:33:34 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:33:36 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:33:42 PM",
-            "secondActor": "Chris Tran",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:33:45 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Chris Tran"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:33:49 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:33:52 PM"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:06 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:08 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:15 PM",
-            "secondActor": "Tim Kealey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:21 PM",
-            "secondActor": "Aleksandra Ostojic(S)",
-            "firstActor": "Tim Kealey"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:24 PM",
-            "secondActor": "Laura Chambers Storey",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:34:29 PM",
-            "firstActor": "Laura Chambers Storey"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Jan 16, 2017 9:34:31 PM",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:36 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:39 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:45 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:51 PM",
-            "secondActor": "Andrea Proulx",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:34:56 PM",
-            "secondActor": "Morgan Howard",
-            "firstActor": "Andrea Proulx"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:35:01 PM",
-            "secondActor": "Sina Dee",
-            "firstActor": "Morgan Howard"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:35:04 PM",
-            "secondActor": "Christine Beals",
-            "firstActor": "Sina Dee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:35:05 PM",
-            "firstActor": "Christine Beals"
-          }
-        ],
-        "defensePlayers": [
-          "Brian Kells",
-          "Tim Kealey",
-          "Will Leckie",
-          "Greg Probe",
-          "Laura Chambers Storey",
-          "Aleksandra Ostojic(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Alessandro Colonnier",
-          "Will Leckie",
-          "Peter Roebuck",
-          "Andrew Spearin",
-          "Laura Knowles",
-          "Aleksandra Ostojic(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:35:54 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Peter Roebuck"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:36:03 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:36:08 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:36:15 PM",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:36:34 PM",
-            "secondActor": "Nicholas Aghajanian",
-            "firstActor": "Benjamin Piper"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Jan 16, 2017 9:36:38 PM",
-            "firstActor": "Nicholas Aghajanian"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:37:14 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Aleksandra Ostojic(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:37:16 PM",
-            "secondActor": "Alessandro Colonnier",
-            "firstActor": "Laura Knowles"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:37:18 PM",
-            "secondActor": "Andrew Spearin",
-            "firstActor": "Alessandro Colonnier"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Jan 16, 2017 9:37:19 PM",
-            "secondActor": "Laura Knowles",
-            "firstActor": "Andrew Spearin"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Jan 16, 2017 9:37:20 PM",
-            "firstActor": "Laura Knowles"
-          }
-        ],
-        "defensePlayers": [
-          "Nicholas Aghajanian",
-          "Nick Klimowicz",
-          "Benjamin Piper",
-          "Jon Rowe",
-          "Andrea Proulx",
-          "Angela Mueller"
-        ]
-      }
-    ]
-  },
   "event_string": [
     "",
     "Pull,Sina Dee,",
@@ -3905,5 +616,2809 @@
   ],
   "time": "2017-01-17T02:37:52.057Z",
   "week": 9,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Peter Roebuck"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Will Leckie",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Greg Probe",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Will Leckie",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Greg Probe",
+        "Peter Roebuck",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Alessandro Colonnier",
+        "Tim Kealey",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Will Leckie",
+        "Greg Probe",
+        "Laura Chambers Storey",
+        "Aleksandra Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Aleksandra Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colonnier",
+        "Will Leckie",
+        "Peter Roebuck",
+        "Andrew Spearin",
+        "Laura Knowles",
+        "Aleksandra Ostojic(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Mike and the Milburys",
+  "homeRoster": [
+    "Laura Chambers Storey",
+    "Tanya Gallant",
+    "Laura Knowles",
+    "Heather McCabe",
+    "Brian Kells",
+    "Alessandro Colonnier",
+    "Tim Kealey",
+    "Will Leckie",
+    "Mike Lee",
+    "Greg Probe",
+    "Peter Roebuck",
+    "Andrew Spearin"
+  ],
+  "awayTeam": "SOS - Man Overboard (SOS)",
+  "awayRoster": [
+    "Andrea Proulx",
+    "Christine Beals",
+    "Melissa Berry",
+    "Angela Mueller",
+    "Nicholas Aghajanian",
+    "Sina Dee",
+    "Morgan Howard",
+    "Nick Klimowicz",
+    "Benjamin Piper",
+    "Jon Rowe",
+    "Dan Thomson",
+    "Chris Tran"
+  ],
+  "awayScore": 23,
+  "homeScore": 12
 }

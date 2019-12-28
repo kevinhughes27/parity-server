@@ -1,3081 +1,10 @@
 {
-  "score": {
-    "F Bombs": "25",
-    "SOS - Man Overboard (SOS)": "13"
-  },
   "player_adjustments": {
     "Mat Johnson": {
       "Salary": 900000,
       "SalaryDelta": 50000
     }
   },
-  "teams": {
-    "F Bombs": [
-      "Hope Celani",
-      "Maya Popovic",
-      "Justine Price",
-      "Nina Ramic",
-      "Rob Ives",
-      "Chris Sullivan",
-      "Simon Berry",
-      "Brent Burton",
-      "Mat Johnson",
-      "Martin Cloake",
-      "Mark Donahue",
-      "Richard Gregory"
-    ],
-    "SOS - Man Overboard (SOS)": [
-      "Andrea Proulx",
-      "Christine Beals",
-      "Melissa Berry",
-      "Angela Mueller",
-      "Nicholas Aghajanian",
-      "Sina Dee",
-      "Morgan Howard",
-      "Nick Klimowicz",
-      "Benjamin Piper",
-      "Jon Rowe",
-      "Dan Thomson",
-      "Chris Tran"
-    ]
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Jan 9, 2017 10:10:02 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:04 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:06 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:09 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:14 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:18 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:23 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:30 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:10:32 PM"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:47 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:10:50 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:10:56 PM",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:10:58 PM",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:11:06 PM",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:11:09 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:11:12 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:11:16 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:11:20 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:11:22 PM",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:11:52 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:11:56 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:00 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:04 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:07 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:10 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:15 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 10:12:16 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:21 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:25 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:31 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:12:38 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:12:58 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:13:01 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:13:02 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:13:53 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:14:09 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:14:12 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:14:20 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:14:21 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:15:53 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:15:57 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:01 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:02 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:06 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:09 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:16 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:17 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:19 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:24 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:16:27 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:39 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:16:42 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:16:44 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:17:31 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:17:39 PM",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:17:42 PM",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:17:43 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:17:46 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:17:56 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:18:00 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:18:01 PM",
-          "firstActor": "Christopher Keates(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:18:48 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:18:51 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:18:58 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:19:01 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:19:09 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:19:16 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:19:20 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:19:24 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:19:25 PM",
-          "firstActor": "Angela Mueller"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:20:27 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:20:33 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:20:35 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:20:42 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:20:45 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:20:46 PM",
-          "firstActor": "Justine Price"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:35 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:38 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:40 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:44 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:46 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:50 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:55 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:21:56 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:22:02 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:22:03 PM",
-          "firstActor": "Benjamin Piper"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:22:52 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:22:55 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 10:23:00 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:23:18 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:23:22 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:23:26 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:23:27 PM",
-          "firstActor": "Benjamin Piper"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:24:07 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:24:13 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:24:14 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:00 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:06 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:11 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:14 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:16 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:21 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:25:26 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:25:29 PM",
-          "firstActor": "Melissa Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:26:13 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:26:20 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:26:21 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:26:59 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:27:06 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:27:08 PM",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:27:16 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 10:27:17 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:27:24 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:27:45 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:27:49 PM"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:05 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:10 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:12 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:28:18 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:28 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:31 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:34 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:28:38 PM",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:28:42 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:47 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:28:51 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:29:05 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:29:08 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:29:09 PM",
-          "firstActor": "Christopher Keates(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:31:52 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:31:57 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:04 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:09 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:32:10 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:50 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:53 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:56 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:32:59 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:33:03 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:33:04 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:33:46 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:33:50 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:33:56 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:33:59 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:34:01 PM",
-          "secondActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:34:03 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:34:07 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:34:09 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:34:10 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:00 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:03 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:05 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:12 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:16 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:21 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:23 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:28 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:35:32 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:35:59 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 10:36:01 PM",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:36:09 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:36:35 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:36:40 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:36:42 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:37:27 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:37:30 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:37:37 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:37:41 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:37:55 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:38:00 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:38:00 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:38:49 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:38:51 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:38:54 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:39:01 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:39:06 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:39:06 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:39:33 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:39:36 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:39:39 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:39:44 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:39:45 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:40:36 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:40:41 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:40:44 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:41:25 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:41:30 PM"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:41:33 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:42:08 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:42:09 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:42:47 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:42:50 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:42:56 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:43:01 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:43:04 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:43:09 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:43:10 PM",
-          "firstActor": "Justine Price"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:43:50 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:43:55 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:44:00 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:44:07 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:44:11 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:44:14 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:44:15 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Maya Popovic",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Justine Price",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:01 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:04 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:06 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:08 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:12 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:15 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:18 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:24 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:45:28 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:45:29 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:10 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:12 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:15 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:17 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:21 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:46:24 PM",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:42 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:46:48 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:47:00 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:07 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:09 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:18 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:20 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:47:25 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:47:29 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:39 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:47:44 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:47:51 PM",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:48:16 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:48:17 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:48:46 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:00 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:03 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:23 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:33 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:39 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:49:42 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:49:42 PM",
-          "firstActor": "Melissa Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Jan 9, 2017 10:55:16 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:56:11 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:56:16 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:56:20 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:56:27 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:56:32 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:56:33 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Justine Price",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:57:12 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:57:18 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:57:20 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:57:21 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:58:14 PM",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:58:16 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:58:25 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:58:29 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:58:49 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:58:50 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 10:59:44 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 10:59:47 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 10:59:50 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 10:59:51 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Justine Price",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:01:59 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:03 PM",
-          "secondActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:04 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:06 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:11 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:17 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:23 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:28 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:02:40 PM",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:02:41 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:43 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:02:49 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:02:50 PM",
-          "firstActor": "Nina Ramic"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:03:37 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:03:41 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:03:45 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:03:51 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:03:52 PM",
-          "firstActor": "Melissa Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Justine Price",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:04:45 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:04:50 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:04:52 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:04:58 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:05:00 PM",
-          "secondActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:05:01 PM",
-          "firstActor": "Brent Burton"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:05:39 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:05:42 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:05:48 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:05:52 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:05:53 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Nina Ramic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:06:48 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:06:53 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:06:55 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:06:56 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:06:58 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:06:59 PM",
-          "firstActor": "Rob Ives"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:07:58 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:08:01 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:08:07 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:08:23 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:08:28 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:08:30 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Justine Price",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Nina Ramic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:09:21 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:09:29 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:09:32 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:09:37 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:09:40 PM",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:09:46 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:09:51 PM",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:10:03 PM",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:10:11 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:10:11 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller",
-        "Craig Anderson(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:10:47 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:10:58 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:11:05 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:11:13 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:11:16 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:11:17 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:11:18 PM",
-          "firstActor": "Christopher Keates(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Brent Burton",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Justine Price",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:08 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:12 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:17 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:22 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 11:12:22 PM",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:30 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:32 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:34 PM",
-          "secondActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:12:36 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:12:40 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:12:45 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:02 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:06 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:13 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:16 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:21 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:26 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:31 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:13:36 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:49 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:13:56 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 11:13:57 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:14:19 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:14:48 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:14:53 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:00 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:04 PM",
-          "secondActor": "Nina Ramic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:15:07 PM",
-          "firstActor": "Nina Ramic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:15:11 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:15:26 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:34 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:40 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:15:43 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:15:47 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:51 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:54 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:15:57 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:16:04 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:16:06 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:16:10 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:16:21 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:16:22 PM",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:16:25 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:16:44 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Jan 9, 2017 11:16:46 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:16:56 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:05 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:14 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Jan 9, 2017 11:17:14 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:22 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:23 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:29 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:32 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:36 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:37 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:41 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:47 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:51 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:17:55 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:14 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:18 PM",
-          "secondActor": "Christopher Keates(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:25 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Christopher Keates(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:30 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:36 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:18:38 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:18:39 PM",
-          "firstActor": "Simon Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Brent Burton",
-        "Justine Price",
-        "Nina Ramic",
-        "Christopher Keates(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry",
-        "Craig Anderson(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:19:33 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:19:35 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:19:37 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Craig Anderson(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:19:39 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:19:42 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:20:01 PM"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:20:10 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:20:13 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Jan 9, 2017 11:20:16 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:20:35 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Jan 9, 2017 11:20:43 PM",
-          "secondActor": "Craig Anderson(S)",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Jan 9, 2017 11:20:48 PM",
-          "firstActor": "Craig Anderson(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Maya Popovic",
-        "Nina Ramic"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Morgan Howard,",
@@ -3738,5 +667,2643 @@
   ],
   "time": "2017-01-10T04:21:55.883Z",
   "week": 8,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Angela Mueller"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Maya Popovic",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Justine Price",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Justine Price",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Justine Price",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Justine Price",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Justine Price",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller",
+        "Craig Anderson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Angela Mueller"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Brent Burton",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Justine Price",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Brent Burton",
+        "Justine Price",
+        "Nina Ramic",
+        "Christopher Keates(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Simon Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry",
+        "Craig Anderson(S)"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Maya Popovic",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Craig Anderson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson(S)"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "F Bombs",
+  "homeRoster": [
+    "Hope Celani",
+    "Maya Popovic",
+    "Justine Price",
+    "Nina Ramic",
+    "Rob Ives",
+    "Chris Sullivan",
+    "Simon Berry",
+    "Brent Burton",
+    "Mat Johnson",
+    "Martin Cloake",
+    "Mark Donahue",
+    "Richard Gregory"
+  ],
+  "awayTeam": "SOS - Man Overboard (SOS)",
+  "awayRoster": [
+    "Andrea Proulx",
+    "Christine Beals",
+    "Melissa Berry",
+    "Angela Mueller",
+    "Nicholas Aghajanian",
+    "Sina Dee",
+    "Morgan Howard",
+    "Nick Klimowicz",
+    "Benjamin Piper",
+    "Jon Rowe",
+    "Dan Thomson",
+    "Chris Tran"
+  ],
+  "awayScore": "13",
+  "homeScore": "25"
 }

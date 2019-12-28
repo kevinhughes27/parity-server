@@ -1,0 +1,2733 @@
+{
+  "league_id": 2,
+  "week": 7,
+  "homeTeam": "Dump, Swing, Huck, Repeat",
+  "homeScore": "17",
+  "homeRoster": [
+    "Steve Chow",
+    "Jim Robinson",
+    "Jean Surette",
+    "Geofford Seaborn(S)",
+    "Rob Ives",
+    "Lissa Greenspoon",
+    "Nick Ierullo",
+    "Laura Chambers Storey",
+    "Stephanie White",
+    "Graham Brown",
+    "James King",
+    "Stephanie Fowler"
+  ],
+  "awayTeam": "Game of Throws",
+  "awayScore": "19",
+  "awayRoster": [
+    "Justine Price",
+    "Sebastien Belanger",
+    "Chris Tran",
+    "Christine Beals",
+    "Carissa Wong",
+    "Edwin Wong",
+    "Nick Vetvut",
+    "Kyle Sprysa",
+    "Christopher LaFleur",
+    "Melissa Martel"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Jim Robinson",
+        "Jean Surette"
+      ],
+      "defensePlayers": [
+        "Justine Price",
+        "Sebastien Belanger",
+        "Chris Tran"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn(S)",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Christine Beals",
+        "Carissa Wong",
+        "Edwin Wong",
+        "Sebastien Belanger",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Steve Chow",
+        "Nick Ierullo",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Nick Vetvut",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn(S)",
+        "Stephanie White",
+        "Jim Robinson",
+        "Graham Brown",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Kyle Sprysa",
+        "Edwin Wong",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Nick Ierullo",
+        "Lissa Greenspoon",
+        "Jean Surette"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Kyle Sprysa",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "James King",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jim Robinson",
+        "Steve Chow",
+        "Geofford Seaborn(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Kyle Sprysa",
+        "Nick Vetvut",
+        "Justine Price",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "James King",
+        "Rob Ives",
+        "Nick Ierullo",
+        "Lissa Greenspoon",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Graham Brown",
+        "Jim Robinson",
+        "Geofford Seaborn(S)",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Edwin Wong",
+        "Kyle Sprysa",
+        "Christopher LaFleur",
+        "Carissa Wong",
+        "Melissa Martel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Kyle Sprysa",
+        "Nick Vetvut",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Geofford Seaborn(S)",
+        "Jim Robinson",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Christopher LaFleur",
+        "Sebastien Belanger",
+        "Nick Vetvut"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "James King",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Melissa Martel",
+        "Nick Vetvut",
+        "Chris Tran",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn(S)",
+        "Jim Robinson",
+        "Steve Chow",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "James King",
+        "Nick Ierullo"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "James King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Kyle Sprysa",
+        "Edwin Wong",
+        "Carissa Wong",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Jim Robinson",
+        "Steve Chow",
+        "Lissa Greenspoon",
+        "Graham Brown",
+        "Geofford Seaborn(S)",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carissa Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jean Surette",
+        "Rob Ives",
+        "James King",
+        "Nick Ierullo",
+        "Stephanie Fowler"
+      ],
+      "defensePlayers": [
+        "Nick Vetvut",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Carissa Wong",
+        "Sebastien Belanger",
+        "Nick Vetvut",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn(S)",
+        "Jim Robinson",
+        "Steve Chow",
+        "Lissa Greenspoon",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Kyle Sprysa",
+        "Justine Price",
+        "Chris Tran",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Belanger"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Laura Chambers Storey",
+        "Steve Chow",
+        "Jim Robinson",
+        "Geofford Seaborn(S)"
+      ],
+      "defensePlayers": [
+        "Christopher LaFleur",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justine Price",
+        "Chris Tran",
+        "Kyle Sprysa",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Christopher LaFleur",
+        "Chris Tran",
+        "Carissa Wong",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn(S)",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Ierullo",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Kyle Sprysa",
+        "Justine Price",
+        "Nick Vetvut",
+        "Edwin Wong",
+        "Christine Beals",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn(S)",
+        "Jim Robinson",
+        "Laura Chambers Storey",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Kyle Sprysa",
+        "Nick Vetvut",
+        "Chris Tran"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jean Surette",
+        "Rob Ives",
+        "Nick Ierullo",
+        "Stephanie Fowler",
+        "Geofford Seaborn(S)",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Justine Price",
+        "Sebastien Belanger",
+        "Chris Tran",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Kyle Sprysa",
+        "Nick Vetvut",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jean Surette",
+        "Rob Ives",
+        "Stephanie Fowler",
+        "Geofford Seaborn(S)",
+        "Nick Ierullo",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Kyle Sprysa",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Carissa Wong",
+        "Christopher LaFleur",
+        "Chris Tran",
+        "Edwin Wong"
+      ],
+      "defensePlayers": [
+        "Jim Robinson",
+        "Steve Chow",
+        "Lissa Greenspoon",
+        "Graham Brown",
+        "James King",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carissa Wong",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Justine Price",
+        "Nick Vetvut",
+        "Kyle Sprysa",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "James King",
+        "Lissa Greenspoon",
+        "Jim Robinson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Justine Price",
+        "Chris Tran"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jim Robinson",
+        "Laura Chambers Storey",
+        "Lissa Greenspoon",
+        "Steve Chow",
+        "James King"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Melissa Martel",
+        "Chris Tran"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Martel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Christopher LaFleur",
+        "Kyle Sprysa"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Belanger"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "James King",
+        "Rob Ives",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Justine Price",
+        "Sebastien Belanger",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn(S)",
+        "Stephanie White",
+        "James King",
+        "Nick Ierullo",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn(S)",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Belanger"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Chambers Storey",
+        "Steve Chow",
+        "Graham Brown",
+        "James King",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Carissa Wong",
+        "Chris Tran",
+        "Melissa Martel",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Melissa Martel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Martel",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Carissa Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carissa Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    }
+  ]
+}

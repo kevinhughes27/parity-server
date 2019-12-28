@@ -47,7 +47,9 @@ const fetchGame = async (gameId, league) => {
 
 const fetchLeagues = async () => {
   const response = await cachedFetch(`/api/leagues`)
-  return await response.json()
+  const leagues = await response.json()
+  // nothing to display for league_id=1
+  return leagues.filter((l) => l.id > 1)
 }
 
 const fetchPlayers = async (league) => {

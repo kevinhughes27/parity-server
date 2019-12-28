@@ -1,0 +1,2710 @@
+{
+  "league_id": 3,
+  "week": 3,
+  "homeTeam": "Stan's Sturgeons",
+  "homeScore": "17",
+  "homeRoster": [
+    "Alex Bush",
+    "Brian Kells",
+    "Derek Tokarski",
+    "Stanley Kent",
+    "Karen Kavanagh",
+    "Marie-Claude Lacombe",
+    "Chris Tran",
+    "Frederic Caron",
+    "Jamie Wildgen",
+    "Sebastien Benard",
+    "Neena Sidhu",
+    "Kindha Gorman(S)"
+  ],
+  "awayTeam": "Scoobers in Tokyo",
+  "awayScore": "19",
+  "awayRoster": [
+    "David Townsend",
+    "Douglas Brierley",
+    "Jonathan Champagne",
+    "Sina Dee",
+    "Ashlin Kelly",
+    "Nina Ramic",
+    "Amos Lee",
+    "Greg Linton",
+    "Khalid Al-Zahrani",
+    "Tim Kealey",
+    "Kathryn Jarrett-Ekholm"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Frederic Caron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Linton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Karen Kavanagh"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Douglas Brierley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Derek Tokarski"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Frederic Caron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Brian Kells",
+        "Derek Tokarski",
+        "Stanley Kent",
+        "Neena Sidhu",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3061 @@
+{
+  "league_id": 3,
+  "week": 20,
+  "homeTeam": "Ignominious",
+  "homeScore": "19",
+  "homeRoster": [
+    "Al Colantonio",
+    "Chris Sullivan",
+    "Krys Kudakiewicz",
+    "Trevor Stocki",
+    "Laura Knowles",
+    "Wynne Gee",
+    "Allan Godding",
+    "Nick Theriault",
+    "Anne Leduc"
+  ],
+  "awayTeam": "Moderate Expectations",
+  "awayScore": "22",
+  "awayRoster": [
+    "Edwin Wong",
+    "Ian Ewing",
+    "Kevin Hughes",
+    "Kris Bergmann",
+    "Jen Cluthe",
+    "Justine price",
+    "Brent Burton",
+    "Jim Robinson",
+    "Steve Chow",
+    "Melissa Jess",
+    "Sandra Hanson",
+    "Benoit Goulet"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Kevin Hughes",
+        "Kris Bergmann",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Steve Chow",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Jim Robinson",
+        "Kevin Hughes",
+        "Kris Bergmann",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Brent Burton",
+        "Ian Ewing",
+        "Steve Chow",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Jim Robinson",
+        "Kevin Hughes",
+        "Kris Bergmann",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Anne Leduc"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Melissa Jess",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Trevor Stocki",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Edwin Wong",
+        "Kevin Hughes",
+        "Steve Chow",
+        "Jen Cluthe",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    }
+  ]
+}

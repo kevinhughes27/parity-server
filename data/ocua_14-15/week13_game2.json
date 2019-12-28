@@ -1,0 +1,2492 @@
+{
+  "league_id": 2,
+  "week": 13,
+  "homeTeam": "Dump, Swing, Huck, Repeat",
+  "homeScore": "22",
+  "homeRoster": [
+    "Michael Colantonio",
+    "Jean Surette",
+    "Lissa Greenspoon",
+    "Laura Chambers Storey",
+    "Rob Ives",
+    "Ivan Sabourin",
+    "Stanley Kent(S)",
+    "Stephanie White",
+    "Steve Chow",
+    "Marie-Claude Lacombe",
+    "Ariel Untiveros(S)",
+    "Graham Brown"
+  ],
+  "awayTeam": "Conflict of Interests",
+  "awayScore": "21",
+  "awayRoster": [
+    "Christopher Keates",
+    "Alex Bush",
+    "Jay Thor Turner",
+    "Neena Sidhu",
+    "Christopher Kraft",
+    "Geofford Seaborn",
+    "Laura Knowles",
+    "Kindha Gorman",
+    "Cassandra Cheung",
+    "Nick Ierullo",
+    "Jason Fraser"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Nick Ierullo",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Jean Surette",
+        "Lissa Greenspoon",
+        "Laura Chambers Storey",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Alex Bush",
+        "Jay Thor Turner",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Laura Chambers Storey",
+        "Lissa Greenspoon",
+        "Michael Colantonio"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Ivan Sabourin",
+        "Stanley Kent(S)",
+        "Stephanie White",
+        "Steve Chow",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)",
+        "Ariel Untiveros(S)",
+        "Stephanie White",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Jay Thor Turner"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Christopher Keates",
+        "Cassandra Cheung",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Laura Chambers Storey",
+        "Lissa Greenspoon",
+        "Rob Ives",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Ierullo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)",
+        "Steve Chow",
+        "Ariel Untiveros(S)",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Christopher Keates",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Laura Chambers Storey",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Jason Fraser",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Stanley Kent(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Neena Sidhu",
+        "Jay Thor Turner",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Lissa Greenspoon",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Ierullo",
+        "Jason Fraser",
+        "Laura Knowles",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Ierullo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Graham Brown",
+        "Rob Ives",
+        "Michael Colantonio",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Cassandra Cheung",
+        "Christopher Kraft",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Stephanie White",
+        "Ariel Untiveros(S)"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Jean Surette",
+        "Michael Colantonio",
+        "Laura Chambers Storey",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Christopher Keates",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Laura Chambers Storey",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Neena Sidhu",
+        "Christopher Kraft",
+        "Jason Fraser",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)",
+        "Stanley Kent(S)",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Nick Ierullo",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Ierullo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Rob Ives",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Nick Ierullo",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Stephanie White",
+        "Stanley Kent(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Christopher Keates",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Laura Chambers Storey",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Cassandra Cheung",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Laura Chambers Storey",
+        "Rob Ives",
+        "Michael Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Ariel Untiveros(S)",
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Alex Bush",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Ariel Untiveros(S)",
+        "Ivan Sabourin",
+        "Stanley Kent(S)",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Alex Bush",
+        "Nick Ierullo",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Michael Colantonio",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Stanley Kent(S)",
+        "Ariel Untiveros(S)",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "Alex Bush",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Lissa Greenspoon",
+        "Rob Ives",
+        "Graham Brown",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)",
+        "Steve Chow",
+        "Ariel Untiveros(S)",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Jay Thor Turner",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Alex Bush",
+        "Cassandra Cheung",
+        "Christopher Kraft",
+        "Jay Thor Turner",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Laura Chambers Storey",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)",
+        "Steve Chow",
+        "Ariel Untiveros(S)",
+        "Marie-Claude Lacombe",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Christopher Keates",
+        "Nick Ierullo",
+        "Laura Knowles",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Jason Fraser",
+        "Christopher Kraft",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Steve Chow",
+        "Ariel Untiveros(S)",
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+        "Nick Ierullo",
+        "Kindha Gorman",
+        "Laura Knowles",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Cassandra Cheung",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Laura Chambers Storey",
+        "Jean Surette",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jean Surette"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Jason Fraser",
+        "Kindha Gorman",
+        "Geofford Seaborn",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+        "Stanley Kent(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Neena Sidhu",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)",
+        "Stanley Kent(S)",
+        "Stephanie White",
+        "Steve Chow",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Nick Ierullo",
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "Cassandra Cheung",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent(S)"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Rob Ives",
+        "Jean Surette",
+        "Graham Brown",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nick Ierullo",
+        "Alex Bush",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    }
+  ]
+}

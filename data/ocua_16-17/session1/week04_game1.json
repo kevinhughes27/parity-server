@@ -1,2855 +1,4 @@
 {
-  "teams": {
-    "Hindsight Hooligans": [
-      "Julia Laforge",
-      "Aleksandra Ostojic",
-      "Maya Popovic",
-      "Carrie-Anne Whyte",
-      "Amos Lee",
-      "Kevin Barford",
-      "Jason Fraser",
-      "Hadrian Mertins-Kirkwood",
-      "Michael O'Hare",
-      "Andre Scott",
-      "Jay Thor Turner",
-      "Geofford seaborn"
-    ],
-    "Like a Boss": [
-      "Jaime Boss",
-      "Tanya Gallant",
-      "Megan Robb",
-      "Jessie Robinson",
-      "Craig Anderson",
-      "Steve Chow",
-      "Kevin Hughes",
-      "Stanley Kent",
-      "Patrick Kenzie",
-      "Ryan Mussell",
-      "Trevor Stocki",
-      "Nick Theriault"
-    ]
-  },
-  "events": {
-    "points": [
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Megan Robb",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Nov 29, 2016 1:10:37 AM",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:10:58 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:00 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:01 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:05 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:07 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:10 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:12 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:17 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:11:20 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:11:22 AM",
-            "firstActor": "Megan Robb"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Maya Popovic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:12:18 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:12:24 AM",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:12:28 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:12:45 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:12:46 AM",
-            "firstActor": "Andre Scott"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:13:32 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:13:35 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:13:36 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:13:39 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:13:44 AM",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:13:59 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:03 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:08 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:09 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:12 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:14 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:19 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:14:31 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:48 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:49 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:53 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:54 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:14:58 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:15:01 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:15:02 AM",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:15:12 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:15:17 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:15:21 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:15:28 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:15:28 AM",
-            "firstActor": "Aleksandra Ostojic"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Megan Robb"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Tanya Gallant",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:16:25 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:16:31 AM",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:16:42 AM",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:16:45 AM",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:16:48 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:16:49 AM",
-            "firstActor": "Stanley Kent"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:17:30 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:17:35 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:17:42 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:17:45 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:18:18 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:18:26 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:18:26 AM",
-            "firstActor": "Amos Lee"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Megan Robb"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Tanya Gallant",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:19:18 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:19:25 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:19:26 AM",
-            "firstActor": "Craig Anderson"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:20:17 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:20:18 AM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:20:29 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:20:35 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:20:44 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:20:51 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:21:05 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:21:08 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:21:14 AM",
-            "secondActor": "Trevor Stocki",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:21:18 AM"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:21:51 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:21:53 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:22:03 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:22:13 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:22:14 AM",
-            "firstActor": "Megan Robb"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Julia Laforge",
-          "Maya Popovic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:02 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:05 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:09 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:12 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:19 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:24 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:28 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:23:32 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:23:34 AM",
-            "firstActor": "Julia Laforge"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Jaime Boss",
-          "Megan Robb"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:20 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:26 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:28 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:30 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:32 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:36 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:39 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:42 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:48 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:24:59 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:25:03 AM",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:30 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:34 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:40 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:43 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:46 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:25:49 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:26:10 AM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:26:18 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:26:23 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:26:27 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:26:32 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:26:32 AM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Trevor Stocki",
-          "Tanya Gallant",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:25 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:29 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:36 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:44 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:47 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:27:51 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:27:53 AM",
-            "firstActor": "Steve Chow"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:28:38 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:28:42 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:28:46 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:28:50 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:28:55 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:05 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:29:06 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:11 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:12 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:48 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:50 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:29:54 AM",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:29:56 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:57 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:29:58 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:30:01 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:30:08 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:30:09 AM",
-            "firstActor": "Aleksandra Ostojic"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Jaime Boss",
-          "Megan Robb"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:30:57 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:31:03 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:31:04 AM",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:31:15 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:31:19 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:31:20 AM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:31:39 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:31:43 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:31:47 AM"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:31:50 AM",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:32:03 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:32:23 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:32:27 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:32:29 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:32:30 AM",
-            "firstActor": "Maya Popovic"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:28 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:30 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:34 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:36 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:44 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:48 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:36:54 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:36:55 AM",
-            "firstActor": "Patrick Kenzie"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Julia Laforge",
-          "Maya Popovic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:37:50 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:37:53 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:38:00 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:38:04 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:38:07 AM",
-            "firstActor": "Kevin Barford"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Tanya Gallant",
-          "Jessie Robinson"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:38:50 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:38:54 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:38:59 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:02 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:05 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:07 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:11 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:20 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:39:21 AM",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:35 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:40 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:39:50 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:39:55 AM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:39:57 AM",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:40:04 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:40:09 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:40:10 AM",
-            "firstActor": "Steve Chow"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Nov 29, 2016 1:44:31 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:44:58 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:45:04 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:32 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:34 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:39 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:45 AM",
-            "secondActor": "Tanya Gallant",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:48 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Tanya Gallant"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:45:54 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:45:55 AM",
-            "firstActor": "Stanley Kent"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Patrick Kenzie",
-          "Tanya Gallant",
-          "Jessie Robinson"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:46:47 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:46:48 AM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:00 AM",
-            "secondActor": "Trevor Stocki",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:47:02 AM",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:26 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:32 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:38 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 1:47:39 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:49 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:53 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:47:56 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:48:01 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:48:03 AM",
-            "firstActor": "Jessie Robinson"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Stanley Kent",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:30 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:32 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:37 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:41 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:46 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:51 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:51:55 AM",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:18 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:21 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:24 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:32 AM",
-            "secondActor": "Trevor Stocki",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:40 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:42 AM",
-            "secondActor": "Stanley Kent"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:52:46 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:52:48 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:53:07 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:38 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:39 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:46 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:51 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:17 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:54:22 AM",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:54:24 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:37 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:41 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:44 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:46 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:55 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:56 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:56:55 AM",
-            "firstActor": "Andre Scott"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:30 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:32 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:37 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:41 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:46 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:51:51 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:51:55 AM",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:18 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:21 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:24 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:32 AM",
-            "secondActor": "Trevor Stocki",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:40 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Trevor Stocki"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:52:42 AM",
-            "secondActor": "Stanley Kent"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:52:46 AM",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:52:48 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:53:07 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:38 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:39 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:46 AM",
-            "secondActor": "Stanley Kent",
-            "firstActor": "Megan Robb"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:53:51 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Stanley Kent"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:17 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:54:22 AM",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:54:24 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:37 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:41 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:44 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:46 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:55 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:54:56 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:56:55 AM",
-            "firstActor": "Andre Scott"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:57:53 AM",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 1:57:56 AM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:58:02 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:58:07 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:58:08 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 1:58:09 AM",
-            "firstActor": "Amos Lee"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:59:12 AM",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:59:35 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 1:59:38 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:59:52 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 1:59:56 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:03 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:00:13 AM"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:23 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:00:31 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:42 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:44 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:49 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:55 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:00:58 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:01:06 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:01:07 AM",
-            "firstActor": "Megan Robb"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:02 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:02:08 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 2:02:12 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:19 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:20 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:21 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:24 AM",
-            "secondActor": "Tanya Gallant",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:25 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Tanya Gallant"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:30 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:02:34 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:02:35 AM",
-            "firstActor": "Steve Chow"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant",
-          "Alessandro Colantonio(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:03:29 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:03:34 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:03:39 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:03:40 AM",
-            "firstActor": "Maya Popovic"
-          }
-        ],
-        "defensePlayers": [
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson",
-          "Alessandro Colantonio(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Jaime Boss",
-          "Tanya Gallant",
-          "Alessandro Colantonio(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:04:33 AM",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 2:04:35 AM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:04:36 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:04:38 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:04:41 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:04:44 AM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 2:04:46 AM",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:04:52 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:04:55 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:02 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:05 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:05:10 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 2:05:14 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:18 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:19 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:26 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:05:31 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:05:32 AM",
-            "firstActor": "Kevin Barford"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson",
-          "Alessandro Colantonio(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:24 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:25 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:28 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:06:32 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:42 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:49 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Maya Popovic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:52 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:06:55 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:07:00 AM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:07:01 AM",
-            "firstActor": "Geofford seaborn"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:07:55 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:08:00 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 2:08:01 AM",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:08:30 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:08:35 AM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:08:40 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:08:43 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:08:43 AM",
-            "firstActor": "Amos Lee"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson",
-          "Alessandro Colantonio(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:09:36 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:09:41 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:09:46 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 2:09:47 AM",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:10:18 AM",
-            "secondActor": "Jessie Robinson",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:10:23 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Jessie Robinson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:10:28 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:10:53 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:10:55 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:11:00 AM",
-            "secondActor": "Maya Popovic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:11:02 AM",
-            "firstActor": "Maya Popovic"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Jaime Boss",
-          "Tanya Gallant",
-          "Alessandro Colantonio(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:11:50 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 2:11:51 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:04 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 2:12:06 AM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:12 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:15 AM",
-            "secondActor": "Patrick Kenzie",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:17 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Patrick Kenzie"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:19 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:30 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Nov 29, 2016 2:12:31 AM",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:44 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:50 AM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:55 AM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:12:58 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:02 AM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:05 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:13:09 AM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:33 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:35 AM",
-            "secondActor": "Tanya Gallant",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:37 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Tanya Gallant"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:40 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:43 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:49 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:52 AM",
-            "secondActor": "Jaime Boss",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:13:56 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Jaime Boss"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:14:00 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:14:02 AM",
-            "firstActor": "Steve Chow"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Andre Scott",
-          "Jay Thor Turner",
-          "Julia Laforge",
-          "Maya Popovic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:14:53 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:14:58 AM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:15:05 AM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:15:11 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:15:12 AM",
-            "firstActor": "Amos Lee"
-          }
-        ],
-        "defensePlayers": [
-          "Craig Anderson",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson",
-          "Alessandro Colantonio(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Patrick Kenzie",
-          "Trevor Stocki",
-          "Jaime Boss",
-          "Tanya Gallant"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:15:58 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Nov 29, 2016 2:16:02 AM",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Nov 29, 2016 2:16:05 AM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:16:06 AM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:16:11 AM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:16:12 AM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Jay Thor Turner",
-          "Aleksandra Ostojic",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Craig Anderson",
-          "Steve Chow",
-          "Trevor Stocki",
-          "Megan Robb",
-          "Jessie Robinson",
-          "Alessandro Colantonio(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:16:55 AM",
-            "secondActor": "Steve Chow",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:16:59 AM",
-            "secondActor": "Craig Anderson",
-            "firstActor": "Steve Chow"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:17:02 AM",
-            "secondActor": "Alessandro Colantonio(S)",
-            "firstActor": "Craig Anderson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Nov 29, 2016 2:17:09 AM",
-            "secondActor": "Megan Robb",
-            "firstActor": "Alessandro Colantonio(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Nov 29, 2016 2:17:10 AM",
-            "firstActor": "Megan Robb"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Kevin Barford",
-          "Jason Fraser",
-          "Andre Scott",
-          "Julia Laforge",
-          "Maya Popovic"
-        ]
-      }
-    ]
-  },
   "event_string": [
     "",
     "Pull,Geofford seaborn,",
@@ -3392,5 +541,2294 @@
   ],
   "time": "2016-11-29T01:17:32.801Z",
   "week": 4,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Maya Popovic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Tanya Gallant",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Tanya Gallant",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Jaime Boss",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Julia Laforge"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Trevor Stocki",
+        "Tanya Gallant",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Jaime Boss",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Tanya Gallant",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Patrick Kenzie",
+        "Tanya Gallant",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Stanley Kent",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jessie Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant",
+        "Alessandro Colantonio(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson",
+        "Alessandro Colantonio(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Jaime Boss",
+        "Tanya Gallant",
+        "Alessandro Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson",
+        "Alessandro Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson",
+        "Alessandro Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Jaime Boss",
+        "Tanya Gallant",
+        "Alessandro Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Andre Scott",
+        "Jay Thor Turner",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson",
+        "Alessandro Colantonio(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Patrick Kenzie",
+        "Trevor Stocki",
+        "Jaime Boss",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Jay Thor Turner",
+        "Aleksandra Ostojic",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Steve Chow",
+        "Trevor Stocki",
+        "Megan Robb",
+        "Jessie Robinson",
+        "Alessandro Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Jason Fraser",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio(S)",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Hindsight Hooligans",
+  "homeRoster": [
+    "Julia Laforge",
+    "Aleksandra Ostojic",
+    "Maya Popovic",
+    "Carrie-Anne Whyte",
+    "Amos Lee",
+    "Kevin Barford",
+    "Jason Fraser",
+    "Hadrian Mertins-Kirkwood",
+    "Michael O'Hare",
+    "Andre Scott",
+    "Jay Thor Turner",
+    "Geofford seaborn"
+  ],
+  "awayTeam": "Like a Boss",
+  "awayRoster": [
+    "Jaime Boss",
+    "Tanya Gallant",
+    "Megan Robb",
+    "Jessie Robinson",
+    "Craig Anderson",
+    "Steve Chow",
+    "Kevin Hughes",
+    "Stanley Kent",
+    "Patrick Kenzie",
+    "Ryan Mussell",
+    "Trevor Stocki",
+    "Nick Theriault"
+  ],
+  "awayScore": 13,
+  "homeScore": 17
 }

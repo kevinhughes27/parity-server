@@ -1,0 +1,2684 @@
+{
+  "league_id": 2,
+  "week": 6,
+  "homeTeam": "Huck Huck Goose",
+  "homeScore": "17",
+  "homeRoster": [
+    "Kinley Gee",
+    "Kris Bergmann",
+    "Aleks Ostjk(S)",
+    "Amos Lee",
+    "Laura Knowles(S)",
+    "Neena Sidhu",
+    "Geoff Liu",
+    "Ivan Sabourin",
+    "Greg Probe",
+    "Greg Kung",
+    "Hope Celani",
+    "Andrew Smith"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "22",
+  "awayRoster": [
+    "Andrea Proulx",
+    "Steve Chow",
+    "Mehmet Karman",
+    "Maya Popovic",
+    "Shubho Bo Biswas",
+    "Andrew W Cameron",
+    "Christian Hamel",
+    "Amelia Keenan",
+    "Douglas Brierley",
+    "Stephen Close",
+    "Stephanie White",
+    "Graham Brown"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Kinley Gee",
+        "Kris Bergmann",
+        "Aleks Ostjk(S)"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Neena Sidhu",
+        "Kinley Gee",
+        "Kris Bergmann",
+        "Amos Lee",
+        "Aleks Ostjk(S)"
+      ],
+      "defensePlayers": [
+        "Christian Hamel",
+        "Amelia Keenan",
+        "Andrea Proulx",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Laura Knowles(S)",
+        "Ivan Sabourin",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Neena Sidhu",
+        "Kinley Gee",
+        "Amos Lee",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Hope Celani",
+        "Geoff Liu",
+        "Aleks Ostjk(S)",
+        "Ivan Sabourin"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Andrea Proulx",
+        "Steve Chow",
+        "Stephen Close",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Aleks Ostjk(S)",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kinley Gee",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Douglas Brierley",
+        "Shubho Bo Biswas",
+        "Stephanie White",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee",
+        "Greg Kung",
+        "Amos Lee",
+        "Aleks Ostjk(S)"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Amelia Keenan"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Aleks Ostjk(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Amos Lee",
+        "Greg Kung",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Aleks Ostjk(S)",
+        "Ivan Sabourin",
+        "Kinley Gee",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Stephanie White",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Kinley Gee",
+        "Greg Probe",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Stephen Close",
+        "Amelia Keenan",
+        "Graham Brown",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Graham Brown"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Aleks Ostjk(S)",
+        "Hope Celani",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Stephanie White",
+        "Christian Hamel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee",
+        "Aleks Ostjk(S)",
+        "Neena Sidhu",
+        "Greg Probe",
+        "Greg Kung",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christian Hamel",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christian Hamel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Hope Celani",
+        "Kinley Gee",
+        "Aleks Ostjk(S)",
+        "Greg Probe",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Andrea Proulx",
+        "Stephen Close",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geoff Liu",
+        "Amos Lee",
+        "Aleks Ostjk(S)",
+        "Kris Bergmann"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geoff Liu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Amelia Keenan",
+        "Andrea Proulx",
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Hope Celani",
+        "Aleks Ostjk(S)",
+        "Kris Bergmann",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Christian Hamel",
+        "Mehmet Karman",
+        "Andrew W Cameron",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Greg Probe",
+        "Kinley Gee",
+        "Neena Sidhu",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Steve Chow",
+        "Stephen Close",
+        "Shubho Bo Biswas",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geoff Liu",
+        "Kris Bergmann",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Christian Hamel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Kinley Gee",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Andrea Proulx",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geoff Liu"
+      ],
+      "defensePlayers": [
+        "Christian Hamel",
+        "Douglas Brierley",
+        "Mehmet Karman",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christian Hamel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Hope Celani",
+        "Geoff Liu"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Aleks Ostjk(S)",
+        "Kinley Gee",
+        "Hope Celani",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Steve Chow",
+        "Graham Brown",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Christian Hamel",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Kinley Gee",
+        "Neena Sidhu",
+        "Greg Probe",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Amelia Keenan",
+        "Shubho Bo Biswas",
+        "Stephen Close",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geoff Liu",
+        "Amos Lee",
+        "Aleks Ostjk(S)",
+        "Kris Bergmann"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geoff Liu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Amelia Keenan",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Hope Celani",
+        "Ivan Sabourin",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Stephanie White",
+        "Douglas Brierley",
+        "Christian Hamel",
+        "Andrew W Cameron"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kris Bergmann",
+        "Neena Sidhu",
+        "Andrew Smith",
+        "Geoff Liu",
+        "Greg Kung",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Amelia Keenan",
+        "Graham Brown",
+        "Shubho Bo Biswas",
+        "Stephen Close",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Kinley Gee",
+        "Greg Probe",
+        "Aleks Ostjk(S)",
+        "Greg Kung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Aleks Ostjk(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostjk(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    }
+  ]
+}

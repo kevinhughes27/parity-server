@@ -1,0 +1,2747 @@
+{
+  "league_id": 3,
+  "week": 11,
+  "homeTeam": "Ignominious",
+  "homeScore": "21",
+  "homeRoster": [
+    "Al Colantonio",
+    "Chris Sullivan",
+    "Nick Theriault",
+    "Trevor Stocki",
+    "Anne Leduc",
+    "Laura Knowles",
+    "Matt Masse",
+    "Matthew Kerr",
+    "CarolAnne Black",
+    "Wynne Gee"
+  ],
+  "awayTeam": "Luke Parity",
+  "awayScore": "21",
+  "awayRoster": [
+    "Alex Bush",
+    "Greg Probe",
+    "Marc Vachon",
+    "Steve Chow",
+    "Ewelina Sosnowska",
+    "Jessie Robinson",
+    "Andre Scott",
+    "Jeff Hunt",
+    "Kyle Sprysa",
+    "Nick Klimowicz",
+    "Hope Celani"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Kerr"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Trevor Stocki"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Trevor Stocki"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Masse"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Kerr"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Greg Probe",
+        "Marc Vachon",
+        "Steve Chow",
+        "Hope Celani",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "CarolAnne Black",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    }
+  ]
+}

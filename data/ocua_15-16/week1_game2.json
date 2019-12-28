@@ -1,0 +1,2713 @@
+{
+  "league_id": 3,
+  "week": 1,
+  "homeTeam": "Lowered Expectations",
+  "homeScore": "15",
+  "homeRoster": [
+    "Benoit Goulet",
+    "Greg Linton",
+    "Ian Ewing",
+    "Mackenzie King",
+    "Laura Chambers Storey",
+    "Stephanie White",
+    "Edwin Wong",
+    "Geofford seaborn",
+    "Nicholas Aghajanian",
+    "Shubho Bo Biswas",
+    "Anne Leduc",
+    "CarolAnne Black"
+  ],
+  "awayTeam": "Scoobers in Tokyo",
+  "awayScore": "22",
+  "awayRoster": [
+    "Amos Lee",
+    "Douglas Brierley",
+    "Khalid Al-Zahrani",
+    "Tim Kealey",
+    "Ashlin Kelly",
+    "Stacey Wowchuk",
+    "Jonathan Champagne",
+    "Sina Dee",
+    "Steve Chow",
+    "Kathryn Jarrett-Ekholm",
+    "Nina Ramic"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Steve Chow",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Steve Chow",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stacey Wowchuk"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Steve Chow",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Anne Leduc"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Shubho Bo Biswas"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Steve Chow",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Steve Chow",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Ashlin Kelly",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Sina Dee",
+        "Steve Chow",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Steve Chow",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tim Kealey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Steve Chow",
+        "Tim Kealey",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tim Kealey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Steve Chow",
+        "Tim Kealey",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Douglas Brierley",
+        "Jonathan Champagne",
+        "Steve Chow",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Tim Kealey",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Linton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jonathan Champagne",
+        "Steve Chow",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "Kathryn Jarrett-Ekholm"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Khalid Al-Zahrani",
+        "Sina Dee",
+        "Steve Chow",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Shubho Bo Biswas",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        }
+      ]
+    }
+  ]
+}

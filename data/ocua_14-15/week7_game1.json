@@ -1,0 +1,2464 @@
+{
+  "league_id": 2,
+  "week": 7,
+  "homeTeam": "Karma Down Under",
+  "homeScore": "17",
+  "homeRoster": [
+    "Andrea Proulx",
+    "Douglas Brierley",
+    "Richard Gregory",
+    "Stephen Close",
+    "Mehmet Karman",
+    "Shubho Bo Biswas",
+    "Marc Gobeil",
+    "Andrew W Cameron",
+    "Amelia Keenan",
+    "Maya Popovic",
+    "Marie-Claude Lacombe"
+  ],
+  "awayTeam": "A Windmill Full of Corpses",
+  "awayScore": "21",
+  "awayRoster": [
+    "Morgan Howard",
+    "Ariel Untiveros",
+    "Jeff Hunt",
+    "Matthew Smith",
+    "An Tran",
+    "Melissa Berry",
+    "Rob Tyson",
+    "Jamie Wildgen",
+    "Kris Bergmann",
+    "Dan Thomson",
+    "Hope Celani",
+    "Saskia Vanderloo"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Douglas Brierley",
+        "Richard Gregory",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Ariel Untiveros",
+        "Jeff Hunt",
+        "Matthew Smith",
+        "An Tran"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Melissa Berry",
+        "Rob Tyson",
+        "Jamie Wildgen",
+        "Kris Bergmann",
+        "Dan Thomson",
+        "An Tran"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Mehmet Karman",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "An Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Richard Gregory",
+        "Andrew W Cameron",
+        "Amelia Keenan",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "An Tran",
+        "Dan Thomson",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Richard Gregory",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Hope Celani",
+        "Morgan Howard",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jamie Wildgen",
+        "An Tran",
+        "Rob Tyson",
+        "Dan Thomson",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Richard Gregory",
+        "Stephen Close",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Amelia Keenan",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "An Tran",
+        "Melissa Berry",
+        "Morgan Howard",
+        "Jamie Wildgen",
+        "Ariel Untiveros"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Maya Popovic",
+        "Richard Gregory",
+        "Andrew W Cameron",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Matthew Smith",
+        "Jeff Hunt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Ariel Untiveros",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Jeff Hunt",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson",
+        "Jamie Wildgen",
+        "Melissa Berry",
+        "Morgan Howard",
+        "Ariel Untiveros",
+        "An Tran"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Tyson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Hope Celani",
+        "Jeff Hunt",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Richard Gregory",
+        "Andrew W Cameron",
+        "Marc Gobeil",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros",
+        "An Tran",
+        "Morgan Howard",
+        "Melissa Berry",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Matthew Smith",
+        "Hope Celani",
+        "Dan Thomson"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson",
+        "Ariel Untiveros",
+        "Jamie Wildgen",
+        "Melissa Berry",
+        "Morgan Howard"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Tyson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Shubho Bo Biswas",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Jeff Hunt",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Ariel Untiveros"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Richard Gregory",
+        "Shubho Bo Biswas",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros",
+        "Rob Tyson",
+        "Jamie Wildgen",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Shubho Bo Biswas",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+        "Matthew Smith",
+        "Dan Thomson",
+        "Jeff Hunt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "An Tran",
+        "Kris Bergmann",
+        "Melissa Berry",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Marie-Claude Lacombe",
+        "Richard Gregory",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "An Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Richard Gregory",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Jamie Wildgen",
+        "Ariel Untiveros"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Ariel Untiveros",
+        "Morgan Howard",
+        "Jamie Wildgen"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Saskia Vanderloo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marie-Claude Lacombe",
+        "Marc Gobeil",
+        "Shubho Bo Biswas",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "An Tran",
+        "Dan Thomson",
+        "Jeff Hunt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros",
+        "Saskia Vanderloo",
+        "Morgan Howard",
+        "Rob Tyson",
+        "Jamie Wildgen"
+      ],
+      "defensePlayers": [
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Tyson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Marc Gobeil",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros",
+        "Morgan Howard",
+        "Saskia Vanderloo",
+        "Rob Tyson",
+        "Jamie Wildgen"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Marie-Claude Lacombe",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "An Tran",
+        "Melissa Berry",
+        "Jeff Hunt"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Ariel Untiveros",
+        "Jamie Wildgen",
+        "Morgan Howard",
+        "Hope Celani",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Saskia Vanderloo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Marie-Claude Lacombe",
+        "Richard Gregory",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Jamie Wildgen",
+        "Ariel Untiveros"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Andrea Proulx",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Dan Thomson",
+        "Jeff Hunt",
+        "Matthew Smith"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Saskia Vanderloo",
+        "Jamie Wildgen",
+        "Ariel Untiveros",
+        "Rob Tyson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Saskia Vanderloo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Marc Gobeil",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson",
+        "Hope Celani",
+        "Ariel Untiveros",
+        "Morgan Howard",
+        "Jamie Wildgen"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Ariel Untiveros"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Richard Gregory",
+        "Marie-Claude Lacombe",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Dan Thomson",
+        "Melissa Berry",
+        "Kris Bergmann",
+        "An Tran",
+        "Matthew Smith"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    }
+  ]
+}

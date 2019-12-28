@@ -1,0 +1,3031 @@
+{
+  "league_id": 2,
+  "week": 4,
+  "homeTeam": "Scoobers in Paris",
+  "homeScore": "28",
+  "homeRoster": [
+    "Heather Wallace",
+    "Jamie Wildgen",
+    "Andrew McGregor",
+    "Matt Trouble Andruff",
+    "David Townsend",
+    "Mackenzie King",
+    "Vanessa Lyon",
+    "Sina Dee",
+    "Sebastien Benard",
+    "Elise Milbradt",
+    "Jen Cluthe",
+    "Max Angel"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "17",
+  "awayRoster": [
+    "Douglas Brierley",
+    "Andrea Proulx",
+    "Celine Dumais(S)",
+    "Christian Hamel",
+    "Maya Popovic",
+    "Steve Chow",
+    "Shubho Bo Biswas",
+    "Mehmet Karman",
+    "Stephen Close",
+    "Andrew W Cameron",
+    "Graham Brown"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Jamie Wildgen",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Celine Dumais(S)",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "David Townsend",
+        "Mackenzie King",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Andrea Proulx",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Mackenzie King",
+        "Matt Trouble Andruff"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Stephen Close",
+        "Celine Dumais(S)",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "Mackenzie King",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Jen Cluthe",
+        "Heather Wallace",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais(S)",
+        "Andrea Proulx",
+        "Andrew W Cameron",
+        "Christian Hamel",
+        "Mehmet Karman",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Mackenzie King",
+        "Matt Trouble Andruff",
+        "David Townsend",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Celine Dumais(S)",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Max Angel",
+        "Jamie Wildgen",
+        "Jen Cluthe",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Christian Hamel",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Shubho Bo Biswas",
+        "Stephen Close",
+        "Celine Dumais(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Stephen Close",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Vanessa Lyon",
+        "David Townsend",
+        "Sebastien Benard",
+        "Matt Trouble Andruff",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Steve Chow",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Max Angel",
+        "Heather Wallace",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Max Angel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Christian Hamel",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Matt Trouble Andruff"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Heather Wallace",
+        "Max Angel",
+        "Jamie Wildgen",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Matt Trouble Andruff",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Sina Dee",
+        "Andrew McGregor",
+        "Jen Cluthe",
+        "Jamie Wildgen"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Steve Chow",
+        "Graham Brown",
+        "Stephen Close",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Vanessa Lyon",
+        "Sebastien Benard",
+        "Matt Trouble Andruff",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Andrew McGregor",
+        "Max Angel",
+        "Sina Dee",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Christian Hamel",
+        "Stephen Close",
+        "Celine Dumais(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Max Angel",
+        "Jamie Wildgen",
+        "Sina Dee",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Max Angel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais(S)",
+        "Stephen Close",
+        "Steve Chow",
+        "Christian Hamel",
+        "Graham Brown",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "David Townsend",
+        "Sebastien Benard",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Andrea Proulx",
+        "Graham Brown",
+        "Stephen Close",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jen Cluthe",
+        "Andrew McGregor",
+        "Max Angel",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Max Angel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Steve Chow",
+        "Celine Dumais(S)",
+        "Andrea Proulx",
+        "Graham Brown",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Shubho Bo Biswas",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Trouble Andruff",
+        "Sebastien Benard",
+        "David Townsend",
+        "Mackenzie King",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Christian Hamel",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Max Angel",
+        "Heather Wallace",
+        "Andrew McGregor",
+        "Sina Dee",
+        "Jamie Wildgen",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Steve Chow",
+        "Maya Popovic",
+        "Stephen Close",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Vanessa Lyon",
+        "David Townsend",
+        "Elise Milbradt",
+        "Matt Trouble Andruff",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Celine Dumais(S)",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jamie Wildgen",
+        "Max Angel"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Elise Milbradt",
+        "Vanessa Lyon",
+        "Matt Trouble Andruff",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Andrea Proulx",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Jamie Wildgen",
+        "Max Angel",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Max Angel",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Christian Hamel",
+        "Steve Chow",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Sebastien Benard",
+        "Vanessa Lyon",
+        "Matt Trouble Andruff"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Shubho Bo Biswas",
+        "Mehmet Karman",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "David Townsend",
+        "Matt Trouble Andruff",
+        "Mackenzie King",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais(S)",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Max Angel",
+        "Heather Wallace",
+        "Sina Dee",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Sina Dee",
+        "Max Angel",
+        "Jamie Wildgen",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Andrea Proulx",
+        "Stephen Close",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Max Angel"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Max Angel"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Steve Chow",
+        "Mehmet Karman",
+        "Celine Dumais(S)",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Matt Trouble Andruff",
+        "Mackenzie King",
+        "Vanessa Lyon",
+        "Andrew McGregor",
+        "Sebastien Benard",
+        "David Townsend"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Celine Dumais(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais(S)",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Trouble Andruff",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Stephen Close",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Jen Cluthe",
+        "Jamie Wildgen",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Matt Trouble Andruff"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Trouble Andruff"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Trouble Andruff"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Steve Chow",
+        "Shubho Bo Biswas",
+        "Andrea Proulx",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Jen Cluthe",
+        "Jamie Wildgen",
+        "Andrew McGregor",
+        "Vanessa Lyon",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Elise Milbradt",
+        "Mackenzie King",
+        "Vanessa Lyon",
+        "David Townsend"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Andrew W Cameron",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2302 @@
+{
+  "league_id": 3,
+  "week": 2,
+  "homeTeam": "The CEOs",
+  "homeScore": "18",
+  "homeRoster": [
+    "Andrew W Cameron",
+    "Christopher Castonguay",
+    "David O'Connor",
+    "Jim Robinson",
+    "Kindha Gorman",
+    "Olesia Bissett",
+    "Jeff Hunt",
+    "Marc Vachon",
+    "Nick Theriault",
+    "Owen Lumley",
+    "Ewelina Sosnowska",
+    "Stacey Wowchuk"
+  ],
+  "awayTeam": "Lowered Expectations",
+  "awayScore": "12",
+  "awayRoster": [
+    "Benoit Goulet",
+    "Ian Ewing",
+    "Mackenzie King",
+    "Nicholas Aghajanian",
+    "Anne Leduc",
+    "Stephanie White",
+    "Edwin Wong",
+    "Geofford seaborn",
+    "Shubho Bo Biswas",
+    "Steve Chow",
+    "CarolAnne Black"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "CarolAnne Black",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jim Robinson",
+        "Kindha Gorman",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    }
+  ]
+}

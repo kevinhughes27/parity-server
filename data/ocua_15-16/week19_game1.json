@@ -1,0 +1,2667 @@
+{
+  "league_id": 3,
+  "week": 19,
+  "homeTeam": "Karma Down Under",
+  "homeScore": "21",
+  "homeRoster": [
+    "Chris Tran",
+    "Christopher Keates",
+    "Jonathan Pindur",
+    "Matthew Smith",
+    "Adrienne Junek",
+    "Nina Ramic",
+    "Andrew W Cameron",
+    "Dan Thomson",
+    "Mehmet Karman",
+    "Patrick Kenzie",
+    "Mel Berry"
+  ],
+  "awayTeam": "Luke Parity",
+  "awayScore": "19",
+  "awayRoster": [
+    "Alex Bush",
+    "Andre Scott",
+    "Greg Cormier",
+    "Kyle Sprysa",
+    "Ewelina Sosnowska",
+    "Jessie Robinson",
+    "Adam MacDonald",
+    "Jeff Hunt",
+    "Nick Klimowicz",
+    "Hope Celani",
+    "Laura Chambers Storey",
+    "Greg Probe"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Kyle Sprysa",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mel Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Adam MacDonald"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adam MacDonald"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jessie Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adam MacDonald"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adam MacDonald"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ewelina Sosnowska"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Adam MacDonald"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adam MacDonald",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Christopher Keates",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Greg Cormier",
+        "Ewelina Sosnowska",
+        "Jessie Robinson",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Adrienne Junek",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Adam MacDonald",
+        "Jeff Hunt",
+        "Kyle Sprysa",
+        "Nick Klimowicz",
+        "Hope Celani",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    }
+  ]
+}

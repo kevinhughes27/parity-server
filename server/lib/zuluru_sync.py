@@ -148,10 +148,17 @@ class ZuluruSync:
             gender_elems = []
             for p in player_elems:
                 zuluru_id = p.get('id').replace(self.player_id_preamble, '')
-                gender = self.player_db[zuluru_id]['gender']
+
+                reg_player = self.player_db.find_by_zuluru_id(zuluru_id)
+                if reg_player == None:
+                    # try by name
+                    name = p.get_text()
+                    reg_player = self.player_db.find_by_name(name)
+
+                gender = reg_player['gender']
                 gender_elems.append(gender)
 
-        roles_regex = '(Regular player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
+        roles_regex = '(Regular player|Substitute player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
         role_elems = table.findAll(text=re.compile(roles_regex))
         assert(len(player_elems) == len(role_elems))
 

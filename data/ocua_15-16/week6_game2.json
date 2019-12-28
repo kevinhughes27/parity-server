@@ -1,0 +1,2476 @@
+{
+  "league_id": 3,
+  "week": 6,
+  "homeTeam": "Scoobers in Tokyo",
+  "homeScore": "15",
+  "homeRoster": [
+    "David Townsend",
+    "Derek Tokarski",
+    "Douglas Brierley",
+    "Sina Dee",
+    "Ashlin Kelly",
+    "karin phillips",
+    "Amos Lee",
+    "Greg Linton",
+    "Jonathan Champagne",
+    "Tim Kealey",
+    "Kathryn Jarrett-Ekholm",
+    "Neena Sidhu"
+  ],
+  "awayTeam": "The CEOs",
+  "awayScore": "21",
+  "awayRoster": [
+    "Andrew W Cameron",
+    "Christopher Keates",
+    "Marc Vachon",
+    "Owen Lumley",
+    "Kindha Gorman",
+    "Melissa Jess",
+    "Jeff Hunt",
+    "Jim Robinson",
+    "Krys Kudakiewicz",
+    "Nick Theriault",
+    "Stacey Wowchuk",
+    "Jessie Robinson(S)"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "karin phillips"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kathryn Jarrett-Ekholm",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "karin phillips"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "karin phillips"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Derek Tokarski"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Tim Kealey",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Linton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Derek Tokarski"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Derek Tokarski",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "David Townsend",
+        "Derek Tokarski",
+        "Douglas Brierley",
+        "Ashlin Kelly",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Keates",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Jim Robinson",
+        "Krys Kudakiewicz",
+        "Nick Theriault",
+        "Stacey Wowchuk",
+        "Jessie Robinson(S)"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Sina Dee",
+        "Tim Kealey",
+        "Kathryn Jarrett-Ekholm",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kathryn Jarrett-Ekholm"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    }
+  ]
+}

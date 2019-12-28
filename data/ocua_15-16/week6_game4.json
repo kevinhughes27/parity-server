@@ -1,0 +1,2627 @@
+{
+  "league_id": 3,
+  "week": 6,
+  "homeTeam": "Stan's Sturgeons",
+  "homeScore": "22",
+  "homeRoster": [
+    "Frederic Caron",
+    "Jamie Wildgen",
+    "Khalid Al-Zahrani",
+    "Stanley Kent",
+    "Marie-Claude Lacombe",
+    "Laura Knowles(S)",
+    "Brian Kells",
+    "Chris Tran",
+    "Nina Ramic",
+    "Laura Chambers Storey(S)",
+    "James Maeng(S)"
+  ],
+  "awayTeam": "#HammerHouse",
+  "awayScore": "19",
+  "awayRoster": [
+    "Alex Bush",
+    "Allan Godding",
+    "Andre Scott",
+    "Greg Probe",
+    "Jessie Robinson",
+    "Tanya Gallant",
+    "Kyle Sprysa",
+    "Rob Tyson",
+    "Mel Berry"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mel Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James Maeng(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Probe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Nina Ramic",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James Maeng(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Knowles(S)",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Marie-Claude Lacombe",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Tanya Gallant",
+        "Mel Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Chris Tran",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Nina Ramic",
+        "James Maeng(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Jessie Robinson",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Nina Ramic",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Marie-Claude Lacombe",
+        "Laura Chambers Storey(S)",
+        "James Maeng(S)"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Allan Godding",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Mel Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Mel Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mel Berry",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "James Maeng(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James Maeng(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    }
+  ]
+}

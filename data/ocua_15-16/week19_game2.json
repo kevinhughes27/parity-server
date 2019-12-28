@@ -1,0 +1,3245 @@
+{
+  "league_id": 3,
+  "week": 19,
+  "homeTeam": "Pirate Rob's Swashbuckling Rogues",
+  "homeScore": "22",
+  "homeRoster": [
+    "Alec Clark",
+    "Geofford seaborn",
+    "Mackenzie King",
+    "Rob Ives",
+    "Lissa Greenspoon",
+    "Megan Berry",
+    "Christopher Castonguay",
+    "David Townsend",
+    "Mark Donahue",
+    "Matt Masse",
+    "Andrea Proulx",
+    "Marie-Claude Lacombe"
+  ],
+  "awayTeam": "Katy Parity",
+  "awayScore": "21",
+  "awayRoster": [
+    "Jonathan Champagne",
+    "Marc Vachon",
+    "Owen Lumley",
+    "Stephen Close",
+    "Kindha Gorman",
+    "Kirsten Querbach",
+    "Brian Kells",
+    "Graham Brown",
+    "Khalid Al-Zahrani",
+    "Olesia Bissett",
+    "Stephanie White"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brian Kells"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Owen Lumley",
+        "Stephen Close",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David Townsend",
+        "Mark Donahue",
+        "Matt Masse",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Marc Vachon",
+        "Olesia Bissett",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    }
+  ]
+}

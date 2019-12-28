@@ -117,6 +117,17 @@ export default class Points extends Component {
     }
   }
 
+  durationCopy (firstEvent, lastEvent) {
+    if (firstEvent.timestamp) {
+      const startTime = new Date(firstEvent.timestamp)
+      const endTime = new Date(lastEvent.timestamp)
+
+      const duration = format(endTime - startTime, "m:ss")
+      const durationCopy = `(${duration} minutes)`
+      return durationCopy
+    }
+  }
+
   renderPoint (point, homeScore, awayScore, idx) {
     const game = this.props.game
 
@@ -158,11 +169,7 @@ export default class Points extends Component {
       ? `${thrower} to ${receiver}`
       : receiver
 
-    const startTime = new Date(firstEvent.timestamp)
-    const endTime = new Date(lastEvent.timestamp)
-
-    const duration = format(endTime - startTime, "m:ss")
-    const durationCopy = `(${duration} minutes)`
+    const durationCopy = this.durationCopy(firstEvent, lastEvent)
 
     if (homeScored) {
       homeScore = homeScore + 1
