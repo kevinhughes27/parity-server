@@ -22,10 +22,12 @@ def build_players_response(league_id):
             player.salary = round(pro_rated_salary)
 
         elif league.salary_calc == "sum":
+            base = 500000
+
             earnings = [ps.pay for ps in player_stats]
             total_earnings = sum(earnings)
 
-            player.salary = total_earnings
+            player.salary = 500000 + total_earnings
 
 
     # Estimate Salaries 👎
