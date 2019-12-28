@@ -1,0 +1,2652 @@
+{
+  "league_id": 3,
+  "week": 6,
+  "homeTeam": "Lowered Expectations",
+  "homeScore": "18",
+  "homeRoster": [
+    "Edwin Wong",
+    "Geofford seaborn",
+    "Ian Ewing",
+    "Steve Chow",
+    "Heather Wallace",
+    "Stephanie White",
+    "James Maeng",
+    "Nicholas Aghajanian",
+    "Shubho Bo Biswas",
+    "Anne Leduc",
+    "Laura Chambers Storey"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "18",
+  "awayRoster": [
+    "Alec Clark",
+    "Kris Bergmann",
+    "Mark Donahue",
+    "Stephen Close",
+    "Laura Knowles",
+    "Wynne Gee",
+    "Mehmet Karman",
+    "Patrick Kenzie",
+    "Alison Ward",
+    "Dan Thomson",
+    "Andrea Proulx"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Stephen Close",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Alison Ward",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alison Ward"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Stephen Close",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Alison Ward",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alison Ward"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ian Ewing",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Ian Ewing",
+        "James Maeng",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "James Maeng",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "James Maeng",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Ian Ewing",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "James Maeng",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Heather Wallace",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Mark Donahue",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Patrick Kenzie",
+        "Alison Ward",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    }
+  ]
+}

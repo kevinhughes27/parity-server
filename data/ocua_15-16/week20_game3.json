@@ -1,0 +1,2464 @@
+{
+  "league_id": 3,
+  "week": 20,
+  "homeTeam": "Pirate Rob's Swashbuckling Rogues",
+  "homeScore": "18",
+  "homeRoster": [
+    "Alec Clark",
+    "Christopher Castonguay",
+    "Geofford seaborn",
+    "Rob Ives",
+    "Marie-Claude Lacombe",
+    "Megan Berry",
+    "Mackenzie King",
+    "Mark Donahue",
+    "Lissa Greenspoon",
+    "Andrea Proulx"
+  ],
+  "awayTeam": "Scoobers in New York",
+  "awayScore": "17",
+  "awayRoster": [
+    "Shubho Bo Biswas",
+    "Ashlin Kelly",
+    "Karen Kavanagh",
+    "Jonathan Pindur(S)",
+    "Frederic Caron(S)",
+    "Ariel Untiveros(S)(S)",
+    "Nicholas Aghajanian",
+    "Christine Beals",
+    "Heather Wallace",
+    "Christopher Keates(S)"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Rob Ives",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Frederic Caron(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Rob Ives",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Shubho Bo Biswas"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Frederic Caron(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Mackenzie King",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Christine Beals",
+        "Heather Wallace",
+        "Christopher Keates(S)",
+        "Ariel Untiveros(S)(S)"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Christopher Castonguay",
+        "Geofford seaborn",
+        "Mackenzie King",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ariel Untiveros(S)(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Rob Ives",
+        "Megan Berry",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Ashlin Kelly",
+        "Karen Kavanagh",
+        "Christopher Keates(S)",
+        "Jonathan Pindur(S)",
+        "Frederic Caron(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jonathan Pindur(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Frederic Caron(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron(S)",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Christopher Keates(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates(S)",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    }
+  ]
+}

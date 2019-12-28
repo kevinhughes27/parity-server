@@ -1,0 +1,2720 @@
+{
+  "league_id": 3,
+  "week": 12,
+  "homeTeam": "Ignominious",
+  "homeScore": "19",
+  "homeRoster": [
+    "Jeremy Bryan",
+    "Matt Masse",
+    "Matthew Kerr",
+    "Nick Theriault",
+    "Laura Knowles",
+    "Wynne Gee",
+    "Al Colantonio",
+    "Allan Godding",
+    "Chris Sullivan",
+    "Trevor Stocki",
+    "Anne Leduc",
+    "CarolAnne Black"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "17",
+  "awayRoster": [
+    "Andrew W Cameron",
+    "Chris Tran",
+    "Jonathan Pindur",
+    "Tim Kealey",
+    "Olesia Bissett",
+    "Stacey Wowchuk",
+    "Dan Thomson",
+    "Matthew Smith",
+    "Mehmet Karman",
+    "Adrienne Junek",
+    "Neena Sidhu"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Chris Sullivan",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Masse"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Chris Sullivan",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Jeremy Bryan",
+        "Matt Masse",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Chris Sullivan",
+        "Matt Masse",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Jonathan Pindur",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "CarolAnne Black",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Dan Thomson",
+        "Matthew Smith",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "CarolAnne Black"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tim Kealey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Dan Thomson",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Dan Thomson",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stacey Wowchuk"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Kerr"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Mehmet Karman",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Jonathan Pindur",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "CarolAnne Black"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "CarolAnne Black"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Tim Kealey",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Tran",
+        "Dan Thomson",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Matt Masse",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Trevor Stocki"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Allan Godding",
+        "Matt Masse",
+        "Matthew Kerr",
+        "Laura Knowles",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Chris Tran",
+        "Jonathan Pindur",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Jeremy Bryan",
+        "Nick Theriault",
+        "Trevor Stocki",
+        "Anne Leduc",
+        "CarolAnne Black"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Dan Thomson",
+        "Matthew Smith",
+        "Tim Kealey",
+        "Olesia Bissett",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    }
+  ]
+}

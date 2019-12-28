@@ -1,0 +1,2383 @@
+{
+  "league_id": 3,
+  "week": 1,
+  "homeTeam": "The CEOs",
+  "homeScore": "14",
+  "homeRoster": [
+    "Andrew W Cameron",
+    "Christopher Castonguay",
+    "Jeff Hunt",
+    "Owen Lumley",
+    "Kindha Gorman",
+    "Olesia Bissett",
+    "David O'Connor",
+    "Marc Vachon",
+    "Nick Theriault",
+    "Ewelina Sosnowska",
+    "karin phillips"
+  ],
+  "awayTeam": "#HammerHouse",
+  "awayScore": "20",
+  "awayRoster": [
+    "Greg Probe",
+    "Jeremy Bryan",
+    "Kyle Sprysa",
+    "Matthew Kerr",
+    "Heather Wallace",
+    "Tanya Gallant",
+    "Allan Godding",
+    "Andre Scott",
+    "Rob Tyson",
+    "Justine price"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Kerr"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "karin phillips"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Matthew Kerr",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Matthew Kerr",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Kerr"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Marc Vachon",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Greg Probe",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Allan Godding",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Christopher Castonguay",
+        "Marc Vachon",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Allan Godding"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "David O'Connor",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Allan Godding"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Allan Godding"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Nick Theriault",
+        "Owen Lumley",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Castonguay"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Matthew Kerr",
+        "Justine price",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jeff Hunt",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine price"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Christopher Castonguay",
+        "Jeff Hunt",
+        "Nick Theriault",
+        "Kindha Gorman",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Justine price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine price",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Justine price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Castonguay",
+        "David O'Connor",
+        "Marc Vachon",
+        "Owen Lumley",
+        "Ewelina Sosnowska",
+        "karin phillips"
+      ],
+      "defensePlayers": [
+        "Allan Godding",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Matthew Kerr",
+        "Heather Wallace",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "karin phillips",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Matthew Kerr"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Kerr",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "karin phillips"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "karin phillips"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Christopher Castonguay"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Castonguay",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    }
+  ]
+}

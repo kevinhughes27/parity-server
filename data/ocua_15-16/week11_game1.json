@@ -1,0 +1,2509 @@
+{
+  "league_id": 3,
+  "week": 11,
+  "homeTeam": "Scoobers in New York",
+  "homeScore": "21",
+  "homeRoster": [
+    "Christopher Keates",
+    "Douglas Brierley",
+    "Kris Bergmann",
+    "Will Leckie",
+    "Ashlin Kelly",
+    "Nina Ramic",
+    "David O'Connor",
+    "Jim Robinson",
+    "Nicholas Aghajanian",
+    "Sina Dee",
+    "Sandra Hanson",
+    "Laura Chambers Storey"
+  ],
+  "awayTeam": "Pirate Rob's Swashbuckling Rogues",
+  "awayScore": "17",
+  "awayRoster": [
+    "David Townsend",
+    "Greg Cormier",
+    "Mark Donahue",
+    "Rob Ives",
+    "Lissa Greenspoon",
+    "Marie-Claude Lacombe",
+    "Geofford seaborn",
+    "Sebastien Benard",
+    "Megan Berry",
+    "Andrea Proulx"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Marie-Claude Lacombe",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Cormier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Douglas Brierley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Greg Cormier",
+        "Rob Ives",
+        "Sebastien Benard",
+        "Lissa Greenspoon",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend",
+        "Greg Cormier",
+        "Mark Donahue",
+        "Rob Ives",
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Jim Robinson",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Nina Ramic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Nicholas Aghajanian",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "David Townsend",
+        "Geofford seaborn",
+        "Mark Donahue",
+        "Sebastien Benard",
+        "Andrea Proulx",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    }
+  ]
+}
