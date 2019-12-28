@@ -9,6 +9,10 @@
 #
 # The transformed data is then uploaded, stats are calculated using the current
 # server then we can validate the results against the original stats csv files.
+#
+# Note that in 2014-2015 we did not record who was on the field for O/D plus minus
+# I was able to parse partial results for this but if a player produce an event
+# there is no way to know for sure if they were on.
 
 require 'csv'
 require 'set'
