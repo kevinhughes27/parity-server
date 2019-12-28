@@ -17,7 +17,8 @@ Server Setup
     * `python server/cli.py create-leagues`
     * `python server/cli.py zuluru-sync`
     * `python server/cli.py game-sync`
-5. You can inspect the server responses at `http://localhost:5000/api/weeks/1` and `http://localhost:5000/api/stats` etc.
+5. You can inspect available leagues at at `http://localhost:5000/api/leagues`
+6. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
 
 Roster sync requires certain zuluru privileges and some offline saved player data. If you need a full database ask for in #parity-dev and someone will help you out.
 
@@ -32,7 +33,7 @@ Client Setup
 3. Install the javascript dependencies by running `yarn install`
 4. Start the client by running `yarn start`. It will open a browser window with the app running on your computer. If you make changes to the code the window will reload with the changes.
 
-Note that the client connects to the production server by default. This is safe to do because the client is read-only. This enables an easier development experience for anyone working only on the frontend. If you need to connect to a local server update the `proxy` to point to the local server `http://localhost:5000` in the `client/package.json` file.
+Note that the client connects to the production server by default. This is safe to do because the client is read-only. This enables an easier development experience for anyone working only on the frontend. If you need to connect to a local server update the `proxy` to point to the local server `http://localhost:5000` in the `web/package.json` file.
 
 
 Testing
@@ -87,7 +88,7 @@ To correct errors in the most recent week of stats do the following:
 To create a dump of the postgres database locally:
 
 ```
-sudo docker exec parity-server_db_1 pg_dump -Fc --no-acl --no-owner -U postgres postgres > parity_db_pgdump
+sudo docker exec parity-server_db_1 pg_dump -Fc --no-acl --no-owner -U postgres postgres > pgdump_name
 ```
 
 
@@ -99,7 +100,7 @@ To restore a pg_dump on prod:
 #  allUsers
 #  Storage Object Viewer
 
-heroku pg:backups:restore 'https://storage.googleapis.com/parity/parity_db_pgdump' DATABASE_URL --app parity-server --confirm=parity-server
+heroku pg:backups:restore 'https://storage.googleapis.com/parity/pgdump' DATABASE_URL --app parity-server --confirm=parity-server
 ```
 
 Contributing
