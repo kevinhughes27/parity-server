@@ -5,7 +5,7 @@ require "uri"
 require "csv"
 
 LEAGUE_ID = 2
-validation_dir = 'validation/ocua_14-15'
+validation_dir = 'data/validation/ocua_14-15'
 
 def load_validation_data(validation_dir, week)
   data_string = File.read("#{validation_dir}/week#{week}.csv")
@@ -59,7 +59,7 @@ end
 
 def nickname_db
   @nickname_db ||= begin
-    CSV.read("validation/ocua_14-15/nicknames.tsv", { :col_sep => "\t" })
+    CSV.read("data/validation/ocua_14-15/nicknames.tsv", { :col_sep => "\t" })
   end
 end
 

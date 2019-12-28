@@ -5,7 +5,7 @@ require "uri"
 require "csv"
 
 LEAGUE_ID = 3
-validation_dir = 'validation/ocua_15-16'
+validation_dir = 'data/validation/ocua_15-16'
 
 def load_validation_data(validation_dir, week)
   data_string = File.read("#{validation_dir}/week#{week}.csv")
