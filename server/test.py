@@ -99,6 +99,12 @@ class ServerTests(FlaskTest, SnapShotTest):
         self.assertMatchSnapshot(stats)
 
 
+    def test_league_endpoint(self):
+        response = self.client.get('/api/leagues')
+        assert response.status_code == 200
+        assert response.json == [{'id': 1, 'name': 'Test', 'zuluru_id': 1}]
+
+
     def test_api_endpoints(self):
         self.upload_game('data/test/mini_game2.json')
 
