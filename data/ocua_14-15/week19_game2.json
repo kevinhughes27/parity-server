@@ -1,0 +1,2719 @@
+{
+  "league_id": 2,
+  "week": 19,
+  "homeTeam": "Dump, Swing, Huck, Repeat",
+  "homeScore": "16",
+  "homeRoster": [
+    "Amos Lee",
+    "Stephanie White",
+    "Douglas Brierley",
+    "Mackenzie King",
+    "Rob Ives",
+    "Jason Fraser",
+    "Cassandra Cheung",
+    "Graham Brown",
+    "Marc Gobeil",
+    "Marie-Claude Lacombe",
+    "Steve Chow",
+    "Lissa Greenspoon"
+  ],
+  "awayTeam": "Conflict of Interests",
+  "awayScore": "24",
+  "awayRoster": [
+    "Alex Bush",
+    "Matt Masse",
+    "Laura Knowles",
+    "Khalid Al-Zahrani",
+    "Craig Anderson",
+    "Christopher Keates",
+    "Laura Chambers Storey",
+    "Jay Thor Turner",
+    "Megan Gauthier",
+    "Mark Donahue(S)",
+    "Justin To",
+    "Kindha Gorman"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Stephanie White",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Matt Masse",
+        "Laura Knowles",
+        "Khalid Al-Zahrani"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Christopher Keates",
+        "Laura Chambers Storey",
+        "Jay Thor Turner"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Rob Ives",
+        "Jason Fraser",
+        "Cassandra Cheung",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Marie-Claude Lacombe",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Gauthier",
+        "Mark Donahue(S)",
+        "Jay Thor Turner",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Megan Gauthier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Gauthier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Justin To",
+        "Matt Masse",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mackenzie King",
+        "Cassandra Cheung",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Laura Chambers Storey",
+        "Craig Anderson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Khalid Al-Zahrani",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Rob Ives",
+        "Graham Brown",
+        "Jason Fraser",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Marie-Claude Lacombe",
+        "Douglas Brierley",
+        "Marc Gobeil",
+        "Amos Lee",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Marie-Claude Lacombe",
+        "Steve Chow",
+        "Marc Gobeil",
+        "Douglas Brierley",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Alex Bush",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Mark Donahue(S)",
+        "Jay Thor Turner",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Douglas Brierley",
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Chambers Storey",
+        "Mark Donahue(S)",
+        "Jay Thor Turner",
+        "Craig Anderson",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Graham Brown",
+        "Lissa Greenspoon",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Justin To",
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Marc Gobeil",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Laura Chambers Storey",
+        "Megan Gauthier",
+        "Mark Donahue(S)",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Megan Gauthier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Gauthier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Steve Chow",
+        "Stephanie White",
+        "Marc Gobeil",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Matt Masse",
+        "Laura Knowles",
+        "Alex Bush",
+        "Justin To",
+        "Khalid Al-Zahrani",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Megan Gauthier",
+        "Mark Donahue(S)",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Gauthier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Gauthier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Gauthier",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Amos Lee",
+        "Marie-Claude Lacombe",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Justin To",
+        "Alex Bush",
+        "Khalid Al-Zahrani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justin To"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Jay Thor Turner",
+        "Mark Donahue(S)",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Amos Lee",
+        "Mackenzie King",
+        "Douglas Brierley",
+        "Steve Chow",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Justin To",
+        "Matt Masse",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justin To"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Christopher Keates",
+        "Craig Anderson",
+        "Megan Gauthier",
+        "Mark Donahue(S)"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Rob Ives",
+        "Jason Fraser",
+        "Cassandra Cheung",
+        "Graham Brown",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Megan Gauthier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Gauthier",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marie-Claude Lacombe",
+        "Lissa Greenspoon",
+        "Steve Chow",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Megan Gauthier",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Jason Fraser",
+        "Mackenzie King",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Gauthier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse",
+        "Laura Knowles",
+        "Justin To",
+        "Alex Bush",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Marie-Claude Lacombe",
+        "Steve Chow",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jason Fraser",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Laura Chambers Storey",
+        "Jay Thor Turner",
+        "Craig Anderson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Amos Lee",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Douglas Brierley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Laura Chambers Storey",
+        "Craig Anderson",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Cassandra Cheung",
+        "Jason Fraser",
+        "Mackenzie King",
+        "Graham Brown",
+        "Lissa Greenspoon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Amos Lee",
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Douglas Brierley",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Jay Thor Turner",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Amos Lee",
+        "Marc Gobeil",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Gauthier",
+        "Laura Chambers Storey",
+        "Craig Anderson",
+        "Mark Donahue(S)",
+        "Christopher Keates",
+        "Jay Thor Turner"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Megan Gauthier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Gauthier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Steve Chow",
+        "Amos Lee",
+        "Douglas Brierley",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Matt Masse",
+        "Khalid Al-Zahrani",
+        "Alex Bush",
+        "Justin To"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Jason Fraser",
+        "Cassandra Cheung",
+        "Lissa Greenspoon",
+        "Mackenzie King",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Jay Thor Turner"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse",
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Khalid Al-Zahrani",
+        "Alex Bush",
+        "Justin To"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Amos Lee",
+        "Steve Chow",
+        "Douglas Brierley",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Justin To"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justin To",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Cassandra Cheung",
+        "Jason Fraser",
+        "Mackenzie King",
+        "Rob Ives",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Mark Donahue(S)",
+        "Jay Thor Turner"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue(S)",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Steve Chow",
+        "Douglas Brierley",
+        "Marc Gobeil",
+        "Stephanie White",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue(S)",
+        "Jay Thor Turner",
+        "Christopher Keates",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Mark Donahue(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Khalid Al-Zahrani",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Mackenzie King",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    }
+  ]
+}

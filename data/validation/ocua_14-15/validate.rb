@@ -126,7 +126,7 @@ def compare_stat(data, validation, stat_name)
   end
 end
 
-N = 18
+N = 20
 report = []
 
 [*1..N].each do |week|

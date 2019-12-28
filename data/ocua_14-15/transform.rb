@@ -21,7 +21,7 @@ require 'byebug'
 
 LEAGUE_ID = 2
 data_directory = 'data/ocua_14-15'
-validation_dir = 'validation/ocua_14-15'
+validation_dir = 'data/validation/ocua_14-15'
 
 def rewrite_event_string(game_string)
   # 1. Group the game_string by Point
