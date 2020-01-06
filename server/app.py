@@ -16,6 +16,7 @@ if os.environ.get('APP_SETTINGS') == None:
 
 react_app_path = '../web/build'
 
+league_utc_offset = -5
 
 # Init
 app = Flask(__name__, static_folder=react_app_path)
@@ -76,7 +77,9 @@ def schedule(league_id):
     teams = build_teams_response(league_id)
 
     matchup_count = len(teams) / 2
-    today = datetime.datetime.now().date()
+    local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
+    today = local_today.date()
+
     query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.game_start >= today).limit(matchup_count)
 
     matchups = [matchup.to_dict() for matchup in query]
