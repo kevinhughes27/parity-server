@@ -1,0 +1,2620 @@
+{
+  "league_id": 2,
+  "week": 18,
+  "homeTeam": "Dump, Swing, Huck, Repeat",
+  "homeScore": "21",
+  "homeRoster": [
+    "Jason Fraser",
+    "Amos Lee",
+    "Steve Chow",
+    "Rob Ives",
+    "Matt Masse(S)",
+    "Graham Brown",
+    "Cassandra Cheung",
+    "Laura Knowles(S)",
+    "Stephanie White",
+    "Greg Probe(S)"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "19",
+  "awayRoster": [
+    "Stanley Kent",
+    "Richard Gregory",
+    "Stephen Close",
+    "Greg Kung",
+    "Maya Popovic",
+    "Andrea Proulx",
+    "Shubho Bo Biswas",
+    "Stephanie Fowler",
+    "Neena Sidhu",
+    "Andrew W Cameron"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Amos Lee",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Stephen Close",
+        "Greg Kung",
+        "Maya Popovic",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Matt Masse(S)",
+        "Steve Chow",
+        "Graham Brown",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse(S)",
+        "Laura Knowles(S)",
+        "Amos Lee",
+        "Rob Ives",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Masse(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Andrea Proulx",
+        "Greg Kung",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Graham Brown",
+        "Laura Knowles(S)",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Stephanie Fowler",
+        "Neena Sidhu",
+        "Stephen Close",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie Fowler"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Amos Lee",
+        "Cassandra Cheung",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matt Masse(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Andrew W Cameron",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Rob Ives",
+        "Graham Brown",
+        "Matt Masse(S)",
+        "Steve Chow",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Rob Ives",
+        "Jason Fraser",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Stanley Kent",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Steve Chow",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Amos Lee",
+        "Cassandra Cheung",
+        "Matt Masse(S)",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Maya Popovic",
+        "Stephen Close",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie Fowler",
+        "Shubho Bo Biswas",
+        "Greg Kung",
+        "Neena Sidhu",
+        "Stanley Kent",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Rob Ives",
+        "Graham Brown",
+        "Matt Masse(S)",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles(S)",
+        "Cassandra Cheung",
+        "Graham Brown",
+        "Steve Chow",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Stephanie Fowler",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephanie Fowler"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie Fowler"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Shubho Bo Biswas",
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stephen Close",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Matt Masse(S)",
+        "Graham Brown",
+        "Laura Knowles(S)",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Stephen Close",
+        "Andrew W Cameron",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles(S)",
+        "Rob Ives",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Cassandra Cheung",
+        "Steve Chow",
+        "Matt Masse(S)",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Stanley Kent",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Amos Lee",
+        "Greg Probe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Rob Ives",
+        "Cassandra Cheung",
+        "Graham Brown"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Amos Lee",
+        "Greg Probe(S)",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Stephen Close",
+        "Greg Kung",
+        "Andrea Proulx",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Rob Ives",
+        "Matt Masse(S)",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Stanley Kent",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Greg Probe(S)",
+        "Stephanie White",
+        "Amos Lee",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Greg Kung",
+        "Richard Gregory",
+        "Shubho Bo Biswas",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Graham Brown",
+        "Matt Masse(S)",
+        "Rob Ives",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stanley Kent",
+        "Shubho Bo Biswas",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles(S)",
+        "Amos Lee",
+        "Greg Probe(S)",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Amos Lee",
+        "Steve Chow",
+        "Greg Probe(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Graham Brown",
+        "Steve Chow",
+        "Laura Knowles(S)",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Maya Popovic",
+        "Greg Kung",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles(S)",
+        "Greg Probe(S)"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Richard Gregory",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Steve Chow",
+        "Rob Ives",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Stephen Close",
+        "Andrea Proulx",
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe(S)",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Stanley Kent",
+        "Stephen Close",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Greg Probe(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Amos Lee",
+        "Steve Chow",
+        "Matt Masse(S)",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    }
+  ]
+}

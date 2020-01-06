@@ -1,0 +1,3006 @@
+{
+  "league_id": 2,
+  "week": 7,
+  "homeTeam": "Kindha's Disappointments",
+  "homeScore": "24",
+  "homeRoster": [
+    "Al Colantonio",
+    "Patrick Gauvin",
+    "Mark Donahue",
+    "Andrea Proulx(S)",
+    "Matt Masse",
+    "Celine Dumais",
+    "Morgan Howard(S)",
+    "Kirsten Querbach",
+    "Christopher Kraft"
+  ],
+  "awayTeam": "Scoobers in Paris",
+  "awayScore": "23",
+  "awayRoster": [
+    "Elise Milbradt",
+    "Yingdi Wu",
+    "Sina Dee",
+    "Dan Thomson(S)",
+    "Vanessa Lyon",
+    "Heather Wallace",
+    "Mackenzie King",
+    "Ariel Untiveros(S)",
+    "Sebastien Benard",
+    "Jen Cluthe"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Yingdi Wu",
+        "Sina Dee",
+        "Dan Thomson(S)",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Mark Donahue",
+        "Andrea Proulx(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)",
+        "Mackenzie King",
+        "Dan Thomson(S)",
+        "Vanessa Lyon",
+        "Sina Dee",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Mark Donahue",
+        "Matt Masse",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Mark Donahue",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Dan Thomson(S)",
+        "Sebastien Benard"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Celine Dumais",
+        "Andrea Proulx(S)",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Vanessa Lyon",
+        "Sebastien Benard"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson(S)",
+        "Mackenzie King",
+        "Jen Cluthe",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Matt Masse",
+        "Morgan Howard(S)",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Yingdi Wu",
+        "Sebastien Benard",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio",
+        "Andrea Proulx(S)",
+        "Morgan Howard(S)",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Heather Wallace",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Patrick Gauvin",
+        "Andrea Proulx(S)",
+        "Morgan Howard(S)",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)",
+        "Vanessa Lyon",
+        "Elise Milbradt",
+        "Mackenzie King",
+        "Yingdi Wu"
+      ],
+      "defensePlayers": [
+        "Christopher Kraft",
+        "Celine Dumais",
+        "Mark Donahue",
+        "Matt Masse",
+        "Al Colantonio",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Christopher Kraft",
+        "Andrea Proulx(S)",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Matt Masse",
+        "Patrick Gauvin"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Yingdi Wu",
+        "Mackenzie King",
+        "Heather Wallace",
+        "Jen Cluthe",
+        "Ariel Untiveros(S)"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Mark Donahue",
+        "Christopher Kraft",
+        "Andrea Proulx(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Al Colantonio",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Dan Thomson(S)",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx(S)",
+        "Kirsten Querbach",
+        "Mark Donahue",
+        "Matt Masse",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mackenzie King",
+        "Yingdi Wu",
+        "Ariel Untiveros(S)",
+        "Sebastien Benard",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Patrick Gauvin",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Sina Dee",
+        "Sebastien Benard",
+        "Dan Thomson(S)",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Kirsten Querbach",
+        "Matt Masse",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Vanessa Lyon",
+        "Ariel Untiveros(S)",
+        "Mackenzie King",
+        "Dan Thomson(S)",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Andrea Proulx(S)",
+        "Kirsten Querbach",
+        "Al Colantonio",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Yingdi Wu",
+        "Dan Thomson(S)",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx(S)",
+        "Morgan Howard(S)",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Matt Masse",
+        "Mark Donahue",
+        "Celine Dumais",
+        "Morgan Howard(S)",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Dan Thomson(S)",
+        "Mackenzie King",
+        "Heather Wallace",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Mackenzie King"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Christopher Kraft",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Al Colantonio",
+        "Kirsten Querbach",
+        "Matt Masse",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Kirsten Querbach",
+        "Christopher Kraft",
+        "Al Colantonio",
+        "Morgan Howard(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Heather Wallace",
+        "Jen Cluthe",
+        "Ariel Untiveros(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard(S)",
+        "Mark Donahue",
+        "Patrick Gauvin",
+        "Andrea Proulx(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Vanessa Lyon",
+        "Yingdi Wu",
+        "Dan Thomson(S)"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Mark Donahue",
+        "Matt Masse",
+        "Kirsten Querbach",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Mackenzie King",
+        "Dan Thomson(S)",
+        "Sina Dee",
+        "Ariel Untiveros(S)"
+      ],
+      "defensePlayers": [
+        "Matt Masse",
+        "Andrea Proulx(S)",
+        "Mark Donahue"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Sebastien Benard",
+        "Vanessa Lyon",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Morgan Howard(S)",
+        "Patrick Gauvin",
+        "Celine Dumais",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Dan Thomson(S)",
+        "Yingdi Wu",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)",
+        "Sina Dee",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx(S)",
+        "Matt Masse",
+        "Kirsten Querbach",
+        "Patrick Gauvin",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Yingdi Wu",
+        "Heather Wallace",
+        "Sebastien Benard",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Matt Masse",
+        "Morgan Howard(S)",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jen Cluthe",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Morgan Howard(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Mackenzie King",
+        "Ariel Untiveros(S)",
+        "Vanessa Lyon",
+        "Sebastien Benard"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Mark Donahue",
+        "Andrea Proulx(S)",
+        "Matt Masse",
+        "Patrick Gauvin",
+        "Celine Dumais"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Benard",
+        "Dan Thomson(S)",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Elise Milbradt",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Mackenzie King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mackenzie King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Sebastien Benard",
+        "Sina Dee",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx(S)",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ariel Untiveros(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Matt Masse",
+        "Celine Dumais",
+        "Mark Donahue"
+      ],
+      "defensePlayers": [
+        "Mackenzie King",
+        "Yingdi Wu",
+        "Vanessa Lyon",
+        "Ariel Untiveros(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Yingdi Wu",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Sina Dee",
+        "Jen Cluthe",
+        "Sebastien Benard",
+        "Dan Thomson(S)",
+        "Yingdi Wu"
+      ],
+      "defensePlayers": [
+        "Matt Masse",
+        "Christopher Kraft",
+        "Al Colantonio",
+        "Kirsten Querbach",
+        "Andrea Proulx(S)",
+        "Morgan Howard(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Yingdi Wu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mark Donahue",
+        "Patrick Gauvin",
+        "Andrea Proulx(S)",
+        "Christopher Kraft",
+        "Morgan Howard(S)"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Vanessa Lyon",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Andrea Proulx(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx(S)",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard(S)",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ariel Untiveros(S)"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Yingdi Wu",
+        "Sina Dee",
+        "Dan Thomson(S)",
+        "Vanessa Lyon",
+        "Sebastien Benard",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Yingdi Wu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Yingdi Wu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sebastien Benard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Ariel Untiveros(S)",
+        "Dan Thomson(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ariel Untiveros(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ariel Untiveros(S)",
+          "secondActor": "Dan Thomson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Patrick Gauvin",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    }
+  ]
+}

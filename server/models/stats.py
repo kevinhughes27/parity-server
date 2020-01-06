@@ -6,7 +6,7 @@ class Stats(db.Model):
     game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
     player_id = db.Column(db.Integer, db.ForeignKey('player.id'), nullable=False)
 
-    salary_version = db.Column(db.Text, nullable=False)
+    stat_values = db.Column(db.Text, nullable=False)
 
     goals = db.Column(db.Integer)
     assists = db.Column(db.Integer)
@@ -24,7 +24,7 @@ class Stats(db.Model):
     d_points_for = db.Column(db.Integer)
     d_points_against = db.Column(db.Integer)
 
-    SALARY = {
+    STAT_VALUES = {
         'v2': {
             'goals': 10000,
             'assists': 10000,
@@ -51,12 +51,12 @@ class Stats(db.Model):
         }
     }
 
-    def __init__(self, league_id, game_id, player_id, salary_version):
+    def __init__(self, league_id, game_id, player_id, stat_values):
         self.league_id = league_id
         self.game_id = game_id
         self.player_id = player_id
 
-        self.salary_version = salary_version
+        self.stat_values = stat_values
 
         self.goals = 0
         self.assists = 0
@@ -82,7 +82,7 @@ class Stats(db.Model):
     def pay(self):
         total = 0
 
-        for stat, value in self.SALARY[self.salary_version].items():
+        for stat, value in self.STAT_VALUES[self.stat_values].items():
             total += getattr(self, stat) * value
 
         return total

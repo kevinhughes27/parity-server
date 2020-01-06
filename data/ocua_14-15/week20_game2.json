@@ -1,0 +1,3048 @@
+{
+  "league_id": 2,
+  "week": 20,
+  "homeTeam": "Dump, Swing, Huck, Repeat",
+  "homeScore": "15",
+  "homeRoster": [
+    "Lissa Greenspoon",
+    "Nick Ierullo",
+    "Cassandra Cheung",
+    "Steve Chow",
+    "Richard Gregory",
+    "Laura Knowles",
+    "Stephen Close",
+    "Nick Vetvut",
+    "Marie-Claude Lacombe",
+    "Christopher Vickers",
+    "Ivan Sabourin",
+    "Patrick Gauvin"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "22",
+  "awayRoster": [
+    "Marc Gobeil",
+    "Dan Thomson",
+    "Andrea Proulx",
+    "Shubho Bo Biswas(S)",
+    "Sebastien Belanger",
+    "Sandra Hanson",
+    "Eric Jacques",
+    "Stephanie White",
+    "Rob Ives",
+    "Andrew Smith"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Nick Ierullo",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Marc Gobeil",
+        "Andrea Proulx",
+        "Shubho Bo Biswas(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Eric Jacques",
+        "Rob Ives",
+        "Andrew Smith",
+        "Sebastien Belanger",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Chow",
+        "Richard Gregory",
+        "Laura Knowles",
+        "Stephen Close",
+        "Nick Vetvut",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Shubho Bo Biswas(S)",
+        "Marc Gobeil",
+        "Dan Thomson",
+        "Sebastien Belanger"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Sebastien Belanger",
+        "Rob Ives",
+        "Eric Jacques",
+        "Andrew Smith"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Richard Gregory",
+        "Stephen Close",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson",
+        "Eric Jacques",
+        "Stephanie White",
+        "Marc Gobeil",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Nick Ierullo",
+        "Cassandra Cheung",
+        "Ivan Sabourin",
+        "Patrick Gauvin",
+        "Lissa Greenspoon"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Rob Ives",
+        "Andrew Smith",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Rob Ives",
+        "Sandra Hanson",
+        "Andrea Proulx",
+        "Shubho Bo Biswas(S)",
+        "Eric Jacques"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Laura Knowles",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Eric Jacques"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Eric Jacques"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Steve Chow",
+        "Nick Vetvut",
+        "Laura Knowles",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Dan Thomson",
+        "Shubho Bo Biswas(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Nick Ierullo",
+        "Ivan Sabourin",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Andrew Smith",
+        "Eric Jacques",
+        "Marc Gobeil",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Vetvut",
+        "Stephen Close",
+        "Steve Chow",
+        "Richard Gregory",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Sebastien Belanger",
+        "Stephanie White",
+        "Shubho Bo Biswas(S)",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Vetvut"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Ierullo",
+        "Cassandra Cheung",
+        "Lissa Greenspoon",
+        "Ivan Sabourin",
+        "Patrick Gauvin",
+        "Christopher Vickers"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Sandra Hanson",
+        "Marc Gobeil",
+        "Shubho Bo Biswas(S)",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Stephen Close",
+        "Marie-Claude Lacombe",
+        "Steve Chow"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas(S)",
+        "Sebastien Belanger",
+        "Rob Ives",
+        "Eric Jacques",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Ivan Sabourin",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Richard Gregory",
+        "Steve Chow",
+        "Marie-Claude Lacombe",
+        "Nick Vetvut",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Andrew Smith",
+        "Dan Thomson",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Patrick Gauvin",
+        "Marie-Claude Lacombe",
+        "Christopher Vickers",
+        "Nick Ierullo",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Eric Jacques",
+        "Rob Ives",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Cassandra Cheung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephanie White",
+        "Andrea Proulx",
+        "Andrew Smith",
+        "Shubho Bo Biswas(S)",
+        "Dan Thomson",
+        "Eric Jacques"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Laura Knowles",
+        "Christopher Vickers",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Marc Gobeil",
+        "Shubho Bo Biswas(S)",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Nick Vetvut",
+        "Nick Ierullo",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Dan Thomson",
+        "Stephanie White",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Nick Ierullo",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Marc Gobeil",
+        "Rob Ives",
+        "Shubho Bo Biswas(S)",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Ierullo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Christopher Vickers",
+        "Steve Chow",
+        "Patrick Gauvin",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Stephanie White",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Steve Chow",
+        "Laura Knowles",
+        "Marie-Claude Lacombe",
+        "Ivan Sabourin",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas(S)",
+        "Marc Gobeil",
+        "Andrea Proulx",
+        "Sebastien Belanger",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Lissa Greenspoon",
+        "Nick Vetvut",
+        "Stephen Close",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Eric Jacques",
+        "Andrew Smith",
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Marie-Claude Lacombe",
+        "Patrick Gauvin",
+        "Laura Knowles",
+        "Ivan Sabourin",
+        "Steve Chow",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Marc Gobeil",
+        "Shubho Bo Biswas(S)",
+        "Sandra Hanson",
+        "Stephanie White",
+        "Eric Jacques"
+      ],
+      "defensePlayers": [
+        "Lissa Greenspoon",
+        "Nick Ierullo",
+        "Richard Gregory",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Patrick Gauvin",
+        "Ivan Sabourin",
+        "Marie-Claude Lacombe",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Lissa Greenspoon",
+        "Richard Gregory",
+        "Nick Ierullo"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Eric Jacques",
+        "Shubho Bo Biswas(S)",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Steve Chow"
+      ],
+      "defensePlayers": [
+        "Andrew Smith",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Richard Gregory",
+        "Nick Ierullo",
+        "Nick Vetvut",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Eric Jacques",
+        "Dan Thomson",
+        "Shubho Bo Biswas(S)",
+        "Sebastien Belanger",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Eric Jacques",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Christopher Vickers"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Rob Ives"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Lissa Greenspoon",
+        "Stephen Close",
+        "Nick Ierullo",
+        "Cassandra Cheung",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Ierullo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Ierullo",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Eric Jacques",
+        "Stephanie White",
+        "Sandra Hanson",
+        "Rob Ives"
+      ],
+      "defensePlayers": [
+        "Steve Chow",
+        "Patrick Gauvin",
+        "Laura Knowles",
+        "Christopher Vickers"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Eric Jacques"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Eric Jacques"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Vickers"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Lissa Greenspoon",
+        "Richard Gregory",
+        "Stephen Close",
+        "Nick Vetvut",
+        "Cassandra Cheung"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Ivan Sabourin",
+        "Christopher Vickers",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    }
+  ]
+}

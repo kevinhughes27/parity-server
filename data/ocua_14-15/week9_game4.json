@@ -1,0 +1,2565 @@
+{
+  "league_id": 2,
+  "week": 9,
+  "homeTeam": "Huck Huck Goose",
+  "homeScore": "15",
+  "homeRoster": [
+    "Andrew Smith",
+    "Tanya Gallant",
+    "Andrew McGregor",
+    "Amos Lee",
+    "Greg Probe",
+    "Clare Gee",
+    "Al Colantonio(S)",
+    "Megan Berry",
+    "Ivan Sabourin",
+    "Greg Kung",
+    "Geoff Liu",
+    "Hope Celani"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "23",
+  "awayRoster": [
+    "Douglas Brierley",
+    "Richard Gregory",
+    "Marie-Claude Lacombe",
+    "Marc Gobeil",
+    "Mehmet Karman",
+    "Stephen Close",
+    "Andrea Proulx",
+    "Andrew W Cameron",
+    "Stanley Kent",
+    "Maya Popovic"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Tanya Gallant",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marie-Claude Lacombe",
+        "Marc Gobeil",
+        "Mehmet Karman",
+        "Stephen Close",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Probe",
+        "Clare Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marie-Claude Lacombe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio(S)",
+        "Amos Lee",
+        "Megan Berry",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Andrew W Cameron",
+        "Richard Gregory",
+        "Stanley Kent",
+        "Maya Popovic",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew McGregor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Richard Gregory",
+        "Douglas Brierley",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio(S)",
+        "Clare Gee",
+        "Amos Lee",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Marc Gobeil",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Stanley Kent",
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Andrew McGregor",
+        "Megan Berry",
+        "Amos Lee",
+        "Andrew Smith",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio(S)",
+        "Amos Lee",
+        "Tanya Gallant",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Andrea Proulx",
+        "Andrew W Cameron",
+        "Maya Popovic",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "Andrew McGregor",
+        "Ivan Sabourin",
+        "Clare Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio(S)",
+        "Amos Lee",
+        "Megan Berry",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Maya Popovic",
+        "Mehmet Karman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Ivan Sabourin",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio(S)",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Tanya Gallant",
+        "Amos Lee",
+        "Al Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Marc Gobeil",
+        "Marie-Claude Lacombe",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Ivan Sabourin",
+        "Greg Probe",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ivan Sabourin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Richard Gregory",
+        "Mehmet Karman",
+        "Andrew W Cameron",
+        "Andrea Proulx",
+        "Marc Gobeil"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Clare Gee",
+        "Greg Probe",
+        "Ivan Sabourin"
+      ],
+      "defensePlayers": [
+        "Marc Gobeil",
+        "Maya Popovic",
+        "Mehmet Karman",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Kung",
+        "Tanya Gallant",
+        "Greg Probe",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Stanley Kent",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman",
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Al Colantonio(S)",
+        "Clare Gee",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Al Colantonio(S)",
+        "Andrew McGregor",
+        "Geoff Liu",
+        "Megan Berry",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marc Gobeil",
+        "Marie-Claude Lacombe",
+        "Richard Gregory",
+        "Mehmet Karman",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Ivan Sabourin",
+        "Clare Gee",
+        "Greg Probe",
+        "Greg Kung",
+        "Hope Celani"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Andrew Smith",
+        "Tanya Gallant",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Stanley Kent",
+        "Richard Gregory",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Amos Lee",
+        "Greg Probe",
+        "Greg Kung",
+        "Clare Gee",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Marc Gobeil",
+        "Douglas Brierley",
+        "Andrew W Cameron",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geoff Liu",
+        "Tanya Gallant",
+        "Al Colantonio(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geoff Liu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Richard Gregory",
+        "Stanley Kent",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Andrew McGregor",
+        "Al Colantonio(S)",
+        "Geoff Liu",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Richard Gregory",
+        "Marc Gobeil",
+        "Stanley Kent",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Gobeil"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Hope Celani",
+        "Ivan Sabourin",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Richard Gregory",
+        "Maya Popovic",
+        "Andrew W Cameron",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Clare Gee",
+        "Amos Lee",
+        "Ivan Sabourin",
+        "Greg Kung",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Mehmet Karman",
+        "Maya Popovic",
+        "Marie-Claude Lacombe",
+        "Stanley Kent",
+        "Richard Gregory",
+        "Marc Gobeil"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Gobeil"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Megan Berry",
+        "Tanya Gallant",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Andrew W Cameron",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Richard Gregory"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Tanya Gallant",
+        "Amos Lee",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Stanley Kent",
+        "Marc Gobeil",
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Marc Gobeil"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Gobeil",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Kung",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Tanya Gallant",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Mehmet Karman"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Amos Lee",
+        "Hope Celani",
+        "Clare Gee",
+        "Ivan Sabourin",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Richard Gregory"
+      ],
+      "defensePlayers": [
+        "Andrew McGregor",
+        "Megan Berry",
+        "Al Colantonio(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "Hope Celani",
+        "Greg Kung",
+        "Amos Lee",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Geoff Liu",
+        "Megan Berry",
+        "Al Colantonio(S)"
+      ],
+      "defensePlayers": [
+        "Richard Gregory"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio(S)",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    }
+  ]
+}

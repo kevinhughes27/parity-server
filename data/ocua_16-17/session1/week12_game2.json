@@ -1,3615 +1,4 @@
 {
-  "score": {
-    "F Bombs": "24",
-    "SOS - Man Overboard (SOS)": "23"
-  },
-  "teams": {
-    "F Bombs": [
-      "Hope Celani",
-      "Maya Popovic",
-      "Justine Price",
-      "Nina Ramic",
-      "Rob Ives",
-      "Chris Sullivan",
-      "Kevin Barford",
-      "Simon Berry",
-      "Brent Burton",
-      "Martin Cloake",
-      "Mark Donahue",
-      "Richard Gregory"
-    ],
-    "SOS - Man Overboard (SOS)": [
-      "Andrea Proulx",
-      "Christine Beals",
-      "Melissa Berry",
-      "Angela Mueller",
-      "Nicholas Aghajanian",
-      "Sina Dee",
-      "Morgan Howard",
-      "Nick Klimowicz",
-      "Benjamin Piper",
-      "Jon Rowe",
-      "Dan Thomson",
-      "Chris Tran"
-    ]
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Feb 6, 2017 8:23:51 PM",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:07 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:08 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:11 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:14 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:18 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:21 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:25 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:28 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:24:30 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:24:31 PM",
-          "firstActor": "Chris Tran"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:12 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:14 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:19 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:24 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:27 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:25:31 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:25:38 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:25:40 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:26:01 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:26:03 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:26:09 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:26:11 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:26:29 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:26:30 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:26:39 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:26:41 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:26:47 PM",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:26:49 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:04 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:07 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:17 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:27:21 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:30 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:34 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:40 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:27:41 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:27:45 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:27:46 PM",
-          "firstActor": "Mark Donahue"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:28:30 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:28:35 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:28:41 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:28:48 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:28:53 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:28:54 PM",
-          "firstActor": "Angela Mueller"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:29:32 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:29:35 PM",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:29:41 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:29:42 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:29:46 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:29:52 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:29:53 PM",
-          "firstActor": "Justine Price"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:30:33 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:30:37 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:30:38 PM",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:30:40 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:30:44 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:30:58 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:31:01 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:31:04 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:31:06 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:31:11 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:31:16 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:31:26 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:31:30 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:31:31 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:34:00 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:11 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:12 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:34:20 PM",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:34:22 PM",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:34:30 PM",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:39 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:42 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:48 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:34:50 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:34:51 PM",
-          "firstActor": "Mark Donahue"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Jon Rowe",
-        "Christine Beals",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:35:39 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:35:43 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:35:48 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:35:50 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:34 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:36 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:39 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:43 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:48 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:51 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:53 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:36:58 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:01 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:06 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:11 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:17 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:23 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:37:26 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:37:41 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:37:48 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:38:01 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:38:03 PM",
-          "firstActor": "Benjamin Piper"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:38:41 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:38:49 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:39:53 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:39:54 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:39:59 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:40:01 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:40:51 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:40:54 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:41:02 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:41:04 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:41:10 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:41:11 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:41:56 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:41:57 PM",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:04 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:08 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:14 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:21 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:42:26 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:36 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:38 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:42 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:47 PM",
-          "secondActor": "Richard Gregory",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:51 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:42:55 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:42:57 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:38 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:44 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:47 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:52 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:56 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:43:59 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:44:05 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:44:35 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:44:40 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:44:41 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:45:28 PM",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:45:36 PM",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:45:40 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:45:45 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:45:51 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:08 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:14 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:46:15 PM",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:19 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:20 PM",
-          "secondActor": "Richard Gregory",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:46:29 PM",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:46:31 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:36 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:38 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:46:50 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:46:51 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:47:38 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:47:44 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:47:49 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:47:52 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:47:58 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:00 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:05 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:10 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:14 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:16 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:20 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:25 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:31 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:48:37 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:48:39 PM",
-          "firstActor": "Mark Donahue"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:49:24 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:49:32 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:49:37 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:49:39 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:50:24 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:50:41 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:50:48 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:50:54 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:00 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:08 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:51:09 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:16 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:51:17 PM",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:21 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:41 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:48 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:51:53 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:51:53 PM",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:52:01 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:52:04 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:52:06 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:52:10 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:52:11 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:52:46 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:52:51 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:52:53 PM",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:53:01 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:53:02 PM",
-          "firstActor": "Sina Dee"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:25 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:27 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:31 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:37 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:43 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:46 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:49 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:52 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:55:56 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:55:57 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 8:56:41 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 8:56:43 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:56:46 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:56:47 PM",
-          "firstActor": "Darlene Riley(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Jon Rowe",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:57:28 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:57:34 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:57:37 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:57:45 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 8:57:46 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:58:38 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:58:42 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:58:48 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:58:52 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:58:57 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:01 PM",
-          "secondActor": "Richard Gregory",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:08 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 8:59:09 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:20 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:26 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:29 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:37 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:39 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:44 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:47 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 8:59:51 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:00:00 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:00:01 PM",
-          "firstActor": "Benjamin Piper"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Feb 6, 2017 9:02:29 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:24 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:28 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:33 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:37 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:43 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:48 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:52 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 9:03:53 PM",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:03:58 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:00 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:06 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:08 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:15 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 9:04:16 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:33 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:04:43 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:04:58 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:04:59 PM",
-          "firstActor": "Benjamin Piper"
-        }
-      ],
-      "defensePlayers": [
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:05:45 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:05:51 PM",
-          "secondActor": "Richard Gregory",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:05:54 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:05:57 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:06:01 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:06:02 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:06:50 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:06:52 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:06:58 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:07:00 PM",
-          "firstActor": "Sina Dee"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:07:38 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:07:44 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:07:46 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:07:49 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:07:55 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:08:02 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:08:03 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:08:56 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:09:03 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:09:06 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:09:10 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:09:15 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 9:09:17 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:09:23 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:09:24 PM",
-          "firstActor": "Mark Donahue"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:12 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:17 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:23 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:25 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:29 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:34 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:36 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:10:45 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:10:47 PM",
-          "firstActor": "Chris Tran"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:11:31 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:11:39 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:11:48 PM",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:11:54 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:11:56 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:12:01 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:12:06 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:12:07 PM",
-          "firstActor": "Angela Mueller"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:12:51 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:12:55 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:12:57 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:12:58 PM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:13:45 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:13:52 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:13:55 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:14:02 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:14:08 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:14:09 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:14:10 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:14:56 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:00 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:03 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:05 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:09 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:15:12 PM",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:23 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:25 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:29 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:35 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:39 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:15:41 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:00 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:04 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:07 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:11 PM",
-          "secondActor": "Christine Beals",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:20 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Christine Beals"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 9:16:21 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:27 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:27 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:16:30 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:16:34 PM",
-          "firstActor": "Justine Price"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:17:20 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:17:23 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:17:27 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:17:32 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:17:53 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:17:57 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:18:00 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:18:05 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 9:18:05 PM",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:18:13 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:18:17 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:18:22 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:18:22 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:19:06 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:19:11 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:19:12 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Jon Rowe",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:00 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:02 PM",
-          "secondActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:05 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:20:06 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:54 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:56 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:20:59 PM",
-          "secondActor": "Richard Gregory",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:21:05 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:21:09 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:21:12 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:21:14 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:21:19 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:21:20 PM",
-          "firstActor": "Simon Berry"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:06 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:08 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:22:14 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:20 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:22:24 PM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 9:22:26 PM",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:30 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:43 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:22:54 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:23:00 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:23:07 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:23:10 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:23:13 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:23:15 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:23:56 PM",
-          "secondActor": "Simon Berry",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:00 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Simon Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:05 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:07 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:11 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:13 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:24:18 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:24:18 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:14 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:19 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:23 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:28 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:33 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:38 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:25:58 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:26:13 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:26:15 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:26:21 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:26:25 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:26:26 PM",
-          "firstActor": "Angela Mueller"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:27:16 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:27:20 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:27:21 PM",
-          "firstActor": "Chris Sullivan"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Nick Klimowicz",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:28:05 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:28:18 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:28:27 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:28:39 PM",
-          "secondActor": "Rob Ives",
-          "firstActor": "Darlene Riley(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:28:44 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:28:50 PM",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:28:59 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:29:00 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:29:45 PM",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 9:29:48 PM",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:29:57 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:30:05 PM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:30:12 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:30:20 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:30:26 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:30:27 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:31:19 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:31:22 PM",
-          "firstActor": "Kevin Barford"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Nick Klimowicz",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:31:59 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:04 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:07 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:12 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:18 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:20 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:24 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:31 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:39 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:44 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:49 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:52 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:32:54 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:33:02 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:33:10 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:33:12 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:33:13 PM",
-          "firstActor": "Jon Rowe"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Maya Popovic",
-        "Darlene Riley(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:33:54 PM",
-          "secondActor": "Mark Donahue",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:33:58 PM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Mark Donahue"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:34:01 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:34:05 PM",
-          "secondActor": "Darlene Riley(S)",
-          "firstActor": "Brent Burton"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:34:05 PM",
-          "firstActor": "Darlene Riley(S)"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:02 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:05 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:35:11 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:24 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:30 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:49 PM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:50 PM",
-          "secondActor": "Justine Price",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:54 PM",
-          "secondActor": "Chris Sullivan",
-          "firstActor": "Justine Price"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:35:57 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Chris Sullivan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:35:59 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Jon Rowe",
-        "Christine Beals",
-        "Melissa Berry"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nick Klimowicz",
-        "Benjamin Piper",
-        "Jon Rowe",
-        "Chris Tran",
-        "Andrea Proulx",
-        "Angela Mueller"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:36:42 PM",
-          "secondActor": "Jon Rowe",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:36:48 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Jon Rowe"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:36:51 PM",
-          "secondActor": "Angela Mueller",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:36:54 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Angela Mueller"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:37:02 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Feb 6, 2017 9:37:08 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:37:11 PM",
-          "secondActor": "Brent Burton",
-          "firstActor": "Rob Ives"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:37:11 PM",
-          "firstActor": "Brent Burton"
-        }
-      ],
-      "defensePlayers": [
-        "Rob Ives",
-        "Kevin Barford",
-        "Brent Burton",
-        "Mark Donahue",
-        "Justine Price",
-        "Darlene Riley(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Sina Dee",
-        "Morgan Howard",
-        "Benjamin Piper",
-        "Christine Beals",
-        "Melissa Berry"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:37:59 PM",
-          "secondActor": "Benjamin Piper",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:38:02 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Benjamin Piper"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:38:07 PM",
-          "secondActor": "Melissa Berry",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:38:10 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Melissa Berry"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:38:16 PM",
-          "secondActor": "Morgan Howard",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Feb 6, 2017 9:38:26 PM",
-          "firstActor": "Morgan Howard"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Feb 6, 2017 9:38:28 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Feb 6, 2017 9:38:35 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Richard Gregory"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Feb 6, 2017 9:38:36 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Chris Sullivan",
-        "Simon Berry",
-        "Martin Cloake",
-        "Richard Gregory",
-        "Maya Popovic",
-        "Justine Price"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Richard Gregory,",
@@ -4390,5 +779,3152 @@
   ],
   "time": "2017-02-07T02:41:00.635Z",
   "week": 12,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Christine Beals",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Justine Price"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Richard Gregory"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Simon Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Simon Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Simon Berry",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Angela Mueller"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Nick Klimowicz",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley(S)",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Richard Gregory"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Nick Klimowicz",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jon Rowe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Maya Popovic",
+        "Darlene Riley(S)"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Darlene Riley(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Jon Rowe",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Justine Price"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Justine Price",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Klimowicz",
+        "Benjamin Piper",
+        "Jon Rowe",
+        "Chris Tran",
+        "Andrea Proulx",
+        "Angela Mueller"
+      ],
+      "defensePlayers": [
+        "Rob Ives",
+        "Kevin Barford",
+        "Brent Burton",
+        "Mark Donahue",
+        "Justine Price",
+        "Darlene Riley(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jon Rowe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jon Rowe",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Angela Mueller"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Angela Mueller",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Sina Dee",
+        "Morgan Howard",
+        "Benjamin Piper",
+        "Christine Beals",
+        "Melissa Berry"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Simon Berry",
+        "Martin Cloake",
+        "Richard Gregory",
+        "Maya Popovic",
+        "Justine Price"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Richard Gregory",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "F Bombs",
+  "homeRoster": [
+    "Hope Celani",
+    "Maya Popovic",
+    "Justine Price",
+    "Nina Ramic",
+    "Rob Ives",
+    "Chris Sullivan",
+    "Kevin Barford",
+    "Simon Berry",
+    "Brent Burton",
+    "Martin Cloake",
+    "Mark Donahue",
+    "Richard Gregory"
+  ],
+  "awayTeam": "SOS - Man Overboard (SOS)",
+  "awayRoster": [
+    "Andrea Proulx",
+    "Christine Beals",
+    "Melissa Berry",
+    "Angela Mueller",
+    "Nicholas Aghajanian",
+    "Sina Dee",
+    "Morgan Howard",
+    "Nick Klimowicz",
+    "Benjamin Piper",
+    "Jon Rowe",
+    "Dan Thomson",
+    "Chris Tran"
+  ],
+  "awayScore": "23",
+  "homeScore": "24"
 }

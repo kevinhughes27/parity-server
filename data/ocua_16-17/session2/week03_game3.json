@@ -1,39 +1,5 @@
 {
   "week": 3,
-  "score": {
-    "Soho": "27",
-    "Kells Angels Bicycle Club": "11"
-  },
-  "teams": {
-    "Soho": [
-      "Sina Dee",
-      "Ashlin Kelly",
-      "Jamie Wildgen",
-      "Sebastien Belanger",
-      "Michael Colantonio",
-      "Angela Mueller",
-      "Peter Roebuck",
-      "Kirsten Querbach",
-      "Brent Burton",
-      "Rob Tyson",
-      "Melissa Jess",
-      "Tyler Mulcock"
-    ],
-    "Kells Angels Bicycle Club": [
-      "Brian Kells",
-      "Scott Higgins",
-      "Patrick McKelvey",
-      "Jonathan Champagne",
-      "Jay Thor Turner",
-      "Martin Cloake",
-      "Tim Kealey",
-      "Sam Lee",
-      "Jim Robinson",
-      "Laura Knowles",
-      "Carrie-Anne Whyte",
-      "Christine Beals"
-    ]
-  },
   "event_string": [
     "",
     "Pull,Brian Kells",
@@ -717,5 +683,3028 @@
     "Direction,>>>>>>",
     "Time,Half"
   ],
-  "league_id": 5
+  "league_id": 5,
+  "points": [
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Scott Higgins",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Rob Tyson",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Peter Roebuck"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Peter Roebuck",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Rob Tyson",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Peter Roebuck",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Peter Roebuck",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Peter Roebuck",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick McKelvey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Peter Roebuck"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Peter Roebuck",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Scott Higgins"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Brent Burton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jay Thor Turner",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Wynne Gee(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Scott Higgins",
+        "Patrick McKelvey",
+        "Laura Knowles",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Tyson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Jay Thor Turner",
+        "Christine Beals",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Michael Colantonio",
+        "Ashlin Kelly",
+        "Wynne Gee(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Patrick McKelvey",
+        "Christine Beals",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Brent Burton",
+        "Sina Dee",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Patrick McKelvey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick McKelvey",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+
+      ]
+    }
+  ],
+  "homeTeam": "Soho",
+  "homeRoster": [
+    "Sina Dee",
+    "Ashlin Kelly",
+    "Jamie Wildgen",
+    "Sebastien Belanger",
+    "Michael Colantonio",
+    "Angela Mueller",
+    "Peter Roebuck",
+    "Kirsten Querbach",
+    "Brent Burton",
+    "Rob Tyson",
+    "Melissa Jess",
+    "Tyler Mulcock"
+  ],
+  "awayTeam": "Kells Angels Bicycle Club",
+  "awayRoster": [
+    "Brian Kells",
+    "Scott Higgins",
+    "Patrick McKelvey",
+    "Jonathan Champagne",
+    "Jay Thor Turner",
+    "Martin Cloake",
+    "Tim Kealey",
+    "Sam Lee",
+    "Jim Robinson",
+    "Laura Knowles",
+    "Carrie-Anne Whyte",
+    "Christine Beals"
+  ],
+  "awayScore": "11",
+  "homeScore": "27"
 }

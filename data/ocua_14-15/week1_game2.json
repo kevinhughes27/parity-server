@@ -1,0 +1,2546 @@
+{
+  "league_id": 2,
+  "week": 1,
+  "homeTeam": "Karma Down Under",
+  "homeScore": "22",
+  "homeRoster": [
+    "Amelia Keenan",
+    "Andrew W Cameron",
+    "Shubho Bo Biswas",
+    "Douglas Brierley",
+    "Dan Shaver",
+    "Andrea Proulx",
+    "Jean Surette",
+    "Ian Ewing",
+    "Christian Hamel",
+    "Maya Popovic"
+  ],
+  "awayTeam": "Conflict of Interests",
+  "awayScore": "15",
+  "awayRoster": [
+    "Alex Bush",
+    "Elise Milbradt",
+    "Geofford Seaborn",
+    "Christopher LaFleur",
+    "Kindha Gorman",
+    "John Zwanenburg",
+    "Kris Bergmann",
+    "Jason Fraser",
+    "Stephen Close",
+    "Graham Brown",
+    "Saskia Vanderloo"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Geofford Seaborn",
+        "Christopher LaFleur",
+        "Kindha Gorman",
+        "John Zwanenburg",
+        "Kris Bergmann"
+      ],
+      "defensePlayers": [
+        "Dan Shaver",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "John Zwanenburg"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Jean Surette",
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Alex Bush",
+        "Jason Fraser",
+        "Stephen Close"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Douglas Brierley",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Alex Bush",
+        "Kindha Gorman",
+        "Jason Fraser",
+        "Stephen Close",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Dan Shaver",
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Alex Bush",
+        "Stephen Close",
+        "Kindha Gorman",
+        "Saskia Vanderloo"
+      ],
+      "defensePlayers": [
+        "Jean Surette",
+        "Andrew W Cameron",
+        "Christian Hamel",
+        "Ian Ewing",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Ian Ewing"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Andrew W Cameron",
+        "Ian Ewing",
+        "Andrea Proulx",
+        "Dan Shaver",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Alex Bush",
+        "Graham Brown",
+        "Saskia Vanderloo",
+        "Stephen Close"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Maya Popovic",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+        "Christopher LaFleur",
+        "Geofford Seaborn",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ian Ewing",
+        "Andrea Proulx",
+        "Jean Surette",
+        "Andrew W Cameron",
+        "Christian Hamel"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Alex Bush",
+        "Kindha Gorman",
+        "Jason Fraser",
+        "Saskia Vanderloo"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Amelia Keenan",
+        "Ian Ewing",
+        "Dan Shaver",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Geofford Seaborn",
+        "Kris Bergmann"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Stephen Close",
+        "Jason Fraser",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+        "Andrea Proulx",
+        "Maya Popovic",
+        "Christian Hamel",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kindha Gorman",
+        "John Zwanenburg",
+        "Kris Bergmann",
+        "Christopher LaFleur",
+        "Saskia Vanderloo"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amelia Keenan",
+        "Maya Popovic",
+        "Ian Ewing",
+        "Christian Hamel",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Stephen Close",
+        "Jason Fraser",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christian Hamel"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher LaFleur",
+        "John Zwanenburg",
+        "Geofford Seaborn",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Kindha Gorman",
+        "Alex Bush",
+        "Saskia Vanderloo"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Geofford Seaborn",
+        "Elise Milbradt"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Jean Surette",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Andrew W Cameron",
+        "Andrea Proulx",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Geofford Seaborn",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "Douglas Brierley",
+        "Dan Shaver",
+        "Jean Surette"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Alex Bush",
+        "Saskia Vanderloo",
+        "Graham Brown",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Ian Ewing",
+        "Amelia Keenan",
+        "Shubho Bo Biswas",
+        "Andrew W Cameron",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Dan Shaver",
+        "Jean Surette",
+        "Ian Ewing",
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Andrea Proulx",
+        "Amelia Keenan",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Stephen Close",
+        "Graham Brown",
+        "Saskia Vanderloo",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Saskia Vanderloo"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Kris Bergmann",
+        "Christopher LaFleur",
+        "John Zwanenburg",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Maya Popovic",
+        "Andrea Proulx",
+        "Shubho Bo Biswas",
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Andrea Proulx",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amelia Keenan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Alex Bush",
+        "Stephen Close",
+        "Saskia Vanderloo",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Douglas Brierley"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas"
+      ],
+      "defensePlayers": [
+        "Christopher LaFleur",
+        "John Zwanenburg",
+        "Kris Bergmann",
+        "Geofford Seaborn",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher LaFleur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Amelia Keenan",
+        "Douglas Brierley",
+        "Andrew W Cameron",
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Christopher LaFleur"
+      ],
+      "defensePlayers": [
+        "Maya Popovic",
+        "Ian Ewing",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher LaFleur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher LaFleur",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Jason Fraser",
+        "Stephen Close",
+        "Graham Brown"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrea Proulx",
+        "Jean Surette",
+        "Ian Ewing"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Jean Surette"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jean Surette",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas",
+        "Maya Popovic",
+        "Amelia Keenan",
+        "Ian Ewing"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amelia Keenan",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Shubho Bo Biswas"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Dan Shaver",
+        "Ian Ewing",
+        "Douglas Brierley",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stephen Close",
+        "Alex Bush",
+        "Kindha Gorman",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Amelia Keenan",
+        "Andrea Proulx",
+        "Douglas Brierley",
+        "Christian Hamel",
+        "Andrew W Cameron",
+        "Shubho Bo Biswas"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Christian Hamel"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christian Hamel",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Amelia Keenan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amelia Keenan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    }
+  ]
+}

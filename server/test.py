@@ -27,7 +27,8 @@ class ServerTests(FlaskTest, SnapShotTest):
         league.id = 1
         league.zuluru_id = 1
         league.name = 'Test'
-        league.salary_version = 'v2'
+        league.stat_values = 'v2'
+        league.salary_calc = 'pro_rate'
         db.session.add(league)
         db.session.commit()
 
@@ -96,6 +97,12 @@ class ServerTests(FlaskTest, SnapShotTest):
         self.upload_game('data/test/turnovers.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
+
+
+    def test_league_endpoint(self):
+        response = self.client.get('/api/leagues')
+        assert response.status_code == 200
+        assert response.json == [{'id': 1, 'name': 'Test', 'zuluru_id': 1}]
 
 
     def test_api_endpoints(self):

@@ -1,3348 +1,5 @@
 {
   "week": 1,
-  "teams": {
-    "Hindsight Hooligans": [
-      "Julia Laforge",
-      "Aleksandra Ostojic",
-      "Maya Popovic",
-      "Carrie-Anne Whyte",
-      "Amos Lee",
-      "Craig Anderson",
-      "Kevin Barford",
-      "Hadrian Mertins-Kirkwood",
-      "Michael O'Hare",
-      "Andre Scott",
-      "Nick Theriault",
-      "Geofford seaborn"
-    ],
-    "Katy Parity": [
-      "Kindha Gorman",
-      "Wynne Gee",
-      "Ashlin Kelly",
-      "Rachel So",
-      "Sebastien Belanger",
-      "Jeremy Bryan",
-      "Alex Bush",
-      "Alessandro Colantonio",
-      "Michael Colantonio",
-      "Krys Kudakiewicz",
-      "Chris Tran",
-      "Nick Vetvut"
-    ]
-  },
-  "score": {
-    "Hindsight Hooligans": 27,
-    "Katy Parity": 19
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 8, 2016 4:11:22 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:11:50 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:11:53 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:11:57 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:12:00 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:12:02 AM",
-          "firstActor": "Chris Tran"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:13:13 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:13:17 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:13:24 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:13:27 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:13:29 AM",
-          "firstActor": "Kevin Barford"
-        }
-      ],
-      "defensePlayers": [
-        "Alex Bush",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:14:08 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:14:12 AM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:14:14 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:14:17 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:14:18 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:14:24 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:14:28 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:14:29 AM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Andre Scott",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:15:11 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:15:13 AM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:15:14 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:15:16 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:15:17 AM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:15:57 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:16:00 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:16:02 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:16:05 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:16:06 AM",
-          "firstActor": "Chris Tran"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Andre Scott",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:16:57 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:17:02 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:17:08 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:17:09 AM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:17:49 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:17:54 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:17:59 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:16 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:19 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:22 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:27 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:32 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:37 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:39 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:46 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:18:57 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:19:02 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:19:14 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:19:16 AM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:19:57 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:03 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:06 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:10 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:12 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:17 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:20:20 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:20:21 AM",
-          "firstActor": "Alex Bush"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:04 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:07 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:11 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:14 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:19 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:21 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:25 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:31 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:21:36 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:21:37 AM",
-          "firstActor": "Aleksandra Ostojic"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:22:16 AM",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:22:33 AM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:22:46 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:22:49 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:22:54 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:22:58 AM",
-          "firstActor": "Wynne Gee"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:23:44 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:23:47 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:23:51 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:23:55 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:23:58 AM",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alessandro Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:24:40 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:24:45 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:24:47 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:24:53 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:25:00 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:25:02 AM",
-          "firstActor": "Krys Kudakiewicz"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Kevin Barford",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:25:52 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:25:56 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:26:02 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:26:05 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:26:08 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:26:35 AM",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:26:39 AM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:27:00 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:13 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:15 AM",
-          "secondActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:18 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:20 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:27 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:34 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:36 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:27:40 AM",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:53 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:27:56 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:00 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:06 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:08 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:11 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:15 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:28:19 AM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:41 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:45 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:53 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:28:55 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:30:57 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:00 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:03 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:12 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 4:31:12 AM",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:16 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:19 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:21 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:31:23 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:31:23 AM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:32:09 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:32:12 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:32:18 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:32:18 AM",
-          "firstActor": "Alex Bush"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:02 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:05 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:33:09 AM",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:33:12 AM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:17 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:21 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:25 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 4:33:26 AM",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:32 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:34 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:38 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:44 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:48 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:51 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:56 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:33:59 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:34:02 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:34:11 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:34:14 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:34:15 AM",
-          "firstActor": "Geofford seaborn"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:03 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:08 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:11 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:15 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:18 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:35:21 AM",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:35:24 AM",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:26 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:28 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:35:30 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:35:31 AM",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:18 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:24 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:27 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:33 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:35 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:36:39 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:36:40 AM",
-          "firstActor": "Nick Vetvut"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:27 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:32 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:34 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:38 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:46 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:37:51 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:37:52 AM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:38:34 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:38:38 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:38:40 AM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:38:48 AM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:38:53 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:38:59 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:39:01 AM",
-          "firstActor": "Krys Kudakiewicz"
-        }
-      ],
-      "defensePlayers": [
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Andre Scott",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Nov 8, 2016 4:42:30 AM",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:43:01 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:43:03 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:43:10 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:43:15 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:43:17 AM",
-          "firstActor": "Nick Theriault"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:44:07 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:44:11 AM",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:44:15 AM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:44:28 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:44:31 AM",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:45:17 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:45:22 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 4:45:23 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:45:43 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:45:51 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:45:57 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:46:01 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:16 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:23 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:24 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:25 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:28 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:31 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:37 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:46:43 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:46:46 AM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:47:27 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:47:28 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:47:32 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:47:38 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:47:39 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:20 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:23 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:48:30 AM",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:47 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:49 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:51 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:56 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:48:56 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:49:01 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:49:04 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:49:06 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:49:14 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:49:15 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:50:01 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:50:06 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:50:07 AM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:50:48 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:50:51 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:50:54 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:51:00 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:51:04 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:51:09 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:51:10 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Andre Scott",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:51:56 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:51:59 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:52:01 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:52:04 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:52:10 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:52:11 AM",
-          "firstActor": "Aleksandra Ostojic"
-        }
-      ],
-      "defensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:53:04 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:53:10 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:53:16 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:53:49 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:53:53 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:53:55 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:54:00 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:54:02 AM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:54:50 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:54:52 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:54:58 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:18 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:22 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:25 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:28 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:41 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:54 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Chris Tran"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:55:59 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:56:01 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:56:44 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:56:46 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:56:47 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:56:51 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:56:55 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:57:03 AM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 4:57:07 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:57:11 AM",
-          "secondActor": "Kindha Gorman",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:57:11 AM",
-          "firstActor": "Kindha Gorman"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:58:00 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:58:07 AM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:58:29 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 4:58:36 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:58:57 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 4:58:58 AM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:59:06 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:59:14 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 4:59:16 AM",
-          "secondActor": "Chris Tran",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 4:59:17 AM",
-          "firstActor": "Chris Tran"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:00:07 AM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:00:13 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:00:14 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:00:58 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:01:01 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:01:06 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:01:07 AM",
-          "firstActor": "Amos Lee"
-        }
-      ],
-      "defensePlayers": [
-        "Alex Bush",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:01:48 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:01:49 AM",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:01:59 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:02:06 AM",
-          "secondActor": "Kevin Barford",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:02:08 AM",
-          "firstActor": "Kevin Barford"
-        }
-      ],
-      "defensePlayers": [
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:02:46 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:02:47 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:02:52 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:02:53 AM",
-          "firstActor": "Geofford seaborn"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:35 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:36 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:37 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:39 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:43 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:46 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:47 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:03:50 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:03:51 AM",
-          "firstActor": "Michael Colantonio"
-        }
-      ],
-      "defensePlayers": [
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:04:39 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:04:41 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:04:46 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:04:50 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:04:57 AM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:37 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:44 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:05:44 AM",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:54 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:58 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:06:19 AM",
-          "secondActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:06:22 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:06:23 AM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:37 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:44 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:05:44 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:54 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:05:58 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:06:19 AM",
-          "secondActor": "Kevin Barford"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:06:22 AM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Kevin Barford"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:06:23 AM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Nick Theriault",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:11 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:14 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:19 AM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:07:21 AM",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:27 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:35 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:07:37 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:07:38 AM",
-          "firstActor": "Aleksandra Ostojic"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:08:13 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:08:19 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:08:21 AM",
-          "firstActor": "Alex Bush"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Craig Anderson",
-        "Kevin Barford",
-        "Andre Scott",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Hadrian Mertins-Kirkwood",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:09:07 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:09:10 AM",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:09:13 AM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:09:16 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:09:21 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:09:27 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:09:28 AM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:09:56 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:10:01 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:10:06 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:10:09 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:10:10 AM",
-          "firstActor": "Julia Laforge"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Alessandro Colantonio",
-        "Chris Tran",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:11:03 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:11:04 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:11:30 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:11:35 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:11:40 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Nick Theriault"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:11:41 AM",
-          "firstActor": "Maya Popovic"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Kevin Barford",
-        "Andre Scott",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Wynne Gee"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:12:41 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:12:44 AM",
-          "secondActor": "Alessandro Colantonio",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:12:47 AM",
-          "firstActor": "Alessandro Colantonio"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:12:50 AM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:12:54 AM",
-          "secondActor": "Julia Laforge",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:12:56 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Julia Laforge"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:12:58 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:13:01 AM",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Hadrian Mertins-Kirkwood",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Aleksandra Ostojic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Krys Kudakiewicz",
-        "Chris Tran",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:13:40 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:13:43 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:13:46 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:13:53 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:13:54 AM",
-          "firstActor": "Alex Bush"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Nick Theriault",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:14:44 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:14:48 AM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:14:54 AM",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:14:58 AM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:02 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:10 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:34 AM",
-          "secondActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:39 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:40 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:15:41 AM",
-          "firstActor": "Nick Theriault"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Kevin Barford",
-        "Nick Theriault",
-        "Geofford seaborn",
-        "Aleksandra Ostojic",
-        "Maya Popovic"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:14:44 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Nov 8, 2016 5:14:48 AM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:14:54 AM",
-          "firstActor": "Kindha Gorman"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:14:58 AM",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:02 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:10 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:34 AM",
-          "secondActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:39 AM",
-          "secondActor": "Aleksandra Ostojic",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:15:40 AM",
-          "secondActor": "Nick Theriault",
-          "firstActor": "Aleksandra Ostojic"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:15:41 AM",
-          "firstActor": "Nick Theriault"
-        }
-      ],
-      "defensePlayers": [
-        "Alessandro Colantonio",
-        "Michael Colantonio",
-        "Chris Tran",
-        "Nick Vetvut",
-        "Kindha Gorman",
-        "Ashlin Kelly"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Alex Bush",
-        "Krys Kudakiewicz",
-        "Nick Vetvut",
-        "Wynne Gee",
-        "Ashlin Kelly"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:16:25 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:16:27 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:16:30 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:16:36 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:16:39 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:16:46 AM",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Nov 8, 2016 5:16:48 AM",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:17:03 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:17:06 AM",
-          "secondActor": "Andre Scott",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:17:17 AM",
-          "firstActor": "Andre Scott"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:17:46 AM",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:17:55 AM",
-          "secondActor": "Hadrian Mertins-Kirkwood",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:00 AM",
-          "secondActor": "Maya Popovic",
-          "firstActor": "Hadrian Mertins-Kirkwood"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:04 AM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Maya Popovic"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:08 AM",
-          "secondActor": "Amos Lee",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Nov 8, 2016 5:18:11 AM",
-          "firstActor": "Amos Lee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:27 AM",
-          "secondActor": "Wynne Gee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:30 AM",
-          "secondActor": "Nick Vetvut",
-          "firstActor": "Wynne Gee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:36 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Nick Vetvut"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:39 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:43 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:18:47 AM",
-          "secondActor": "Alex Bush",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:19:11 AM",
-          "secondActor": "Krys Kudakiewicz",
-          "firstActor": "Alex Bush"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:19:17 AM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Krys Kudakiewicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Nov 8, 2016 5:19:21 AM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Nov 8, 2016 5:19:23 AM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Amos Lee",
-        "Hadrian Mertins-Kirkwood",
-        "Andre Scott",
-        "Geofford seaborn",
-        "Julia Laforge",
-        "Maya Popovic"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Nick Theriault,",
@@ -4090,5 +747,2797 @@
     "-1,Maya Popovic,",
     "Direction,<<<<<<,"
   ],
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Andre Scott",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Andre Scott",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alessandro Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Kevin Barford",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Vetvut"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Andre Scott",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Nick Theriault",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Andre Scott",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Tran",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kindha Gorman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Chris Tran"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Tran"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colantonio",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Nick Theriault",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Craig Anderson",
+        "Kevin Barford",
+        "Andre Scott",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Hadrian Mertins-Kirkwood",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Julia Laforge"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Alessandro Colantonio",
+        "Chris Tran",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kevin Barford",
+        "Andre Scott",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Maya Popovic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Hadrian Mertins-Kirkwood",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alessandro Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Krys Kudakiewicz",
+        "Chris Tran",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Nick Theriault",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Kevin Barford",
+        "Nick Theriault",
+        "Geofford seaborn",
+        "Aleksandra Ostojic",
+        "Maya Popovic"
+      ],
+      "defensePlayers": [
+        "Alessandro Colantonio",
+        "Michael Colantonio",
+        "Chris Tran",
+        "Nick Vetvut",
+        "Kindha Gorman",
+        "Ashlin Kelly"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Alex Bush",
+        "Krys Kudakiewicz",
+        "Nick Vetvut",
+        "Wynne Gee",
+        "Ashlin Kelly"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Geofford seaborn",
+        "Julia Laforge",
+        "Maya Popovic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Maya Popovic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Maya Popovic",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Nick Vetvut"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Vetvut",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Hindsight Hooligans",
+  "homeRoster": [
+    "Julia Laforge",
+    "Aleksandra Ostojic",
+    "Maya Popovic",
+    "Carrie-Anne Whyte",
+    "Amos Lee",
+    "Craig Anderson",
+    "Kevin Barford",
+    "Hadrian Mertins-Kirkwood",
+    "Michael O'Hare",
+    "Andre Scott",
+    "Nick Theriault",
+    "Geofford seaborn"
+  ],
+  "awayTeam": "Katy Parity",
+  "awayRoster": [
+    "Kindha Gorman",
+    "Wynne Gee",
+    "Ashlin Kelly",
+    "Rachel So",
+    "Sebastien Belanger",
+    "Jeremy Bryan",
+    "Alex Bush",
+    "Alessandro Colantonio",
+    "Michael Colantonio",
+    "Krys Kudakiewicz",
+    "Chris Tran",
+    "Nick Vetvut"
+  ],
+  "awayScore": 19,
+  "homeScore": 27
 }

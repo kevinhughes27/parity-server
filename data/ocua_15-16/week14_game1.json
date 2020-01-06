@@ -1,0 +1,2612 @@
+{
+  "league_id": 3,
+  "week": 14,
+  "homeTeam": "Katy Parity",
+  "homeScore": "18",
+  "homeRoster": [
+    "Brian Kells",
+    "Khalid Al-Zahrani",
+    "Stephen Close",
+    "Steve Bisang",
+    "Karen Kavanagh",
+    "Kirsten Querbach",
+    "Graham Brown",
+    "Jonathan Champagne",
+    "Owen Lumley",
+    "Stephanie White"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "16",
+  "awayRoster": [
+    "Christopher Keates",
+    "Matthew Smith",
+    "Mehmet Karman",
+    "Adrienne Junek",
+    "Stacey Wowchuk",
+    "Kyle Sprysa(S)",
+    "Dan Thomson",
+    "David O'Connor",
+    "Nina Ramic",
+    "Neena Sidhu"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Nina Ramic",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Nina Ramic",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Owen Lumley",
+        "Stephen Close",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Stephen Close",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nina Ramic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Bisang"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Adrienne Junek",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Stephen Close",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Stephen Close",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Adrienne Junek",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Matthew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Karen Kavanagh",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Dan Thomson",
+        "David O'Connor",
+        "Matthew Smith",
+        "Nina Ramic",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "David O'Connor",
+        "Mehmet Karman",
+        "Adrienne Junek",
+        "Stacey Wowchuk",
+        "Kyle Sprysa(S)"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Steve Bisang",
+        "Karen Kavanagh",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Adrienne Junek"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Adrienne Junek"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Stephen Close",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Matthew Smith",
+        "Mehmet Karman",
+        "Nina Ramic",
+        "Kyle Sprysa(S)",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    }
+  ]
+}

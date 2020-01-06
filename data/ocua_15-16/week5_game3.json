@@ -1,0 +1,2706 @@
+{
+  "league_id": 3,
+  "week": 5,
+  "homeTeam": "Stan's Sturgeons",
+  "homeScore": "24",
+  "homeRoster": [
+    "Brian Kells",
+    "Frederic Caron",
+    "Khalid Al-Zahrani",
+    "Stanley Kent",
+    "Karen Kavanagh",
+    "Marie-Claude Lacombe",
+    "Jamie Wildgen",
+    "Sebastien Benard",
+    "Christine Beals",
+    "Alex Bush(S)",
+    "Jen Cluthe(S)"
+  ],
+  "awayTeam": "Lowered Expectations",
+  "awayScore": "15",
+  "awayRoster": [
+    "Edwin Wong",
+    "Ian Ewing",
+    "Shubho Bo Biswas",
+    "Steve Chow",
+    "Laura Chambers Storey",
+    "Stephanie White",
+    "Benoit Goulet",
+    "Geofford seaborn",
+    "James Maeng",
+    "Nicholas Aghajanian",
+    "Anne Leduc",
+    "Heather Wallace"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jamie Wildgen"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Benard"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Karen Kavanagh"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Karen Kavanagh",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jamie Wildgen",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Stanley Kent",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Sebastien Benard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Sebastien Benard",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Benard",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jamie Wildgen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jamie Wildgen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Jamie Wildgen",
+        "Sebastien Benard",
+        "Christine Beals",
+        "Jen Cluthe(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jamie Wildgen",
+        "Khalid Al-Zahrani",
+        "Stanley Kent",
+        "Karen Kavanagh",
+        "Marie-Claude Lacombe",
+        "Alex Bush(S)"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Ian Ewing",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Marie-Claude Lacombe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marie-Claude Lacombe",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Geofford seaborn",
+        "James Maeng",
+        "Nicholas Aghajanian",
+        "Anne Leduc",
+        "Heather Wallace"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Frederic Caron",
+        "Sebastien Benard",
+        "Christine Beals",
+        "Alex Bush(S)",
+        "Jen Cluthe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jen Cluthe(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe(S)"
+        }
+      ]
+    }
+  ]
+}

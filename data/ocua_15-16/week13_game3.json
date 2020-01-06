@@ -1,0 +1,2699 @@
+{
+  "league_id": 3,
+  "week": 13,
+  "homeTeam": "Scoobers in New York",
+  "homeScore": "13",
+  "homeRoster": [
+    "Kris Bergmann",
+    "Marc Vachon",
+    "Shubho Bo Biswas",
+    "Will Leckie",
+    "Heather Wallace",
+    "Olesia Bissett",
+    "Brent Burton",
+    "Douglas Brierley",
+    "Sina Dee",
+    "Ashlin Kelly",
+    "Christine Beals"
+  ],
+  "awayTeam": "Luke Parity",
+  "awayScore": "20",
+  "awayRoster": [
+    "Alex Bush",
+    "Andre Scott",
+    "Jeff Hunt",
+    "Nick Klimowicz",
+    "Ewelina Sosnowska",
+    "Jessie Robinson",
+    "Greg Cormier",
+    "Greg Probe",
+    "Kyle Sprysa",
+    "Steve Chow",
+    "Laura Chambers Storey"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marc Vachon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Sina Dee",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Sina Dee",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Kris Bergmann",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Sina Dee",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Klimowicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Kris Bergmann",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Sina Dee",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christine Beals"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Olesia Bissett"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Sina Dee",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Olesia Bissett",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jessie Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Olesia Bissett"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Olesia Bissett"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ewelina Sosnowska",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ewelina Sosnowska"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Cormier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Douglas Brierley",
+        "Marc Vachon",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "defensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Ewelina Sosnowska",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Will Leckie",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Cormier",
+        "Greg Probe",
+        "Kyle Sprysa",
+        "Steve Chow",
+        "Jessie Robinson",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Douglas Brierley",
+        "Shubho Bo Biswas",
+        "Sina Dee",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Christine Beals"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Christine Beals"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christine Beals",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Kris Bergmann",
+        "Marc Vachon",
+        "Sina Dee",
+        "Heather Wallace",
+        "Olesia Bissett"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Andre Scott",
+        "Jeff Hunt",
+        "Nick Klimowicz",
+        "Ewelina Sosnowska",
+        "Jessie Robinson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Marc Vachon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marc Vachon",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2556 @@
+{
+  "league_id": 2,
+  "week": 15,
+  "homeTeam": "A Windmill Full of Corpses",
+  "homeScore": "21",
+  "homeRoster": [
+    "Morgan Howard",
+    "Kris Bergmann",
+    "Jeremy Bryan",
+    "Hope Celani",
+    "Rob Tyson",
+    "Saskia Vanderloo",
+    "Sandra Hanson(S)",
+    "Dan Thomson",
+    "David Townsend(S)",
+    "Matt Masse(S)",
+    "Craig Anderson",
+    "Stephanie Fowler(S)"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "21",
+  "awayRoster": [
+    "Dan Shaver",
+    "Will Leckie",
+    "Patrick Gauvin",
+    "Celine Dumais",
+    "Nick Theriault",
+    "Al Colantonio",
+    "Andrew McGregor",
+    "Elise Milbradt",
+    "Kirsten Querbach",
+    "Catherine Horvath",
+    "Andrew Smith"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Andrew McGregor",
+        "Nick Theriault",
+        "Will Leckie",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew McGregor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Kris Bergmann",
+        "Jeremy Bryan",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Dan Shaver",
+        "Will Leckie",
+        "Patrick Gauvin"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Nick Theriault",
+        "Al Colantonio",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Rob Tyson",
+        "Saskia Vanderloo"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson(S)",
+        "Dan Thomson"
+      ],
+      "defensePlayers": [
+        "Elise Milbradt",
+        "Kirsten Querbach",
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Rob Tyson",
+        "David Townsend(S)",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Al Colantonio",
+        "Elise Milbradt",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend(S)",
+        "Kris Bergmann",
+        "Matt Masse(S)",
+        "Rob Tyson",
+        "Saskia Vanderloo"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Andrew McGregor",
+        "Catherine Horvath",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Kirsten Querbach",
+        "Dan Shaver"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Craig Anderson",
+        "Dan Thomson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Patrick Gauvin",
+        "Andrew McGregor",
+        "Catherine Horvath",
+        "Nick Theriault",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Matt Masse(S)",
+        "David Townsend(S)",
+        "Saskia Vanderloo",
+        "Kris Bergmann"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Catherine Horvath"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Kirsten Querbach",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "David Townsend(S)",
+        "Saskia Vanderloo",
+        "Matt Masse(S)",
+        "Stephanie Fowler(S)"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Will Leckie",
+        "Andrew McGregor",
+        "Catherine Horvath"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Catherine Horvath"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Kris Bergmann",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Matt Masse(S)",
+        "Rob Tyson",
+        "Stephanie Fowler(S)",
+        "David Townsend(S)",
+        "Dan Thomson"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Andrew Smith",
+        "Andrew McGregor",
+        "Catherine Horvath",
+        "Celine Dumais"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew McGregor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Morgan Howard",
+        "Sandra Hanson(S)",
+        "Jeremy Bryan",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Catherine Horvath",
+        "Al Colantonio",
+        "Andrew McGregor",
+        "Celine Dumais",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Matt Masse(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Hope Celani",
+        "Jeremy Bryan",
+        "Craig Anderson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Patrick Gauvin",
+        "Celine Dumais",
+        "Andrew Smith",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Rob Tyson",
+        "Stephanie Fowler(S)",
+        "Saskia Vanderloo"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler(S)",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Saskia Vanderloo",
+          "secondActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Craig Anderson",
+        "Kris Bergmann",
+        "Morgan Howard",
+        "Sandra Hanson(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David Townsend(S)",
+        "Dan Thomson",
+        "Sandra Hanson(S)",
+        "Matt Masse(S)",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Kirsten Querbach",
+        "Elise Milbradt",
+        "Nick Theriault",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Morgan Howard",
+        "Kris Bergmann"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Celine Dumais",
+        "Catherine Horvath",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Morgan Howard",
+        "Craig Anderson",
+        "Hope Celani"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Catherine Horvath",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kris Bergmann",
+        "Craig Anderson",
+        "Jeremy Bryan",
+        "Stephanie Fowler(S)",
+        "Hope Celani",
+        "Morgan Howard"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Dan Shaver",
+        "Kirsten Querbach",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler(S)",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Will Leckie",
+        "Al Colantonio",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Hope Celani",
+        "Jeremy Bryan",
+        "Morgan Howard",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Dan Shaver",
+        "Will Leckie",
+        "Kirsten Querbach",
+        "Elise Milbradt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Al Colantonio",
+        "Andrew Smith",
+        "Patrick Gauvin"
+      ],
+      "defensePlayers": [
+        "Rob Tyson",
+        "Sandra Hanson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Morgan Howard",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Will Leckie",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "David Townsend(S)",
+        "Dan Thomson",
+        "Sandra Hanson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Nick Theriault",
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Saskia Vanderloo",
+        "Dan Thomson",
+        "Rob Tyson",
+        "Sandra Hanson(S)",
+        "David Townsend(S)",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Nick Theriault",
+        "Andrew Smith",
+        "Celine Dumais",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Saskia Vanderloo"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Morgan Howard",
+        "Craig Anderson",
+        "Stephanie Fowler(S)",
+        "Hope Celani",
+        "Kris Bergmann"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler(S)",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Catherine Horvath",
+        "Al Colantonio",
+        "Nick Theriault",
+        "Celine Dumais",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "David Townsend(S)",
+        "Matt Masse(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Catherine Horvath"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Elise Milbradt",
+        "Patrick Gauvin",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Morgan Howard",
+        "Craig Anderson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Celine Dumais",
+        "Patrick Gauvin",
+        "Catherine Horvath",
+        "Al Colantonio",
+        "Andrew Smith"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Catherine Horvath"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Catherine Horvath",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Craig Anderson",
+        "Morgan Howard",
+        "Stephanie Fowler(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Stephanie Fowler(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie Fowler(S)",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Shaver",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "David Townsend(S)",
+        "Rob Tyson",
+        "Sandra Hanson(S)",
+        "Dan Thomson",
+        "Matt Masse(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Matt Masse(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "David Townsend(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt",
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Will Leckie",
+        "Kirsten Querbach",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Morgan Howard"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson(S)",
+        "Rob Tyson",
+        "Dan Thomson",
+        "Matt Masse(S)"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse(S)",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Nick Theriault",
+        "Kirsten Querbach",
+        "Elise Milbradt",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Al Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Will Leckie",
+        "Celine Dumais",
+        "Dan Shaver"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Dan Shaver"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Shaver",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Morgan Howard",
+        "Kris Bergmann",
+        "Jeremy Bryan"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Nick Theriault",
+        "Elise Milbradt",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Elise Milbradt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2519 @@
+{
+  "league_id": 3,
+  "week": 3,
+  "homeTeam": "Lowered Expectations",
+  "homeScore": "23",
+  "homeRoster": [
+    "Benoit Goulet",
+    "Edwin Wong",
+    "Ian Ewing",
+    "Mackenzie King",
+    "Laura Chambers Storey",
+    "Stephanie White",
+    "Geofford seaborn",
+    "Nicholas Aghajanian",
+    "Shubho Bo Biswas",
+    "Steve Chow",
+    "Anne Leduc"
+  ],
+  "awayTeam": "#HammerHouse",
+  "awayScore": "14",
+  "awayRoster": [
+    "Andre Scott",
+    "Greg Probe",
+    "James Maeng",
+    "Kyle Sprysa",
+    "Jessie Robinson",
+    "Laura Knowles(S)",
+    "Jeremy Bryan",
+    "Rob Tyson",
+    "Heather Wallace",
+    "Kindha Gorman(S)"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benoit Goulet"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jessie Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James Maeng"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Chambers Storey"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James Maeng",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "James Maeng",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mackenzie King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ian Ewing",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Anne Leduc"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James Maeng"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "James Maeng",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Anne Leduc"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benoit Goulet",
+          "secondActor": "Ian Ewing"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ian Ewing"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "James Maeng",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "James Maeng"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James Maeng",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Jeremy Bryan",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Anne Leduc",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jessie Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mackenzie King",
+          "secondActor": "Benoit Goulet"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benoit Goulet"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Probe",
+        "James Maeng",
+        "Jeremy Bryan",
+        "Rob Tyson",
+        "Heather Wallace",
+        "Kindha Gorman(S)"
+      ],
+      "defensePlayers": [
+        "Geofford seaborn",
+        "Nicholas Aghajanian",
+        "Shubho Bo Biswas",
+        "Steve Chow",
+        "Anne Leduc",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Kindha Gorman(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman(S)",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Chow",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Shubho Bo Biswas"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas",
+          "secondActor": "Anne Leduc"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Anne Leduc",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Steve Chow"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Chow"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andre Scott",
+        "Greg Probe",
+        "James Maeng",
+        "Kyle Sprysa",
+        "Jessie Robinson",
+        "Laura Knowles(S)"
+      ],
+      "defensePlayers": [
+        "Benoit Goulet",
+        "Edwin Wong",
+        "Ian Ewing",
+        "Mackenzie King",
+        "Laura Chambers Storey",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Jessie Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jessie Robinson",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    }
+  ]
+}

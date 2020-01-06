@@ -1,39 +1,5 @@
 {
   "week": 3,
-  "score": {
-    "Nautical Disaster - Man Overboard! (SOS)": "22",
-    "Katy Parity (back by popular demand)": "17"
-  },
-  "teams": {
-    "Nautical Disaster - Man Overboard! (SOS)": [
-      "Michael O'Hare",
-      "Jeremy Bryan",
-      "Megan Robb",
-      "Benjamin Piper",
-      "Andrea Proulx",
-      "Will Leckie",
-      "Nicholas Aghajanian",
-      "Frederic Caron",
-      "Jonathan Pindur",
-      "Kevin Hughes",
-      "Taka Yamada",
-      "Sandra Hanson"
-    ],
-    "Katy Parity (back by popular demand)": [
-      "Hadrian Mertins-Kirkwood",
-      "Steve Chow",
-      "Marcus Bordage",
-      "Andrew Spearin",
-      "Josee Guibord",
-      "Morgan Howard",
-      "Jeff Hunt",
-      "Andre Scott",
-      "Laura Chambers Storey",
-      "Kindha Gorman",
-      "Edwin Wong",
-      "Julia Laforge"
-    ]
-  },
   "event_string": [
     "",
     "Pull,Benjamin Piper",
@@ -721,5 +687,2997 @@
     "Direction,>>>>>>",
     "Time,Half"
   ],
-  "league_id": 5
+  "league_id": 5,
+  "points": [
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Benjamin Piper"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Morgan Howard"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Josee Guibord"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Taka Yamada"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Spearin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Robb"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Robb"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Andre Scott",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Josee Guibord"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Josee Guibord"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Marcus Bordage"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Jeff Hunt",
+        "Andre Scott",
+        "Edwin Wong",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Marcus Bordage",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Laura Chambers Storey",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Megan Robb"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Robb",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Marcus Bordage",
+        "Andre Scott",
+        "Andrew Spearin",
+        "Edwin Wong",
+        "Kindha Gorman",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Jonathan Pindur",
+        "Benjamin Piper",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Benjamin Piper"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Marcus Bordage"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Marcus Bordage",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Benjamin Piper"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Benjamin Piper",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Morgan Howard",
+        "Jeff Hunt",
+        "Hadrian Mertins-Kirkwood",
+        "Andrew Spearin",
+        "Kindha Gorman",
+        "Josee Guibord"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Benjamin Piper",
+        "Sandra Hanson",
+        "Megan Robb"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael O'Hare"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Morgan Howard"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Morgan Howard",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Andrew Spearin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Spearin",
+          "secondActor": "Josee Guibord"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Josee Guibord",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+
+      ]
+    }
+  ],
+  "homeTeam": "Nautical Disaster - Man Overboard! (SOS)",
+  "homeRoster": [
+    "Michael O'Hare",
+    "Jeremy Bryan",
+    "Megan Robb",
+    "Benjamin Piper",
+    "Andrea Proulx",
+    "Will Leckie",
+    "Nicholas Aghajanian",
+    "Frederic Caron",
+    "Jonathan Pindur",
+    "Kevin Hughes",
+    "Taka Yamada",
+    "Sandra Hanson"
+  ],
+  "awayTeam": "Katy Parity (back by popular demand)",
+  "awayRoster": [
+    "Hadrian Mertins-Kirkwood",
+    "Steve Chow",
+    "Marcus Bordage",
+    "Andrew Spearin",
+    "Josee Guibord",
+    "Morgan Howard",
+    "Jeff Hunt",
+    "Andre Scott",
+    "Laura Chambers Storey",
+    "Kindha Gorman",
+    "Edwin Wong",
+    "Julia Laforge"
+  ],
+  "awayScore": "17",
+  "homeScore": "22"
 }

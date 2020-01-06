@@ -1,3137 +1,4 @@
 {
-  "teams": {
-    "Hindsight Hooligans": [
-      "Janet Ibit",
-      "Julia Laforge",
-      "Aleksandra Ostojic",
-      "Carrie-Anne Whyte",
-      "Amos Lee",
-      "Kevin Barford",
-      "Wing-Leung Chan",
-      "Jason Fraser",
-      "Hadrian Mertins-Kirkwood",
-      "Andre Scott",
-      "Jay Thor Turner",
-      "Geofford seaborn"
-    ],
-    "Kaboom": [
-      "Melissa Berry",
-      "Sandra Hanson",
-      "Darlene Riley",
-      "Stacey Wowchuk",
-      "Jamie Wildgen",
-      "Christopher Keates",
-      "Ethan Brady",
-      "Frederic Caron",
-      "Jeff Hunt",
-      "Tyler Mulcock",
-      "Matthew Schijns",
-      "David Townsend"
-    ]
-  },
-  "events": {
-    "points": [
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Dec 5, 2016 9:49:19 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:50:24 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:50:28 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 9:50:32 PM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 9:50:33 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:50:36 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:50:42 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:50:50 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 9:50:52 PM",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:51:01 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:51:08 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:51:13 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:51:13 PM",
-            "firstActor": "Aleksandra Ostojic"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:10 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:11 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:12 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:30 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:39 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 9:52:43 PM",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 9:52:46 PM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:55 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:52:59 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:53:00 PM",
-            "firstActor": "Wing-Leung Chan"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 9:53:58 PM",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 9:54:00 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:54:05 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:54:06 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:54:07 PM",
-            "secondActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:54:08 PM",
-            "firstActor": "Jason Fraser"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:55:04 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:55:07 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:55:08 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:55:56 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:04 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:07 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 9:56:09 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:15 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:19 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:24 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:28 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:35 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:39 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:40 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:47 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:52 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:55 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:56:59 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:57:00 PM",
-            "firstActor": "Sandra Hanson"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:57:52 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:57:58 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 9:58:03 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:58:31 PM",
-            "secondActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:58:38 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:58:40 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:58:45 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 9:58:53 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 9:58:54 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 9:59:46 PM",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:11 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:00:28 PM",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:36 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:38 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:40 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:44 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:47 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:52 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:00:56 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:01:01 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:01:01 PM",
-            "firstActor": "Rob Ives(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:01 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:12 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:02:12 PM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:15 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:18 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:23 PM",
-            "secondActor": "Melissa Berry",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:02:30 PM",
-            "firstActor": "Melissa Berry"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:02:59 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:05 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:07 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:12 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:19 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:03:23 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:03:25 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:03:39 PM",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:51 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:55 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:03:59 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:01 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:04:07 PM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:30 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:36 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:40 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:45 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:48 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:04:50 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:04:54 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:04:57 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:05:06 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:05:12 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:05:17 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:05:19 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:06:14 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:06:22 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:06:28 PM",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:06:29 PM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:06:31 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:06:37 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:06:42 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:06:47 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:07:04 PM",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:07:29 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:07:31 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:07:37 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:07:40 PM",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:07:42 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:07:50 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:07:51 PM",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:08:10 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:08:11 PM",
-            "firstActor": "Stacey Wowchuk"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:08:56 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:09:00 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:09:03 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:09:07 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:09:08 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:09:56 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:09:59 PM",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:11 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:14 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:18 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:24 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:31 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:10:34 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:10:38 PM",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:11:05 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:11:07 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:11:08 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:11:09 PM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:11:54 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:11:58 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:12:01 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:12:17 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:12:20 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:12:23 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:12:26 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:12:31 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:12:40 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:12:45 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:13:03 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:13:05 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:13:11 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:13:29 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:13:34 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:13:38 PM",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:13:41 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:13:56 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:00 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:02 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:07 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:11 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:18 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:19 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:23 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:14:26 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:14:26 PM",
-            "firstActor": "Jason Fraser"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:03 PM",
-            "secondActor": "Melissa Berry",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:15:04 PM",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:15:11 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:25 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:27 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:33 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:37 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:39 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:42 PM",
-            "secondActor": "Melissa Berry",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:15:44 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:15:50 PM",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:16:14 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:16:36 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:16:38 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:16:41 PM",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:16:55 PM",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:16:56 PM",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:16:58 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:17:01 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:17:07 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:17:07 PM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PULL",
-            "timestamp": "Dec 5, 2016 10:22:24 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:22:49 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:22:57 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:22:58 PM",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:23:04 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:23:05 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:23:58 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:24:01 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:24:06 PM",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:24:32 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:24:35 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:24:41 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:24:47 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:24:48 PM",
-            "firstActor": "Geofford seaborn"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:25:24 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:25:28 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:25:31 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:25:34 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:25:54 PM",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:25:56 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:25:58 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:25:59 PM",
-            "firstActor": "Rob Ives(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:26:47 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:26:49 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:26:54 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:26:54 PM",
-            "firstActor": "Kevin Barford"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:40 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:44 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:48 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:50 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:53 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:27:56 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:27:58 PM",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:27:59 PM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:28:07 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:28:08 PM",
-            "firstActor": "Andre Scott"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:28:50 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:28:54 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:28:57 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:29:04 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:29:10 PM",
-            "secondActor": "Melissa Berry",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:29:16 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:29:20 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:29:24 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:29:24 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:09 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:14 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:22 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:30:24 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:32 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:33 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:37 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:30:40 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:30:41 PM",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:45 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "DROP",
-            "timestamp": "Dec 5, 2016 10:30:48 PM",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:30:57 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:31:00 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:31:01 PM",
-            "firstActor": "David Townsend"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:31:52 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:31:55 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:31:57 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:32:00 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:32:06 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:32:10 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:32:10 PM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:01 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:06 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:09 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:13 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:19 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:24 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:25 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Darlene Riley"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:29 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:30 PM",
-            "secondActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:33 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:33:37 PM",
-            "secondActor": "Darlene Riley",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:33:38 PM",
-            "firstActor": "Darlene Riley"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:34:39 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:34:44 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:34:47 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:34:50 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:34:57 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:35:00 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:35:05 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:35:11 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:35:12 PM",
-            "firstActor": "Kevin Barford"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:35:57 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:36:00 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:36:02 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:36:05 PM",
-            "secondActor": "Sandra Hanson",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:36:06 PM",
-            "secondActor": "Matthew Schijns",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:36:12 PM",
-            "secondActor": "Alex Bush(S)",
-            "firstActor": "Matthew Schijns"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:36:12 PM",
-            "firstActor": "Alex Bush(S)"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:07 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:16 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Jay Thor Turner"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:18 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:22 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:24 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:28 PM",
-            "secondActor": "Geofford seaborn",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:30 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:37:35 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:37:37 PM",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:37:46 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:37:46 PM",
-            "firstActor": "Jeff Hunt"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:38:34 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:38:40 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:38:45 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:38:46 PM",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:39:28 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:39:31 PM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:39:35 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:39:35 PM",
-            "firstActor": "Aleksandra Ostojic"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:40:27 PM",
-            "firstActor": "Sandra Hanson"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:40:31 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:40:35 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:40:38 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:40:41 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:40:44 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:40:44 PM",
-            "firstActor": "Jason Fraser"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:18 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:22 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:26 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:31 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:41:34 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:52 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:41:57 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:41:59 PM",
-            "firstActor": "Kevin Barford"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:42:38 PM",
-            "secondActor": "Rob Ives(S)",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:42:42 PM",
-            "secondActor": "David Townsend",
-            "firstActor": "Rob Ives(S)"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:42:49 PM",
-            "firstActor": "David Townsend"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:42:56 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:02 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:03 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:10 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:16 PM",
-            "secondActor": "Julia Laforge",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:19 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:43:25 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:43:25 PM",
-            "firstActor": "Andre Scott"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:16 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:22 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:25 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:30 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:38 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:41 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:45 PM",
-            "secondActor": "Melissa Berry",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:44:48 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:44:49 PM",
-            "firstActor": "Tyler Mulcock"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:45:36 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:45:39 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:45:40 PM",
-            "firstActor": "Jason Fraser"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:46:24 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:46:26 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:46:29 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:46:35 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:46:37 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:23 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:27 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:31 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:34 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:42 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:47:46 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:47:47 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:48:35 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Melissa Berry"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:48:40 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:48:45 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:48:52 PM",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:48:54 PM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:02 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:11 PM",
-            "secondActor": "Wing-Leung Chan",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:49:16 PM",
-            "firstActor": "Wing-Leung Chan"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:38 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:40 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:42 PM",
-            "secondActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:49:45 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:49:51 PM",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "DEFENSE",
-            "timestamp": "Dec 5, 2016 10:49:52 PM",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:50:08 PM",
-            "secondActor": "Aleksandra Ostojic",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:50:15 PM",
-            "secondActor": "Kevin Barford",
-            "firstActor": "Aleksandra Ostojic"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:50:19 PM",
-            "secondActor": "Jay Thor Turner",
-            "firstActor": "Kevin Barford"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:50:20 PM",
-            "firstActor": "Jay Thor Turner"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:51:03 PM",
-            "firstActor": "Alex Bush(S)"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:51:15 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:51:24 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:51:58 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Carrie-Anne Whyte"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:52:05 PM",
-            "secondActor": "Jason Fraser",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:52:09 PM",
-            "secondActor": "Andre Scott",
-            "firstActor": "Jason Fraser"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:52:11 PM",
-            "secondActor": "Hadrian Mertins-Kirkwood",
-            "firstActor": "Andre Scott"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:52:21 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Hadrian Mertins-Kirkwood"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:52:21 PM",
-            "firstActor": "Amos Lee"
-          }
-        ],
-        "defensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:10 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:15 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:18 PM",
-            "secondActor": "Frederic Caron",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:23 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:27 PM",
-            "secondActor": "Stacey Wowchuk",
-            "firstActor": "Tyler Mulcock"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:29 PM",
-            "secondActor": "Jeff Hunt",
-            "firstActor": "Stacey Wowchuk"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:53:34 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Jeff Hunt"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:53:35 PM",
-            "firstActor": "Christopher Keates"
-          }
-        ],
-        "defensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:54:20 PM",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:54:29 PM",
-            "firstActor": "Darlene Riley"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Kevin Barford",
-          "Wing-Leung Chan",
-          "Jay Thor Turner",
-          "Geofford seaborn",
-          "Janet Ibit",
-          "Aleksandra Ostojic"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:55:24 PM",
-            "secondActor": "Janet Ibit",
-            "firstActor": "Geofford seaborn"
-          },
-          {
-            "type": "THROWAWAY",
-            "timestamp": "Dec 5, 2016 10:55:29 PM",
-            "firstActor": "Janet Ibit"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:55:45 PM",
-            "secondActor": "Christopher Keates",
-            "firstActor": "Frederic Caron"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:55:53 PM",
-            "secondActor": "Tyler Mulcock",
-            "firstActor": "Christopher Keates"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:55:54 PM",
-            "firstActor": "Tyler Mulcock"
-          }
-        ],
-        "defensePlayers": [
-          "Christopher Keates",
-          "Frederic Caron",
-          "Jeff Hunt",
-          "Tyler Mulcock",
-          "Melissa Berry",
-          "Stacey Wowchuk"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:56:40 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:56:41 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:56:51 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      },
-      {
-        "offensePlayers": [
-          "Amos Lee",
-          "Jason Fraser",
-          "Hadrian Mertins-Kirkwood",
-          "Andre Scott",
-          "Julia Laforge",
-          "Carrie-Anne Whyte"
-        ],
-        "events": [
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:56:40 PM",
-            "secondActor": "Amos Lee",
-            "firstActor": "Julia Laforge"
-          },
-          {
-            "type": "PASS",
-            "timestamp": "Dec 5, 2016 10:56:41 PM",
-            "secondActor": "Carrie-Anne Whyte",
-            "firstActor": "Amos Lee"
-          },
-          {
-            "type": "POINT",
-            "timestamp": "Dec 5, 2016 10:56:51 PM",
-            "firstActor": "Carrie-Anne Whyte"
-          }
-        ],
-        "defensePlayers": [
-          "Matthew Schijns",
-          "David Townsend",
-          "Sandra Hanson",
-          "Darlene Riley",
-          "Alex Bush(S)",
-          "Rob Ives(S)"
-        ]
-      }
-    ]
-  },
   "event_string": [
     "",
     "Pull,Alex Bush(S),",
@@ -3834,5 +701,2688 @@
   ],
   "time": "2016-12-06T03:59:24.111Z",
   "week": 5,
-  "league_id": 4
+  "league_id": 4,
+  "points": [
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tyler Mulcock"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wing-Leung Chan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Janet Ibit"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stacey Wowchuk"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Barford"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Schijns"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David Townsend"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Darlene Riley",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Darlene Riley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David Townsend",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Matthew Schijns"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Schijns",
+          "secondActor": "Alex Bush(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wing-Leung Chan",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Janet Ibit"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeff Hunt"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hadrian Mertins-Kirkwood"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Aleksandra Ostojic"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Barford"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush(S)",
+          "secondActor": "Rob Ives(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives(S)",
+          "secondActor": "David Townsend"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "David Townsend"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Julia Laforge"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andre Scott"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tyler Mulcock"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Berry",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Janet Ibit",
+          "secondActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wing-Leung Chan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Aleksandra Ostojic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleksandra Ostojic",
+          "secondActor": "Kevin Barford"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Barford",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Andre Scott"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andre Scott",
+          "secondActor": "Hadrian Mertins-Kirkwood"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hadrian Mertins-Kirkwood",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "defensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Julia Laforge"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Darlene Riley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kevin Barford",
+        "Wing-Leung Chan",
+        "Jay Thor Turner",
+        "Geofford seaborn",
+        "Janet Ibit",
+        "Aleksandra Ostojic"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Frederic Caron",
+        "Jeff Hunt",
+        "Tyler Mulcock",
+        "Melissa Berry",
+        "Stacey Wowchuk"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Janet Ibit"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Janet Ibit"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tyler Mulcock"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Jason Fraser",
+        "Hadrian Mertins-Kirkwood",
+        "Andre Scott",
+        "Julia Laforge",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Matthew Schijns",
+        "David Townsend",
+        "Sandra Hanson",
+        "Darlene Riley",
+        "Alex Bush(S)",
+        "Rob Ives(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Julia Laforge",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Hindsight Hooligans",
+  "homeRoster": [
+    "Janet Ibit",
+    "Julia Laforge",
+    "Aleksandra Ostojic",
+    "Carrie-Anne Whyte",
+    "Amos Lee",
+    "Kevin Barford",
+    "Wing-Leung Chan",
+    "Jason Fraser",
+    "Hadrian Mertins-Kirkwood",
+    "Andre Scott",
+    "Jay Thor Turner",
+    "Geofford seaborn"
+  ],
+  "awayTeam": "Kaboom",
+  "awayRoster": [
+    "Melissa Berry",
+    "Sandra Hanson",
+    "Darlene Riley",
+    "Stacey Wowchuk",
+    "Jamie Wildgen",
+    "Christopher Keates",
+    "Ethan Brady",
+    "Frederic Caron",
+    "Jeff Hunt",
+    "Tyler Mulcock",
+    "Matthew Schijns",
+    "David Townsend"
+  ],
+  "awayScore": 16,
+  "homeScore": 25
 }

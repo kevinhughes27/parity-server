@@ -1,3213 +1,4 @@
 {
-  "score": {
-    "Soho": "22",
-    "Nautical Disaster - Man Overboard! (SOS)": "16"
-  },
-  "teams": {
-    "Soho": [
-      "Melissa Jess",
-      "Laura Knowles",
-      "Kirsten Querbach",
-      "Nina Ramic",
-      "Jamie Wildgen",
-      "Sebastien Belanger",
-      "Michael Colantonio",
-      "Sina Dee",
-      "Tyler Mulcock",
-      "Thuc Nguyen",
-      "Kyle Sprysa",
-      "Rob Tyson"
-    ],
-    "Nautical Disaster - Man Overboard! (SOS)": [
-      "Andrea Proulx",
-      "Sandra Hanson",
-      "Megan Robb",
-      "Taka Yamada",
-      "Nicholas Aghajanian",
-      "Jeremy Bryan",
-      "Frederic Caron",
-      "Kevin Hughes",
-      "Will Leckie",
-      "Michael O'Hare",
-      "Jonathan Pindur",
-      "Jay Thor Turner"
-    ]
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Apr 3, 2017 10:06:34 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:06:54 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:06:56 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:00 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:02 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:07 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:08 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:07:09 PM",
-          "firstActor": "Melissa Jess"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:50 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:07:59 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:08:05 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:08:07 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:08:09 PM",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:08:11 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:08:30 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:08:34 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:08:42 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:08:47 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:06 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:08 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:09:09 PM",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:17 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:25 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:09:26 PM",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:35 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:09:41 PM",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:53 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:09:58 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:10:05 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:10:12 PM",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:10:39 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:02 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:11:03 PM",
-          "firstActor": "Michael O'Hare"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Will Leckie",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:26 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:29 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:33 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:36 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:40 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:11:45 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:11:50 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:11:54 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:11:56 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:07 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:12:12 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:12:21 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:23 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:26 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:34 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:37 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:45 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:12:49 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:12:49 PM",
-          "firstActor": "Nicholas Aghajanian"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:14:32 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:14:37 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:14:42 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:14:43 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:14:59 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:15:26 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:15:28 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:15:29 PM",
-          "firstActor": "Tyler Mulcock"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Will Leckie",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:16:13 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:16:21 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:16:22 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:16:24 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:16:28 PM",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:16:30 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:16:36 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:16:38 PM",
-          "firstActor": "Taka Yamada"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:10 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:15 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:21 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:25 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:28 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:17:33 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:17:36 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:18:00 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:18:03 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:18:04 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:18:05 PM",
-          "firstActor": "Michael Colantonio"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Will Leckie",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:18:46 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:18:49 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:18:53 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:18:56 PM",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:18:58 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:19:01 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:19:02 PM",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:19:26 PM",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:19:28 PM",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:19:34 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:19:35 PM",
-          "firstActor": "Thuc Nguyen"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:20:20 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:20:24 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:20:31 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:20:32 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:20:36 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:20:37 PM",
-          "firstActor": "Jeremy Bryan"
-        }
-      ],
-      "defensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:13 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:16 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:20 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:22 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:24 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:28 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:39 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:44 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:48 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:21:54 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:21:54 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:22:11 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:22:14 PM",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:22:31 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:22:33 PM",
-          "firstActor": "Michael Colantonio"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Will Leckie",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:00 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:27 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:30 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:32 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:40 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:25:44 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:25:47 PM",
-          "firstActor": "Michael O'Hare"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Melissa Jess",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:26:31 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:26:38 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:26:40 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Will Leckie",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:27:22 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:27:25 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:27:34 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:27:37 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:27:54 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:27:57 PM",
-          "firstActor": "Michael O'Hare"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:28:24 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:28:29 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:28:33 PM",
-          "firstActor": "Thuc Nguyen"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:21 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:23 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:28 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:31 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:33 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:36 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:29:44 PM",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:29:58 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:00 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:06 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:11 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:15 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:20 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:22 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:27 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:30:35 PM",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:46 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:49 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:30:56 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:30:57 PM",
-          "firstActor": "Jonathan Pindur"
-        }
-      ],
-      "defensePlayers": [
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:31:53 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:31:57 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:31:58 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:32:04 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:32:08 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:32:09 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:32:51 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:32:55 PM",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:32:58 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:33:06 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:33:07 PM",
-          "firstActor": "Michael Colantonio"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:34:04 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:34:13 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:34:21 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:34:33 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:34:40 PM",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:04 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:35:10 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:17 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:21 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:22 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:24 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:26 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:35:32 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:38 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:48 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:50 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:35:54 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:36:06 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:36:06 PM",
-          "firstActor": "Jay Thor Turner"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:36:42 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:36:49 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:36:53 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:36:57 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:37:03 PM",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:37:08 PM",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:37:13 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:37:14 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:37:18 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:37:22 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:37:24 PM",
-          "firstActor": "Michael O'Hare"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:38:04 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:38:09 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:38:12 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:38:17 PM",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:38:28 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:38:31 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:38:51 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:39:00 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:39:01 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Apr 3, 2017 10:41:45 PM",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:42:29 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:42:33 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:42:45 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:42:51 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:42:52 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:43:35 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:43:43 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:43:53 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:43:55 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:45:02 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:45:13 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:45:18 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:45:23 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:45:28 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:45:53 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:45:56 PM",
-          "firstActor": "Taka Yamada"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:02 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:09 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:46:12 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:46:16 PM",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:23 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:29 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:35 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:37 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:45 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:46:51 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:46:52 PM",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:47:24 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:47:26 PM",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:31 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:35 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:38 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:41 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:43 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:47:48 PM",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:47:52 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:47:58 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:03 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:09 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:12 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:48:19 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:33 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:36 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:44 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:47 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:48:53 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:48:55 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:49:49 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:49:52 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:49:57 PM",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:49:59 PM",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:50:10 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:50:16 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:50:20 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:50:21 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:07 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 10:51:09 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:51:24 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:51:35 PM",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:37 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:41 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:42 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:42 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:46 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:49 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:51:53 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:51:56 PM",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:51:58 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:00 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:07 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:11 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:21 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:23 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:29 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:32 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:52:35 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:52:38 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Sina Dee",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Will Leckie",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:31 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:34 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:42 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:45 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:51 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:53 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:53:56 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:00 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:02 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:10 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:13 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:54:18 PM",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:41 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:45 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:49 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:54 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:54:58 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:55:03 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:55:07 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:55:08 PM",
-          "firstActor": "Tyler Mulcock"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Kevin Hughes",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:02 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:05 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:11 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:15 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:18 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:56:27 PM",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:56:30 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:44 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:56:50 PM",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:56:57 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:57:02 PM",
-          "secondActor": "Taka Yamada",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:57:03 PM",
-          "firstActor": "Taka Yamada"
-        }
-      ],
-      "defensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:59:18 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 10:59:24 PM",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 10:59:32 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:59:34 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:59:38 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 10:59:40 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 10:59:41 PM",
-          "firstActor": "Jonathan Pindur"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:31 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:36 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:43 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:46 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:49 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:00:52 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:00:53 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:01:51 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:01:55 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:01:59 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:06 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 3, 2017 11:02:08 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:22 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:27 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:29 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 11:02:36 PM",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 11:02:39 PM",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:54 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:02:58 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:03:00 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 11:03:06 PM",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:03:40 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:03:48 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:03:54 PM",
-          "secondActor": "Sebastien Belanger",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:04:01 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:04:02 PM",
-          "firstActor": "Kyle Sprysa"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 11:04:48 PM",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:05:09 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:05:14 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:05:18 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:05:21 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:05:27 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:05:28 PM",
-          "firstActor": "Kirsten Querbach"
-        }
-      ],
-      "defensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:09 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:12 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:13 PM",
-          "secondActor": "Jeremy Bryan",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:17 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jeremy Bryan"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:22 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:25 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:06:29 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:06:30 PM",
-          "firstActor": "Michael O'Hare"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Sina Dee",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Melissa Jess",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:07:18 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:07:22 PM",
-          "secondActor": "Michael Colantonio",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:07:27 PM",
-          "firstActor": "Michael Colantonio"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:21 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:26 PM",
-          "secondActor": "Jonathan Pindur",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:28 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Jonathan Pindur"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:31 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:36 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:47 PM",
-          "secondActor": "Michael O'Hare",
-          "firstActor": "Kevin Hughes"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:08:51 PM",
-          "secondActor": "Kevin Hughes",
-          "firstActor": "Michael O'Hare"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:08:51 PM",
-          "firstActor": "Kevin Hughes"
-        }
-      ],
-      "defensePlayers": [
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:09:39 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Sebastien Belanger"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:09:41 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:09:49 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:09:53 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 3, 2017 11:09:58 PM",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 3, 2017 11:10:02 PM",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:10:19 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:10:29 PM",
-          "secondActor": "Sandra Hanson",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:10:36 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Sandra Hanson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:10:47 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:10:48 PM",
-          "firstActor": "Will Leckie"
-        }
-      ],
-      "defensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Michael Colantonio",
-        "Thuc Nguyen",
-        "Kyle Sprysa",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Laura Knowles"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:34 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Michael Colantonio"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:36 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:39 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:45 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:48 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Laura Knowles"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:53 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:11:58 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:05 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:08 PM",
-          "secondActor": "Kyle Sprysa",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:19 PM",
-          "secondActor": "Rob Tyson",
-          "firstActor": "Kyle Sprysa"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:22 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:27 PM",
-          "secondActor": "Melissa Jess",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:12:39 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Melissa Jess"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:12:40 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:13:25 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:13:32 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:13:33 PM",
-          "firstActor": "Andrea Proulx"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Michael Colantonio",
-        "Sina Dee",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Laura Knowles",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:14:14 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:14:18 PM",
-          "secondActor": "Sina Dee",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:14:28 PM",
-          "secondActor": "Laura Knowles",
-          "firstActor": "Sina Dee"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:14:30 PM",
-          "firstActor": "Laura Knowles"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Sandra Hanson",
-        "Taka Yamada"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Nicholas Aghajanian",
-        "Frederic Caron",
-        "Will Leckie",
-        "Jay Thor Turner",
-        "Andrea Proulx",
-        "Taka Yamada"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:09 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:17 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:20 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:22 PM",
-          "secondActor": "Andrea Proulx",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:29 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Andrea Proulx"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:33 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:41 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:47 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:52 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:15:59 PM",
-          "secondActor": "Frederic Caron",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:16:03 PM",
-          "secondActor": "Jay Thor Turner",
-          "firstActor": "Frederic Caron"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:16:08 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Jay Thor Turner"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:16:14 PM",
-          "secondActor": "Nicholas Aghajanian",
-          "firstActor": "Will Leckie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:16:23 PM",
-          "secondActor": "Will Leckie",
-          "firstActor": "Nicholas Aghajanian"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:16:26 PM",
-          "firstActor": "Will Leckie"
-        }
-      ],
-      "defensePlayers": [
-        "Sebastien Belanger",
-        "Michael Colantonio",
-        "Tyler Mulcock",
-        "Kyle Sprysa",
-        "Melissa Jess",
-        "Laura Knowles"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Sina Dee",
-        "Tyler Mulcock",
-        "Thuc Nguyen",
-        "Rob Tyson",
-        "Melissa Jess",
-        "Kirsten Querbach"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:17:12 PM",
-          "secondActor": "Kirsten Querbach",
-          "firstActor": "Rob Tyson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:17:15 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Kirsten Querbach"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:17:19 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:17:26 PM",
-          "secondActor": "Thuc Nguyen",
-          "firstActor": "Tyler Mulcock"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 3, 2017 11:17:32 PM",
-          "secondActor": "Tyler Mulcock",
-          "firstActor": "Thuc Nguyen"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 3, 2017 11:17:33 PM",
-          "firstActor": "Tyler Mulcock"
-        }
-      ],
-      "defensePlayers": [
-        "Jeremy Bryan",
-        "Kevin Hughes",
-        "Michael O'Hare",
-        "Jonathan Pindur",
-        "Andrea Proulx",
-        "Sandra Hanson"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Frederic Caron,",
@@ -3886,5 +677,2760 @@
   ],
   "time": "2017-04-04T03:19:45.553Z",
   "week": 8,
-  "league_id": 5
+  "league_id": 5,
+  "points": [
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael O'Hare"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Will Leckie",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nicholas Aghajanian"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tyler Mulcock"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Will Leckie",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Taka Yamada"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Will Leckie",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Thuc Nguyen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jeremy Bryan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Will Leckie",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Will Leckie",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Thuc Nguyen"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeremy Bryan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Taka Yamada",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Taka Yamada"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tyler Mulcock"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Will Leckie",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tyler Mulcock"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Kevin Hughes",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Frederic Caron"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Michael Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Taka Yamada"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Taka Yamada"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tyler Mulcock"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Pindur"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sebastien Belanger"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sebastien Belanger"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Jeremy Bryan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeremy Bryan",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael O'Hare"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Michael Colantonio"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Michael Colantonio"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jonathan Pindur"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Pindur",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kevin Hughes",
+          "secondActor": "Michael O'Hare"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Michael O'Hare",
+          "secondActor": "Kevin Hughes"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kevin Hughes"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sebastien Belanger",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Thuc Nguyen",
+        "Kyle Sprysa",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Michael Colantonio",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrea Proulx"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Michael Colantonio",
+        "Sina Dee",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Laura Knowles",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Sandra Hanson",
+        "Taka Yamada"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nicholas Aghajanian",
+        "Frederic Caron",
+        "Will Leckie",
+        "Jay Thor Turner",
+        "Andrea Proulx",
+        "Taka Yamada"
+      ],
+      "defensePlayers": [
+        "Sebastien Belanger",
+        "Michael Colantonio",
+        "Tyler Mulcock",
+        "Kyle Sprysa",
+        "Melissa Jess",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Frederic Caron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Frederic Caron",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Nicholas Aghajanian"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nicholas Aghajanian",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Tyler Mulcock",
+        "Thuc Nguyen",
+        "Rob Tyson",
+        "Melissa Jess",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Jeremy Bryan",
+        "Kevin Hughes",
+        "Michael O'Hare",
+        "Jonathan Pindur",
+        "Andrea Proulx",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tyler Mulcock",
+          "secondActor": "Thuc Nguyen"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Thuc Nguyen",
+          "secondActor": "Tyler Mulcock"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tyler Mulcock"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+
+      ]
+    }
+  ],
+  "homeTeam": "Soho",
+  "homeRoster": [
+    "Melissa Jess",
+    "Laura Knowles",
+    "Kirsten Querbach",
+    "Nina Ramic",
+    "Jamie Wildgen",
+    "Sebastien Belanger",
+    "Michael Colantonio",
+    "Sina Dee",
+    "Tyler Mulcock",
+    "Thuc Nguyen",
+    "Kyle Sprysa",
+    "Rob Tyson"
+  ],
+  "awayTeam": "Nautical Disaster - Man Overboard! (SOS)",
+  "awayRoster": [
+    "Andrea Proulx",
+    "Sandra Hanson",
+    "Megan Robb",
+    "Taka Yamada",
+    "Nicholas Aghajanian",
+    "Jeremy Bryan",
+    "Frederic Caron",
+    "Kevin Hughes",
+    "Will Leckie",
+    "Michael O'Hare",
+    "Jonathan Pindur",
+    "Jay Thor Turner"
+  ],
+  "awayScore": "16",
+  "homeScore": "22"
 }

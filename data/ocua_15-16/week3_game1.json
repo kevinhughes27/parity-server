@@ -1,0 +1,2770 @@
+{
+  "league_id": 3,
+  "week": 3,
+  "homeTeam": "Pirate Rob's Swashbuckling Rogues",
+  "homeScore": "22",
+  "homeRoster": [
+    "Brent Burton",
+    "Chris Sullivan",
+    "Christopher Keates",
+    "Krys Kudakiewicz",
+    "Lissa Greenspoon",
+    "Megan Berry",
+    "Graham Brown",
+    "Greg Cormier",
+    "Rob Ives",
+    "Melissa Jess"
+  ],
+  "awayTeam": "Karma Down Under",
+  "awayScore": "20",
+  "awayRoster": [
+    "Alec Clark",
+    "Mark Donahue",
+    "Patrick Kenzie",
+    "Stephen Close",
+    "Hope Celani",
+    "Wynne Gee",
+    "Dan Thomson",
+    "Kris Bergmann",
+    "Mehmet Karman",
+    "Trevor Stocki",
+    "Alison Ward",
+    "Andrea Proulx"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Krys Kudakiewicz"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Melissa Jess",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Graham Brown"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Graham Brown",
+        "Greg Cormier",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Trevor Stocki",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Graham Brown",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mehmet Karman"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alison Ward"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Cormier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Greg Cormier",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alec Clark"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Graham Brown",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Dan Thomson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Megan Berry"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Lissa Greenspoon"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Melissa Jess"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mehmet Karman",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrea Proulx",
+          "secondActor": "Alison Ward"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alison Ward"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alison Ward",
+          "secondActor": "Dan Thomson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Melissa Jess"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Melissa Jess"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephen Close"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Graham Brown",
+        "Greg Cormier",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alec Clark",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Dan Thomson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Dan Thomson",
+          "secondActor": "Andrea Proulx"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrea Proulx"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Graham Brown",
+        "Greg Cormier",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Megan Berry"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Graham Brown",
+        "Krys Kudakiewicz",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mehmet Karman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Krys Kudakiewicz",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Ives"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Megan Berry",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Alec Clark"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alec Clark"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Krys Kudakiewicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brent Burton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Hope Celani",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Chris Sullivan",
+        "Graham Brown",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Chris Sullivan",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Chris Sullivan"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Chris Sullivan"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alec Clark",
+        "Mark Donahue",
+        "Patrick Kenzie",
+        "Stephen Close",
+        "Hope Celani",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+        "Chris Sullivan",
+        "Christopher Keates",
+        "Greg Cormier",
+        "Krys Kudakiewicz",
+        "Lissa Greenspoon",
+        "Melissa Jess"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stephen Close"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephen Close",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Hope Celani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Hope Celani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brent Burton",
+        "Christopher Keates",
+        "Graham Brown",
+        "Rob Ives",
+        "Lissa Greenspoon",
+        "Megan Berry"
+      ],
+      "defensePlayers": [
+        "Dan Thomson",
+        "Kris Bergmann",
+        "Mehmet Karman",
+        "Trevor Stocki",
+        "Alison Ward",
+        "Andrea Proulx"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Brent Burton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brent Burton",
+          "secondActor": "Rob Ives"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Ives",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Lissa Greenspoon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Lissa Greenspoon",
+          "secondActor": "Megan Berry"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Megan Berry",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    }
+  ]
+}

@@ -1,3576 +1,4 @@
 {
-  "score": {
-    "Betty White (B-Dub)": "17",
-    "Kells Angels Bicycle Club": "18"
-  },
-  "teams": {
-    "Betty White (B-Dub)": [
-      "Jaime Boss",
-      "Stacey Wowchuk",
-      "Rachel Young",
-      "Alisha Zhao",
-      "Craig Anderson",
-      "Steve Bisang",
-      "Graham Brown",
-      "Alessandro Colonnier",
-      "Patrick Kenzie",
-      "Sonny Kim",
-      "Nick Klimowicz",
-      "Geofford seaborn"
-    ],
-    "Kells Angels Bicycle Club": [
-      "Christine Beals",
-      "Ashlin Kelly",
-      "Sam Lee",
-      "Carrie-Anne Whyte",
-      "Brian Kells",
-      "Jonathan Champagne",
-      "Martin Cloake",
-      "Scott Higgins",
-      "Tim Kealey",
-      "Patrick McKelvey",
-      "Benjamin Piper",
-      "Jim Robinson"
-    ]
-  },
-  "points": [
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Apr 24, 2017 9:48:28 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:48:36 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:48:39 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:48:42 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:48:56 PM",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:49:08 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:49:12 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 9:49:13 PM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:49:59 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:02 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:08 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:10 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:12 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:14 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:18 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:22 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:24 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:28 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:50:31 PM",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:46 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:53 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:50:55 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:01 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:27 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:29 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:34 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:43 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:45 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:51:55 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 9:51:57 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:52:41 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:52:47 PM",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 9:52:49 PM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:52:51 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:52:54 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:52:58 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:00 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:02 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:04 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:06 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:09 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:12 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:16 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:21 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:23 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:53:26 PM",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 9:53:28 PM",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:53 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:53:57 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:04 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:12 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:22 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:27 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:34 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:36 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:54:41 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 9:54:42 PM",
-          "firstActor": "Alisha Zhao"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:55:25 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:55:30 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:55:32 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:55:40 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 9:55:41 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:20 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:23 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:26 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:28 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:32 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:43 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:50 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:56:53 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:56:58 PM",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:24 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:30 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:39 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:44 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:46 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:52 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:57:54 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:00 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:03 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:06 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 9:58:07 PM",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:17 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:22 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:25 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:29 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:58:33 PM",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:58:49 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:58:53 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:59:27 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:59:29 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:59:33 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:59:37 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 9:59:45 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 9:59:51 PM",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 9:59:53 PM",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:00 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:02 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:04 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:10 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:13 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:00:23 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:00:25 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:28 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:36 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:40 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:42 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:45 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:02:52 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:09 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:03:10 PM",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:20 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:25 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:27 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:32 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:03:38 PM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:03:39 PM",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:53 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:03:56 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:04:02 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:04:03 PM",
-          "firstActor": "Alessandro Colonnier"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:04:48 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:04:53 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:05:00 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:05:01 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:05:34 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:05:43 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:05:49 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:05:59 PM",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:06:22 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:06:23 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:07:12 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:07:14 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:07:16 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:07:22 PM",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:07:24 PM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:07:58 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:07 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:08:08 PM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:13 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:16 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:19 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:08:26 PM",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:46 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:49 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:08:51 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:08:59 PM",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:09:02 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:09:10 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:09:11 PM",
-          "firstActor": "Patrick Kenzie"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:09:57 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:10:07 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:10:09 PM",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:10:13 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:10:15 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:10:18 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:10:25 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:10:27 PM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:11:09 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:11:12 PM",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:11:37 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:11:39 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:11:44 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:11:45 PM",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:12:08 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:12:11 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:12:14 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:12:18 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:12:29 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:12:30 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:07 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:10 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:14 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:17 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:22 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:28 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:31 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:36 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:13:43 PM",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:13:45 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:52 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:54 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:01 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:13 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:14:18 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:40 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:42 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:44 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:37 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:41 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:59 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:02 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:05 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:08 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:55 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:16:55 PM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:07 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:10 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:14 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:17 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:22 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:28 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:31 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:36 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:13:43 PM",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:13:45 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:52 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:13:54 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:01 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:13 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:14:18 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:40 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:42 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:14:44 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:37 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:41 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:15:59 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:02 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:05 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:08 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:16:55 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:16:55 PM",
-          "firstActor": "Craig Anderson"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:17:46 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:17:52 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:17:54 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:17:54 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:17:57 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:18:03 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:18:10 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:18:16 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:18:18 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:07 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:12 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:17 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:20 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:25 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:32 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:35 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:39 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:42 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:46 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:19:56 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:19:57 PM",
-          "firstActor": "Stacey Wowchuk"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:20:52 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:20:57 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:00 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:02 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:21:08 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:21:10 PM",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:12 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:17 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:21 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:21:27 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:21:28 PM",
-          "firstActor": "Graham Brown"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:22:12 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:22:16 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:22:21 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:22:29 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:22:31 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Rachel Young"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:16 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:36 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:42 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:45 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:51 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:23:56 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:24:03 PM",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:24:05 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:24:22 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:24:27 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:24:31 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:24:32 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PULL",
-          "timestamp": "Apr 24, 2017 10:29:16 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:28 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:31 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:35 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:41 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:29:49 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:53 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:54 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:29:55 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:29:56 PM",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:29:58 PM",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:30:29 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:30:41 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:30:46 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:30:49 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:30:51 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:31:01 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:31:03 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:31:10 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:31:15 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:31:19 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:31:27 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:31:28 PM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:19 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:25 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:31 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:34 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:38 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:45 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:48 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:56 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:32:59 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:33:00 PM",
-          "firstActor": "Rachel Young"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:33:52 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:33:56 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:33:59 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:07 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:34:07 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:27 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:30 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:32 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:36 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:39 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:34:41 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:34:46 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:34:48 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:02 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:35:04 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:40 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:45 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:52 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:55 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:35:57 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:36:00 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Steve Bisang"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:36:04 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:36:11 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:36:13 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:36:19 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:36:20 PM",
-          "firstActor": "Rachel Young"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:01 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:07 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:11 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:13 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:18 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:22 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:25 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:29 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:37:35 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:37:37 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:38:15 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:38:23 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:38:26 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:38:31 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:38:32 PM",
-          "firstActor": "Rachel Young"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:39:15 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:39:22 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:39:26 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:39:30 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:39:47 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:39:58 PM",
-          "firstActor": "Martin Cloake"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:40:08 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:40:17 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:40:18 PM",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:40:24 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:40:25 PM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:08 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:41:16 PM",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:41:17 PM",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:23 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:26 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:29 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:33 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:35 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:55 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:41:58 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:42:02 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:42:07 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:42:09 PM",
-          "firstActor": "Jim Robinson"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:42:53 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:42:56 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:42:59 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:03 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:05 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:09 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:13 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:25 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:32 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:36 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:43 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:45 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:50 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:53 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:43:59 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:02 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:13 PM",
-          "secondActor": "Stacey Wowchuk",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:18 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:21 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:44:25 PM",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:44:27 PM",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:42 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:46 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:49 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:44:56 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:45:02 PM",
-          "secondActor": "Martin Cloake",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:45:03 PM",
-          "firstActor": "Martin Cloake"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:45:43 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:45:46 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:45:49 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:45:57 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:46:00 PM",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:46:02 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:46:06 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:46:09 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:46:19 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "DROP",
-          "timestamp": "Apr 24, 2017 10:46:20 PM",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:46:32 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:46:33 PM",
-          "firstActor": "Patrick Kenzie"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:47:15 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:47:19 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:47:26 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:47:30 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Jonathan Champagne"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:47:34 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:47:41 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:00 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Stacey Wowchuk"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:07 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:13 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:48:21 PM",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:34 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:42 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:49 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:52 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:48:56 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:49:00 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:49:07 PM",
-          "secondActor": "Jonathan Champagne",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:49:08 PM",
-          "firstActor": "Jonathan Champagne"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Stacey Wowchuk",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Rachel Young"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:49:50 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:49:53 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:01 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:03 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:07 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:11 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:16 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:50:17 PM",
-          "firstActor": "Rachel Young"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:50:59 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:51:05 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:51:06 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:51:10 PM",
-          "secondActor": "Scott Higgins",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:51:15 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:51:17 PM",
-          "firstActor": "Ashlin Kelly"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Rachel Young",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:51:55 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:52:06 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:52:06 PM",
-          "secondActor": "Steve Bisang",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:52:07 PM",
-          "firstActor": "Steve Bisang"
-        }
-      ],
-      "defensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:52:55 PM",
-          "secondActor": "Tim Kealey",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:52:59 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Tim Kealey"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:08 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:53:09 PM",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:53:10 PM",
-          "firstActor": "Sonny Kim"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:14 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:16 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:18 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:22 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:28 PM",
-          "secondActor": "Nick Klimowicz",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:30 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Nick Klimowicz"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:36 PM",
-          "secondActor": "Craig Anderson",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:53:51 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:53:52 PM",
-          "firstActor": "Sonny Kim"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Jaime Boss",
-        "Rachel Young"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Martin Cloake",
-        "Scott Higgins",
-        "Ashlin Kelly",
-        "Carrie-Anne Whyte"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:54:39 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:54:45 PM",
-          "secondActor": "Carrie-Anne Whyte",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:54:49 PM",
-          "secondActor": "Brian Kells",
-          "firstActor": "Carrie-Anne Whyte"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:54:52 PM",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:54:55 PM",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:54:59 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:03 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:05 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:07 PM",
-          "secondActor": "Graham Brown",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:09 PM",
-          "secondActor": "Patrick Kenzie",
-          "firstActor": "Graham Brown"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:14 PM",
-          "secondActor": "Rachel Young",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:55:20 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Rachel Young"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:55:21 PM",
-          "firstActor": "Geofford seaborn"
-        }
-      ],
-      "defensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Rachel Young",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Brian Kells",
-        "Jonathan Champagne",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Ashlin Kelly",
-        "Heather McCabe(S)"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:05 PM",
-          "secondActor": "Ashlin Kelly",
-          "firstActor": "Brian Kells"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:06 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Ashlin Kelly"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:13 PM",
-          "secondActor": "Jim Robinson",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:56:19 PM",
-          "firstActor": "Jim Robinson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:30 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Craig Anderson"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:32 PM",
-          "secondActor": "Jaime Boss",
-          "firstActor": "Alisha Zhao"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:36 PM",
-          "secondActor": "Alessandro Colonnier",
-          "firstActor": "Jaime Boss"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:56:42 PM",
-          "secondActor": "Sonny Kim",
-          "firstActor": "Alessandro Colonnier"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:56:43 PM",
-          "firstActor": "Sonny Kim"
-        }
-      ],
-      "defensePlayers": [
-        "Craig Anderson",
-        "Alessandro Colonnier",
-        "Sonny Kim",
-        "Nick Klimowicz",
-        "Jaime Boss",
-        "Alisha Zhao"
-      ]
-    },
-    {
-      "offensePlayers": [
-        "Steve Bisang",
-        "Graham Brown",
-        "Patrick Kenzie",
-        "Geofford seaborn",
-        "Rachel Young",
-        "Alisha Zhao"
-      ],
-      "events": [
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:57:30 PM",
-          "secondActor": "Heather McCabe(S)",
-          "firstActor": "Scott Higgins"
-        },
-        {
-          "type": "THROWAWAY",
-          "timestamp": "Apr 24, 2017 10:57:35 PM",
-          "firstActor": "Heather McCabe(S)"
-        },
-        {
-          "type": "DEFENSE",
-          "timestamp": "Apr 24, 2017 10:57:37 PM",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:57:42 PM",
-          "secondActor": "Geofford seaborn",
-          "firstActor": "Patrick Kenzie"
-        },
-        {
-          "type": "PASS",
-          "timestamp": "Apr 24, 2017 10:57:50 PM",
-          "secondActor": "Alisha Zhao",
-          "firstActor": "Geofford seaborn"
-        },
-        {
-          "type": "POINT",
-          "timestamp": "Apr 24, 2017 10:57:51 PM",
-          "firstActor": "Alisha Zhao"
-        }
-      ],
-      "defensePlayers": [
-        "Martin Cloake",
-        "Scott Higgins",
-        "Tim Kealey",
-        "Jim Robinson",
-        "Carrie-Anne Whyte",
-        "Heather McCabe(S)"
-      ]
-    }
-  ],
   "event_string": [
     "",
     "Pull,Scott Higgins,",
@@ -4184,5 +612,2990 @@
   ],
   "time": "2017-04-25T03:03:00.554Z",
   "week": 11,
-  "league_id": 5
+  "league_id": 5,
+  "points": [
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alisha Zhao"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alisha Zhao"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alessandro Colonnier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Carrie-Anne Whyte"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Craig Anderson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stacey Wowchuk"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Graham Brown"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Rachel Young"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rachel Young"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rachel Young"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rachel Young"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Martin Cloake",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Martin Cloake"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sonny Kim",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Stacey Wowchuk"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Martin Cloake"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Martin Cloake"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Kenzie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Stacey Wowchuk",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stacey Wowchuk",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "defensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rachel Young"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Rachel Young",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Bisang"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Jaime Boss",
+        "Rachel Young"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Tim Kealey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tim Kealey",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sonny Kim"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sonny Kim"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Martin Cloake",
+        "Scott Higgins",
+        "Ashlin Kelly",
+        "Carrie-Anne Whyte"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Rachel Young",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Carrie-Anne Whyte",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Ashlin Kelly",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Alessandro Colonnier",
+        "Sonny Kim",
+        "Nick Klimowicz",
+        "Jaime Boss",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather McCabe(S)",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alisha Zhao",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Alessandro Colonnier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alessandro Colonnier",
+          "secondActor": "Sonny Kim"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sonny Kim"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Martin Cloake",
+        "Scott Higgins",
+        "Tim Kealey",
+        "Jim Robinson",
+        "Carrie-Anne Whyte",
+        "Heather McCabe(S)"
+      ],
+      "defensePlayers": [
+        "Steve Bisang",
+        "Graham Brown",
+        "Patrick Kenzie",
+        "Geofford seaborn",
+        "Rachel Young",
+        "Alisha Zhao"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather McCabe(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Kenzie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Kenzie",
+          "secondActor": "Geofford seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford seaborn",
+          "secondActor": "Alisha Zhao"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alisha Zhao"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jaime Boss"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Carrie-Anne Whyte"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rachel Young",
+          "secondActor": "Nick Klimowicz"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Klimowicz",
+          "secondActor": "Jaime Boss"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jaime Boss",
+          "secondActor": "Rachel Young"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rachel Young"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Scott Higgins",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Scott Higgins"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Scott Higgins"
+        }
+      ]
+    }
+  ],
+  "homeTeam": "Betty White (B-Dub)",
+  "homeRoster": [
+    "Jaime Boss",
+    "Stacey Wowchuk",
+    "Rachel Young",
+    "Alisha Zhao",
+    "Craig Anderson",
+    "Steve Bisang",
+    "Graham Brown",
+    "Alessandro Colonnier",
+    "Patrick Kenzie",
+    "Sonny Kim",
+    "Nick Klimowicz",
+    "Geofford seaborn"
+  ],
+  "awayTeam": "Kells Angels Bicycle Club",
+  "awayRoster": [
+    "Christine Beals",
+    "Ashlin Kelly",
+    "Sam Lee",
+    "Carrie-Anne Whyte",
+    "Brian Kells",
+    "Jonathan Champagne",
+    "Martin Cloake",
+    "Scott Higgins",
+    "Tim Kealey",
+    "Patrick McKelvey",
+    "Benjamin Piper",
+    "Jim Robinson"
+  ],
+  "awayScore": "18",
+  "homeScore": "17"
 }

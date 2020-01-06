@@ -1,0 +1,2580 @@
+{
+  "league_id": 3,
+  "week": 12,
+  "homeTeam": "Scoobers in New York",
+  "homeScore": "15",
+  "homeRoster": [
+    "Christopher Keates",
+    "Douglas Brierley",
+    "Kris Bergmann",
+    "Will Leckie",
+    "Ashlin Kelly",
+    "Laura Chambers Storey",
+    "David O'Connor",
+    "Greg Cormier",
+    "Jim Robinson",
+    "Sina Dee",
+    "Nina Ramic",
+    "Sandra Hanson"
+  ],
+  "awayTeam": "Katy Parity",
+  "awayScore": "17",
+  "awayRoster": [
+    "Graham Brown",
+    "Greg Linton",
+    "Khalid Al-Zahrani",
+    "Steve Bisang",
+    "Kirsten Querbach",
+    "Stephanie White",
+    "Brian Kells",
+    "Jonathan Champagne",
+    "Owen Lumley",
+    "Jen Cluthe",
+    "Kindha Gorman"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Cormier"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Cormier"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Linton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Linton"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "David O'Connor"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Douglas Brierley"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Douglas Brierley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Bisang"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jonathan Champagne"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Greg Linton",
+        "Owen Lumley",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jonathan Champagne"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Douglas Brierley",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Greg Linton",
+        "Khalid Al-Zahrani",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stephanie White"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Steve Bisang"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Khalid Al-Zahrani",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Jonathan Champagne"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jonathan Champagne",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sina Dee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Steve Bisang"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Nina Ramic"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nina Ramic",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Khalid Al-Zahrani"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Brian Kells",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Cormier",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Ashlin Kelly"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Graham Brown",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Brian Kells"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Brian Kells",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Khalid Al-Zahrani"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Khalid Al-Zahrani",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Owen Lumley"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Steve Bisang",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Graham Brown"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Graham Brown",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Linton",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Greg Linton"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Linton"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "David O'Connor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "David O'Connor",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jim Robinson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Brian Kells",
+        "Khalid Al-Zahrani",
+        "Owen Lumley",
+        "Steve Bisang",
+        "Kirsten Querbach",
+        "Stephanie White"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Douglas Brierley",
+        "Kris Bergmann",
+        "Will Leckie",
+        "Nina Ramic",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stephanie White",
+          "secondActor": "Owen Lumley"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Owen Lumley",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Steve Bisang"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Steve Bisang",
+          "secondActor": "Stephanie White"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stephanie White"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "David O'Connor",
+        "Greg Cormier",
+        "Jim Robinson",
+        "Sina Dee",
+        "Ashlin Kelly",
+        "Laura Chambers Storey"
+      ],
+      "defensePlayers": [
+        "Graham Brown",
+        "Greg Linton",
+        "Jonathan Champagne",
+        "Owen Lumley",
+        "Jen Cluthe",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Ashlin Kelly"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ashlin Kelly",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jim Robinson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Owen Lumley"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Laura Chambers Storey"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jim Robinson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jim Robinson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Greg Cormier"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Cormier"
+        }
+      ]
+    }
+  ]
+}

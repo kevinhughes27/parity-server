@@ -1,0 +1,2549 @@
+{
+  "league_id": 2,
+  "week": 7,
+  "homeTeam": "Conflict of Interests",
+  "homeScore": "17",
+  "homeRoster": [
+    "John Zwanenburg",
+    "Jason Fraser",
+    "Alex Bush",
+    "Jay Thor Turner",
+    "Laura Knowles",
+    "Geofford Seaborn",
+    "Laura Chambers Storey(S)",
+    "Neena Sidhu",
+    "Stanley Kent",
+    "Kindha Gorman",
+    "Shubho Bo Biswas(S)"
+  ],
+  "awayTeam": "Huck Huck Goose",
+  "awayScore": "17",
+  "awayRoster": [
+    "Amos Lee",
+    "An Tran(S)",
+    "Greg Probe",
+    "Kinley Gee",
+    "Ivan Sabourin",
+    "Andrew McGregor",
+    "Aleks Ostojic(S)",
+    "Clare Gee",
+    "Tanya Gallant",
+    "Andrew Smith",
+    "Geoff Liu",
+    "Greg Kung"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Jason Fraser",
+        "Alex Bush",
+        "Jay Thor Turner",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "An Tran(S)",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "John Zwanenburg"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee",
+        "Ivan Sabourin",
+        "Andrew McGregor",
+        "Aleks Ostojic(S)",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Geofford Seaborn",
+        "Laura Chambers Storey(S)",
+        "Alex Bush",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Ivan Sabourin",
+        "Aleks Ostojic(S)",
+        "Andrew McGregor",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Kindha Gorman",
+        "Neena Sidhu",
+        "Shubho Bo Biswas(S)",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Neena Sidhu"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "John Zwanenburg",
+        "Laura Knowles",
+        "Stanley Kent",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+        "Tanya Gallant",
+        "Amos Lee",
+        "An Tran(S)",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Kinley Gee",
+        "Andrew McGregor",
+        "Ivan Sabourin",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Neena Sidhu",
+        "Geofford Seaborn",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Geoff Liu",
+        "Amos Lee",
+        "Tanya Gallant",
+        "Greg Kung",
+        "An Tran(S)",
+        "Greg Probe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geoff Liu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Clare Gee",
+        "Aleks Ostojic(S)",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Geofford Seaborn",
+        "Jason Fraser",
+        "Laura Chambers Storey(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "John Zwanenburg"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew Smith",
+        "Andrew McGregor",
+        "Aleks Ostojic(S)",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Neena Sidhu",
+        "Geofford Seaborn",
+        "Jay Thor Turner",
+        "Laura Chambers Storey(S)"
+      ],
+      "defensePlayers": [
+        "An Tran(S)",
+        "Amos Lee",
+        "Geoff Liu",
+        "Greg Kung",
+        "Tanya Gallant"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "An Tran(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Andrew Smith",
+        "Ivan Sabourin",
+        "Kinley Gee",
+        "Clare Gee",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew Smith"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Laura Chambers Storey(S)",
+        "Geofford Seaborn",
+        "Jason Fraser",
+        "Shubho Bo Biswas(S)"
+      ],
+      "defensePlayers": [
+        "Greg Probe",
+        "An Tran(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Aleks Ostojic(S)",
+        "Ivan Sabourin",
+        "Kinley Gee",
+        "Andrew Smith"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "John Zwanenburg",
+        "Laura Knowles",
+        "Stanley Kent",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Kung",
+        "Geoff Liu",
+        "Amos Lee"
+      ],
+      "defensePlayers": [
+        "Neena Sidhu",
+        "Shubho Bo Biswas(S)",
+        "Alex Bush",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "Jason Fraser"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Ivan Sabourin",
+        "Andrew McGregor",
+        "Kinley Gee",
+        "Clare Gee",
+        "Aleks Ostojic(S)",
+        "Andrew Smith"
+      ],
+      "defensePlayers": [
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew Smith",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Chambers Storey(S)",
+        "Stanley Kent",
+        "Neena Sidhu"
+      ],
+      "defensePlayers": [
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+        "Tanya Gallant",
+        "Amos Lee",
+        "Greg Probe",
+        "Greg Kung",
+        "Geoff Liu"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Alex Bush",
+        "Shubho Bo Biswas(S)",
+        "Stanley Kent",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Tanya Gallant",
+        "Greg Kung",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas(S)",
+        "Stanley Kent",
+        "Jay Thor Turner",
+        "Kindha Gorman",
+        "Alex Bush",
+        "Laura Knowles"
+      ],
+      "defensePlayers": [
+        "Clare Gee",
+        "Ivan Sabourin",
+        "Andrew McGregor",
+        "Kinley Gee",
+        "Aleks Ostojic(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Probe",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Jay Thor Turner",
+        "Geofford Seaborn",
+        "Shubho Bo Biswas(S)",
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Kinley Gee",
+        "Andrew McGregor"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "An Tran(S)",
+        "Amos Lee",
+        "Tanya Gallant",
+        "Greg Probe",
+        "Geoff Liu",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Stanley Kent",
+        "Laura Chambers Storey(S)",
+        "John Zwanenburg",
+        "Neena Sidhu"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Neena Sidhu",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Kinley Gee",
+        "Ivan Sabourin",
+        "Andrew McGregor"
+      ],
+      "defensePlayers": [
+        "Shubho Bo Biswas(S)",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Laura Chambers Storey(S)",
+        "Alex Bush",
+        "Laura Knowles",
+        "Kindha Gorman",
+        "Shubho Bo Biswas(S)"
+      ],
+      "defensePlayers": [
+        "Aleks Ostojic(S)",
+        "Geoff Liu",
+        "Greg Kung",
+        "Tanya Gallant",
+        "Greg Probe",
+        "An Tran(S)",
+        "Andrew Smith",
+        "Clare Gee",
+        "Andrew McGregor",
+        "Kinley Gee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Aleks Ostojic(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Aleks Ostojic(S)",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Andrew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kinley Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "John Zwanenburg",
+        "Laura Chambers Storey(S)",
+        "Stanley Kent",
+        "Geofford Seaborn",
+        "Jason Fraser"
+      ],
+      "defensePlayers": [
+        "Tanya Gallant",
+        "Amos Lee",
+        "Greg Probe",
+        "An Tran(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Greg Probe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "Alex Bush",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Greg Kung",
+        "Amos Lee",
+        "Tanya Gallant",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Shubho Bo Biswas(S)",
+        "Alex Bush",
+        "John Zwanenburg",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Shubho Bo Biswas(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "An Tran(S)",
+        "Greg Kung",
+        "Amos Lee",
+        "Tanya Gallant"
+      ],
+      "defensePlayers": [
+        "Neena Sidhu",
+        "Laura Chambers Storey(S)",
+        "Stanley Kent",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Tanya Gallant",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Laura Chambers Storey(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Chambers Storey(S)",
+          "secondActor": "Neena Sidhu"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Neena Sidhu"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew McGregor",
+        "Ivan Sabourin",
+        "Kinley Gee"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Shubho Bo Biswas(S)",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Ivan Sabourin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Ivan Sabourin",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew McGregor"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kinley Gee",
+          "secondActor": "Andrew McGregor"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew McGregor",
+          "secondActor": "Kinley Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kinley Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Shubho Bo Biswas(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Shubho Bo Biswas(S)",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Geoff Liu",
+        "An Tran(S)",
+        "Greg Kung",
+        "Tanya Gallant",
+        "Greg Probe"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "John Zwanenburg",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "An Tran(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "An Tran(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Geoff Liu"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geoff Liu",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Probe",
+          "secondActor": "Tanya Gallant"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Tanya Gallant"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2577 @@
+{
+  "league_id": 2,
+  "week": 4,
+  "homeTeam": "Conflict of Interests",
+  "homeScore": "20",
+  "homeRoster": [
+    "Stanley Kent",
+    "Clare Gee",
+    "Geofford Seaborn",
+    "Wynne Gee",
+    "Alex Bush",
+    "Christopher Keates",
+    "Jason Fraser",
+    "Laura Knowles",
+    "John Zwanenburg",
+    "Jeff Hunt",
+    "Kindha Gorman"
+  ],
+  "awayTeam": "Kindha's Disappointments",
+  "awayScore": "20",
+  "awayRoster": [
+    "Patrick Gauvin",
+    "Al Colantonio",
+    "Cassandra Cheung",
+    "Will Leckie",
+    "Matt Masse",
+    "James King",
+    "Kirsten Querbach",
+    "Christopher Vickers",
+    "Christopher Kraft",
+    "Mark Donahue",
+    "Sandra Hanson",
+    "Celine Dumais"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Cassandra Cheung",
+        "Will Leckie",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "Geofford Seaborn",
+        "Wynne Gee",
+        "Alex Bush",
+        "Christopher Keates",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "James King",
+        "Kirsten Querbach",
+        "Christopher Vickers",
+        "Christopher Kraft",
+        "Mark Donahue"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matt Masse",
+        "Cassandra Cheung",
+        "Will Leckie",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Jason Fraser",
+        "Laura Knowles",
+        "John Zwanenburg",
+        "Christopher Keates",
+        "Jeff Hunt",
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson",
+        "Kirsten Querbach",
+        "Christopher Kraft",
+        "James King"
+      ],
+      "defensePlayers": [
+        "Clare Gee",
+        "Geofford Seaborn",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Matt Masse",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Geofford Seaborn",
+        "Kindha Gorman",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Christopher Vickers",
+        "Sandra Hanson",
+        "Mark Donahue",
+        "Kirsten Querbach",
+        "James King",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Al Colantonio"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Clare Gee",
+        "John Zwanenburg",
+        "Christopher Keates",
+        "Wynne Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Will Leckie",
+        "Patrick Gauvin",
+        "Matt Masse",
+        "Celine Dumais"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Alex Bush"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Sandra Hanson",
+        "Christopher Kraft"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Celine Dumais",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "John Zwanenburg",
+        "Wynne Gee",
+        "Jason Fraser",
+        "Clare Gee",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson",
+        "Christopher Vickers",
+        "Mark Donahue",
+        "James King"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "John Zwanenburg"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Patrick Gauvin",
+        "Will Leckie",
+        "Cassandra Cheung",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Wynne Gee",
+        "Stanley Kent",
+        "Geofford Seaborn",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "James King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jason Fraser",
+        "Kindha Gorman"
+      ],
+      "defensePlayers": [
+        "Patrick Gauvin",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Patrick Gauvin"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Alex Bush",
+        "Clare Gee",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "Al Colantonio",
+        "Patrick Gauvin",
+        "Celine Dumais",
+        "Will Leckie"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Laura Knowles",
+        "Jason Fraser",
+        "Christopher Keates"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "James King",
+        "Mark Donahue",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Alex Bush",
+        "Jason Fraser",
+        "Kindha Gorman",
+        "Geofford Seaborn"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Keates"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King",
+        "Sandra Hanson",
+        "Mark Donahue",
+        "Christopher Kraft",
+        "Christopher Vickers",
+        "Kirsten Querbach"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Geofford Seaborn",
+        "Wynne Gee",
+        "John Zwanenburg",
+        "Jeff Hunt"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Christopher Keates",
+        "Kindha Gorman",
+        "Jason Fraser",
+        "Laura Knowles",
+        "John Zwanenburg"
+      ],
+      "defensePlayers": [
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung",
+        "James King",
+        "Christopher Kraft",
+        "Kirsten Querbach",
+        "Christopher Vickers"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Stanley Kent",
+        "Clare Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "James King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James King"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Laura Knowles",
+        "John Zwanenburg",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Jason Fraser",
+        "Wynne Gee",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "James King",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Vickers"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Alex Bush",
+        "Geofford Seaborn",
+        "Jason Fraser",
+        "Wynne Gee",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Alex Bush"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Will Leckie",
+        "Sandra Hanson"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Stanley Kent",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Clare Gee",
+        "Wynne Gee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson",
+        "Matt Masse",
+        "Celine Dumais",
+        "Patrick Gauvin",
+        "Al Colantonio",
+        "Will Leckie"
+      ],
+      "defensePlayers": [
+        "Laura Knowles",
+        "Jeff Hunt",
+        "Geofford Seaborn",
+        "Christopher Keates",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Celine Dumais"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Alex Bush",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Wynne Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Al Colantonio",
+        "Sandra Hanson",
+        "Patrick Gauvin",
+        "Will Leckie",
+        "Celine Dumais",
+        "Matt Masse"
+      ],
+      "defensePlayers": [
+        "Alex Bush",
+        "Kindha Gorman",
+        "Stanley Kent",
+        "Jeff Hunt",
+        "Laura Knowles"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Celine Dumais",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Kindha Gorman"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kindha Gorman"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Will Leckie"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Wynne Gee",
+        "Christopher Keates",
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Cassandra Cheung",
+        "Mark Donahue",
+        "Christopher Kraft"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Geofford Seaborn"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee",
+        "John Zwanenburg",
+        "Wynne Gee",
+        "Jason Fraser",
+        "Alex Bush",
+        "Christopher Keates"
+      ],
+      "defensePlayers": [
+        "Al Colantonio",
+        "Matt Masse",
+        "Sandra Hanson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jason Fraser",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Jason Fraser"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jason Fraser"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Vickers",
+        "Mark Donahue",
+        "Kirsten Querbach",
+        "Cassandra Cheung"
+      ],
+      "defensePlayers": [
+        "Geofford Seaborn",
+        "Stanley Kent",
+        "Laura Knowles",
+        "Kindha Gorman"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Geofford Seaborn"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Geofford Seaborn",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kindha Gorman",
+          "secondActor": "Laura Knowles"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Laura Knowles"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Cassandra Cheung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Cassandra Cheung",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Mark Donahue"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Wynne Gee",
+        "Christopher Keates",
+        "Alex Bush",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson",
+        "Al Colantonio",
+        "Matt Masse",
+        "James King"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Wynne Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sandra Hanson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Al Colantonio"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Sandra Hanson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Geofford Seaborn",
+        "Stanley Kent",
+        "Alex Bush"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Alex Bush"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Alex Bush",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Geofford Seaborn"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Geofford Seaborn"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King",
+        "Al Colantonio"
+      ],
+      "defensePlayers": [
+        "Christopher Keates",
+        "Clare Gee",
+        "Jeff Hunt",
+        "Wynne Gee",
+        "Stanley Kent",
+        "John Zwanenburg"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "James King"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Kraft",
+        "Christopher Vickers",
+        "Patrick Gauvin",
+        "Matt Masse",
+        "Mark Donahue"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Mark Donahue"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Mark Donahue",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Kraft",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Matt Masse"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "Patrick Gauvin"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Patrick Gauvin",
+          "secondActor": "Christopher Vickers"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Vickers",
+          "secondActor": "Christopher Kraft"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Christopher Kraft"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Christopher Keates",
+        "Wynne Gee",
+        "Stanley Kent",
+        "Clare Gee",
+        "John Zwanenburg"
+      ],
+      "defensePlayers": [
+        "Will Leckie",
+        "Al Colantonio",
+        "James King",
+        "Celine Dumais",
+        "Matt Masse"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "John Zwanenburg",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Wynne Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Wynne Gee",
+          "secondActor": "Christopher Keates"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Christopher Keates"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Christopher Keates",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "John Zwanenburg"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "John Zwanenburg"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Celine Dumais"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matt Masse",
+          "secondActor": "James King"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King",
+          "secondActor": "Will Leckie"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Will Leckie",
+          "secondActor": "Al Colantonio"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Al Colantonio",
+          "secondActor": "James King"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "James King"
+        }
+      ]
+    }
+  ]
+}

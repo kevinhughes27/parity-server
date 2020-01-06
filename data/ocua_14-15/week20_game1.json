@@ -1,0 +1,2530 @@
+{
+  "league_id": 2,
+  "week": 20,
+  "homeTeam": "Scoobers in Paris",
+  "homeScore": "18",
+  "homeRoster": [
+    "Craig Anderson",
+    "Jay Thor Turner",
+    "Jeff Hunt",
+    "Vanessa Lyon",
+    "Sina Dee",
+    "Rob Tyson",
+    "Sandra Hanson(S)",
+    "James King(S)",
+    "Kirsten Querbach",
+    "Andrew W Cameron",
+    "Kris Bergmann",
+    "Jen Cluthe"
+  ],
+  "awayTeam": "A Windmill Full of Corpses",
+  "awayScore": "20",
+  "awayRoster": [
+    "Nick Theriault",
+    "Stanley Kent",
+    "Edwin Wong",
+    "Amos Lee",
+    "Kyle Sprysa",
+    "Elise Milbradt(S)",
+    "Heather Wallace",
+    "Laura Knowles(S)",
+    "Matthew Smith",
+    "Greg Kung",
+    "Clare Gee",
+    "An Tran"
+  ],
+  "points": [
+    {
+      "offensePlayers": [
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Stanley Kent",
+        "Edwin Wong"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Jeff Hunt",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jay Thor Turner"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "An Tran"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Craig Anderson",
+        "Vanessa Lyon",
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "An Tran"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Nick Theriault",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Sina Dee",
+        "Craig Anderson"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson",
+        "Sandra Hanson(S)",
+        "Jay Thor Turner",
+        "James King(S)",
+        "Kirsten Querbach",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Rob Tyson"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Kyle Sprysa",
+        "Elise Milbradt(S)",
+        "Stanley Kent",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Sina Dee"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "James King(S)",
+        "Rob Tyson",
+        "Kirsten Querbach",
+        "Jeff Hunt"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Kris Bergmann",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Nick Theriault",
+        "Laura Knowles(S)",
+        "Elise Milbradt(S)",
+        "Stanley Kent"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Rob Tyson",
+        "Jeff Hunt",
+        "Jay Thor Turner",
+        "James King(S)",
+        "Sandra Hanson(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Nick Theriault",
+        "Edwin Wong",
+        "Stanley Kent",
+        "Laura Knowles(S)",
+        "Elise Milbradt(S)",
+        "Matthew Smith"
+      ],
+      "defensePlayers": [
+        "Kris Bergmann",
+        "Andrew W Cameron",
+        "Sina Dee",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Stanley Kent",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson(S)",
+        "James King(S)",
+        "Rob Tyson",
+        "Jeff Hunt",
+        "Jay Thor Turner"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Sandra Hanson(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Edwin Wong",
+        "Amos Lee",
+        "Laura Knowles(S)",
+        "Nick Theriault",
+        "Elise Milbradt(S)"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Andrew W Cameron",
+        "Kris Bergmann",
+        "Sina Dee",
+        "Vanessa Lyon"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kris Bergmann"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Clare Gee"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "James King(S)",
+        "Rob Tyson"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Clare Gee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "Stanley Kent",
+        "Nick Theriault",
+        "Laura Knowles(S)",
+        "Elise Milbradt(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Craig Anderson",
+        "Kris Bergmann",
+        "Andrew W Cameron",
+        "Jen Cluthe"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Greg Kung",
+        "Stanley Kent",
+        "Kyle Sprysa"
+      ],
+      "defensePlayers": [
+        "Jeff Hunt",
+        "Kirsten Querbach",
+        "Sandra Hanson(S)",
+        "James King(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kyle Sprysa",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Craig Anderson",
+        "Andrew W Cameron",
+        "Vanessa Lyon",
+        "Sina Dee",
+        "Kris Bergmann"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Nick Theriault",
+        "Greg Kung",
+        "Stanley Kent"
+      ],
+      "defensePlayers": [
+        "Sandra Hanson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Stanley Kent",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Stanley Kent"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Stanley Kent"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Craig Anderson",
+        "Andrew W Cameron",
+        "Kris Bergmann",
+        "Vanessa Lyon",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Elise Milbradt(S)",
+        "Edwin Wong",
+        "Matthew Smith",
+        "Kyle Sprysa",
+        "Laura Knowles(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kris Bergmann"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sandra Hanson(S)",
+        "Rob Tyson",
+        "Jay Thor Turner",
+        "Kirsten Querbach",
+        "James King(S)"
+      ],
+      "defensePlayers": [
+        "Stanley Kent",
+        "Clare Gee",
+        "Amos Lee",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "PULL",
+          "firstActor": "Stanley Kent"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jen Cluthe",
+        "Kris Bergmann",
+        "Vanessa Lyon",
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Edwin Wong",
+        "Elise Milbradt(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Edwin Wong"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Heather Wallace",
+        "Amos Lee"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Sina Dee",
+        "Vanessa Lyon",
+        "Craig Anderson",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Matthew Smith",
+        "Nick Theriault"
+      ],
+      "defensePlayers": [
+        "Kirsten Querbach",
+        "Rob Tyson"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Matthew Smith"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Elise Milbradt(S)",
+        "Greg Kung",
+        "Kyle Sprysa"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Elise Milbradt(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Sandra Hanson(S)",
+        "Jeff Hunt",
+        "James King(S)",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Clare Gee",
+        "Greg Kung",
+        "Heather Wallace"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Heather Wallace"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Vanessa Lyon",
+        "Craig Anderson",
+        "Jen Cluthe"
+      ],
+      "defensePlayers": [
+        "Edwin Wong",
+        "Nick Theriault",
+        "Elise Milbradt(S)",
+        "Matthew Smith"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Vanessa Lyon"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Nick Theriault"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Jen Cluthe"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Heather Wallace",
+        "Nick Theriault",
+        "Greg Kung"
+      ],
+      "defensePlayers": [
+        "Rob Tyson",
+        "Jay Thor Turner",
+        "Jeff Hunt",
+        "Kirsten Querbach",
+        "James King(S)"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Rob Tyson"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee",
+        "Craig Anderson",
+        "Kris Bergmann",
+        "Andrew W Cameron",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Matthew Smith",
+        "Nick Theriault",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Vanessa Lyon"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jeff Hunt",
+        "Sandra Hanson(S)"
+      ],
+      "defensePlayers": [
+        "Amos Lee",
+        "Clare Gee",
+        "Edwin Wong",
+        "Heather Wallace",
+        "Kyle Sprysa",
+        "Matthew Smith"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Jeff Hunt"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Clare Gee",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Heather Wallace",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Clare Gee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Clare Gee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Andrew W Cameron",
+        "Sina Dee",
+        "Sandra Hanson(S)"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Sandra Hanson(S)",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Andrew W Cameron"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Heather Wallace",
+        "Nick Theriault",
+        "Greg Kung",
+        "Kyle Sprysa"
+      ],
+      "defensePlayers": [
+        "James King(S)",
+        "Kirsten Querbach",
+        "Rob Tyson",
+        "Jeff Hunt",
+        "Jay Thor Turner"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Heather Wallace"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Heather Wallace"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "James King(S)"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Greg Kung"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Nick Theriault",
+        "Matthew Smith"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Matthew Smith"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Matthew Smith",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Amos Lee"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "Vanessa Lyon"
+      ],
+      "defensePlayers": [
+        "Greg Kung",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Vanessa Lyon",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Greg Kung"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Sina Dee"
+      ],
+      "defensePlayers": [
+        "Laura Knowles(S)",
+        "Nick Theriault"
+      ],
+      "events": [
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Laura Knowles(S)"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Kirsten Querbach",
+        "James King(S)",
+        "Jeff Hunt",
+        "Jay Thor Turner",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jay Thor Turner",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kirsten Querbach",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "James King(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "James King(S)",
+          "secondActor": "Kirsten Querbach"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kirsten Querbach"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Amos Lee",
+        "Laura Knowles(S)",
+        "Kyle Sprysa",
+        "Greg Kung",
+        "Edwin Wong",
+        "Elise Milbradt(S)"
+      ],
+      "defensePlayers": [
+        "Sina Dee",
+        "Craig Anderson",
+        "Andrew W Cameron",
+        "Jen Cluthe",
+        "Kris Bergmann",
+        "Sandra Hanson(S)"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "DEFENSE",
+          "firstActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Craig Anderson"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Craig Anderson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jen Cluthe",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Jen Cluthe"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jen Cluthe"
+        },
+        {
+          "type": "THROWAWAY",
+          "firstActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Craig Anderson",
+          "secondActor": "Sina Dee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Sina Dee",
+          "secondActor": "Andrew W Cameron"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Andrew W Cameron",
+          "secondActor": "Kris Bergmann"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kris Bergmann",
+          "secondActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Sandra Hanson(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Edwin Wong"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Edwin Wong",
+          "secondActor": "Greg Kung"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Greg Kung",
+          "secondActor": "Elise Milbradt(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Elise Milbradt(S)",
+          "secondActor": "Laura Knowles(S)"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Laura Knowles(S)",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Kyle Sprysa"
+        }
+      ]
+    },
+    {
+      "offensePlayers": [
+        "Jay Thor Turner",
+        "Jeff Hunt",
+        "Rob Tyson"
+      ],
+      "defensePlayers": [
+        "Nick Theriault",
+        "Amos Lee",
+        "Kyle Sprysa"
+      ],
+      "events": [
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Rob Tyson"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Rob Tyson",
+          "secondActor": "Jeff Hunt"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Jeff Hunt",
+          "secondActor": "Jay Thor Turner"
+        },
+        {
+          "type": "DROP",
+          "firstActor": "Jay Thor Turner"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Kyle Sprysa"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Kyle Sprysa",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Nick Theriault",
+          "secondActor": "Amos Lee"
+        },
+        {
+          "type": "PASS",
+          "firstActor": "Amos Lee",
+          "secondActor": "Nick Theriault"
+        },
+        {
+          "type": "POINT",
+          "firstActor": "Nick Theriault"
+        }
+      ]
+    }
+  ]
+}
