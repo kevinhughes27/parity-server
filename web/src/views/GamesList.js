@@ -9,7 +9,8 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
-import { currentLeague, fetchGames } from '../api'
+import { currentLeague } from '../leagues'
+import { fetchGames } from '../api'
 
 const styles = {
   list: {

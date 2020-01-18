@@ -2,11 +2,11 @@
 
 import click
 import requests
-import urllib.request, json, glob, sys, os, re
+import urllib.request, json, glob, sys, os, re, io, csv
 from collections import defaultdict
 
 from app import app, save_game, cache
-from models import db, League
+from models import db, League, Team, Player
 from lib import ZuluruSync, PlayerDb, StatsCalculator
 
 
@@ -207,6 +207,102 @@ def backup(week):
         fo = open(os.path.join(target_dir, file_name), "w")
         fo.write(json.dumps(game, indent=2, sort_keys=True))
         fo.close()
+
+    click.echo('Done')
+
+
+@cli.command()
+def create_parity_tournament():
+    with app.app_context():
+        league = League()
+        league.name = "Parity Tournament 2020"
+        league.stat_values = 'v2'
+        league.salary_calc = 'sum'
+
+        db.session.add(league)
+        db.session.commit()
+
+        csv_data = """Name,Gender,Team
+        Stefan Schulde,male,Michelangelo
+        Laura Chambers Storey,female,Leonardo
+        Benjamin O'Malley,male,Leonardo
+        Caitlin Hesketh,female,Leonardo
+        Oren Gorber Wakabayashi,male,Donatello
+        Desmond Top,male,Donatello
+        Justine Price,female,Leonardo
+        Ryan McDonald,male,Donatello
+        Jon Rowe,male,Donatello
+        Ben Mussell,male,Leonardo
+        Damian Kwok,male,Donatello
+        Uri Schoijett,male,Michelangelo
+        Fraser Lyon,male,Michelangelo
+        Emilie Beausoleil,female,Michelangelo
+        Kevin Brown,male,Michelangelo
+        Jeremy Close,male,Raphael
+        Rachel Hurdle,female,Donatello
+        Kris Korpinen,male,Raphael
+        Ryan Mussell,male,Leonardo
+        Charlene Gervais,female,Donatello
+        Ingrid Bryson,female,Michelangelo
+        Stephen Close,male,Raphael
+        Sarah McDonald,female,Raphael
+        Keiran McCormick,female,Raphael
+        Charles Knowles,male,Leonardo
+        Brent Burton,male,Raphael
+        Sid Latty,male,Raphael
+        Karine Lukenda,female,Raphael
+        Ryan Mendonça,male,Michelangelo
+        Emma Beaulieu,female,Donatello
+        Ben Walker,male,Donatello
+        Douglas Brierley,male,Michelangelo
+        Owen Daigeler,male,Leonardo
+        Liam Daigeler,male,Leonardo
+        Geoff Solomon,male,Leonardo
+        Ben Curran,male,Michelangelo
+        Joshua Colman,male,Donatello
+        Micah Colman,male,Donatello
+        Julia Cruse,female,Leonardo
+        Liam Parker,male,Leonardo
+        Samuel Tremblay-Larochelle,male,Michelangelo
+        Geoffrey Loo,male,Michelangelo
+        Noah Berube,male,Raphael
+        Charles-Etienne Merizzi,male,Raphael
+        Heather Wallace,female,Michelangelo
+        Alex Tremblay-Larochelle,male,Michelangelo
+        Justine Dagenais,female,Michelangelo
+        Katelyn Fontaine,female,Raphael
+        Colin Scarffe,male,Raphael
+        Hugh Podmore,male,Raphael
+        Ainsley Shannon,female,Leonardo
+        Alistair Campbell,male,Leonardo
+        Dillon Kong,male,Leonardo
+        Corinne Dunwoody,female,Donatello
+        Nick Amlin,male,Donatello
+        Allan Godding,male,Donatello
+        """.replace("  ", "")
+
+        csv_reader = csv.DictReader(io.StringIO(csv_data))
+
+        team_names = set()
+        players = []
+
+        for row in csv_reader:
+            team_names.add(row["Team"])
+            players.append(row)
+
+        teams = []
+        for name in team_names:
+            team = Team(league_id=league.id, name=name)
+            db.session.add(team)
+            db.session.commit()
+            teams.append(team)
+
+        for row in players:
+            player = Player(league_id=league.id, name=row["Name"], gender=row["Gender"])
+            team = [t for t in teams if t.name == row["Team"]][0]
+            player.team_id = team.id
+            db.session.add(player)
+            db.session.commit()
 
     click.echo('Done')
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import { currentLeague, setLeague, fetchLeagues } from '../api'
+import { currentLeague, setLeague, Leagues } from '../leagues'
 import { map } from 'lodash'
 
 const styles = {
@@ -18,16 +18,8 @@ const styles = {
 
 class LeaguePicker extends Component {
   state = {
-    loading: true,
-    leagues: [],
+    leagues: Leagues,
     league: currentLeague(),
-  }
-
-  componentDidMount () {
-    return (async () => {
-      const leagues = await fetchLeagues()
-      this.setState({leagues, loading: false})
-    })()
   }
 
   renderLeagues (leagues) {
@@ -49,9 +41,9 @@ class LeaguePicker extends Component {
 
   render () {
     const { classes } = this.props
-    const { league, leagues, loading } = this.state
+    const { league, leagues } = this.state
 
-    if (loading) return null
+    if (leagues.length === 1) return null
 
     return (
       <div style={{paddingRight: 20}}>

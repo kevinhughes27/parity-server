@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import TopNav from '../layout/TopNav'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
-import { currentLeague, fetchPlayers } from "../api"
+import { currentLeague } from '../leagues'
+import { fetchPlayers } from "../api"
 
 class SalaryProvider extends Component {
   constructor (props) {
