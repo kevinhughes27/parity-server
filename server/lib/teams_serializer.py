@@ -8,13 +8,13 @@ def build_teams_response(league_id):
 
         for player in Player.query.filter_by(league_id=league_id, team_id=team.id):
             players.append({
-                'id': player.zuluru_id,
+                'id': player.id,
                 'name': player.name,
                 'is_male': player.is_male
             })
 
         teams.append({
-            'id': team.zuluru_id,
+            'id': team.id,
             'name': team.name,
             'players': players
         })

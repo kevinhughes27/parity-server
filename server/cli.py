@@ -306,6 +306,7 @@ def create_parity_tournament():
 
     click.echo('Done')
 
+
 @cli.command()
 def salary_diff():
     prod_url = "https://parity-server.herokuapp.com/api/10/players"
