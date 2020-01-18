@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/parity-server/precache-manifest.8f91103df723406787b94735d2f01b34.js"
+  "/parity-server/precache-manifest.c28600c047311ebd74e4fa90958ffed2.js"
 );
 
 self.addEventListener('message', (event) => {

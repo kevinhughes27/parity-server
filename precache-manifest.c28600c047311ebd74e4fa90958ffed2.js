@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10d29b8338dd72e0442d6646842066e7",
+    "revision": "7d70090ccb4e233b0fb0e6c54d5ca8f4",
     "url": "/parity-server/index.html"
   },
   {
-    "revision": "130b39f1c23e4f9ebb2d",
+    "revision": "fbdfd1fc402c22dad07f",
     "url": "/parity-server/static/css/main.c4d50f7d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/parity-server/static/js/2.e9cda072.chunk.js.LICENSE"
   },
   {
-    "revision": "130b39f1c23e4f9ebb2d",
-    "url": "/parity-server/static/js/main.cb42313c.chunk.js"
+    "revision": "fbdfd1fc402c22dad07f",
+    "url": "/parity-server/static/js/main.3315bcf6.chunk.js"
   },
   {
     "revision": "e55f94ce47812bea78ac",
