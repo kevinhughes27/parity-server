@@ -3,7 +3,8 @@ import ls from 'local-storage'
 const leagueKey = 'currentLeague'
 
 const currentLeague = () => {
-  return ls.get(leagueKey) || '11'
+  // return ls.get(leagueKey) || '10'
+  return 11
 }
 
 const setLeague = (league) => {
