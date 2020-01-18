@@ -2,11 +2,11 @@
 
 import click
 import requests
-import urllib.request, json, glob, sys, os, re
+import urllib.request, json, glob, sys, os, re, io, csv
 from collections import defaultdict
 
 from app import app, save_game, cache
-from models import db, League
+from models import db, League, Team, Player
 from lib import ZuluruSync, PlayerDb, StatsCalculator
 
 
@@ -210,6 +210,101 @@ def backup(week):
 
     click.echo('Done')
 
+
+@cli.command()
+def create_parity_tournament():
+    with app.app_context():
+        league = League()
+        league.name = "Parity Tournament 2020"
+        league.stat_values = 'v2'
+        league.salary_calc = 'sum'
+
+        db.session.add(league)
+        db.session.commit()
+
+        csv_data = """Name,Team
+        Stefan Schulde,Michelangelo
+        Laura Chambers Storey,Leonardo
+        Benjamin O'Malley,Leonardo
+        Caitlin Hesketh,Leonardo
+        Oren Gorber Wakabayashi,Donatello
+        Desmond Top,Donatello
+        Justine Price,Leonardo
+        Ryan McDonald,Donatello
+        Jon Rowe,Donatello
+        Ben Mussell,Leonardo
+        Damian Kwok,Donatello
+        Uri Schoijett,Michelangelo
+        Fraser Lyon,Michelangelo
+        Emilie Beausoleil,Michelangelo
+        Kevin Brown,Michelangelo
+        Jeremy Close,Raphael
+        Rachel Hurdle,Donatello
+        Kris Korpinen,Raphael
+        Ryan Mussell,Leonardo
+        Charlene Gervais,Donatello
+        Ingrid Bryson,Michelangelo
+        Stephen Close,Raphael
+        Sarah McDonald,Raphael
+        Keiran McCormick,Raphael
+        Charles Knowles,Leonardo
+        Brent Burton,Raphael
+        Sid Latty,Raphael
+        Karine Lukenda,Raphael
+        Ryan Mendonça,Michelangelo
+        Emma Beaulieu,Donatello
+        Ben Walker,Donatello
+        Douglas Brierley,Michelangelo
+        Owen Daigeler,Leonardo
+        Liam Daigeler,Leonardo
+        Geoff Solomon,Leonardo
+        Ben Curran,Michelangelo
+        Joshua Colman,Donatello
+        Micah Colman,Donatello
+        Julia Cruse,Leonardo
+        Liam Parker,Leonardo
+        Samuel Tremblay-Larochelle,Michelangelo
+        Geoffrey Loo,Michelangelo
+        Noah Berube,Raphael
+        Charles-Etienne Merizzi,Raphael
+        Heather Wallace,Michelangelo
+        Alex Tremblay-Larochelle,Michelangelo
+        Justine Dagenais,Michelangelo
+        Katelyn Fontaine,Raphael
+        Colin Scarffe,Raphael
+        Hugh Podmore,Raphael
+        Ainsley Shannon,Leonardo
+        Alistair Campbell,Leonardo
+        Dillon Kong,Leonardo
+        Corinne Dunwoody,Donatello
+        Nick Amlin,Donatello
+        Allan Godding,Donatello
+        """.replace("  ", "")
+
+        csv_reader = csv.DictReader(io.StringIO(csv_data))
+
+        team_names = set()
+        players = []
+
+        for row in csv_reader:
+            team_names.add(row["Team"])
+            players.append(row)
+
+        teams = []
+        for name in team_names:
+            team = Team(league_id=league.id, name=name)
+            db.session.add(team)
+            db.session.commit()
+            teams.append(team)
+
+        for row in players:
+            player = Player(league_id=league.id, name=row["Name"])
+            team = [t for t in teams if t.name == row["Team"]][0]
+            player.team_id = team.id
+            db.session.add(player)
+            db.session.commit()
+
+    click.echo('Done')
 
 @cli.command()
 def salary_diff():
