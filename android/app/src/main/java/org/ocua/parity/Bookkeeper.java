@@ -20,7 +20,6 @@ import java.util.Stack;
 
 import org.ocua.parity.model.Event;
 import org.ocua.parity.model.Game;
-import org.ocua.parity.model.League;
 import org.ocua.parity.model.Point;
 import org.ocua.parity.model.Team;
 
@@ -286,7 +285,7 @@ public class Bookkeeper implements Serializable {
         JSONObject jsonObject = new JSONObject();
 
         try {
-            jsonObject.accumulate("league_id", League.id);
+            jsonObject.accumulate("league_id", BuildConfig.LEAGUE_ID);
 
             jsonObject.accumulate("week", week);
 

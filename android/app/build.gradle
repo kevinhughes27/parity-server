@@ -34,6 +34,11 @@ android {
 
     buildTypes {
         release {
+            def baseUrl = "https://parity-server.herokuapp.com"
+
+            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
+            buildConfigField "String", "SCHEDULE_URL", "\"" + baseUrl + "/api/%s/schedule\""
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
@@ -47,14 +52,21 @@ android {
     flavorDimensions( "parity" )
     productFlavors {
         league {
+            dimension = "parity"
+            manifestPlaceholders = [appName:"Parity League Stats"]
+
+            buildConfigField "Integer", "LEAGUE_ID", "10"
             buildConfigField "Integer", "MAX_FEMALES", "2"
             buildConfigField "Integer", "MAX_MALES", "4"
-            def baseUrl = "https://parity-server.herokuapp.com"
-
-            buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
-            buildConfigField "String", "SCHEDULE_URL", "\"" + baseUrl + "/api/%s/schedule\""
-
+        }
+        tournament {
             dimension = "parity"
+            manifestPlaceholders = [appName:"Parity Tournament Stats"]
+            applicationIdSuffix = ".tournament"
+
+            buildConfigField "Integer", "LEAGUE_ID", "11"
+            buildConfigField "Integer", "MAX_FEMALES", "2"
+            buildConfigField "Integer", "MAX_MALES", "4"
         }
     }
     android.sourceSets {
