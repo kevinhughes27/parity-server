@@ -8,7 +8,8 @@ import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button }
 import FilterListIcon from '@material-ui/icons/FilterList'
 import withSizes from 'react-sizes'
 import { last, pickBy } from 'lodash'
-import { currentLeague, fetchWeeks, fetchStats } from "../api"
+import { currentLeague } from '../leagues'
+import { fetchWeeks, fetchStats } from "../api"
 
 class StatsProvider extends Component {
   constructor (props) {

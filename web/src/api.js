@@ -1,15 +1,4 @@
 import 'whatwg-fetch'
-import ls from 'local-storage'
-
-const leagueKey = 'currentLeague'
-
-const currentLeague = () => {
-  return ls.get(leagueKey) || '10'
-}
-
-const setLeague = (league) => {
-  ls.set(leagueKey, league)
-}
 
 const dataCache = {}
 
@@ -45,12 +34,12 @@ const fetchGame = async (gameId, league) => {
   return await response.json()
 }
 
-const fetchLeagues = async () => {
-  const response = await cachedFetch(`/api/leagues`)
-  const leagues = await response.json()
-  // nothing to display for league_id=1
-  return leagues.filter((l) => l.id > 1)
-}
+// const fetchLeagues = async () => {
+//   const response = await cachedFetch(`/api/leagues`)
+//   const leagues = await response.json()
+//   // nothing to display for league_id=1
+//   return leagues.filter((l) => l.id > 1)
+// }
 
 const fetchPlayers = async (league) => {
   const response = await cachedFetch(`/api/${league}/players`)
@@ -73,11 +62,8 @@ const fetchStats = async (weekNum, league) => {
 }
 
 export {
-  currentLeague,
-  setLeague,
   fetchGames,
   fetchGame,
-  fetchLeagues,
   fetchPlayers,
   fetchWeeks,
   fetchStats
