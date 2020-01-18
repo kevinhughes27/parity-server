@@ -222,63 +222,63 @@ def create_parity_tournament():
         db.session.add(league)
         db.session.commit()
 
-        csv_data = """Name,Team
-        Stefan Schulde,Michelangelo
-        Laura Chambers Storey,Leonardo
-        Benjamin O'Malley,Leonardo
-        Caitlin Hesketh,Leonardo
-        Oren Gorber Wakabayashi,Donatello
-        Desmond Top,Donatello
-        Justine Price,Leonardo
-        Ryan McDonald,Donatello
-        Jon Rowe,Donatello
-        Ben Mussell,Leonardo
-        Damian Kwok,Donatello
-        Uri Schoijett,Michelangelo
-        Fraser Lyon,Michelangelo
-        Emilie Beausoleil,Michelangelo
-        Kevin Brown,Michelangelo
-        Jeremy Close,Raphael
-        Rachel Hurdle,Donatello
-        Kris Korpinen,Raphael
-        Ryan Mussell,Leonardo
-        Charlene Gervais,Donatello
-        Ingrid Bryson,Michelangelo
-        Stephen Close,Raphael
-        Sarah McDonald,Raphael
-        Keiran McCormick,Raphael
-        Charles Knowles,Leonardo
-        Brent Burton,Raphael
-        Sid Latty,Raphael
-        Karine Lukenda,Raphael
-        Ryan Mendonça,Michelangelo
-        Emma Beaulieu,Donatello
-        Ben Walker,Donatello
-        Douglas Brierley,Michelangelo
-        Owen Daigeler,Leonardo
-        Liam Daigeler,Leonardo
-        Geoff Solomon,Leonardo
-        Ben Curran,Michelangelo
-        Joshua Colman,Donatello
-        Micah Colman,Donatello
-        Julia Cruse,Leonardo
-        Liam Parker,Leonardo
-        Samuel Tremblay-Larochelle,Michelangelo
-        Geoffrey Loo,Michelangelo
-        Noah Berube,Raphael
-        Charles-Etienne Merizzi,Raphael
-        Heather Wallace,Michelangelo
-        Alex Tremblay-Larochelle,Michelangelo
-        Justine Dagenais,Michelangelo
-        Katelyn Fontaine,Raphael
-        Colin Scarffe,Raphael
-        Hugh Podmore,Raphael
-        Ainsley Shannon,Leonardo
-        Alistair Campbell,Leonardo
-        Dillon Kong,Leonardo
-        Corinne Dunwoody,Donatello
-        Nick Amlin,Donatello
-        Allan Godding,Donatello
+        csv_data = """Name,Gender,Team
+        Stefan Schulde,male,Michelangelo
+        Laura Chambers Storey,female,Leonardo
+        Benjamin O'Malley,male,Leonardo
+        Caitlin Hesketh,female,Leonardo
+        Oren Gorber Wakabayashi,male,Donatello
+        Desmond Top,male,Donatello
+        Justine Price,female,Leonardo
+        Ryan McDonald,male,Donatello
+        Jon Rowe,male,Donatello
+        Ben Mussell,male,Leonardo
+        Damian Kwok,male,Donatello
+        Uri Schoijett,male,Michelangelo
+        Fraser Lyon,male,Michelangelo
+        Emilie Beausoleil,female,Michelangelo
+        Kevin Brown,male,Michelangelo
+        Jeremy Close,male,Raphael
+        Rachel Hurdle,female,Donatello
+        Kris Korpinen,male,Raphael
+        Ryan Mussell,male,Leonardo
+        Charlene Gervais,female,Donatello
+        Ingrid Bryson,female,Michelangelo
+        Stephen Close,male,Raphael
+        Sarah McDonald,female,Raphael
+        Keiran McCormick,female,Raphael
+        Charles Knowles,male,Leonardo
+        Brent Burton,male,Raphael
+        Sid Latty,male,Raphael
+        Karine Lukenda,female,Raphael
+        Ryan Mendonça,male,Michelangelo
+        Emma Beaulieu,female,Donatello
+        Ben Walker,male,Donatello
+        Douglas Brierley,male,Michelangelo
+        Owen Daigeler,male,Leonardo
+        Liam Daigeler,male,Leonardo
+        Geoff Solomon,male,Leonardo
+        Ben Curran,male,Michelangelo
+        Joshua Colman,male,Donatello
+        Micah Colman,male,Donatello
+        Julia Cruse,female,Leonardo
+        Liam Parker,male,Leonardo
+        Samuel Tremblay-Larochelle,male,Michelangelo
+        Geoffrey Loo,male,Michelangelo
+        Noah Berube,male,Raphael
+        Charles-Etienne Merizzi,male,Raphael
+        Heather Wallace,female,Michelangelo
+        Alex Tremblay-Larochelle,male,Michelangelo
+        Justine Dagenais,female,Michelangelo
+        Katelyn Fontaine,female,Raphael
+        Colin Scarffe,male,Raphael
+        Hugh Podmore,male,Raphael
+        Ainsley Shannon,female,Leonardo
+        Alistair Campbell,male,Leonardo
+        Dillon Kong,male,Leonardo
+        Corinne Dunwoody,female,Donatello
+        Nick Amlin,male,Donatello
+        Allan Godding,male,Donatello
         """.replace("  ", "")
 
         csv_reader = csv.DictReader(io.StringIO(csv_data))
@@ -298,7 +298,7 @@ def create_parity_tournament():
             teams.append(team)
 
         for row in players:
-            player = Player(league_id=league.id, name=row["Name"])
+            player = Player(league_id=league.id, name=row["Name"], gender=row["Gender"])
             team = [t for t in teams if t.name == row["Team"]][0]
             player.team_id = team.id
             db.session.add(player)
