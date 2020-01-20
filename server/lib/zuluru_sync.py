@@ -51,6 +51,10 @@ class ZuluruSync:
 
         tbody = soup.find('div', {'class': 'schedule'}).find('tbody')
 
+        teams = {}
+        for team in Team.query.filter_by(league_id=self.league_id):
+            teams[team.zuluru_id] = team.id
+
         schedule = []
         date = datetime.today().date()
         week = 0
@@ -62,7 +66,7 @@ class ZuluruSync:
                 date = datetime.strptime(date_raw, '%Y-%m-%d').date()
                 week += 1
             else:
-                matchup = self.parse_matchup(row, week, date)
+                matchup = self.parse_matchup(teams, row, week, date)
                 if matchup:
                     schedule.append(matchup)
                 else:
@@ -71,7 +75,7 @@ class ZuluruSync:
         return schedule
 
 
-    def parse_matchup(self, row, week, date):
+    def parse_matchup(self, teams, row, week, date):
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
@@ -83,8 +87,8 @@ class ZuluruSync:
 
         matchup = Matchup()
         matchup.league_id = self.league_id
-        matchup.home_team_id = ids[0]
-        matchup.away_team_id = ids[1]
+        matchup.home_team_id = teams[ids[0]]
+        matchup.away_team_id = teams[ids[1]]
         matchup.week = week
         matchup.game_start = datetime.combine(date, game_times[0])
         matchup.game_end = datetime.combine(date, game_times[1])
