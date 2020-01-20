@@ -223,62 +223,7 @@ def create_parity_tournament():
         db.session.commit()
 
         csv_data = """Name,Gender,Team
-        Stefan Schulde,male,Michelangelo
-        Laura Chambers Storey,female,Leonardo
-        Benjamin O'Malley,male,Leonardo
-        Caitlin Hesketh,female,Leonardo
-        Oren Gorber Wakabayashi,male,Donatello
-        Desmond Top,male,Donatello
-        Justine Price,female,Leonardo
-        Ryan McDonald,male,Donatello
-        Jon Rowe,male,Donatello
-        Ben Mussell,male,Leonardo
-        Damian Kwok,male,Donatello
-        Uri Schoijett,male,Michelangelo
-        Fraser Lyon,male,Michelangelo
-        Emilie Beausoleil,female,Michelangelo
-        Kevin Brown,male,Michelangelo
-        Jeremy Close,male,Raphael
-        Rachel Hurdle,female,Donatello
-        Kris Korpinen,male,Raphael
-        Ryan Mussell,male,Leonardo
-        Charlene Gervais,female,Donatello
-        Ingrid Bryson,female,Michelangelo
-        Stephen Close,male,Raphael
-        Sarah McDonald,female,Raphael
-        Keiran McCormick,female,Raphael
-        Charles Knowles,male,Leonardo
-        Brent Burton,male,Raphael
-        Sid Latty,male,Raphael
-        Karine Lukenda,female,Raphael
-        Ryan Mendonça,male,Michelangelo
-        Emma Beaulieu,female,Donatello
-        Ben Walker,male,Donatello
-        Douglas Brierley,male,Michelangelo
-        Owen Daigeler,male,Leonardo
-        Liam Daigeler,male,Leonardo
-        Geoff Solomon,male,Leonardo
-        Ben Curran,male,Michelangelo
-        Joshua Colman,male,Donatello
-        Micah Colman,male,Donatello
-        Julia Cruse,female,Leonardo
-        Liam Parker,male,Leonardo
-        Samuel Tremblay-Larochelle,male,Michelangelo
-        Geoffrey Loo,male,Michelangelo
-        Noah Berube,male,Raphael
-        Charles-Etienne Merizzi,male,Raphael
-        Heather Wallace,female,Michelangelo
-        Alex Tremblay-Larochelle,male,Michelangelo
-        Justine Dagenais,female,Michelangelo
-        Katelyn Fontaine,female,Raphael
-        Colin Scarffe,male,Raphael
-        Hugh Podmore,male,Raphael
-        Ainsley Shannon,female,Leonardo
-        Alistair Campbell,male,Leonardo
-        Dillon Kong,male,Leonardo
-        Corinne Dunwoody,female,Donatello
-        Nick Amlin,male,Donatello
-        Allan Godding,male,Donatello
+        bob dude,male,Michelangelo
         """.replace("  ", "")
 
         csv_reader = csv.DictReader(io.StringIO(csv_data))
