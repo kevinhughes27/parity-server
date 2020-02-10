@@ -29,6 +29,8 @@ def init_db():
 def create_leagues():
     with app.app_context():
         league_params = [
+            { 'zuluru_id': 712, 'name': '2019/2020 Session 2', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': None, 'name': 'Parity Tournament 2020', 'stat_values': 'v2', 'salary_calc': 'sum_rate' },
             { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
@@ -58,7 +60,7 @@ def create_leagues():
 @cli.command()
 def zuluru_sync():
     with app.app_context():
-        league_zid = 702
+        league_zid = 712
         league = League.query.filter_by(zuluru_id=league_zid).first()
 
         zuluru_sync = ZuluruSync(league)
@@ -109,7 +111,7 @@ def zuluru_sync_all():
 @cli.command()
 def schedule_sync():
     with app.app_context():
-        league_zid = 702
+        league_zid = 712
         league = League.query.filter_by(zuluru_id=league_zid).first()
 
         zuluru_sync = ZuluruSync(league)
@@ -123,7 +125,8 @@ def game_sync():
         db.engine.execute("TRUNCATE game CASCADE;")
 
         leagues = [
-            { 'id': 10, 'data_folder': 'data/ocua_19-20' },
+            { 'id': 12, 'data_folder': 'data/ocua_19-20' },
+            { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
             { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
             { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
             { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
@@ -178,7 +181,7 @@ def re_upload(week, prod):
 def backup(week):
     click.echo('Downloading games...')
 
-    league_id = 10
+    league_id = 12
 
     src_url = f"https://parity-server.herokuapp.com/api/{league_id}/games"
     target_dir = "data/ocua_19-20"
