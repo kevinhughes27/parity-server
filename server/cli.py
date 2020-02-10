@@ -58,7 +58,7 @@ def create_leagues():
 @cli.command()
 def zuluru_sync():
     with app.app_context():
-        league_zid = 702
+        league_zid = 712
         league = League.query.filter_by(zuluru_id=league_zid).first()
 
         zuluru_sync = ZuluruSync(league)
@@ -178,7 +178,7 @@ def re_upload(week, prod):
 def backup(week):
     click.echo('Downloading games...')
 
-    league_id = 10
+    league_id = 12
 
     src_url = f"https://parity-server.herokuapp.com/api/{league_id}/games"
     target_dir = "data/ocua_19-20"
