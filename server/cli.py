@@ -30,6 +30,7 @@ def create_leagues():
     with app.app_context():
         league_params = [
             { 'zuluru_id': 712, 'name': '2019/2020 Session 2', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
+            { 'zuluru_id': None, 'name': 'Parity Tournament 2020', 'stat_values': 'v2', 'salary_calc': 'sum_rate' },
             { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 662, 'name': '2018/2019 Session 2', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 647, 'name': '2018/2019 Session 1', 'stat_values': 'v1', 'salary_calc': 'pro_rate' },
