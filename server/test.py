@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
+
 from flask_testing import TestCase as FlaskTest
 from snapshottest import TestCase as SnapShotTest
-from werkzeug.utils import cached_property
 import unittest
 import os
 
