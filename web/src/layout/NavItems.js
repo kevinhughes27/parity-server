@@ -53,8 +53,8 @@ class NavItems extends Component {
 
         { NavItem('/games', "Games") }
         { NavItem('/', "Player Stats") }
+        { NavItem('/graphs', "Graphs") }
         { NavItem('/leaderboards', "Leaderboards") }
-        { NavItem('/compare_players', "Compare Players") }
         { NavItem('/team_dashboard', "Team Dashboard") }
 
         <Divider />

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
 import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import Chart from './Chart'
+import { Bar } from 'react-chartjs-2'
 import { keys, pick } from 'lodash'
 
 const STATS = [
@@ -18,7 +18,7 @@ const STATS = [
   'drops'
 ]
 
-export default class ComparePlayers extends Component {
+export default class CompareTwo extends Component {
   constructor (props) {
     super(props)
 
@@ -48,16 +48,32 @@ export default class ComparePlayers extends Component {
     const playerBStats = pick(stats[playerBName], STATS)
     const playerNames = keys(this.props.stats)
 
+    const data = {
+      labels: STATS,
+      datasets: [
+        {
+          label: playerAName,
+          data: Object.values(playerAStats),
+          backgroundColor: '#98abc5'
+        },
+        {
+          label: playerBName,
+          data: Object.values(playerBStats),
+          backgroundColor: '#ff8c00'
+        }
+      ]
+    }
+
+    const options = {
+      legend: {
+        display: false
+      }
+    }
+
     return (
       <Container fixed>
         <div style={{paddingTop: '20px'}}>
-          <Chart
-            labels={STATS}
-            playerAName={playerAName}
-            playerAStats={playerAStats}
-            playerBName={playerBName}
-            playerBStats={playerBStats}
-          />
+          <Bar data={data} redraw={true} options={options}/>
         </div>
         <div style={{display: 'flex', justifyContent: 'space-between', paddingTop: 20}}>
           <Autocomplete

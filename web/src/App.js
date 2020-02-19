@@ -6,8 +6,8 @@ import GamesList from './views/GamesList'
 import Game from './views/Game'
 
 import StatsPage from './views/StatsPage'
+import Graphs from './views/Graphs'
 import Leaderboards from './views/Leaderboards'
-import ComparePlayers from './views/ComparePlayers'
 
 import SalaryPage from './views/SalaryPage'
 import StatsTable from './views/StatsTable'
@@ -38,15 +38,15 @@ class App extends React.Component {
           </StatsPage>
         </Route>
 
-        <Route path="/leaderboards">
+        <Route path="/graphs">
           <StatsPage>
-            <Leaderboards />
+            <Graphs />
           </StatsPage>
         </Route>
 
-        <Route path="/compare_players">
+        <Route path="/leaderboards">
           <StatsPage>
-            <ComparePlayers />
+            <Leaderboards />
           </StatsPage>
         </Route>
 
