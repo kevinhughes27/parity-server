@@ -177,27 +177,6 @@ def re_upload(week, prod):
 
 
 @cli.command()
-def remove_stats():
-    league_folder = 'data/ocua_19-20/session1'
-
-    files = glob.glob(f"{league_folder}/week*_game*.json")
-
-    for file in files:
-        data = json.load(open(file))
-
-        if "stats" in data:
-            del data["stats"]
-
-        fo = open(file, "w")
-        fo.write(json.dumps(data, indent=2, sort_keys=True))
-        fo.close()
-
-        print(file)
-
-    click.echo('Done')
-
-
-@cli.command()
 @click.option('--week', default=0)
 def backup(week):
     click.echo('Downloading games...')
