@@ -2,7 +2,7 @@ import { map, sum, uniq } from 'lodash'
 
 export function calcSalaryLimits(players) {
   const numTeams = uniq(players.map(p => p.team)).length
-  const salaryCapVariance = 0.03
+  const salaryCapVariance = 0.02
   const salaries = map(players,
      (p) => p.salary)
   const salaryAvg = sum(salaries) / numTeams;
