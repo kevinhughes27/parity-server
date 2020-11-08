@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* Layout */
+html, body, #root {
+  min-height: 100%;
+  height: 100%;
+}
+
+#root > div {
+  min-height: 100%;
+  height: 100%;
+}
+
+/* Table */
+.filters {
+  margin: auto;
+}
+.filters .MuiInputBase-inputSelect {
+  color: black !important;
+  width: 160px;
+  border: rgba(0, 0, 0, 0.87);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 10px;
+}
+.filters .MuiSelect-icon {
+  color: black !important;
+  top: 12px;
+  right: 6px;
+}
+
+/* Responsive Table */
+@media only screen and (max-width : 992px) {
+  .responsive-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+
+  }
+
+  .responsive-table table td:empty:before {
+    content: " ";
+  }
+
+  .responsive-table table td {
+    margin: 0;
+    vertical-align: top;
+  }
+
+  .responsive-table table th {
+    margin: 0;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .responsive-table table thead {
+    display: block;
+    float: left;
+  }
+  .responsive-table table thead tr {
+    display: block;
+    padding: 0 10px 0 0;
+  }
+  .responsive-table table thead tr th::before {
+    content: " ";
+  }
+
+  .responsive-table table tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .responsive-table table tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .responsive-table table th {
+    display: block;
+    text-align: right;
+    height: 58px;
+  }
+  .responsive-table table td {
+    display: block;
+    text-align: left;
+    height: 58px;
+  }
+  .responsive-table table tr {
+    border-bottom: none;
+    padding: 0 10px;
+  }
+
+  /* sort out borders */
+  .responsive-table table thead {
+    border: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .MuiTableSortLabel-iconDirectionDesc {
+    transform: rotate(270deg) !important;
+  }
+
+  .MuiTableSortLabel-iconDirectionAsc {
+    transform: rotate(90deg) !important;
+  }
+}
+
+/* Game Show */
+.game-tabs {
+  min-height: 300px;
+}
+
+@media only screen and (min-width : 992px) {
+  .game-title {
+    min-height: 70px;
+  }
+
+  .game-tabs {
+    min-height: 480px;
+  }
+}
+@media only screen and (max-width : 992px) {
+  .game-points-title {
+    min-width: 100%;
+  }
+}
