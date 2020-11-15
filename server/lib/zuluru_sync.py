@@ -19,11 +19,14 @@ class ZuluruSync:
 
         if division:
             self.teams_path = division_path + str(self.league.zuluru_id)
+            self.schedule_path = self.base_url + '/divisions/schedule?division=' + str(self.league.zuluru_id)
         else:
+            # league
             self.teams_path = league_path + str(self.league.zuluru_id)
+            self.schedule_path = self.base_url + '/leagues/schedule'
 
         self.team_path = self.base_url + '/teams/view/team:'
-        self.schedule_path = self.base_url + '/leagues/schedule'
+
 
         self.team_id_preamble = 'teams_team_'
         self.player_id_preamble = 'people_person_'
@@ -98,6 +101,7 @@ class ZuluruSync:
     def sync_teams(self):
         session = self.login()
 
+        print('Syncing League ', self.league)
         print('Fetching Teams')
 
         team_ids = self.get_team_ids(session)
