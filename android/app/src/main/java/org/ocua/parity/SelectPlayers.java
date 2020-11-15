@@ -1,10 +1,14 @@
 package org.ocua.parity;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -213,8 +217,11 @@ public class SelectPlayers extends Activity {
 
         int teamSize = BuildConfig.MAX_FEMALES + BuildConfig.MAX_MALES;
 
-        boolean leftCorrectNumPlayers = leftPlayers.size() == teamSize;
-        boolean rightCorrectNumPlayers = rightPlayers.size() == teamSize;
+        int leftPlayerCount = leftPlayers.size();
+        int rightPlayerCount = rightPlayers.size();
+
+        boolean leftCorrectNumPlayers = leftPlayerCount == teamSize;
+        boolean rightCorrectNumPlayers = rightPlayerCount == teamSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
             bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
@@ -228,19 +235,45 @@ public class SelectPlayers extends Activity {
             intent.putExtras(bundle);
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
-
         } else {
-            String error = "Incorrect number of players";
+            String message = "Incorrect number of players:";
+
             if (!leftCorrectNumPlayers) {
-                error += String.format("\nLeft side: %d/%d selected", leftPlayers.size(), teamSize);
+                message += String.format("\nLeft side: %d/%d selected", leftPlayerCount, teamSize);
             }
 
             if (!rightCorrectNumPlayers) {
-                error += String.format("\nRight side: %d/%d selected", rightPlayers.size(), teamSize);
+                message += String.format("\nRight side: %d/%d selected", rightPlayerCount, teamSize);
             }
 
-            Toast.makeText(context, error, Toast.LENGTH_LONG).show();
-            return;
+            message += "\n\nContinue with these players anyway?";
+
+            new AlertDialog.Builder(context)
+                    .setTitle("Confirm Player Count")
+                    .setMessage(message)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
+
+                            Intent intent = new Intent(context, Stats.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("teams", teams);
+                            bundle.putSerializable("bookkeeper", bookkeeper);
+                            bundle.putSerializable("leftPlayers", leftPlayers);
+                            bundle.putSerializable("rightPlayers", rightPlayers);
+                            intent.putExtras(bundle);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
         }
     }
 }
