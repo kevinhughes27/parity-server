@@ -6,6 +6,8 @@ class PlayerDb:
 
 
     def load(self, simple=False):
+        # simple player db doesn't have zuluru ids
+        # and only uses a name match
         self.simple = simple
 
         self.players_by_zid = {}
