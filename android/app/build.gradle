@@ -19,14 +19,14 @@ android {
             }
         }
     }
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
     defaultConfig {
         applicationId 'io.masse.parityleaguestats'
         minSdkVersion 19
-        targetSdkVersion 25
-        versionCode 6
-        versionName '1.6'
+        targetSdkVersion 30
+        versionCode 7
+        versionName '1.7'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.release
     }
@@ -48,7 +48,7 @@ android {
     productFlavors {
         league {
             buildConfigField "Integer", "MAX_FEMALES", "2"
-            buildConfigField "Integer", "MAX_MALES", "4"
+            buildConfigField "Integer", "MAX_MALES", "3"
             def baseUrl = "https://parity-server.herokuapp.com"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
@@ -65,10 +65,10 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.code.gson:gson:2.7'
-    compile 'com.android.support:support-annotations:25.3.0'
-    compile 'com.android.support:appcompat-v7:25.3.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-annotations:28.0.0'
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support.constraint:constraint-layout:2.0.4'
     testCompile 'junit:junit:4.12'
-    androidTestCompile 'com.android.support:support-annotations:25.3.0'
+    androidTestCompile 'com.android.support:support-annotations:28.0.0'
     androidTestCompile 'com.android.support.test:runner:0.5'
 }
