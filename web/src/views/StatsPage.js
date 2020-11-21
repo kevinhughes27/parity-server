@@ -7,42 +7,16 @@ import GenderFilter from '../components/GenderFilter'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core'
 import FilterListIcon from '@material-ui/icons/FilterList'
 import withSizes from 'react-sizes'
-import { last, pickBy } from 'lodash'
+import { pickBy } from 'lodash'
 import { useLeague } from '../hooks/league'
-import { fetchWeeks, fetchStats } from "../api"
+import { useStats } from '../hooks/stats'
 
 function StatsProvider(props) {
   const [league] = useLeague();
-  const [loading, setLoading] = useState(true)
-
-  const [weeks, setWeeks] = useState([])
-  const [week, setWeek] = useState(0)
-  const [stats, setStats] = useState({})
+  const [data, loading, changeWeek] = useStats(league);
 
   const [filtersOpen, openFilters] = useState(false)
   const [filter, setFilter] = useState('any')
-
-  React.useEffect(async () => {
-    setLoading(true)
-    const newWeeks = await fetchWeeks(league)
-    const newWeek = last(newWeeks) || 0
-    const newStats = await fetchStats(week, league)
-    setWeeks(newWeeks)
-    setWeek(newWeek)
-    setStats(newStats)
-    setLoading(false)
-  }, [league])
-
-  const weekChange = (event) => {
-    const newWeek = event.target.value
-    return (async () => {
-      setLoading(true)
-      const newStats = await fetchStats(week, league)
-      setWeek(newWeek)
-      setStats(newStats)
-      setLoading(false)
-    })()
-  }
 
   const genderChange = (event) => {
     const filter = event.target.value
@@ -51,17 +25,17 @@ function StatsProvider(props) {
 
   const filteredStats = () => {
     if (filter === 'any') {
-      return stats;
+      return data.stats;
     }
 
-    return pickBy(stats, (statEntry) => {
+    return pickBy(data.stats, (statEntry) => {
       return statEntry.gender === filter;
     })
   }
 
   const Filters = () => {
-    // add 0 for "all"
-    const weekOptions = [0, ...weeks]
+    const week = data.week || 0
+    const weekOptions = [0, ...data.weeks] // add 0 for "all"
 
     if (props.isMobile) {
       return (
@@ -81,7 +55,7 @@ function StatsProvider(props) {
             <DialogContent className="filters">
               <LeaguePicker />
               <GenderFilter filter={filter} onChange={genderChange} />
-              <WeekPicker week={week} weeks={weekOptions} onChange={weekChange} />
+              <WeekPicker week={week} weeks={weekOptions} onChange={(ev) => changeWeek(ev.target.value)} />
             </DialogContent>
             <DialogActions>
               <Button onClick={() => openFilters(false)} color="primary">
@@ -96,30 +70,30 @@ function StatsProvider(props) {
         <React.Fragment>
           <LeaguePicker />
           <GenderFilter filter={filter} onChange={genderChange} />
-          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
+          <WeekPicker week={week} weeks={weekOptions} onChange={(ev) => changeWeek(ev.target.value)} />
         </React.Fragment>
       )
     }
   }
 
   const Main = () => {
-    if (loading) return (<Loading />)
+    if (loading) return <Loading />;
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { React.cloneElement(props.children, {week: week, stats: filteredStats()}) }
-      </div>
-    );
+      { React.cloneElement(props.children, {week: data.week, stats: filteredStats()}) }
+    </div>
+    )
   }
 
   return (
-    <div>
+    <React.Fragment>
       <Layout>
         <Filters />
       </Layout>
       <Main />
-    </div>
-  )
+    </React.Fragment>
+  );
 }
 
 const mapSizesToProps = ({ width }) => ({
