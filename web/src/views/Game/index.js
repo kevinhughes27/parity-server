@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Layout from '../../layout/'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
@@ -12,29 +12,21 @@ import { fetchGame } from "../../api"
 import { homeColors, awayColors } from '../../helpers'
 import { pickBy, includes, forIn } from 'lodash'
 
-export default class Game extends Component {
-  constructor(props) {
-    super(props)
+export default function Game(props) {
+  const leagueId = props.match.params.leagueId
+  const gameId = props.match.params.gameId
 
-    this.state = {
-      loading: true,
-      game: null
-    }
-  }
+  const [loading, setLoading] = useState(true)
+  const [game, setGame] = useState(null)
 
-  componentDidMount () {
-    const leagueId = this.props.match.params.leagueId
-    const gameId = this.props.match.params.gameId
+  React.useEffect(async () => {
+    setLoading(true)
+    const game = await fetchGame(gameId, leagueId)
+    setGame(game)
+    setLoading(false)
+  }, [leagueId, gameId])
 
-    return (async () => {
-      const game = await fetchGame(gameId, leagueId)
-      this.setState({game, loading: false})
-    })()
-  }
-
-  renderMain () {
-    const { loading, game } = this.state
-
+  const Main = () => {
     if (loading) return (<Loading />)
 
     const homeWon = game.homeScore > game.awayScore
@@ -89,12 +81,10 @@ export default class Game extends Component {
     )
   }
 
-  render () {
-    return (
-      <React.Fragment>
-        <Layout />
-        { this.renderMain() }
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <Layout />
+      <Main />
+    </React.Fragment>
+  )
 }

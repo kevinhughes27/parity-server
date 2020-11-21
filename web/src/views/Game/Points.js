@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -16,121 +16,63 @@ import Event from './Event'
 import { last, includes } from 'lodash'
 import { homeColors, awayColors } from '../../helpers'
 
-export default class Points extends Component {
-  state = {
-    focus: "",
-    expanded: []
-  }
+export default function Points(props) {
+  const game = props.game;
+  const points = props.game.points;
+  const players = [...game.homeRoster, ...game.awayRoster]
 
-  expandAll = () => {
-    const game = this.props.game
-    const points = game.points
+  const [focus, setFocus] = useState("");
+  const [expanded, setExpanded] = useState([]);
+
+  const expandAll = () => {
     const expanded = points.map((p, idx) => idx)
-    this.setState({expanded})
+    setExpanded(expanded)
   }
 
-  collapseAll = () => {
-    this.setState({focus: "", expanded: []})
+  const collapseAll = () => {
+    setFocus("")
+    setExpanded([])
   }
 
-  handleClick = (expanded, idx) => {
-    if (expanded) {
-      this.setState({
-        expanded:  this.state.expanded.filter(x => x !== idx)
-      })
+  const handleClick = (isExpanded, idx) => {
+    if (isExpanded) {
+      setExpanded(expanded.filter(x => x !== idx))
     } else {
-      this.setState({
-        expanded: [...this.state.expanded, idx]
-      })
+      setExpanded([...expanded, idx])
     }
   }
 
-  playerFocused = (_event, player) => {
-    let expanded = []
-    const points = this.props.game.points
+  const playerFocused = (_event, player) => {
+    setFocus(player)
+
+    let playerPoints = []
 
     points.forEach((p, idx) => {
       if (includes(JSON.stringify(p.events), player)) {
-        expanded.push(idx)
+        playerPoints.push(idx)
       }
     })
 
-    this.setState({focus: player, expanded})
+    setExpanded(playerPoints)
   }
 
-  render () {
-    const game = this.props.game
-    const points = game.points
-
-    const players = [...game.homeRoster, ...game.awayRoster]
-
-    let homeScore = 0
-    let awayScore = 0
-
-    return (
-      <React.Fragment>
-        <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-          <Typography variant='h5' className={'game-points-title'} style={{marginTop: 15}}>
-            Points
-          </Typography>
-          <div style={{display: 'flex', flexDirection: 'row'}}>
-            <Typography variant='button' style={{marginTop: 15, marginRight: 20, marginLeft: 8}}>
-              Focus Player:
-            </Typography>
-            <Autocomplete
-              value={this.state.focus}
-              options={players}
-              style={{ width: 200, marginTop: 8 }}
-              onChange={this.playerFocused}
-              renderInput={params => (
-                <TextField {...params} fullWidth style={{height: 30}} />
-              )}
-            />
-          </div>
-          { this.renderButton() }
-        </div>
-        <List>
-          { points.map((point, idx) => {
-            const result = this.renderPoint(point, homeScore, awayScore, idx)
-            homeScore = result.homeScore
-            awayScore = result.awayScore
-            return result.jsx
-          })}
-        </List>
-      </React.Fragment>
-    )
-  }
-
-  renderButton () {
-    if (this.state.expanded.length > 1) {
+  const renderButton = () => {
+    if (expanded.length >= 1) {
       return (
-        <Button onClick={this.collapseAll}>
+        <Button onClick={collapseAll}>
           Collapse All <ExpandLess />
         </Button>
       )
     } else {
       return (
-        <Button onClick={this.expandAll}>
+        <Button onClick={expandAll}>
           Expand All <ExpandMore />
         </Button>
       )
     }
   }
 
-  durationCopy (firstEvent, lastEvent) {
-    if (firstEvent.timestamp) {
-      const startTime = new Date(firstEvent.timestamp)
-      const endTime = new Date(lastEvent.timestamp)
-
-      const duration = format(endTime - startTime, "m:ss")
-      const durationCopy = `(${duration} minutes)`
-      return durationCopy
-    }
-  }
-
-  renderPoint (point, homeScore, awayScore, idx) {
-    const game = this.props.game
-
+  const renderPoint = (point, homeScore, awayScore, idx) => {
     const events = point.events;
     const firstEvent = events[0]
     const lastEvent = last(events)
@@ -169,7 +111,14 @@ export default class Points extends Component {
       ? `${thrower} to ${receiver}`
       : receiver
 
-    const durationCopy = this.durationCopy(firstEvent, lastEvent)
+    let durationCopy = null;
+    if (firstEvent.timestamp) {
+      const startTime = new Date(firstEvent.timestamp)
+      const endTime = new Date(lastEvent.timestamp)
+
+      const duration = format(endTime - startTime, "m:ss")
+      durationCopy = `(${duration} minutes)`
+    }
 
     if (homeScored) {
       homeScore = homeScore + 1
@@ -179,24 +128,23 @@ export default class Points extends Component {
 
     const scoreCopy = `${homeScore} - ${awayScore}`
 
-    const expanded = includes(this.state.expanded, idx)
+    const isExpanded = includes(expanded, idx)
 
     const pointsJsx = (
       <React.Fragment key={idx}>
-        <ListItem button onClick={() => this.handleClick(expanded, idx)}>
+        <ListItem button onClick={() => handleClick(isExpanded, idx)}>
           <ListItemText>
             <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
               <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
               <span style={{minWidth: 44}}>{scoreCopy}</span>
             </div>
           </ListItemText>
-          {expanded ? <ExpandLess /> : <ExpandMore />}
+          {isExpanded ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
 
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Collapse in={isExpanded} timeout="auto" unmountOnExit>
           <List style={{paddingLeft: 20}}>
             { point.events.map((ev, idx) => {
-              const focus = this.state.focus
               const highlight = ev.firstActor === focus || ev.secondActor === focus
               const mute = focus && !highlight
 
@@ -225,4 +173,40 @@ export default class Points extends Component {
       jsx: pointsJsx
     }
   }
+
+  let homeScore = 0
+  let awayScore = 0
+
+  return (
+    <React.Fragment>
+      <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+        <Typography variant='h5' className={'game-points-title'} style={{marginTop: 15}}>
+          Points
+        </Typography>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+          <Typography variant='button' style={{marginTop: 15, marginRight: 20, marginLeft: 8}}>
+            Focus Player:
+          </Typography>
+          <Autocomplete
+            value={focus}
+            options={players}
+            style={{ width: 200, marginTop: 8 }}
+            onChange={playerFocused}
+            renderInput={params => (
+              <TextField {...params} fullWidth style={{height: 30}} />
+            )}
+          />
+        </div>
+        { renderButton() }
+      </div>
+      <List>
+        { points.map((point, idx) => {
+          const result = renderPoint(point, homeScore, awayScore, idx)
+          homeScore = result.homeScore
+          awayScore = result.awayScore
+          return result.jsx
+        })}
+      </List>
+    </React.Fragment>
+  )
 }

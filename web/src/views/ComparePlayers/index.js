@@ -1,5 +1,5 @@
 import ls from 'local-storage'
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Container from '@material-ui/core/Container'
 import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
@@ -18,68 +18,55 @@ const STATS = [
   'drops'
 ]
 
-export default class ComparePlayers extends Component {
-  constructor (props) {
-    super(props)
+export default function ComparePlayers(props) {
+  const playerNames = keys(props.stats)
+  const [playerA, setPlayerA] = useState(ls.get('playerA') || playerNames[0])
+  const [playerB, setPlayerB] = useState(ls.get('playerB') || playerNames[1])
 
-    const playerNames = keys(this.props.stats)
-
-    this.state = {
-      week: this.props.week,
-      stats: this.props.stats,
-      playerAName: ls.get('playerA') || playerNames[0],
-      playerBName: ls.get('playerB') || playerNames[1]
-    }
-  }
-
-  playerAChanged = (_event, value) => {
+  const playerAChanged = (_event, value) => {
     ls.set('playerA', value)
-    this.setState({playerAName: value})
+    setPlayerA(value)
   }
 
-  playerBChanged = (_event, value) => {
+  const playerBChanged = (_event, value) => {
     ls.set('playerB', value)
-    this.setState({playerBName: value})
+    setPlayerB(value)
   }
 
-  render () {
-    const { stats, playerAName, playerBName } = this.state
-    const playerAStats = pick(stats[playerAName], STATS)
-    const playerBStats = pick(stats[playerBName], STATS)
-    const playerNames = keys(this.props.stats)
+  const playerAStats = pick(props.stats[playerA], STATS)
+  const playerBStats = pick(props.stats[playerB], STATS)
 
-    return (
-      <Container fixed>
-        <div style={{paddingTop: '20px'}}>
-          <Chart
-            labels={STATS}
-            playerAName={playerAName}
-            playerAStats={playerAStats}
-            playerBName={playerBName}
-            playerBStats={playerBStats}
-          />
-        </div>
-        <div style={{display: 'flex', justifyContent: 'space-between', paddingTop: 20}}>
-          <Autocomplete
-            value={playerAName}
-            options={playerNames}
-            onChange={this.playerAChanged}
-            style={{ width: 300 }}
-            renderInput={params => (
-              <TextField {...params} variant="outlined" fullWidth />
-            )}
-          />
-          <Autocomplete
-            value={playerBName}
-            options={playerNames}
-            onChange={this.playerBChanged}
-            style={{ width: 300 }}
-            renderInput={params => (
-              <TextField {...params} variant="outlined" fullWidth />
-            )}
-          />
-        </div>
-      </Container>
-    )
-  }
+  return (
+    <Container fixed>
+      <div style={{paddingTop: '20px'}}>
+        <Chart
+          labels={STATS}
+          playerAName={playerA}
+          playerAStats={playerAStats}
+          playerBName={playerB}
+          playerBStats={playerBStats}
+        />
+      </div>
+      <div style={{display: 'flex', justifyContent: 'space-between', paddingTop: 20}}>
+        <Autocomplete
+          value={playerA}
+          options={playerNames}
+          onChange={playerAChanged}
+          style={{ width: 300 }}
+          renderInput={params => (
+            <TextField {...params} variant="outlined" fullWidth />
+          )}
+        />
+        <Autocomplete
+          value={playerB}
+          options={playerNames}
+          onChange={playerBChanged}
+          style={{ width: 300 }}
+          renderInput={params => (
+            <TextField {...params} variant="outlined" fullWidth />
+          )}
+        />
+      </div>
+    </Container>
+  )
 }
