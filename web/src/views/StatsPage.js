@@ -11,7 +11,7 @@ import { pickBy } from 'lodash'
 import { useLeague } from '../hooks/league'
 import { useStats } from '../hooks/stats'
 
-function StatsProvider(props) {
+function StatsPage(props) {
   const [league] = useLeague();
   const [data, loading, changeWeek] = useStats(league);
 
@@ -100,4 +100,4 @@ const mapSizesToProps = ({ width }) => ({
   isMobile: width < 480,
 })
 
-export default withSizes(mapSizesToProps)(StatsProvider)
+export default withSizes(mapSizesToProps)(StatsPage)
