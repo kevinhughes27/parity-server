@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/styles'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Table from '@material-ui/core/Table'
@@ -10,7 +10,7 @@ import capitalize from 'capitalize'
 import format from 'format-number'
 import { map, keys, sortBy } from 'lodash'
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   paper: {
     minWidth: 300,
     margin: 20
@@ -19,48 +19,47 @@ const styles = {
     paddingLeft: 15,
     paddingTop: 10
   }
-}
+}));
 
 function topPlayers(stats, stat, num) {
   return sortBy(stats, (p) => { return -p[stat] }).slice(0, num)
 }
 
-class Card extends Component {
-  render () {
-    const { classes, stat, stats, money } = this.props
+function Card(props) {
+  const classes = useStyles();
+  const { stat, stats, money } = props
 
-    const statsArray = map(keys(stats), (k) => {
-      return { name: k, ...stats[k] }
-    })
+  const statsArray = map(keys(stats), (k) => {
+    return { name: k, ...stats[k] }
+  })
 
-    const players = topPlayers(statsArray, stat, 10)
-    const statTitle = capitalize.words(stat.replace(/_/g, ' '))
+  const players = topPlayers(statsArray, stat, 10)
+  const statTitle = capitalize.words(stat.replace(/_/g, ' '))
 
-    return (
-      <Paper key={stat} className={classes.paper}>
-        <Typography variant="h5" component="h3" gutterBottom className={classes.title}>
-          {statTitle}
-        </Typography>
-        <Table size="small">
-          <TableBody>
-            { map(players, (player) => {
-              let value = player[stat]
-              if (money) {
-                value = format({prefix: '$'})(value)
-              }
+  return (
+    <Paper key={stat} className={classes.paper}>
+      <Typography variant="h5" component="h3" gutterBottom className={classes.title}>
+        {statTitle}
+      </Typography>
+      <Table size="small">
+        <TableBody>
+          { map(players, (player) => {
+            let value = player[stat]
+            if (money) {
+              value = format({prefix: '$'})(value)
+            }
 
-              return (
-                <TableRow key={player['name']} hover>
-                  <TableCell>{player['name']}</TableCell>
-                  <TableCell>{value}</TableCell>
-                </TableRow>
-              )
-            })}
-          </TableBody>
-        </Table>
-      </Paper>
-    )
-  }
+            return (
+              <TableRow key={player['name']} hover>
+                <TableCell>{player['name']}</TableCell>
+                <TableCell>{value}</TableCell>
+              </TableRow>
+            )
+          })}
+        </TableBody>
+      </Table>
+    </Paper>
+  )
 }
 
-export default withStyles(styles)(Card)
+export default Card

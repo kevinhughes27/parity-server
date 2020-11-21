@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/styles'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   selectRoot: {
     color: 'white',
     fontSize: 14,
@@ -12,33 +12,32 @@ const styles = {
   icon: {
     color: 'white'
   }
+}));
+
+function GenderFilter(props) {
+  const classes = useStyles();
+  const { filter, onChange } = props
+
+  return (
+    <div style={{paddingRight: 20}}>
+      <Select
+        value={filter || 'any'}
+        onChange={onChange}
+        classes={{ root: classes.selectRoot }}
+        className={classes.select}
+        disableUnderline
+        inputProps={{
+          classes: {
+            icon: classes.icon,
+          }
+        }}
+      >
+        <MenuItem value='any'>Gender: Any</MenuItem>
+        <MenuItem value={'female'}>Female</MenuItem>
+        <MenuItem value={'male'}>Male</MenuItem>
+      </Select>
+    </div>
+  )
 }
 
-class GenderFilter extends Component {
-  render () {
-    const { classes, filter, onChange } = this.props
-
-    return (
-      <div style={{paddingRight: 20}}>
-        <Select
-          value={filter || 'any'}
-          onChange={onChange}
-          classes={{ root: classes.selectRoot }}
-          className={classes.select}
-          disableUnderline
-          inputProps={{
-            classes: {
-              icon: classes.icon,
-            }
-          }}
-        >
-          <MenuItem value='any'>Gender: Any</MenuItem>
-          <MenuItem value={'female'}>Female</MenuItem>
-          <MenuItem value={'male'}>Male</MenuItem>
-        </Select>
-      </div>
-    )
-  }
-}
-
-export default withStyles(styles)(GenderFilter)
+export default GenderFilter

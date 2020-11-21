@@ -14,39 +14,42 @@ import { fetchWeeks, fetchStats } from "../api"
 function StatsProvider(props) {
   const [league] = useLeague();
   const [loading, setLoading] = useState(true)
+
+  const [weeks, setWeeks] = useState([])
+  const [week, setWeek] = useState(0)
+  const [stats, setStats] = useState({})
+
   const [filtersOpen, openFilters] = useState(false)
-  const [state, setState] = useState({
-    weeks: [],
-    week: 0,
-    stats: {},
-    filter: 'any',
-  });
+  const [filter, setFilter] = useState('any')
 
   React.useEffect(async () => {
     setLoading(true)
-    const weeks = await fetchWeeks(league)
-    const week = last(weeks) || 0
-    const stats = await fetchStats(week, league)
-    setState({...state, weeks, week, stats})
+    const newWeeks = await fetchWeeks(league)
+    const newWeek = last(newWeeks) || 0
+    const newStats = await fetchStats(week, league)
+    setWeeks(newWeeks)
+    setWeek(newWeek)
+    setStats(newStats)
     setLoading(false)
   }, [league])
 
   const weekChange = (event) => {
-    const week = event.target.value
+    const newWeek = event.target.value
     return (async () => {
       setLoading(true)
-      const stats = await fetchStats(week, league)
-      setState({...state, week, stats})
+      const newStats = await fetchStats(week, league)
+      setWeek(newWeek)
+      setStats(newStats)
       setLoading(false)
     })()
   }
 
   const genderChange = (event) => {
     const filter = event.target.value
-    setState({...state, filter})
+    setFilter(filter)
   }
 
-  const filteredStats = (filter, stats) => {
+  const filteredStats = () => {
     if (filter === 'any') {
       return stats;
     }
@@ -57,9 +60,8 @@ function StatsProvider(props) {
   }
 
   const Filters = () => {
-    const week = state.week
-    const weeks = [0, ...state.weeks]
-    const genderFilter = state.filter
+    // add 0 for "all"
+    const weekOptions = [0, ...weeks]
 
     if (props.isMobile) {
       return (
@@ -78,8 +80,8 @@ function StatsProvider(props) {
             <DialogTitle>Filters</DialogTitle>
             <DialogContent className="filters">
               <LeaguePicker />
-              <GenderFilter filter={genderFilter} onChange={genderChange} />
-              <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
+              <GenderFilter filter={filter} onChange={genderChange} />
+              <WeekPicker week={week} weeks={weekOptions} onChange={weekChange} />
             </DialogContent>
             <DialogActions>
               <Button onClick={() => openFilters(false)} color="primary">
@@ -93,7 +95,7 @@ function StatsProvider(props) {
       return (
         <React.Fragment>
           <LeaguePicker />
-          <GenderFilter filter={genderFilter} onChange={genderChange} />
+          <GenderFilter filter={filter} onChange={genderChange} />
           <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
         </React.Fragment>
       )
@@ -103,11 +105,9 @@ function StatsProvider(props) {
   const Main = () => {
     if (loading) return (<Loading />)
 
-    const stats = filteredStats(state.filter, state.stats)
-
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { React.cloneElement(props.children, {week: state.week, stats: stats}) }
+        { React.cloneElement(props.children, {week: week, stats: filteredStats()}) }
       </div>
     );
   }

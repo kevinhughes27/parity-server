@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import IconButton from '@material-ui/core/IconButton'
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -21,46 +21,43 @@ const deleteIconStyle = {
   paddingTop: 14
 }
 
-export default class Trades extends Component {
+export default function Trades(props) {
+  const { trades, removeTrade } = props;
 
-  render () {
-    const { trades, removeTrade } = this.props;
-
-    if (trades.length === 0) {
-      return (
-        <div style={{minHeight: 385}}>
-          <p>Click on a player to make a trade.</p>
-          <p>None of this data is saved except in your browser tab to help you explore your options</p>
-        </div>
-      )
-    }
-
+  if (trades.length === 0) {
     return (
-      <div>
-        { trades.map((trade, idx) => (
-          <div key={idx} style={tradeStyles}>
-            <div style={{flexGrow: 1}}>
-              <p style={{marginBottom: 5}}>{trade.playerA.name}</p>
-              <p style={{color:'grey', marginTop: 5}}>{trade.playerA.team}</p>
-            </div>
-
-            <div style={tradeIconStyle}>
-              <SwapHorizIcon />
-            </div>
-
-            <div style={{flexGrow: 1}}>
-              <p style={{marginBottom: 5}}>{trade.playerB.name}</p>
-              <p style={{color:'grey' , marginTop: 5}}>{trade.playerB.team}</p>
-            </div>
-
-            <div style={deleteIconStyle}>
-              <IconButton color='primary' onClick={() => {removeTrade(trade) }}>
-                <DeleteIcon />
-              </IconButton>
-            </div>
-          </div>
-        ))}
+      <div style={{minHeight: 385}}>
+        <p>Click on a player to make a trade.</p>
+        <p>None of this data is saved except in your browser tab to help you explore your options</p>
       </div>
     )
   }
+
+  return (
+    <div>
+      { trades.map((trade, idx) => (
+        <div key={idx} style={tradeStyles}>
+          <div style={{flexGrow: 1}}>
+            <p style={{marginBottom: 5}}>{trade.playerA.name}</p>
+            <p style={{color:'grey', marginTop: 5}}>{trade.playerA.team}</p>
+          </div>
+
+          <div style={tradeIconStyle}>
+            <SwapHorizIcon />
+          </div>
+
+          <div style={{flexGrow: 1}}>
+            <p style={{marginBottom: 5}}>{trade.playerB.name}</p>
+            <p style={{color:'grey' , marginTop: 5}}>{trade.playerB.team}</p>
+          </div>
+
+          <div style={deleteIconStyle}>
+            <IconButton color='primary' onClick={() => {removeTrade(trade) }}>
+              <DeleteIcon />
+            </IconButton>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }

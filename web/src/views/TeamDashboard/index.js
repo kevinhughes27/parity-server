@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Container from '@material-ui/core/Container'
 import TeamPicker from './TeamPicker'
 import TeamTable from './TeamTable'
@@ -16,197 +16,181 @@ import ls from 'local-storage'
 const storageKey = 'currentTeam'
 const defaultPlayer = {name: ''}
 
-export default class TeamDashboard extends Component {
-  constructor (props) {
-    super(props)
+export default function TeamDashboard(props) {
+  const teamNames = sortBy(uniq(props.players.map(p => p.team)));
+  const defaultTeam = teamNames[0]
 
-    const players = this.props.players
-    const teamNames = sortBy(uniq(players.map(p => p.team)));
-    const defaultTeam = teamNames[0]
-
-    let currentTeam = ls.get(storageKey)
-    const validTeam = includes(teamNames, currentTeam)
-
-    if (!validTeam) {
-      currentTeam = defaultTeam
-    }
-
-    this.state = {
-      players: players,
-      team: currentTeam,
-      trading: false,
-      playerA: defaultPlayer,
-      playerB: defaultPlayer,
-      trades: [],
-      tab: 0
-    }
-
-    this.teamChanged = this.teamChanged.bind(this)
-    this.tabChanged = this.tabChanged.bind(this)
-    this.applyTrade = this.applyTrade.bind(this)
+  let currentTeam = ls.get(storageKey)
+  const validTeam = includes(teamNames, currentTeam)
+  if (!validTeam) {
+    currentTeam = defaultTeam
   }
 
-  teamChanged (event) {
+  const [allPlayers, updateAllPlayers] = useState(props.players)
+  const [team, setTeam] = useState(currentTeam)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [trades, setTrades] = useState([])
+  const [playerA, setPlayerA] = useState(defaultPlayer)
+  const [playerB, setPlayerB] = useState(defaultPlayer)
+  const [tab, setTab] = useState(0)
+
+  const teamChanged = (event) => {
     const teamName = event.target.value
     ls.set(storageKey, teamName)
-    this.setState({team: teamName})
+    setTeam(teamName)
   }
 
-  tabChanged (_event, tab) {
-    this.setState({tab})
+  const tabChanged = (_event, tab) => {
+    setTab(tab)
   }
 
-  openTradeModal = (player) => {
-    this.setState({trading: true, playerA: player, playerB: defaultPlayer})
+  const openTradeModal = (player) => {
+    setModalOpen(true)
+    setPlayerA(player)
+    setPlayerB(defaultPlayer)
   }
 
-  closeTradeModal = () => {
-    this.setState({trading: false, playerA: defaultPlayer, playerB: defaultPlayer})
+  const closeTradeModal = () => {
+    setModalOpen(false)
+    setPlayerA(defaultPlayer)
+    setPlayerB(defaultPlayer)
   }
 
-  updateTrade = (_event, player) => {
-    const allPlayers = this.state.players
+  const updateTrade = (_event, player) => {
     const playerB = find(allPlayers, (p) => p.name === player.name) || defaultPlayer
-    this.setState({playerB})
+    setPlayerB(playerB)
   }
 
-  applyTrade = () => {
-    const { players, playerA, playerB, trades } = this.state
+  const applyTrade = () => {
+    const playerAIdx = findIndex(allPlayers, (p) => p.name === playerA.name)
+    const playerBIdx = findIndex(allPlayers, (p) => p.name === playerB.name)
 
-    const playerAIdx = findIndex(players, (p) => p.name === playerA.name)
-    const playerBIdx = findIndex(players, (p) => p.name === playerB.name)
+    const teamA = allPlayers[playerAIdx]['team']
+    const teamB = allPlayers[playerBIdx]['team']
 
-    const teamA = players[playerAIdx]['team']
-    const teamB = players[playerBIdx]['team']
-
-    players[playerAIdx]['team'] = teamB
-    players[playerBIdx]['team'] = teamA
+    allPlayers[playerAIdx]['team'] = teamB
+    allPlayers[playerBIdx]['team'] = teamA
 
     trades.push({playerA, playerB})
 
-    this.setState({players: players, trades: trades, trading: false})
+    updateAllPlayers(allPlayers)
+    setTrades(trades)
+
+    closeTradeModal()
   }
 
-  removeTrade = (trade) => {
-    const { players, trades } = this.state
+  const removeTrade = (trade) => {
+    const playerAIdx = findIndex(allPlayers, (p) => p.name === trade.playerA.name)
+    const playerBIdx = findIndex(allPlayers, (p) => p.name === trade.playerB.name)
 
-    const playerA = trade.playerA
-    const playerB = trade.playerB
+    const teamA = allPlayers[playerAIdx]['team']
+    const teamB = allPlayers[playerBIdx]['team']
 
-    const playerAIdx = findIndex(players, (p) => p.name === playerA.name)
-    const playerBIdx = findIndex(players, (p) => p.name === playerB.name)
-
-    const teamA = players[playerAIdx]['team']
-    const teamB = players[playerBIdx]['team']
-
-    players[playerAIdx]['team'] = teamB
-    players[playerBIdx]['team'] = teamA
+    allPlayers[playerAIdx]['team'] = teamB
+    allPlayers[playerBIdx]['team'] = teamA
 
     remove(trades, (t) => isEqual(t, trade))
 
-    this.setState({players: players, trades: trades})
+    updateAllPlayers(allPlayers)
+    setTrades(trades)
   }
 
-  render () {
-    const {tab, team, trades, trading, playerA, playerB, players: allPlayers } = this.state;
-    const teamPlayers = allPlayers.filter(p => p.team === team);
-    const otherPlayers = difference(allPlayers, teamPlayers);
-    const maxSalary = max(map(allPlayers, (p) => p.salary));
+  const teamPlayers = allPlayers.filter(p => p.team === team);
+  const otherPlayers = difference(allPlayers, teamPlayers);
+  const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
 
-    const teamNames = sortBy(uniq(allPlayers.map(p => p.team)));
-    const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
-    const salaries = map(sortedPlayers, (p) => p.salary);
-    const teamSalary = sum(salaries);
-    const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
-    const overCap = teamSalary > salaryCap;
-    const underFloor = teamSalary < salaryFloor;
+  const maxSalary = max(map(allPlayers, (p) => p.salary));
+  const salaries = map(sortedPlayers, (p) => p.salary);
+  const teamSalary = sum(salaries);
+  const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
+  const overCap = teamSalary > salaryCap;
+  const underFloor = teamSalary < salaryFloor;
 
-    const layoutStyle = {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      paddingTop: 20
-    }
+  const layoutStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    paddingTop: 20
+  }
 
-    const chartStyle = {
-      flexGrow: 1,
-      maxWidth: 640
-    }
+  const chartStyle = {
+    flexGrow: 1,
+    maxWidth: 640
+  }
 
-    return (
-      <Container fixed>
-        <div style={layoutStyle}>
-          <div style={{minWidth: 240, paddingBottom: 20}}>
-            <TeamPicker
-              allPlayers={allPlayers}
-              team={team}
-              onChange={this.teamChanged}
+  return (
+    <Container fixed>
+      <div style={layoutStyle}>
+        <div style={{minWidth: 240, paddingBottom: 20}}>
+          <TeamPicker
+            allPlayers={allPlayers}
+            team={team}
+            onChange={teamChanged}
+          />
+          <TeamTable
+            teamPlayers={sortedPlayers}
+            teamSalary={teamSalary}
+            salaryCap={salaryCap}
+            salaryFloor={salaryFloor}
+            openTradeModal={openTradeModal}
+          />
+        </div>
+        <div style={chartStyle}>
+          <Tabs
+            value={tab}
+            onChange={tabChanged}
+            indicatorColor="primary"
+            textColor="primary"
+            variant="fullWidth"
+          >
+            <Tab label="Bar Chart" />
+            <Tab label="Pie Chart" />
+            <Tab label="League Chart" />
+            <Tab label="Trades" />
+          </Tabs>
+          { tab === 0 &&
+            <BarChart
+              players={sortedPlayers}
+              maxSalary={maxSalary}
+              overCap={overCap}
+              underFloor={underFloor}
             />
-            <TeamTable
-              teamPlayers={sortedPlayers}
-              teamSalary={teamSalary}
+          }
+          { tab === 1 &&
+            <PieChart
+              players={sortedPlayers}
+              overCap={overCap}
+              underFloor={underFloor}
+            />
+          }
+          { tab === 2 &&
+            <LeagueChart
+              players={allPlayers}
+              teamNames={teamNames}
               salaryCap={salaryCap}
               salaryFloor={salaryFloor}
-              openTradeModal={this.openTradeModal}
             />
-          </div>
-          <div style={chartStyle}>
-            <Tabs
-              value={tab}
-              onChange={this.tabChanged}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="fullWidth"
-            >
-              <Tab label="Bar Chart" />
-              <Tab label="Pie Chart" />
-              <Tab label="League Chart" />
-              <Tab label="Trades" />
-            </Tabs>
-            { tab === 0 &&
-              <BarChart
-                players={sortedPlayers}
-                maxSalary={maxSalary}
-                overCap={overCap}
-                underFloor={underFloor}
-              />
-            }
-            { tab === 1 &&
-              <PieChart
-                players={sortedPlayers}
-                overCap={overCap}
-                underFloor={underFloor}
-              />
-            }
-            { tab === 2 &&
-              <LeagueChart
-                players={allPlayers}
-                teamNames={teamNames}
-                salaryCap={salaryCap}
-                salaryFloor={salaryFloor}
-              />
-            }
-            { tab === 3 &&
-              <Trades
-                trades={trades}
-                removeTrade={this.removeTrade}
-              />
-            }
-          </div>
+          }
+          { tab === 3 &&
+            <Trades
+              trades={trades}
+              removeTrade={removeTrade}
+            />
+          }
         </div>
-        <TradeModal
-          open={trading}
-          trades={trades}
-          players={otherPlayers}
-          playerA={playerA}
-          playerB={playerB}
-          overCap={overCap}
-          updateTrade={this.updateTrade}
-          submitTrade={this.applyTrade}
-          removeTrade={this.removeTrade}
-          onClose={this.closeTradeModal}
-        />
-      </Container>
-    )
-  }
+      </div>
+      <TradeModal
+        open={modalOpen}
+        trades={trades}
+        players={otherPlayers}
+        playerA={playerA}
+        playerB={playerB}
+        overCap={overCap}
+        updateTrade={updateTrade}
+        submitTrade={applyTrade}
+        removeTrade={removeTrade}
+        onClose={closeTradeModal}
+      />
+    </Container>
+  )
 }

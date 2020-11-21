@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import MaterialTable from 'material-table'
 import { map, keys } from 'lodash'
 import ls from 'local-storage'

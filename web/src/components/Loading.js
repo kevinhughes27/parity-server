@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     height: '92vh',
@@ -12,23 +12,21 @@ const styles = {
   spinner: {
     marginBottom: 80
   }
-};
+}));
 
-class Loading extends Component {
-  render() {
-    const { classes } = this.props;
+function Loading() {
+  const classes = useStyles();
 
-    return (
-      <div className={classes.container}>
-        <CircularProgress
-          className={classes.spinner}
-          color="secondary"
-          size={70}
-          thickness={2}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className={classes.container}>
+      <CircularProgress
+        className={classes.spinner}
+        color="secondary"
+        size={70}
+        thickness={2}
+      />
+    </div>
+  );
 }
 
-export default withStyles(styles)(Loading);
+export default Loading;

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/styles'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import { map } from 'lodash'
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   selectRoot: {
     color: 'white',
     fontSize: 14,
@@ -13,10 +13,13 @@ const styles = {
   icon: {
     color: 'white'
   }
-}
+}));
 
-class WeekPicker extends Component {
-  weekText (num) {
+function WeekPicker(props) {
+  const classes = useStyles()
+  const { week, weeks, onChange } = props
+
+  const weekText = (num) => {
     if (num === 0) {
       return 'All'
     } else {
@@ -24,35 +27,31 @@ class WeekPicker extends Component {
     }
   }
 
-  renderWeeks (weeks) {
+  const renderWeeks = (weeks) => {
     return map(weeks, (week) => {
       return (
         <MenuItem key={week} value={week}>
-          {this.weekText(week)}
+          {weekText(week)}
         </MenuItem>
       )
     })
   }
 
-  render () {
-    const { classes, week, weeks, onChange } = this.props
-
-    return (
-        <Select
-          value={week}
-          onChange={onChange}
-          classes={{ root: classes.selectRoot }}
-          disableUnderline
-          inputProps={{
-            classes: {
-              icon: classes.icon,
-            }
-          }}
-        >
-          {this.renderWeeks(weeks)}
-        </Select>
-    )
-  }
+  return (
+    <Select
+      value={week}
+      onChange={onChange}
+      classes={{ root: classes.selectRoot }}
+      disableUnderline
+      inputProps={{
+        classes: {
+          icon: classes.icon,
+        }
+      }}
+    >
+      {renderWeeks(weeks)}
+    </Select>
+  )
 }
 
-export default withStyles(styles)(WeekPicker)
+export default WeekPicker
