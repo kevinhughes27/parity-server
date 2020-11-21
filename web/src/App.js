@@ -11,7 +11,8 @@ import ComparePlayers from './views/ComparePlayers'
 import SalaryPage from './views/SalaryPage'
 import StatsTable from './views/StatsTable'
 import TeamDashboard from './views/TeamDashboard'
-import useGoogleAnalytics from './analytics'
+
+import useGoogleAnalytics from './hooks/analytics'
 
 function Routes() {
   useGoogleAnalytics()

@@ -82,39 +82,39 @@ const columnsMeta = [
   }
 ]
 
-export default class StatsTable extends Component {
-  render () {
-    const stats = this.props.stats
-    const statsArray = map(keys(stats), (k) => {
-      return { name: k, ...stats[k] }
-    })
+function StatsTable(props) {
+  const stats = props.stats
+  const statsArray = map(keys(stats), (k) => {
+    return { name: k, ...stats[k] }
+  });
 
-    return (
-      <div className="responsive-table">
-        <MaterialTable
-          columns={columnsMeta}
-          data={statsArray}
-          style={{
-            maxWidth: '98vw',
-            margin: 'auto',
-            marginTop: 20
-          }}
-          options={{
-            showTitle: false,
-            search: true,
-            searchText: ls.get(storageKey) || '',
-            searchFieldAlignment: 'left',
-            searchFieldStyle: {
-              width: '95vw',
-            },
-            sorting: true,
-            paging: false
-          }}
-          onSearchChange={(query) => {
-            ls.set(storageKey, query)
-          }}
-        />
-      </div>
-    )
-  }
+  return (
+    <div className="responsive-table">
+      <MaterialTable
+        columns={columnsMeta}
+        data={statsArray}
+        style={{
+          maxWidth: '98vw',
+          margin: 'auto',
+          marginTop: 20
+        }}
+        options={{
+          showTitle: false,
+          search: true,
+          searchText: ls.get(storageKey) || '',
+          searchFieldAlignment: 'left',
+          searchFieldStyle: {
+            width: '95vw',
+          },
+          sorting: true,
+          paging: false
+        }}
+        onSearchChange={(query) => {
+          ls.set(storageKey, query)
+        }}
+      />
+    </div>
+  )
 }
+
+export default StatsTable;

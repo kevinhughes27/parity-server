@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Layout from '../layout'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
@@ -8,67 +8,45 @@ import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button }
 import FilterListIcon from '@material-ui/icons/FilterList'
 import withSizes from 'react-sizes'
 import { last, pickBy } from 'lodash'
-import { currentLeague } from '../leagues'
+import { useLeague } from '../hooks/league'
 import { fetchWeeks, fetchStats } from "../api"
 
-class StatsProvider extends Component {
-  constructor (props) {
-    super(props)
+function StatsProvider(props) {
+  const [league] = useLeague();
+  const [loading, setLoading] = useState(true)
+  const [filtersOpen, openFilters] = useState(false)
+  const [state, setState] = useState({
+    weeks: [],
+    week: 0,
+    stats: {},
+    filter: 'any',
+  });
 
-    this.state = {
-      loading: true,
-      filtersOpen: false,
-      weeks: [],
-      week: 0,
-      stats: {},
-      filter: 'any',
-    }
-  }
+  React.useEffect(async () => {
+    setLoading(true)
+    const weeks = await fetchWeeks(league)
+    const week = last(weeks) || 0
+    const stats = await fetchStats(week, league)
+    setState({...state, weeks, week, stats})
+    setLoading(false)
+  }, [league])
 
-  componentDidMount () {
-    const league = currentLeague()
-    return (async () => {
-      const weeks = await fetchWeeks(league)
-      const week = last(weeks) || 0
-      const stats = await fetchStats(week, league)
-      this.setState({weeks, week, stats, loading: false})
-    })()
-  }
-
-  leagueChange = (league) => {
-    return (async () => {
-      this.setState({loading: true})
-      const weeks = await fetchWeeks(league)
-      const week = last(weeks) || 0
-      const stats = await fetchStats(week, league)
-      this.setState({ weeks, week, stats, loading: false })
-    })()
-  }
-
-  weekChange = (event) => {
+  const weekChange = (event) => {
     const week = event.target.value
-    const league = currentLeague()
     return (async () => {
-      this.setState({week, loading: true})
+      setLoading(true)
       const stats = await fetchStats(week, league)
-      this.setState({ stats, loading: false })
+      setState({...state, week, stats})
+      setLoading(false)
     })()
   }
 
-  genderChange = (event) => {
+  const genderChange = (event) => {
     const filter = event.target.value
-    this.setState({ filter })
+    setState({...state, filter})
   }
 
-  openFilters = () => {
-    this.setState({filtersOpen: true})
-  }
-
-  closeFilters = () => {
-    this.setState({filtersOpen: false})
-  }
-
-  filteredStats(filter, stats) {
+  const filteredStats = (filter, stats) => {
     if (filter === 'any') {
       return stats;
     }
@@ -78,15 +56,15 @@ class StatsProvider extends Component {
     })
   }
 
-  renderFilters () {
-    const week = this.state.week
-    const weeks = [0, ...this.state.weeks]
-    const genderFilter = this.state.filter
+  const Filters = () => {
+    const week = state.week
+    const weeks = [0, ...state.weeks]
+    const genderFilter = state.filter
 
-    if (this.props.isMobile) {
+    if (props.isMobile) {
       return (
         <React.Fragment>
-          <IconButton onClick={this.openFilters}>
+          <IconButton onClick={() => openFilters(true)}>
             <FilterListIcon style={{color: "white"}} />
           </IconButton>
           <Dialog
@@ -94,17 +72,17 @@ class StatsProvider extends Component {
             disableEscapeKeyDown
             maxWidth="sm"
             fullWidth={true}
-            open={this.state.filtersOpen}
-            onClose={this.closeFilters}
+            open={filtersOpen}
+            onClose={() => openFilters(false)}
           >
             <DialogTitle>Filters</DialogTitle>
             <DialogContent className="filters">
-              <LeaguePicker onChange={this.leagueChange} />
-              <GenderFilter filter={genderFilter} onChange={this.genderChange} />
-              <WeekPicker week={week} weeks={weeks} onChange={this.weekChange} />
+              <LeaguePicker />
+              <GenderFilter filter={genderFilter} onChange={genderChange} />
+              <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
             </DialogContent>
             <DialogActions>
-              <Button onClick={this.closeFilters} color="primary">
+              <Button onClick={() => openFilters(false)} color="primary">
                 Close
               </Button>
             </DialogActions>
@@ -114,37 +92,34 @@ class StatsProvider extends Component {
     } else {
       return (
         <React.Fragment>
-          <LeaguePicker onChange={this.leagueChange} />
-          <GenderFilter filter={genderFilter} onChange={this.genderChange} />
-          <WeekPicker week={week} weeks={weeks} onChange={this.weekChange} />
+          <LeaguePicker />
+          <GenderFilter filter={genderFilter} onChange={genderChange} />
+          <WeekPicker week={week} weeks={weeks} onChange={weekChange} />
         </React.Fragment>
       )
     }
   }
 
-  renderMain () {
-    if (this.state.loading) return (<Loading />)
+  const Main = () => {
+    if (loading) return (<Loading />)
 
-    const { week, filter } = this.state
-    const stats = this.filteredStats(filter, this.state.stats)
+    const stats = filteredStats(state.filter, state.stats)
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { React.cloneElement(this.props.children, {week: week, stats: stats}) }
+        { React.cloneElement(props.children, {week: state.week, stats: stats}) }
       </div>
-    )
+    );
   }
 
-  render () {
-    return (
-      <div>
-        <Layout>
-          { this.renderFilters() }
-        </Layout>
-        { this.renderMain() }
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Layout>
+        <Filters />
+      </Layout>
+      <Main />
+    </div>
+  )
 }
 
 const mapSizesToProps = ({ width }) => ({

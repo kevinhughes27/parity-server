@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/styles'
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import { NavLink } from 'react-router-dom'
 import Layout from '../layout/'
 import Loading from '../components/Loading'
@@ -9,10 +9,10 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { groupBy } from 'lodash'
-import { currentLeague } from '../leagues'
+import { useLeague } from '../hooks/league'
 import { fetchGames } from '../api'
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   list: {
     maxWidth: 800,
     margin: 'auto'
@@ -21,35 +21,22 @@ const styles = {
     color: "#26a69a",
     textDecoration: "none"
   }
-}
+}));
 
-class GamesList extends Component {
-  constructor(props) {
-    super(props);
+function GamesList() {
+  const classes = useStyles();
+  const [loading, setLoading] = useState(true)
+  const [games, setGames] = useState([])
+  const [league] = useLeague()
 
-    this.state = {
-      loading: true,
-      games: []
-    }
-  }
+  React.useEffect(async () => {
+    setLoading(true)
+    const games = await fetchGames(league)
+    setGames(games)
+    setLoading(false)
+  }, [league])
 
-  componentDidMount () {
-    const league = currentLeague()
-    return (async () => {
-      const games = await fetchGames(league)
-      this.setState({games, loading: false})
-    })()
-  }
-
-  leagueChange (league) {
-    return (async () => {
-      this.setState({loading: true})
-      const games = await fetchGames(league)
-      this.setState({ games, loading: false })
-    })()
-  }
-
-  renderGames (games) {
+  const renderGames = (games) => {
     const gamesByWeek = groupBy(games, game => game.week)
     const weeksInOrder = Object.keys(gamesByWeek).reverse()
 
@@ -57,13 +44,13 @@ class GamesList extends Component {
       <React.Fragment>
         { weeksInOrder.map(week => {
           const games = gamesByWeek[week]
-          return this.renderGameGroup(week, games)
+          return renderGameGroup(week, games)
         })}
       </React.Fragment>
     )
   }
 
-  renderGameGroup (week, games) {
+  const renderGameGroup = (week, games) => {
     return (
       <React.Fragment key={week}>
         <ListItem divider>
@@ -71,14 +58,14 @@ class GamesList extends Component {
             Week {week}
           </ListItemText>
         </ListItem>
-        { games.map(this.renderGame) }
+        { games.map(renderGame) }
       </React.Fragment>
     )
   }
 
-  renderGame (game) {
+  const renderGame = (game) => {
     return (
-      <NavLink key={game.id} to={`${game.league_id}/games/${game.id}`} style={styles.listItem}>
+      <NavLink key={game.id} to={`${game.league_id}/games/${game.id}`} className={classes.listItem}>
         <ListItem divider button>
           <ListItemText>
             { game.homeTeam } vs { game.awayTeam }
@@ -91,31 +78,24 @@ class GamesList extends Component {
     )
   }
 
-  renderMain () {
-    const { classes } = this.props
-    const { loading, games } = this.state
-
+  const renderMain = () => {
     if (loading) return (<Loading />)
 
     return (
       <List className={classes.list}>
-        { this.renderGames(games) }
+        { renderGames(games) }
       </List>
     )
   }
 
-  render () {
-    const leagueChange = this.leagueChange.bind(this)
-
-    return (
-      <React.Fragment>
-        <Layout>
-          <LeaguePicker onChange={leagueChange} />
-        </Layout>
-        { this.renderMain() }
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <Layout>
+        <LeaguePicker />
+      </Layout>
+      { renderMain() }
+    </React.Fragment>
+  )
 }
 
-export default withStyles(styles)(GamesList)
+export default GamesList
