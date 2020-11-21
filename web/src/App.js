@@ -1,6 +1,5 @@
 import React from 'react'
-import { Router, Route } from 'react-router'
-import { createBrowserHistory } from 'history';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import GamesList from './views/GamesList'
 import Game from './views/Game'
@@ -12,52 +11,49 @@ import ComparePlayers from './views/ComparePlayers'
 import SalaryPage from './views/SalaryPage'
 import StatsTable from './views/StatsTable'
 import TeamDashboard from './views/TeamDashboard'
+import useGoogleAnalytics from './analytics'
 
-import ReactGA from 'react-ga'
-ReactGA.initialize('UA-87669001-1')
+function Routes() {
+  useGoogleAnalytics()
 
-const history = createBrowserHistory();
+  return (
+    <Switch>
+      <Route exact path="/games" component={GamesList} />
+      <Route path="/:leagueId/games/:gameId" component={Game} />
 
-history.listen((location) => {
-  if (window.location.hostname !== 'localhost') {
-    ReactGA.set({ page: location.pathname })
-    ReactGA.pageview(location.pathname)
-  }
-})
+      <Route exact path="/" >
+        <StatsPage>
+          <StatsTable />
+        </StatsPage>
+      </Route>
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router history={history}>
-        <Route exact path="/games" component={GamesList} />
-        <Route path="/:leagueId/games/:gameId" component={Game} />
+      <Route path="/leaderboards">
+        <StatsPage>
+          <Leaderboards />
+        </StatsPage>
+      </Route>
 
-        <Route exact path="/" >
-          <StatsPage>
-            <StatsTable />
-          </StatsPage>
-        </Route>
+      <Route path="/compare_players">
+        <StatsPage>
+          <ComparePlayers />
+        </StatsPage>
+      </Route>
 
-        <Route path="/leaderboards">
-          <StatsPage>
-            <Leaderboards />
-          </StatsPage>
-        </Route>
+      <Route path="/team_dashboard">
+        <SalaryPage>
+          <TeamDashboard />
+        </SalaryPage>
+      </Route>
+    </Switch>
+  )
+}
 
-        <Route path="/compare_players">
-          <StatsPage>
-            <ComparePlayers />
-          </StatsPage>
-        </Route>
-
-        <Route path="/team_dashboard">
-          <SalaryPage>
-            <TeamDashboard />
-          </SalaryPage>
-        </Route>
-      </Router>
-    )
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
 }
 
 export default App
