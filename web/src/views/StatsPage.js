@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TopNav from '../layout/TopNav'
+import Layout from '../layout'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
@@ -138,9 +138,9 @@ class StatsProvider extends Component {
   render () {
     return (
       <div>
-        <TopNav>
+        <Layout>
           { this.renderFilters() }
-        </TopNav>
+        </Layout>
         { this.renderMain() }
       </div>
     )

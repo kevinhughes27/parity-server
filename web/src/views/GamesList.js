@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import { NavLink } from 'react-router-dom'
-import TopNav from '../layout/TopNav'
+import Layout from '../layout/'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import List from '@material-ui/core/List'
@@ -109,9 +109,9 @@ class GamesList extends Component {
 
     return (
       <React.Fragment>
-        <TopNav>
+        <Layout>
           <LeaguePicker onChange={leagueChange} />
-        </TopNav>
+        </Layout>
         { this.renderMain() }
       </React.Fragment>
     )

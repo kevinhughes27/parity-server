@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TopNav from '../layout/TopNav'
+import Layout from '../layout'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import { currentLeague } from '../leagues'
@@ -48,9 +48,9 @@ class SalaryProvider extends Component {
 
     return (
       <div>
-        <TopNav>
+        <Layout>
           <LeaguePicker onChange={leagueChange} />
-        </TopNav>
+        </Layout>
         { this.renderMain() }
       </div>
     )

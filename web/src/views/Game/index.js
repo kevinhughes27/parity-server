@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TopNav from '../../layout/TopNav'
+import Layout from '../../layout/'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -92,7 +92,7 @@ export default class Game extends Component {
   render () {
     return (
       <React.Fragment>
-        <TopNav />
+        <Layout />
         { this.renderMain() }
       </React.Fragment>
     )
