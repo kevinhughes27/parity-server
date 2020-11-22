@@ -34,6 +34,8 @@ export default function TeamDashboard(props) {
   const [playerB, setPlayerB] = useState(defaultPlayer)
   const [tab, setTab] = useState(0)
 
+  const forceUpdate = React.useReducer(bool => !bool)[1];
+
   const teamChanged = (event) => {
     const teamName = event.target.value
     ls.set(storageKey, teamName)
@@ -93,6 +95,7 @@ export default function TeamDashboard(props) {
 
     updateAllPlayers(allPlayers)
     setTrades(trades)
+    forceUpdate()
   }
 
   const teamPlayers = allPlayers.filter(p => p.team === team);

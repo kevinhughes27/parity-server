@@ -81,9 +81,9 @@ function StatsPage(props) {
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-      { React.cloneElement(props.children, {week: data.week, stats: filteredStats()}) }
-    </div>
-    )
+        { React.cloneElement(props.children, {week: data.week, stats: filteredStats()}) }
+      </div>
+    );
   }
 
   return (
