@@ -25,6 +25,8 @@ import org.ocua.parity.model.Point;
 import org.ocua.parity.model.Team;
 
 public class Bookkeeper implements Serializable {
+    public League league;
+
     Team homeTeam;
     Team awayTeam;
 
@@ -49,7 +51,8 @@ public class Bookkeeper implements Serializable {
     private HashSet<String> homeParticipants;
     private HashSet<String> awayParticipants;
 
-    public void startGame(int week, Team leftTeam, Team rightTeam) {
+    public void startGame(League league, int week, Team leftTeam, Team rightTeam) {
+        this.league = league;
         this.week = week;
         activeGame = new Game();
         homeTeam = leftTeam;
@@ -286,7 +289,7 @@ public class Bookkeeper implements Serializable {
         JSONObject jsonObject = new JSONObject();
 
         try {
-            jsonObject.accumulate("league_id", League.id);
+            jsonObject.accumulate("league_id", league.id);
 
             jsonObject.accumulate("week", week);
 

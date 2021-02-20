@@ -40,6 +40,7 @@ android {
         }
         debug {
             buildConfigField "String", "UPLOAD_URL", "\"http://10.0.2.2:5000/submit_game\""
+            buildConfigField "String", "LEAGUE_URL", "\"http://10.0.2.2:5000/current_league\""
             buildConfigField "String", "SCHEDULE_URL", "\"http://10.0.2.2:5000/api/%s/schedule\""
         }
     }
@@ -52,6 +53,7 @@ android {
             def baseUrl = "https://parity-server.herokuapp.com"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
+            buildConfigField "String", "LEAGUE_URL", "\"" + baseUrl + "/current_league\""
             buildConfigField "String", "SCHEDULE_URL", "\"" + baseUrl + "/api/%s/schedule\""
 
             dimension = "parity"
