@@ -27,6 +27,13 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 db.init_app(app)
 
 
+# Current League
+@app.route('/current_league')
+def current_league():
+    league = {'league': {'id': 13, 'name': '2020/2021 Session 1'}}
+    return jsonify(league)
+
+
 # Submit Game
 @app.route('/submit_game', methods=['POST'])
 def upload():

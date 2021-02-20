@@ -2,6 +2,7 @@ package org.ocua.parity.tasks;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 
@@ -134,9 +135,11 @@ public class UploadGame extends AsyncTask<String, String, String> {
     }
 
     private void resetApp() {
-        bookkeeper = null;
-
         Intent intent = new Intent(parent, ChooseTeams.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("league", bookkeeper.league);
+
+        intent.putExtras(bundle);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         parent.startActivity(intent);
     }
