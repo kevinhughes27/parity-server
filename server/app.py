@@ -10,19 +10,28 @@ import json
 import datetime
 
 
+# Constants
+react_app_path = '../web/build'
+league_utc_offset = -5
+
+
 # Settings
 if os.environ.get('APP_SETTINGS') == None:
     os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
 
-react_app_path = '../web/build'
-
-league_utc_offset = -5
 
 # Init
 app = Flask(__name__, static_folder=react_app_path)
 app.config.from_object(os.environ['APP_SETTINGS'])
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 db.init_app(app)
+
+
+# Current League
+@app.route('/current_league')
+def current_league():
+    league = {'league': {'id': 13, 'name': '2020/2021 Session 1'}}
+    return jsonify(league)
 
 
 # Submit Game

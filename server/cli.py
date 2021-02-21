@@ -9,6 +9,10 @@ from app import app, save_game, cache
 from models import db, League, Team, Player
 from lib import ZuluruSync, PlayerDb, StatsCalculator
 
+current_league_zid = 1292
+current_league_id = 13
+current_backup_dir = "data/ocua_20-21"
+
 
 @click.group()
 def cli():
@@ -29,6 +33,7 @@ def init_db():
 def create_leagues():
     with app.app_context():
         league_params = [
+            { 'zuluru_id': 1292, 'name': '2020/2021 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 712, 'name': '2019/2020 Session 2', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': None, 'name': 'Parity Tournament 2020', 'stat_values': 'v2', 'salary_calc': 'sum_rate' },
             { 'zuluru_id': 702, 'name': '2019/2020 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
@@ -46,6 +51,9 @@ def create_leagues():
         league_params.reverse()
 
         for params in league_params:
+            if League.query.filter_by(zuluru_id=params['zuluru_id']).first() != None:
+                continue # skip if the league is already created in the database
+
             league = League()
             league.zuluru_id = params['zuluru_id']
             league.name = params['name']
@@ -58,12 +66,11 @@ def create_leagues():
 
 
 @cli.command()
-def zuluru_sync():
+def zuluru_sync_current():
     with app.app_context():
-        league_zid = 712
-        league = League.query.filter_by(zuluru_id=league_zid).first()
+        league = League.query.filter_by(zuluru_id=current_league_zid).first()
 
-        zuluru_sync = ZuluruSync(league)
+        zuluru_sync = ZuluruSync(league, division=True)
         zuluru_sync.sync_teams()
         zuluru_sync.sync_schedule()
 
@@ -77,7 +84,8 @@ def zuluru_sync_all():
     with app.app_context():
 
         leagues = [
-            { 'zuluru_id': 702, 'player_db_path': ''},
+            # { 'zuluru_id': 1292, 'player_db_path': ''}, # synced with current
+            { 'zuluru_id': 702, 'player_db_path': 'data/ocua_19-20/players_db.csv'},
             { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
             { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
             { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv' },
@@ -90,8 +98,8 @@ def zuluru_sync_all():
 
         leagues.reverse()
 
-        is_division = [941, 940]
-        simple_player_db = [494, 438]
+        is_division = [941, 940, 1292]
+        simple_player_db = [494, 438, 702]
 
         for league in leagues:
             division = league['zuluru_id'] in is_division
@@ -109,23 +117,13 @@ def zuluru_sync_all():
 
 
 @cli.command()
-def schedule_sync():
-    with app.app_context():
-        league_zid = 712
-        league = League.query.filter_by(zuluru_id=league_zid).first()
-
-        zuluru_sync = ZuluruSync(league)
-        zuluru_sync.sync_schedule()
-
-
-@cli.command()
 def game_sync():
     with app.app_context():
 
         db.engine.execute("TRUNCATE game CASCADE;")
 
         leagues = [
-            { 'id': 12, 'data_folder': 'data/ocua_19-20' },
+            { 'id': 12, 'data_folder': 'data/ocua_19-20/session2' },
             { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
             { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
             { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
@@ -163,7 +161,7 @@ def re_upload(week, prod):
     else:
         url = 'http://localhost:5000/submit_game'
 
-    league_folder = 'data/ocua_19-20'
+    league_folder = current_backup_dir
 
     files = glob.glob(f"{league_folder}/week{week}_game*.json")
     files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
@@ -181,10 +179,10 @@ def re_upload(week, prod):
 def backup(week):
     click.echo('Downloading games...')
 
-    league_id = 12
+    league_id = current_league_id
 
     src_url = f"https://parity-server.herokuapp.com/api/{league_id}/games"
-    target_dir = "data/ocua_19-20"
+    target_dir = current_backup_dir
 
     game_counts = defaultdict(int)
 
@@ -205,6 +203,7 @@ def backup(week):
         game_num = str(game_counts[week])
 
         del game['id']
+        del game['stats']
 
         file_name = "week" + week + "_game" + game_num + ".json"
         fo = open(os.path.join(target_dir, file_name), "w")

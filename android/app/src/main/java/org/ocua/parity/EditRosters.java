@@ -16,6 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import org.ocua.parity.customLayout.CustomLinearLayout;
+import org.ocua.parity.model.League;
 import org.ocua.parity.model.Gender;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
@@ -28,6 +29,7 @@ public class EditRosters extends Activity {
     private View.OnClickListener teamEditListener;
     private Context context;
 
+    private League league;
     private Teams teams;
     private Bookkeeper bookkeeper;
 
@@ -52,6 +54,7 @@ public class EditRosters extends Activity {
 
     private void loadIntent() {
         Intent intent = this.getIntent();
+        league = (League) intent.getSerializableExtra("league");
         teams = (Teams) intent.getSerializableExtra("teams");
         bookkeeper = (Bookkeeper) intent.getSerializableExtra("bookkeeper");
         leftPlayersCache = intent.getStringArrayListExtra("leftPlayers");
@@ -109,6 +112,7 @@ public class EditRosters extends Activity {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(context, SelectPlayers.class);
                                                 Bundle bundle = new Bundle();
+                                                bundle.putSerializable("league", league);
                                                 bundle.putSerializable("teams", teams);
                                                 bundle.putSerializable("bookkeeper", bookkeeper);
                                                 if (leftPlayersCache != null) {
