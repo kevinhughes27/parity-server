@@ -233,7 +233,8 @@ class ZuluruSync:
         }
 
         print('Logging in')
-        r = session.post(self.login_url, data=login_data)
+        response = session.post(self.login_url, data=login_data)
+        print(response.status_code)
         return session
 
 
