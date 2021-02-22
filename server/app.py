@@ -30,7 +30,7 @@ db.init_app(app)
 # Current League
 @app.route('/current_league')
 def current_league():
-    league = {'league': {'id': 13, 'name': '2020/2021 Session 1'}}
+    league = {'league': {'id': 14, 'name': '2021 Session 3'}}
     return jsonify(league)
 
 
