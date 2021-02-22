@@ -3,7 +3,7 @@ import ls from 'local-storage'
 const leagueKey = 'currentLeague'
 
 const currentLeague = () => {
-  return ls.get(leagueKey) || '9'
+  return ls.get(leagueKey) || '14'
 }
 
 const setLeague = (league) => {
@@ -11,6 +11,7 @@ const setLeague = (league) => {
 }
 
 const Leagues = [
+  { id: 14, name: "2021 Session 3"},
   { id: 13, name: "2020/2021 Session 1" },
   { id: 12, name: "2019/2020 Session 2" },
   { id: 10, name: "2019/2020 Session 1" },
