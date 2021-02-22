@@ -71,7 +71,7 @@ def zuluru_sync_current():
     with app.app_context():
         league = League.query.filter_by(zuluru_id=current_league_zid).first()
 
-        zuluru_sync = ZuluruSync(league, division=True)
+        zuluru_sync = ZuluruSync(league)
         zuluru_sync.sync_teams()
         zuluru_sync.sync_schedule()
 
