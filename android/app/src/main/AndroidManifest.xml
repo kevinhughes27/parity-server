@@ -26,6 +26,10 @@
         <activity android:name=".SelectPlayers"></activity>
         <activity android:name=".Stats"></activity>
         <activity android:name=".SubmitGame"></activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>
