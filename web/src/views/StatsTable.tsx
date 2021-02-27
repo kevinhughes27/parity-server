@@ -15,7 +15,10 @@ const columnsMeta = [
   {
     field: 'team' as const,
     title: 'Team' as const,
-    searchable: true
+    cellStyle: {
+      fontSize: 10
+    },
+    searchable: true,
   },
   {
     field: 'goals' as const,

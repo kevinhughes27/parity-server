@@ -36,72 +36,46 @@ html, body, #root {
 /* Responsive Table */
 @media only screen and (max-width : 992px) {
   .responsive-table table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
     display: block;
-    position: relative;
-
-  }
-
-  .responsive-table table td:empty:before {
-    content: " ";
-  }
-
-  .responsive-table table td {
-    margin: 0;
-    vertical-align: top;
-  }
-
-  .responsive-table table th {
-    margin: 0;
-    vertical-align: top;
-    text-align: left;
+    padding-top: 10px;
   }
 
   .responsive-table table thead {
-    display: block;
     float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
   }
-  .responsive-table table thead tr {
-    display: block;
-    padding: 0 10px 0 0;
-  }
-  .responsive-table table thead tr th::before {
-    content: " ";
+
+  .responsive-table table thead th {
+    text-align: left;
   }
 
   .responsive-table table tbody {
     display: block;
-    width: auto;
-    position: relative;
     overflow-x: auto;
     white-space: nowrap;
   }
+
   .responsive-table table tbody tr {
     display: inline-block;
-    vertical-align: top;
+    margin-left: 5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
   }
 
   .responsive-table table th {
     display: block;
-    text-align: right;
     height: 58px;
-  }
-  .responsive-table table td {
-    display: block;
-    text-align: left;
-    height: 58px;
-  }
-  .responsive-table table tr {
-    border-bottom: none;
-    padding: 0 10px;
+    width: 100% !important;
+    min-width: fit-content;
+    padding: 5px 0px 0px 10px;
   }
 
-  /* sort out borders */
-  .responsive-table table thead {
-    border: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  .responsive-table table td {
+    display: block;
+    height: 58px;
+    width: 100% !important;
+    min-width: fit-content;
+    padding: 5px 10px 0px 0px;
+    text-align: center;
   }
 
   .MuiTableSortLabel-iconDirectionDesc {
