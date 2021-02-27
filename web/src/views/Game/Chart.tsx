@@ -98,10 +98,12 @@ function BarChart(props: BarChartProps) {
   return (
     <div className={classes.container}>
       <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel>
+        <InputLabel id="stat-select">
           Stat
         </InputLabel>
         <Select
+          labelId="stat-select"
+          label="Stat"
           value={stat}
           onChange={handleChange}
           className={classes.select}
