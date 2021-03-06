@@ -8,17 +8,22 @@ import { map } from 'lodash'
 
 const useStyles = makeStyles((theme) => ({
   selectRoot: {
-    color: 'white',
+    color: props => (props as any).color,
     fontSize: 14,
     minWidth: 80
   },
   icon: {
-    color: 'white'
+    color: props => (props as any).color
   }
 }));
 
-function LeaguePicker() {
-  const classes = useStyles();
+function LeaguePicker(
+  props: {
+    color: string,
+    onChange?: (league: string) => void
+  }
+) {
+  const classes = useStyles(props);
   const [league, setLeague] = useLeague();
 
   const leagueOptions = map(leagues, (league) => {
@@ -31,6 +36,7 @@ function LeaguePicker() {
 
   const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setLeague(event.target.value as string);
+    props.onChange && props.onChange(event.target.value as string);
   };
 
   if (leagues.length === 1) return null

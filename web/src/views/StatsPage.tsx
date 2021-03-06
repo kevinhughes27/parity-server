@@ -3,11 +3,9 @@ import Layout from '../layout'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
-import GenderFilter from '../components/GenderFilter'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core'
 import FilterListIcon from '@material-ui/icons/FilterList'
 import { useMediaQuery } from 'react-responsive'
-import { pickBy } from 'lodash'
 import { useLeague } from '../hooks/league'
 import { useStats } from '../hooks/stats'
 import { Stats } from '../api'
@@ -22,19 +20,8 @@ function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponen
   const [data, loading, changeWeek] = useStats(league);
 
   const [filtersOpen, openFilters] = useState(false)
-  const [filter, setFilter] = useState('any')
 
   const isMobile = useMediaQuery({ query: '(max-device-width: 480px)' });
-
-  const filteredStats = () => {
-    if (filter === 'any') {
-      return data.stats;
-    }
-
-    return pickBy(data.stats, (statEntry) => {
-      return statEntry.gender === filter;
-    })
-  }
 
   const Filters = () => {
     const week = data.week || 0
@@ -56,9 +43,8 @@ function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponen
           >
             <DialogTitle>Filters</DialogTitle>
             <DialogContent className="filters">
-              <LeaguePicker />
-              <GenderFilter filter={filter} filterChange={(f) => setFilter(f)} />
-              <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
+              <LeaguePicker color="black" onChange={() => openFilters(false)}/>
+              <WeekPicker color="black" week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} />
             </DialogContent>
             <DialogActions>
               <Button onClick={() => openFilters(false)} color="primary">
@@ -71,9 +57,8 @@ function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponen
     } else {
       return (
         <React.Fragment>
-          <LeaguePicker />
-          <GenderFilter filter={filter} filterChange={(f) => setFilter(f)} />
-          <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
+          <LeaguePicker color="white"/>
+          <WeekPicker color="white" week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
         </React.Fragment>
       )
     }
@@ -84,7 +69,7 @@ function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponen
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { props.component({week: data.week, stats: filteredStats()}) }
+        { props.component({week: data.week, stats: data.stats}) }
       </div>
     );
   }

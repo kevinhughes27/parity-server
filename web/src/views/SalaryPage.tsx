@@ -38,7 +38,7 @@ function SalaryProvider(props: {component: React.FunctionComponent<ISalaryPageCo
   return (
     <div>
       <Layout>
-        <LeaguePicker />
+        <LeaguePicker color="white"/>
       </Layout>
       <Main />
     </div>
