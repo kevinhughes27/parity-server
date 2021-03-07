@@ -42,7 +42,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
   const [trades, setTrades] = useState<ITrade[]>([])
   const [playerA, setPlayerA] = useState<Player>(defaultPlayer)
   const [playerB, setPlayerB] = useState<Player>(defaultPlayer)
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState(2)
 
   const forceUpdate = React.useReducer(bool => !bool, false)[1];
 

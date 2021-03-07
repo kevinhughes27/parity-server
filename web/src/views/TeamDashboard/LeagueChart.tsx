@@ -65,9 +65,9 @@ export default function Chart(props: LeagueChartProps) {
     },
     scales: {
       xAxes: [{
+        stacked: true,
         barPercentage: 0.6,
         categoryPercentage: 1.0,
-        display: false
       }],
       yAxes: [{
         stacked: true,
