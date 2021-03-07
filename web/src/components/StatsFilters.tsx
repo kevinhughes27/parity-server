@@ -29,8 +29,8 @@ const StatsFilters = ({data, changeWeek}: any) => {
         >
           <DialogTitle>Filters</DialogTitle>
           <DialogContent className="filters">
-            <LeaguePicker color="black" onChange={() => openFilters(false)}/>
-            <WeekPicker color="black" week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} />
+            <LeaguePicker onChange={() => openFilters(false)}/>
+            <WeekPicker week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} />
           </DialogContent>
           <DialogActions>
             <Button onClick={() => openFilters(false)} color="primary">
@@ -43,8 +43,8 @@ const StatsFilters = ({data, changeWeek}: any) => {
   } else {
     return (
       <React.Fragment>
-        <LeaguePicker color="white"/>
-        <WeekPicker color="white" week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
+        <LeaguePicker/>
+        <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
       </React.Fragment>
     )
   }

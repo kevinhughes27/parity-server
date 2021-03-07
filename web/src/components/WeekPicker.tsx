@@ -6,18 +6,17 @@ import { map } from 'lodash'
 
 const useStyles = makeStyles((theme) => ({
   selectRoot: {
-    color: props => (props as any).color,
+    color: 'white',
     fontSize: 14,
     minWidth: 80
   },
   icon: {
-    color: props => (props as any).color
+    color: 'white'
   }
 }));
 
 function WeekPicker(
   props: {
-    color: string,
     week: number;
     weeks: number[];
     onChange: (week: number) => void

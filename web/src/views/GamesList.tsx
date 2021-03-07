@@ -95,7 +95,7 @@ function GamesList() {
   return (
     <React.Fragment>
       <Layout>
-        <LeaguePicker color="white"/>
+        <LeaguePicker/>
       </Layout>
       { renderMain() }
     </React.Fragment>
