@@ -5,7 +5,9 @@ import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import Chart from './Chart'
 import { keys, pick } from 'lodash'
-import { Stats, StatLine } from '../../api'
+import { StatLine } from '../../api'
+import { useLeague } from '../../hooks/league'
+import { useStats } from '../../hooks/stats'
 
 const STATS = [
   'goals',
@@ -19,8 +21,11 @@ const STATS = [
   'drops'
 ]
 
-export default function ComparePlayers(props: {stats: Stats}) {
-  const playerNames = keys(props.stats)
+export default function ComparePlayers() {
+  const [league] = useLeague();
+  const [data] = useStats(league);
+
+  const playerNames = keys(data.stats)
   const [playerA, setPlayerA] = useState(ls.get<string>('playerA') || playerNames[0])
   const [playerB, setPlayerB] = useState(ls.get<string>('playerB') || playerNames[1])
 
@@ -34,8 +39,8 @@ export default function ComparePlayers(props: {stats: Stats}) {
     setPlayerB(value as string)
   }
 
-  const playerAStats = pick(props.stats[playerA], STATS)
-  const playerBStats = pick(props.stats[playerB], STATS)
+  const playerAStats = pick(data.stats[playerA], STATS)
+  const playerBStats = pick(data.stats[playerB], STATS)
 
   return (
     <Container fixed>

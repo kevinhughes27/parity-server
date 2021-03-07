@@ -8,14 +8,8 @@ import FilterListIcon from '@material-ui/icons/FilterList'
 import { useMediaQuery } from 'react-responsive'
 import { useLeague } from '../hooks/league'
 import { useStats } from '../hooks/stats'
-import { Stats } from '../api'
 
-interface IStatsPageComponentProps {
-  week: number;
-  stats: Stats
-}
-
-function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponentProps>}) {
+const StatsPage: React.FunctionComponent<{}> = ({ children }) => {
   const [league] = useLeague();
   const [data, loading, changeWeek] = useStats(league);
 
@@ -69,7 +63,7 @@ function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponen
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { props.component({week: data.week, stats: data.stats}) }
+        { children }
       </div>
     );
   }

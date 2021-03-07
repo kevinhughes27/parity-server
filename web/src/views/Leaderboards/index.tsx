@@ -1,10 +1,13 @@
 import React from 'react'
 import Card from './Card'
-import { Stats } from '../../api'
+import { useLeague } from '../../hooks/league'
+import { useStats } from '../../hooks/stats'
 
 
-export default function Leaderboards(props: {stats: Stats}) {
-  const stats = props.stats
+export default function Leaderboards() {
+  const [league] = useLeague();
+  const [data] = useStats(league);
+  const stats = data.stats
 
   return (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>

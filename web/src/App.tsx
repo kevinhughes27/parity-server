@@ -23,15 +23,21 @@ function Routes() {
       <Route path="/:leagueId/games/:gameId" component={Game} />
 
       <Route exact path="/" >
-        <StatsPage component={StatsTable} />
+        <StatsPage>
+          <StatsTable />
+        </StatsPage>
       </Route>
 
       <Route path="/leaderboards">
-        <StatsPage component={Leaderboards} />
+        <StatsPage>
+          <Leaderboards />
+        </StatsPage>
       </Route>
 
       <Route path="/compare_players">
-        <StatsPage component={ComparePlayers}/>
+        <StatsPage>
+          <ComparePlayers />
+        </StatsPage>
       </Route>
 
       <Route path="/team_dashboard">
