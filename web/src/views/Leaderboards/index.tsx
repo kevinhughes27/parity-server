@@ -2,7 +2,6 @@ import React from 'react'
 import Card from './Card'
 import { Stats } from '../../api'
 
-
 export default function Leaderboards(props: {stats: Stats}) {
   const stats = props.stats
 
