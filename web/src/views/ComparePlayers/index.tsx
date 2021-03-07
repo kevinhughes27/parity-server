@@ -23,11 +23,17 @@ const STATS = [
 
 export default function ComparePlayers() {
   const [league] = useLeague();
-  const [data] = useStats(league);
+  const [data, loading] = useStats(league);
 
   const playerNames = keys(data.stats)
   const [playerA, setPlayerA] = useState(ls.get<string>('playerA') || playerNames[0])
   const [playerB, setPlayerB] = useState(ls.get<string>('playerB') || playerNames[1])
+
+  // this has to be called here. this memoizes blank data in player names
+  // not sure this child thing is better. lets fix the main issue first and revisit.
+  if (loading) {
+    return null
+  }
 
   const playerAChanged = (_event: React.ChangeEvent<{}>, value: string | null) => {
     ls.set<string>('playerA', value as string)

@@ -6,7 +6,12 @@ import { useStats } from '../../hooks/stats'
 
 export default function Leaderboards() {
   const [league] = useLeague();
-  const [data] = useStats(league);
+  const [data, loading] = useStats(league);
+
+  if (loading) {
+    return null
+  }
+
   const stats = data.stats
 
   return (

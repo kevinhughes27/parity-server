@@ -10,3 +10,5 @@ I don't understand why this problem manifests this way. Why does opening the fil
   * I tried re-working hooks plus children and it didn't seem to help. but it might be better code
   * I keep thinking it might be related how the component is defined but that doesn't make sense
   * It could be the css. give that a quick try
+
+Finishing the refactor of children I can see that the way StatsTable is set up causes a re-render of then table but only on mobile. gonna isolate the state better

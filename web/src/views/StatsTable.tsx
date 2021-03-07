@@ -90,8 +90,11 @@ const columnsMeta = [
 
 function StatsTable() {
   const [league] = useLeague();
-  // handle loading here?
-  const [data] = useStats(league);
+  const [data, loading] = useStats(league);
+
+  if (loading) {
+    return null
+  }
 
   const statsArray = map(keys(data.stats), (k) => {
     return {...data.stats[k], name: k}
