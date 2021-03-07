@@ -4,17 +4,23 @@ import Loading from '../components/Loading'
 import StatsFilters from '../components/StatsFilters'
 import { useLeague } from '../hooks/league'
 import { useStats } from '../hooks/stats'
+import { Stats } from '../api'
 
-const StatsPage: React.FunctionComponent<{}> = ({ children }) => {
+interface IStatsPageComponentProps {
+  week: number;
+  stats: Stats
+}
+
+function StatsPage(props: {component: React.FunctionComponent<IStatsPageComponentProps>}) {
   const [league] = useLeague();
-  const [_data, loading] = useStats(league);
+  const [data, loading, changeWeek] = useStats(league);
 
   const Main = () => {
     if (loading) return <Loading />;
 
     return (
       <div style={{height: '100%', minHeight: '100%'}}>
-        { children }
+        { props.component({week: data.week, stats: data.stats}) }
       </div>
     );
   }
@@ -22,7 +28,7 @@ const StatsPage: React.FunctionComponent<{}> = ({ children }) => {
   return (
     <React.Fragment>
       <Layout>
-        <StatsFilters />
+        <StatsFilters data={data} changeWeek={changeWeek}/>
       </Layout>
       <Main />
     </React.Fragment>

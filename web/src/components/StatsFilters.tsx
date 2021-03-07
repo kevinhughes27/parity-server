@@ -4,13 +4,8 @@ import WeekPicker from '../components/WeekPicker'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core'
 import FilterListIcon from '@material-ui/icons/FilterList'
 import { useMediaQuery } from 'react-responsive'
-import { useLeague } from '../hooks/league'
-import { useStats } from '../hooks/stats'
 
-const StatsFilters = () => {
-  const [league] = useLeague();
-  const [data, _loading, changeWeek] = useStats(league);
-
+const StatsFilters = ({data, changeWeek}: any) => {
   const [filtersOpen, openFilters] = useState(false)
 
   const isMobile = useMediaQuery({ query: '(max-device-width: 480px)' });

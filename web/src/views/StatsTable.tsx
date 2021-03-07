@@ -2,10 +2,7 @@ import React from 'react'
 import MaterialTable from 'material-table'
 import { map, keys } from 'lodash'
 import * as ls from 'local-storage'
-import { StatLine } from '../api'
-import { useLeague } from '../hooks/league'
-import { useStats } from '../hooks/stats'
-
+import { Stats, StatLine } from '../api'
 const storageKey = 'searchBar'
 
 const columnsMeta = [
@@ -88,16 +85,9 @@ const columnsMeta = [
   }
 ]
 
-function StatsTable() {
-  const [league] = useLeague();
-  const [data, loading] = useStats(league);
-
-  if (loading) {
-    return null
-  }
-
-  const statsArray = map(keys(data.stats), (k) => {
-    return {...data.stats[k], name: k}
+function StatsTable(props: {stats: Stats}) {
+  const statsArray = map(keys(props.stats), (k) => {
+    return {...props.stats[k], name: k}
   });
 
   return (

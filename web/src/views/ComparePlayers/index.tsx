@@ -5,9 +5,7 @@ import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import Chart from './Chart'
 import { keys, pick } from 'lodash'
-import { StatLine } from '../../api'
-import { useLeague } from '../../hooks/league'
-import { useStats } from '../../hooks/stats'
+import { Stats, StatLine } from '../../api'
 
 const STATS = [
   'goals',
@@ -21,19 +19,10 @@ const STATS = [
   'drops'
 ]
 
-export default function ComparePlayers() {
-  const [league] = useLeague();
-  const [data, loading] = useStats(league);
-
-  const playerNames = keys(data.stats)
+export default function ComparePlayers(props: {stats: Stats}) {
+  const playerNames = keys(props.stats)
   const [playerA, setPlayerA] = useState(ls.get<string>('playerA') || playerNames[0])
   const [playerB, setPlayerB] = useState(ls.get<string>('playerB') || playerNames[1])
-
-  // this has to be called here. this memoizes blank data in player names
-  // not sure this child thing is better. lets fix the main issue first and revisit.
-  if (loading) {
-    return null
-  }
 
   const playerAChanged = (_event: React.ChangeEvent<{}>, value: string | null) => {
     ls.set<string>('playerA', value as string)
@@ -45,8 +34,8 @@ export default function ComparePlayers() {
     setPlayerB(value as string)
   }
 
-  const playerAStats = pick(data.stats[playerA], STATS)
-  const playerBStats = pick(data.stats[playerB], STATS)
+  const playerAStats = pick(props.stats[playerA], STATS)
+  const playerBStats = pick(props.stats[playerB], STATS)
 
   return (
     <Container fixed>
