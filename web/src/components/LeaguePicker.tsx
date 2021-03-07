@@ -8,21 +8,16 @@ import { map } from 'lodash'
 
 const useStyles = makeStyles((theme) => ({
   selectRoot: {
-    color: props => (props as any).color,
+    color: 'white',
     fontSize: 14,
     minWidth: 80
   },
   icon: {
-    color: props => (props as any).color
+    color: 'white'
   }
 }));
 
-function LeaguePicker(
-  props: {
-    color: string,
-    onChange?: (league: string) => void
-  }
-) {
+function LeaguePicker(props: { onChange?: (league: string) => void}) {
   const classes = useStyles(props);
   const [league, setLeague] = useLeague();
 
