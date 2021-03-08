@@ -1,120 +1,222 @@
 import React from 'react'
-import MaterialTable from 'material-table'
+import MUIDataTable from 'mui-datatables'
 import { map, keys } from 'lodash'
 import * as ls from 'local-storage'
-import { Stats, StatLine } from '../api'
+import { Stats } from '../api'
 
 const storageKey = 'searchBar'
 
 const columnsMeta = [
   {
-    field: 'name' as const,
-    title: 'Name' as const,
-    searchable: true
+    name: 'name' as const,
+    label: 'Name' as const,
+    options: {
+      filter: false,
+      searchable: true
+    }
   },
   {
-    field: 'team' as const,
-    title: 'Team' as const,
-    cellStyle: {
-      fontSize: 10
-    },
-    searchable: true,
+    name: 'team' as const,
+    label: 'Team' as const,
+    options: {
+      searchable: true,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Team: ${v}`;
+        }
+      },
+      customBodyRender: (value: string) => <div style={{fontSize: 10}}>{value}</div>
+    }
   },
   {
-    field: 'goals' as const,
-    title: 'Goals' as const,
-    searchable: false
+    name: 'goals' as const,
+    label: 'Goals' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Goals: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'assists' as const,
-    title: 'Assists' as const,
-    searchable: false
+    name: 'assists' as const,
+    label: 'Assists' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Assists: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'second_assists' as const,
-    title: 'Second Assists' as const,
-    searchable: false
+    name: 'second_assists' as const,
+    label: 'Second Assists' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Second Assists: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'd_blocks' as const,
-    title: 'D Blocks' as const,
-    searchable: false
+    name: 'd_blocks' as const,
+    label: 'D Blocks' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `D Blocks: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'catches' as const,
-    title: 'Catches' as const,
-    searchable: false
+    name: 'catches' as const,
+    label: 'Catches' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Catches: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'completions' as const,
-    title: 'Completions' as const,
-    searchable: false
+    name: 'completions' as const,
+    label: 'Completions' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Completions: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'throw_aways' as const,
-    title: 'Throw Aways' as const,
-    searchable: false
+    name: 'throw_aways' as const,
+    label: 'Throw Aways' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Throw Aways: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'threw_drops' as const,
-    title: 'Threw Drops' as const,
-    searchable: false
+    name: 'threw_drops' as const,
+    label: 'Threw Drops' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Threw Drops: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'drops' as const,
-    title: 'Drops' as const,
-    searchable: false
+    name: 'drops' as const,
+    label: 'Drops' as const,
+    options: {
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Drops: ${v}`;
+        }
+      }
+    }
   },
   {
-    field: 'o_efficiency' as const,
-    title: 'Holds as const',
-    searchable: false,
-    render: (rowData: StatLine) => rowData.o_points_for + '/' + (rowData.o_points_against + rowData.o_points_for)
+    name: 'holds' as const,
+    label: 'Holds' as const,
+    options: {
+      searchable: false,
+      filter: false,
+    }
   },
   {
-    field: 'd_efficiency' as const,
-    title: 'Breaks' as const,
-    searchable: false,
-    render: (rowData: StatLine) => rowData.d_points_for + '/' + (rowData.d_points_against + rowData.d_points_for)
+    name: 'breaks' as const,
+    label: 'Breaks' as const,
+    options: {
+      searchable: false,
+      filter: false,
+    }
   },
   {
-    field: 'pay' as const,
-    title: 'Pay' as const,
-    type: 'currency' as const,
-    defaultSort: 'desc' as const,
-    searchable: false
+    name: 'pay' as const,
+    label: 'Pay' as const,
+    options: {
+      searchable: false,
+      filter: false,
+      customBodyRender: (value: number) => {
+        const nf = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        });
+
+        return nf.format(value);
+      }
+    }
   }
 ]
+
 
 function StatsTable(props: {stats: Stats}) {
   const stats = props.stats
   const statsArray = map(keys(stats), (k) => {
-    return {...stats[k], name: k}
+    return {
+      ...stats[k],
+      name: k,
+      holds: stats[k].o_points_for + '/' + (stats[k].o_points_against + stats[k].o_points_for),
+      breaks: stats[k].d_points_for + '/' + (stats[k].d_points_against + stats[k].d_points_for)
+    }
   });
 
   return (
     <div className="responsive-table">
-      <MaterialTable
+      <MUIDataTable
+        title={null}
         columns={columnsMeta}
         data={statsArray}
-        style={{
-          maxWidth: '98vw',
-          margin: 'auto',
-          marginTop: 20
-        }}
         options={{
-          showTitle: false,
+          responsive: 'standard',
           search: true,
-          searchText: ls.get<string>(storageKey) || '',
-          searchFieldAlignment: 'left',
-          searchFieldStyle: {
-            width: '95vw',
+          searchOpen: true,
+          onSearchChange: (searchText: string | null) => {
+            ls.set<string>(storageKey, searchText || '')
           },
-          sorting: true,
-          paging: false
-        }}
-        onSearchChange={(query) => {
-          ls.set<string>(storageKey, query)
+          searchText: ls.get<string>(storageKey) || '',
+          sort: true,
+          sortOrder: {
+            name: 'pay',
+            direction: 'desc'
+          },
+          selectableRows: 'none',
+          pagination: false,
+          download: false,
+          print: false,
         }}
       />
     </div>

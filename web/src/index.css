@@ -34,6 +34,12 @@ html, body, #root {
 }
 
 /* Responsive Table */
+/* This modifies how the table renders by rotatating it so the
+   data is orientented left to right instead of top to bottom.
+   This makes it easier to consume on a mobile device.
+   This general idea probably holds up to any table but it was
+   built on top of the MaterialUI table styles and might overwrite
+   parts of those styles. */
 @media only screen and (max-width : 992px) {
   .responsive-table table {
     display: block;
@@ -78,6 +84,13 @@ html, body, #root {
     text-align: center;
   }
 
+  /* this hides the more advanced table controls like selecitng columns, filters etc.
+     it makes the mobile version feel cleaner while leaving power features for desktop. */
+  .responsive-table .MuiToolbar-root button {
+    display: none;
+  }
+
+  /* rotate the sorting icons to match the new table orientation */
   .MuiTableSortLabel-iconDirectionDesc {
     transform: rotate(270deg) !important;
   }
