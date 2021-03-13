@@ -33,6 +33,7 @@ const columnsMeta = [
     name: 'goals' as const,
     label: 'Goals' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -46,6 +47,7 @@ const columnsMeta = [
     name: 'assists' as const,
     label: 'Assists' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -59,6 +61,7 @@ const columnsMeta = [
     name: 'second_assists' as const,
     label: 'Second Assists' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -72,6 +75,7 @@ const columnsMeta = [
     name: 'd_blocks' as const,
     label: 'D Blocks' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -85,6 +89,7 @@ const columnsMeta = [
     name: 'catches' as const,
     label: 'Catches' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -98,6 +103,7 @@ const columnsMeta = [
     name: 'completions' as const,
     label: 'Completions' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -111,6 +117,7 @@ const columnsMeta = [
     name: 'throw_aways' as const,
     label: 'Throw Aways' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -124,6 +131,7 @@ const columnsMeta = [
     name: 'threw_drops' as const,
     label: 'Threw Drops' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -137,6 +145,7 @@ const columnsMeta = [
     name: 'drops' as const,
     label: 'Drops' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: true,
       customFilterListOptions: {
@@ -150,6 +159,7 @@ const columnsMeta = [
     name: 'holds' as const,
     label: 'Holds' as const,
     options: {
+      sort: false,
       searchable: false,
       filter: false,
     }
@@ -158,6 +168,7 @@ const columnsMeta = [
     name: 'breaks' as const,
     label: 'Breaks' as const,
     options: {
+      sort: false,
       searchable: false,
       filter: false,
     }
@@ -166,6 +177,7 @@ const columnsMeta = [
     name: 'pay' as const,
     label: 'Pay' as const,
     options: {
+      sortDescFirst: true,
       searchable: false,
       filter: false,
       customBodyRender: (value: number) => {
