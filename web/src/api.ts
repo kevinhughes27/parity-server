@@ -35,6 +35,7 @@ const cachedFetch = (url: string, _options = {}) => {
 //   return leagues.filter((l) => l.id > 1)
 // }
 const leagues = [
+  { id: 15, name: "2021/2020 Session 1"},
   { id: 14, name: "2021 Session 3"},
   { id: 13, name: "2020/2021 Session 1" },
   { id: 12, name: "2019/2020 Session 2" },

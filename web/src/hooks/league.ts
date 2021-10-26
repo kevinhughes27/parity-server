@@ -1,7 +1,7 @@
 import createPersistedState from 'use-persisted-state'
 
 const storageKey = 'currentLeague';
-const initialLeague = '14';
+const initialLeague = '15';
 
 const useLeagueState = createPersistedState(storageKey);
 
