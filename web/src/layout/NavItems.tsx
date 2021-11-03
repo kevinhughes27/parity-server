@@ -12,7 +12,7 @@ function NavItems(props: {closeNav: () => void}) {
   const [expanded, setExpanded] = useState(false);
 
   const forumUrl = 'https://www.ocua.ca/forum/33'
-  const podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-4/s-KvCFa'
+  const podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-5/s-1oSLUNq9qt4'
   const srcUrl = 'https://github.com/kevinhughes27/parity-server'
   const volunteerUrl = 'https://docs.google.com/spreadsheets/d/1RZvxyqteN-GZHntxqwonHlvnQxLUbAmZ-FafGn8oNws/edit'
 
