@@ -222,8 +222,8 @@ public class SelectPlayers extends Activity {
         int leftPlayerCount = leftPlayers.size();
         int rightPlayerCount = rightPlayers.size();
 
-        boolean leftCorrectNumPlayers = leftPlayerCount == league.teamSize;
-        boolean rightCorrectNumPlayers = rightPlayerCount == league.teamSize;
+        boolean leftCorrectNumPlayers = leftPlayerCount == league.lineSize;
+        boolean rightCorrectNumPlayers = rightPlayerCount == league.lineSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
             bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
@@ -241,11 +241,11 @@ public class SelectPlayers extends Activity {
             String message = "Incorrect number of players:";
 
             if (!leftCorrectNumPlayers) {
-                message += String.format("\nLeft side: %d/%d selected", leftPlayerCount, league.teamSize);
+                message += String.format("\nLeft side: %d/%d selected", leftPlayerCount, league.lineSize);
             }
 
             if (!rightCorrectNumPlayers) {
-                message += String.format("\nRight side: %d/%d selected", rightPlayerCount, league.teamSize);
+                message += String.format("\nRight side: %d/%d selected", rightPlayerCount, league.lineSize);
             }
 
             message += "\n\nContinue with these players anyway?";

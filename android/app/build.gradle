@@ -48,8 +48,6 @@ android {
     flavorDimensions( "parity" )
     productFlavors {
         league {
-            buildConfigField "Integer", "MAX_FEMALES", "2"
-            buildConfigField "Integer", "MAX_MALES", "4"
             def baseUrl = "https://parity-server.herokuapp.com"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
