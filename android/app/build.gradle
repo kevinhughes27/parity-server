@@ -49,7 +49,7 @@ android {
     productFlavors {
         league {
             buildConfigField "Integer", "MAX_FEMALES", "2"
-            buildConfigField "Integer", "MAX_MALES", "3"
+            buildConfigField "Integer", "MAX_MALES", "4"
             def baseUrl = "https://parity-server.herokuapp.com"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
@@ -68,7 +68,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support:support-annotations:28.0.0'
-    compile 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     compile 'com.android.support.constraint:constraint-layout:2.0.4'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support:support-annotations:28.0.0'
