@@ -114,6 +114,8 @@ keyPassword=
 storePassword=
 ```
 
+Then choose Build -> Generate Signed Bundle/APK. Note the destination directory in the last step
+
 Contributing
 ------------
 
