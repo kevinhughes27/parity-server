@@ -20,6 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import org.ocua.parity.customLayout.CustomLinearLayout;
+import org.ocua.parity.model.League;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 
@@ -30,6 +31,7 @@ public class SelectPlayers extends Activity {
     private View.OnClickListener toggleUserListener;
     private Context context;
 
+    private League league;
     private Teams teams;
     private Bookkeeper bookkeeper;
 
@@ -52,8 +54,10 @@ public class SelectPlayers extends Activity {
     }
 
     private void loadIntent() {
-        teams = (Teams)this.getIntent().getSerializableExtra("teams");
-        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        Intent intent = this.getIntent();
+        league = (League) intent.getSerializableExtra("league");
+        teams = (Teams) intent.getSerializableExtra("teams");
+        bookkeeper = (Bookkeeper) intent.getSerializableExtra("bookkeeper");
         leftTeam = bookkeeper.homeTeam;
         rightTeam = bookkeeper.awayTeam;
 
@@ -215,13 +219,11 @@ public class SelectPlayers extends Activity {
             }
         }
 
-        int teamSize = BuildConfig.MAX_FEMALES + BuildConfig.MAX_MALES;
-
         int leftPlayerCount = leftPlayers.size();
         int rightPlayerCount = rightPlayers.size();
 
-        boolean leftCorrectNumPlayers = leftPlayerCount == teamSize;
-        boolean rightCorrectNumPlayers = rightPlayerCount == teamSize;
+        boolean leftCorrectNumPlayers = leftPlayerCount == league.teamSize;
+        boolean rightCorrectNumPlayers = rightPlayerCount == league.teamSize;
 
         if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
             bookkeeper.recordActivePlayers(leftPlayers, rightPlayers);
@@ -239,11 +241,11 @@ public class SelectPlayers extends Activity {
             String message = "Incorrect number of players:";
 
             if (!leftCorrectNumPlayers) {
-                message += String.format("\nLeft side: %d/%d selected", leftPlayerCount, teamSize);
+                message += String.format("\nLeft side: %d/%d selected", leftPlayerCount, league.teamSize);
             }
 
             if (!rightCorrectNumPlayers) {
-                message += String.format("\nRight side: %d/%d selected", rightPlayerCount, teamSize);
+                message += String.format("\nRight side: %d/%d selected", rightPlayerCount, league.teamSize);
             }
 
             message += "\n\nContinue with these players anyway?";

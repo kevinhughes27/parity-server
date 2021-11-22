@@ -1,6 +1,7 @@
 package org.ocua.parity.model;
 
 import org.json.JSONObject;
+import org.ocua.parity.BuildConfig;
 
 import java.io.Serializable;
 
@@ -13,6 +14,8 @@ class LeagueLoadError extends RuntimeException {
 public class League implements Serializable {
     public String id = "";
     public String name = "";
+
+    public int teamSize = BuildConfig.MAX_FEMALES + BuildConfig.MAX_MALES;
 
     public void load(JSONObject json) {
         try {
