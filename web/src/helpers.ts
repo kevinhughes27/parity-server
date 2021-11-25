@@ -8,7 +8,7 @@ interface IPlayer {
 
 export function calcSalaryLimits(players: IPlayer[]) {
   const numTeams = uniq(players.map(p => p.team)).length
-  const salaryCapVariance = 0.02
+  const salaryCapVariance = 0.015
   const salaries = map(players,
      (p) => p.salary)
   const salaryAvg = sum(salaries) / numTeams;
