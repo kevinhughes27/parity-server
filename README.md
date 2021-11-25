@@ -78,8 +78,8 @@ To correct errors in the most recent week of stats do the following:
     Then remove the data from the production database:
 
     ```sql
-    DELETE FROM stats WHERE game_id IN (SELECT id FROM game WHERE week = 9 AND league_id = 10);
-    DELETE FROM game WHERE week = 9 AND league_id = 10;
+    DELETE FROM stats WHERE game_id IN (SELECT id FROM game WHERE week = 4 AND league_id = 15);
+    DELETE FROM game WHERE week = 4 AND league_id = 15;
     ```
 
     3. Lastly re-seed the given week after making the edits `python3 server/cli.py re-upload --prod True --week 9`
