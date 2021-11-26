@@ -15,7 +15,6 @@ export default function Leaderboards(props: {stats: Stats}) {
       <Card stat='completions' stats={stats} />
       <Card stat='d_blocks' stats={stats} />
       <Card stat='throw_aways' stats={stats} />
-      <Card stat='drops' stats={stats} />
     </div>
   )
 }
