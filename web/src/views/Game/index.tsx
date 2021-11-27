@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router'
 import Layout from '../../layout/'
 import Loading from '../../components/Loading'
 import Container from '@material-ui/core/Container'
@@ -16,9 +17,11 @@ interface StatMaxes {
   [key: string]: number
 }
 
-export default function GameShow(props: any) {
-  const leagueId = props.match.params.leagueId
-  const gameId = props.match.params.gameId
+export default function GameShow() {
+  let params = useParams();
+
+  const leagueId = params.leagueId as string
+  const gameId = params.gameId as string
 
   const [loading, setLoading] = useState(true)
   const [game, setGame] = useState<Game|null>(null)
