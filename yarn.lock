@@ -1989,7 +1989,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
-"@emotion/react@^11.7.0":
+"@emotion/react@^11.4.1", "@emotion/react@^11.7.0":
   version "11.7.0"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.7.0.tgz#b179da970ac0e8415de3ac165deadf8d9c4bf89f"
   integrity sha512-WL93hf9+/2s3cA1JVJlz8+Uy6p6QWukqQFOm2OZO5ki51hfucHMOmbSjiyC3t2Y4RI8XUmBoepoc/24ny/VBbA==
@@ -2018,7 +2018,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.1.0.tgz#56d99c41f0a1cda2726a05aa6a20afd4c63e58d2"
   integrity sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==
 
-"@emotion/styled@^11.6.0":
+"@emotion/styled@^11.3.0", "@emotion/styled@^11.6.0":
   version "11.6.0"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.6.0.tgz#9230d1a7bcb2ebf83c6a579f4c80e0664132d81d"
   integrity sha512-mxVtVyIOTmCAkFbwIp+nCjTXJNgcz4VWkOYQro87jE2QBTydnkiYusMrRGFtzuruiGK4dDaNORk4gH049iiQuw==
@@ -2305,7 +2305,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.12.0":
+"@material-ui/core@^4.11.3", "@material-ui/core@^4.12.0":
   version "4.12.3"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.12.3.tgz#80d665caf0f1f034e52355c5450c0e38b099d3ca"
   integrity sha512-sdpgI/PL56QVsEJldwEe4FFaFTLUqN+rd7sSZiRCdx2E/C7z5yK0y/khAWVBH24tXwto7I1hCzNWfJGZIYJKnw==
@@ -2860,11 +2860,13 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/mui-datatables@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@types/mui-datatables/-/mui-datatables-3.7.0.tgz#80945ecc7d3623483d2f28bad0463965ef1ee996"
-  integrity sha512-Zqt/K/4gW4OLptiaGRUA/YKhUzNfCeh0wiE9itbSMztX059SFhlGDdsOcifml8GKDkrhRfTUkd0VYeS4J1OJbg==
+"@types/mui-datatables@^3.7.7":
+  version "3.7.7"
+  resolved "https://registry.yarnpkg.com/@types/mui-datatables/-/mui-datatables-3.7.7.tgz#477a09fe55041dce82a1ff8b1617ce55c8325596"
+  integrity sha512-NRegWPE6gYuT7DK4oDHZcvMuobndAtQyPIGHnEBlTA4nq954ZT40xLZeNzcoIEIrfgsHSjkORvUqX8149a0fwA==
   dependencies:
+    "@material-ui/core" "^4.11.3"
+    "@material-ui/types" "5.1.0"
     "@types/react" "*"
 
 "@types/node@*":
@@ -6519,19 +6521,6 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-frontend-collective-react-dnd-scrollzone@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/frontend-collective-react-dnd-scrollzone/-/frontend-collective-react-dnd-scrollzone-1.0.2.tgz#cf5ed6165335f7d26504a40126f8e972ee644698"
-  integrity sha512-me/D9PZJq9j/sjEjs/OPmm6V6nbaHbhgeQiwrWu0t35lhwAOKWc+QBzzKKcZQeboYTkgE8UvCD9el+5ANp+g5Q==
-  dependencies:
-    hoist-non-react-statics "^3.1.0"
-    lodash.throttle "^4.0.1"
-    prop-types "^15.5.9"
-    raf "^3.2.0"
-    react "^16.3.0"
-    react-display-name "^0.2.0"
-    react-dom "^16.3.0"
-
 fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -9024,12 +9013,14 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-mui-datatables@^3.7.6:
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/mui-datatables/-/mui-datatables-3.7.6.tgz#16dd35fd82827bdb9948bcc3fcb7080e2a173624"
-  integrity sha512-yfM7NVWdZLRES4lGGVKnHvCZhbL/lo8sGMGaC0iBkc8nDghd49kFZVNxoC7jwivUrZslwDeroHpXCLghUh7f8A==
+mui-datatables@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/mui-datatables/-/mui-datatables-4.0.0.tgz#162824f380d0bde5c2d6da53bf04b84e82f2011b"
+  integrity sha512-vQzQ1gihlsvEiaeEkiMtdWvq5fZQj2oX/nxX1gD+U2iFN0Z1eITxEc3Cqw3owD6kNoGcmXg9uptuXcRVByDpyg==
   dependencies:
     "@babel/runtime-corejs3" "^7.12.1"
+    "@emotion/react" "^11.4.1"
+    "@emotion/styled" "^11.3.0"
     clsx "^1.1.1"
     lodash.assignwith "^4.2.0"
     lodash.clonedeep "^4.5.0"
@@ -9043,7 +9034,7 @@ mui-datatables@^3.7.6:
     prop-types "^15.7.2"
     react-dnd "^11.1.3"
     react-dnd-html5-backend "^11.1.3"
-    react-sortable-tree "^2.7.1"
+    react-sortable-tree-patch-react-17 "^2.9.0"
     react-to-print "^2.8.0"
 
 multicast-dns-service-types@^1.1.0:
@@ -10914,6 +10905,17 @@ react-dnd-html5-backend@^11.1.3:
   dependencies:
     dnd-core "^11.1.3"
 
+react-dnd-scrollzone-patch-react-17@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-dnd-scrollzone-patch-react-17/-/react-dnd-scrollzone-patch-react-17-1.0.2.tgz#aa7e4c54268fe109246e790f1412427481b63067"
+  integrity sha512-Wfhyc/Y/Veim29REBYm8nMmtDB5IwSmPPhXIuabBgsEa1MrVsuOwK9+7LmuP+mGbDOEP/S6G8+5XvDqPlRFK2g==
+  dependencies:
+    hoist-non-react-statics "^3.1.0"
+    lodash.throttle "^4.0.1"
+    prop-types "^15.5.9"
+    raf "^3.2.0"
+    react-display-name "^0.2.0"
+
 react-dnd@^11.1.3:
   version "11.1.3"
   resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-11.1.3.tgz#f9844f5699ccc55dfc81462c2c19f726e670c1af"
@@ -10924,17 +10926,7 @@ react-dnd@^11.1.3:
     dnd-core "^11.1.3"
     hoist-non-react-statics "^3.3.0"
 
-react-dom@^16.3.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
-  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
-
-react-dom@^17.0.2:
+react-dom@^17.0.0, react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -11064,16 +11056,18 @@ react-scripts@4.0.3:
   optionalDependencies:
     fsevents "^2.1.3"
 
-react-sortable-tree@^2.7.1:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/react-sortable-tree/-/react-sortable-tree-2.8.0.tgz#9901711778628d0546c045f845216480507c366a"
-  integrity sha512-gTjwxRNt7z0FC76KeNTnGqx1qUSlV3N78mMPRushBpSUXzZYhiFNsWHUIruyPnaAbw4SA7LgpItV7VieAuwDpw==
+react-sortable-tree-patch-react-17@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/react-sortable-tree-patch-react-17/-/react-sortable-tree-patch-react-17-2.9.0.tgz#d80ef61a5b941a8cc52570f6aa2c3059076d9f21"
+  integrity sha512-Ngtdbf78OfjqCxLj7+N+K4zM9d1mQ/tfnUsOfICFDzNa5JHg6AjixAj69ijvz0ykEiA9lYop+0Fm4KCOqCdlKA==
   dependencies:
-    frontend-collective-react-dnd-scrollzone "^1.0.2"
     lodash.isequal "^4.5.0"
     prop-types "^15.6.1"
+    react "^17.0.0"
     react-dnd "^11.1.3"
     react-dnd-html5-backend "^11.1.3"
+    react-dnd-scrollzone-patch-react-17 "^1.0.2"
+    react-dom "^17.0.0"
     react-lifecycles-compat "^3.0.4"
     react-virtualized "^9.21.2"
 
@@ -11113,16 +11107,7 @@ react-virtualized@^9.21.2:
     prop-types "^15.7.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.3.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
-react@^17.0.2:
+react@^17.0.0, react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
@@ -11648,14 +11633,6 @@ saxes@^5.0.0:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
-
-scheduler@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.20.2:
   version "0.20.2"
