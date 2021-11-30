@@ -1,7 +1,18 @@
 import React from 'react'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { styled } from '@mui/material/styles'
+import InputBase from '@mui/material/InputBase'
 import { map } from 'lodash'
+
+const WeekInput = styled(InputBase)(() => ({
+  '& .MuiInputBase-input': {
+    color: 'white'
+  },
+  '& .MuiSelect-icon': {
+    color: 'white'
+  }
+}));
 
 function WeekPicker(
   props: {
@@ -34,9 +45,11 @@ function WeekPicker(
 
   return (
     <Select
+      variant='standard'
       value={week.toString()}
       onChange={onChange}
       disableUnderline
+      input={<WeekInput />}
     >
       {weekOptions}
     </Select>
