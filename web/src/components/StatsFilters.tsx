@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
-import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core'
-import FilterListIcon from '@material-ui/icons/FilterList'
+import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material'
+import FilterListIcon from '@mui/icons-material/FilterList'
 import { useMediaQuery } from 'react-responsive'
 
 const StatsFilters = ({data, changeWeek}: any) => {
@@ -16,17 +16,15 @@ const StatsFilters = ({data, changeWeek}: any) => {
   if (isMobile) {
     return (
       <React.Fragment>
-        <IconButton onClick={() => openFilters(true)}>
+        <IconButton onClick={() => openFilters(true)} size="large">
           <FilterListIcon style={{color: "white"}} />
         </IconButton>
         <Dialog
-          disableBackdropClick
           disableEscapeKeyDown
           maxWidth="sm"
           fullWidth={true}
           open={filtersOpen}
-          onClose={() => openFilters(false)}
-        >
+          onClose={() => openFilters(false)}>
           <DialogTitle>Filters</DialogTitle>
           <DialogContent className="filters">
             <LeaguePicker onChange={() => openFilters(false)}/>
@@ -39,7 +37,7 @@ const StatsFilters = ({data, changeWeek}: any) => {
           </DialogActions>
         </Dialog>
       </React.Fragment>
-    )
+    );
   } else {
     return (
       <React.Fragment>

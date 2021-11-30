@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuItem from '@material-ui/core/MenuItem'
-import Select from '@material-ui/core/Select'
+import MenuItem from '@mui/material/MenuItem'
+import Select from '@mui/material/Select'
 import { uniq, sortBy } from 'lodash'
 
 interface TeamPickerProps {
