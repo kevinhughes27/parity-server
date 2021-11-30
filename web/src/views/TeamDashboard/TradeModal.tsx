@@ -75,19 +75,21 @@ export default function TradeModal(props: TradeModalProps) {
                 <TextField {...params} variant="outlined" fullWidth />
               )}
               getOptionLabel={option => option.name}
-              renderOption={option => {
+              renderOption={(props, option) => {
                 const diff = option.salary - playerA.salary
                 const color = diff >= 0 ? '#00e676' : '#f44336'
                 const prefix = diff >= 0 ? '+ $' : '- $'
                 const value = Math.abs(diff)
 
                 return (
-                  <span style={optionStyle}>
-                    <span>{option.name}</span>
-                    <span style={{color, paddingRight: 30}}>
-                      {format({prefix})(value)}
+                  <li {...props}>
+                    <span style={optionStyle}>
+                      <span>{option.name}</span>
+                      <span style={{color, paddingRight: 30}}>
+                        {format({prefix})(value)}
+                      </span>
                     </span>
-                  </span>
+                  </li>
                 )
              }}
             />
