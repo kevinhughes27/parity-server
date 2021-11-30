@@ -67,6 +67,7 @@ export default function TradeModal(props: TradeModalProps) {
               Trade {playerA.name} for:
             </DialogContentText>
             <Autocomplete
+              freeSolo
               value={playerB}
               options={options}
               onChange={updateTrade}

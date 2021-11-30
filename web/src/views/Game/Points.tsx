@@ -189,6 +189,7 @@ export default function Points(props: {game: Game}) {
             Focus Player:
           </Typography>
           <Autocomplete
+            freeSolo
             value={focus}
             options={players}
             style={{ width: 200, marginTop: 8 }}
