@@ -72,8 +72,15 @@ function BarChart(props: BarChartProps) {
   };
 
   return (
-    <div>
-      <FormControl variant="outlined">
+    <div style={{position: 'relative'}}>
+      <FormControl variant="outlined" sx={{
+          margin: 2,
+          minWidth: 120,
+          position: 'absolute',
+          top: 20,
+          right: 20,
+          background: 'white'
+        }}>
         <InputLabel id="stat-select">
           Stat
         </InputLabel>
