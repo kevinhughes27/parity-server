@@ -1,9 +1,8 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import InputLabel from '@material-ui/core/InputLabel'
-import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
-import Select from '@material-ui/core/Select'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useMediaQuery } from 'react-responsive'
 import { Bar } from 'react-chartjs-2'
 import { map, keys, sortBy } from 'lodash'
@@ -15,30 +14,7 @@ interface BarChartProps {
   colors: string[];
 }
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    marginTop: 20,
-    textAlign: 'right',
-    position: 'relative'
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-    position: 'absolute',
-    top: 20,
-    right: 20,
-    background: 'white'
-  },
-  select: {
-    textAlign: 'left'
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-}));
-
 function BarChart(props: BarChartProps) {
-  const classes = useStyles();
   const isMobile = useMediaQuery({ query: '(max-device-width: 480px)' });
 
   const [stat, setStat] = React.useState('goals');
@@ -91,13 +67,20 @@ function BarChart(props: BarChartProps) {
     ? { height: 200 }
     : { height: 340 }
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setStat(event.target.value as string);
   };
 
   return (
-    <div className={classes.container}>
-      <FormControl variant="outlined" className={classes.formControl}>
+    <div style={{position: 'relative'}}>
+      <FormControl variant="outlined" sx={{
+          margin: 2,
+          minWidth: 120,
+          position: 'absolute',
+          top: 20,
+          right: 20,
+          background: 'white'
+        }}>
         <InputLabel id="stat-select">
           Stat
         </InputLabel>
@@ -106,7 +89,6 @@ function BarChart(props: BarChartProps) {
           label="Stat"
           value={stat}
           onChange={handleChange}
-          className={classes.select}
         >
           <MenuItem value={'goals'}>Goals</MenuItem>
           <MenuItem value={'assists'}>Assists</MenuItem>

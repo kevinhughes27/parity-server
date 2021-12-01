@@ -1,24 +1,22 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import MenuItem from '@material-ui/core/MenuItem'
-import Select from '@material-ui/core/Select'
+import MenuItem from '@mui/material/MenuItem'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { styled } from '@mui/material/styles'
+import InputBase from '@mui/material/InputBase'
 import { useLeague } from '../hooks/league'
 import { leagues } from '../api'
 import { map } from 'lodash'
 
-const useStyles = makeStyles((theme) => ({
-  selectRoot: {
-    color: 'white',
-    fontSize: 14,
-    minWidth: 80
+const LeagueInput = styled(InputBase)(() => ({
+  '& .MuiInputBase-input': {
+    color: 'white'
   },
-  icon: {
+  '& .MuiSelect-icon': {
     color: 'white'
   }
 }));
 
 function LeaguePicker(props: { onChange?: (league: string) => void}) {
-  const classes = useStyles(props);
   const [league, setLeague] = useLeague();
 
   const leagueOptions = map(leagues, (league) => {
@@ -29,7 +27,7 @@ function LeaguePicker(props: { onChange?: (league: string) => void}) {
     )
   });
 
-  const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const onChange = (event: SelectChangeEvent) => {
     setLeague(event.target.value as string);
     props.onChange && props.onChange(event.target.value as string);
   };
@@ -39,15 +37,11 @@ function LeaguePicker(props: { onChange?: (league: string) => void}) {
   return (
     <div style={{paddingRight: 20}}>
       <Select
+        variant='standard'
         value={league}
         onChange={onChange}
-        classes={{ root: classes.selectRoot }}
         disableUnderline
-        inputProps={{
-          classes: {
-            icon: classes.icon,
-          }
-        }}
+        input={<LeagueInput />}
       >
         {leagueOptions}
       </Select>

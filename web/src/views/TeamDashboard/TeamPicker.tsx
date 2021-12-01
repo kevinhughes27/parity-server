@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuItem from '@material-ui/core/MenuItem'
-import Select from '@material-ui/core/Select'
+import MenuItem from '@mui/material/MenuItem'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { uniq, sortBy } from 'lodash'
 
 interface TeamPickerProps {
@@ -13,7 +13,7 @@ export default function TeamPicker(props: TeamPickerProps) {
   const { team, allPlayers }  = props;
   const teams = sortBy(uniq(allPlayers.map(p => p.team)));
 
-  const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const onChange = (event: SelectChangeEvent) => {
     props.onChange(event.target.value as string);
   };
 

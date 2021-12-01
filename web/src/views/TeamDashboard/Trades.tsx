@@ -1,7 +1,7 @@
 import React from 'react'
-import IconButton from '@material-ui/core/IconButton'
-import SwapHorizIcon from '@material-ui/icons/SwapHoriz'
-import DeleteIcon from '@material-ui/icons/Delete'
+import IconButton from '@mui/material/IconButton'
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz'
+import DeleteIcon from '@mui/icons-material/Delete'
 import { Player } from '../../api'
 
 interface Trade {
@@ -63,12 +63,12 @@ export default function Trades(props: TradesProps) {
           </div>
 
           <div style={deleteIconStyle}>
-            <IconButton color='primary' onClick={() => {removeTrade(trade) }}>
+            <IconButton color='primary' onClick={() => {removeTrade(trade) }} size="large">
               <DeleteIcon />
             </IconButton>
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }

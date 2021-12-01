@@ -1,16 +1,15 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import MenuItem from '@material-ui/core/MenuItem'
-import Select from '@material-ui/core/Select'
+import MenuItem from '@mui/material/MenuItem'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { styled } from '@mui/material/styles'
+import InputBase from '@mui/material/InputBase'
 import { map } from 'lodash'
 
-const useStyles = makeStyles((theme) => ({
-  selectRoot: {
-    color: 'white',
-    fontSize: 14,
-    minWidth: 80
+const WeekInput = styled(InputBase)(() => ({
+  '& .MuiInputBase-input': {
+    color: 'white'
   },
-  icon: {
+  '& .MuiSelect-icon': {
     color: 'white'
   }
 }));
@@ -22,11 +21,10 @@ function WeekPicker(
     onChange: (week: number) => void
   }
 ) {
-  const classes = useStyles(props)
   const { week, weeks } = props
 
-  const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    props.onChange(event.target.value as number);
+  const onChange = (event: SelectChangeEvent) => {
+    props.onChange(parseInt(event.target.value));
   };
 
   const weekText = (num: number) => {
@@ -47,15 +45,11 @@ function WeekPicker(
 
   return (
     <Select
-      value={week}
+      variant='standard'
+      value={week.toString()}
       onChange={onChange}
-      classes={{ root: classes.selectRoot }}
       disableUnderline
-      inputProps={{
-        classes: {
-          icon: classes.icon,
-        }
-      }}
+      input={<WeekInput />}
     >
       {weekOptions}
     </Select>

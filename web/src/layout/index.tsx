@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Hidden from '@material-ui/core/Hidden';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Hidden from '@mui/material/Hidden';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import NavItems from './NavItems';
 
 const useStyles = makeStyles((theme) => ({
@@ -36,12 +36,12 @@ function Layout(props: {children?: React.ReactNode}) {
           id="side-bar"
           className={classes.menuButton}
           onClick={() => setSideNavOpen(true)}
-        >
+          size="large">
           <MenuIcon />
         </IconButton>
 
         <Typography variant="h5" className={classes.title}>
-          <Hidden smDown >Parity 2.0 </Hidden>
+          <Hidden mdDown >Parity 2.0 </Hidden>
         </Typography>
 
         {props.children ? props.children : null}

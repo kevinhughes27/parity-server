@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
-import TextField from '@material-ui/core/TextField'
-import Autocomplete from '@material-ui/lab/Autocomplete'
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
+import TextField from '@mui/material/TextField'
+import Autocomplete from '@mui/material/Autocomplete'
 import format from 'format-number'
 import { sortBy, findIndex } from 'lodash'
 import { Player } from '../../api'
@@ -67,6 +67,7 @@ export default function TradeModal(props: TradeModalProps) {
               Trade {playerA.name} for:
             </DialogContentText>
             <Autocomplete
+              freeSolo
               value={playerB}
               options={options}
               onChange={updateTrade}
@@ -74,19 +75,21 @@ export default function TradeModal(props: TradeModalProps) {
                 <TextField {...params} variant="outlined" fullWidth />
               )}
               getOptionLabel={option => option.name}
-              renderOption={option => {
+              renderOption={(props, option) => {
                 const diff = option.salary - playerA.salary
                 const color = diff >= 0 ? '#00e676' : '#f44336'
                 const prefix = diff >= 0 ? '+ $' : '- $'
                 const value = Math.abs(diff)
 
                 return (
-                  <span style={optionStyle}>
-                    <span>{option.name}</span>
-                    <span style={{color, paddingRight: 30}}>
-                      {format({prefix})(value)}
+                  <li {...props}>
+                    <span style={optionStyle}>
+                      <span>{option.name}</span>
+                      <span style={{color, paddingRight: 30}}>
+                        {format({prefix})(value)}
+                      </span>
                     </span>
-                  </span>
+                  </li>
                 )
              }}
             />

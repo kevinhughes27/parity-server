@@ -32,6 +32,9 @@ html, body, #root {
   top: 12px;
   right: 6px;
 }
+.MuiTableCell-head > span > button {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
 
 /* Responsive Table */
 /* This modifies how the table renders by rotatating it so the
