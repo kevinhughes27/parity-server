@@ -1,6 +1,22 @@
 import React from 'react'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import { StatLine } from '../../api'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend
+)
 
 interface ChartProps {
   labels: string[];
@@ -36,8 +52,10 @@ export default function Chart(props: ChartProps) {
   }
 
   const options = {
-    legend: {
-      display: false
+    plugins: {
+      legend: {
+        display: false
+      }
     }
   }
 

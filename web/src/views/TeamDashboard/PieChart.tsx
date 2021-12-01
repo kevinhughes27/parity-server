@@ -1,7 +1,10 @@
 import React from 'react'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 import format from 'format-number'
 import { colors, underColors, overColors } from '../../helpers'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 interface PieChartProps {
   players: {name: string, salary: number}[]
@@ -29,22 +32,24 @@ export default function PieChart(props: PieChartProps) {
   };
 
   const options = {
-    legend: {
-      display: false
-    },
-    tooltips: {
-      callbacks: {
-        label: (tooltipItem: any, data: any) => {
-          const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
-          const label = data.labels[tooltipItem.index]
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          label: (tooltipItem: any, data: any) => {
+            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+            const label = data.labels[tooltipItem.index]
 
-          const salary = Math.round(value)
-          const text = format({prefix: '$'})(salary)
+            const salary = Math.round(value)
+            const text = format({prefix: '$'})(salary)
 
-          return label + ' ' + text
+            return label + ' ' + text
+          }
         }
       }
-    },
+    }
   };
 
   return <Pie data={data} height={340} options={options}/>

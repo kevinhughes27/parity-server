@@ -4,9 +4,25 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useMediaQuery } from 'react-responsive'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import { map, keys, sortBy } from 'lodash'
 import { Stats } from '../../api'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend
+)
 
 interface BarChartProps {
   stats: Stats;
@@ -37,29 +53,31 @@ function BarChart(props: BarChartProps) {
     responsive: true,
     maintainAspectRatio: false,
     aspectRatio: 1,
-    legend: {
-      display: false
-    },
-    tooltips: {
-      callbacks: {
-        label: (tooltipItem: any, data: any) => {
-          return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          label: (tooltipItem: any, data: any) => {
+            return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+          }
         }
-      }
+      },
     },
     scales: {
-      xAxes: [{
+      x: {
         ticks: {
           display: false
         }
-      }],
-      yAxes: [{
+      },
+      y: {
         ticks: {
           min: 0,
           stepSize: 1,
           max: props.statMaxes[stat]
         }
-      }]
+      }
     }
   }
 

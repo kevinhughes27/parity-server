@@ -1,7 +1,23 @@
 import React from 'react'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import format from 'format-number'
 import { colors, underColors, overColors } from '../../helpers'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend
+)
 
 interface BarChartProps {
   players: {name: string, salary: number}[]
@@ -30,26 +46,28 @@ export default function BarChart(props: BarChartProps) {
   };
 
   const options = {
-    legend: {
-      display: false
-    },
-    tooltips: {
-      callbacks: {
-        label: (tooltipItem: any, data: any) => {
-          const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
-          const salary = Math.round(value)
-          const text = format({prefix: '$'})(salary)
-          return text
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          label: (tooltipItem: any, data: any) => {
+            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+            const salary = Math.round(value)
+            const text = format({prefix: '$'})(salary)
+            return text
+          }
         }
-      }
+      },
     },
     scales: {
-      xAxes: [{
+      x: {
         ticks: {
           autoSkip: false
         }
-      }],
-      yAxes: [{
+      },
+      y: {
         ticks: {
           min: 0,
           max: maxSalary,
@@ -59,7 +77,7 @@ export default function BarChart(props: BarChartProps) {
             return  text
           }
         }
-      }]
+      }
     }
   }
 
