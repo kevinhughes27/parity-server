@@ -4,7 +4,11 @@ import werkzeug
 werkzeug.cached_property = werkzeug.utils.cached_property
 
 from flask_testing import TestCase as FlaskTest
+from flask_testing import LiveServerTestCase
 from snapshottest import TestCase as SnapShotTest
+
+from selenium import webdriver
+from urllib.request import urlopen
 import unittest
 import os
 
@@ -13,7 +17,8 @@ os.environ['APP_SETTINGS'] = 'config.TestingConfig'
 from app import app
 from models import db, Game, Player, Stats, League
 
-class ServerTests(FlaskTest, SnapShotTest):
+
+class BackendTests(FlaskTest, SnapShotTest):
     def create_app(self):
         return app
 
@@ -134,6 +139,50 @@ class ServerTests(FlaskTest, SnapShotTest):
 
         response = self.client.get('/api/1/schedule')
         assert response.status_code == 200
+
+
+class EndToEndTests(FlaskTest, LiveServerTestCase):
+    def create_app(self):
+        return app
+
+    def setUp(self):
+        db.create_all()
+        self.init_league()
+        self.upload_game('../data/test/mini_game.json')
+
+        self.driver = webdriver.Chrome()
+        self.driver.get(self.get_server_url())
+
+    def tearDown(self):
+        db.session.remove()
+        db.drop_all()
+        self.driver.quit()
+
+    def init_league(self):
+        league = League()
+        league.id = 15
+        league.zuluru_id = 1
+        league.name = 'Test'
+        league.stat_values = 'v2'
+        league.salary_calc = 'pro_rate'
+        db.session.add(league)
+        db.session.commit()
+
+    def upload_game(self, data_file):
+        with open(data_file) as f:
+            game_str = f.read()
+
+        response = self.client.post('/submit_game', data=game_str, content_type='application/json')
+        assert response.status_code == 201
+
+    def test_frontend(self):
+        response = urlopen(self.get_server_url())
+        self.assertEqual(response.code, 200)
+
+        title = self.driver.find_element_by_class_name("MuiAppBar-positionStatic").text
+        assert "Parity 2.0" in title
+        __import__('pdb').set_trace()
+
 
 if __name__ == '__main__':
     unittest.main()
