@@ -24,6 +24,7 @@ class TestBase:
     def create_app(self):
         return app
 
+
     def init_league(self, **kwargs):
         league = League()
         league.id = kwargs.get("league_id", 1)
@@ -33,6 +34,7 @@ class TestBase:
         league.salary_calc = 'pro_rate'
         db.session.add(league)
         db.session.commit()
+
 
     def upload_game(self, data_file, **kwargs):
         fixture_path = pathlib.Path(__file__).parent / "../data/test" / data_file
@@ -161,6 +163,7 @@ class FrontendTests(TestBase, FlaskTest, LiveServerTestCase):
         self.upload_game('mini_game.json', league_id=15)
 
         self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(2)
         self.driver.get(self.get_server_url())
 
     def tearDown(self):
@@ -168,12 +171,21 @@ class FrontendTests(TestBase, FlaskTest, LiveServerTestCase):
         db.drop_all()
         self.driver.quit()
 
-    def test_frontend(self):
+    def test_stats(self):
         response = urlopen(self.get_server_url())
         self.assertEqual(response.code, 200)
+        assert "Parity 2.0" in self.driver.title
 
-        title = self.driver.find_element_by_class_name("MuiAppBar-positionStatic").text
-        assert "Parity 2.0" in title
+        player_name = "Jim Robinson"
+        row = self.driver.find_element_by_xpath("//div[text()='%s']/ancestor::tr" % player_name)
+        stats = row.text.split("\n")
+        assert stats[2] == 1 # 1 goal
+
+    def test_search(self):
+        pass
+
+    def test_nav(self):
+        pass
 
 
 if __name__ == '__main__':

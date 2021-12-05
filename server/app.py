@@ -37,15 +37,9 @@ def current_league():
 # Submit Game
 @app.route('/submit_game', methods=['POST'])
 def upload():
-    # save the game to the database
-    game = save_game(request.json)
-
-    # calculate and save stats
-    stats = StatsCalculator(game).run()
-
-    # clear the stats cache
-    cache.clear()
-
+    game = save_game(request.json) # save the game to the database
+    stats = StatsCalculator(game).run() # calculate and save stats
+    cache.clear() # clear the stats cache
     return ('', 201)
 
 
