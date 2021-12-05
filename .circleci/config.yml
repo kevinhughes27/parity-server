@@ -10,7 +10,8 @@ jobs:
     docker:
       - image: cimg/python:3.8-browsers
     steps:
-      - browser-tools/install-browser-tools
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout
       - python/install-packages:
           pkg-manager: pip
