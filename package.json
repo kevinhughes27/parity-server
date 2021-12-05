@@ -2,8 +2,8 @@
   "name": "parity-server",
   "private": true,
   "engines": {
-    "node": "14.18.2",
-    "yarn": "1.22.15"
+    "node": "^14.17.5",
+    "yarn": "%1.22.5"
   },
   "workspaces": [
     "web"
