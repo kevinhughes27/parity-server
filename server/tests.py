@@ -179,7 +179,7 @@ class FrontendTests(TestBase, FlaskTest, LiveServerTestCase):
         player_name = "Jim Robinson"
         row = self.driver.find_element_by_xpath("//div[text()='%s']/ancestor::tr" % player_name)
         stats = row.text.split("\n")
-        assert stats[2] == 1 # 1 goal
+        assert stats[2] == '1' # 1 goal
 
     def test_search(self):
         pass
