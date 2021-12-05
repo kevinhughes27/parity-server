@@ -6,12 +6,12 @@ from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
 
 import os
-import json
+import pathlib
 import datetime
 
 
 # Constants
-react_app_path = '../web/build'
+react_app_path = pathlib.Path(__file__).parent / "../web/build"
 league_utc_offset = -5
 
 
@@ -159,7 +159,7 @@ def react_app(path):
     if(path == ""):
         return send_from_directory(react_app_path, 'index.html')
     else:
-        if(os.path.exists(react_app_path + '/' + path)):
+        if(os.path.exists(react_app_path / path)):
             return send_from_directory(react_app_path, path)
         else:
             return send_from_directory(react_app_path, 'index.html')

@@ -10,18 +10,48 @@ from snapshottest import TestCase as SnapShotTest
 from selenium import webdriver
 from urllib.request import urlopen
 import unittest
+import pathlib
+import json
 import os
 
 os.environ['APP_SETTINGS'] = 'config.TestingConfig'
 
 from app import app
-from models import db, Game, Player, Stats, League
+from models import db, League
 
 
-class BackendTests(FlaskTest, SnapShotTest):
+class TestBase:
     def create_app(self):
         return app
 
+    def init_league(self, **kwargs):
+        league = League()
+        league.id = kwargs.get("league_id", 1)
+        league.zuluru_id = 1
+        league.name = 'Test'
+        league.stat_values = 'v2'
+        league.salary_calc = 'pro_rate'
+        db.session.add(league)
+        db.session.commit()
+
+    def upload_game(self, data_file, **kwargs):
+        fixture_path = pathlib.Path(__file__).parent / "../data/test" / data_file
+
+        with open(fixture_path) as f:
+            game_str = f.read()
+
+        game = json.loads(game_str)
+        for k in kwargs:
+            if k in game:
+                game[k] = kwargs[k]
+
+        game_str = json.dumps(game)
+
+        response = self.client.post('/submit_game', data=game_str, content_type='application/json')
+        assert response.status_code == 201
+
+
+class BackendTests(TestBase, FlaskTest, SnapShotTest):
     def setUp(self):
         db.create_all()
         self.init_league()
@@ -30,23 +60,6 @@ class BackendTests(FlaskTest, SnapShotTest):
         db.session.remove()
         db.drop_all()
 
-    def init_league(self):
-        league = League()
-        league.id = 1
-        league.zuluru_id = 1
-        league.name = 'Test'
-        league.stat_values = 'v2'
-        league.salary_calc = 'pro_rate'
-        db.session.add(league)
-        db.session.commit()
-
-    def upload_game(self, data_file):
-        with open(data_file) as f:
-            game_str = f.read()
-
-        response = self.client.post('/submit_game', data=game_str, content_type='application/json')
-        assert response.status_code == 201
-
     def get_stats(self):
         response = self.client.get('/api/1/stats')
         stats = response.json
@@ -54,55 +67,55 @@ class BackendTests(FlaskTest, SnapShotTest):
 
     # Tests
     def test_basic_point(self):
-        self.upload_game('data/test/basic_point.json')
+        self.upload_game('basic_point.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_callahan(self):
-        self.upload_game('data/test/callahan.json')
+        self.upload_game('callahan.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_catch_d(self):
-        self.upload_game('data/test/catch_d.json')
+        self.upload_game('catch_d.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_drop(self):
-        self.upload_game('data/test/drop.json')
+        self.upload_game('drop.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_half(self):
-        self.upload_game('data/test/half.json')
+        self.upload_game('half.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_mini_game(self):
-        self.upload_game('data/test/mini_game.json')
+        self.upload_game('mini_game.json')
 
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
     def test_mini_game2(self):
-        self.upload_game('data/test/mini_game2.json')
+        self.upload_game('mini_game2.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_throw_away(self):
-        self.upload_game('data/test/throw_away.json')
+        self.upload_game('throw_away.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
 
     def test_turnovers(self):
-        self.upload_game('data/test/turnovers.json')
+        self.upload_game('turnovers.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
 
@@ -114,7 +127,7 @@ class BackendTests(FlaskTest, SnapShotTest):
 
 
     def test_api_endpoints(self):
-        self.upload_game('data/test/mini_game2.json')
+        self.upload_game('mini_game2.json')
 
         response = self.client.get('/api/1/weeks')
         assert response.status_code == 200
@@ -129,7 +142,7 @@ class BackendTests(FlaskTest, SnapShotTest):
         assert response.status_code == 200
 
         response = self.client.get('/api/1/games?includePoints=true')
-        assert response.status_code == 200
+        assert response.status_code == 200#
 
         response = self.client.get('/api/1/games/1')
         assert response.status_code == 200
@@ -141,14 +154,11 @@ class BackendTests(FlaskTest, SnapShotTest):
         assert response.status_code == 200
 
 
-class EndToEndTests(FlaskTest, LiveServerTestCase):
-    def create_app(self):
-        return app
-
+class FrontendTests(TestBase, FlaskTest, LiveServerTestCase):
     def setUp(self):
         db.create_all()
-        self.init_league()
-        self.upload_game('../data/test/mini_game.json')
+        self.init_league(league_id=15)
+        self.upload_game('mini_game.json', league_id=15)
 
         self.driver = webdriver.Chrome()
         self.driver.get(self.get_server_url())
@@ -158,30 +168,12 @@ class EndToEndTests(FlaskTest, LiveServerTestCase):
         db.drop_all()
         self.driver.quit()
 
-    def init_league(self):
-        league = League()
-        league.id = 15
-        league.zuluru_id = 1
-        league.name = 'Test'
-        league.stat_values = 'v2'
-        league.salary_calc = 'pro_rate'
-        db.session.add(league)
-        db.session.commit()
-
-    def upload_game(self, data_file):
-        with open(data_file) as f:
-            game_str = f.read()
-
-        response = self.client.post('/submit_game', data=game_str, content_type='application/json')
-        assert response.status_code == 201
-
     def test_frontend(self):
         response = urlopen(self.get_server_url())
         self.assertEqual(response.code, 200)
 
         title = self.driver.find_element_by_class_name("MuiAppBar-positionStatic").text
         assert "Parity 2.0" in title
-        __import__('pdb').set_trace()
 
 
 if __name__ == '__main__':
