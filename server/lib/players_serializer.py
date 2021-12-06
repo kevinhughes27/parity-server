@@ -1,4 +1,4 @@
-from models import Player, Stats, League
+from server.models import Player, Stats, League
 
 def build_players_response(league_id):
     league = League.query.filter_by(id=league_id).first()

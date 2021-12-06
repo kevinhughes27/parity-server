@@ -3,7 +3,7 @@ import requests
 import getpass
 import os, re
 from bs4 import BeautifulSoup
-from models import db, Team, Player, Matchup
+from server.models import db, Team, Player, Matchup
 
 class ZuluruSync:
     def __init__(self, league, player_db={}, division=False):

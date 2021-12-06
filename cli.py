@@ -2,12 +2,12 @@
 
 import click
 import requests
-import urllib.request, json, glob, sys, os, re, io, csv
+import urllib.request, json, glob, os, re, io, csv
 from collections import defaultdict
 
-from app import app, save_game, cache
-from models import db, League, Team, Player
-from lib import ZuluruSync, PlayerDb, StatsCalculator
+from server.app import app, save_game, cache
+from server.models import db, League, Team, Player
+from server.lib import ZuluruSync, PlayerDb, StatsCalculator
 
 current_league_zid = 860
 current_league_id = 15

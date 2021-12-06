@@ -22,7 +22,7 @@ jobs:
           command: yarn build
       - run:
           name: Run tests
-          command: python server/tests.py
+          command: nosetests
 
 workflows:
   sample:

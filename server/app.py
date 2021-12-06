@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, Stats, Team, Player, League, Matchup
-from lib import StatsCalculator
-from lib import build_stats_response, build_teams_response, build_players_response
+from server.models import db, Game, Stats, Team, Player, League, Matchup
+from server.lib import StatsCalculator
+from server.lib import build_stats_response, build_teams_response, build_players_response
 
 import os
 import pathlib
@@ -17,7 +17,7 @@ league_utc_offset = -5
 
 # Settings
 if os.environ.get('APP_SETTINGS') == None:
-    os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
+    os.environ['APP_SETTINGS'] = 'server.config.DevelopmentConfig'
 
 
 # Init
@@ -157,14 +157,3 @@ def react_app(path):
             return send_from_directory(react_app_path, path)
         else:
             return send_from_directory(react_app_path, 'index.html')
-
-
-# Boot server for Development / Test
-if __name__ == '__main__':
-
-    # Auto create development database
-    if app.config.get('DEVELOPMENT'):
-        with app.app_context():
-            db.create_all()
-
-    app.run(use_reloader=True)
