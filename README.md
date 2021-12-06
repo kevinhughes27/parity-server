@@ -12,7 +12,7 @@ Server Setup
 1. You will need `python` (version 3) (with `pip`) and `docker` (with `docker-compose`) on your local machine.
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the required services run `sudo docker-compose up -d`
-3. Run the python server with this command `python run.py`
+3. Run the python server with this command `python cli.py run`
 4. Create your database by running `python cli.py init-db` and then populate it with:
     * `python cli.py create-leagues`
     * `python cli.py zuluru-sync`

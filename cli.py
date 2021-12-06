@@ -19,6 +19,15 @@ def cli():
     pass
 
 
+# development server
+@cli.command()
+def run():
+    with app.app_context():
+        db.create_all() # auto create development database
+
+    app.run(use_reloader=True)
+
+
 @cli.command()
 def init_db():
     click.echo('Initializing database...')
