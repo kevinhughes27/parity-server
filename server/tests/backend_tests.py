@@ -4,12 +4,6 @@ from .test_base import TestBase
 
 
 class StatsSnapshotTests(TestBase, FlaskTest, SnapShotTest):
-    def get_stats(self):
-        response = self.client.get('/api/1/stats')
-        stats = response.json
-        return stats
-
-
     def test_basic_point(self):
         self.upload_game('basic_point.json')
         stats = self.get_stats()

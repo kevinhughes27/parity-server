@@ -1,11 +1,8 @@
-import pathlib
-import json
-import os
-
-os.environ['APP_SETTINGS'] = 'server.config.TestingConfig'
-
 from server.app import app
 from server.models import db, League
+import pathlib
+import json
+
 
 class TestBase:
     def create_app(self):
@@ -48,3 +45,9 @@ class TestBase:
 
         response = self.client.post('/submit_game', data=game_str, content_type='application/json')
         assert response.status_code == 201
+
+
+    def get_stats(self):
+        response = self.client.get('/api/1/stats')
+        stats = response.json
+        return stats
