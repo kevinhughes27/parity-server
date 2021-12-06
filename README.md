@@ -12,11 +12,11 @@ Server Setup
 1. You will need `python` (version 3) (with `pip`) and `docker` (with `docker-compose`) on your local machine.
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
 3. Start the required services run `sudo docker-compose up -d`
-3. Run the python server with this command `python server/app.py`
-4. Create your database by running `python server/cli.py init-db` and then populate it with:
-    * `python server/cli.py create-leagues`
-    * `python server/cli.py zuluru-sync`
-    * `python server/cli.py game-sync`
+3. Run the python server with this command `python run.py`
+4. Create your database by running `python cli.py init-db` and then populate it with:
+    * `python cli.py create-leagues`
+    * `python cli.py zuluru-sync`
+    * `python cli.py game-sync`
 5. You can inspect available leagues at at `http://localhost:5000/api/leagues`
 6. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
 
@@ -47,7 +47,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database you can remove the docker volume or delete `server/postgres` and restart the python server.
 
-There is also an automated test suite which can be run using the `python test.py`.
+There is also an automated test suite which can be run with `nosetests`.
 
 
 Deploying
@@ -62,12 +62,12 @@ Operations
 To sync teams from Zuluru:
 
 ```
-heroku run python server/cli.py zuluru-sync
+heroku run python cli.py zuluru-sync
 ```
 
 To correct errors in the most recent week of stats do the following:
 
-    1. First backup the data locally `python server/cli.py backup --week 6`
+    1. First backup the data locally `python cli.py backup --week 6`
 
     2. Connect to the production database
 
@@ -82,7 +82,7 @@ To correct errors in the most recent week of stats do the following:
     DELETE FROM game WHERE week = 4 AND league_id = 15;
     ```
 
-    3. Lastly re-seed the given week after making the edits `python3 server/cli.py re-upload --prod True --week 9`
+    3. Lastly re-seed the given week after making the edits `python3 cli.py re-upload --prod True --week 9`
 
 
 To create a dump of the postgres database locally:
@@ -103,6 +103,7 @@ To restore a pg_dump on prod:
 heroku pg:backups:restore 'https://storage.googleapis.com/parity/pgdump' DATABASE_URL --app parity-server --confirm=parity-server
 ```
 
+
 Android Release
 ---------------
 
@@ -115,6 +116,7 @@ storePassword=
 ```
 
 Then choose Build -> Generate Signed Bundle/APK. Note the destination directory in the last step
+
 
 Contributing
 ------------
