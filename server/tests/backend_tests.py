@@ -2,6 +2,9 @@ from flask_testing import TestCase as FlaskTest
 from snapshottest import TestCase as SnapShotTest
 from .test_base import TestBase
 
+from server.app import app
+from flask_sqlalchemy import get_debug_queries
+
 
 class StatsSnapshotTests(TestBase, FlaskTest, SnapShotTest):
     def test_basic_point(self):
@@ -57,6 +60,28 @@ class StatsSnapshotTests(TestBase, FlaskTest, SnapShotTest):
         self.upload_game('turnovers.json')
         stats = self.get_stats()
         self.assertMatchSnapshot(stats)
+
+
+class PerfTests(TestBase, FlaskTest):
+    @app.after_request
+    def after_request(response):
+        queries = get_debug_queries()
+
+        global query_count
+        query_count = len(queries)
+
+        return response
+
+
+    def test_game_upload_queries(self):
+        self.upload_game('mini_game.json')
+        assert query_count == 201
+
+
+    def test_stats_serializer_queries(self):
+        self.upload_game('mini_game.json')
+        stats = self.get_stats()
+        assert query_count == 205
 
 
 class APITests(TestBase, FlaskTest):
