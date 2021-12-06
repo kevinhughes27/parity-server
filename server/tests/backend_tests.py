@@ -65,6 +65,7 @@ class StatsSnapshotTests(TestBase, FlaskTest, SnapShotTest):
 class PerfTests(TestBase, FlaskTest):
     @app.after_request
     def after_request(response):
+        global queries
         queries = get_debug_queries()
 
         global query_count
@@ -73,19 +74,32 @@ class PerfTests(TestBase, FlaskTest):
         return response
 
 
+    # this endpoint doesn't make any queries
+    # this shows that test setup etc is creeping in here
+    def test_current_league_queries(self):
+        self.client.get('/current_league')
+        self.assertEqual(query_count, 19)
+
+
     def test_game_upload_queries(self):
         self.upload_game('mini_game.json')
-        assert query_count == 201
+        self.assertEqual(query_count, 201)
 
 
     def test_stats_serializer_queries(self):
         self.upload_game('mini_game.json')
         stats = self.get_stats()
-        assert query_count == 205
+        self.assertEqual(query_count, 205)
 
 
 class APITests(TestBase, FlaskTest):
-    def test_league_endpoint(self):
+    def test_current_league_endpoint(self):
+        response = self.client.get('/current_league')
+        assert response.status_code == 200
+        self.assertEqual(response.json, {'league': {'id': 15, 'name': '2021/2022 Session 1', 'lineSize': 6}})
+
+
+    def test_leagues_endpoint(self):
         response = self.client.get('/api/leagues')
         assert response.status_code == 200
         assert response.json == [{'id': 1, 'name': 'Test', 'zuluru_id': 1}]
