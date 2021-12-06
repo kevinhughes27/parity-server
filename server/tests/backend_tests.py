@@ -65,7 +65,7 @@ class StatsSnapshotTests(TestBase, FlaskTest, SnapShotTest):
         self.assertMatchSnapshot(stats)
 
 
-class APISnapshotTests(TestBase, FlaskTest, SnapShotTest):
+class APITests(TestBase, FlaskTest):
     def test_league_endpoint(self):
         response = self.client.get('/api/leagues')
         assert response.status_code == 200
