@@ -9,8 +9,8 @@ from app import app, save_game, cache
 from models import db, League, Team, Player
 from lib import ZuluruSync, PlayerDb, StatsCalculator
 
-current_league_zid = 860
-current_league_id = 15
+current_league_zid = 864
+current_league_id = 16
 current_backup_dir = "data/ocua_21-22"
 
 
@@ -33,6 +33,7 @@ def init_db():
 def create_leagues():
     with app.app_context():
         league_params = [
+            { 'zuluru_id': 864, 'name': '2021/2022 Session 2', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 860, 'name': '2021/2022 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 804, 'name': '2021 Session 3', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
             { 'zuluru_id': 1292, 'name': '2020/2021 Session 1', 'stat_values': 'v2', 'salary_calc': 'pro_rate' },
