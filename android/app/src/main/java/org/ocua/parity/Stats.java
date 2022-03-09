@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import org.ocua.parity.customLayout.CustomLinearLayout;
+import org.ocua.parity.model.League;
 import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 
@@ -33,6 +34,7 @@ public class Stats extends Activity {
     private View.OnClickListener mainOnClickListener;
     private View.OnClickListener changeModeListener;
 
+    private League league;
     private Teams teams;
     private Bookkeeper bookkeeper;
 
@@ -60,13 +62,15 @@ public class Stats extends Activity {
     }
 
     private void loadIntent() {
-        teams = (Teams)this.getIntent().getSerializableExtra("teams");
-        bookkeeper = (Bookkeeper) this.getIntent().getSerializableExtra("bookkeeper");
+        Intent intent = this.getIntent();
+        league = (League) intent.getSerializableExtra("league");
+        teams = (Teams) intent.getSerializableExtra("teams");
+        bookkeeper = (Bookkeeper) intent.getSerializableExtra("bookkeeper");
         leftTeam = bookkeeper.homeTeam;
         rightTeam = bookkeeper.awayTeam;
 
-        leftPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("leftPlayers");
-        rightPlayers = (ArrayList<String>)this.getIntent().getSerializableExtra("rightPlayers");
+        leftPlayers = (ArrayList<String>) intent.getSerializableExtra("leftPlayers");
+        rightPlayers = (ArrayList<String>) intent.getSerializableExtra("rightPlayers");
     }
 
     private void renderGameBar() {
@@ -222,6 +226,7 @@ public class Stats extends Activity {
     private void editRosters() {
         Intent intent = new Intent(this, EditRosters.class);
         Bundle bundle = new Bundle();
+        bundle.putSerializable("league", league);
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("bookkeeper", bookkeeper);
         bundle.putStringArrayList("leftPlayers", leftPlayers);
@@ -246,6 +251,7 @@ public class Stats extends Activity {
     private void selectPlayers(Boolean flipPlayers) {
         Intent intent = new Intent(context, SelectPlayers.class);
         Bundle bundle = new Bundle();
+        bundle.putSerializable("league", league);
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("bookkeeper", bookkeeper);
         if (flipPlayers) {
