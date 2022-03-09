@@ -71,7 +71,7 @@ function GamesList() {
     return (
       <NavLink key={game.id} to={`/${game.league_id}/games/${game.id}`} className={classes.listItem}>
         <ListItem divider button>
-          <ListItemText>
+          <ListItemText style={{paddingRight: 60}}>
             { game.homeTeam } vs { game.awayTeam }
             <ListItemSecondaryAction>
               { game.homeScore } - { game.awayScore }
