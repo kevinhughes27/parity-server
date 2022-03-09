@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LeaguePicker from '../components/LeaguePicker'
 import WeekPicker from '../components/WeekPicker'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material'
+import Stack from '@mui/material/Stack'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import { useMediaQuery } from 'react-responsive'
 
@@ -26,9 +27,11 @@ const StatsFilters = ({data, changeWeek}: any) => {
           open={filtersOpen}
           onClose={() => openFilters(false)}>
           <DialogTitle>Filters</DialogTitle>
-          <DialogContent className="filters">
-            <LeaguePicker onChange={() => openFilters(false)}/>
-            <WeekPicker week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} />
+          <DialogContent style={{paddingTop: 10}}>
+            <Stack spacing={2}>
+              <LeaguePicker onChange={() => openFilters(false)} mobile={true} />
+              <WeekPicker week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} mobile={true} />
+            </Stack>
           </DialogContent>
           <DialogActions>
             <Button onClick={() => openFilters(false)} color="primary">
@@ -41,8 +44,8 @@ const StatsFilters = ({data, changeWeek}: any) => {
   } else {
     return (
       <React.Fragment>
-        <LeaguePicker/>
-        <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} />
+        <LeaguePicker mobile={false} />
+        <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} mobile={false} />
       </React.Fragment>
     )
   }

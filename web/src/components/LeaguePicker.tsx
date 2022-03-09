@@ -1,5 +1,7 @@
 import React from 'react'
 import MenuItem from '@mui/material/MenuItem'
+import InputLabel from '@mui/material/InputLabel'
+import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { styled } from '@mui/material/styles'
 import InputBase from '@mui/material/InputBase'
@@ -16,7 +18,12 @@ const LeagueInput = styled(InputBase)(() => ({
   }
 }));
 
-function LeaguePicker(props: { onChange?: (league: string) => void}) {
+function LeaguePicker(
+  props: {
+    onChange?: (league: string) => void;
+    mobile: boolean
+  }
+) {
   const [league, setLeague] = useLeague();
 
   const leagueOptions = map(leagues, (league) => {
@@ -34,19 +41,36 @@ function LeaguePicker(props: { onChange?: (league: string) => void}) {
 
   if (leagues.length === 1) return null
 
-  return (
-    <div style={{paddingRight: 20}}>
-      <Select
-        variant='standard'
-        value={league}
-        onChange={onChange}
-        disableUnderline
-        input={<LeagueInput />}
-      >
-        {leagueOptions}
-      </Select>
-    </div>
-  )
+  if (props.mobile) {
+    return (
+      <FormControl fullWidth>
+        <InputLabel id="league-picker-label">League</InputLabel>
+        <Select
+          labelId="league-picker-label"
+          id="league-picker"
+          value={league}
+          label="League"
+          onChange={onChange}
+        >
+          {leagueOptions}
+        </Select>
+      </FormControl>
+    )
+  } else {
+    return (
+      <div style={{paddingRight: 20}}>
+        <Select
+          variant='standard'
+          value={league}
+          onChange={onChange}
+          disableUnderline
+          input={<LeagueInput />}
+        >
+          {leagueOptions}
+        </Select>
+      </div>
+    )
+  }
 }
 
 export default LeaguePicker

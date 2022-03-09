@@ -12,26 +12,6 @@ html, body, #root {
 }
 
 /* Table */
-.filters {
-  margin: auto;
-}
-.filters .MuiSelect-root {
-  color: black !important;
-  width: 160px;
-  border: rgba(0, 0, 0, 0.87);
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 3px;
-  padding-left: 10px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-bottom: 10px;
-}
-.filters .MuiSelect-icon {
-  color: black !important;
-  top: 12px;
-  right: 6px;
-}
 .MuiTableCell-head > span > button {
   color: rgba(0, 0, 0, 0.87) !important;
 }
