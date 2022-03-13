@@ -180,6 +180,7 @@ public class SelectPlayers extends Activity {
     private void editRosters() {
         Intent intent = new Intent(this, EditRosters.class);
         Bundle bundle = new Bundle();
+        bundle.putSerializable("league", league);
         bundle.putSerializable("teams", teams);
         bundle.putSerializable("bookkeeper", bookkeeper);
         bundle.putStringArrayList("leftPlayers", leftPlayers);
@@ -230,6 +231,7 @@ public class SelectPlayers extends Activity {
 
             Intent intent = new Intent(context, Stats.class);
             Bundle bundle = new Bundle();
+            bundle.putSerializable("league", league);
             bundle.putSerializable("teams", teams);
             bundle.putSerializable("bookkeeper", bookkeeper);
             bundle.putSerializable("leftPlayers", leftPlayers);
@@ -260,6 +262,7 @@ public class SelectPlayers extends Activity {
 
                             Intent intent = new Intent(context, Stats.class);
                             Bundle bundle = new Bundle();
+                            bundle.putSerializable("league", league);
                             bundle.putSerializable("teams", teams);
                             bundle.putSerializable("bookkeeper", bookkeeper);
                             bundle.putSerializable("leftPlayers", leftPlayers);
