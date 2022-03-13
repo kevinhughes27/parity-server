@@ -101,7 +101,7 @@ class ZuluruSync:
     def sync_teams(self):
         session = self.login()
 
-        print('Syncing League ', self.league)
+        print('Syncing League zuluru_id =', self.league.zuluru_id)
         print('Fetching Teams')
 
         team_ids = self.get_team_ids(session)

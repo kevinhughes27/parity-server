@@ -87,7 +87,10 @@ def zuluru_sync_all():
     with app.app_context():
 
         leagues = [
-            # { 'zuluru_id': 1292, 'player_db_path': ''}, # synced with current
+            { 'zuluru_id': 864, }, # synced with current
+            { 'zuluru_id': 860, },
+            { 'zuluru_id': 804, },
+            { 'zuluru_id': 1292, 'player_db_path': ''},
             { 'zuluru_id': 702, 'player_db_path': 'data/ocua_19-20/players_db.csv'},
             { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
             { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
@@ -96,7 +99,8 @@ def zuluru_sync_all():
             { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
             { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
             { 'zuluru_id': 494, 'player_db_path': 'data/ocua_15-16/players_db.csv' },
-            { 'zuluru_id': 438, 'player_db_path': 'data/ocua_14-15/players_db.csv' }
+            { 'zuluru_id': 438, 'player_db_path': 'data/ocua_14-15/players_db.csv' },
+            # zuluru_id: 404 the original manual parity league?
         ]
 
         leagues.reverse()
