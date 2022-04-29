@@ -1,14 +1,10 @@
 import os
 
 def development_database_path():
-    use_postgres = False
-
     base_dir = os.path.abspath(os.path.dirname(__file__))
     db_path = os.path.join(base_dir, 'db.sqlite')
 
-    if use_postgres:
-        return "postgres://postgres:postgres@localhost:5432/"
-    elif os.name == 'nt':
+    if os.name == 'nt':
         return 'sqlite:///' + db_path
     else:
         return 'sqlite:////' + db_path

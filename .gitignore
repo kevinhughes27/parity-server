@@ -5,8 +5,11 @@ venv
 node_modules
 yarn-error.log
 
-# sqlite files
-*.sqlite
+# test db
+*test.sqlite
+
+# cache for zuluru syncs
+tmp
 
 # files to help with backfilling old roster syncs
 *players_db.csv
