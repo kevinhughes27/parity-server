@@ -101,7 +101,7 @@ class ZuluruSync:
     def sync_teams(self):
         session = self.login()
 
-        print('Syncing League ', self.league)
+        print('Syncing League zuluru_id =', self.league.zuluru_id)
         print('Fetching Teams')
 
         team_ids = self.get_team_ids(session)
@@ -120,13 +120,28 @@ class ZuluruSync:
 
 
     def sync_team(self, session, zuluru_id):
-        soup = self.get_soup(session, self.team_path + str(zuluru_id))
+        print(f'Syncing Team: {zuluru_id}')
+
+        soup = self.fetch_team(session, zuluru_id)
         name = soup.findAll('h2')[-1].get_text()
 
         team = self.update_or_create_team(zuluru_id, name)
 
         self.reset_team_players(team)
         self.sync_players(soup, team)
+
+
+    def fetch_team(self, session, zuluru_id):
+        page = self.team_path + str(zuluru_id)
+        cache = f"./tmp/{zuluru_id}"
+
+        if os.path.exists(cache):
+            soup = BeautifulSoup(open(cache).read())
+        else:
+            soup = self.get_soup(session, page)
+            open(cache, "a").write(str(soup))
+
+        return soup
 
 
     def reset_team_players(self, team):

@@ -87,22 +87,26 @@ def zuluru_sync_all():
     with app.app_context():
 
         leagues = [
-            # { 'zuluru_id': 1292, 'player_db_path': ''}, # synced with current
-            { 'zuluru_id': 702, 'player_db_path': 'data/ocua_19-20/players_db.csv'},
-            { 'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
-            { 'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv' },
-            { 'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv' },
-            { 'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv' },
-            { 'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
-            { 'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv' },
-            { 'zuluru_id': 494, 'player_db_path': 'data/ocua_15-16/players_db.csv' },
-            { 'zuluru_id': 438, 'player_db_path': 'data/ocua_14-15/players_db.csv' }
+            {'zuluru_id': 864, 'player_db_path': ''}, # synced with current
+            {'zuluru_id': 860, 'player_db_path': 'data/ocua_21-22/players_db.csv'},
+            {'zuluru_id': 804, 'player_db_path': 'data/ocua_2021/players_db.csv'},
+            {'zuluru_id': 1292, 'player_db_path': 'data/ocua_20-21/players_db.csv'},
+            {'zuluru_id': 702, 'player_db_path': 'data/ocua_19-20/players_db.csv'},
+            {'zuluru_id': 662, 'player_db_path': 'data/ocua_18-19/players_db.csv'},
+            {'zuluru_id': 647, 'player_db_path': 'data/ocua_18-19/players_db.csv'},
+            {'zuluru_id': 615, 'player_db_path': 'data/ocua_17-18/players_db.csv'},
+            {'zuluru_id': 596, 'player_db_path': 'data/ocua_17-18/players_db.csv'},
+            {'zuluru_id': 941, 'player_db_path': 'data/ocua_16-17/players_db.csv'},
+            {'zuluru_id': 940, 'player_db_path': 'data/ocua_16-17/players_db.csv'},
+            {'zuluru_id': 494, 'player_db_path': 'data/ocua_15-16/players_db.csv'},
+            {'zuluru_id': 438, 'player_db_path': 'data/ocua_14-15/players_db.csv'},
+            # zuluru_id: 404 the original manual parity league?
         ]
 
         leagues.reverse()
 
         is_division = [941, 940, 1292]
-        simple_player_db = [494, 438, 702]
+        simple_player_db = [494, 438, 702, 1292, 804, 860]
 
         for league in leagues:
             division = league['zuluru_id'] in is_division
@@ -123,19 +127,22 @@ def zuluru_sync_all():
 def game_sync():
     with app.app_context():
 
-        db.engine.execute("TRUNCATE game CASCADE;")
-
         leagues = [
-            { 'id': 12, 'data_folder': 'data/ocua_19-20/session2' },
-            { 'id': 10, 'data_folder': 'data/ocua_19-20/session1' },
-            { 'id': 9, 'data_folder': 'data/ocua_18-19/session2' },
-            { 'id': 8, 'data_folder': 'data/ocua_18-19/session1' },
-            { 'id': 7, 'data_folder': 'data/ocua_17-18/session2' },
-            { 'id': 6, 'data_folder': 'data/ocua_17-18/session1' },
-            { 'id': 5, 'data_folder': 'data/ocua_16-17/session2' },
-            { 'id': 4, 'data_folder': 'data/ocua_16-17/session1' },
-            { 'id': 3, 'data_folder': 'data/ocua_15-16' },
-            { 'id': 2, 'data_folder': 'data/ocua_14-15' }
+            {'id': 16, 'data_folder': 'data/ocua_21-22/session2'},
+            {'id': 15, 'data_folder': 'data/ocua_21-22/session1'},
+            {'id': 14, 'data_folder': 'data/ocua_2021'},
+            {'id': 13, 'data_folder': 'data/ocua_20-21'},
+            {'id': 12, 'data_folder': 'data/ocua_19-20/session2'},
+            {'id': 11, 'data_folder': 'data/tournament_2020'},
+            {'id': 10, 'data_folder': 'data/ocua_19-20/session1'},
+            {'id': 9, 'data_folder': 'data/ocua_18-19/session2'},
+            {'id': 8, 'data_folder': 'data/ocua_18-19/session1'},
+            {'id': 7, 'data_folder': 'data/ocua_17-18/session2'},
+            {'id': 6, 'data_folder': 'data/ocua_17-18/session1'},
+            {'id': 5, 'data_folder': 'data/ocua_16-17/session2'},
+            {'id': 4, 'data_folder': 'data/ocua_16-17/session1'},
+            {'id': 3, 'data_folder': 'data/ocua_15-16'},
+            {'id': 2, 'data_folder': 'data/ocua_14-15'}
         ]
 
         leagues.reverse()
