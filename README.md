@@ -9,18 +9,11 @@ production: [https://parity-server.herokuapp.com/](https://parity-server.herokua
 Server Setup
 ------------
 
-1. You will need `python` (version 3) (with `pip`) and `docker` (with `docker-compose`) on your local machine.
+1. You will need `python` (version 3) (with `pip`). You may need to run the following commands as `python3` explicitly
 2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
-3. Start the required services run `sudo docker-compose up -d`
 3. Run the python server with this command `python server/app.py`
-4. Create your database by running `python server/cli.py init-db` and then populate it with:
-    * `python server/cli.py create-leagues`
-    * `python server/cli.py zuluru-sync`
-    * `python server/cli.py game-sync`
 5. You can inspect available leagues at at `http://localhost:5000/api/leagues`
 6. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
-
-Roster sync requires certain zuluru privileges and some offline saved player data. If you need a full database ask for in #parity-dev and someone will help you out.
 
 On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python app.py`)
 
@@ -85,24 +78,6 @@ To correct errors in the most recent week of stats do the following:
     3. Lastly re-seed the given week after making the edits `python3 server/cli.py re_upload --prod True --week 9`
 
 
-To create a dump of the postgres database locally:
-
-```
-sudo docker exec parity-server_db_1 pg_dump -Fc --no-acl --no-owner -U postgres postgres > pgdump_name
-```
-
-
-To restore a pg_dump on prod:
-
-```
-# uploaded the pg backup to google cloud in a public bucket
-#
-#  allUsers
-#  Storage Object Viewer
-
-heroku pg:backups:restore 'https://storage.googleapis.com/parity/pgdump' DATABASE_URL --app parity-server --confirm=parity-server
-```
-
 Android Release
 ---------------
 
@@ -115,6 +90,7 @@ storePassword=
 ```
 
 Then choose Build -> Generate Signed Bundle/APK. Note the destination directory in the last step
+
 
 Contributing
 ------------
