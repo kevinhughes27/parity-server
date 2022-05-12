@@ -1,4 +1,4 @@
-from models import db, Stats, Player
+from ..models import db, Stats, Player
 
 class StatsCalculator:
     def __init__(self, game):

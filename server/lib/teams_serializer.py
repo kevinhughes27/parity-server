@@ -1,4 +1,4 @@
-from models import Team, Player
+from ..models import Team, Player
 
 def build_teams_response(league_id):
     teams = []

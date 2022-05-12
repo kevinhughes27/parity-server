@@ -1,9 +1,9 @@
 parity-server [![CircleCI](https://circleci.com/gh/kevinhughes27/parity-server/tree/master.svg?style=svg)](https://circleci.com/gh/kevinhughes27/parity-server/tree/master)
 =============
 
-[OCUA Parity League](http://www.ocua.ca/Parity-League) server code.
+[OCUA Parity League](http://www.ocua.ca/Parity-League) code.
 
-production: [https://parity-server.herokuapp.com/](https://parity-server.herokuapp.com/)
+production: [https://parity.ocua.ca](https://parity.ocua.ca)
 
 
 Server Setup
@@ -40,7 +40,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database you can reset the db file using git checkout.
 
-There is also an automated test suite which can be run using the `python test.py`.
+There is also an automated test suite which can be run using the `nosetests3`.
 
 
 Production Setup (AWS)
