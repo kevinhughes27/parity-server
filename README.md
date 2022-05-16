@@ -103,8 +103,27 @@ sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d parity.ocua.ca
 ```
 
-12. Then start gunicorn from the parity-server directory:
-`gunicorn --chdir=server --workers=2 --bind=127.0.0.1:8080 app:app`
+12. Create a systemd service for the app:
+
+`/lib/systemd/system/parity-server.service`:
+
+```
+[Unit]
+Description=Parity Server
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server/server
+ExecStart=gunicorn --workers=2 --bind=127.0.0.1:8080 app:app
+TimeoutSec=30
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+13. Then start with `systemctl`
 
 best references I found when setting this up:
 https://www.twilio.com/blog/deploy-flask-python-app-aws
@@ -118,7 +137,7 @@ Deploying
 2. pull the latest code on the server
 3. run pip3 install if python packages have changed
 4. rebuild frontend if required (clear out old files)
-5. restart the gunicorn process in tmux
+5. restart the gunicorn process with `systemctl`
 
 
 Operations
