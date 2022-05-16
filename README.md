@@ -118,7 +118,7 @@ Deploying
 2. pull the latest code on the server
 3. run pip3 install if python packages have changed
 4. rebuild frontend if required (clear out old files)
-5. restart the gunicorn process
+5. restart the gunicorn process in tmux
 
 
 Operations
