@@ -1,17 +1,26 @@
 version: 2.1
 
 orbs:
-  # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
-  python: circleci/python@1.2
+  python: circleci/python@1.5
+  node: circleci/node@4.8.1
+  browser-tools: circleci/browser-tools@1.3.0
 
 jobs:
   build-and-test:
     docker:
-      - image: cimg/python:3.8
+      - image: cimg/python:3.8-browsers
     steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout
       - python/install-packages:
           pkg-manager: pip
+      - node/install-packages:
+          pkg-manager: yarn
+          app-dir: web
+      - run:
+          name: "Yarn build"
+          command: cd web && yarn build
       - run:
           name: Run tests
           command: cd server && nosetests
