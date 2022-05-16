@@ -3,13 +3,12 @@ import requests
 import getpass
 import os, re
 from bs4 import BeautifulSoup
-from models import db, Team, Player, Matchup
+from ..models import db, Team, Player, Matchup
 
 class ZuluruSync:
-    def __init__(self, league, player_db={}, division=False):
+    def __init__(self, league, division=False):
         self.league = league
         self.league_id = league.id
-        self.player_db = player_db
 
         self.base_url = 'https://www.ocua.ca/zuluru'
         self.login_url = 'https://www.ocua.ca/user/login'
@@ -168,18 +167,7 @@ class ZuluruSync:
             gender_elems = table.findAll(text=re.compile(genders_regex))
             assert(len(player_elems) == len(gender_elems))
         else:
-            gender_elems = []
-            for p in player_elems:
-                zuluru_id = p.get('id').replace(self.player_id_preamble, '')
-
-                reg_player = self.player_db.find_by_zuluru_id(zuluru_id)
-                if reg_player == None:
-                    # try by name
-                    name = p.get_text()
-                    reg_player = self.player_db.find_by_name(name)
-
-                gender = reg_player['gender']
-                gender_elems.append(gender)
+            raise "Zuluru has no genders"
 
         roles_regex = '(Regular player|Substitute player|Rules keeper|Captain$|Assistant captain|Non-playing coach)'
         role_elems = table.findAll(text=re.compile(roles_regex))

@@ -1,12 +1,11 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, Stats, Team, Player, League, Matchup
-from lib import StatsCalculator
-from lib import build_stats_response, build_teams_response, build_players_response
+from .models import db, Game, League, Matchup
+from .lib import StatsCalculator
+from .lib import build_stats_response, build_teams_response, build_players_response
 
 import os
-import json
 import datetime
 
 
@@ -16,8 +15,8 @@ league_utc_offset = -5
 
 
 # Settings
-if os.environ.get('APP_SETTINGS') == None:
-    os.environ['APP_SETTINGS'] = 'config.DevelopmentConfig'
+if os.environ.get('APP_SETTINGS') is None:
+    os.environ['APP_SETTINGS'] = 'server.config.Config'
 
 
 # Init
@@ -167,10 +166,4 @@ def react_app(path):
 
 # Boot server for Development / Test
 if __name__ == '__main__':
-
-    # Auto create development database
-    if app.config.get('DEVELOPMENT'):
-        with app.app_context():
-            db.create_all()
-
     app.run(use_reloader=True)
