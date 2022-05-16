@@ -9,13 +9,13 @@ production: [https://parity.ocua.ca](https://parity.ocua.ca)
 Server Setup
 ------------
 
-1. You will need `python` (version 3) (with `pip`). You may need to run the following commands as `python3` explicitly
-2. To install python dependencies run `pip install -r requirements.txt` (You may need run as administrator depending on your security settings)
-3. Run the python server with this command `python server/app.py`
-5. You can inspect available leagues at at `http://localhost:5000/api/leagues`
-6. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
+1. You will need `python3` and `pip3`.
+2. To install python dependencies run `pip3 install -r requirements.txt` (You may need run as administrator depending on your security settings)
+3. Run the python server with this command `python3 server/app.py`
+4. You can inspect available leagues at at `http://localhost:5000/api/leagues`
+5. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
 
-On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python app.py`)
+On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python3 app.py`)
 
 
 Client Setup
@@ -48,41 +48,45 @@ Production Setup (AWS)
 
 1. Create a new EC2 instance in AWS
 
-2. Download the ssh key and `chmod 400` it
+2. Add/ensure a new inbound network rule for https on port 80 and 443
 
-3. ssh to the instance using something like:
+3. Create an Elastic IP and connect it to the instance
+
+4. Download the ssh key and `chmod 400` it
+
+5. ssh to the instance using something like:
 
   `ssh -i ~/Downloads/parity.pem ubuntu@ec2-35-183-174-34.ca-central-1.compute.amazonaws.com`
 
-  The IP address is listed in the AWS console. Note this IP changes.
+  The IP address is listed in the AWS console. Note this IP changes
 
-4. On the instance run `sudo apt-get update` and then install pip `sudo apt-get install python3-pip`
+6. On the instance run `sudo apt-get update` and then install pip `sudo apt-get install python3-pip`
 
-5. Now we can `sudo pip3 install -r requirements.txt`
+7. Now we can `sudo pip3 install -r requirements.txt`
 
-6. We also need to install node:
+8. We also need to install node:
   `curl -sL https://deb.nodesource.com/setup_14.x -o /tmp/nodesource_setup.sh`
   `sudo bash /tmp/nodesource_setup.sh`
   then `sudo apt-get update && sudo apt-get install nodejs`
   and yarn `curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null`
   `sudo apt-get update && sudo npm install -g yarn`
 
-7. Add/ensure a new inbound network rule for https on port 443
+9. `sudo flask run --host=0.0.0.0 --port=443 --cert=adhoc` will now work but it is not a production setup.
 
-8. Create an Elastic IP and connect it to the instance
-
-9. `sudo flask run --host=0.0.0.0 --port=443 --cert=adhoc` functions but is only a single worker
-
-10. Create a nginx config and self signed certificate. This is a good reference:
-https://dev.to/chand1012/how-to-host-a-flask-server-with-gunicorn-and-https-942
+10. Create a nginx config:
 
 ```
 server {
-    listen 443 ssl;
-    listen [::]:443 ssl;
-    ssl_certificate /etc/ssl/certs/selfsigned.crt;
-    ssl_certificate_key /etc/ssl/private/selfsigned.key;
+    listen 80;
+    server_name parity.ocua.ca;
+    return 301 https://parity.ocua.ca$request_uri;
+}
 
+server {
+    listen 443 ssl;
+    server_name parity.ocua.ca;
+    ssl_certificate /etc/letsencrypt/live/parity.ocua.ca/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/parity.ocua.ca/privkey.pem;
     ssl_dhparam /etc/nginx/dhparam.pem;
     location / {
                 proxy_set_header X-Real-IP $remote_addr;
@@ -93,12 +97,16 @@ server {
 }
 ```
 
-11. Then start gunicorn from the parity-server directory:
+11. Get an ssl certificate from Let's Encrypt:
+```
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d parity.ocua.ca
+```
+
+12. Then start gunicorn from the parity-server directory:
 `gunicorn --chdir=server --workers=2 --bind=127.0.0.1:8080 app:app`
 
-🎉 https://3.98.197.218/
-
-best references for what I am trying to do:
+best references I found when setting this up:
 https://www.twilio.com/blog/deploy-flask-python-app-aws
 https://dev.to/chand1012/how-to-host-a-flask-server-with-gunicorn-and-https-942
 
@@ -109,12 +117,12 @@ Operations
 To sync teams from Zuluru:
 
 ```
-heroku run python server/cli.py zuluru-sync
+python3 server/cli.py zuluru-sync
 ```
 
 To correct errors in the most recent week of stats do the following:
 
-    1. First backup the data locally `python server/cli.py backup --week 6`
+    1. First backup the data locally `python3 server/cli.py backup --week 6`
 
     2. Connect to the production database
 
