@@ -111,6 +111,16 @@ https://www.twilio.com/blog/deploy-flask-python-app-aws
 https://dev.to/chand1012/how-to-host-a-flask-server-with-gunicorn-and-https-942
 
 
+Deploying
+---------
+
+1. Ensure the db is backed up
+2. pull the latest code on the server
+3. run pip3 install if python packages have changed
+4. rebuild frontend if required (clear out old files)
+5. restart the gunicorn process
+
+
 Operations
 ----------
 
