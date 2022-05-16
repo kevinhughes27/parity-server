@@ -1,4 +1,4 @@
-from ..models import Stats, Player, Team
+from models import Stats, Player, Team
 
 def build_stats_response(league_id, games):
     players = Player.query.filter_by(league_id=league_id).all()

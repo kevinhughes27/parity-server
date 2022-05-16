@@ -5,8 +5,8 @@ import werkzeug
 from flask_testing import TestCase as FlaskTest
 from snapshottest import TestCase as SnapShotTest
 
-from server.app import app
-from server.models import db, League
+from app import app
+from models import db, League
 
 werkzeug.cached_property = werkzeug.utils.cached_property
 

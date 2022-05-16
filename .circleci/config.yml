@@ -14,7 +14,7 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: nosetests
+          command: cd server && nosetests
 
 workflows:
   sample:
