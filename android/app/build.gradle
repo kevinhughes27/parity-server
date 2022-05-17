@@ -48,7 +48,7 @@ android {
     flavorDimensions( "parity" )
     productFlavors {
         league {
-            def baseUrl = "https://parity-server.herokuapp.com"
+            def baseUrl = "https://parity.ocua.ca"
 
             buildConfigField "String", "UPLOAD_URL", "\"" + baseUrl + "/submit_game\""
             buildConfigField "String", "LEAGUE_URL", "\"" + baseUrl + "/current_league\""
