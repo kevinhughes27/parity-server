@@ -7,7 +7,7 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
-snapshots['ServerTests::test_basic_point 1'] = {
+snapshots['APITests::test_basic_point 1'] = {
     'stats': {
         'Heather McCabe': {
             'assists': 0,
@@ -301,7 +301,7 @@ snapshots['ServerTests::test_basic_point 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_callahan 1'] = {
+snapshots['APITests::test_callahan 1'] = {
     'stats': {
         'Ashlin Kelly': {
             'assists': 0,
@@ -595,7 +595,7 @@ snapshots['ServerTests::test_callahan 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_catch_d 1'] = {
+snapshots['APITests::test_catch_d 1'] = {
     'stats': {
         'Brian Kells': {
             'assists': 1,
@@ -889,7 +889,7 @@ snapshots['ServerTests::test_catch_d 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_drop 1'] = {
+snapshots['APITests::test_drop 1'] = {
     'stats': {
         'Craig Anderson': {
             'assists': 0,
@@ -1183,7 +1183,7 @@ snapshots['ServerTests::test_drop 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_half 1'] = {
+snapshots['APITests::test_half 1'] = {
     'stats': {
         'An Tran': {
             'assists': 0,
@@ -1765,7 +1765,7 @@ snapshots['ServerTests::test_half 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_mini_game 1'] = {
+snapshots['APITests::test_mini_game 1'] = {
     'stats': {
         'Ashlin Kelly': {
             'assists': 0,
@@ -2347,7 +2347,7 @@ snapshots['ServerTests::test_mini_game 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_mini_game2 1'] = {
+snapshots['APITests::test_mini_game2 1'] = {
     'stats': {
         'An Tran': {
             'assists': 0,
@@ -2929,7 +2929,7 @@ snapshots['ServerTests::test_mini_game2 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_throw_away 1'] = {
+snapshots['APITests::test_throw_away 1'] = {
     'stats': {
         'Amos Lee': {
             'assists': 0,
@@ -3223,7 +3223,7 @@ snapshots['ServerTests::test_throw_away 1'] = {
     'week': 0
 }
 
-snapshots['ServerTests::test_turnovers 1'] = {
+snapshots['APITests::test_turnovers 1'] = {
     'stats': {
         'Heather McCabe': {
             'assists': 0,
