@@ -30,6 +30,7 @@ jobs:
           command: cd server && nosetests
 
 workflows:
-  sample:
+  build-and-test:
     jobs:
-      - build-and-test
+      - build
+      - test
