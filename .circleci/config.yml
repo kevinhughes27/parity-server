@@ -25,6 +25,7 @@ jobs:
     docker:
       - image: cimg/python:3.8-browsers
     steps:
+      - checkout
       - run:
           name: Run tests
           command: cd server && nosetests
