@@ -34,12 +34,12 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
 
         # content
         player_name = "Jim Robinson"
-        row = self.driver.find_element_by_xpath("//div[text()='%s']/ancestor::tr" % player_name)
+        row = self.driver.find_element(By.XPATH, "//div[text()='%s']/ancestor::tr" % player_name)
         stats = row.text.split("\n")
         self.assertEqual(stats[2], '1')  # goal
 
         # search
-        self.driver.find_element_by_xpath("//div[@data-test-id='Search']/input").send_keys("Keates")
+        self.driver.find_element(By.XPATH, "//div[@data-test-id='Search']/input").send_keys("Keates")
         table = self.driver.find_elements(By.TAG_NAME, "tbody")[0]
         rows = table.find_elements(By.TAG_NAME, "tr")
         assert len(rows) == 1
@@ -47,14 +47,14 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
         self.assertEqual(stats[2], '2')  # goal
 
         # clear search
-        while self.driver.find_element_by_xpath("//div[@data-test-id='Search']/input").get_attribute('value') != "":
-            self.driver.find_element_by_xpath("//div[@data-test-id='Search']/input").send_keys(Keys.BACK_SPACE)
+        while self.driver.find_element(By.XPATH, "//div[@data-test-id='Search']/input").get_attribute('value') != "":
+            self.driver.find_element(By.XPATH, "//div[@data-test-id='Search']/input").send_keys(Keys.BACK_SPACE)
         table = self.driver.find_elements(By.TAG_NAME, "tbody")[0]
         rows = table.find_elements(By.TAG_NAME, "tr")
         self.assertEqual(len(rows), 48)
 
         # sort by assists
-        self.driver.find_element_by_xpath("//*[@data-testid='headcol-3']").click()
+        self.driver.find_element(By.XPATH, "//*[@data-testid='headcol-3']").click()
         table = self.driver.find_elements(By.TAG_NAME, "tbody")[0]
         row = table.find_elements(By.TAG_NAME, "tr")[0]
         stats = row.text.split("\n")
@@ -66,20 +66,20 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
         self.assertEqual(response.code, 200)
 
         # navigate to games page
-        self.driver.find_element_by_id("side-bar").click()
-        self.driver.find_element_by_link_text("Games").click()
+        self.driver.find_element(By.ID, "side-bar").click()
+        self.driver.find_element(By.LINK_TEXT, "Games").click()
 
         # games page loaded
         assert "/games" in self.driver.current_url
         assert "Week 1" in self.driver.page_source
 
         # navigate to game
-        self.driver.find_element_by_partial_link_text("Kells Angels Bicycle Club").click()
+        self.driver.find_element(By.PARTIAL_LINK_TEXT, "Kells Angels Bicycle Club").click()
         assert "/games/1" in self.driver.current_url
 
         # expand points
         assert "Brian Kells pulled" not in self.driver.page_source
-        self.driver.find_element_by_xpath("//button[text()='Expand All ']").click()
+        self.driver.find_element(By.XPATH, "//button[text()='Expand All ']").click()
         assert "Brian Kells pulled" in self.driver.page_source
 
     def test_teams_page(self):
@@ -87,8 +87,8 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
         self.assertEqual(response.code, 200)
 
         # navigate to teams page
-        self.driver.find_element_by_id("side-bar").click()
-        self.driver.find_element_by_link_text("Team Dashboard").click()
+        self.driver.find_element(By.ID, "side-bar").click()
+        self.driver.find_element(By.LINK_TEXT, "Team Dashboard").click()
         time.sleep(0.5)
 
         assert "/team_dashboard" in self.driver.current_url
