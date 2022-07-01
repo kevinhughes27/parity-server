@@ -86,20 +86,13 @@ def backup(week):
 
 
 @cli.command()
-@click.option('--week')
-def re_upload(week):
-    # make prod gunicorn run on 5000? or make this a local sync instead
+@click.option('--file')
+def re_upload(file):
     url = 'http://localhost:5000/submit_game'
 
-    backup_dir = "./tmp"
-
-    files = glob.glob(f"{backup_dir}/week{week}_game*.json")
-    files.sort(key=lambda f: int(re.sub("[^0-9]", "", f)))
-
-    for file in files:
-        headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-        r = requests.post(url, data=open(file, 'rb'), headers=headers)
-        print(file, r.status_code)
+    headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+    r = requests.post(url, data=open(file, 'rb'), headers=headers)
+    print(file, r.status_code)
 
     click.echo('Done')
 
