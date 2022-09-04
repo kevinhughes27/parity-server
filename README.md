@@ -83,7 +83,7 @@ sudo certbot --nginx -d parity.ocua.ca
 
 Note - this step requires that `parity.ocua.ca` is already pointing to this instance. This can be down by associating the Elastic IP. Reassociating an IP will change how you connect to the instance.
 
-2. Create the nginc dhparam.pem key: `openssl dhparam -out /etc/nginx/dhparam.pem 4096`
+2. Create the nginx dhparam.pem key: `openssl dhparam -out /etc/nginx/dhparam.pem 4096`
 3. Remove the `/etc/nginx/sites-enabled/default` file
 4. Create a nginx config `/etc/nginx/sites-enabled/parity`:
 
