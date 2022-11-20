@@ -13,8 +13,8 @@ from app import app, cache
 from models import db, League
 from lib import ZuluruSync
 
-current_league_zid = 864
-current_league_id = 16
+current_league_zid = 906
+current_league_id = 17
 
 
 @click.group()
