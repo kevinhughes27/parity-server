@@ -67,9 +67,9 @@ Production Setup (AWS)
 1. We need to compile the javascript locally and upload it to the server because the small AWS instances are not able to compile the frontend. Plus this way is faster and keeps production simpler.
 2. Setup node locally as per the development instructions.
 3. In the `web` directory run `rm -r build && yarn build`
-4. Then upload the build to the instance:
+4. Then remove the build directory on the server and upload the build to the instance:
 ```
-scp -i ~/Downloads/parity.pem -r ./build ubuntu@ec2-35-183-208-68.ca-central-1.compute.amazonaws.com:/home/ubuntu/parity-server/web/build
+scp -i ~/Downloads/parity.pem -r ./build ubuntu@ec2-35-183-208-68.ca-central-1.compute.amazonaws.com:/home/ubuntu/parity-server/web
 ```
 5. Check that the frontend loads in the browser by running the flask app again and visiting the instance ip.
 
