@@ -146,6 +146,25 @@ Host parity-server
   RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
 ```
 
+### Zuluru Sync
+
+Create a new systemd unit to run the zuluru sync task `lib/systemd/system/zuluru-sync.service`:
+
+```
+[Unit]
+Description=Zuluru Sync
+
+[Timer]
+OnCalendar=daily
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server/server
+Environment=ZULURU_USER=...
+Environment=ZULURU_PASSWORD=...
+ExecStart=python3 cli.py zuluru-sync-current
+```
+
 
 ### References
 * https://www.twilio.com/blog/deploy-flask-python-app-aws
