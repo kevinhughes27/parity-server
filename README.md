@@ -131,9 +131,27 @@ WantedBy=multi-user.target
 6. Then start with `systemctl start parity-server.service`
 
 
+### SSH Config
+
+It is convenient to add an entry to `~/.ssh/config` for easy access and also for setting up ssh and gpg forwarding to sign commits and push to github from the server.
+
+Ensure gpg-agent is setup locally to start the extra socket. Then add the config:
+
+```
+Host parity-server
+  HostName 3.98.197.218
+  User ubuntu
+  IdentityFile ~/.ssh/parity.pem
+  ForwardAgent yes
+  RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+```
+
+
 ### References
 * https://www.twilio.com/blog/deploy-flask-python-app-aws
 * https://dev.to/chand1012/how-to-host-a-flask-server-with-gunicorn-and-https-942
+* https://www.ecliptik.com/Forwarding-gpg-agent-over-SSH
+* https://mlohr.com/gpg-agent-forwarding/
 
 
 Deploying
