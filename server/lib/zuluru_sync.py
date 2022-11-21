@@ -1,9 +1,11 @@
 from datetime import datetime
 import requests
 import getpass
-import os, re
+import os
+import re
 from bs4 import BeautifulSoup
 from models import db, Team, Player, Matchup
+
 
 class ZuluruSync:
     def __init__(self, league, division=False):
@@ -26,28 +28,25 @@ class ZuluruSync:
 
         self.team_path = self.base_url + '/teams/view/team:'
 
-
         self.team_id_preamble = 'teams_team_'
         self.player_id_preamble = 'people_person_'
 
-
     def sync_schedule(self):
-        db.session.query(Matchup).filter_by(league_id = self.league_id).delete()
+        db.session.query(Matchup).filter_by(league_id=self.league_id).delete()
 
         matchups = self.load_schedule()
-        print (len(matchups), "games retrieved")
+        print(len(matchups), "games retrieved")
 
         for matchup in matchups:
             db.session.add(matchup)
 
         db.session.commit()
 
-
     def load_schedule(self):
         print('Fetching schedule')
 
         league_params = {'league': self.league.zuluru_id}
-        page = requests.get(self.schedule_path, params = league_params)
+        page = requests.get(self.schedule_path, params=league_params)
 
         soup = BeautifulSoup(page.text, 'html.parser')
 
@@ -72,13 +71,12 @@ class ZuluruSync:
                 if matchup:
                     schedule.append(matchup)
                 else:
-                    break;
+                    break
 
         return schedule
 
-
     def parse_matchup(self, teams, row, week, date):
-        ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
+        ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in
                row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
 
         if len(ids) < 2:
@@ -96,7 +94,6 @@ class ZuluruSync:
         matchup.game_end = datetime.combine(date, game_times[1])
         return matchup
 
-
     def sync_teams(self):
         session = self.login()
 
@@ -110,13 +107,11 @@ class ZuluruSync:
         for x in team_ids:
             self.sync_team(session, x)
 
-
     def get_team_ids(self, session):
         soup = self.get_soup(session, self.teams_path)
-        ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in \
+        ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in
                soup.findAll(id=re.compile(self.team_id_preamble + '\d+'))]
         return ids
-
 
     def sync_team(self, session, zuluru_id):
         print(f'Syncing Team: {zuluru_id}')
@@ -129,19 +124,11 @@ class ZuluruSync:
         self.reset_team_players(team)
         self.sync_players(soup, team)
 
-
     def fetch_team(self, session, zuluru_id):
         page = self.team_path + str(zuluru_id)
-        cache = f"./tmp/{zuluru_id}"
-
-        if os.path.exists(cache):
-            soup = BeautifulSoup(open(cache).read())
-        else:
-            soup = self.get_soup(session, page)
-            open(cache, "a").write(str(soup))
+        soup = self.get_soup(session, page)
 
         return soup
-
 
     def reset_team_players(self, team):
         for current_player in Player.query.filter_by(team_id=team.id):
@@ -149,7 +136,6 @@ class ZuluruSync:
             db.session.add(current_player)
 
         db.session.commit()
-
 
     def sync_players(self, soup, team):
         player_elems = soup.findAll(id=re.compile(self.player_id_preamble + '\d+'))
@@ -173,7 +159,7 @@ class ZuluruSync:
         role_elems = table.findAll(text=re.compile(roles_regex))
         assert(len(player_elems) == len(role_elems))
 
-        for p,r,g in zip(player_elems, role_elems, gender_elems):
+        for p, r, g in zip(player_elems, role_elems, gender_elems):
             if r == 'Non-playing coach':
                 continue
 
@@ -181,7 +167,6 @@ class ZuluruSync:
             name = p.get_text()
             gender = 'male' if g == 'Open' else 'female'
             self.update_or_create_player(zuluru_id, name, gender, team)
-
 
     def update_or_create_team(self, zuluru_id, name):
         instance = Team.query.filter_by(league_id=self.league_id, zuluru_id=zuluru_id).first()
@@ -199,7 +184,6 @@ class ZuluruSync:
 
         return instance
 
-
     def update_or_create_player(self, zuluru_id, name, gender, team):
         instance = Player.query.filter_by(league_id=self.league_id, zuluru_id=zuluru_id).first()
 
@@ -216,7 +200,6 @@ class ZuluruSync:
         db.session.add(instance)
         db.session.commit()
 
-
     def login(self):
         username = os.environ.get('ZULURU_USER') or self.get_user()
         password = os.environ.get('ZULURU_PASSWORD') or getpass.getpass()
@@ -224,12 +207,12 @@ class ZuluruSync:
         # Extract nonce
         session = requests.Session()
         soup = self.get_soup(session, self.login_url)
-        nonce = soup.find(attrs={'name':'form_build_id'}).get('value')
+        nonce = soup.find(attrs={'name': 'form_build_id'}).get('value')
 
         # Authenticate
         login_data = {
-            'name':  username,
-            'pass':  password,
+            'name': username,
+            'pass': password,
             'form_build_id': nonce,
             'form_id': 'user_login',
             'op': 'log_in'
@@ -240,11 +223,9 @@ class ZuluruSync:
         print(response.status_code)
         return session
 
-
     def get_user(self):
         print('Username:')
         return input()
-
 
     def get_soup(self, session, url):
         return BeautifulSoup(session.get(url).text, 'html.parser')
