@@ -6,9 +6,17 @@ interface IPlayer {
   salary: number;
 }
 
-export function calcSalaryLimits(players: IPlayer[]) {
+export function calcSalaryLimits(weeks: number[], players: IPlayer[]) {
+  const numWeeks = weeks.length
   const numTeams = uniq(players.map(p => p.team)).length
-  const salaryCapVariance = 0.01
+
+  let salaryCapVariance = 0.01
+
+  if (numWeeks < 7)
+    salaryCapVariance = 0.02
+  else if (numWeeks < 9)
+    salaryCapVariance = 0.015
+
   const salaries = map(players,
      (p) => p.salary)
   const salaryAvg = sum(salaries) / numTeams;

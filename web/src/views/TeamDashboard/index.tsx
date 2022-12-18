@@ -23,6 +23,7 @@ interface ITrade {
 }
 
 interface TeamDashboardProps {
+  weeks: number[]
   players: Player[]
 }
 
@@ -114,7 +115,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
   const maxSalary = max(map(allPlayers, (p) => p.salary));
   const salaries = map(sortedPlayers, (p) => p.salary);
   const teamSalary = sum(salaries);
-  const { salaryCap, salaryFloor } = calcSalaryLimits(allPlayers);
+  const { salaryCap, salaryFloor } = calcSalaryLimits(props.weeks, allPlayers);
   const overCap = teamSalary > salaryCap;
   const underFloor = teamSalary < salaryFloor;
 
