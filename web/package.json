@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://parity.ocua.ca",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
@@ -30,6 +30,8 @@
     "format-number": "^3.0.0",
     "glob-parent": "^6.0.2",
     "immer": "^9.0.7",
+    "jsoneditor": "^9.10.0",
+    "jsoneditor-react": "^3.1.2",
     "local-storage": "^2.0.0",
     "lodash": "^4.17.21",
     "mui-datatables": "^4.0.0",

@@ -90,6 +90,19 @@ const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   return await response.json()
 }
 
+const saveGame = async (gameId: string, leagueId: string, game: string) => {
+  const url = `/api/${leagueId}/games/${gameId}`
+
+  // clear cache
+  delete dataCache[url]
+
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: game
+  })
+}
+
 export interface Player {
   name: string;
   team: string;
@@ -147,5 +160,6 @@ export {
   fetchGame,
   fetchPlayers,
   fetchWeeks,
-  fetchStats
+  fetchStats,
+  saveGame
 }
