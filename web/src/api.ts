@@ -35,6 +35,7 @@ const cachedFetch = (url: string, _options = {}) => {
 //   return leagues.filter((l) => l.id > 1)
 // }
 const leagues = [
+  { id: 18, name: "2023 Spring Indoor Sunday Parity League"},
   { id: 17, name: "2022 Winter Indoor Sunday Parity League"},
   { id: 16, name: "2021/2022 Session 2"},
   { id: 15, name: "2021/2022 Session 1"},

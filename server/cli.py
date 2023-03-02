@@ -1,20 +1,12 @@
 #!/usr/bin/env python
 
 import click
-import glob
-import os
-import re
-import json
-import urllib.request
-import requests
-from collections import defaultdict
-
 from app import app, cache
 from models import db, League, Game, Stats
 from lib import StatsCalculator, ZuluruSync
 
-current_league_zid = 906
-current_league_id = 17
+current_league_zid = 926
+current_league_id = 18
 
 
 @click.group()
