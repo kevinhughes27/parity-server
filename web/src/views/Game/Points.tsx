@@ -26,7 +26,7 @@ export default function Points(props: {game: Game}) {
   const [expanded, setExpanded] = useState<number[]>([]);
 
   const expandAll = () => {
-    const expanded = points.map((p, idx) => idx)
+    const expanded = points.map((_p, idx) => idx)
     setExpanded(expanded)
   }
 

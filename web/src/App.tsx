@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import GamesList from './views/GamesList'
 import Game from './views/Game'
+import GameEdit from './views/Game/Edit'
 
 import StatsPage from './views/StatsPage'
 import Leaderboards from './views/Leaderboards'
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<StatsPage component={StatsTable} />} />
         <Route path="/games" element={<GamesList/>} />
         <Route path="/:leagueId/games/:gameId" element={<Game/>} />
+        <Route path="/:leagueId/games/:gameId/edit" element={<GameEdit/>} />
         <Route path="/leaderboards" element={<StatsPage component={Leaderboards} />} />
         <Route path="/compare_players" element={<StatsPage component={ComparePlayers}/>} />
         <Route path="/team_dashboard" element={<SalaryPage component={TeamDashboard} />} />
