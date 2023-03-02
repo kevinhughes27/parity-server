@@ -125,6 +125,24 @@ def game(league_id, id):
     return jsonify({**game.to_dict(include_points=True), "stats": stats})
 
 
+@app.route('/api/<league_id>/games/<id>', methods=['POST'])
+def edit_game(league_id, id):
+    request.json
+
+    game = Game.query.filter_by(league_id=league_id, id=id).first()
+
+    game.home_score = request.json['homeScore']
+    game.away_score = request.json['awayScore']
+    game.home_roster = request.json['homeRoster']
+    game.away_roster = request.json['awayRoster']
+    game.points = request.json['points']
+
+    db.session.add(game)
+    db.session.commit()
+
+    return ('', 200)
+
+
 @cache.cached()
 @app.route('/api/leagues')
 def leagues():
