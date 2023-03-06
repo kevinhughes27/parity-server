@@ -145,7 +145,7 @@ def weeks(league_id):
 @app.route('/api/<league_id>/weeks/<num>')
 def week(league_id, num):
     games = Game.query.filter_by(league_id=league_id, week=num)
-    stats = build_stats_response(league_id, games)
+    stats = build_stats_response(league_id, games, aggSubs=False)
     return jsonify({"week": num, "stats": stats})
 
 
@@ -153,7 +153,7 @@ def week(league_id, num):
 @app.route('/api/<league_id>/stats')
 def stats(league_id):
     games = Game.query.filter_by(league_id=league_id).order_by(Game.week.asc())
-    stats = build_stats_response(league_id, games)
+    stats = build_stats_response(league_id, games, aggSubs=True)
     return jsonify({"week": 0, "stats": stats})
 
 

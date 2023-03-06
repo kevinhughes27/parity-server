@@ -1,6 +1,7 @@
 from models import Stats, Player, Team
 
-def build_stats_response(league_id, games):
+
+def build_stats_response(league_id, games, aggSubs=True):
     players = Player.query.filter_by(league_id=league_id).all()
     teams = Team.query.filter_by(league_id=league_id).all()
 
@@ -20,11 +21,15 @@ def build_stats_response(league_id, games):
             data = player_stats.to_dict()
 
             # aggregate all stats for the player
-            if player.name in stats:
+            if player.name in stats and aggSubs:
                 existing_data = stats[player.name]
-                summed_stats = { s: data.get(s, 0) + existing_data.get(s, 0) for s in data.keys() }
+                summed_stats = {s: data.get(s, 0) + existing_data.get(s, 0) for s in data.keys()}
                 stats[player.name].update(summed_stats)
                 stats[player.name]['games_played'] += 1
+            elif player.name in stats and not aggSubs:
+                name = player.name.replace("(S)", "(S2)") # only solves one interation. what if someone subs 3 times
+                stats.update({name: data})
+                stats[player.name]['games_played'] = 1
             else:
                 stats.update({player.name: data})
                 stats[player.name]['games_played'] = 1
