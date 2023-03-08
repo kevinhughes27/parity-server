@@ -2,16 +2,10 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import Layout from '../../layout/'
 import Loading from '../../components/Loading'
+import Editor from '../../components/JSONEditor'
 import Button from '@mui/material/Button'
 import { fetchGame, saveGame, Game } from '../../api'
 
-import { JsonEditor as Editor } from 'jsoneditor-react'
-import 'jsoneditor-react/es/editor.min.css'
-
-// import ace from 'brace'
-// import 'brace/mode/json'
-// import 'brace/theme/github'
-//
 // const schema = {
 //   type: 'object',
 //   properties: {
@@ -47,7 +41,7 @@ import 'jsoneditor-react/es/editor.min.css'
 //       }
 //     }
 //   }
-// };
+// }
 
 export default function GameEdit() {
   let params = useParams();
@@ -76,9 +70,8 @@ export default function GameEdit() {
     return (
       <React.Fragment>
         <Editor
-          value={game}
-          history={true}
-          onChange={(json: any) => setGame(json)}
+          content={{json: game, text: undefined}}
+          onChange={(content: any) => { setGame(content.json) }}
         />
         <Button
           variant='outlined'
