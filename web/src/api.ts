@@ -64,7 +64,7 @@ export interface Game {
   awayScore: number;
   awayRoster: [string];
   points: Point[];
-  stats: Stats;
+  stats: Stats|undefined;
 }
 
 export interface Point {
