@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import Layout from '../../layout/'
 import Loading from '../../components/Loading'
-import Editor from '../../components/JSONEditor'
 import Button from '@mui/material/Button'
+import ReactJson from 'react-json-view'
 import { fetchGame, saveGame, Game } from '../../api'
 
 // const schema = {
@@ -69,9 +69,13 @@ export default function GameEdit() {
 
     return (
       <React.Fragment>
-        <Editor
-          content={{json: game, text: undefined}}
-          onChange={(content: any) => { setGame(content.json) }}
+        <ReactJson
+          src={game}
+          collapsed={1}
+          displayDataTypes={false}
+          onEdit={(ev: any) => setGame(ev.updated_src)}
+          onAdd={(ev: any) => setGame(ev.updated_src)}
+          onDelete={(ev: any) => setGame(ev.updated_src)}
         />
         <Button
           variant='outlined'
