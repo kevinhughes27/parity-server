@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
-from models import db, Game, League, Matchup
+from models import db, Game, League, Matchup, Stats
 from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
 
@@ -127,8 +127,8 @@ def game(league_id, id):
 
 @app.route('/api/<league_id>/games/<id>', methods=['POST'])
 def edit_game(league_id, id):
-    request.json
 
+    # updating Game
     game = Game.query.filter_by(league_id=league_id, id=id).first()
 
     game.home_score = request.json['homeScore']
@@ -139,6 +139,23 @@ def edit_game(league_id, id):
 
     db.session.add(game)
     db.session.commit()
+
+    # loading other games from the same week
+    games = Game.query.filter_by(league_id=league_id, week=game.week).all()
+    game_ids = [game.id for game in games]
+
+    # deleting old stats
+    stats = Stats.query.filter(Stats.game_id.in_(game_ids)).all()
+    for stat in stats:
+        db.session.delete(stat)
+    db.session.commit()
+
+    # re-calculating stats
+    for game in games:
+        StatsCalculator(game).run()
+
+    # clear the stats cache
+    cache.clear()
 
     return ('', 200)
 
