@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Points from './Points'
 import Button from '@mui/material/Button'
-import CodeMirror, { ReactCodeMirrorRef } from '@uiw/react-codemirror'
+import CodeMirror from '@uiw/react-codemirror'
 import { json as jsonLang } from '@codemirror/lang-json'
 import { saveGame, Game } from '../../api'
 
@@ -28,13 +28,24 @@ export default function GameEditor(props: {gameId: string, leagueId: string, gam
   }
 
   const [json, setJson] = React.useState(JSON.stringify(fields, null, 2))
+  const [previewing, setPreviewing] = useState(false)
   const [saving, setSaving] = useState(false)
-  const cmRef = useRef<ReactCodeMirrorRef>(null)
 
   const Preview = () => {
     try {
       const newGame = JSON.parse(json)
-      return (<Points game={newGame}/>)
+      return (
+        <div style={{
+          position: 'absolute',
+          top: 64,
+          left: 0,
+          height: '100%',
+          width: '100%',
+          background: 'white'
+        }}>
+          <Points game={newGame}/>
+        </div>
+      )
     }
     catch(error) {
       if (error instanceof Error) {
@@ -47,24 +58,25 @@ export default function GameEditor(props: {gameId: string, leagueId: string, gam
 
   return (
     <React.Fragment>
-      <div style={{display: 'flex'}}>
-        <CodeMirror
-          value={json}
-          ref={cmRef}
-          height="100%"
-          extensions={[jsonLang()]}
-          onChange={(value, _viewUpdate) => {
-            setJson(value)
-          }}
-        />
-        <div>
-          <Preview/>
-        </div>
-      </div>
+      <CodeMirror
+        value={json}
+        height="100%"
+        width="100%"
+        extensions={[jsonLang()]}
+        onChange={(value, _viewUpdate) => {
+          setJson(value)
+        }}
+      />
+      { previewing ? <Preview/> : null }
       <Button
-        variant='outlined'
+        style={{position: 'fixed', top: 10, right: 90, background: 'white'}}
+        onClick={() => { setPreviewing(!previewing) }}
+      >
+        { previewing ? 'Close Preview' : 'Open Preview' }
+      </Button>
+      <Button
         disabled={saving}
-        style={{position: 'fixed', right: 5, bottom: 5}}
+        style={{position: 'fixed', top: 10, right: 10, background: 'white'}}
         onClick={() => {
           setSaving(true)
           saveGame(props.gameId, props.leagueId, json)

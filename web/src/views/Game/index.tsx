@@ -9,7 +9,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import Team from './Team'
 import Points from './Points'
-import { fetchGame, Game } from "../../api"
+import { fetchGame, Game } from '../../api'
 import { homeColors, awayColors } from '../../helpers'
 import { pickBy, includes, forIn } from 'lodash'
 
