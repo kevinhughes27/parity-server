@@ -61,10 +61,6 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
         self.assertEqual(stats[0], 'Jessie Robinson')
         self.assertEqual(stats[3], '1')  # assists
 
-    def test_games_page(self):
-        response = urlopen(self.get_server_url())
-        self.assertEqual(response.code, 200)
-
         # navigate to games page
         self.driver.find_element(By.ID, "side-bar").click()
         self.driver.find_element(By.LINK_TEXT, "Games").click()
@@ -81,10 +77,6 @@ class AppTests(TestBase, FlaskTest, LiveServerTestCase):
         assert "Brian Kells pulled" not in self.driver.page_source
         self.driver.find_element(By.XPATH, "//button[text()='Expand All ']").click()
         assert "Brian Kells pulled" in self.driver.page_source
-
-    def test_teams_page(self):
-        response = urlopen(self.get_server_url())
-        self.assertEqual(response.code, 200)
 
         # navigate to teams page
         self.driver.find_element(By.ID, "side-bar").click()
