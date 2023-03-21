@@ -90,7 +90,7 @@ const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   return await response.json()
 }
 
-const saveGame = async (gameId: string, leagueId: string, json: string) => {
+const saveGame = async (gameId: string, leagueId: string, json: string, password: string|null) => {
   const url = `/api/${leagueId}/games/${gameId}`
 
   // clear cache
@@ -98,7 +98,10 @@ const saveGame = async (gameId: string, leagueId: string, json: string) => {
 
   return fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `${password}`
+    },
     body: json
   })
 }
