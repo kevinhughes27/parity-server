@@ -2,10 +2,12 @@ from app import app
 from models import db, League, Team, Player
 import pathlib
 import json
+import os
 
 
 class TestBase:
     def create_app(self):
+        os.environ["PARITY_EDIT_PASSWORD"] = "testpw"
         return app
 
     def setUp(self):
@@ -78,7 +80,9 @@ class TestBase:
         game_str = json.dumps(game)
 
         # this url is assuming game id is 1
-        response = self.client.post('/api/1/games/1', data=game_str, content_type='application/json')
+        headers = {'Authorization': 'testpw'}
+        # self.client.environ_base['HTTP_AUTHORIZATION'] = 'testpw'
+        response = self.client.post('/api/1/games/1', data=game_str, content_type='application/json', headers=headers)
         assert response.status_code == 200
 
     def get_stats(self):

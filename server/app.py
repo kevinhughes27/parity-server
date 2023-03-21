@@ -46,7 +46,7 @@ def upload():
     game = save_game(request.json)
 
     # calculate and save stats
-    stats = StatsCalculator(game).run()
+    StatsCalculator(game).run()
 
     # clear the stats cache
     cache.clear()
@@ -128,6 +128,12 @@ def game(league_id, id):
 @app.route('/api/<league_id>/games/<id>', methods=['POST'])
 def edit_game(league_id, id):
 
+    # auth
+    if os.environ.get('PARITY_EDIT_PASSWORD') is None:
+        return ('PARITY_EDIT_PASSWORD env var not set', 401)
+    if os.environ.get('PARITY_EDIT_PASSWORD') != request.headers['Authorization']:
+        return ('Password does not match PARITY_EDIT_PASSWORD', 401)
+
     # updating Game
     game = Game.query.filter_by(league_id=league_id, id=id).first()
 
@@ -196,10 +202,10 @@ def stats(league_id):
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def react_app(path):
-    if(path == ""):
+    if (path == ""):
         return send_from_directory(react_app_path, 'index.html')
     else:
-        if(os.path.exists(react_app_path + '/' + path)):
+        if (os.path.exists(react_app_path + '/' + path)):
             return send_from_directory(react_app_path, path)
         else:
             return send_from_directory(react_app_path, 'index.html')

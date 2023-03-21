@@ -77,18 +77,18 @@ export default function GameEditor(props: {gameId: string, leagueId: string, gam
       <Button
         disabled={saving}
         style={{position: 'fixed', top: 10, right: 10, background: 'white'}}
-        onClick={() => {
+        onClick={async () => {
           setSaving(true)
-          saveGame(props.gameId, props.leagueId, json)
-          .then((response) => {
-            if (response.status === 200) {
-              console.log("Success")
-              setSaving(false)
-            } else {
-              console.log(response)
-              setSaving(false)
-            }
-          })
+          const password = prompt('Please enter password')
+          const response = await saveGame(props.gameId, props.leagueId, json, password)
+          if (response.status === 200) {
+            console.log("Success")
+            setSaving(false)
+          } else {
+            const text = await response.text()
+            console.log(text)
+            setSaving(false)
+          }
         }}
       >
         { saving ? 'Saving' : 'Save' }
