@@ -93,3 +93,18 @@ class APITests(TestBase, FlaskTest, SnapShotTest):
 
         response = self.client.get('/api/1/schedule')
         assert response.status_code == 200
+
+    def test_stats_edit(self):
+        self.create_rosters()
+        self.upload_game('mini_game.json')
+
+        initial_stats = self.get_stats()
+        assert initial_stats['stats']['Brian Kells']['pulls'] == 1
+        assert initial_stats['stats']['Scott Higgins']['pulls'] == 0
+
+        self.edit_game('mini_game_edited.json')
+        stats = self.get_stats()
+        assert stats['stats']['Brian Kells']['pulls'] == 0
+        assert stats['stats']['Scott Higgins']['pulls'] == 1
+
+        self.assertMatchSnapshot(stats)

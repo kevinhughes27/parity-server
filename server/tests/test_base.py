@@ -64,6 +64,23 @@ class TestBase:
         response = self.client.post('/submit_game', data=game_str, content_type='application/json')
         assert response.status_code == 201
 
+    def edit_game(self, data_file, **kwargs):
+        fixture_path = pathlib.Path(__file__).parent / "./data" / data_file
+
+        with open(fixture_path) as f:
+            game_str = f.read()
+
+        game = json.loads(game_str)
+        for k in kwargs:
+            if k in game:
+                game[k] = kwargs[k]
+
+        game_str = json.dumps(game)
+
+        # this url is assuming game id is 1
+        response = self.client.post('/api/1/games/1', data=game_str, content_type='application/json')
+        assert response.status_code == 200
+
     def get_stats(self):
         response = self.client.get('/api/1/stats')
         stats = response.json
