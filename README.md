@@ -146,16 +146,28 @@ Host parity-server
   RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
 ```
 
-### Zuluru Sync
+### Zuluru Sync and Backups
 
-Create a new systemd unit to run the zuluru sync task `lib/systemd/system/zuluru-sync.service`:
+Create new [systemd timers](https://wiki.archlinux.org/title/Systemd/Timers) for the scheduled tasks.
+
+For the zuluru sync task `lib/systemd/system/zuluru-sync.timer`:
+
+```
+[Unit]
+Description=Run Zuluru Sync Daily
+
+[Timer]
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
+```
+
+and create the service to be ran by the timer `lib/systemd/system/zuluru-sync.service`:
 
 ```
 [Unit]
 Description=Zuluru Sync
-
-[Timer]
-OnCalendar=daily
 
 [Service]
 User=ubuntu
@@ -164,6 +176,36 @@ Environment=ZULURU_USER=...
 Environment=ZULURU_PASSWORD=...
 ExecStart=python3 cli.py zuluru-sync-current
 ```
+
+The backup systemd files:
+
+parity-backup.timer (this is UTC which == Sunday 9pm EST)
+```
+[Unit]
+Description=Run Parity Backup Sunday Night
+
+[Timer]
+OnCalendar=Mon 1:30
+
+[Install]
+WantedBy=timers.target
+```
+
+and the unit `lib/systemd/system/parity-backup.service`
+
+```
+[Unit]
+Description=Parity Backup
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server/server
+ExecStart=/bin/bash -c 'cp db.sqlite /home/ubuntu/backups/db_$(date +%b-%d).sqlite'
+```
+
+Then enable and start the timer services (`sudo systemctl enable parity-backup.timer` and `sudo systemctl start parity-backup.timer`)
+
+`systemctl list-timers` can be used to make sure the timer is registered.
 
 
 ### References
@@ -181,35 +223,6 @@ Deploying
 3. run pip3 install if python packages have changed
 4. rebuild frontend if required (clear out old files)
 5. restart the gunicorn process with `systemctl`
-
-
-Operations
-----------
-
-To sync teams from Zuluru:
-
-```
-python3 server/cli.py zuluru-sync
-```
-
-To correct errors in the most recent week of stats do the following:
-
-    1. First backup the data locally `python3 server/cli.py backup --week 6`
-
-    2. Connect to the production database
-
-    ```
-    sqlite3 server/db.sqlite
-    ```
-
-    Then remove the data from the production database:
-
-    ```sql
-    DELETE FROM stats WHERE game_id IN (SELECT id FROM game WHERE week = 9 AND league_id = 15);
-    DELETE FROM game WHERE week = 9 AND league_id = 15;
-    ```
-
-    3. Lastly re-seed the given week after making the edits `python3 server/cli.py re_upload --prod True --week 9`
 
 
 Android Release
