@@ -200,7 +200,7 @@ Description=Parity Backup
 [Service]
 User=ubuntu
 WorkingDirectory=/home/ubuntu/parity-server/server
-ExecStart=/bin/bash -c 'cp db.sqlite /home/ubuntu/backups/db_$(date +%b-%d).sqlite'
+ExecStart=/bin/bash -c 'cp db.sqlite /home/ubuntu/backups/db_$(date +%%b-%%d).sqlite'
 ```
 
 Then enable and start the timer services (`sudo systemctl enable parity-backup.timer` and `sudo systemctl start parity-backup.timer`)
