@@ -31,8 +31,8 @@ db.init_app(app)
 def current_league():
     league = {
         'league': {
-            'id': 18,
-            'name': '2023 Spring Indoor Sunday Parity League',
+            'id': 19,
+            'name': '2023 Winter Indoor Sunday Parity League',
             'lineSize': 6
         }
     }
