@@ -56,5 +56,21 @@ def recalc(week):
             StatsCalculator(game).run()
 
 
+@cli.command()
+@click.argument('game_ids', nargs=-1)
+def delete_games(game_ids):
+    with app.app_context():
+        games = Game.query.filter(Game.id.in_(game_ids)).all()
+        stats = Stats.query.filter(Stats.game_id.in_(game_ids)).all()
+
+        for game in games:
+            db.session.delete(game)
+
+        for stat in stats:
+            db.session.delete(stat)
+
+        db.session.commit()
+
+
 if __name__ == "__main__":
     cli()
