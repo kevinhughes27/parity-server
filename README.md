@@ -81,7 +81,7 @@ sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d parity.ocua.ca
 ```
 
-Note - this step requires that `parity.ocua.ca` is already pointing to this instance. This can be down by associating the Elastic IP. Reassociating an IP will change how you connect to the instance.
+Note - this step requires that `parity.ocua.ca` is already pointing to this instance. This can be done by associating the Elastic IP. Reassociating an IP will change how you connect to the instance.
 
 2. Create the nginx dhparam.pem key: `openssl dhparam -out /etc/nginx/dhparam.pem 4096`
 3. Remove the `/etc/nginx/sites-enabled/default` file
@@ -120,6 +120,7 @@ After=network.target
 [Service]
 User=ubuntu
 WorkingDirectory=/home/ubuntu/parity-server/server
+Environment=PARITY_EDIT_PASSWORD=
 ExecStart=gunicorn --workers=2 --bind=127.0.0.1:8080 app:app
 TimeoutSec=30
 Restart=always
