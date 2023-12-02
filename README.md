@@ -38,7 +38,7 @@ To test locally by uploading a json file run:
 curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http://localhost:5000/submit_game
 ```
 
-To reset your local database you can reset the db file using git checkout.
+To reset your local database you can reset the db file using `git restore`.
 
 There is also an automated test suite which can be run using `nosetests3`.
 
