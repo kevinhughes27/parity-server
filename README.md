@@ -185,7 +185,7 @@ parity-backup.timer (this is UTC which == Sunday 9pm EST)
 Description=Run Parity Backup Sunday Night
 
 [Timer]
-OnCalendar=Mon 1:30
+OnCalendar=Mon 1:30 America/Toronto
 
 [Install]
 WantedBy=timers.target
