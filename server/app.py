@@ -4,13 +4,14 @@ from flask_caching import Cache
 from models import db, Game, League, Matchup, Stats
 from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
+from pathlib import Path
 
 import os
 import datetime
 
 
 # Constants
-react_app_path = '../web/build'
+react_app_path = Path(__file__).parents[1] / 'web/build'
 league_utc_offset = -5
 
 
@@ -205,7 +206,7 @@ def react_app(path):
     if (path == ""):
         return send_from_directory(react_app_path, 'index.html')
     else:
-        if (os.path.exists(react_app_path + '/' + path)):
+        if (react_app_path / path).exists():
             return send_from_directory(react_app_path, path)
         else:
             return send_from_directory(react_app_path, 'index.html')

@@ -15,7 +15,7 @@ Server Setup
 4. You can inspect available leagues at at `http://localhost:5000/api/leagues`
 5. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
 
-On production the python server serves a static build of the client. This can be tested locally by running yarn build and then visiting localhost:5000 (note that you need to run the server from inside the server folder or the relative path to the client won't work. e.g. `cd server && python3 app.py`)
+On production the python server serves a static build of the client. This can be used/tested locally by running yarn build and then visiting localhost:5000.
 
 
 Client Setup
@@ -26,7 +26,7 @@ Client Setup
 3. Install the javascript dependencies by running `yarn install` in the `web` directory
 4. Start the client by running `yarn start` in the `web` directory. It will open a browser window with the app running on your computer. If you make changes to the code the window will reload with the changes.
 
-Note that the client connects to the production server by default. This is safe to do because the client is read-only. This enables an easier development experience for anyone working only on the frontend. If you need to connect to a local server update the `proxy` to point to the local server `http://localhost:5000` in the `web/package.json` file.
+Note that the client requires a local server. It is possible to configure the `proxy` in `web/package.json` to point the development client at the production API for doing read only frontend work.
 
 
 Testing
@@ -40,7 +40,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database you can reset the db file using git checkout.
 
-There is also an automated test suite which can be run using the `nosetests3`.
+There is also an automated test suite which can be run using `nosetests3`.
 
 
 Contributing
