@@ -157,8 +157,11 @@ export default function Points(props: {game: Game}) {
                 styles['color'] = 'grey'
               }
 
-              const prevEvent = idx > 0 ? arr[idx-1] : null;
-              const isCallahan = prevEvent ? ev.type === 'POINT' && prevEvent.type === "DEFENSE" && ev.firstActor === prevEvent.firstActor : false;
+              let isCallahan = false;
+              if (ev.type == 'POINT') {
+                const prevEvent = arr[idx-1];
+                isCallahan = prevEvent.type === "DEFENSE" && ev.firstActor === prevEvent.firstActor;
+              }
 
               return (
                 <ListItem key={idx} style={styles}>
