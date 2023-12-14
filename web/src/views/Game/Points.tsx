@@ -158,7 +158,7 @@ export default function Points(props: {game: Game}) {
               }
 
               let isCallahan = false;
-              if (ev.type == 'POINT') {
+              if (ev.type === 'POINT') {
                 const prevEvent = arr[idx-1];
                 isCallahan = prevEvent.type === "DEFENSE" && ev.firstActor === prevEvent.firstActor;
               }
