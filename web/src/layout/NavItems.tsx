@@ -14,7 +14,7 @@ function NavItems(props: {closeNav: () => void}) {
   const forumUrl = 'https://www.ocua.ca/forum/33'
   const podcastUrl = 'https://soundcloud.com/user-640277634/sets/parity-podcast-season-5/s-1oSLUNq9qt4'
   const srcUrl = 'https://github.com/kevinhughes27/parity-server'
-  const volunteerUrl = 'https://docs.google.com/spreadsheets/d/1RZvxyqteN-GZHntxqwonHlvnQxLUbAmZ-FafGn8oNws/edit'
+  const volunteerUrl = 'https://docs.google.com/spreadsheets/d/1djwi1LSuyiZMKS_aeFLEpsIfxQXqna2bD7ZxibR3OPA/edit#gid=0'
 
   const spreadsheets = [
     { name: '2019-2020', url: 'https://docs.google.com/spreadsheets/d/12_SdWDIFQvCiNP3j4mlKZ19bXwmiLqXBJg_g_0K8UIw' },
