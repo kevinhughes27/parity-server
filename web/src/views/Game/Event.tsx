@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrophy, faShieldAlt, faLevelDownAlt } from '@fortawesome/free-solid-svg-icons'
+import { faTrophy, faShieldAlt, faLevelDownAlt, faMeteor } from '@fortawesome/free-solid-svg-icons'
 import { PointEvent } from '../../api'
 
-export default function Event(props: {event: PointEvent}) {
-  const { event } = props
+export default function Event(props: {event: PointEvent, isCallahan: boolean}) {
+  const { event, isCallahan } = props
 
   if (event.type === 'PULL') {
     return (
@@ -23,11 +23,21 @@ export default function Event(props: {event: PointEvent}) {
   }
 
   if (event.type === 'POINT') {
-    return (
-      <span>
-        <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {event.firstActor} scored!
-      </span>
-    )
+
+    if (isCallahan){
+      return (
+        <span>
+          <FontAwesomeIcon icon={faMeteor} style={{marginRight: 5}}/> {event.firstActor} got a Callahan!
+        </span>
+      )
+    } else {
+      return (
+        <span>
+          <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {event.firstActor} scored!
+        </span>
+      )
+    }
+    
   }
 
   if (event.type === 'DEFENSE') {

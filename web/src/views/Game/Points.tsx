@@ -145,7 +145,7 @@ export default function Points(props: {game: Game}) {
 
         <Collapse in={isExpanded} timeout="auto" unmountOnExit>
           <List style={{paddingLeft: 20}}>
-            { point.events.map((ev, idx) => {
+            { point.events.map((ev, idx, arr) => {
               const highlight = ev.firstActor === focus || ev.secondActor === focus
               const mute = focus && !highlight
 
@@ -157,9 +157,12 @@ export default function Points(props: {game: Game}) {
                 styles['color'] = 'grey'
               }
 
+              const prevEvent = idx > 0 ? arr[idx-1] : null;
+              const isCallahan = prevEvent ? ev.type === 'POINT' && prevEvent.type === "DEFENSE" && ev.firstActor === prevEvent.firstActor : false;
+
               return (
                 <ListItem key={idx} style={styles}>
-                  <Event event={ev}/>
+                  <Event event={ev} isCallahan={isCallahan} />
                 </ListItem>
               )
             })}
