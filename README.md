@@ -40,7 +40,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database you can reset the db file using `git restore`.
 
-There is also an automated test suite which can be run using `nosetests3`.
+There is also an automated test suite which can be run using `pytest`.
 
 
 Contributing

@@ -23,7 +23,7 @@ jobs:
           command: cd web && yarn build
       - run:
           name: Run tests
-          command: cd server && nosetests
+          command: cd server && pytest
 
 workflows:
   build-and-test:
