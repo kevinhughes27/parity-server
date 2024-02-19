@@ -67,7 +67,6 @@ function WeekPicker(
         variant='standard'
         value={week.toString()}
         onChange={onChange}
-        disableUnderline
         input={<WeekInput/>}
       >
         {weekOptions}

@@ -63,7 +63,6 @@ function LeaguePicker(
           variant='standard'
           value={league}
           onChange={onChange}
-          disableUnderline
           input={<LeagueInput />}
         >
           {leagueOptions}
