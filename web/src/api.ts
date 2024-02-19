@@ -107,6 +107,21 @@ const saveGame = async (gameId: string, leagueId: string, json: string, password
   })
 }
 
+const deleteGame = async (gameId: string, leagueId: string, password: string|null) => {
+  const url = `/api/${leagueId}/games/${gameId}`
+
+  // clear cache
+  delete dataCache[url]
+
+  return fetch(url, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `${password}`
+    },
+  })
+}
+
 export interface Player {
   name: string;
   team: string;
@@ -165,5 +180,6 @@ export {
   fetchPlayers,
   fetchWeeks,
   fetchStats,
-  saveGame
+  saveGame,
+  deleteGame,
 }

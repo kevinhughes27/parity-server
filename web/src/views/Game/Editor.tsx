@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Points from './Points'
 import Button from '@mui/material/Button'
 import CodeMirror from '@uiw/react-codemirror'
 import { json as jsonLang } from '@codemirror/lang-json'
-import { saveGame, Game } from '../../api'
+import { saveGame, deleteGame, Game } from '../../api'
 
 
 export default function GameEditor(props: {gameId: string, leagueId: string, game: Game}) {
@@ -30,6 +31,8 @@ export default function GameEditor(props: {gameId: string, leagueId: string, gam
   const [json, setJson] = React.useState(JSON.stringify(fields, null, 2))
   const [previewing, setPreviewing] = useState(false)
   const [saving, setSaving] = useState(false)
+  const [deleting, setDeleting] = useState(false)
+  const navigate = useNavigate()
 
   const Preview = () => {
     try {
@@ -69,20 +72,43 @@ export default function GameEditor(props: {gameId: string, leagueId: string, gam
       />
       { previewing ? <Preview/> : null }
       <Button
-        style={{position: 'fixed', top: 10, right: 90, background: 'white'}}
+        style={{position: 'fixed', top: 10, right: 175, background: 'white'}}
         onClick={() => { setPreviewing(!previewing) }}
       >
         { previewing ? 'Close Preview' : 'Open Preview' }
       </Button>
+
+      <Button
+        disabled={deleting}
+        style={{position: 'fixed', top: 10, right: 90, background: 'yellow'}}
+        onClick={async () => {
+          setDeleting(true)
+          const password = prompt('Please enter password')
+          const response = await deleteGame(props.gameId, props.leagueId, password)
+
+          if (response.status === 200) {
+            console.log(`[Success] ${props.gameId} deleted.`)
+            navigate("/games/")
+          } else {
+            const text = await response.text()
+            console.log(text)
+            setSaving(false)
+          }
+        }}
+      >
+        { deleting ? 'Deleting' : 'Delete' }
+      </Button>
+
       <Button
         disabled={saving}
-        style={{position: 'fixed', top: 10, right: 10, background: 'white'}}
+        style={{position: 'fixed', top: 10, right: 10, background: 'yellow'}}
         onClick={async () => {
           setSaving(true)
           const password = prompt('Please enter password')
           const response = await saveGame(props.gameId, props.leagueId, json, password)
+
           if (response.status === 200) {
-            console.log("Success")
+            console.log(`[Success] ${props.gameId} updated.`)
             setSaving(false)
           } else {
             const text = await response.text()

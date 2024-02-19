@@ -4,6 +4,7 @@ from flask_caching import Cache
 from models import db, Game, League, Matchup, Stats
 from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
+from functools import wraps
 from pathlib import Path
 
 import os
@@ -126,18 +127,25 @@ def game(league_id, id):
     return jsonify({**game.to_dict(include_points=True), "stats": stats})
 
 
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if os.environ.get('PARITY_EDIT_PASSWORD') is None:
+            return ('PARITY_EDIT_PASSWORD env var not set', 401)
+
+        if os.environ.get('PARITY_EDIT_PASSWORD') != request.headers['Authorization']:
+            return ('Password does not match PARITY_EDIT_PASSWORD', 401)
+
+        return f(*args, **kwargs)
+    return decorated_function
+
+
 @app.route('/api/<league_id>/games/<id>', methods=['POST'])
+@admin_required
 def edit_game(league_id, id):
-
-    # auth
-    if os.environ.get('PARITY_EDIT_PASSWORD') is None:
-        return ('PARITY_EDIT_PASSWORD env var not set', 401)
-    if os.environ.get('PARITY_EDIT_PASSWORD') != request.headers['Authorization']:
-        return ('Password does not match PARITY_EDIT_PASSWORD', 401)
-
-    # updating Game
     game = Game.query.filter_by(league_id=league_id, id=id).first()
 
+    # updating Game
     game.home_score = request.json['homeScore']
     game.away_score = request.json['awayScore']
     game.home_roster = request.json['homeRoster']
@@ -160,6 +168,25 @@ def edit_game(league_id, id):
     # re-calculating stats
     for game in games:
         StatsCalculator(game).run()
+
+    # clear the stats cache
+    cache.clear()
+
+    return ('', 200)
+
+
+@app.route('/api/<league_id>/games/<id>', methods=['DELETE'])
+@admin_required
+def delete_game(league_id, id):
+    game = Game.query.filter_by(league_id=league_id, id=id).first()
+    stats = Stats.query.filter_by(game_id=id).all()
+
+    db.session.delete(game)
+
+    for stat in stats:
+        db.session.delete(stat)
+
+    db.session.commit()
 
     # clear the stats cache
     cache.clear()
