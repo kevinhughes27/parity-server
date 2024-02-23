@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function topPlayers(stats: StatLine[], stat: string, num: number) {
-  return sortBy(stats, (p) => { return -p[stat] }).slice(0, num)
+  return sortBy(stats, (p) => { return -p[stat] }).slice(0, num).filter((p) => { return Number(p[stat]) > 0 })
 }
 
 function Card(props: {stat: string, stats: Stats, money?: boolean}) {
@@ -35,7 +35,7 @@ function Card(props: {stat: string, stats: Stats, money?: boolean}) {
   })
 
   const players = topPlayers(statsArray, stat, 10)
-  const statTitle = capitalize.words(stat.replace(/_/g, ' '))
+  const statTitle = capitalize.words((stat === "callahan" ? "callahans" : stat).replace(/_/g, ' '))
 
   return (
     <Paper key={stat} className={classes.paper}>
@@ -44,7 +44,7 @@ function Card(props: {stat: string, stats: Stats, money?: boolean}) {
       </Typography>
       <Table size="small">
         <TableBody>
-          { map(players, (player) => {
+          { players.length > 0 ? map(players, (player) => {
             let value = player[stat]
             if (money) {
               value = format({prefix: '$'})(value as number)
@@ -56,7 +56,7 @@ function Card(props: {stat: string, stats: Stats, money?: boolean}) {
                 <TableCell>{value}</TableCell>
               </TableRow>
             )
-          })}
+          }): <TableRow><TableCell>"¯\_(ツ)_/¯"</TableCell></TableRow>}
         </TableBody>
       </Table>
     </Paper>
