@@ -72,6 +72,20 @@ const columnsMeta = [
     }
   },
   {
+    name: 'callahan' as const,
+    label: 'Callahans' as const,
+    options: {
+      sortDescFirst: true,
+      searchable: false,
+      filter: true,
+      customFilterListOptions: {
+        render: (v: any) => {
+          return `Callahans: ${v}`;
+        }
+      }
+    }
+  },
+  {
     name: 'd_blocks' as const,
     label: 'D Blocks' as const,
     options: {
@@ -205,7 +219,7 @@ function StatsTable(props: {stats: Stats}) {
       breaks: stats[k].d_points_for + '/' + (stats[k].d_points_against + stats[k].d_points_for)
     }
   });
-
+  
   return (
     <div className="responsive-table">
       <MUIDataTable
