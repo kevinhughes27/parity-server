@@ -1,5 +1,8 @@
 import os
 
+CURRENT_LEAGUE_ID = 20
+
+
 def database_path():
     base_dir = os.path.abspath(os.path.dirname(__file__))
     db_path = os.path.join(base_dir, 'db.sqlite')

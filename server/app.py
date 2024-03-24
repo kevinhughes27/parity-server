@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_caching import Cache
 
+from config import CURRENT_LEAGUE_ID
 from models import db, Game, League, Matchup, Stats
 from lib import StatsCalculator
 from lib import build_stats_response, build_teams_response, build_players_response
@@ -29,16 +30,11 @@ db.init_app(app)
 
 
 # Current League
+@cache.cached()
 @app.route('/current_league')
 def current_league():
-    league = {
-        'league': {
-            'id': 19,
-            'name': '2023 Winter Indoor Sunday Parity League',
-            'lineSize': 6
-        }
-    }
-    return jsonify(league)
+    league = League.query.filter_by(id=CURRENT_LEAGUE_ID).first()
+    return jsonify({'league': {'id': league.id, 'name': league.name, 'lineSize': 6}})
 
 
 # Submit Game

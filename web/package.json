@@ -51,6 +51,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "generate": "sqlite3 ../server/db.sqlite '.mode json' 'select id,name from league order by id desc' | jq > src/leagues.json",
     "build": "react-scripts build",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
