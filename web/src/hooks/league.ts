@@ -1,7 +1,10 @@
 import createPersistedState from 'use-persisted-state'
+import leagues from '../leagues.json'
+
+const currentLeague = leagues[0]
+const initialLeague = currentLeague.id.toString();
 
 const storageKey = 'currentLeague';
-const initialLeague = '15';
 
 const useLeagueState = createPersistedState(storageKey);
 

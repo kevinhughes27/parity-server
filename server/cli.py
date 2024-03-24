@@ -2,11 +2,10 @@
 
 import click
 from app import app, cache
+from config import CURRENT_LEAGUE_ID
 from models import db, League, Game, Stats
 from lib import StatsCalculator, ZuluruSync
 
-current_league_zid = 968
-current_league_id = 19
 
 
 @click.group()
@@ -27,7 +26,7 @@ def init_db():
 @cli.command()
 def zuluru_sync_current():
     with app.app_context():
-        league = League.query.filter_by(zuluru_id=current_league_zid).first()
+        league = League.query.filter_by(id=CURRENT_LEAGUE_ID).first()
 
         zuluru_sync = ZuluruSync(league)
         zuluru_sync.sync_teams()
@@ -42,7 +41,7 @@ def zuluru_sync_current():
 @click.option('--week')
 def recalc(week):
     with app.app_context():
-        games = Game.query.filter_by(league_id=current_league_id, week=week).all()
+        games = Game.query.filter_by(league_id=CURRENT_LEAGUE_ID, week=week).all()
         game_ids = [game.id for game in games]
 
         print("Deleting old stats")
