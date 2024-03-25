@@ -14,6 +14,8 @@ def build_players_response(league_id):
 
         if league.salary_calc == "pro_rate":
             salaries = [ps.salary_per_point for ps in player_stats if ps.points_played > 3]
+            if len(salaries) == 0:
+                continue
             average_salary_per_point = sum(salaries) / len(salaries)
 
             pro_rated_number_of_points = 15
