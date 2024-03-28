@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.ocua.parity.model.Event;
 import org.ocua.parity.model.Team;
+import org.ocua.parity.model.League;
+
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
@@ -21,14 +23,16 @@ public class BookkeeperTest {
     private Bookkeeper bookkeeper;
     private Team home;
     private Team away;
+    private League league;
 
     @Before
     public void before() {
         int week = 1;
         home = new Team("Team A", 1);
         away = new Team("Team B", 2);
+        league = new League();
         bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(week, home, away);
+        bookkeeper.startGame(league, week, home, away);
     }
 
     @Test
