@@ -41,7 +41,6 @@ public class LoadCurrentLeague extends AsyncTask<String, String, Long> {
             resString = EntityUtils.toString(response.getEntity());
             json = new JSONObject(resString);
         } catch (Exception e) {
-            this.dialog.setMessage(resString);
             e.printStackTrace();
         }
         return null;
