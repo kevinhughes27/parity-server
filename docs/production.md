@@ -171,11 +171,15 @@ Then enable and start the timer services (`sudo systemctl enable parity-backup.t
 * https://mlohr.com/gpg-agent-forwarding/
 
 
-Deploying
----------
+## Deploying
 
 1. Ensure the db is backed up
 2. pull the latest code on the server
 3. run pip3 install if python packages have changed
 4. rebuild frontend if required (clear out old files)
 5. restart the gunicorn process with `systemctl`
+
+
+## Turning it back on
+
+I needed to start the app server and timers again. I also needed to renew the let's encrypt with the same command as init
