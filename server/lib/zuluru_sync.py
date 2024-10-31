@@ -77,7 +77,7 @@ class ZuluruSync:
 
     def parse_matchup(self, teams, row, week, date):
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in
-               row.find_all(id=re.compile(self.team_id_preamble + '\d+'))]
+               row.find_all(id=re.compile(self.team_id_preamble + r'\d+'))]
 
         if len(ids) < 2:
             return None
@@ -110,7 +110,7 @@ class ZuluruSync:
     def get_team_ids(self, session):
         soup = self.get_soup(session, self.teams_path)
         ids = [int(x.get('id').replace(self.team_id_preamble, '')) for x in
-               soup.findAll(id=re.compile(self.team_id_preamble + '\d+'))]
+               soup.findAll(id=re.compile(self.team_id_preamble + r'\d+'))]
         return ids
 
     def sync_team(self, session, zuluru_id):
@@ -138,7 +138,7 @@ class ZuluruSync:
         db.session.commit()
 
     def sync_players(self, soup, team):
-        player_elems = soup.findAll(id=re.compile(self.player_id_preamble + '\d+'))
+        player_elems = soup.findAll(id=re.compile(self.player_id_preamble + r'\d+'))
 
         if not player_elems:
             print('No players found. Login probably failed.')
