@@ -51,9 +51,12 @@ public class Bookkeeper implements Serializable {
     private HashSet<String> homeParticipants;
     private HashSet<String> awayParticipants;
 
-    public void startGame(League league, int week, Team leftTeam, Team rightTeam) {
+    private File pathToExternalStorage;
+
+    public void startGame(League league, int week, Team leftTeam, Team rightTeam, File pathToExternalStorage) {
         this.league = league;
         this.week = week;
+        this.pathToExternalStorage = pathToExternalStorage;
         activeGame = new Game();
         homeTeam = leftTeam;
         awayTeam = rightTeam;
@@ -327,8 +330,7 @@ public class Bookkeeper implements Serializable {
                         String gameName = homeTeam.name + "-" + awayTeam.name;
                         String fileName = timestamp + "_" + gameName + ".json";
 
-                        File pathToExternalStorage = Environment.getExternalStorageDirectory();
-                        File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats" + File.separator + "autosave" + File.separator + datestamp);
+                        File backupDirectory = new File(pathToExternalStorage, "autosave" + File.separator + datestamp);
 
                         backupDirectory.mkdirs();
 
