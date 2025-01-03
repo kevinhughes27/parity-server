@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Environment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +16,7 @@ import org.ocua.parity.model.Team;
 import org.ocua.parity.model.Teams;
 import org.ocua.parity.tasks.LoadSchedule;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class ChooseTeams extends Activity {
@@ -122,8 +124,9 @@ public class ChooseTeams extends Activity {
         bundle.putSerializable("league", league);
         bundle.putSerializable("teams", teams);
 
+        File pathToExternalStorage = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         Bookkeeper bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(league, week, homeTeam, awayTeam);
+        bookkeeper.startGame(league, week, homeTeam, awayTeam, pathToExternalStorage);
         bundle.putSerializable("bookkeeper", bookkeeper);
 
         intent.putExtras(bundle);

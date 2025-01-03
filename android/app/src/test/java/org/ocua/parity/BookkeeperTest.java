@@ -3,6 +3,7 @@ package org.ocua.parity;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.List;
 
 import org.ocua.parity.model.Event;
@@ -32,7 +33,7 @@ public class BookkeeperTest {
         away = new Team("Team B", 2);
         league = new League();
         bookkeeper = new Bookkeeper();
-        bookkeeper.startGame(league, week, home, away);
+        bookkeeper.startGame(league, week, home, away, new File("."));
     }
 
     @Test
