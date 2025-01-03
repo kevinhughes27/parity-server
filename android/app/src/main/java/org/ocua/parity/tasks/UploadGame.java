@@ -74,8 +74,8 @@ public class UploadGame extends AsyncTask<String, String, String> {
 
     private void saveBackup(String json) {
         try {
-            File pathToExternalStorage = Environment.getExternalStorageDirectory();
-            File backupDirectory = new File(pathToExternalStorage, "ParityLeagueStats");
+            File pathToExternalStorage = this.parent.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+            File backupDirectory = new File(pathToExternalStorage, "CompletedGames");
 
             String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 
