@@ -7,7 +7,6 @@ from models import db, League, Game, Stats
 from lib import StatsCalculator, ZuluruSync
 
 
-
 @click.group()
 def cli():
     pass
@@ -27,8 +26,9 @@ def init_db():
 def zuluru_sync_current():
     with app.app_context():
         league = League.query.filter_by(id=CURRENT_LEAGUE_ID).first()
+        division = True
 
-        zuluru_sync = ZuluruSync(league)
+        zuluru_sync = ZuluruSync(league, division)
         zuluru_sync.sync_teams()
         zuluru_sync.sync_schedule()
 
