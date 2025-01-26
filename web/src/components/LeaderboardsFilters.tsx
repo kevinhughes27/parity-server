@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import GenderFilter from "./GenderFilter";
 import SubFilter from "./SubFilter";
+import { LeaderboardsContext } from "../views/Leaderboards/LeaderboardsContext";
 
-const LeaderboardsFilters = ({
-  genderFilter,
-  setGenderFilter,
-  subFilter,
-  setSubFilter,
-}: any) => {
+const LeaderboardsFilters = () => {
+  const { subFilter, genderFilter, setSubFilter, setGenderFilter } =
+    useContext(LeaderboardsContext);
+
   return (
     <div
       style={{

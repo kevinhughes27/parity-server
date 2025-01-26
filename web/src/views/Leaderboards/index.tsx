@@ -1,13 +1,13 @@
-import React, { useMemo, useState } from "react";
+import React, { useContext, useMemo } from "react";
 import Card from "./Card";
 import { Stats } from "../../api";
 import LeaderboardsFilters from "../../components/LeaderboardsFilters";
+import { LeaderboardsContext } from "./LeaderboardsContext";
 
 export default function Leaderboards(props: { stats: Stats }) {
   const stats = props.stats;
 
-  const [subFilter, setSubFilter] = useState("show");
-  const [genderFilter, setGenderFilter] = useState("all");
+  const { subFilter, genderFilter } = useContext(LeaderboardsContext);
 
   const filteredStats = useMemo(() => {
     const showAllData = subFilter === "show" && genderFilter === "all";
@@ -28,12 +28,7 @@ export default function Leaderboards(props: { stats: Stats }) {
 
   return (
     <div>
-      <LeaderboardsFilters
-        genderFilter={genderFilter}
-        setGenderFilter={setGenderFilter}
-        subFilter={subFilter}
-        setSubFilter={setSubFilter}
-      />
+      <LeaderboardsFilters />
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <Card stat="pay" stats={filteredStats} money={true} />
