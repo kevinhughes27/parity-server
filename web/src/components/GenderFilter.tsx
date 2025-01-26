@@ -7,7 +7,7 @@ import { map } from "lodash";
 
 const GENDERS = ["all", "female", "male"];
 
-function GenderPicker(props: {
+function GenderFilter(props: {
   gender: string;
   onChange: (gender: string) => void;
 }) {
@@ -52,4 +52,4 @@ function GenderPicker(props: {
   );
 }
 
-export default GenderPicker;
+export default GenderFilter;

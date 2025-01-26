@@ -1,15 +1,23 @@
 import React from "react";
-import GenderPicker from "./GenderPicker";
+import GenderFilter from "./GenderFilter";
+import SubFilter from "./SubFilter";
 
-const LeaderboardsFilters = ({ genderFilter, setGenderFilter }: any) => {
+const LeaderboardsFilters = ({
+  genderFilter,
+  setGenderFilter,
+  subFilter,
+  setSubFilter,
+}: any) => {
   return (
     <div
       style={{
         display: "flex",
+        gap: "8px",
         padding: "16px",
       }}
     >
-      <GenderPicker gender={genderFilter} onChange={setGenderFilter} />
+      <GenderFilter gender={genderFilter} onChange={setGenderFilter} />
+      <SubFilter filter={subFilter} onChange={setSubFilter} />
     </div>
   );
 };

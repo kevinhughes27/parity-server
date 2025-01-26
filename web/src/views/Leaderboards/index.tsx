@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Card from "./Card";
 import { Stats } from "../../api";
 import LeaderboardsFilters from "../../components/LeaderboardsFilters";
@@ -6,21 +6,33 @@ import LeaderboardsFilters from "../../components/LeaderboardsFilters";
 export default function Leaderboards(props: { stats: Stats }) {
   const stats = props.stats;
 
+  const [subFilter, setSubFilter] = useState("show");
   const [genderFilter, setGenderFilter] = useState("all");
-  const filteredStats =
-    genderFilter === "all"
+
+  const filteredStats = useMemo(() => {
+    const showAllData = subFilter === "show" && genderFilter === "all";
+
+    return showAllData
       ? stats
       : Object.fromEntries(
-          Object.entries(stats).filter(
-            ([_key, value]) => value.gender === genderFilter
-          )
+          Object.entries(stats).filter(([key, value]) => {
+            const satisfiesSubFilter =
+              subFilter === "show" || !key.endsWith("(S)");
+            const satisfiesGenderFilter =
+              genderFilter === "all" || value.gender === genderFilter;
+
+            return satisfiesSubFilter && satisfiesGenderFilter;
+          })
         );
+  }, [genderFilter, stats, subFilter]);
 
   return (
     <div>
       <LeaderboardsFilters
         genderFilter={genderFilter}
         setGenderFilter={setGenderFilter}
+        subsFilter={subFilter}
+        setSubsFilter={setSubFilter}
       />
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
