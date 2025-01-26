@@ -12,7 +12,6 @@ function SubFilter(props: {
   onChange: (filter: string) => void;
 }) {
   const { filter } = props;
-  console.log("🚀 ~ filter:", filter);
 
   const onChange = (event: SelectChangeEvent) => {
     props.onChange(event.target.value);
