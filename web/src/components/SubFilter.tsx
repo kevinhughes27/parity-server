@@ -12,6 +12,7 @@ function SubFilter(props: {
   onChange: (filter: string) => void;
 }) {
   const { filter } = props;
+  console.log("🚀 ~ filter:", filter);
 
   const onChange = (event: SelectChangeEvent) => {
     props.onChange(event.target.value);
@@ -36,10 +37,10 @@ function SubFilter(props: {
 
   return (
     <FormControl size="small">
-      <InputLabel id="subs-filter-label">Subs</InputLabel>
+      <InputLabel id="sub-filter-label">Subs</InputLabel>
       <Select
-        labelId="subs-filter-label"
-        id="subs-filter"
+        labelId="sub-filter-label"
+        id="sub-filter"
         value={filter}
         label="Subs"
         onChange={onChange}

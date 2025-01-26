@@ -31,8 +31,8 @@ export default function Leaderboards(props: { stats: Stats }) {
       <LeaderboardsFilters
         genderFilter={genderFilter}
         setGenderFilter={setGenderFilter}
-        subsFilter={subFilter}
-        setSubsFilter={setSubFilter}
+        subFilter={subFilter}
+        setSubFilter={setSubFilter}
       />
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
