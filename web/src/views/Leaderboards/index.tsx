@@ -18,17 +18,10 @@ export default function Leaderboards(props: { stats: Stats }) {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          padding: "16px",
-        }}
-      >
-        <LeaderboardsFilters
-          genderFilter={genderFilter}
-          setGenderFilter={setGenderFilter}
-        />
-      </div>
+      <LeaderboardsFilters
+        genderFilter={genderFilter}
+        setGenderFilter={setGenderFilter}
+      />
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <Card stat="pay" stats={filteredStats} money={true} />
