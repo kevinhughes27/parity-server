@@ -1,6 +1,6 @@
 import os
 
-CURRENT_LEAGUE_ID = 21
+CURRENT_LEAGUE_ID = 22
 
 
 def database_path():
