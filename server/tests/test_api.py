@@ -1,110 +1,162 @@
-import werkzeug
-
-from flask_testing import TestCase as FlaskTest
-from snapshottest import TestCase as SnapShotTest
-
-from .test_base import TestBase
-
-werkzeug.cached_property = werkzeug.utils.cached_property
+import json
+import pathlib
 
 
-class APITests(TestBase, FlaskTest, SnapShotTest):
-    def test_basic_point(self):
-        self.upload_game('basic_point.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+def upload_game(client, data_file, **kwargs):
+    fixture_path = pathlib.Path(__file__).parent / "./data" / data_file
 
-    def test_callahan(self):
-        self.upload_game('callahan.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    with open(fixture_path) as f:
+        game_str = f.read()
 
-    def test_catch_d(self):
-        self.upload_game('catch_d.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    game = json.loads(game_str)
+    for k in kwargs:
+        if k in game:
+            game[k] = kwargs[k]
 
-    def test_drop(self):
-        self.upload_game('drop.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    game_str = json.dumps(game)
 
-    def test_half(self):
-        self.upload_game('half.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    response = client.post(
+        "/submit_game", data=game_str, content_type="application/json"
+    )
+    assert response.status_code == 201
 
-    def test_mini_game(self):
-        self.upload_game('mini_game.json')
 
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+def edit_game(client, data_file, **kwargs):
+    fixture_path = pathlib.Path(__file__).parent / "./data" / data_file
 
-    def test_mini_game2(self):
-        self.upload_game('mini_game2.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    with open(fixture_path) as f:
+        game_str = f.read()
 
-    def test_throw_away(self):
-        self.upload_game('throw_away.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    game = json.loads(game_str)
+    for k in kwargs:
+        if k in game:
+            game[k] = kwargs[k]
 
-    def test_turnovers(self):
-        self.upload_game('turnovers.json')
-        stats = self.get_stats()
-        self.assertMatchSnapshot(stats)
+    game_str = json.dumps(game)
 
-    def test_league_endpoint(self):
-        response = self.client.get('/api/leagues')
-        assert response.status_code == 200
-        assert response.json == [{'id': 1, 'name': 'Test', 'zuluru_id': 1}]
+    # this url is assuming game id is 1
+    headers = {"Authorization": "testpw"}
+    # client.environ_base['HTTP_AUTHORIZATION'] = 'testpw'
+    response = client.post(
+        "/api/1/games/1",
+        data=game_str,
+        content_type="application/json",
+        headers=headers,
+    )
+    assert response.status_code == 200
 
-    def test_api_endpoints(self):
-        self.create_rosters()
-        self.upload_game('mini_game.json')
-        self.upload_game('mini_game2.json')
 
-        response = self.client.get('/api/1/teams')
-        assert response.status_code == 200
-        self.assertEqual(len(response.json), 4)
+def get_stats(client):
+    response = client.get("/api/1/stats")
+    stats = response.json
+    return stats
 
-        response = self.client.get('/api/1/weeks')
-        assert response.status_code == 200
 
-        response = self.client.get('/api/1/weeks/1')
-        assert response.status_code == 200
+def test_basic_point(client, league, snapshot):
+    upload_game(client, "basic_point.json")
+    stats = get_stats(client)
+    assert stats == snapshot
 
-        response = self.client.get('/api/1/stats')
-        assert response.status_code == 200
 
-        response = self.client.get('/api/1/games')
-        assert response.status_code == 200
+def test_callahan(client, league, snapshot):
+    upload_game(client, "callahan.json")
+    stats = get_stats(client)
+    assert stats == snapshot
 
-        response = self.client.get('/api/1/games?includePoints=true')
-        assert response.status_code == 200
 
-        response = self.client.get('/api/1/games/1')
-        assert response.status_code == 200
+def test_catch_d(client, league, snapshot):
+    upload_game(client, "catch_d.json")
+    stats = get_stats(client)
+    assert stats == snapshot
 
-        response = self.client.get('/api/1/players')
-        assert response.status_code == 200
-        self.assertEqual(len(response.json), 48)
 
-        response = self.client.get('/api/1/schedule')
-        assert response.status_code == 200
+def test_drop(client, league, snapshot):
+    upload_game(client, "drop.json")
+    stats = get_stats(client)
+    assert stats == snapshot
 
-    def test_stats_edit(self):
-        self.create_rosters()
-        self.upload_game('mini_game.json')
 
-        initial_stats = self.get_stats()
-        assert initial_stats['stats']['Brian Kells']['pulls'] == 1
-        assert initial_stats['stats']['Scott Higgins']['pulls'] == 0
+def test_half(client, league, snapshot):
+    upload_game(client, "half.json")
+    stats = get_stats(client)
+    assert stats == snapshot
 
-        self.edit_game('mini_game_edited.json')
-        stats = self.get_stats()
-        assert stats['stats']['Brian Kells']['pulls'] == 0
-        assert stats['stats']['Scott Higgins']['pulls'] == 1
 
-        self.assertMatchSnapshot(stats)
+def test_mini_game(client, league, snapshot):
+    upload_game(client, "mini_game.json")
+
+    stats = get_stats(client)
+    assert stats == snapshot
+
+
+def test_mini_game2(client, league, snapshot):
+    upload_game(client, "mini_game2.json")
+    stats = get_stats(client)
+    assert stats == snapshot
+
+
+def test_throw_away(client, league, snapshot):
+    upload_game(client, "throw_away.json")
+    stats = get_stats(client)
+    assert stats == snapshot
+
+
+def test_turnovers(client, league, snapshot):
+    upload_game(client, "turnovers.json")
+    stats = get_stats(client)
+    assert stats == snapshot
+
+
+def test_league_endpoint(client, league, snapshot):
+    response = client.get("/api/leagues")
+    assert response.status_code == 200
+    assert response.json == [{"id": 1, "name": "Test", "zuluru_id": 1}]
+
+
+def test_api_endpoints(client, league, rosters, snapshot):
+    upload_game(client, "mini_game.json")
+    upload_game(client, "mini_game2.json")
+
+    response = client.get("/api/1/teams")
+    assert response.status_code == 200
+    assert len(response.json) == 4
+
+    response = client.get("/api/1/weeks")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/weeks/1")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/stats")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/games")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/games?includePoints=true")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/games/1")
+    assert response.status_code == 200
+
+    response = client.get("/api/1/players")
+    assert response.status_code == 200
+    assert len(response.json) == 48
+
+    response = client.get("/api/1/schedule")
+    assert response.status_code == 200
+
+
+def test_stats_edit(client, league, rosters, snapshot):
+    upload_game(client, "mini_game.json")
+
+    initial_stats = get_stats(client)
+    assert initial_stats["stats"]["Brian Kells"]["pulls"] == 1
+    assert initial_stats["stats"]["Scott Higgins"]["pulls"] == 0
+
+    edit_game(client, "mini_game_edited.json")
+    stats = get_stats(client)
+    assert stats["stats"]["Brian Kells"]["pulls"] == 0
+    assert stats["stats"]["Scott Higgins"]["pulls"] == 1
+
+    assert stats == snapshot

@@ -1,20 +1,17 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@1.5
+  python: circleci/python@3.1.0
   node: circleci/node@4.8.1
-  browser-tools: circleci/browser-tools@1.4.6
 
 jobs:
   build-and-test:
     docker:
       - image: cimg/python:3.10-browsers
     steps:
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
       - checkout
       - python/install-packages:
-          pkg-manager: pip
+          pkg-manager: uv
       - node/install-packages:
           pkg-manager: yarn
           app-dir: web
@@ -23,7 +20,7 @@ jobs:
           command: cd web && yarn build
       - run:
           name: Run tests
-          command: cd server && pytest
+          command: cd server && uv run pytest
 
 workflows:
   build-and-test:
