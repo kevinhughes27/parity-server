@@ -13,9 +13,9 @@ Production Setup (AWS)
   The IP address is listed in the AWS console. Note this IP changes
 
 ### Setup the API server
-1. On the instance run `sudo apt-get update` and then install `uv`
+1. On the instance install `uv` for the ubuntu user `sudo su ubuntu`
 2. Clone the parity code `git clone https://github.com/kevinhughes27/parity-server.git`
-3. Now in the `partiy-server` directory we can `sudo uv synv`
+3. Now in the `partiy-server` directory we can `uv synv`
 4. `sudo flask run --host=0.0.0.0 --port=443 --cert=adhoc` will now work but it is not a production setup. You can check that the api responds by visiting `<instance_ip>/api/leagues`
 
 ### Compile the Javascript
@@ -76,7 +76,7 @@ After=network.target
 User=ubuntu
 WorkingDirectory=/home/ubuntu/parity-server/server
 Environment=PARITY_EDIT_PASSWORD=
-ExecStart=gunicorn --workers=2 --bind=127.0.0.1:8080 app:app
+ExecStart=/home/ubuntu/.local/bin/uv run gunicorn --workers=2 --bind=127.0.0.1:8080 app:app
 TimeoutSec=30
 Restart=always
 
