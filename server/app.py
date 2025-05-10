@@ -25,7 +25,7 @@ if os.environ.get('APP_SETTINGS') is None:
 # Init
 app = Flask(__name__, static_folder=react_app_path)
 app.config.from_object(os.environ['APP_SETTINGS'])
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+cache = Cache(app, config={'CACHE_TYPE': 'flask_caching.backends.SimpleCache'})
 db.init_app(app)
 
 

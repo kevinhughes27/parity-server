@@ -2,9 +2,10 @@ from .db import db
 from .league import League
 from .json_column import JsonColumn
 
+
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
+    league_id = db.Column(db.Integer, db.ForeignKey("league.id"), nullable=False)
     week = db.Column(db.Integer)
     home_team = db.Column(db.Text)
     away_team = db.Column(db.Text)
@@ -16,7 +17,7 @@ class Game(db.Model):
 
     @property
     def league(self):
-        return League.query.get(self.league_id)
+        return db.session.get(League, self.league_id)
 
     @property
     def players(self):
@@ -32,7 +33,7 @@ class Game(db.Model):
             "homeRoster": self.home_roster,
             "awayTeam": self.away_team,
             "awayScore": self.away_score,
-            "awayRoster": self.away_roster
+            "awayRoster": self.away_roster,
         }
 
         if include_points:

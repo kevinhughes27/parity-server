@@ -9,9 +9,9 @@ production: [https://parity.ocua.ca](https://parity.ocua.ca)
 Server Setup
 ------------
 
-1. You will need `python3` and `pip3`.
-2. To install python dependencies run `pip3 install -r requirements.txt` (You may need run as administrator depending on your security settings)
-3. Run the python server with this command `python3 server/app.py`
+1. You will need `python3` and [`uv`](https://github.com/astral-sh/uv).
+2. To install python dependencies run `uv sync` (You may need run as administrator depending on your security settings)
+3. Run the python server with this command `uv run server/app.py`
 4. You can inspect available leagues at at `http://localhost:5000/api/leagues`
 5. Then league API calls like `http://localhost:5000/api/10/weeks/1` and `http://localhost:5000/api/10/stats` (where `10` is the league_id) etc.
 
@@ -40,7 +40,7 @@ curl -X POST --data @data/test/one.json -H "Content-Type: application/json" http
 
 To reset your local database you can reset the db file using `git restore`.
 
-There is also an automated test suite which can be run using `pytest`.
+There is also an automated test suite which can be run using `uv run pytest`.
 
 
 Contributing
