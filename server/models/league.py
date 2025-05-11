@@ -1,16 +1,15 @@
-from .db import db
+from sqlmodel import Field, SQLModel, Relationship
+from typing import List, Optional
 
-class League(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    zuluru_id = db.Column(db.Integer, unique=True)
-    name = db.Column(db.Text, nullable=False)
 
-    stat_values = db.Column(db.Text, nullable=False)
-    salary_calc = db.Column(db.Text, nullable=False)
+class League(SQLModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    zuluru_id: int = Field(default=None, unique=True, index=True)
+    name: str = Field(index=True)
+    stat_values: str
+    salary_calc: str
 
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "zuluru_id": self.zuluru_id,
-            "name": self.name,
-        }
+    teams: List["Team"] = Relationship(back_populates="league")
+    players: List["Player"] = Relationship(back_populates="league")
+    games: List["Game"] = Relationship(back_populates="league")
+    matchups: List["Matchup"] = Relationship(back_populates="league")
