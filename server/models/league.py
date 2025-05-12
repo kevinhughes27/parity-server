@@ -1,5 +1,5 @@
 from sqlmodel import Field, SQLModel, Relationship
-from typing import List, Optional
+from typing import List
 
 
 class League(SQLModel, table=True):
@@ -12,4 +12,5 @@ class League(SQLModel, table=True):
     teams: List["Team"] = Relationship(back_populates="league")
     players: List["Player"] = Relationship(back_populates="league")
     games: List["Game"] = Relationship(back_populates="league")
+    stats: List["Stats"] = Relationship(back_populates="league")
     matchups: List["Matchup"] = Relationship(back_populates="league")
