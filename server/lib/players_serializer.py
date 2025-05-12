@@ -1,9 +1,10 @@
-from models import Player, Stats, League
+from models import League
 
-def build_players_response(league_id):
-    league = League.query.filter_by(id=league_id).first()
-    players = Player.query.filter(Player.league_id == league_id, Player.team_id != None).all()
-    stats = Stats.query.filter_by(league_id=league_id).all()
+
+def build_players_response(session, league_id):
+    league = session.get(League, league_id)
+    players = [p for p in league.players if p.team_id is not None]
+    stats = league.stats
 
     # Calculate Salaries 👍
     for player in players:
@@ -49,4 +50,4 @@ def build_players_response(league_id):
                 player.salary = avg_female_salary
 
 
-    return [player.to_dict() for player in players]
+    return [player.to_dict_with_properties() for player in players]
