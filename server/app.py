@@ -1,17 +1,19 @@
 from fastapi import FastAPI, Depends
 from typing import Annotated
-from fastapi.staticfiles import StaticFiles
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from sqlmodel import Session, create_engine, select
-from sqlalchemy.orm import selectinload
+from starlette.responses import FileResponse
+from pydantic import BaseModel
+from typing import Any
 
 from config import CURRENT_LEAGUE_ID, Config
 from models import League, Team, Player, Game, Matchup
+# from lib import build_stats_response, build_teams_response, build_players_response
+from lib import build_stats_response, build_players_response
 
 # from lib import StatsCalculator
-# from lib import build_stats_response, build_teams_response, build_players_response
 # from functools import wraps
 from pathlib import Path
 import uvicorn
@@ -97,37 +99,44 @@ async def current_league(session: SessionDep):
 #     return game
 
 
+class TeamPlayerResponse(BaseModel):
+    name: str
+    team: str
+    is_male: bool
+
+
+class TeamResponse(BaseModel):
+    id: int
+    name: str
+    players: list[TeamPlayerResponse]
+
+
 # API
 @app.get("/api/{league_id}/teams", response_model=list[Team])
 @cache()
 async def teams(league_id: int, session: SessionDep):
-    statement = (
-        select(Team)
-        .where(Team.league_id == league_id)
-        .options(selectinload(Team.players))
-    )
+    statement = select(Team).where(Team.league_id == league_id)
     teams = session.exec(statement).all()
-    # teams_response = []
-    # for team in teams:
-    #     players = []
-    #     for player in team.players:
-    #         players.append({
-    #             'id': player.id,
-    #             'name': player.name,
-    #             'is_male': player.is_male
-    #         })
-    #     teams_response.append({
-    #         'id': team.id,
-    #         'name': team.name,
-    #         'players': players
-    #     })
-    # return JSONResponse(content={'teams': teams_response})
-    return teams
+    teams_response = []
+    for team in teams:
+        players = []
+        for player in team.players:
+            players.append(TeamPlayerResponse(
+                id=player.id,
+                name=player.name,
+                is_male=player.is_male
+            ))
+        teams_response.append(TeamResponse(
+            id=team.id,
+            name=team.name,
+            players=players
+        ))
+    return teams_response
 
 
 @app.get("/api/{league_id}/schedule", response_model=list[Matchup])
 @cache()
-def schedule(league_id: int, session: SessionDep):
+async def schedule(league_id: int, session: SessionDep):
     # teams = build_teams_response(league_id)
     #
     # matchup_count = len(teams) / 2
@@ -144,34 +153,34 @@ def schedule(league_id: int, session: SessionDep):
     return matchups
 
 
-@app.get("/api/{league_id}/players", response_model=list[Player])
-@cache()
-def players(league_id: int, session: SessionDep):
-    # league = session.get(League, CURRENT_LEAGUE_ID)
-    statement = select(Player).where(Player.league_id == league_id)
-    players = session.exec(statement).all()
-    # need stats too
-    return players
+class PlayerResponse(BaseModel):
+    name: str
+    team: str
+    salary: int
 
 
-@app.get("/api/{league_id}/games", response_model=list[Game])
+@app.get("/api/{league_id}/players")
 @cache()
-def games(league_id: int, session: SessionDep):
+async def players(league_id: int, session: SessionDep) -> list[PlayerResponse]:
+    players = build_players_response(session, league_id)
+    return [PlayerResponse(**p) for p in players]
+
+
+@app.get("/api/{league_id}/games")
+async def games(league_id: int, session: SessionDep):
     # include_points = request.args.get('includePoints') == 'true'
     statement = select(Game).where(Game.league_id == league_id)
     games = session.exec(statement).all()
-    # games = [game.to_dict(include_points=include_points) for game in query]
-    # return jsonify(games)
     return games
 
 
 @app.get("/api/{league_id}/games/{id}", response_model=Game)
 @cache()
-def game(league_id: int, id: int, session: SessionDep):
+async def game(league_id: int, id: int, session: SessionDep):
     statement = select(Game).where(Player.league_id == league_id, Game.id == id)
     game = session.exec(statement).first()
-    # stats = build_stats_response(league_id, [game])
-    # return jsonify({**game.to_dict(include_points=True), "stats": stats})
+    stats = build_stats_response(session, league_id, [game])
+    game.set_game_stats(stats)
     return game
 
 
@@ -244,7 +253,7 @@ def game(league_id: int, id: int, session: SessionDep):
 
 @app.get('/api/leagues', response_model=list[League])
 @cache()
-def leagues(session: SessionDep):
+async def leagues(session: SessionDep):
     statement = select(League)
     leagues = session.exec(statement).all()
     return leagues
@@ -252,39 +261,47 @@ def leagues(session: SessionDep):
 
 @app.get('/api/{league_id}/weeks', response_model=list[int])
 @cache()
-def weeks(league_id: int, session: SessionDep):
-    # games = Game.query.filter_by(league_id=league_id).all()
-    # weeks = set([game.week for game in games])
-    # return jsonify(sorted(weeks))
+async def weeks(league_id: int, session: SessionDep):
     statement = select(Game.week).where(Game.league_id == league_id)
-    weeks = sorted(set(session.exec(statement).all()))
-    return weeks
+    weeks = set(session.exec(statement).all())
+    return sorted(weeks)
 
 
-# @cache.cached()
-# @app.route('/api/<league_id>/weeks/<num>')
-# def week(league_id, num):
-#     games = Game.query.filter_by(league_id=league_id, week=num)
-#     stats = build_stats_response(league_id, games)
-#     return jsonify({"week": num, "stats": stats})
+class StatsResponse(BaseModel):
+    week: int
+    stats: dict[str, Any]
 
 
-# @cache.cached()
-# @app.route('/api/<league_id>/stats')
-# def stats(league_id):
-#     games = Game.query.filter_by(league_id=league_id).order_by(Game.week.asc())
-#     stats = build_stats_response(league_id, games)
-#     return jsonify({"week": 0, "stats": stats})
+@app.get('/api/{league_id}/weeks/{num}')
+@cache()
+async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
+    statement = select(Game).where(Game.league_id == league_id, Game.week == num)
+    games = session.exec(statement).all()
+    stats = build_stats_response(session, league_id, games)
+    return StatsResponse(week=num, stats=stats)
+
+
+@app.get('/api/{league_id}/stats')
+@cache()
+async def stats(league_id: int, session: SessionDep) -> StatsResponse:
+    statement = select(Game).where(Game.league_id == league_id).order_by(Game.week.asc())
+    games = session.exec(statement).all()
+    stats = build_stats_response(session, league_id, games)
+    return StatsResponse(week=0, stats=stats)
 
 
 # React App
-if react_app_path.exists():
-    app.mount("/", StaticFiles(directory=react_app_path, html=True), name="static")
-else:
+if not react_app_path.exists():
+    print(f"Warning: React app directory not found at {react_app_path}")
 
-    @app.get("/")
-    async def read_root():
-        return {"message": "Static files not found. Build the React app."}
+
+@app.get("/{full_path:path}")
+async def serve_react_app(full_path: str):
+    file_path = react_app_path / full_path
+    if file_path.exists() and file_path.is_file():
+        return FileResponse(file_path)
+    else:
+        return FileResponse(react_app_path / 'index.html')
 
 
 # Boot server for Development / Test

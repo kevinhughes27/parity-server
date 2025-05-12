@@ -1,78 +1,65 @@
-from .db import db
+from typing import Dict, Any
+from sqlmodel import (
+    Field,
+    SQLModel,
+    Relationship,
+)
 
-class Stats(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    league_id = db.Column(db.Integer, db.ForeignKey('league.id'), nullable=False)
-    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
-    player_id = db.Column(db.Integer, db.ForeignKey('player.id'), nullable=False)
+STAT_VALUES = {
+    "v2": {
+        "goals": 10000,
+        "assists": 10000,
+        "second_assists": 8000,
+        "d_blocks": 8000,
+        "throw_aways": -5000,
+        "threw_drops": -1000,
+        "drops": -4000,
+        "completions": 500,
+        "catches": 500,
+        "o_points_for": 1000,
+        "d_points_for": 2000,
+    },
+    "v1": {
+        "goals": 10000,
+        "assists": 10000,
+        "second_assists": 8000,
+        "d_blocks": 8000,
+        "throw_aways": -5000,
+        "threw_drops": -2500,
+        "drops": -5000,
+        "completions": 1000,
+        "catches": 1000,
+    },
+}
 
-    stat_values = db.Column(db.Text, nullable=False)
 
-    goals = db.Column(db.Integer)
-    assists = db.Column(db.Integer)
-    second_assists = db.Column(db.Integer)
-    d_blocks = db.Column(db.Integer)
-    completions = db.Column(db.Integer)
-    throw_aways = db.Column(db.Integer)
-    threw_drops = db.Column(db.Integer)
-    catches = db.Column(db.Integer)
-    drops = db.Column(db.Integer)
-    pulls = db.Column(db.Integer)
-    callahan = db.Column(db.Integer)
-    o_points_for = db.Column(db.Integer)
-    o_points_against = db.Column(db.Integer)
-    d_points_for = db.Column(db.Integer)
-    d_points_against = db.Column(db.Integer)
+class Stats(SQLModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    league_id: int = Field(foreign_key="league.id", index=True)
+    game_id: int = Field(foreign_key="game.id", index=True)
+    player_id: int = Field(foreign_key="player.id", index=True)
 
-    STAT_VALUES = {
-        'v2': {
-            'goals': 10000,
-            'assists': 10000,
-            'second_assists': 8000,
-            'd_blocks': 8000,
-            'throw_aways': -5000,
-            'threw_drops': -1000,
-            'drops': -4000,
-            'completions': 500,
-            'catches': 500,
-            'o_points_for': 1000,
-            'd_points_for': 2000
-        },
-        'v1': {
-            'goals': 10000,
-            'assists': 10000,
-            'second_assists': 8000,
-            'd_blocks': 8000,
-            'throw_aways': -5000,
-            'threw_drops': -2500,
-            'drops': -5000,
-            'completions': 1000,
-            'catches': 1000
-        }
-    }
+    stat_values: str = Field(default="v2")
 
-    def __init__(self, league_id, game_id, player_id, stat_values):
-        self.league_id = league_id
-        self.game_id = game_id
-        self.player_id = player_id
+    goals: int = Field(default=0)
+    assists: int = Field(default=0)
+    second_assists: int = Field(default=0)
+    d_blocks: int = Field(default=0)
+    completions: int = Field(default=0)
+    throw_aways: int = Field(default=0)
+    threw_drops: int = Field(default=0)
+    catches: int = Field(default=0)
+    drops: int = Field(default=0)
+    pulls: int = Field(default=0)
+    callahan: int = Field(default=0)
+    o_points_for: int = Field(default=0)
+    o_points_against: int = Field(default=0)
+    d_points_for: int = Field(default=0)
+    d_points_against: int = Field(default=0)
 
-        self.stat_values = stat_values
-
-        self.goals = 0
-        self.assists = 0
-        self.second_assists = 0
-        self.d_blocks = 0
-        self.completions = 0
-        self.throw_aways = 0
-        self.threw_drops = 0
-        self.catches = 0
-        self.drops = 0
-        self.pulls = 0
-        self.callahan = 0
-        self.o_points_for = 0
-        self.o_points_against = 0
-        self.d_points_for = 0
-        self.d_points_against = 0
+    league: "League" = Relationship(back_populates="stats")
+    game: "Game" = Relationship(back_populates="stats")
+    player: "Player" = Relationship(back_populates="stats")
 
     def count_stat(self, stat):
         value = getattr(self, stat)
@@ -82,7 +69,7 @@ class Stats(db.Model):
     def pay(self):
         total = 0
 
-        for stat, value in self.STAT_VALUES[self.stat_values].items():
+        for stat, value in STAT_VALUES[self.stat_values].items():
             total += getattr(self, stat) * value
 
         return total
@@ -127,7 +114,7 @@ class Stats(db.Model):
         else:
             return (self.o_points_for + self.d_points_for) / self.points_played
 
-    def to_dict(self):
+    def to_dict_with_properties(self) -> Dict[str, Any]:
         return {
             "goals": self.goals,
             "assists": self.assists,
@@ -149,5 +136,5 @@ class Stats(db.Model):
             "total_efficiency": self.total_efficiency,
             "points_played": self.points_played,
             "pay": self.pay,
-            "salary_per_point": self.salary_per_point
+            "salary_per_point": self.salary_per_point,
         }
