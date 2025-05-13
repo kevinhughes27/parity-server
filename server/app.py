@@ -1,4 +1,4 @@
-from fastapi import APIRouter, FastAPI, Depends
+from fastapi import FastAPI, Depends
 from typing import Annotated
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
@@ -32,10 +32,7 @@ league_utc_offset = -5
 settings = Config()
 
 # Init
-# maybe switch to APIRouter https://fastapi.tiangolo.com/tutorial/bigger-applications/#import-apirouter
-# it redirects the trailing slashes
 app = FastAPI()
-router = APIRouter()
 
 # Database Setup
 engine = create_engine(settings.SQLALCHEMY_DATABASE_URI)
@@ -115,7 +112,7 @@ class TeamResponse(BaseModel):
 
 
 # API
-@router.get("/api/{league_id}/teams", response_model=list[Team])
+@app.get("/api/{league_id}/teams", response_model=list[Team])
 @cache()
 async def teams(league_id: int, session: SessionDep):
     statement = select(Team).where(Team.league_id == league_id)
@@ -137,7 +134,7 @@ async def teams(league_id: int, session: SessionDep):
     return teams_response
 
 
-@router.get("/api/{league_id}/schedule", response_model=list[Matchup])
+@app.get("/api/{league_id}/schedule", response_model=list[Matchup])
 @cache()
 async def schedule(league_id: int, session: SessionDep):
     # teams = build_teams_response(league_id)
@@ -162,14 +159,14 @@ class PlayerResponse(BaseModel):
     salary: int
 
 
-@router.get("/api/{league_id}/players")
+@app.get("/api/{league_id}/players")
 @cache()
 async def players(league_id: int, session: SessionDep) -> list[PlayerResponse]:
     players = build_players_response(session, league_id)
     return [PlayerResponse(**p) for p in players]
 
 
-@router.get("/api/{league_id}/games")
+@app.get("/api/{league_id}/games")
 async def games(league_id: int, session: SessionDep):
     # include_points = request.args.get('includePoints') == 'true'
     statement = select(Game).where(Game.league_id == league_id)
@@ -177,7 +174,9 @@ async def games(league_id: int, session: SessionDep):
     return games
 
 
-@router.get("/api/{league_id}/games/{id}", response_model=Game)
+#ToDo Next
+# Pydantic is not happy here now
+@app.get("/api/{league_id}/games/{id}", response_model=Game)
 @cache()
 async def game(league_id: int, id: int, session: SessionDep):
     statement = select(Game).where(Player.league_id == league_id, Game.id == id)
@@ -200,7 +199,7 @@ async def game(league_id: int, id: int, session: SessionDep):
 #     return decorated_function
 #
 #
-# @router.route('/api/<league_id>/games/<id>', methods=['POST'])
+# @app.route('/api/<league_id>/games/<id>', methods=['POST'])
 # @admin_required
 # def edit_game(league_id, id):
 #     game = Game.query.filter_by(league_id=league_id, id=id).first()
@@ -235,7 +234,7 @@ async def game(league_id: int, id: int, session: SessionDep):
 #     return ('', 200)
 #
 #
-# @router.route('/api/<league_id>/games/<id>', methods=['DELETE'])
+# @app.route('/api/<league_id>/games/<id>', methods=['DELETE'])
 # @admin_required
 # def delete_game(league_id, id):
 #     game = Game.query.filter_by(league_id=league_id, id=id).first()
@@ -254,7 +253,7 @@ async def game(league_id: int, id: int, session: SessionDep):
 #     return ('', 200)
 
 
-@router.get('/api/leagues', response_model=list[League])
+@app.get('/api/leagues', response_model=list[League])
 @cache()
 async def leagues(session: SessionDep):
     statement = select(League)
@@ -262,7 +261,7 @@ async def leagues(session: SessionDep):
     return leagues
 
 
-@router.get('/api/{league_id}/weeks')
+@app.get('/api/{league_id}/weeks')
 @cache()
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
     statement = select(Game.week).where(Game.league_id == league_id)
@@ -275,7 +274,7 @@ class StatsResponse(BaseModel):
     stats: dict[str, Any]
 
 
-@router.get('/api/{league_id}/weeks/{num}')
+@app.get('/api/{league_id}/weeks/{num}')
 @cache()
 async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
     statement = select(Game).where(Game.league_id == league_id, Game.week == num)
@@ -284,7 +283,7 @@ async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
     return StatsResponse(week=num, stats=stats)
 
 
-@router.get('/api/{league_id}/stats')
+@app.get('/api/{league_id}/stats')
 @cache()
 async def stats(league_id: int, session: SessionDep) -> StatsResponse:
     statement = select(Game).where(Game.league_id == league_id).order_by(Game.week.asc())
@@ -292,8 +291,6 @@ async def stats(league_id: int, session: SessionDep) -> StatsResponse:
     stats = build_stats_response(session, league_id, games)
     return StatsResponse(week=0, stats=stats)
 
-# Add API Routes
-app.include_router(router)
 
 # React App
 if not react_app_path.exists():
