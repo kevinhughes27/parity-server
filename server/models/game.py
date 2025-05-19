@@ -33,3 +33,6 @@ class Game(SQLModel, table=True):
     def to_dict_with_properties(self) -> Dict[str, Any]:
         data = self.model_dump()
         data["stats"] = self._game_stats
+        data["homeTeam"] = self.home_team
+        data["awayTeam"] = self.away_team
+        return data

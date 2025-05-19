@@ -53,7 +53,7 @@ async def startup():
 
 
 # Current League
-@app.get("/current_league", response_model=League)
+@app.get("/current_league", include_in_schema=False, response_model=League)
 @cache()
 async def current_league(session: SessionDep):
     league = session.get(League, CURRENT_LEAGUE_ID)
@@ -159,18 +159,21 @@ class PlayerResponse(BaseModel):
     salary: int
 
 
-@app.get("/api/{league_id}/players")
+@app.get("/api/{league_id}/players", response_model=list[PlayerResponse])
 @cache()
 async def players(league_id: int, session: SessionDep) -> list[PlayerResponse]:
     players = build_players_response(session, league_id)
     return [PlayerResponse(**p) for p in players]
 
 
-@app.get("/api/{league_id}/games")
+@app.get("/api/{league_id}/games", response_model=list[Game])
 async def games(league_id: int, session: SessionDep):
     # include_points = request.args.get('includePoints') == 'true'
     statement = select(Game).where(Game.league_id == league_id)
     games = session.exec(statement).all()
+    # this isn't automatically using the to_dict_with_properties method
+    # is that the right thing to be doing anyways?
+    # also since the db schema and the API schema already diverge maybe I should have separate types
     return games
 
 
@@ -261,7 +264,7 @@ async def leagues(session: SessionDep):
     return leagues
 
 
-@app.get('/api/{league_id}/weeks')
+@app.get('/api/{league_id}/weeks', response_model=list[int])
 @cache()
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
     statement = select(Game.week).where(Game.league_id == league_id)
@@ -274,7 +277,7 @@ class StatsResponse(BaseModel):
     stats: dict[str, Any]
 
 
-@app.get('/api/{league_id}/weeks/{num}')
+@app.get('/api/{league_id}/weeks/{num}', response_model=StatsResponse)
 @cache()
 async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
     statement = select(Game).where(Game.league_id == league_id, Game.week == num)
@@ -283,7 +286,7 @@ async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
     return StatsResponse(week=num, stats=stats)
 
 
-@app.get('/api/{league_id}/stats')
+@app.get('/api/{league_id}/stats', response_model=StatsResponse)
 @cache()
 async def stats(league_id: int, session: SessionDep) -> StatsResponse:
     statement = select(Game).where(Game.league_id == league_id).order_by(Game.week.asc())
@@ -297,7 +300,7 @@ if not react_app_path.exists():
     print(f"Warning: React app directory not found at {react_app_path}")
 
 
-@app.get("/{full_path:path}")
+@app.get("/{full_path:path}", include_in_schema=False)
 async def serve_react_app(full_path: str):
     file_path = react_app_path / full_path
     if file_path.exists() and file_path.is_file():
