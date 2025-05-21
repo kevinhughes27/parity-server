@@ -2,7 +2,6 @@ from sqlmodel import Session, select
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
 from typing import Any
-from config import CURRENT_LEAGUE_ID
 import db
 import datetime
 
@@ -15,27 +14,16 @@ class BaseSchema(BaseModel):
     )
 
 
-class League(BaseModel):
+class League(BaseSchema):
     id: int
+    zuluru_id: int | None  # Parity Tournament 2020
     name: str
-    line_size: int
 
 
-class CurrentLeague(BaseModel):
-    league: League
-
-
-def current_league(session: Session) -> CurrentLeague:
-    """Return the current league. Used by the Android app."""
-    league = session.get(db.League, CURRENT_LEAGUE_ID)
-    # nested response is required for android
-    return CurrentLeague(
-        league=League(
-            id=league.id,
-            name=league.name,
-            line_size=6
-        )
-    )
+def build_leagues_response(session: Session) -> list[League]:
+    statement = select(db.League)
+    leagues = session.exec(statement).all()
+    return [League(**league.model_dump()) for league in leagues]
 
 
 class Game(BaseSchema):
