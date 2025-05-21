@@ -5,31 +5,25 @@ from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from sqlmodel import Session, create_engine, select
 from starlette.responses import FileResponse
-from pydantic import BaseModel
-from typing import Any
+from pathlib import Path
 
-from config import CURRENT_LEAGUE_ID, Config
-from models import League, Team, Player, Game, Matchup
-# from lib import build_stats_response, build_teams_response, build_players_response
-from lib import build_stats_response, build_players_response
+import api
+import config
+import db
 
 # from lib import StatsCalculator
 # from functools import wraps
-from pathlib import Path
 import uvicorn
-
-
-# import os
-# import datetime
 
 
 # Constants
 react_app_path = Path(__file__).parents[1] / "web/build"
-league_utc_offset = -5
+if not react_app_path.exists():
+    print(f"Warning: React app directory not found at {react_app_path}")
 
 
 # Settings
-settings = Config()
+settings = config.Config()
 
 # Init
 app = FastAPI()
@@ -38,6 +32,7 @@ app = FastAPI()
 engine = create_engine(settings.SQLALCHEMY_DATABASE_URI)
 
 
+# Database session
 def get_session():
     with Session(engine) as session:
         yield session
@@ -53,12 +48,10 @@ async def startup():
 
 
 # Current League
-@app.get("/current_league", include_in_schema=False, response_model=League)
+@app.get("/current_league", include_in_schema=False)
 @cache()
-async def current_league(session: SessionDep):
-    league = session.get(League, CURRENT_LEAGUE_ID)
-    # need to add line_size to league
-    return league
+async def current_league(session: SessionDep) -> db.League:
+    return api.current_league(session)
 
 
 # # Submit Game
@@ -99,94 +92,43 @@ async def current_league(session: SessionDep):
 #     return game
 
 
-class TeamPlayerResponse(BaseModel):
-    name: str
-    team: str
-    is_male: bool
-
-
-class TeamResponse(BaseModel):
-    id: int
-    name: str
-    players: list[TeamPlayerResponse]
-
-
 # API
-@app.get("/api/{league_id}/teams", response_model=list[Team])
+@app.get('/api/leagues')
 @cache()
-async def teams(league_id: int, session: SessionDep):
-    statement = select(Team).where(Team.league_id == league_id)
-    teams = session.exec(statement).all()
-    teams_response = []
-    for team in teams:
-        players = []
-        for player in team.players:
-            players.append(TeamPlayerResponse(
-                id=player.id,
-                name=player.name,
-                is_male=player.is_male
-            ))
-        teams_response.append(TeamResponse(
-            id=team.id,
-            name=team.name,
-            players=players
-        ))
-    return teams_response
+async def leagues(session: SessionDep) -> list[db.League]:
+    statement = select(db.League)
+    leagues = session.exec(statement).all()
+    return leagues
 
 
-@app.get("/api/{league_id}/schedule", response_model=list[Matchup])
+@app.get("/api/{league_id}/teams", response_model=list[api.Team])
 @cache()
-async def schedule(league_id: int, session: SessionDep):
-    # teams = build_teams_response(league_id)
-    #
-    # matchup_count = len(teams) / 2
-    # local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
-    # today = local_today.date()
-    #
-    # query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.game_start >= today).limit(matchup_count)
-    #
-    # matchups = [matchup.to_dict() for matchup in query]
-    #
-    # return jsonify({"teams": teams, "matchups": matchups})
-    statement = select(Matchup).where(Matchup.league_id == league_id)
-    matchups = session.exec(statement).all()
-    return matchups
+async def teams(league_id: int, session: SessionDep) -> list[api.Team]:
+    return api.build_teams_response(session, league_id)
 
 
-class PlayerResponse(BaseModel):
-    name: str
-    team: str
-    salary: int
-
-
-@app.get("/api/{league_id}/players", response_model=list[PlayerResponse])
+@app.get("/api/{league_id}/schedule")
 @cache()
-async def players(league_id: int, session: SessionDep) -> list[PlayerResponse]:
-    players = build_players_response(session, league_id)
-    return [PlayerResponse(**p) for p in players]
+async def schedule(league_id: int, session: SessionDep) -> list[api.Schedule]:
+    return api.build_schedule_response(session, league_id)
 
 
-@app.get("/api/{league_id}/games", response_model=list[Game])
-async def games(league_id: int, session: SessionDep):
+@app.get("/api/{league_id}/players", response_model=list[api.Player])
+@cache()
+async def players(league_id: int, session: SessionDep) -> list[api.Player]:
+    return api.build_players_response(session, league_id)
+
+
+@app.get("/api/{league_id}/games")
+async def games(league_id: int, session: SessionDep) -> list[api.Game]:
     # include_points = request.args.get('includePoints') == 'true'
-    statement = select(Game).where(Game.league_id == league_id)
-    games = session.exec(statement).all()
-    # this isn't automatically using the to_dict_with_properties method
-    # is that the right thing to be doing anyways?
-    # also since the db schema and the API schema already diverge maybe I should have separate types
-    return games
+    return api.build_games_response(session, league_id)
 
 
-#ToDo Next
-# Pydantic is not happy here now
-@app.get("/api/{league_id}/games/{id}", response_model=Game)
+@app.get("/api/{league_id}/games/{id}")
 @cache()
-async def game(league_id: int, id: int, session: SessionDep):
-    statement = select(Game).where(Player.league_id == league_id, Game.id == id)
-    game = session.exec(statement).first()
-    stats = build_stats_response(session, league_id, [game])
-    game.set_game_stats(stats)
-    return game
+async def game(league_id: int, id: int, session: SessionDep) -> api.GameWithStats:
+    return api.build_game_response(session, league_id, id)
 
 
 # def admin_required(f):
@@ -256,50 +198,27 @@ async def game(league_id: int, id: int, session: SessionDep):
 #     return ('', 200)
 
 
-@app.get('/api/leagues', response_model=list[League])
-@cache()
-async def leagues(session: SessionDep):
-    statement = select(League)
-    leagues = session.exec(statement).all()
-    return leagues
-
-
 @app.get('/api/{league_id}/weeks', response_model=list[int])
 @cache()
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
-    statement = select(Game.week).where(Game.league_id == league_id)
+    statement = select(db.Game.week).where(db.Game.league_id == league_id)
     weeks = set(session.exec(statement).all())
     return sorted(weeks)
 
 
-class StatsResponse(BaseModel):
-    week: int
-    stats: dict[str, Any]
-
-
-@app.get('/api/{league_id}/weeks/{num}', response_model=StatsResponse)
+@app.get('/api/{league_id}/weeks/{week}', response_model=api.WeekStats)
 @cache()
-async def week(league_id: int, num: int, session: SessionDep) -> StatsResponse:
-    statement = select(Game).where(Game.league_id == league_id, Game.week == num)
-    games = session.exec(statement).all()
-    stats = build_stats_response(session, league_id, games)
-    return StatsResponse(week=num, stats=stats)
+async def week(league_id: int, week: int, session: SessionDep) -> api.WeekStats:
+    return api.build_stats_response(session, league_id, week)
 
 
-@app.get('/api/{league_id}/stats', response_model=StatsResponse)
+@app.get('/api/{league_id}/stats', response_model=api.WeekStats)
 @cache()
-async def stats(league_id: int, session: SessionDep) -> StatsResponse:
-    statement = select(Game).where(Game.league_id == league_id).order_by(Game.week.asc())
-    games = session.exec(statement).all()
-    stats = build_stats_response(session, league_id, games)
-    return StatsResponse(week=0, stats=stats)
+async def stats(league_id: int, session: SessionDep) -> api.WeekStats:
+    return api.build_stats_response(session, league_id, 0)
 
 
 # React App
-if not react_app_path.exists():
-    print(f"Warning: React app directory not found at {react_app_path}")
-
-
 @app.get("/{full_path:path}", include_in_schema=False)
 async def serve_react_app(full_path: str):
     file_path = react_app_path / full_path
