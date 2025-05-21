@@ -1,8 +1,9 @@
-from fastapi import FastAPI, Depends
-from typing import Annotated
+from fastapi import FastAPI, Depends, HTTPException, status
+from typing import Annotated, Any
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from sqlmodel import Session, create_engine, select
 from starlette.responses import FileResponse
 from pathlib import Path
@@ -10,9 +11,9 @@ from pathlib import Path
 import api
 import config
 import db
+import os
 
 # from lib import StatsCalculator
-# from functools import wraps
 import uvicorn
 
 
@@ -32,13 +33,40 @@ app = FastAPI()
 engine = create_engine(settings.SQLALCHEMY_DATABASE_URI)
 
 
-# Database session
+# Database Session
 def get_session():
     with Session(engine) as session:
         yield session
 
 
 SessionDep = Annotated[Session, Depends(get_session)]
+
+
+# Admin
+security = HTTPBasic()
+
+
+def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
+    if os.environ.get("PARITY_EDIT_PASSWORD") is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="PARITY_EDIT_PASSWORD env var not set",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+
+    correct_username = credentials.username == "admin"
+    correct_password = credentials.password == os.environ.get("PARITY_EDIT_PASSWORD")
+
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
+
+
+AdminDep = Annotated[Session, Depends(verify_admin)]
 
 
 # Caching Setup
@@ -48,10 +76,31 @@ async def startup():
 
 
 # Current League
+class League(api.BaseSchema):
+    id: int
+    name: str
+    line_size: int
+
+
+class CurrentLeague(api.BaseSchema):
+    league: League
+
+
 @app.get("/current_league", include_in_schema=False)
 @cache()
-async def current_league(session: SessionDep) -> db.League:
-    return api.current_league(session)
+async def current_league(session: SessionDep) -> CurrentLeague:
+    """Return the current league.
+
+    Used by the Android app which requires the nesting
+    """
+    league = session.get(db.League, config.CURRENT_LEAGUE_ID)
+    return CurrentLeague(
+        league=League(
+            id=league.id,
+            name=league.name,
+            line_size=6
+        )
+    )
 
 
 # # Submit Game
@@ -95,10 +144,8 @@ async def current_league(session: SessionDep) -> db.League:
 # API
 @app.get('/api/leagues')
 @cache()
-async def leagues(session: SessionDep) -> list[db.League]:
-    statement = select(db.League)
-    leagues = session.exec(statement).all()
-    return leagues
+async def leagues(session: SessionDep) -> list[api.League]:
+    return api.build_leagues_response(session)
 
 
 @app.get("/api/{league_id}/teams", response_model=list[api.Team])
@@ -131,71 +178,65 @@ async def game(league_id: int, id: int, session: SessionDep) -> api.GameWithStat
     return api.build_game_response(session, league_id, id)
 
 
-# def admin_required(f):
-#     @wraps(f)
-#     def decorated_function(*args, **kwargs):
-#         if os.environ.get('PARITY_EDIT_PASSWORD') is None:
-#             return ('PARITY_EDIT_PASSWORD env var not set', 401)
-#
-#         if os.environ.get('PARITY_EDIT_PASSWORD') != request.headers['Authorization']:
-#             return ('Password does not match PARITY_EDIT_PASSWORD', 401)
-#
-#         return f(*args, **kwargs)
-#     return decorated_function
-#
-#
-# @app.route('/api/<league_id>/games/<id>', methods=['POST'])
-# @admin_required
-# def edit_game(league_id, id):
-#     game = Game.query.filter_by(league_id=league_id, id=id).first()
-#
-#     # updating Game
-#     game.home_score = request.json['homeScore']
-#     game.away_score = request.json['awayScore']
-#     game.home_roster = request.json['homeRoster']
-#     game.away_roster = request.json['awayRoster']
-#     game.points = request.json['points']
-#
-#     db.session.add(game)
-#     db.session.commit()
-#
-#     # loading other games from the same week
-#     games = Game.query.filter_by(league_id=league_id, week=game.week).all()
-#     game_ids = [game.id for game in games]
-#
-#     # deleting old stats
-#     stats = Stats.query.filter(Stats.game_id.in_(game_ids)).all()
-#     for stat in stats:
-#         db.session.delete(stat)
-#     db.session.commit()
-#
-#     # re-calculating stats
-#     for game in games:
-#         StatsCalculator(game).run()
-#
-#     # clear the stats cache
-#     cache.clear()
-#
-#     return ('', 200)
-#
-#
-# @app.route('/api/<league_id>/games/<id>', methods=['DELETE'])
-# @admin_required
-# def delete_game(league_id, id):
-#     game = Game.query.filter_by(league_id=league_id, id=id).first()
-#     stats = Stats.query.filter_by(game_id=id).all()
-#
-#     db.session.delete(game)
-#
-#     for stat in stats:
-#         db.session.delete(stat)
-#
-#     db.session.commit()
-#
-#     # clear the stats cache
-#     cache.clear()
-#
-#     return ('', 200)
+class EditedGame(api.BaseSchema):
+    home_score: int
+    away_score: int
+    home_roster: list[str]
+    away_roster: list[str]
+    points: list[dict[str, Any]]
+
+
+@app.post('/api/{league_id}/games/{id}')
+def edit_game(admin: AdminDep, session: SessionDep, league_id: int, id: int, edited_game: EditedGame):
+    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    game = session.exec(statement).first()
+
+    # updating Game
+    game.home_score = edited_game.home_score
+    game.away_score = edited_game.away_score
+    game.home_roster = edited_game.home_roster
+    game.away_roster = edited_game.away_roster
+    game.points = edited_game.points
+
+    db.session.add(game)
+    db.session.commit()
+
+    # loading other games from the same week
+    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
+    games = session.exec(statement).all()
+    game_ids = [game.id for game in games]
+
+    # deleting old stats
+    statement = select(db.Stats).where(db.Stats.game_id in game_ids)
+    stats = session.exec(statement).all()
+
+    for stat in stats:
+        db.session.delete(stat)
+    db.session.commit()
+
+    # re-calculating stats
+    for game in games:
+        # StatsCalculator(game).run()
+        pass
+
+    cache.clear()  # clear the stats cache
+
+    return ('', 200)
+
+
+@app.delete('/api/{league_id}/games/{id}')
+def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
+    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    game = session.exec(statement).first()
+
+    db.session.delete(game)
+    for stat in game.stats:
+        db.session.delete(stat)
+    db.session.commit()
+
+    cache.clear()  # clear the stats cache
+
+    return ('', 200)
 
 
 @app.get('/api/{league_id}/weeks', response_model=list[int])
@@ -228,6 +269,6 @@ async def serve_react_app(full_path: str):
         return FileResponse(react_app_path / 'index.html')
 
 
-# Boot server for Development / Test
+# Start Server
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
