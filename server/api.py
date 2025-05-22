@@ -51,8 +51,12 @@ class GameWithStats(Game):
     stats: dict[str, Any]
 
 
-def build_game_response(session: Session, league_id: int, game_id: int) -> GameWithStats:
-    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
+def build_game_response(
+    session: Session, league_id: int, game_id: int
+) -> GameWithStats:
+    statement = select(db.Game).where(
+        db.Game.league_id == league_id, db.Game.id == game_id
+    )
     game = session.exec(statement).first()
     stats = get_stats(session, league_id, [game])
     return GameWithStats(**game.model_dump(), stats=stats)
@@ -65,9 +69,15 @@ class WeekStats(BaseSchema):
 
 def build_stats_response(session: Session, league_id: int, week: int) -> WeekStats:
     if week == 0:
-        statement = select(db.Game).where(db.Game.league_id == league_id).order_by(db.Game.week.asc())
+        statement = (
+            select(db.Game)
+            .where(db.Game.league_id == league_id)
+            .order_by(db.Game.week.asc())
+        )
     else:
-        statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.week == week)
+        statement = select(db.Game).where(
+            db.Game.league_id == league_id, db.Game.week == week
+        )
     games = session.exec(statement).all()
     stats = get_stats(session, league_id, games)
     return WeekStats(week=week, stats=stats)
@@ -126,10 +136,15 @@ def get_stats(session: Session, league_id: int, games: list[db.Game]) -> dict[st
     # resolve averages
     for player_name in player_stats.keys():
         for stat in stats_to_average:
-            player_stats[player_name][stat] = player_stats[player_name][stat] / player_stats[player_name]["games_played"]
+            player_stats[player_name][stat] = (
+                player_stats[player_name][stat]
+                / player_stats[player_name]["games_played"]
+            )
 
         player_stats[player_name]["pay"] = round(player_stats[player_name]["pay"])
-        player_stats[player_name]["salary_per_point"] = round(player_stats[player_name]["salary_per_point"])
+        player_stats[player_name]["salary_per_point"] = round(
+            player_stats[player_name]["salary_per_point"]
+        )
         player_stats[player_name].pop("games_played")
 
     return player_stats
@@ -212,16 +227,10 @@ def build_teams_response(session: Session, league_id: int) -> list[Team]:
     for team in teams:
         players = []
         for player in team.players:
-            players.append(TeamPlayer(
-                name=player.name,
-                team=team.name,
-                is_male=player.is_male
-            ))
-        teams_response.append(Team(
-            id=team.id,
-            name=team.name,
-            players=players
-        ))
+            players.append(
+                TeamPlayer(name=player.name, team=team.name, is_male=player.is_male)
+            )
+        teams_response.append(Team(id=team.id, name=team.name, players=players))
     return teams_response
 
 
@@ -248,10 +257,11 @@ def build_schedule_response(session: Session, league_id: int) -> Schedule:
     local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
     today = local_today.date()
 
-    statement = select(db.Matchup).where(db.Matchup.league_id == league_id, db.Matchup.game_start >= today).limit(matchup_count)
+    statement = (
+        select(db.Matchup)
+        .where(db.Matchup.league_id == league_id, db.Matchup.game_start >= today)
+        .limit(matchup_count)
+    )
     matchups = session.exec(statement).all()
 
-    return Schedule(
-        teams=teams,
-        matchups=[Matchup(**m) for m in matchups]
-    )
+    return Schedule(teams=teams, matchups=[Matchup(**m) for m in matchups])

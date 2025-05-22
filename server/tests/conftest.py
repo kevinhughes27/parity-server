@@ -1,13 +1,13 @@
-import pytest
-import pathlib
-import json
+from app import app, get_session
 from fastapi.testclient import TestClient
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
-from app import app, get_session
 import db
+import json
+import pytest
+import pathlib
 
 
 @pytest.fixture()
@@ -15,7 +15,7 @@ def fastapi_cache():
     FastAPICache.init(InMemoryBackend())
 
 
-@pytest.fixture(name="session")
+@pytest.fixture(name="session", scope="function")
 def session_fixture():
     engine = create_engine(
         "sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool
@@ -25,7 +25,7 @@ def session_fixture():
         yield session
 
 
-@pytest.fixture(name="client")
+@pytest.fixture(name="client", scope="function")
 def client_fixture(session: Session, fastapi_cache):
     def get_session_override():
         return session
