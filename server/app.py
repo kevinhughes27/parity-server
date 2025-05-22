@@ -1,6 +1,5 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends, HTTPException, status
-from typing import Annotated, Any
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
@@ -9,6 +8,7 @@ from sqlmodel import Session, create_engine, select
 from starlette.responses import FileResponse
 from stats_calculator import StatsCalculator
 from pathlib import Path
+from typing import Annotated, Any
 
 import api
 import config

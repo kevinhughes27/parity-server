@@ -24,11 +24,7 @@ def edit_game(client, data_file):
     game = json.loads(game_str)
 
     # this url is assuming game id is 1
-    response = client.post(
-        "/api/1/games/1",
-        json=game,
-        auth=("admin", "testpw")
-    )
+    response = client.post("/api/1/games/1", json=game, auth=("admin", "testpw"))
     assert response.status_code == 200, response.json()
 
 

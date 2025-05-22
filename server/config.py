@@ -32,12 +32,12 @@ STAT_VALUES = {
 
 def database_path():
     base_dir = os.path.abspath(os.path.dirname(__file__))
-    db_path = os.path.join(base_dir, 'db.sqlite')
+    db_path = os.path.join(base_dir, "db.sqlite")
 
-    if os.name == 'nt':
-        return 'sqlite:///' + db_path
+    if os.name == "nt":
+        return "sqlite:///" + db_path
     else:
-        return 'sqlite:////' + db_path
+        return "sqlite:////" + db_path
 
 
 class Config(object):

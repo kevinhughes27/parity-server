@@ -1,2 +1,3 @@
 import os
-os.environ['APP_SETTINGS'] = 'config.TestingConfig'
+
+os.environ["APP_SETTINGS"] = "config.TestingConfig"

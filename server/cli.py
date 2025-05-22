@@ -15,12 +15,12 @@ def cli():
 
 @cli.command()
 def init_db():
-    click.echo('Initializing database...')
+    click.echo("Initializing database...")
 
     with app.app_context():
         db.create_all()
 
-    click.echo('Done')
+    click.echo("Done")
 
 
 @cli.command()
@@ -39,7 +39,7 @@ def zuluru_sync_current():
 
 
 @cli.command()
-@click.option('--week')
+@click.option("--week")
 def recalc(week):
     with app.app_context():
         games = Game.query.filter_by(league_id=CURRENT_LEAGUE_ID, week=week).all()
@@ -57,7 +57,7 @@ def recalc(week):
 
 
 @cli.command()
-@click.argument('game_ids', nargs=-1)
+@click.argument("game_ids", nargs=-1)
 def delete_games(game_ids):
     with app.app_context():
         games = Game.query.filter(Game.id.in_(game_ids)).all()

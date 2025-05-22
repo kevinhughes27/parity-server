@@ -1,8 +1,7 @@
 from config import STAT_VALUES
 from datetime import datetime
-from typing import Dict, Any
 from sqlmodel import Field, SQLModel, Relationship, JSON, Column
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 
 
 class League(SQLModel, table=True):
@@ -111,9 +110,9 @@ class Game(SQLModel, table=True):
     home_team: str = Field(default=None)
     away_team: str = Field(default=None)
 
-    home_roster: dict = Field(default=None, sa_column=Column(JSON))
-    away_roster: dict = Field(default=None, sa_column=Column(JSON))
-    points: dict = Field(default=None, sa_column=Column(JSON))
+    home_roster: list[str] = Field(default=None, sa_column=Column(JSON))
+    away_roster: list[str] = Field(default=None, sa_column=Column(JSON))
+    points: list[dict] = Field(default=None, sa_column=Column(JSON))
 
     home_score: int = Field(default=None)
     away_score: int = Field(default=None)
