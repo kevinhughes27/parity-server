@@ -26,7 +26,8 @@ class Player(SQLModel, table=True):
 
     id: int = Field(default=None, primary_key=True)
     name: str = Field()
-    gender: str = Field()
+    gender: Optional[str] = Field()
+    fallback_salary: Optional[float] = Field()
 
     league_id: int = Field(foreign_key="league.id", index=True)
     team_id: Optional[int] = Field(default=None, foreign_key="team.id", index=True)

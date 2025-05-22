@@ -4,7 +4,8 @@ import click
 from app import app, cache
 from config import CURRENT_LEAGUE_ID
 from models import db, League, Game, Stats
-from lib import StatsCalculator, ZuluruSync
+from stats_calculator import StatsCalculator
+from zuluru_sync import ZuluruSync
 
 
 @click.group()
