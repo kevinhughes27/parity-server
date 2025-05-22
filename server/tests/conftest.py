@@ -1,45 +1,52 @@
 import pytest
-import os
 import pathlib
 import json
-from app import app
-from models import db, League, Team, Player
+from fastapi.testclient import TestClient
+from fastapi_cache import FastAPICache
+from fastapi_cache.backends.inmemory import InMemoryBackend
+from sqlmodel import Session, SQLModel, create_engine
+from sqlmodel.pool import StaticPool
+from app import app, get_session
+import db
 
 
-@pytest.fixture(scope="session")
-def app_context():
-    os.environ["PARITY_EDIT_PASSWORD"] = "testpw"
-    app.config["TESTING"] = True
-    with app.app_context():
-        yield app
+@pytest.fixture()
+def fastapi_cache():
+    FastAPICache.init(InMemoryBackend())
 
 
-@pytest.fixture(scope="session")
-def client(app_context):
-    with app_context.test_client() as client:
-        yield client
+@pytest.fixture(name="session")
+def session_fixture():
+    engine = create_engine(
+        "sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool
+    )
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as session:
+        yield session
 
 
-@pytest.fixture(scope="function", name="db")
-def setup_database(app_context):
-    db.drop_all()
-    db.create_all()
+@pytest.fixture(name="client")
+def client_fixture(session: Session, fastapi_cache):
+    def get_session_override():
+        return session
 
-    yield db
+    app.dependency_overrides[get_session] = get_session_override
 
-    db.session.remove()
+    client = TestClient(app)
+    yield client
+    app.dependency_overrides.clear()
 
 
-@pytest.fixture(scope="function")
-def league(db):
-    league = League()
+@pytest.fixture(name="league", scope="function")
+def league_fixture(session):
+    league = db.League()
     league.id = 1
     league.zuluru_id = 1
     league.name = "Test"
     league.stat_values = "v2"
     league.salary_calc = "sum"
-    db.session.add(league)
-    db.session.commit()
+    session.add(league)
+    session.commit()
     return league
 
 
@@ -47,8 +54,8 @@ def league(db):
 # players get created during stat upload but don't get teams
 # players only get teams when created through a zuluru sync
 # otherwise subsitutes etc would change rosters
-@pytest.fixture(scope="function")
-def rosters(db, league):
+@pytest.fixture(name="rosters", scope="function")
+def rosters_fixture(session, league):
     fixture_path = pathlib.Path(__file__).parent / "./data/rosters.json"
 
     with open(fixture_path) as f:
@@ -57,10 +64,10 @@ def rosters(db, league):
     rosters = json.loads(rosters_str)
 
     for idx, team in enumerate(rosters):
-        t = Team(league_id=league.id, zuluru_id=idx, name=team)
-        db.session.add(t)
-        db.session.commit()
+        t = db.Team(league_id=league.id, zuluru_id=idx, name=team)
+        session.add(t)
+        session.commit()
         players = rosters[team]
         for p in players:
-            db.session.add(Player(league_id=league.id, name=p, team_id=t.id))
-        db.session.commit()
+            session.add(db.Player(league_id=league.id, name=p, team_id=t.id))
+        session.commit()

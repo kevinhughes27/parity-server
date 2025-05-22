@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends, HTTPException, status
 from typing import Annotated, Any
 from fastapi_cache import FastAPICache
@@ -6,14 +7,13 @@ from fastapi_cache.decorator import cache
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from sqlmodel import Session, create_engine, select
 from starlette.responses import FileResponse
+from stats_calculator import StatsCalculator
 from pathlib import Path
 
 import api
 import config
 import db
 import os
-
-# from lib import StatsCalculator
 import uvicorn
 
 
@@ -26,8 +26,17 @@ if not react_app_path.exists():
 # Settings
 settings = config.Config()
 
+
+# Cache Setup
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
+    yield
+    await FastAPICache.close()
+
+
 # Init
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 
 # Database Setup
 engine = create_engine(settings.SQLALCHEMY_DATABASE_URI)
@@ -69,12 +78,6 @@ def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
 AdminDep = Annotated[Session, Depends(verify_admin)]
 
 
-# Caching Setup
-@app.on_event("startup")
-async def startup():
-    FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
-
-
 # Current League
 class League(api.BaseSchema):
     id: int
@@ -94,55 +97,43 @@ async def current_league(session: SessionDep) -> CurrentLeague:
     Used by the Android app which requires the nesting
     """
     league = session.get(db.League, config.CURRENT_LEAGUE_ID)
-    return CurrentLeague(
-        league=League(
-            id=league.id,
-            name=league.name,
-            line_size=6
-        )
-    )
+    return CurrentLeague(league=League(id=league.id, name=league.name, line_size=6))
 
 
-# # Submit Game
-# @app.route('/submit_game', methods=['POST'])
-# def upload():
-#     # save the game to the database
-#     game = save_game(request.json)
-#
-#     # calculate and save stats
-#     StatsCalculator(game).run()
-#
-#     # clear the stats cache
-#     cache.clear()
-#
-#     return ('', 201)
-#
-#
-# def save_game(upload_json):
-#     game = Game()
-#
-#     game.league_id = upload_json['league_id']
-#     game.week = upload_json['week']
-#
-#     game.home_team = upload_json['homeTeam']
-#     game.away_team = upload_json['awayTeam']
-#
-#     game.home_score = upload_json['homeScore']
-#     game.away_score = upload_json['awayScore']
-#
-#     game.home_roster = upload_json['homeRoster']
-#     game.away_roster = upload_json['awayRoster']
-#
-#     game.points = upload_json['points']
-#
-#     db.session.add(game)
-#     db.session.commit()
-#
-#     return game
+# Submit Game
+class UploadedGame(api.BaseSchema):
+    league_id: int
+    week: int
+    home_team: str
+    away_team: str
+
+    home_roster: list[str]
+    away_roster: list[str]
+    points: list[dict[str, Any]]
+
+    home_score: int
+    away_score: int
+
+
+@app.post("/submit_game", status_code=201)
+async def upload(session: SessionDep, uploaded_game: UploadedGame):
+    game = db.Game(**uploaded_game.model_dump())
+
+    # save the game to the database
+    session.add(game)
+    session.commit()
+
+    # calculate and save stats
+    StatsCalculator(game).run(session)
+
+    # clear the stats cache
+    await FastAPICache.clear()
+
+    return
 
 
 # API
-@app.get('/api/leagues')
+@app.get("/api/leagues")
 @cache()
 async def leagues(session: SessionDep) -> list[api.League]:
     return api.build_leagues_response(session)
@@ -186,8 +177,14 @@ class EditedGame(api.BaseSchema):
     points: list[dict[str, Any]]
 
 
-@app.post('/api/{league_id}/games/{id}')
-def edit_game(admin: AdminDep, session: SessionDep, league_id: int, id: int, edited_game: EditedGame):
+@app.post("/api/{league_id}/games/{id}")
+async def edit_game(
+    admin: AdminDep,
+    session: SessionDep,
+    league_id: int,
+    id: int,
+    edited_game: EditedGame,
+):
     statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
     game = session.exec(statement).first()
 
@@ -198,48 +195,51 @@ def edit_game(admin: AdminDep, session: SessionDep, league_id: int, id: int, edi
     game.away_roster = edited_game.away_roster
     game.points = edited_game.points
 
-    db.session.add(game)
-    db.session.commit()
+    session.add(game)
+    session.commit()
 
     # loading other games from the same week
-    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
+    statement = select(db.Game).where(
+        db.Game.league_id == league_id, db.Game.week == game.week
+    )
     games = session.exec(statement).all()
     game_ids = [game.id for game in games]
 
     # deleting old stats
-    statement = select(db.Stats).where(db.Stats.game_id in game_ids)
+    statement = select(db.Stats).where(db.Stats.game_id.in_(game_ids))
     stats = session.exec(statement).all()
 
     for stat in stats:
-        db.session.delete(stat)
-    db.session.commit()
+        session.delete(stat)
+    session.commit()
 
     # re-calculating stats
     for game in games:
-        # StatsCalculator(game).run()
-        pass
+        StatsCalculator(game).run(session)
 
-    cache.clear()  # clear the stats cache
+    # clear the stats cache
+    await FastAPICache.clear()
 
-    return ('', 200)
+    return
 
 
-@app.delete('/api/{league_id}/games/{id}')
-def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
+@app.delete("/api/{league_id}/games/{id}")
+async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
     statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
     game = session.exec(statement).first()
 
-    db.session.delete(game)
+    session.delete(game)
     for stat in game.stats:
-        db.session.delete(stat)
-    db.session.commit()
+        session.delete(stat)
+    session.commit()
 
-    cache.clear()  # clear the stats cache
+    # clear the stats cache
+    await FastAPICache.clear()
 
-    return ('', 200)
+    return
 
 
-@app.get('/api/{league_id}/weeks', response_model=list[int])
+@app.get("/api/{league_id}/weeks", response_model=list[int])
 @cache()
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
     statement = select(db.Game.week).where(db.Game.league_id == league_id)
@@ -247,13 +247,13 @@ async def weeks(league_id: int, session: SessionDep) -> list[int]:
     return sorted(weeks)
 
 
-@app.get('/api/{league_id}/weeks/{week}', response_model=api.WeekStats)
+@app.get("/api/{league_id}/weeks/{week}", response_model=api.WeekStats)
 @cache()
 async def week(league_id: int, week: int, session: SessionDep) -> api.WeekStats:
     return api.build_stats_response(session, league_id, week)
 
 
-@app.get('/api/{league_id}/stats', response_model=api.WeekStats)
+@app.get("/api/{league_id}/stats", response_model=api.WeekStats)
 @cache()
 async def stats(league_id: int, session: SessionDep) -> api.WeekStats:
     return api.build_stats_response(session, league_id, 0)
@@ -266,7 +266,7 @@ async def serve_react_app(full_path: str):
     if file_path.exists() and file_path.is_file():
         return FileResponse(file_path)
     else:
-        return FileResponse(react_app_path / 'index.html')
+        return FileResponse(react_app_path / "index.html")
 
 
 # Start Server
