@@ -1,6 +1,5 @@
 import json
 import pathlib
-import time
 
 
 def upload_game(client, data_file):
@@ -140,9 +139,6 @@ def test_stats_edit(client, league, rosters, monkeypatch, snapshot):
     monkeypatch.setenv("PARITY_EDIT_PASSWORD", "testpw")
 
     edit_game(client, "mini_game_edited.json")
-
-    # hack to wait for cache clear
-    time.sleep(1)
 
     stats = get_stats(client)
     assert stats["stats"]["Brian Kells"]["pulls"] == 0
