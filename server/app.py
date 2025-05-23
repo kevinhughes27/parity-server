@@ -5,7 +5,7 @@ from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from pathlib import Path
-from sqlmodel import Session, create_engine, select
+from sqlmodel import Session, col, create_engine, select
 from starlette.responses import FileResponse
 from typing import Annotated, Any
 import os
@@ -31,7 +31,6 @@ settings = config.Config()
 async def lifespan(app: FastAPI):
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
     yield
-    await FastAPICache.close()
 
 
 # Init
@@ -96,6 +95,7 @@ async def current_league(session: SessionDep) -> CurrentLeague:
     Used by the Android app which requires the nesting
     """
     league = session.get(db.League, config.CURRENT_LEAGUE_ID)
+    assert league
     return CurrentLeague(league=League(id=league.id, name=league.name, line_size=6))
 
 
@@ -146,7 +146,7 @@ async def teams(league_id: int, session: SessionDep) -> list[api.Team]:
 
 @app.get("/api/{league_id}/schedule")
 @cache()
-async def schedule(league_id: int, session: SessionDep) -> list[api.Schedule]:
+async def schedule(league_id: int, session: SessionDep) -> api.Schedule:
     return api.build_schedule_response(session, league_id)
 
 
@@ -184,8 +184,10 @@ async def edit_game(
     id: int,
     edited_game: EditedGame,
 ):
-    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
-    game = session.exec(statement).first()
+    game = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    ).first()
+    assert game
 
     # updating Game
     game.home_score = edited_game.home_score
@@ -198,15 +200,15 @@ async def edit_game(
     session.commit()
 
     # loading other games from the same week
-    statement = select(db.Game).where(
-        db.Game.league_id == league_id, db.Game.week == game.week
-    )
-    games = session.exec(statement).all()
+    games = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
+    ).all()
     game_ids = [game.id for game in games]
 
     # deleting old stats
-    statement = select(db.Stats).where(db.Stats.game_id.in_(game_ids))
-    stats = session.exec(statement).all()
+    stats = session.exec(
+        select(db.Stats).where(col(db.Stats.game_id).in_(game_ids))
+    ).all()
 
     for stat in stats:
         session.delete(stat)
@@ -224,8 +226,10 @@ async def edit_game(
 
 @app.delete("/api/{league_id}/games/{id}")
 async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
-    statement = select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
-    game = session.exec(statement).first()
+    game = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    ).first()
+    assert game
 
     session.delete(game)
     for stat in game.stats:
@@ -241,8 +245,9 @@ async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: 
 @app.get("/api/{league_id}/weeks", response_model=list[int])
 @cache()
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
-    statement = select(db.Game.week).where(db.Game.league_id == league_id)
-    weeks = set(session.exec(statement).all())
+    weeks = set(
+        session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
+    )
     return sorted(weeks)
 
 
