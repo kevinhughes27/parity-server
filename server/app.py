@@ -9,24 +9,29 @@ import uvicorn
 
 from server.stats_calculator import StatsCalculator
 import server.api as api
-import server.config as config
 import server.db as db
-
-# Constants
-react_app_path = Path(__file__).parents[1] / "web/build"
-if not react_app_path.exists():
-    print(f"Warning: React app directory not found at {react_app_path}")
-
-
-# Settings
-settings = config.Config()
 
 
 # Init
 app = FastAPI()
 
+# Assets
+react_app_path = Path(__file__).parents[1] / "web/build"
+if not react_app_path.exists():
+    print(f"Warning: React app directory not found at {react_app_path}")
+
+
 # Database Setup
-engine = create_engine(settings.SQLALCHEMY_DATABASE_URI)
+def database_path():
+    db_path = Path(__file__).parent / "db.sqlite"
+
+    if os.name == "nt":
+        return "sqlite:///" + str(db_path.absolute())
+    else:
+        return "sqlite:////" + str(db_path.absolute())
+
+
+engine = create_engine(database_path())
 
 
 # Database Session
@@ -66,6 +71,9 @@ AdminDep = Annotated[Session, Depends(verify_admin)]
 
 
 # Current League
+CURRENT_LEAGUE_ID = 22
+
+
 class League(api.BaseSchema):
     id: int
     name: str
@@ -82,7 +90,7 @@ async def current_league(session: SessionDep) -> CurrentLeague:
 
     Used by the Android app which requires the nesting
     """
-    league = session.get(db.League, config.CURRENT_LEAGUE_ID)
+    league = session.get(db.League, CURRENT_LEAGUE_ID)
     assert league
     return CurrentLeague(league=League(id=league.id, name=league.name, line_size=6))
 
