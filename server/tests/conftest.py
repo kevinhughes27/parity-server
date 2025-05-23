@@ -1,6 +1,4 @@
 from fastapi.testclient import TestClient
-from fastapi_cache import FastAPICache
-from fastapi_cache.backends.inmemory import InMemoryBackend
 from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
 import json
@@ -9,11 +7,6 @@ import pytest
 
 from server.app import app, get_session
 import server.db as db
-
-
-@pytest.fixture()
-def fastapi_cache():
-    FastAPICache.init(InMemoryBackend())
 
 
 @pytest.fixture(name="session", scope="function")
@@ -27,7 +20,7 @@ def session_fixture():
 
 
 @pytest.fixture(name="client", scope="function")
-def client_fixture(session: Session, fastapi_cache):
+def client_fixture(session: Session):
     def get_session_override():
         return session
 
