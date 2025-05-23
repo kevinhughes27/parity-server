@@ -2,8 +2,6 @@ from datetime import datetime
 from sqlmodel import JSON, Column, Field, Relationship, SQLModel
 from typing import Any, Dict, List, Optional
 
-from server.config import STAT_VALUES
-
 
 class League(SQLModel, table=True):
     """Represents a league in the database."""
@@ -120,6 +118,34 @@ class Game(SQLModel, table=True):
 
     league: "League" = Relationship(back_populates="games")
     stats: List["Stats"] = Relationship(back_populates="game")
+
+
+STAT_VALUES = {
+    "v2": {
+        "goals": 10000,
+        "assists": 10000,
+        "second_assists": 8000,
+        "d_blocks": 8000,
+        "throw_aways": -5000,
+        "threw_drops": -1000,
+        "drops": -4000,
+        "completions": 500,
+        "catches": 500,
+        "o_points_for": 1000,
+        "d_points_for": 2000,
+    },
+    "v1": {
+        "goals": 10000,
+        "assists": 10000,
+        "second_assists": 8000,
+        "d_blocks": 8000,
+        "throw_aways": -5000,
+        "threw_drops": -2500,
+        "drops": -5000,
+        "completions": 1000,
+        "catches": 1000,
+    },
+}
 
 
 class Stats(SQLModel, table=True):
