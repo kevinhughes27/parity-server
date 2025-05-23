@@ -1,21 +1,20 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from pathlib import Path
 from sqlmodel import Session, create_engine, select
 from starlette.responses import FileResponse
-from stats_calculator import StatsCalculator
-from pathlib import Path
 from typing import Annotated, Any
-
-import api
-import config
-import db
 import os
 import uvicorn
 
+from server.stats_calculator import StatsCalculator
+import server.api as api
+import server.config as config
+import server.db as db
 
 # Constants
 react_app_path = Path(__file__).parents[1] / "web/build"

@@ -1,5 +1,6 @@
 from sqlmodel import Session, select
-import db
+
+import server.db as db
 
 
 class StatsCalculator:

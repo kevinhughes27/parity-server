@@ -1,13 +1,14 @@
-from app import app, get_session
 from fastapi.testclient import TestClient
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
-import db
 import json
-import pytest
 import pathlib
+import pytest
+
+from server.app import app, get_session
+import server.db as db
 
 
 @pytest.fixture()
@@ -33,6 +34,7 @@ def client_fixture(session: Session, fastapi_cache):
     app.dependency_overrides[get_session] = get_session_override
 
     client = TestClient(app)
+    # FastAPICache.clear()
     yield client
     app.dependency_overrides.clear()
 

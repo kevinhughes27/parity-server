@@ -18,3 +18,13 @@ dependencies = [
     "syrupy>=4.9.1",
     "httpx>=0.28.1",
 ]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+from-first = true
+section-order = [
+  "third-party",
+  "first-party",
+]

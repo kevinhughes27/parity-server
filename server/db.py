@@ -1,7 +1,8 @@
-from config import STAT_VALUES
 from datetime import datetime
-from sqlmodel import Field, SQLModel, Relationship, JSON, Column
-from typing import List, Optional, Dict, Any
+from sqlmodel import JSON, Column, Field, Relationship, SQLModel
+from typing import Any, Dict, List, Optional
+
+from server.config import STAT_VALUES
 
 
 class League(SQLModel, table=True):
