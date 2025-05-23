@@ -4,6 +4,7 @@ from pathlib import Path
 from sqlmodel import Session, col, create_engine, select
 from starlette.responses import FileResponse
 from typing import Annotated, Any
+import logging
 import os
 import uvicorn
 
@@ -11,9 +12,9 @@ from server.stats_calculator import StatsCalculator
 import server.api as api
 import server.db as db
 
-
 # Init
 app = FastAPI()
+security = HTTPBasic()
 
 # Assets
 react_app_path = Path(__file__).parents[1] / "web/build"
@@ -22,16 +23,16 @@ if not react_app_path.exists():
 
 
 # Database Setup
-def database_path():
-    db_path = Path(__file__).parent / "db.sqlite"
+db_path = Path(__file__).parent / "db.sqlite"
+db_uri = "sqlite:////" + str(db_path.absolute())
+if os.name == "nt":
+    db_uri = "sqlite:///" + str(db_path.absolute())
 
-    if os.name == "nt":
-        return "sqlite:///" + str(db_path.absolute())
-    else:
-        return "sqlite:////" + str(db_path.absolute())
+logging.basicConfig()
+logger = logging.getLogger("sqlalchemy.engine")
+logger.setLevel(logging.INFO)
 
-
-engine = create_engine(database_path())
+engine = create_engine(db_uri)
 
 
 # Database Session
@@ -44,9 +45,6 @@ SessionDep = Annotated[Session, Depends(get_session)]
 
 
 # Admin
-security = HTTPBasic()
-
-
 def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
     if os.environ.get("PARITY_EDIT_PASSWORD") is None:
         raise HTTPException(
