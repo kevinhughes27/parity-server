@@ -15,11 +15,11 @@ jobs:
           pkg-manager: uv
 
       - run:
-          name: run ruff format --check
-          command: uv run ruff check
+          name: ruff format
+          command: uv run ruff format --check
 
       - run:
-          name: run ruff check
+          name: ruff check
           command: uv run ruff check
 
       - restore_cache:
@@ -29,7 +29,7 @@ jobs:
             - mypy-cache
 
       - run:
-          name: Run mypy
+          name: mypy
           command: uv run mypy server
 
       - save_cache:
@@ -38,7 +38,7 @@ jobs:
             - .mypy_cache
 
       - run:
-          name: Run tests
+          name: pytest
           command: uv run pytest
 
       - node/install-packages:
@@ -46,7 +46,7 @@ jobs:
           app-dir: web
 
       - run:
-          name: "Yarn build"
+          name: "yarn build"
           command: cd web && yarn build
 
 workflows:
