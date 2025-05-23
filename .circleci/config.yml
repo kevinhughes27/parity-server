@@ -10,17 +10,44 @@ jobs:
       - image: cimg/python:3.10-browsers
     steps:
       - checkout
+
       - python/install-packages:
           pkg-manager: uv
+
+      - run:
+          name: run ruff format --check
+          command: uv run ruff check
+
+      - run:
+          name: run ruff check
+          command: uv run ruff check
+
+      - restore_cache:
+          keys:
+            - mypy-cache-{{ .Branch }}-{{ checksum "uv.lock" }}
+            - mypy-cache-{{ .Branch }}
+            - mypy-cache
+
+      - run:
+          name: Run mypy
+          command: uv run mypy server
+
+      - save_cache:
+          key: mypy-cache-{{ .Branch }}-{{ checksum "uv.lock" }}
+          paths:
+            - .mypy_cache
+
+      - run:
+          name: Run tests
+          command: uv run pytest
+
       - node/install-packages:
           pkg-manager: yarn
           app-dir: web
+
       - run:
           name: "Yarn build"
           command: cd web && yarn build
-      - run:
-          name: Run tests
-          command: cd server && uv run pytest
 
 workflows:
   build-and-test:

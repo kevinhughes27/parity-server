@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
-from sqlmodel import Session, select
-from typing import Any
+from sqlmodel import Session, col, select
+from typing import Any, Collection
 import datetime
 
 import server.db as db
@@ -22,8 +22,7 @@ class League(BaseSchema):
 
 
 def build_leagues_response(session: Session) -> list[League]:
-    statement = select(db.League)
-    leagues = session.exec(statement).all()
+    leagues = session.exec(select(db.League)).all()
     return [League(**league.model_dump()) for league in leagues]
 
 
@@ -43,8 +42,7 @@ class Game(BaseSchema):
 
 
 def build_games_response(session: Session, league_id: int) -> list[Game]:
-    statement = select(db.Game).where(db.Game.league_id == league_id)
-    games = session.exec(statement).all()
+    games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
     return [Game(**g.model_dump()) for g in games]
 
 
@@ -55,10 +53,10 @@ class GameWithStats(Game):
 def build_game_response(
     session: Session, league_id: int, game_id: int
 ) -> GameWithStats:
-    statement = select(db.Game).where(
-        db.Game.league_id == league_id, db.Game.id == game_id
-    )
-    game = session.exec(statement).first()
+    game = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
+    ).first()
+    assert game
     stats = get_stats(session, league_id, [game])
     return GameWithStats(**game.model_dump(), stats=stats)
 
@@ -70,28 +68,28 @@ class WeekStats(BaseSchema):
 
 def build_stats_response(session: Session, league_id: int, week: int) -> WeekStats:
     if week == 0:
-        statement = (
+        games = session.exec(
             select(db.Game)
             .where(db.Game.league_id == league_id)
-            .order_by(db.Game.week.asc())
-        )
+            .order_by(col(db.Game.week).asc())
+        ).all()
     else:
-        statement = select(db.Game).where(
-            db.Game.league_id == league_id, db.Game.week == week
-        )
-    games = session.exec(statement).all()
+        games = session.exec(
+            select(db.Game).where(db.Game.league_id == league_id, db.Game.week == week)
+        ).all()
     stats = get_stats(session, league_id, games)
     return WeekStats(week=week, stats=stats)
 
 
-def get_stats(session: Session, league_id: int, games: list[db.Game]) -> dict[str, Any]:
-    statement = select(db.Player).where(db.Player.league_id == league_id)
-    players = session.exec(statement).all()
+def get_stats(
+    session: Session, league_id: int, games: Collection[db.Game]
+) -> dict[str, Any]:
+    players = session.exec(
+        select(db.Player).where(db.Player.league_id == league_id)
+    ).all()
+    teams = session.exec(select(db.Team).where(db.Team.league_id == league_id)).all()
 
-    statement = select(db.Team).where(db.Team.league_id == league_id)
-    teams = session.exec(statement).all()
-
-    player_stats = {}
+    player_stats: dict[str, Any] = {}
 
     stats_to_average = [
         "pay",
@@ -222,8 +220,7 @@ class Team(BaseSchema):
 
 
 def build_teams_response(session: Session, league_id: int) -> list[Team]:
-    statement = select(db.Team).where(db.Team.league_id == league_id)
-    teams = session.exec(statement).all()
+    teams = session.exec(select(db.Team).where(db.Team.league_id == league_id)).all()
     teams_response = []
     for team in teams:
         players = []
@@ -258,11 +255,10 @@ def build_schedule_response(session: Session, league_id: int) -> Schedule:
     local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
     today = local_today.date()
 
-    statement = (
+    matchups = session.exec(
         select(db.Matchup)
         .where(db.Matchup.league_id == league_id, db.Matchup.game_start >= today)
-        .limit(matchup_count)
-    )
-    matchups = session.exec(statement).all()
+        .limit(int(matchup_count))
+    ).all()
 
-    return Schedule(teams=teams, matchups=[Matchup(**m) for m in matchups])
+    return Schedule(teams=teams, matchups=[Matchup(**m.model_dump()) for m in matchups])
