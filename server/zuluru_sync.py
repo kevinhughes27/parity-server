@@ -1,11 +1,12 @@
-from datetime import datetime
 from bs4 import BeautifulSoup
+from datetime import datetime
 from sqlmodel import Session, select
-import db
-import requests
 import getpass
 import os
 import re
+import requests
+
+import server.db as db
 
 
 class ZuluruSync:

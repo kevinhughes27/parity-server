@@ -1,9 +1,10 @@
-from sqlmodel import Session, select
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
+from sqlmodel import Session, select
 from typing import Any
-import db
 import datetime
+
+import server.db as db
 
 
 class BaseSchema(BaseModel):
