@@ -130,7 +130,7 @@ User=ubuntu
 WorkingDirectory=/home/ubuntu/parity-server/server
 Environment=ZULURU_USER=...
 Environment=ZULURU_PASSWORD=...
-ExecStart=python3 cli.py zuluru-sync-current
+ExecStart=uv run server/zuluru_sync.py
 ```
 
 The backup systemd files:

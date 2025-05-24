@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
-from sqlmodel import Session, col, select
 from sqlalchemy.orm import selectinload
+from sqlmodel import Session, col, select
 from typing import Any, Collection
 import datetime
 

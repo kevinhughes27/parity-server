@@ -1,8 +1,12 @@
+# python
 __pycache__
 *.pyc
-
-venv
+.venv
+.ruff_cache
 .mypy_cache
+*egg-info
+
+# node
 node_modules
 yarn-error.log
 
@@ -11,15 +15,6 @@ yarn-error.log
 
 # cache for zuluru syncs
 tmp
-
-# files to help with backfilling old roster syncs
-*players_db.csv
-
-# docker volume
-server/postgres
-
-# saved pg_dumps
-server/pgdump*
 
 # android release builds
 android/app/league/release/*
