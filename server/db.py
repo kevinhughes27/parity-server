@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlmodel import JSON, Column, Field, Relationship, SQLModel
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 
 class League(SQLModel, table=True):
@@ -12,11 +12,11 @@ class League(SQLModel, table=True):
     stat_values: str
     salary_calc: str
 
-    teams: List["Team"] = Relationship(back_populates="league")
-    players: List["Player"] = Relationship(back_populates="league")
-    games: List["Game"] = Relationship(back_populates="league")
-    stats: List["Stats"] = Relationship(back_populates="league")
-    matchups: List["Matchup"] = Relationship(back_populates="league")
+    teams: list["Team"] = Relationship(back_populates="league")
+    players: list["Player"] = Relationship(back_populates="league")
+    games: list["Game"] = Relationship(back_populates="league")
+    stats: list["Stats"] = Relationship(back_populates="league")
+    matchups: list["Matchup"] = Relationship(back_populates="league")
 
 
 class Player(SQLModel, table=True):
@@ -64,13 +64,13 @@ class Team(SQLModel, table=True):
     name: str = Field(default=None)
 
     league: "League" = Relationship(back_populates="teams")
-    players: List["Player"] = Relationship(back_populates="team")
+    players: list["Player"] = Relationship(back_populates="team")
 
-    home_matchups: List["Matchup"] = Relationship(
+    home_matchups: list["Matchup"] = Relationship(
         sa_relationship_kwargs={"foreign_keys": "Matchup.home_team_id"},
         back_populates="home_team",
     )
-    away_matchups: List["Matchup"] = Relationship(
+    away_matchups: list["Matchup"] = Relationship(
         sa_relationship_kwargs={"foreign_keys": "Matchup.away_team_id"},
         back_populates="away_team",
     )
@@ -117,7 +117,7 @@ class Game(SQLModel, table=True):
     away_score: int = Field(default=None)
 
     league: "League" = Relationship(back_populates="games")
-    stats: List["Stats"] = Relationship(back_populates="game")
+    stats: list["Stats"] = Relationship(back_populates="game")
 
 
 STAT_VALUES = {
@@ -231,7 +231,7 @@ class Stats(SQLModel, table=True):
         else:
             return (self.o_points_for + self.d_points_for) / self.points_played
 
-    def to_dict_with_properties(self) -> Dict[str, Any]:
+    def to_dict_with_properties(self) -> dict[str, Any]:
         return {
             "goals": self.goals,
             "assists": self.assists,
