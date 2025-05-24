@@ -58,7 +58,7 @@ def build_game_response(
         select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
     ).first()
     assert game
-    stats = get_stats(session, league_id, [game])
+    stats = build_stats(session, league_id, [game])
     return GameWithStats(**game.model_dump(), stats=stats)
 
 
@@ -81,11 +81,11 @@ def build_stats_response(session: Session, league_id: int, week: int) -> WeekSta
             .where(db.Game.league_id == league_id, db.Game.week == week)
             .options(selectinload(db.Game.stats))
         ).all()
-    stats = get_stats(session, league_id, games)
+    stats = build_stats(session, league_id, games)
     return WeekStats(week=week, stats=stats)
 
 
-def get_stats(
+def build_stats(
     session: Session, league_id: int, games: Collection[db.Game]
 ) -> dict[str, Any]:
     players = session.exec(
@@ -159,6 +159,7 @@ class Player(BaseSchema):
     salary: int
 
 
+# teams gets queried more times than strictly necessary here
 def build_players_response(session, league_id) -> list[Player]:
     league = session.get(db.League, league_id)
     players = [p for p in league.players if p.team_id is not None]
