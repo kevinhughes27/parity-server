@@ -6,7 +6,6 @@ from starlette.responses import FileResponse
 from typing import Annotated, Any
 import logging
 import os
-import uvicorn
 
 from server.stats_calculator import StatsCalculator
 import server.api as api
@@ -254,8 +253,3 @@ async def serve_react_app(full_path: str):
         return FileResponse(file_path)
     else:
         return FileResponse(react_app_path / "index.html")
-
-
-# Start Server
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)

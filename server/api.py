@@ -1,8 +1,8 @@
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
-from sqlalchemy.orm import selectinload
+from sqlalchemy.orm import InstrumentedAttribute, selectinload
 from sqlmodel import Session, col, select
-from typing import Any, Collection
+from typing import Any, Collection, cast
 import datetime
 
 import server.db as db
@@ -73,13 +73,13 @@ def build_stats_response(session: Session, league_id: int, week: int) -> WeekSta
             select(db.Game)
             .where(db.Game.league_id == league_id)
             .order_by(col(db.Game.week).asc())
-            .options(selectinload(db.Game.stats))
+            .options(selectinload(cast(InstrumentedAttribute, db.Game.stats)))
         ).all()
     else:
         games = session.exec(
             select(db.Game)
             .where(db.Game.league_id == league_id, db.Game.week == week)
-            .options(selectinload(db.Game.stats))
+            .options(selectinload(cast(InstrumentedAttribute, db.Game.stats)))
         ).all()
     stats = build_stats(session, league_id, games)
     return WeekStats(week=week, stats=stats)
