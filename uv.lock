@@ -279,7 +279,7 @@ wheels = [
 [[package]]
 name = "parity-server"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "click" },

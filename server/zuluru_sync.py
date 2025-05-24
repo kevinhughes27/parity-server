@@ -1,11 +1,13 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
-from sqlmodel import Session, select
+from pathlib import Path
+from sqlmodel import Session, create_engine, select
 import getpass
 import os
 import re
 import requests
 
+from server.app import CURRENT_LEAGUE_ID
 import server.db as db
 
 
@@ -256,3 +258,18 @@ class ZuluruSync:
 
     def get_soup(self, session, url):
         return BeautifulSoup(session.get(url).text, "html.parser")
+
+
+if __name__ == "__main__":
+    db_path = Path(__file__).parent / "db.sqlite"
+    db_uri = "sqlite:////" + str(db_path.absolute())
+    engine = create_engine(db_uri)
+
+    with Session(engine) as session:
+        league = session.get(db.League, CURRENT_LEAGUE_ID)
+        assert league
+        division = True
+
+        zuluru_sync = ZuluruSync(session, league, division)
+        zuluru_sync.sync_teams()
+        zuluru_sync.sync_schedule()
