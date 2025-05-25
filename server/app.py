@@ -1,240 +1,264 @@
-from flask import Flask, request, jsonify, send_from_directory
-from flask_caching import Cache
-
-from config import CURRENT_LEAGUE_ID
-from models import db, Game, League, Matchup, Stats
-from lib import StatsCalculator
-from lib import build_stats_response, build_teams_response, build_players_response
-from functools import wraps
+from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pathlib import Path
-
+from sqlmodel import Session, col, create_engine, select
+from starlette.responses import FileResponse
+from typing import Annotated
+import logging
 import os
-import datetime
 
-
-# Constants
-react_app_path = Path(__file__).parents[1] / 'web/build'
-league_utc_offset = -5
-
-
-# Settings
-if os.environ.get('APP_SETTINGS') is None:
-    os.environ['APP_SETTINGS'] = 'config.Config'
-
+from server.stats_calculator import StatsCalculator
+import server.api as api
+import server.db as db
 
 # Init
-app = Flask(__name__, static_folder=react_app_path)
-app.config.from_object(os.environ['APP_SETTINGS'])
-cache = Cache(app, config={'CACHE_TYPE': 'flask_caching.backends.SimpleCache'})
-db.init_app(app)
+app = FastAPI(
+    title="OCUA Parity League",
+    summary="API Documentation",
+    openapi_tags=[
+        {"name": "api"},
+        {"name": "android"},
+        {"name": "admin"},
+    ],
+)
+security = HTTPBasic()
+
+# Assets
+react_app_path = Path(__file__).parents[1] / "web/build"
+if not react_app_path.exists():
+    print(f"Warning: React app directory not found at {react_app_path}")
+
+
+# Database Setup
+db_path = Path(__file__).parent / "db.sqlite"
+db_uri = "sqlite:////" + str(db_path.absolute())
+if os.name == "nt":
+    db_uri = "sqlite:///" + str(db_path.absolute())
+
+logging.basicConfig()
+logger = logging.getLogger("sqlalchemy.engine")
+logger.setLevel(logging.INFO)
+
+engine = create_engine(db_uri)
+
+
+# Database Session
+def get_session():
+    with Session(engine) as session:
+        yield session
+
+
+SessionDep = Annotated[Session, Depends(get_session)]
+
+
+# Admin
+def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
+    if os.environ.get("PARITY_EDIT_PASSWORD") is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="PARITY_EDIT_PASSWORD env var not set",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+
+    correct_username = credentials.username == "admin"
+    correct_password = credentials.password == os.environ.get("PARITY_EDIT_PASSWORD")
+
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
+
+
+AdminDep = Annotated[Session, Depends(verify_admin)]
 
 
 # Current League
-@cache.cached()
-@app.route('/current_league')
-def current_league():
-    league = League.query.filter_by(id=CURRENT_LEAGUE_ID).first()
-    return jsonify({'league': {'id': league.id, 'name': league.name, 'lineSize': 6}})
+CURRENT_LEAGUE_ID = 22
+
+
+class League(api.BaseSchema):
+    id: int
+    name: str
+    line_size: int
+
+
+class CurrentLeague(api.BaseSchema):
+    league: League
+
+
+@app.get("/current_league", tags=["android"])
+async def current_league(session: SessionDep) -> CurrentLeague:
+    """Return the current league.
+
+    Used by the Android app which requires the nesting
+    """
+    league = session.get(db.League, CURRENT_LEAGUE_ID)
+    assert league
+    return CurrentLeague(league=League(id=league.id, name=league.name, line_size=6))
 
 
 # Submit Game
-@app.route('/submit_game', methods=['POST'])
-def upload():
+class UploadedGame(api.BaseSchema):
+    league_id: int
+    week: int
+    home_team: str
+    away_team: str
+
+    home_roster: list[str]
+    away_roster: list[str]
+    points: list[api.Point]
+
+    home_score: int
+    away_score: int
+
+
+@app.post("/submit_game", status_code=201, tags=["android"])
+async def upload(session: SessionDep, uploaded_game: UploadedGame):
+    """Upload a game recorded on the Android app."""
+    game = db.Game(**uploaded_game.model_dump())
+
     # save the game to the database
-    game = save_game(request.json)
+    session.add(game)
+    session.commit()
 
     # calculate and save stats
-    StatsCalculator(game).run()
+    StatsCalculator(game).run(session)
 
     # clear the stats cache
-    cache.clear()
 
-    return ('', 201)
-
-
-def save_game(upload_json):
-    game = Game()
-
-    game.league_id = upload_json['league_id']
-    game.week = upload_json['week']
-
-    game.home_team = upload_json['homeTeam']
-    game.away_team = upload_json['awayTeam']
-
-    game.home_score = upload_json['homeScore']
-    game.away_score = upload_json['awayScore']
-
-    game.home_roster = upload_json['homeRoster']
-    game.away_roster = upload_json['awayRoster']
-
-    game.points = upload_json['points']
-
-    db.session.add(game)
-    db.session.commit()
-
-    return game
+    return
 
 
 # API
-@cache.cached()
-@app.route('/api/<league_id>/teams')
-def teams(league_id):
-    teams = build_teams_response(league_id)
-    return jsonify(teams)
+@app.get("/api/leagues", tags=["api"])
+async def leagues(session: SessionDep) -> list[api.League]:
+    return api.build_leagues_response(session)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/schedule')
-def schedule(league_id):
-    teams = build_teams_response(league_id)
-
-    matchup_count = len(teams) / 2
-    local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
-    today = local_today.date()
-
-    query = Matchup.query.filter(Matchup.league_id == league_id, Matchup.game_start >= today).limit(matchup_count)
-
-    matchups = [matchup.to_dict() for matchup in query]
-
-    return jsonify({"teams": teams, "matchups": matchups})
+@app.get("/api/{league_id}/teams", tags=["api"])
+async def teams(league_id: int, session: SessionDep) -> list[api.Team]:
+    return api.build_teams_response(session, league_id)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/players')
-def players(league_id):
-    players = build_players_response(league_id)
-    return jsonify(players)
+@app.get("/api/{league_id}/schedule", tags=["android"])
+async def schedule(league_id: int, session: SessionDep) -> api.Schedule:
+    return api.build_schedule_response(session, league_id)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/games')
-def games(league_id):
-    include_points = request.args.get('includePoints') == 'true'
-    query = Game.query.filter_by(league_id=league_id)
-    games = [game.to_dict(include_points=include_points) for game in query]
-    return jsonify(games)
+@app.get("/api/{league_id}/players", tags=["api"])
+async def players(league_id: int, session: SessionDep) -> list[api.Player]:
+    return api.build_players_response(session, league_id)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/games/<id>')
-def game(league_id, id):
-    game = Game.query.filter_by(league_id=league_id, id=id).first()
-    stats = build_stats_response(league_id, [game])
-    return jsonify({**game.to_dict(include_points=True), "stats": stats})
+@app.get("/api/{league_id}/games", tags=["api"])
+async def games(league_id: int, session: SessionDep) -> list[api.Game]:
+    # include_points = request.args.get('includePoints') == 'true'
+    return api.build_games_response(session, league_id)
 
 
-def admin_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if os.environ.get('PARITY_EDIT_PASSWORD') is None:
-            return ('PARITY_EDIT_PASSWORD env var not set', 401)
-
-        if os.environ.get('PARITY_EDIT_PASSWORD') != request.headers['Authorization']:
-            return ('Password does not match PARITY_EDIT_PASSWORD', 401)
-
-        return f(*args, **kwargs)
-    return decorated_function
+@app.get("/api/{league_id}/games/{id}", tags=["api"])
+async def game(league_id: int, id: int, session: SessionDep) -> api.GameWithStats:
+    return api.build_game_response(session, league_id, id)
 
 
-@app.route('/api/<league_id>/games/<id>', methods=['POST'])
-@admin_required
-def edit_game(league_id, id):
-    game = Game.query.filter_by(league_id=league_id, id=id).first()
+class EditedGame(api.BaseSchema):
+    home_score: int
+    away_score: int
+    home_roster: list[str]
+    away_roster: list[str]
+    points: list[api.Point]
+
+
+@app.post("/api/{league_id}/games/{id}", tags=["admin"])
+async def edit_game(
+    admin: AdminDep,
+    session: SessionDep,
+    league_id: int,
+    id: int,
+    edited_game: EditedGame,
+):
+    game = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    ).first()
+    assert game
 
     # updating Game
-    game.home_score = request.json['homeScore']
-    game.away_score = request.json['awayScore']
-    game.home_roster = request.json['homeRoster']
-    game.away_roster = request.json['awayRoster']
-    game.points = request.json['points']
+    game.home_score = edited_game.home_score
+    game.away_score = edited_game.away_score
+    game.home_roster = edited_game.home_roster
+    game.away_roster = edited_game.away_roster
+    game.points = [point.model_dump() for point in edited_game.points]
 
-    db.session.add(game)
-    db.session.commit()
+    session.add(game)
+    session.commit()
 
     # loading other games from the same week
-    games = Game.query.filter_by(league_id=league_id, week=game.week).all()
+    games = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
+    ).all()
     game_ids = [game.id for game in games]
 
     # deleting old stats
-    stats = Stats.query.filter(Stats.game_id.in_(game_ids)).all()
+    stats = session.exec(
+        select(db.Stats).where(col(db.Stats.game_id).in_(game_ids))
+    ).all()
+
     for stat in stats:
-        db.session.delete(stat)
-    db.session.commit()
+        session.delete(stat)
+    session.commit()
 
     # re-calculating stats
     for game in games:
-        StatsCalculator(game).run()
+        StatsCalculator(game).run(session)
 
     # clear the stats cache
-    cache.clear()
 
-    return ('', 200)
+    return
 
 
-@app.route('/api/<league_id>/games/<id>', methods=['DELETE'])
-@admin_required
-def delete_game(league_id, id):
-    game = Game.query.filter_by(league_id=league_id, id=id).first()
-    stats = Stats.query.filter_by(game_id=id).all()
+@app.delete("/api/{league_id}/games/{id}", tags=["admin"])
+async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
+    game = session.exec(
+        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
+    ).first()
+    assert game
 
-    db.session.delete(game)
-
-    for stat in stats:
-        db.session.delete(stat)
-
-    db.session.commit()
+    session.delete(game)
+    for stat in game.stats:
+        session.delete(stat)
+    session.commit()
 
     # clear the stats cache
-    cache.clear()
 
-    return ('', 200)
-
-
-@cache.cached()
-@app.route('/api/leagues')
-def leagues():
-    query = League.query.order_by(League.id.desc()).all()
-    leagues = [league.to_dict() for league in query]
-    return jsonify(leagues)
+    return
 
 
-@cache.cached()
-@app.route('/api/<league_id>/weeks')
-def weeks(league_id):
-    games = Game.query.filter_by(league_id=league_id).all()
-    weeks = set([game.week for game in games])
-    return jsonify(sorted(weeks))
+@app.get("/api/{league_id}/weeks", tags=["api"])
+async def weeks(league_id: int, session: SessionDep) -> list[int]:
+    weeks = set(
+        session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
+    )
+    return sorted(weeks)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/weeks/<num>')
-def week(league_id, num):
-    games = Game.query.filter_by(league_id=league_id, week=num)
-    stats = build_stats_response(league_id, games)
-    return jsonify({"week": num, "stats": stats})
+@app.get("/api/{league_id}/weeks/{week}", tags=["api"])
+async def week(league_id: int, week: int, session: SessionDep) -> api.WeekStats:
+    return api.build_stats_response(session, league_id, week)
 
 
-@cache.cached()
-@app.route('/api/<league_id>/stats')
-def stats(league_id):
-    games = Game.query.filter_by(league_id=league_id).order_by(Game.week.asc())
-    stats = build_stats_response(league_id, games)
-    return jsonify({"week": 0, "stats": stats})
+@app.get("/api/{league_id}/stats", tags=["api"])
+async def stats(league_id: int, session: SessionDep) -> api.WeekStats:
+    return api.build_stats_response(session, league_id, 0)
 
 
 # React App
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def react_app(path):
-    if (path == ""):
-        return send_from_directory(react_app_path, 'index.html')
+@app.get("/{full_path:path}", include_in_schema=False)
+async def serve_react_app(full_path: str):
+    file_path = react_app_path / full_path
+    if file_path.exists() and file_path.is_file():
+        return FileResponse(file_path)
     else:
-        if (react_app_path / path).exists():
-            return send_from_directory(react_app_path, path)
-        else:
-            return send_from_directory(react_app_path, 'index.html')
-
-
-# Boot server for Development / Test
-if __name__ == '__main__':
-    app.run(use_reloader=True)
+        return FileResponse(react_app_path / "index.html")
