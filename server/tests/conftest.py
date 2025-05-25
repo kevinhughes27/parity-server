@@ -6,7 +6,7 @@ import logging
 import pathlib
 import pytest
 
-from server.app import app, get_session
+from server.app import app
 import server.db as db
 
 logging.basicConfig()
@@ -29,7 +29,7 @@ def client_fixture(session: Session):
     def get_session_override():
         return session
 
-    app.dependency_overrides[get_session] = get_session_override
+    app.dependency_overrides[db.get_session] = get_session_override
 
     client = TestClient(app)
     yield client

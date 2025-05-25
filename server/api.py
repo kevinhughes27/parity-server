@@ -1,4 +1,7 @@
 from pydantic import BaseModel, ConfigDict
+
+# I should be able tp go to definition this but I can't
+# time to pause and fix vim
 from pydantic.alias_generators import to_camel, to_snake
 from sqlalchemy.orm import InstrumentedAttribute, selectinload
 from sqlmodel import Session, col, select
