@@ -111,7 +111,7 @@ class Game(SQLModel, table=True):
 
     home_roster: list[str] = Field(default=None, sa_column=Column(JSON))
     away_roster: list[str] = Field(default=None, sa_column=Column(JSON))
-    points: list[dict] = Field(default=None, sa_column=Column(JSON))
+    points: list = Field(default=None, sa_column=Column(JSON))
 
     home_score: int = Field(default=None)
     away_score: int = Field(default=None)

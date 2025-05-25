@@ -1,8 +1,8 @@
 from pydantic import BaseModel, ConfigDict
-from pydantic.alias_generators import to_camel
+from pydantic.alias_generators import to_camel, to_snake
 from sqlalchemy.orm import InstrumentedAttribute, selectinload
 from sqlmodel import Session, col, select
-from typing import Any, Collection, cast
+from typing import Collection, Optional, cast
 import datetime
 
 import server.db as db
@@ -22,9 +22,35 @@ class League(BaseSchema):
     name: str
 
 
-def build_leagues_response(session: Session) -> list[League]:
-    leagues = session.exec(select(db.League)).all()
-    return [League(**league.model_dump()) for league in leagues]
+class Player(BaseSchema):
+    name: str
+    team: str
+    salary: int
+
+
+class TeamPlayer(BaseSchema):
+    name: str
+    team: str
+    is_male: bool
+
+
+class Team(BaseSchema):
+    id: int
+    name: str
+    players: list[TeamPlayer]
+
+
+class Event(BaseModel):
+    timestamp: str
+    type: str
+    firstActor: str
+    secondActor: Optional[str] = None
+
+
+class Point(BaseModel):
+    defensePlayers: list[str]
+    offensePlayers: list[str]
+    events: list[Event]
 
 
 class Game(BaseSchema):
@@ -36,19 +62,62 @@ class Game(BaseSchema):
 
     home_roster: list[str]
     away_roster: list[str]
-    points: list[dict[str, Any]]
+    points: list[Point]
 
     home_score: int
     away_score: int
 
 
-def build_games_response(session: Session, league_id: int) -> list[Game]:
-    games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
-    return [Game(**g.model_dump()) for g in games]
+class Stats(BaseSchema):
+    model_config = ConfigDict(
+        alias_generator=to_snake,
+        populate_by_name=True,
+        from_attributes=True,
+    )
+
+    goals: int
+    assists: int
+    second_assists: int
+    d_blocks: int
+    completions: int
+    throw_aways: int
+    threw_drops: int
+    catches: int
+    drops: int
+    pulls: int
+    callahan: int
+    o_points_for: int
+    o_points_against: int
+    d_points_for: int
+    d_points_against: int
+    points_played: int
+
+    team: str
+
+    pay: int
+    salary_per_point: int
+    o_efficiency: float
+    d_efficiency: float
+    total_efficiency: float
 
 
 class GameWithStats(Game):
-    stats: dict[str, Any]
+    stats: dict[str, Stats]
+
+
+class WeekStats(BaseSchema):
+    week: int
+    stats: dict[str, Stats]
+
+
+def build_leagues_response(session: Session) -> list[League]:
+    leagues = session.exec(select(db.League)).all()
+    return [League(**league.model_dump()) for league in leagues]
+
+
+def build_games_response(session: Session, league_id: int) -> list[Game]:
+    games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
+    return [Game(**g.model_dump()) for g in games]
 
 
 def build_game_response(
@@ -60,11 +129,6 @@ def build_game_response(
     assert game
     stats = build_stats(session, league_id, [game])
     return GameWithStats(**game.model_dump(), stats=stats)
-
-
-class WeekStats(BaseSchema):
-    week: int
-    stats: dict[str, Any]
 
 
 def build_stats_response(session: Session, league_id: int, week: int) -> WeekStats:
@@ -87,13 +151,13 @@ def build_stats_response(session: Session, league_id: int, week: int) -> WeekSta
 
 def build_stats(
     session: Session, league_id: int, games: Collection[db.Game]
-) -> dict[str, Any]:
+) -> dict[str, Stats]:
     players = session.exec(
         select(db.Player).where(db.Player.league_id == league_id)
     ).all()
     teams = session.exec(select(db.Team).where(db.Team.league_id == league_id)).all()
 
-    player_stats: dict[str, Any] = {}
+    player_stats: dict = {}
 
     stats_to_average = [
         "pay",
@@ -150,13 +214,7 @@ def build_stats(
         )
         player_stats[player_name].pop("games_played")
 
-    return player_stats
-
-
-class Player(BaseSchema):
-    name: str
-    team: str
-    salary: int
+    return {k: Stats(**v) for k, v in player_stats.items()}
 
 
 # teams gets queried more times than strictly necessary here
@@ -210,18 +268,6 @@ def build_players_response(session, league_id) -> list[Player]:
                 player.salary = avg_female_salary
 
     return [Player(name=p.name, team=p.team_name, salary=p.salary) for p in players]
-
-
-class TeamPlayer(BaseSchema):
-    name: str
-    team: str
-    is_male: bool
-
-
-class Team(BaseSchema):
-    id: int
-    name: str
-    players: list[TeamPlayer]
 
 
 def build_teams_response(session: Session, league_id: int) -> list[Team]:
