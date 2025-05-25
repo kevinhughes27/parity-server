@@ -1,10 +1,9 @@
 from fastapi import Depends, FastAPI
 from pathlib import Path
-from sqlmodel import Session, create_engine
+from sqlmodel import Session
 from starlette.responses import FileResponse
 from typing import Annotated
 import logging
-import os
 
 from server.stats_calculator import StatsCalculator
 import server.admin as admin
@@ -24,34 +23,19 @@ app = FastAPI(
     ],
 )
 
-
 # Assets
 react_app_path = Path(__file__).parents[1] / "web/build"
 if not react_app_path.exists():
     print(f"Warning: React app directory not found at {react_app_path}")
 
-
-# Database Setup
-db_path = Path(__file__).parent / "db.sqlite"
-db_uri = "sqlite:////" + str(db_path.absolute())
-if os.name == "nt":
-    db_uri = "sqlite:///" + str(db_path.absolute())
-
+# Logging
 logging.basicConfig()
 logger = logging.getLogger("sqlalchemy.engine")
 logger.setLevel(logging.INFO)
 
-engine = create_engine(db_uri)
-
-
-# Database Session
-def get_session():
-    with Session(engine) as session:
-        yield session
-
 
 # Dependencies
-SessionDep = Annotated[Session, Depends(get_session)]
+SessionDep = Annotated[Session, Depends(db.get_session)]
 AdminDep = Annotated[Session, Depends(admin.verify)]
 
 
