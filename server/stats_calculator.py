@@ -58,19 +58,19 @@ class StatsCalculator:
             previous_previous_event = events[idx - 2]
             previous_event = events[idx - 1]
 
-            if (
-                previous_event["type"] == "PASS"
-                and previous_event["secondActor"] == event["firstActor"]
-            ):
+            was_pass = previous_event["type"] == "PASS"
+            was_d = previous_event["type"] == "DEFENSE"
+            was_drop = previous_event["type"] == "DROP"
+
+            if was_pass and previous_event["secondActor"] == event["firstActor"]:
                 self.add_stat(previous_event["firstActor"], "assists")
 
                 if previous_previous_event["type"] == "PASS":
-                    self.add_stat(
-                        previous_previous_event["firstActor"], "second_assists"
-                    )
-            elif (
-                previous_event["type"] == "DEFENSE" or previous_event["type"] == "DROP"
-            ):
+                    prev_actor = previous_previous_event["firstActor"]
+                    self.add_stat(prev_actor, "second_assists")
+
+            # Callahan
+            elif was_d or was_drop:
                 self.add_stat(event["firstActor"], "callahan")
 
             # Finish Point
