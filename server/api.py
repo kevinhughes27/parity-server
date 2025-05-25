@@ -8,7 +8,10 @@ from sqlmodel import Session, col, select
 from typing import Collection, Optional, cast
 import datetime
 
+from server.stats_calculator import StatsCalculator
 import server.db as db
+
+CURRENT_LEAGUE_ID = 22
 
 
 class BaseSchema(BaseModel):
@@ -23,6 +26,11 @@ class League(BaseSchema):
     id: int
     zuluru_id: int | None  # Parity Tournament 2020
     name: str
+    line_size: int
+
+
+class CurrentLeague(BaseSchema):
+    league: League
 
 
 class Player(BaseSchema):
@@ -54,6 +62,20 @@ class Point(BaseModel):
     defensePlayers: list[str]
     offensePlayers: list[str]
     events: list[Event]
+
+
+class UploadedGame(BaseSchema):
+    league_id: int
+    week: int
+    home_team: str
+    away_team: str
+
+    home_roster: list[str]
+    away_roster: list[str]
+    points: list[Point]
+
+    home_score: int
+    away_score: int
 
 
 class Game(BaseSchema):
@@ -111,6 +133,44 @@ class GameWithStats(Game):
 class WeekStats(BaseSchema):
     week: int
     stats: dict[str, Stats]
+
+
+class Matchup(BaseSchema):
+    id: int
+    league_id: int
+    home_team_id: int
+    away_team_id: int
+    week: int
+    game_start: datetime.datetime
+    game_end: datetime.datetime
+
+
+class Schedule(BaseSchema):
+    teams: list[Team]
+    matchups: list[Matchup]
+
+
+def current_league(session: Session) -> CurrentLeague:
+    """Return the current league.
+
+    Used by the Android app which requires the nesting
+    """
+    league = session.get(db.League, CURRENT_LEAGUE_ID)
+    assert league
+    return CurrentLeague(league=League(**league.model_dump()))
+
+
+def upload_game(session: Session, uploaded_game: UploadedGame):
+    game = db.Game(**uploaded_game.model_dump())
+
+    # save the game to the database
+    session.add(game)
+    session.commit()
+
+    # calculate and save stats
+    StatsCalculator(game).run(session)
+
+    # clear the stats cache
 
 
 def build_leagues_response(session: Session) -> list[League]:
@@ -213,10 +273,9 @@ def build_stats(
     # resolve averages
     for player_name in player_stats.keys():
         for stat in stats_to_average:
-            player_stats[player_name][stat] = (
-                player_stats[player_name][stat]
-                / player_stats[player_name]["games_played"]
-            )
+            value = player_stats[player_name][stat]
+            games_played = player_stats[player_name]["games_played"]
+            player_stats[player_name][stat] = value / games_played
 
         player_stats[player_name]["pay"] = round(player_stats[player_name]["pay"])
         player_stats[player_name]["salary_per_point"] = round(
@@ -291,21 +350,6 @@ def build_teams_response(session: Session, league_id: int) -> list[Team]:
             )
         teams_response.append(Team(id=team.id, name=team.name, players=players))
     return teams_response
-
-
-class Matchup(BaseSchema):
-    id: int
-    league_id: int
-    home_team_id: int
-    away_team_id: int
-    week: int
-    game_start: datetime.datetime
-    game_end: datetime.datetime
-
-
-class Schedule(BaseSchema):
-    teams: list[Team]
-    matchups: list[Matchup]
 
 
 def build_schedule_response(session: Session, league_id: int) -> Schedule:

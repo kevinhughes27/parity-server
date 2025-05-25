@@ -42,8 +42,6 @@ def league_fixture(session):
     league.id = 1
     league.zuluru_id = 1
     league.name = "Test"
-    league.stat_values = "v2"
-    league.salary_calc = "sum"
     session.add(league)
     session.commit()
     return league

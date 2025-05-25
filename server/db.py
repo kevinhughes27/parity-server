@@ -24,8 +24,9 @@ class League(SQLModel, table=True):
     id: int = Field(default=None, primary_key=True)
     zuluru_id: int = Field(default=None, unique=True, index=True)
     name: str = Field(index=True)
-    stat_values: str
-    salary_calc: str
+    stat_values: str = Field(default="v2")
+    salary_calc: str = Field(default="pro_rate")
+    line_size: int = Field(default=6)
 
     teams: list["Team"] = Relationship(back_populates="league")
     players: list["Player"] = Relationship(back_populates="league")

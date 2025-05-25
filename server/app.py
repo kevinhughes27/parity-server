@@ -5,12 +5,9 @@ from starlette.responses import FileResponse
 from typing import Annotated
 import logging
 
-from server.stats_calculator import StatsCalculator
 import server.admin as admin
 import server.api as api
 import server.db as db
-
-CURRENT_LEAGUE_ID = 22
 
 # Init
 app = FastAPI(
@@ -33,63 +30,22 @@ logging.basicConfig()
 logger = logging.getLogger("sqlalchemy.engine")
 logger.setLevel(logging.INFO)
 
-
 # Dependencies
 SessionDep = Annotated[Session, Depends(db.get_session)]
 AdminDep = Annotated[Session, Depends(admin.verify)]
 
 
 # Current League
-class League(api.BaseSchema):
-    id: int
-    name: str
-    line_size: int
-
-
-class CurrentLeague(api.BaseSchema):
-    league: League
-
-
 @app.get("/current_league", tags=["android"])
-async def current_league(session: SessionDep) -> CurrentLeague:
-    """Return the current league.
-
-    Used by the Android app which requires the nesting
-    """
-    league = session.get(db.League, CURRENT_LEAGUE_ID)
-    assert league
-    return CurrentLeague(league=League(id=league.id, name=league.name, line_size=6))
+async def current_league(session: SessionDep) -> api.CurrentLeague:
+    return api.current_league(session)
 
 
 # Submit Game
-class UploadedGame(api.BaseSchema):
-    league_id: int
-    week: int
-    home_team: str
-    away_team: str
-
-    home_roster: list[str]
-    away_roster: list[str]
-    points: list[api.Point]
-
-    home_score: int
-    away_score: int
-
-
 @app.post("/submit_game", status_code=201, tags=["android"])
-async def upload(session: SessionDep, uploaded_game: UploadedGame):
+async def upload(session: SessionDep, uploaded_game: api.UploadedGame):
     """Upload a game recorded on the Android app."""
-    game = db.Game(**uploaded_game.model_dump())
-
-    # save the game to the database
-    session.add(game)
-    session.commit()
-
-    # calculate and save stats
-    StatsCalculator(game).run(session)
-
-    # clear the stats cache
-
+    api.upload_game(session, uploaded_game)
     return "OK"
 
 
