@@ -12,7 +12,15 @@ import server.api as api
 import server.db as db
 
 # Init
-app = FastAPI()
+app = FastAPI(
+    title="OCUA Parity League",
+    summary="API Documentation",
+    openapi_tags=[
+        {"name": "api"},
+        {"name": "android"},
+        {"name": "admin"},
+    ]
+)
 security = HTTPBasic()
 
 # Assets
@@ -81,7 +89,7 @@ class CurrentLeague(api.BaseSchema):
     league: League
 
 
-@app.get("/current_league", include_in_schema=False)
+@app.get("/current_league", tags=["android"])
 async def current_league(session: SessionDep) -> CurrentLeague:
     """Return the current league.
 
@@ -107,8 +115,9 @@ class UploadedGame(api.BaseSchema):
     away_score: int
 
 
-@app.post("/submit_game", status_code=201)
+@app.post("/submit_game", status_code=201, tags=["android"])
 async def upload(session: SessionDep, uploaded_game: UploadedGame):
+    """Upload a game recorded on the Android app."""
     game = db.Game(**uploaded_game.model_dump())
 
     # save the game to the database
@@ -124,33 +133,33 @@ async def upload(session: SessionDep, uploaded_game: UploadedGame):
 
 
 # API
-@app.get("/api/leagues")
+@app.get("/api/leagues", tags=["api"])
 async def leagues(session: SessionDep) -> list[api.League]:
     return api.build_leagues_response(session)
 
 
-@app.get("/api/{league_id}/teams", response_model=list[api.Team])
+@app.get("/api/{league_id}/teams", tags=["api"])
 async def teams(league_id: int, session: SessionDep) -> list[api.Team]:
     return api.build_teams_response(session, league_id)
 
 
-@app.get("/api/{league_id}/schedule")
+@app.get("/api/{league_id}/schedule", tags=["android"])
 async def schedule(league_id: int, session: SessionDep) -> api.Schedule:
     return api.build_schedule_response(session, league_id)
 
 
-@app.get("/api/{league_id}/players", response_model=list[api.Player])
+@app.get("/api/{league_id}/players", tags=["api"])
 async def players(league_id: int, session: SessionDep) -> list[api.Player]:
     return api.build_players_response(session, league_id)
 
 
-@app.get("/api/{league_id}/games")
+@app.get("/api/{league_id}/games", tags=["api"])
 async def games(league_id: int, session: SessionDep) -> list[api.Game]:
     # include_points = request.args.get('includePoints') == 'true'
     return api.build_games_response(session, league_id)
 
 
-@app.get("/api/{league_id}/games/{id}")
+@app.get("/api/{league_id}/games/{id}", tags=["api"])
 async def game(league_id: int, id: int, session: SessionDep) -> api.GameWithStats:
     return api.build_game_response(session, league_id, id)
 
@@ -163,7 +172,7 @@ class EditedGame(api.BaseSchema):
     points: list[dict[str, Any]]
 
 
-@app.post("/api/{league_id}/games/{id}")
+@app.post("/api/{league_id}/games/{id}", tags=["admin"])
 async def edit_game(
     admin: AdminDep,
     session: SessionDep,
@@ -210,7 +219,7 @@ async def edit_game(
     return
 
 
-@app.delete("/api/{league_id}/games/{id}")
+@app.delete("/api/{league_id}/games/{id}", tags=["admin"])
 async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
     game = session.exec(
         select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
@@ -227,7 +236,7 @@ async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: 
     return
 
 
-@app.get("/api/{league_id}/weeks", response_model=list[int])
+@app.get("/api/{league_id}/weeks", tags=["api"])
 async def weeks(league_id: int, session: SessionDep) -> list[int]:
     weeks = set(
         session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
@@ -235,12 +244,12 @@ async def weeks(league_id: int, session: SessionDep) -> list[int]:
     return sorted(weeks)
 
 
-@app.get("/api/{league_id}/weeks/{week}", response_model=api.WeekStats)
+@app.get("/api/{league_id}/weeks/{week}", tags=["api"])
 async def week(league_id: int, week: int, session: SessionDep) -> api.WeekStats:
     return api.build_stats_response(session, league_id, week)
 
 
-@app.get("/api/{league_id}/stats", response_model=api.WeekStats)
+@app.get("/api/{league_id}/stats", tags=["api"])
 async def stats(league_id: int, session: SessionDep) -> api.WeekStats:
     return api.build_stats_response(session, league_id, 0)
 
