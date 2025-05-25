@@ -80,6 +80,8 @@ def edit_game(
 
     # clear the stats cache
 
+    return
+
 
 def delete_game(session: Session, league_id: int, game_id: int):
     game = session.exec(
