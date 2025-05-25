@@ -106,7 +106,7 @@ async def upload(session: SessionDep, uploaded_game: UploadedGame):
 
     # clear the stats cache
 
-    return
+    return "OK"
 
 
 # API

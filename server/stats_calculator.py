@@ -1,5 +1,4 @@
 from sqlmodel import Session, select
-from typing import Any
 
 import server.db as db
 
@@ -14,7 +13,7 @@ class StatsCalculator:
 
     def run(self, session: Session):
         self.session = session
-        self.stats: dict[str, dict[str, Any]] = {}
+        self.stats: dict[str, db.Stats] = {}
 
         for point in self.game.points:
             self.process_point(point)
