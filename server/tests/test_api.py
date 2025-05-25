@@ -1,13 +1,13 @@
 from .helpers import QueryCounter, upload_game
 
-from server.app import CURRENT_LEAGUE_ID
+from server.api import CURRENT_LEAGUE_ID
 import server.db as db
 
 
 def test_leagues(client, league, snapshot):
     response = client.get("/api/leagues")
     assert response.status_code == 200
-    assert response.json() == [{"id": 1, "name": "Test", "zuluruId": 1}]
+    assert response.json() == [{"id": 1, "name": "Test", "lineSize": 6, "zuluruId": 1}]
 
 
 def test_current_league(client, session):
@@ -23,7 +23,12 @@ def test_current_league(client, session):
     response = client.get("/current_league")
     assert response.status_code == 200
     assert response.json() == {
-        "league": {"id": CURRENT_LEAGUE_ID, "name": "Current", "lineSize": 6}
+        "league": {
+            "id": CURRENT_LEAGUE_ID,
+            "name": "Current",
+            "lineSize": 6,
+            "zuluruId": 1,
+        }
     }
 
 

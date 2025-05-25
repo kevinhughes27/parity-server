@@ -7,7 +7,7 @@ import os
 import re
 import requests
 
-from server.app import CURRENT_LEAGUE_ID
+from server.api import CURRENT_LEAGUE_ID
 import server.db as db
 
 
