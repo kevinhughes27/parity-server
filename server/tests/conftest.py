@@ -2,11 +2,16 @@ from fastapi.testclient import TestClient
 from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
 import json
+import logging
 import pathlib
 import pytest
 
 from server.app import app, get_session
 import server.db as db
+
+logging.basicConfig()
+logger = logging.getLogger("sqlalchemy.engine")
+logger.setLevel(logging.WARN)
 
 
 @pytest.fixture(name="session", scope="function")

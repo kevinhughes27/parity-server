@@ -3,7 +3,7 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pathlib import Path
 from sqlmodel import Session, col, create_engine, select
 from starlette.responses import FileResponse
-from typing import Annotated, Any
+from typing import Annotated
 import logging
 import os
 
@@ -19,7 +19,7 @@ app = FastAPI(
         {"name": "api"},
         {"name": "android"},
         {"name": "admin"},
-    ]
+    ],
 )
 security = HTTPBasic()
 
@@ -109,7 +109,7 @@ class UploadedGame(api.BaseSchema):
 
     home_roster: list[str]
     away_roster: list[str]
-    points: list[dict[str, Any]]
+    points: list[api.Point]
 
     home_score: int
     away_score: int
@@ -169,7 +169,7 @@ class EditedGame(api.BaseSchema):
     away_score: int
     home_roster: list[str]
     away_roster: list[str]
-    points: list[dict[str, Any]]
+    points: list[api.Point]
 
 
 @app.post("/api/{league_id}/games/{id}", tags=["admin"])
@@ -190,7 +190,7 @@ async def edit_game(
     game.away_score = edited_game.away_score
     game.home_roster = edited_game.home_roster
     game.away_roster = edited_game.away_roster
-    game.points = edited_game.points
+    game.points = [point.model_dump() for point in edited_game.points]
 
     session.add(game)
     session.commit()
