@@ -282,7 +282,6 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
-    { name = "click" },
     { name = "fastapi" },
     { name = "fastapi-cache2" },
     { name = "gunicorn" },
@@ -302,7 +301,6 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4", specifier = "==4.13.4" },
-    { name = "click", specifier = "==8.2.1" },
     { name = "fastapi", specifier = ">=0.115.12" },
     { name = "fastapi-cache2", specifier = ">=0.2.2" },
     { name = "gunicorn", specifier = "==23.0.0" },

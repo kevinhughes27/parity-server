@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4==4.13.4",
-    "click==8.2.1",
     "fastapi>=0.115.12",
     "fastapi-cache2>=0.2.2",
     "gunicorn==23.0.0",
