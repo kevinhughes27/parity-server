@@ -1,4 +1,5 @@
 from pathlib import Path
+from sqlalchemy import event
 import json
 
 
@@ -19,3 +20,21 @@ def get_stats(client):
     assert response.status_code == 200
     stats = response.json()
     return stats
+
+
+class QueryCounter(object):
+    """Context manager to count SQLALchemy queries."""
+
+    def __init__(self, connection):
+        self.connection = connection.engine
+        self.count = 0
+
+    def __enter__(self):
+        event.listen(self.connection, "before_cursor_execute", self.callback)
+        return self
+
+    def __exit__(self, *args, **kwargs):
+        event.remove(self.connection, "before_cursor_execute", self.callback)
+
+    def callback(self, *args, **kwargs):
+        self.count += 1

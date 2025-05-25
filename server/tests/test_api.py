@@ -1,4 +1,4 @@
-from .helpers import upload_game
+from .helpers import QueryCounter, upload_game
 
 from server.app import CURRENT_LEAGUE_ID
 import server.db as db
@@ -43,7 +43,7 @@ def test_api_endpoints(client, league, rosters):
     assert response.status_code == 200
     assert len(response.json()) == 4
 
-    # weaks
+    # weeks
     response = client.get("/api/1/weeks")
     assert response.status_code == 200
     assert response.json() == [1]
@@ -81,3 +81,59 @@ def test_api_endpoints(client, league, rosters):
     response = client.get("/api/1/players")
     assert response.status_code == 200
     assert len(response.json()) == 48
+
+
+def test_query_count(client, session, league, rosters):
+    """Test Database Query counts.
+
+    Whenever an ORM is involved I find tests of this format to
+    be useful. it helps ensure we don't have N+1 queries
+
+    Note that upload has a lot of queries because it creates
+    players on demand.
+    """
+    with QueryCounter(session.connection()) as counter:
+        upload_game(client, "mini_game.json")
+        assert counter.count == 113
+
+    with QueryCounter(session.connection()) as counter:
+        upload_game(client, "mini_game2.json")
+        assert counter.count == 68
+
+    # leagues
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/leagues")
+        assert counter.count == 1
+
+    # teams
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/teams")
+        assert counter.count == 5
+
+    # players
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/players")
+        assert counter.count == 6
+
+    # games
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/games")
+        assert counter.count == 1
+
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/games/1")
+        assert counter.count == 4
+
+    # weeks
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/weeks")
+        assert counter.count == 1
+
+    # stats
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/stats")
+        assert counter.count == 4
+
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/weeks/1")
+        assert counter.count == 4
