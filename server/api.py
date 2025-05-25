@@ -115,6 +115,13 @@ def build_leagues_response(session: Session) -> list[League]:
     return [League(**league.model_dump()) for league in leagues]
 
 
+def build_weeks_response(session: Session, league_id: int) -> list[int]:
+    weeks = set(
+        session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
+    )
+    return sorted(weeks)
+
+
 def build_games_response(session: Session, league_id: int) -> list[Game]:
     games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
     return [Game(**g.model_dump()) for g in games]

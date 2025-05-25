@@ -1,15 +1,17 @@
-from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi import Depends, FastAPI
 from pathlib import Path
-from sqlmodel import Session, col, create_engine, select
+from sqlmodel import Session, create_engine
 from starlette.responses import FileResponse
 from typing import Annotated
 import logging
 import os
 
 from server.stats_calculator import StatsCalculator
+import server.admin as admin
 import server.api as api
 import server.db as db
+
+CURRENT_LEAGUE_ID = 22
 
 # Init
 app = FastAPI(
@@ -21,7 +23,7 @@ app = FastAPI(
         {"name": "admin"},
     ],
 )
-security = HTTPBasic()
+
 
 # Assets
 react_app_path = Path(__file__).parents[1] / "web/build"
@@ -48,37 +50,12 @@ def get_session():
         yield session
 
 
+# Dependencies
 SessionDep = Annotated[Session, Depends(get_session)]
-
-
-# Admin
-def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
-    if os.environ.get("PARITY_EDIT_PASSWORD") is None:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="PARITY_EDIT_PASSWORD env var not set",
-            headers={"WWW-Authenticate": "Basic"},
-        )
-
-    correct_username = credentials.username == "admin"
-    correct_password = credentials.password == os.environ.get("PARITY_EDIT_PASSWORD")
-
-    if not (correct_username and correct_password):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Basic"},
-        )
-    return credentials.username
-
-
-AdminDep = Annotated[Session, Depends(verify_admin)]
+AdminDep = Annotated[Session, Depends(admin.verify)]
 
 
 # Current League
-CURRENT_LEAGUE_ID = 22
-
-
 class League(api.BaseSchema):
     id: int
     name: str
@@ -139,118 +116,61 @@ async def leagues(session: SessionDep) -> list[api.League]:
 
 
 @app.get("/api/{league_id}/teams", tags=["api"])
-async def teams(league_id: int, session: SessionDep) -> list[api.Team]:
+async def teams(session: SessionDep, league_id: int) -> list[api.Team]:
     return api.build_teams_response(session, league_id)
 
 
 @app.get("/api/{league_id}/schedule", tags=["android"])
-async def schedule(league_id: int, session: SessionDep) -> api.Schedule:
+async def schedule(session: SessionDep, league_id: int) -> api.Schedule:
     return api.build_schedule_response(session, league_id)
 
 
 @app.get("/api/{league_id}/players", tags=["api"])
-async def players(league_id: int, session: SessionDep) -> list[api.Player]:
+async def players(session: SessionDep, league_id: int) -> list[api.Player]:
     return api.build_players_response(session, league_id)
 
 
 @app.get("/api/{league_id}/games", tags=["api"])
-async def games(league_id: int, session: SessionDep) -> list[api.Game]:
+async def games(session: SessionDep, league_id: int) -> list[api.Game]:
     # include_points = request.args.get('includePoints') == 'true'
     return api.build_games_response(session, league_id)
 
 
 @app.get("/api/{league_id}/games/{id}", tags=["api"])
-async def game(league_id: int, id: int, session: SessionDep) -> api.GameWithStats:
+async def game(session: SessionDep, league_id: int, id: int) -> api.GameWithStats:
     return api.build_game_response(session, league_id, id)
 
 
-class EditedGame(api.BaseSchema):
-    home_score: int
-    away_score: int
-    home_roster: list[str]
-    away_roster: list[str]
-    points: list[api.Point]
-
-
 @app.post("/api/{league_id}/games/{id}", tags=["admin"])
-async def edit_game(
-    admin: AdminDep,
+async def update_game(
+    login: AdminDep,
     session: SessionDep,
     league_id: int,
     id: int,
-    edited_game: EditedGame,
+    edited_game: admin.EditedGame,
 ):
-    game = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
-    ).first()
-    assert game
-
-    # updating Game
-    game.home_score = edited_game.home_score
-    game.away_score = edited_game.away_score
-    game.home_roster = edited_game.home_roster
-    game.away_roster = edited_game.away_roster
-    game.points = [point.model_dump() for point in edited_game.points]
-
-    session.add(game)
-    session.commit()
-
-    # loading other games from the same week
-    games = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
-    ).all()
-    game_ids = [game.id for game in games]
-
-    # deleting old stats
-    stats = session.exec(
-        select(db.Stats).where(col(db.Stats.game_id).in_(game_ids))
-    ).all()
-
-    for stat in stats:
-        session.delete(stat)
-    session.commit()
-
-    # re-calculating stats
-    for game in games:
-        StatsCalculator(game).run(session)
-
-    # clear the stats cache
-
-    return
+    admin.edit_game(session, league_id, id, edited_game)
+    return "OK"
 
 
 @app.delete("/api/{league_id}/games/{id}", tags=["admin"])
-async def delete_game(admin: AdminDep, session: SessionDep, league_id: int, id: int):
-    game = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == id)
-    ).first()
-    assert game
-
-    session.delete(game)
-    for stat in game.stats:
-        session.delete(stat)
-    session.commit()
-
-    # clear the stats cache
-
-    return
+async def delete_game(login: AdminDep, session: SessionDep, league_id: int, id: int):
+    admin.delete_game(session, league_id, id)
+    return "OK"
 
 
 @app.get("/api/{league_id}/weeks", tags=["api"])
-async def weeks(league_id: int, session: SessionDep) -> list[int]:
-    weeks = set(
-        session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
-    )
-    return sorted(weeks)
+async def weeks(session: SessionDep, league_id: int) -> list[int]:
+    return api.build_weeks_response(session, league_id)
 
 
 @app.get("/api/{league_id}/weeks/{week}", tags=["api"])
-async def week(league_id: int, week: int, session: SessionDep) -> api.WeekStats:
+async def week(session: SessionDep, league_id: int, week: int) -> api.WeekStats:
     return api.build_stats_response(session, league_id, week)
 
 
 @app.get("/api/{league_id}/stats", tags=["api"])
-async def stats(league_id: int, session: SessionDep) -> api.WeekStats:
+async def stats(session: SessionDep, league_id: int) -> api.WeekStats:
     return api.build_stats_response(session, league_id, 0)
 
 
