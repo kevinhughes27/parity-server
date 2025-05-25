@@ -74,9 +74,9 @@ After=network.target
 
 [Service]
 User=ubuntu
-WorkingDirectory=/home/ubuntu/parity-server/server
+WorkingDirectory=/home/ubuntu/parity-server
 Environment=PARITY_EDIT_PASSWORD=
-ExecStart=/home/ubuntu/.local/bin/uv run gunicorn --workers=2 --bind=127.0.0.1:8080 app:app
+ExecStart=/home/ubuntu/.local/bin/uv run fastapi server --workers 2 --port 8080
 TimeoutSec=30
 Restart=always
 
@@ -127,10 +127,11 @@ Description=Zuluru Sync
 
 [Service]
 User=ubuntu
-WorkingDirectory=/home/ubuntu/parity-server/server
+WorkingDirectory=/home/ubuntu/parity-server
 Environment=ZULURU_USER=...
 Environment=ZULURU_PASSWORD=...
-ExecStart=uv run server/zuluru_sync.py
+ExecStart=t=PARITY_EDIT_PASSWORD=
+ExecStart=/home/ubuntu/.local/bin/uv run server/zuluru_sync.py
 ```
 
 The backup systemd files:
