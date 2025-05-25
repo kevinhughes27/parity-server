@@ -1,6 +1,7 @@
 from datetime import datetime
+from pydantic import computed_field
 from sqlmodel import JSON, Column, Field, Relationship, SQLModel
-from typing import Any, Optional
+from typing import Optional
 
 
 class League(SQLModel, table=True):
@@ -182,8 +183,12 @@ class Stats(SQLModel, table=True):
         value = getattr(self, stat)
         setattr(self, stat, value + 1)
 
+    # computed_field has a known issue with mypy
+    # https://docs.pydantic.dev/2.0/usage/computed_fields/
+
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def pay(self):
+    def pay(self) -> int:
         total = 0
 
         for stat, value in STAT_VALUES[self.stat_values].items():
@@ -191,67 +196,47 @@ class Stats(SQLModel, table=True):
 
         return total
 
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def salary_per_point(self):
+    def salary_per_point(self) -> int:
         if self.points_played == 0:
             return 0
         else:
             return round(self.pay / self.points_played)
 
     @property
-    def _o_points_played(self):
+    def _o_points_played(self) -> int:
         return self.o_points_for + self.o_points_against
 
     @property
-    def _d_points_played(self):
+    def _d_points_played(self) -> int:
         return self.d_points_for + self.d_points_against
 
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def points_played(self):
+    def points_played(self) -> int:
         return self._o_points_played + self._d_points_played
 
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def o_efficiency(self):
+    def o_efficiency(self) -> float:
         if self._o_points_played == 0:
             return 0
         else:
             return self.o_points_for / self._o_points_played
 
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def d_efficiency(self):
+    def d_efficiency(self) -> float:
         if self._d_points_played == 0:
             return 0
         else:
             return self.d_points_for / self._d_points_played
 
+    @computed_field  # type: ignore[prop-decorator]
     @property
-    def total_efficiency(self):
+    def total_efficiency(self) -> float:
         if self.points_played == 0:
             return 0
         else:
             return (self.o_points_for + self.d_points_for) / self.points_played
-
-    def to_dict_with_properties(self) -> dict[str, Any]:
-        return {
-            "goals": self.goals,
-            "assists": self.assists,
-            "second_assists": self.second_assists,
-            "d_blocks": self.d_blocks,
-            "completions": self.completions,
-            "throw_aways": self.throw_aways,
-            "threw_drops": self.threw_drops,
-            "catches": self.catches,
-            "drops": self.drops,
-            "pulls": self.pulls,
-            "callahan": self.callahan,
-            "o_points_for": self.o_points_for,
-            "o_points_against": self.o_points_against,
-            "d_points_for": self.d_points_for,
-            "d_points_against": self.d_points_against,
-            "o_efficiency": self.o_efficiency,
-            "d_efficiency": self.d_efficiency,
-            "total_efficiency": self.total_efficiency,
-            "points_played": self.points_played,
-            "pay": self.pay,
-            "salary_per_point": self.salary_per_point,
-        }

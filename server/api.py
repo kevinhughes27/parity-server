@@ -178,7 +178,7 @@ def build_stats(
     for game in games:
         for game_stats in game.stats:
             player = [p for p in players if p.id == game_stats.player_id][0]
-            data = game_stats.to_dict_with_properties()
+            data = game_stats.model_dump()
 
             # aggregate all stats for the player
             if player.name in player_stats:
