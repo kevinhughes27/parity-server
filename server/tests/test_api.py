@@ -8,7 +8,7 @@ import server.db as db
 def test_leagues(client, league, snapshot):
     response = client.get("/api/leagues")
     assert response.status_code == 200
-    assert response.json() == [{"id": 1, "name": "Test", "lineSize": 6, "zuluruId": 1}]
+    assert response.json() == [{"id": 1, "name": "Test", "lineSize": 6, "zuluru_id": 1}]
 
 
 def test_current_league(client, session):
@@ -28,7 +28,7 @@ def test_current_league(client, session):
             "id": CURRENT_LEAGUE_ID,
             "name": "Current",
             "lineSize": 6,
-            "zuluruId": 1,
+            "zuluru_id": 1,
         }
     }
 
@@ -67,12 +67,31 @@ def test_api_endpoints(client, league, rosters):
     assert response.status_code == 200
     assert len(response.json()) == 4
 
+    # players
+    response = client.get("/api/1/players")
+    assert response.status_code == 200
+    assert len(response.json()) == 48
+
+    # games
+    response = client.get("/api/1/games")
+    assert response.status_code == 200
+    assert len(response.json()) == 2
+
+    response = client.get("/api/1/games?includePoints=true")
+    assert response.status_code == 200
+    assert len(response.json()) == 2
+
+    # game
+    response = client.get("/api/1/games/1")
+    assert response.status_code == 200
+    assert len(response.json()["points"]) == 4
+
     # weeks
     response = client.get("/api/1/weeks")
     assert response.status_code == 200
     assert response.json() == [1]
 
-    # stats
+    # week stats
     response = client.get("/api/1/weeks/1")
     assert response.status_code == 200
     resp_json = response.json()
@@ -80,31 +99,13 @@ def test_api_endpoints(client, league, rosters):
     assert "stats" in resp_json
     assert len(resp_json["stats"]) == 48
 
+    # all stats
     response = client.get("/api/1/stats")
     assert response.status_code == 200
     resp_json = response.json()
     assert resp_json["week"] == 0
     assert "stats" in resp_json
     assert len(resp_json["stats"]) == 48
-
-    # games
-    response = client.get("/api/1/games")
-    assert response.status_code == 200
-    assert len(response.json()) == 2
-
-    # this param does not exist yet
-    response = client.get("/api/1/games?includePoints=true")
-    assert response.status_code == 200
-    assert len(response.json()) == 2
-
-    response = client.get("/api/1/games/1")
-    assert response.status_code == 200
-    assert len(response.json()["points"]) == 4
-
-    # players
-    response = client.get("/api/1/players")
-    assert response.status_code == 200
-    assert len(response.json()) == 48
 
 
 def test_query_count(client, session, league, rosters):
@@ -144,6 +145,7 @@ def test_query_count(client, session, league, rosters):
         client.get("/api/1/games")
         assert counter.count == 1
 
+    # game
     with QueryCounter(session.connection()) as counter:
         client.get("/api/1/games/1")
         assert counter.count == 4
@@ -153,11 +155,12 @@ def test_query_count(client, session, league, rosters):
         client.get("/api/1/weeks")
         assert counter.count == 1
 
-    # stats
-    with QueryCounter(session.connection()) as counter:
-        client.get("/api/1/stats")
-        assert counter.count == 4
-
+    # week stats
     with QueryCounter(session.connection()) as counter:
         client.get("/api/1/weeks/1")
+        assert counter.count == 4
+
+    # all stats
+    with QueryCounter(session.connection()) as counter:
+        client.get("/api/1/stats")
         assert counter.count == 4
