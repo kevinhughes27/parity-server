@@ -1,4 +1,5 @@
 from .helpers import QueryCounter, upload_game
+from datetime import datetime, time, timedelta
 
 from server.api import CURRENT_LEAGUE_ID
 import server.db as db
@@ -32,11 +33,29 @@ def test_current_league(client, session):
     }
 
 
-def test_schedule(client, league, rosters):
+def test_schedule(client, session, league, rosters):
+    future_date = datetime.today().date() + timedelta(days=2)
+
+    matchup = db.Matchup(
+        league_id=league.id,
+        home_team_id=league.teams[0].id,
+        away_team_id=league.teams[1].id,
+        week=1,
+        game_start=datetime.combine(future_date, time(18, 45)),
+        game_end=datetime.combine(future_date, time(20, 35)),
+    )
+    session.add(matchup)
+    session.commit()
+
     response = client.get("/api/1/schedule")
     assert response.status_code == 200
-    assert "teams" in response.json()
-    assert "matchups" in response.json()
+    resp_json = response.json()
+
+    assert "teams" in resp_json
+    assert len(resp_json["teams"]) == 4
+
+    assert "matchups" in resp_json
+    assert len(resp_json["matchups"]) == 1
 
 
 def test_api_endpoints(client, league, rosters):
