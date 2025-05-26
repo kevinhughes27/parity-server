@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles";
 import App from "./App";
@@ -13,12 +13,11 @@ declare module '@mui/styles/defaultTheme' {
 }
 
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <App />
     </ThemeProvider>
-  </StyledEngineProvider>,
-  document.getElementById("root"),
+  </StyledEngineProvider>
 );
