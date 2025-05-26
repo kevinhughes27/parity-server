@@ -1,9 +1,6 @@
 from fastapi import HTTPException
 from pydantic import BaseModel, ConfigDict
-
-# I should be able tp go to definition this but I can't
-# time to pause and fix vim
-from pydantic.alias_generators import to_camel, to_snake
+from pydantic.alias_generators import to_camel
 from sqlalchemy.orm import InstrumentedAttribute, selectinload
 from sqlmodel import Session, col, select
 from typing import Collection, Optional, cast
@@ -15,9 +12,26 @@ import server.db as db
 CURRENT_LEAGUE_ID = 22
 
 
+def alias_generator(key: str) -> str:
+    """Convert some fields to camelCase.
+
+    For various reasons and history this app is inconsistent.
+    The logic is now centralized here.
+    """
+
+    if "home_" in key or "away_" in key:
+        return to_camel(key)
+    if key == "line_size":
+        return to_camel(key)
+    if "game_" in key:
+        return to_camel(key)
+
+    return key
+
+
 class BaseSchema(BaseModel):
     model_config = ConfigDict(
-        alias_generator=to_camel,
+        alias_generator=alias_generator,
         populate_by_name=True,
         from_attributes=True,
     )
@@ -95,12 +109,6 @@ class Game(BaseSchema):
 
 
 class Stats(BaseSchema):
-    model_config = ConfigDict(
-        alias_generator=to_snake,
-        populate_by_name=True,
-        from_attributes=True,
-    )
-
     goals: int
     assists: int
     second_assists: int

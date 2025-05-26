@@ -41,7 +41,7 @@ const cachedFetch = (url: string, _options = {}) => {
 
 export interface Game {
   id: string;
-  leagueId: string;
+  league_id: string;
   week: number;
   homeTeam: string;
   homeScore: number;
