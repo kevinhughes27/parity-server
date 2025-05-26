@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 from pydantic import BaseModel, ConfigDict
 
 # I should be able tp go to definition this but I can't
@@ -156,7 +157,8 @@ def current_league(session: Session) -> CurrentLeague:
     Used by the Android app which requires the nesting
     """
     league = session.get(db.League, CURRENT_LEAGUE_ID)
-    assert league
+    if not league:
+        raise HTTPException(status_code=404, detail="League not found")
     return CurrentLeague(league=League(**league.model_dump()))
 
 
@@ -196,7 +198,8 @@ def build_game_response(
     game = session.exec(
         select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
     ).first()
-    assert game
+    if not game:
+        raise HTTPException(status_code=404, detail="Game not found")
     stats = build_stats(session, league_id, [game])
     return GameWithStats(**game.model_dump(), stats=stats)
 

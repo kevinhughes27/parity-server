@@ -47,7 +47,8 @@ def edit_game(
     game = session.exec(
         select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
     ).first()
-    assert game
+    if not game:
+        raise HTTPException(status_code=404, detail="Game not found")
 
     # updating Game
     game.home_score = edited_game.home_score
@@ -87,7 +88,8 @@ def delete_game(session: Session, league_id: int, game_id: int):
     game = session.exec(
         select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
     ).first()
-    assert game
+    if not game:
+        raise HTTPException(status_code=404, detail="Game not found")
 
     for stat in game.stats:
         session.delete(stat)
