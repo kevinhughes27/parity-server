@@ -102,7 +102,7 @@ class Game(BaseSchema):
 
     home_roster: list[str]
     away_roster: list[str]
-    points: list[Point]
+    points: Optional[list[Point]] = None
 
     home_score: int
     away_score: int
@@ -195,9 +195,14 @@ def build_weeks_response(session: Session, league_id: int) -> list[int]:
     return sorted(weeks)
 
 
-def build_games_response(session: Session, league_id: int) -> list[Game]:
+def build_games_response(
+    session: Session, league_id: int, include_points: bool
+) -> list[Game]:
     games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
-    return [Game(**g.model_dump()) for g in games]
+    if include_points:
+        return [Game(**g.model_dump()) for g in games]
+    else:
+        return [Game(**g.model_dump(exclude={"points"})) for g in games]
 
 
 def build_game_response(

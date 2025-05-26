@@ -71,9 +71,10 @@ async def players(session: SessionDep, league_id: int) -> list[api.Player]:
 
 
 @app.get("/api/{league_id}/games", tags=["api"])
-async def games(session: SessionDep, league_id: int) -> list[api.Game]:
-    # include_points = request.args.get('includePoints') == 'true'
-    return api.build_games_response(session, league_id)
+async def games(
+    session: SessionDep, league_id: int, includePoints: bool = False
+) -> list[api.Game]:
+    return api.build_games_response(session, league_id, includePoints)
 
 
 @app.get("/api/{league_id}/games/{id}", tags=["api"])
