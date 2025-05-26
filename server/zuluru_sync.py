@@ -20,22 +20,20 @@ class ZuluruSync:
         self.base_url = "https://www.ocua.ca/zuluru"
         self.login_url = "https://www.ocua.ca/user/login"
 
-        league_path = self.base_url + "/leagues/view/league:"
-        division_path = self.base_url + "/divisions/view?division="
+        league_path = f"{self.base_url}/leagues/view/league:"
+        division_path = f"{self.base_url}/divisions/view?division="
 
         if division:
             self.teams_path = division_path + str(self.league.zuluru_id)
             self.schedule_path = (
-                self.base_url
-                + "/divisions/schedule?division="
-                + str(self.league.zuluru_id)
+                f"{self.base_url}/divisions/schedule?division={self.league.zuluru_id}"
             )
         else:
             # league
             self.teams_path = league_path + str(self.league.zuluru_id)
-            self.schedule_path = self.base_url + "/leagues/schedule"
+            self.schedule_path = f"{self.base_url}/leagues/schedule"
 
-        self.team_path = self.base_url + "/teams/view/team:"
+        self.team_path = f"{self.base_url}/teams/view/team:"
 
         self.team_id_preamble = "teams_team_"
         self.player_id_preamble = "people_person_"
@@ -43,7 +41,8 @@ class ZuluruSync:
     def sync_schedule(self):
         statement = select(db.Matchup).where(db.Matchup.league_id == self.league_id)
         current_matchups = self.session.exec(statement).all()
-        self.session.delete(current_matchups)
+        for matchup in current_matchups:
+            self.session.delete(matchup)
         self.session.commit()
 
         matchups = self.load_schedule()
@@ -64,9 +63,10 @@ class ZuluruSync:
 
         tbody = soup.find("div", {"class": "schedule"}).find("tbody")
 
-        statement = select(db.Team).where(db.Team.league_id == self.league_id)
         teams = {}
-        for team in self.session.exec(statement).all():
+        for team in self.session.exec(
+            select(db.Team).where(db.Team.league_id == self.league_id)
+        ).all():
             teams[team.zuluru_id] = team.id
 
         schedule = []
