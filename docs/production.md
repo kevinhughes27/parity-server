@@ -74,9 +74,9 @@ After=network.target
 
 [Service]
 User=ubuntu
-WorkingDirectory=/home/ubuntu/parity-server
+WorkingDirectory=/home/ubuntu/parity-server/server
 Environment=PARITY_EDIT_PASSWORD=
-ExecStart=/home/ubuntu/.local/bin/uv run fastapi server --workers 2 --port 8080
+ExecStart=/home/ubuntu/.local/bin/uv run fastapi run --workers 2 --port 8080
 TimeoutSec=30
 Restart=always
 
@@ -176,9 +176,8 @@ Then enable and start the timer services (`sudo systemctl enable parity-backup.t
 
 1. Ensure the db is backed up
 2. pull the latest code on the server
-3. run pip3 install if python packages have changed
-4. rebuild frontend if required (clear out old files)
-5. restart the gunicorn process with `systemctl`
+3. rebuild frontend if required (clear out old files)
+4. restart the process with `systemctl`
 
 
 ## Turning it back on
