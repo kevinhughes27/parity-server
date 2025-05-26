@@ -69,7 +69,7 @@ function GamesList() {
 
   const renderGame = (game: Game) => {
     return (
-      <NavLink key={game.id} to={`/${game.leagueId}/games/${game.id}`} className={classes.listItem}>
+      <NavLink key={game.id} to={`/${game.league_id}/games/${game.id}`} className={classes.listItem}>
         <ListItem divider button>
           <ListItemText style={{paddingRight: 60}}>
             { game.homeTeam } vs { game.awayTeam }
