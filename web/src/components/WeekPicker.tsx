@@ -1,19 +1,19 @@
-import React from 'react'
-import MenuItem from '@mui/material/MenuItem'
-import InputLabel from '@mui/material/InputLabel'
-import FormControl from '@mui/material/FormControl'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
-import { styled } from '@mui/material/styles'
-import InputBase from '@mui/material/InputBase'
-import { map } from 'lodash'
+import React from 'react';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { styled } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import { map } from 'lodash';
 
 const WeekInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   '& .MuiSelect-icon': {
-    color: theme.palette.common.white
-  }
+    color: theme.palette.common.white,
+  },
 }));
 
 interface WeekPickerProps {
@@ -30,18 +30,18 @@ function WeekPicker({ week, weeks, onChange, mobile }: WeekPickerProps) {
 
   const weekText = (num: number) => {
     if (num === 0) {
-      return 'All'
+      return 'All';
     } else {
-      return `Week ${num}`
+      return `Week ${num}`;
     }
   };
 
-  const weekOptions = map(weeks, (week) => {
+  const weekOptions = map(weeks, week => {
     return (
       <MenuItem key={week} value={week}>
         {weekText(week)}
       </MenuItem>
-    )
+    );
   });
 
   if (mobile) {
@@ -53,7 +53,8 @@ function WeekPicker({ week, weeks, onChange, mobile }: WeekPickerProps) {
           id="week-picker"
           value={week.toString()}
           label="Week"
-          onChange={handleChange}>
+          onChange={handleChange}
+        >
           {weekOptions}
         </Select>
       </FormControl>
@@ -61,15 +62,15 @@ function WeekPicker({ week, weeks, onChange, mobile }: WeekPickerProps) {
   } else {
     return (
       <Select
-        variant='standard'
+        variant="standard"
         value={week.toString()}
         onChange={handleChange}
-        input={<WeekInput/>}
+        input={<WeekInput />}
       >
         {weekOptions}
       </Select>
-    )
+    );
   }
 }
 
-export default WeekPicker
+export default WeekPicker;

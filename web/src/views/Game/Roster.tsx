@@ -1,23 +1,21 @@
-import React from 'react'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableRow from '@mui/material/TableRow'
+import React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
 
-const Roster = ({players}: {players: string[]}) => (
+const Roster = ({ players }: { players: string[] }) => (
   <Table size="small">
     <TableBody>
-      { players.map((player) => {
+      {players.map(player => {
         return (
           <TableRow key={player} hover>
-            <TableCell>
-              {player}
-            </TableCell>
+            <TableCell>{player}</TableCell>
           </TableRow>
-        )
+        );
       })}
     </TableBody>
   </Table>
-)
+);
 
-export default Roster
+export default Roster;

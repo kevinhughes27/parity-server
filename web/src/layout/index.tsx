@@ -9,31 +9,28 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import NavItems from './NavItems';
 
 const StyledAppBar = styled(AppBar)({
-  height: 64
+  height: 64,
 });
 
 const StyledTypography = styled(Typography)({
   flex: 1,
   color: 'white',
-  textAlign: 'center'
+  textAlign: 'center',
 });
 
 const StyledIconButton = styled(IconButton)({
   color: 'white',
   marginLeft: -12,
-  marginRight: 20
+  marginRight: 20,
 });
 
-function Layout(props: {children?: React.ReactNode}) {
+function Layout(props: { children?: React.ReactNode }) {
   const [sideNavOpen, setSideNavOpen] = useState(false);
 
   const TopBar = () => (
     <StyledAppBar position="static">
       <Toolbar>
-        <StyledIconButton
-          id="side-bar"
-          onClick={() => setSideNavOpen(true)}
-          size="large">
+        <StyledIconButton id="side-bar" onClick={() => setSideNavOpen(true)} size="large">
           <MenuIcon />
         </StyledIconButton>
 
@@ -52,7 +49,7 @@ function Layout(props: {children?: React.ReactNode}) {
       onOpen={() => setSideNavOpen(true)}
       onClose={() => setSideNavOpen(false)}
     >
-      <NavItems closeNav={() => setSideNavOpen(false)}/>
+      <NavItems closeNav={() => setSideNavOpen(false)} />
     </SwipeableDrawer>
   );
 

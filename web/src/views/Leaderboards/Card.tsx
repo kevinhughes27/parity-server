@@ -13,12 +13,12 @@ import { Stats } from '../../api';
 
 const StyledPaper = styled(Paper)({
   minWidth: 300,
-  margin: 20
+  margin: 20,
 });
 
 const StyledTypography = styled(Typography)({
   paddingLeft: 15,
-  paddingTop: 10
+  paddingTop: 10,
 });
 
 interface PlayerStat {
@@ -29,9 +29,9 @@ interface PlayerStat {
 function topPlayers(stats: Stats, stat: string, num: number): PlayerStat[] {
   const players = keys(stats).map(name => ({
     name,
-    value: stats[name][stat] as number
+    value: stats[name][stat] as number,
   }));
-  return sortBy(players, (player) => -player.value).slice(0, num);
+  return sortBy(players, player => -player.value).slice(0, num);
 }
 
 function hasNonZeroValues(stats: Stats, stat: string): boolean {
@@ -59,12 +59,10 @@ function Card({ stat, stats, money = false, num = 10 }: CardProps): JSX.Element 
 
   return (
     <StyledPaper>
-      <StyledTypography variant="h6">
-        {title}
-      </StyledTypography>
+      <StyledTypography variant="h6">{title}</StyledTypography>
       <Table size="small">
         <TableBody>
-          {map(players, (player) => (
+          {map(players, player => (
             <TableRow key={player.name} hover>
               <TableCell>{player.name}</TableCell>
               <TableCell align="right">{formatter(player.value)}</TableCell>

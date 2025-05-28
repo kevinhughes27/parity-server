@@ -1,10 +1,10 @@
-import React from 'react'
-import MUIDataTable from 'mui-datatables'
-import { map, keys } from 'lodash'
-import * as ls from 'local-storage'
-import { Stats } from '../api'
+import React from 'react';
+import MUIDataTable from 'mui-datatables';
+import { map, keys } from 'lodash';
+import * as ls from 'local-storage';
+import { Stats } from '../api';
 
-const storageKey = 'searchBar'
+const storageKey = 'searchBar';
 
 const columnsMeta = [
   {
@@ -12,8 +12,8 @@ const columnsMeta = [
     label: 'Name' as const,
     options: {
       filter: false,
-      searchable: true
-    }
+      searchable: true,
+    },
   },
   {
     name: 'team' as const,
@@ -24,10 +24,10 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: string) => {
           return `Team: ${v}`;
-        }
+        },
       },
-      customBodyRender: (value: string) => <div style={{fontSize: 10}}>{value}</div>
-    }
+      customBodyRender: (value: string) => <div style={{ fontSize: 10 }}>{value}</div>,
+    },
   },
   {
     name: 'goals' as const,
@@ -39,9 +39,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Goals: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'assists' as const,
@@ -53,9 +53,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Assists: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'second_assists' as const,
@@ -67,9 +67,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Second Assists: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'callahan' as const,
@@ -81,9 +81,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Callahans: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'd_blocks' as const,
@@ -95,9 +95,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `D Blocks: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'catches' as const,
@@ -109,9 +109,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Catches: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'completions' as const,
@@ -123,9 +123,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Completions: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'throw_aways' as const,
@@ -137,9 +137,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Throw Aways: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'threw_drops' as const,
@@ -151,9 +151,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Threw Drops: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'drops' as const,
@@ -165,9 +165,9 @@ const columnsMeta = [
       customFilterListOptions: {
         render: (v: number) => {
           return `Drops: ${v}`;
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     name: 'holds' as const,
@@ -176,7 +176,7 @@ const columnsMeta = [
       sort: false,
       searchable: false,
       filter: false,
-    }
+    },
   },
   {
     name: 'breaks' as const,
@@ -185,7 +185,7 @@ const columnsMeta = [
       sort: false,
       searchable: false,
       filter: false,
-    }
+    },
   },
   {
     name: 'pay' as const,
@@ -199,27 +199,26 @@ const columnsMeta = [
           style: 'currency',
           currency: 'USD',
           minimumFractionDigits: 0,
-          maximumFractionDigits: 0
+          maximumFractionDigits: 0,
         });
 
         return nf.format(value);
-      }
-    }
-  }
-]
+      },
+    },
+  },
+];
 
-
-function StatsTable(props: {stats: Stats}) {
-  const stats = props.stats
-  const statsArray = map(keys(stats), (k) => {
+function StatsTable(props: { stats: Stats }) {
+  const stats = props.stats;
+  const statsArray = map(keys(stats), k => {
     return {
       ...stats[k],
       name: k,
       holds: stats[k].o_points_for + '/' + (stats[k].o_points_against + stats[k].o_points_for),
-      breaks: stats[k].d_points_for + '/' + (stats[k].d_points_against + stats[k].d_points_for)
-    }
+      breaks: stats[k].d_points_for + '/' + (stats[k].d_points_against + stats[k].d_points_for),
+    };
   });
-  
+
   return (
     <div className="responsive-table">
       <MUIDataTable
@@ -231,13 +230,13 @@ function StatsTable(props: {stats: Stats}) {
           search: true,
           searchOpen: true,
           onSearchChange: (searchText: string | null) => {
-            ls.set<string>(storageKey, searchText || '')
+            ls.set<string>(storageKey, searchText || '');
           },
           searchText: ls.get<string>(storageKey) || '',
           sort: true,
           sortOrder: {
             name: 'pay',
-            direction: 'desc'
+            direction: 'desc',
           },
           selectableRows: 'none',
           pagination: false,
@@ -246,7 +245,7 @@ function StatsTable(props: {stats: Stats}) {
         }}
       />
     </div>
-  )
+  );
 }
 
 export default StatsTable;
