@@ -1,4 +1,4 @@
-import { map, sum, uniq } from 'lodash'
+import { map, sum, uniq } from 'lodash';
 
 interface IPlayer {
   name: string;
@@ -7,24 +7,21 @@ interface IPlayer {
 }
 
 export function calcSalaryLimits(weeks: number[], players: IPlayer[]) {
-  const numWeeks = weeks.length
-  const numTeams = uniq(players.map(p => p.team)).length
+  const numWeeks = weeks.length;
+  const numTeams = uniq(players.map(p => p.team)).length;
 
-  let salaryCapVariance = 0.01
+  let salaryCapVariance = 0.01;
 
-  if (numWeeks < 7)
-    salaryCapVariance = 0.02
-  else if (numWeeks < 9)
-    salaryCapVariance = 0.015
+  if (numWeeks < 7) salaryCapVariance = 0.02;
+  else if (numWeeks < 9) salaryCapVariance = 0.015;
 
-  const salaries = map(players,
-     (p) => p.salary)
+  const salaries = map(players, p => p.salary);
   const salaryAvg = sum(salaries) / numTeams;
 
   return {
     salaryCap: salaryAvg * (1 + salaryCapVariance),
     salaryFloor: salaryAvg * (1 - salaryCapVariance),
-  }
+  };
 }
 
 // hex gradient maker:
@@ -43,8 +40,8 @@ export const colors = [
   '#64B168',
   '#59AC5D',
   '#4EA652',
-  '#43A047'
-]
+  '#43A047',
+];
 
 export const underColors = [
   '#bbdefb',
@@ -59,7 +56,7 @@ export const underColors = [
   '#337bca',
   '#2470c5',
   '#1565c0',
-]
+];
 
 export const overColors = [
   '#FFCDD2',
@@ -74,35 +71,35 @@ export const overColors = [
   '#EB5E5C',
   '#E9524F',
   '#E74542',
-  '#E53935'
-]
+  '#E53935',
+];
 
 export const homeColors = [
-  "#90CAF9",
-  "#84BEF1",
-  "#78B2E9",
-  "#6CA6E1",
-  "#609AD9",
-  "#548ED1",
-  "#4882C9",
-  "#3C76C1",
-  "#306AB9",
-  "#245EB1",
-  "#1852A9",
-  "#0D47A1"
-]
+  '#90CAF9',
+  '#84BEF1',
+  '#78B2E9',
+  '#6CA6E1',
+  '#609AD9',
+  '#548ED1',
+  '#4882C9',
+  '#3C76C1',
+  '#306AB9',
+  '#245EB1',
+  '#1852A9',
+  '#0D47A1',
+];
 
 export const awayColors = [
-  "#FFCC80",
-  "#FDC374",
-  "#FCBA68",
-  "#FAB15D",
-  "#F9A951",
-  "#F7A045",
-  "#F6973A",
-  "#F48E2E",
-  "#F38622",
-  "#F17D17",
-  "#F0740B",
-  "#EF6C00"
-]
+  '#FFCC80',
+  '#FDC374',
+  '#FCBA68',
+  '#FAB15D',
+  '#F9A951',
+  '#F7A045',
+  '#F6973A',
+  '#F48E2E',
+  '#F38622',
+  '#F17D17',
+  '#F0740B',
+  '#EF6C00',
+];

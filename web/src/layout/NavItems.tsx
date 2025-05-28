@@ -1,23 +1,23 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import List from '@mui/material/List'
-import Divider from '@mui/material/Divider'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
-import { styled } from '@mui/material/styles'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { styled } from '@mui/material/styles';
 
 const StyledNavLink = styled(NavLink)({
   color: 'black',
-  textDecoration: 'none'
+  textDecoration: 'none',
 });
 
 const StyledAnchor = styled('a')({
   color: 'black',
-  textDecoration: 'none'
+  textDecoration: 'none',
 });
 
-function NavItems(props: {closeNav: () => void}) {
+function NavItems(props: { closeNav: () => void }) {
   const NavItem = (path: string, text: string) => (
     <StyledNavLink to={path} key={text} onClick={() => props.closeNav()}>
       <ListItemButton>
@@ -27,7 +27,7 @@ function NavItems(props: {closeNav: () => void}) {
   );
 
   const ExternalItem = (path: string, text: string) => (
-    <StyledAnchor href={path} target='_blank' rel='noopener noreferrer' key={text}>
+    <StyledAnchor href={path} target="_blank" rel="noopener noreferrer" key={text}>
       <ListItemButton>
         <ListItemText primary={text} />
       </ListItemButton>
@@ -37,21 +37,21 @@ function NavItems(props: {closeNav: () => void}) {
   return (
     <List>
       <ListItem>
-        <img src='/logo.png' style={{width: 240}} alt="logo"/>
+        <img src="/logo.png" style={{ width: 240 }} alt="logo" />
       </ListItem>
 
-      { NavItem('/games', "Games") }
-      { NavItem('/', "Player Stats") }
-      { NavItem('/leaderboards', "Leaderboards") }
-      { NavItem('/compare_players', "Compare Players") }
-      { NavItem('/team_dashboard', "Team Dashboard") }
+      {NavItem('/games', 'Games')}
+      {NavItem('/', 'Player Stats')}
+      {NavItem('/leaderboards', 'Leaderboards')}
+      {NavItem('/compare_players', 'Compare Players')}
+      {NavItem('/team_dashboard', 'Team Dashboard')}
 
       <Divider />
 
-      { ExternalItem("https://github.com/kevinhughes27/parity-server", "Source Code") }
-      { ExternalItem("/docs", "API Docs") }
+      {ExternalItem('https://github.com/kevinhughes27/parity-server', 'Source Code')}
+      {ExternalItem('/docs', 'API Docs')}
     </List>
-  )
+  );
 }
 
-export default NavItems
+export default NavItems;

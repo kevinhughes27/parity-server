@@ -7,21 +7,17 @@ const Container = styled(Box)({
   display: 'flex',
   height: '92vh',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
 });
 
 const Spinner = styled(CircularProgress)({
-  marginBottom: 80
+  marginBottom: 80,
 });
 
 function Loading() {
   return (
     <Container>
-      <Spinner
-        color="secondary"
-        size={70}
-        thickness={2}
-      />
+      <Spinner color="secondary" size={70} thickness={2} />
     </Container>
   );
 }

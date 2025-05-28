@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -6,21 +6,15 @@ import {
   BarElement,
   Tooltip,
   Legend,
-} from 'chart.js'
-import { Bar } from 'react-chartjs-2'
-import format from 'format-number'
-import { colors, underColors, overColors } from '../../helpers'
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import format from 'format-number';
+import { colors, underColors, overColors } from '../../helpers';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Tooltip,
-  Legend
-)
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 interface BarChartProps {
-  players: {name: string, salary: number}[]
+  players: { name: string; salary: number }[];
   maxSalary: number;
   overCap: boolean;
   underFloor: boolean;
@@ -38,56 +32,61 @@ export default function BarChart(props: BarChartProps) {
   }
 
   const data = {
-    labels: players.map (p => p.name),
-    datasets: [{
-      data: players.map (p => Math.abs(p.salary)),
-      backgroundColor: teamColors
-    }]
+    labels: players.map(p => p.name),
+    datasets: [
+      {
+        data: players.map(p => Math.abs(p.salary)),
+        backgroundColor: teamColors,
+      },
+    ],
   };
 
   const options = {
     plugins: {
       legend: {
-        display: false
+        display: false,
       },
       tooltips: {
         callbacks: {
-          label: (tooltipItem: { datasetIndex: number; index: number }, data: { datasets: { data: number[] }[] }) => {
-            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
-            const salary = Math.round(value)
-            const text = format({prefix: '$'})(salary)
-            return text
-          }
-        }
+          label: (
+            tooltipItem: { datasetIndex: number; index: number },
+            data: { datasets: { data: number[] }[] }
+          ) => {
+            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+            const salary = Math.round(value);
+            const text = format({ prefix: '$' })(salary);
+            return text;
+          },
+        },
       },
     },
     scales: {
       x: {
         ticks: {
-          autoSkip: false
-        }
+          autoSkip: false,
+        },
       },
       y: {
         ticks: {
           min: 0,
           max: maxSalary,
           callback: (data: number) => {
-            const value = Math.round(data)
-            const text = format({prefix: '$'})(value)
-            return  text
-          }
-        }
-      }
-    }
-  }
+            const value = Math.round(data);
+            const text = format({ prefix: '$' })(value);
+            return text;
+          },
+        },
+      },
+    },
+  };
 
   const chartStyle = {
-    marginTop: 20
-  }
+    marginTop: 20,
+  };
 
   return (
     <div style={chartStyle}>
-      <Bar data={data} height={340} options={options}/>
+      <Bar data={data} height={340} options={options} />
     </div>
-  )
+  );
 }

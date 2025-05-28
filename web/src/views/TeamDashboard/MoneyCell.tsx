@@ -1,13 +1,11 @@
-import React from 'react'
-import format from 'format-number'
+import React from 'react';
+import format from 'format-number';
 
-const MoneyCell = ({data}: {data: number}) => {
-  const value = Math.round(data)
-  const text = format({prefix: '$'})(value)
+const MoneyCell = ({ data }: { data: number }) => {
+  const value = Math.round(data);
+  const text = format({ prefix: '$' })(value);
 
-  return (
-    <span>{text}</span>
-  )
-}
+  return <span>{text}</span>;
+};
 
-export default MoneyCell
+export default MoneyCell;

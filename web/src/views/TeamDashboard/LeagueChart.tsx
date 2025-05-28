@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,22 +8,15 @@ import {
   Legend,
   TooltipPositionerMap,
   Scale,
-  CoreScaleOptions
-} from 'chart.js'
-import { Bar } from 'react-chartjs-2'
-import format from 'format-number'
-import annotationPlugin from 'chartjs-plugin-annotation'
-import { flatten, sortBy, map, sum } from 'lodash'
-import { colors, underColors, overColors } from '../../helpers'
+  CoreScaleOptions,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import format from 'format-number';
+import annotationPlugin from 'chartjs-plugin-annotation';
+import { flatten, sortBy, map, sum } from 'lodash';
+import { colors, underColors, overColors } from '../../helpers';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Tooltip,
-  Legend,
-  annotationPlugin
-)
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, annotationPlugin);
 
 interface Player {
   name: string;
@@ -41,7 +34,7 @@ interface LeagueChartProps {
 interface ChartDataset {
   label: string;
   stack: string;
-  data: Array<{x: string; y: number}>;
+  data: Array<{ x: string; y: number }>;
   backgroundColor: string;
   hoverBackgroundColor: string;
   categoryPercentage: number;
@@ -49,36 +42,41 @@ interface ChartDataset {
 }
 
 export default function Chart(props: LeagueChartProps): React.ReactElement {
-  const { players, teamNames, salaryCap, salaryFloor } = props
+  const { players, teamNames, salaryCap, salaryFloor } = props;
 
   const data = {
     labels: teamNames,
-    datasets: flatten(teamNames.map(team => {
-      const teamPlayers = sortBy(players.filter((p) => p.team === team), (p) => p.salary)
+    datasets: flatten(
+      teamNames.map(team => {
+        const teamPlayers = sortBy(
+          players.filter(p => p.team === team),
+          p => p.salary
+        );
 
-      return teamPlayers.map((player, idx) => {
-        const teamSalary = sum(map(teamPlayers, (p) => p.salary))
+        return teamPlayers.map((player, idx) => {
+          const teamSalary = sum(map(teamPlayers, p => p.salary));
 
-        let teamColors = colors;
+          let teamColors = colors;
 
-        if (teamSalary > salaryCap) {
-          teamColors = overColors;
-        } else if (teamSalary < salaryFloor) {
-          teamColors = underColors;
-        }
+          if (teamSalary > salaryCap) {
+            teamColors = overColors;
+          } else if (teamSalary < salaryFloor) {
+            teamColors = underColors;
+          }
 
-        return {
-          label: player.name,
-          stack: team,
-          data: [{x: team, y: player.salary}],
-          backgroundColor: teamColors[idx],
-          hoverBackgroundColor: teamColors[idx],
-          categoryPercentage: 0.2,
-          barPercentage: 24.0
-        } as ChartDataset
+          return {
+            label: player.name,
+            stack: team,
+            data: [{ x: team, y: player.salary }],
+            backgroundColor: teamColors[idx],
+            hoverBackgroundColor: teamColors[idx],
+            categoryPercentage: 0.2,
+            barPercentage: 24.0,
+          } as ChartDataset;
+        });
       })
-    }))
-  }
+    ),
+  };
 
   const options = {
     scales: {
@@ -90,32 +88,32 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
         ticks: {
           min: 0,
           suggestedMax: Math.round(salaryCap * 1.1),
-          callback: function(this: Scale<CoreScaleOptions>, tickValue: number | string) {
-            return format({prefix: '$'})(Math.round(Number(tickValue)))
-          }
-        }
-      }
+          callback: function (this: Scale<CoreScaleOptions>, tickValue: number | string) {
+            return format({ prefix: '$' })(Math.round(Number(tickValue)));
+          },
+        },
+      },
     },
     animation: {
-      duration: 0
+      duration: 0,
     },
     plugins: {
       legend: {
-        display: false
+        display: false,
       },
       tooltip: {
         position: 'nearest' as keyof TooltipPositionerMap,
         callbacks: {
           title: (items: { datasetIndex: number }[]) => {
-            const item = data.datasets[items[0].datasetIndex]
-            return item.stack
+            const item = data.datasets[items[0].datasetIndex];
+            return item.stack;
           },
           label: (item: { datasetIndex: number; dataIndex: number }) => {
-            const dataset = data.datasets[item.datasetIndex]
-            const value = dataset.data[item.dataIndex]
-            return `${dataset.label} ${format({prefix: '$'})(Math.round(value.y))}`
-          }
-        }
+            const dataset = data.datasets[item.datasetIndex];
+            const value = dataset.data[item.dataIndex];
+            return `${dataset.label} ${format({ prefix: '$' })(Math.round(value.y))}`;
+          },
+        },
       },
       annotation: {
         annotations: {
@@ -133,8 +131,8 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
               color: 'black',
               padding: 4,
               xAdjust: 0,
-              yAdjust: -14
-            }
+              yAdjust: -14,
+            },
           },
           floor: {
             type: 'line' as const,
@@ -150,22 +148,22 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
               color: 'black',
               padding: 4,
               xAdjust: 0,
-              yAdjust: 14
-            }
-          }
-        }
-      }
-    }
-  }
+              yAdjust: 14,
+            },
+          },
+        },
+      },
+    },
+  };
 
   const chartStyle = {
     marginTop: 20,
-    position: 'relative' as const
-  }
+    position: 'relative' as const,
+  };
 
   return (
     <div style={chartStyle}>
-      <Bar data={data} height={300} redraw={true} options={options}/>
+      <Bar data={data} height={300} redraw={true} options={options} />
     </div>
-  )
+  );
 }
