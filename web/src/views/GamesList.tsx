@@ -1,30 +1,29 @@
 import React, { useState } from 'react'
-import makeStyles from '@mui/styles/makeStyles';
 import { NavLink } from 'react-router-dom'
 import Layout from '../layout/'
 import Loading from '../components/Loading'
 import LeaguePicker from '../components/LeaguePicker'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction'
+import { styled } from '@mui/material/styles'
 import { groupBy } from 'lodash'
 import { useLeague } from '../hooks/league'
 import { fetchGames, Game } from '../api'
 
-const useStyles = makeStyles((theme) => ({
-  list: {
-    maxWidth: 800,
-    margin: 'auto'
-  },
-  listItem: {
-    color: "#26a69a",
-    textDecoration: "none"
-  }
-}));
+const StyledList = styled(List)({
+  maxWidth: 800,
+  margin: 'auto'
+});
+
+const StyledNavLink = styled(NavLink)({
+  color: "#26a69a",
+  textDecoration: "none"
+});
 
 function GamesList() {
-  const classes = useStyles();
   const [loading, setLoading] = useState(true)
   const [games, setGames] = useState<Game[]>([])
   const [league] = useLeague()
@@ -69,16 +68,16 @@ function GamesList() {
 
   const renderGame = (game: Game) => {
     return (
-      <NavLink key={game.id} to={`/${game.league_id}/games/${game.id}`} className={classes.listItem}>
-        <ListItem divider button>
+      <StyledNavLink key={game.id} to={`/${game.league_id}/games/${game.id}`}>
+        <ListItemButton divider>
           <ListItemText style={{paddingRight: 60}}>
             { game.homeTeam } vs { game.awayTeam }
             <ListItemSecondaryAction>
               { game.homeScore } - { game.awayScore }
             </ListItemSecondaryAction>
           </ListItemText>
-        </ListItem>
-      </NavLink>
+        </ListItemButton>
+      </StyledNavLink>
     )
   }
 
@@ -86,9 +85,9 @@ function GamesList() {
     if (loading) return (<Loading />)
 
     return (
-      <List className={classes.list}>
+      <StyledList>
         { renderGames(games) }
-      </List>
+      </StyledList>
     )
   }
 

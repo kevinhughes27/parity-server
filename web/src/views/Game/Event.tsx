@@ -1,68 +1,60 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrophy, faShieldAlt, faLevelDownAlt, faMeteor } from '@fortawesome/free-solid-svg-icons'
 import { PointEvent } from '../../api'
+import BoltIcon from '@mui/icons-material/Bolt'
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents'
+import ShieldIcon from '@mui/icons-material/Shield'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 
-export default function Event(props: {event: PointEvent, isCallahan: boolean}) {
-  const { event, isCallahan } = props
+export default function Event(props: {event: PointEvent, isCallahan?: boolean}) {
+  const event = props.event
+  const isCallahan = props.isCallahan
 
-  if (event.type === 'PULL') {
+  if (isCallahan) {
     return (
       <span>
-        {event.firstActor} pulled
+        <BoltIcon fontSize="small" style={{marginRight: 5}}/> {event.firstActor} got a Callahan!
       </span>
     )
   }
 
-  if (event.type === 'PASS') {
-    return (
-      <span>
-        {event.firstActor} passed to {event.secondActor}
-      </span>
-    )
-  }
-
-  if (event.type === 'POINT') {
-
-    if (isCallahan){
+  switch (event.type) {
+    case 'POINT':
       return (
         <span>
-          <FontAwesomeIcon icon={faMeteor} style={{marginRight: 5}}/> {event.firstActor} got a Callahan!
+          <EmojiEventsIcon fontSize="small" style={{marginRight: 5}}/> {event.firstActor} scored!
         </span>
       )
-    } else {
+    case 'DEFENSE':
       return (
         <span>
-          <FontAwesomeIcon icon={faTrophy} style={{marginRight: 5}}/> {event.firstActor} scored!
+          <ShieldIcon fontSize="small" style={{marginRight: 5}}/> {event.firstActor} got a block
         </span>
       )
-    }
-    
+    case 'THROWAWAY':
+      return (
+        <span>
+          <ArrowDownwardIcon fontSize="small" style={{marginRight: 5}}/> {event.firstActor} threw it away
+        </span>
+      )
+    case 'DROP':
+      return (
+        <span>
+          <ArrowDownwardIcon fontSize="small" style={{marginRight: 5}}/> {event.firstActor} dropped it
+        </span>
+      )
+    case 'PASS':
+      return (
+        <span>
+          {event.firstActor} passed to {event.secondActor}
+        </span>
+      )
+    case 'PULL':
+      return (
+        <span>
+          {event.firstActor} pulled
+        </span>
+      )
+    default:
+      return null
   }
-
-  if (event.type === 'DEFENSE') {
-    return (
-      <span>
-        <FontAwesomeIcon icon={faShieldAlt} style={{marginRight: 5}}/> {event.firstActor} got a block
-      </span>
-    )
-  }
-
-  if (event.type === 'THROWAWAY') {
-    return (
-      <span>
-        <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} threw it away
-      </span>
-    )
-  }
-
-  if (event.type === 'DROP') {
-    return (
-      <span>
-        <FontAwesomeIcon icon={faLevelDownAlt} style={{marginRight: 5}}/> {event.firstActor} dropped it
-      </span>
-    )
-  }
-
-  return null;
 }

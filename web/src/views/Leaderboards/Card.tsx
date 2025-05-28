@@ -1,66 +1,74 @@
-import React from 'react'
-import makeStyles from '@mui/styles/makeStyles';
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableRow from '@mui/material/TableRow'
-import capitalize from 'capitalize'
-import format from 'format-number'
-import { map, keys, sortBy } from 'lodash'
-import { Stats, StatLine } from '../../api'
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+import capitalize from 'capitalize';
+import format from 'format-number';
+import { map, keys, sortBy, sum } from 'lodash';
+import { Stats, StatLine } from '../../api';
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    minWidth: 300,
-    margin: 20
-  },
-  title: {
-    paddingLeft: 15,
-    paddingTop: 10
-  }
-}));
+const StyledPaper = styled(Paper)({
+  minWidth: 300,
+  margin: 20
+});
 
-function topPlayers(stats: StatLine[], stat: string, num: number) {
-  return sortBy(stats, (p) => { return -p[stat] }).slice(0, num).filter((p) => { return Number(p[stat]) > 0 })
+const StyledTypography = styled(Typography)({
+  paddingLeft: 15,
+  paddingTop: 10
+});
+
+function topPlayers(stats: Stats, stat: string, num: number) {
+  const players = keys(stats).map(name => ({
+    name,
+    value: stats[name][stat] as number
+  }));
+  return sortBy(players, (player) => -player.value).slice(0, num);
 }
 
-function Card(props: {stat: string, stats: Stats, money?: boolean}) {
-  const classes = useStyles();
-  const { stat, stats, money } = props
+function hasNonZeroValues(stats: Stats, stat: string) {
+  const values = keys(stats).map(name => stats[name][stat] as number);
+  return sum(values) > 0;
+}
 
-  const statsArray = map(keys(stats), (k) => {
-    return {...stats[k], name: k}
-  })
+interface CardProps {
+  stat: string;
+  stats: Stats;
+  money?: boolean;
+  num?: number;
+}
 
-  const players = topPlayers(statsArray, stat, 10)
-  const statTitle = capitalize.words((stat === "callahan" ? "callahans" : stat).replace(/_/g, ' '))
+function Card({ stat, stats, money = false, num = 10 }: CardProps) {
+  // Don't render if all values are zero
+  if (!hasNonZeroValues(stats, stat)) {
+    return null;
+  }
+
+  const players = topPlayers(stats, stat, num);
+  const formatter = money ? format({ prefix: '$' }) : (val: number) => val.toString();
+
+  const title = capitalize(stat.replace(/_/g, ' '));
 
   return (
-    <Paper key={stat} className={classes.paper}>
-      <Typography variant="h5" component="h3" gutterBottom className={classes.title}>
-        {statTitle}
-      </Typography>
+    <StyledPaper>
+      <StyledTypography variant="h6">
+        {title}
+      </StyledTypography>
       <Table size="small">
         <TableBody>
-          { players.length > 0 ? map(players, (player) => {
-            let value = player[stat]
-            if (money) {
-              value = format({prefix: '$'})(value as number)
-            }
-
-            return (
-              <TableRow key={player['name']} hover>
-                <TableCell>{player['name']}</TableCell>
-                <TableCell>{value}</TableCell>
-              </TableRow>
-            )
-          }): <TableRow><TableCell>"¯\_(ツ)_/¯"</TableCell></TableRow>}
+          {map(players, (player) => (
+            <TableRow key={player.name} hover>
+              <TableCell>{player.name}</TableCell>
+              <TableCell align="right">{formatter(player.value)}</TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
-    </Paper>
-  )
+    </StyledPaper>
+  );
 }
 
-export default Card
+export default Card;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Collapse from '@mui/material/Collapse'
 import ExpandLess from '@mui/icons-material/ExpandLess'
@@ -9,9 +10,8 @@ import Typography from '@mui/material/Typography'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBolt } from '@fortawesome/free-solid-svg-icons'
-import format from 'date-fns/format'
+import BoltIcon from '@mui/icons-material/Bolt'
+import { format } from 'date-fns'
 import Event from './Event'
 import { last, includes } from 'lodash'
 import { homeColors, awayColors } from '../../helpers'
@@ -105,7 +105,7 @@ export default function Points(props: {game: Game}) {
       : 'Point'
 
     const iconJsx = breakPoint
-      ? (<FontAwesomeIcon icon={faBolt}/>)
+      ? <BoltIcon fontSize="small" />
       : null
 
     const whoCopy = thrower
@@ -133,7 +133,7 @@ export default function Points(props: {game: Game}) {
 
     const pointsJsx = (
       <React.Fragment key={idx}>
-        <ListItem button onClick={() => handleClick(isExpanded, idx)}>
+        <ListItemButton onClick={() => handleClick(isExpanded, idx)}>
           <ListItemText>
             <div style={{display: 'flex', flex: 1, justifyContent: 'space-between'}}>
               <span>{iconJsx} {whatCopy} {teamJsx} {whoCopy} {durationCopy}</span>
@@ -141,7 +141,7 @@ export default function Points(props: {game: Game}) {
             </div>
           </ListItemText>
           {isExpanded ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
+        </ListItemButton>
 
         <Collapse in={isExpanded} timeout="auto" unmountOnExit>
           <List style={{paddingLeft: 20}}>
@@ -201,7 +201,7 @@ export default function Points(props: {game: Game}) {
             style={{ width: 200, marginTop: 8 }}
             onChange={playerFocused}
             renderInput={params => (
-              <TextField {...params} fullWidth style={{height: 30}} />
+              <TextField variant="standard" {...params} fullWidth style={{height: 30}} />
             )}
           />
         </div>
@@ -216,5 +216,5 @@ export default function Points(props: {game: Game}) {
         })}
       </List>
     </React.Fragment>
-  )
+  );
 }

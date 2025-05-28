@@ -6,6 +6,8 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Typography, CircularProgress, Box } from '@mui/material'
+import StarIcon from '@mui/icons-material/Star'
 
 import Team from './Team'
 import Points from './Points'
@@ -87,6 +89,17 @@ export default function GameShow() {
             />
           </Grid>
         </Grid>
+        <Typography variant="h4" style={{marginBottom: 20}}>
+          {game.homeTeamRanked
+            ? <span><StarIcon fontSize="small" /> {game.homeTeam}</span>
+            : game.homeTeam
+          }
+          {' vs '}
+          {game.awayTeamRanked
+            ? <span><StarIcon fontSize="small" /> {game.awayTeam}</span>
+            : game.awayTeam
+          }
+        </Typography>
         <Points game={game} />
       </Container>
     )

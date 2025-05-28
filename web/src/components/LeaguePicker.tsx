@@ -9,21 +9,21 @@ import { useLeague } from '../hooks/league'
 import { leagues } from '../api'
 import { map } from 'lodash'
 
-const LeagueInput = styled(InputBase)(() => ({
+const LeagueInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
-    color: 'white'
+    color: theme.palette.common.white
   },
   '& .MuiSelect-icon': {
-    color: 'white'
+    color: theme.palette.common.white
   }
 }));
 
-function LeaguePicker(
-  props: {
-    onChange?: (league: string) => void;
-    mobile: boolean
-  }
-) {
+interface LeaguePickerProps {
+  onChange?: (league: string) => void;
+  mobile: boolean;
+}
+
+function LeaguePicker({ onChange, mobile }: LeaguePickerProps) {
   const [league, setLeague] = useLeague();
 
   const leagueOptions = map(leagues, (league) => {
@@ -34,14 +34,14 @@ function LeaguePicker(
     )
   });
 
-  const onChange = (event: SelectChangeEvent) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setLeague(event.target.value as string);
-    props.onChange && props.onChange(event.target.value as string);
+    onChange?.(event.target.value as string);
   };
 
   if (leagues.length === 1) return null
 
-  if (props.mobile) {
+  if (mobile) {
     return (
       <FormControl fullWidth>
         <InputLabel id="league-picker-label">League</InputLabel>
@@ -50,19 +50,18 @@ function LeaguePicker(
           id="league-picker"
           value={league}
           label="League"
-          onChange={onChange}
-        >
+          onChange={handleChange}>
           {leagueOptions}
         </Select>
       </FormControl>
-    )
+    );
   } else {
     return (
       <div style={{paddingRight: 20}}>
         <Select
           variant='standard'
           value={league}
-          onChange={onChange}
+          onChange={handleChange}
           input={<LeagueInput />}
         >
           {leagueOptions}
