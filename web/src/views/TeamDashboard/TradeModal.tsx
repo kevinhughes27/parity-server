@@ -71,13 +71,14 @@ export default function TradeModal(props: TradeModalProps) {
                 typeof option === 'string' ? option : option.name
               }
               renderOption={(props, option) => {
+                const { key, ...rest } = props;
                 const diff = option.salary - playerA.salary;
                 const color = diff >= 0 ? '#00e676' : '#f44336';
                 const prefix = diff >= 0 ? '+ $' : '- $';
                 const value = Math.abs(diff);
 
                 return (
-                  <li {...props}>
+                  <li key={key} {...rest}>
                     <span style={optionStyle}>
                       <span>{option.name}</span>
                       <span style={{ color, paddingRight: 30 }}>{format({ prefix })(value)}</span>
