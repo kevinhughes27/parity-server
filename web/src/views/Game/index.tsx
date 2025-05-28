@@ -76,7 +76,7 @@ export default function GameShow() {
     return (
       <Container style={{marginTop: 20}}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Team
               teamName={homeJsx}
               score={game.homeScore}
@@ -87,7 +87,7 @@ export default function GameShow() {
               statMaxes={statMaxes}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Team
               teamName={awayJsx}
               score={game.awayScore}
@@ -136,22 +136,22 @@ function Game({ game }: GameProps) {
   return (
     <StyledPaper>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Link to={`/game/${game.id}`}>
             <Typography variant="h6">
               {game.homeTeam} vs {game.awayTeam}
             </Typography>
           </Link>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid size={6}>
               <TeamName>
                 {game.homeTeam}
                 {game.homeScore > game.awayScore && <StarIcon fontSize="small" />}
               </TeamName>
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={6}>
               <TeamName>
                 {game.awayTeam}
                 {game.awayScore > game.homeScore && <StarIcon fontSize="small" />}
@@ -159,7 +159,7 @@ function Game({ game }: GameProps) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Typography variant="body2" color="textSecondary">
             {game.date}
           </Typography>
