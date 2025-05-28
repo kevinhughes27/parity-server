@@ -52,7 +52,7 @@ export default function BarChart(props: BarChartProps) {
       },
       tooltips: {
         callbacks: {
-          label: (tooltipItem: any, data: any) => {
+          label: (tooltipItem: { datasetIndex: number; index: number }, data: { datasets: { data: number[] }[] }) => {
             const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
             const salary = Math.round(value)
             const text = format({prefix: '$'})(salary)
@@ -71,7 +71,7 @@ export default function BarChart(props: BarChartProps) {
         ticks: {
           min: 0,
           max: maxSalary,
-          callback: (data: any) => {
+          callback: (data: number) => {
             const value = Math.round(data)
             const text = format({prefix: '$'})(value)
             return  text

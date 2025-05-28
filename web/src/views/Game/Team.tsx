@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, ReactNode } from 'react'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper'
 import Tabs from '@mui/material/Tabs'
@@ -9,13 +9,13 @@ import Chart from './Chart'
 import { Stats, Point } from '../../api'
 
 interface TeamProps {
-  teamName: any;
+  teamName: ReactNode;
   score: number;
   players: string[];
   stats: Stats;
   points: Point[];
   colors: string[];
-  statMaxes: any;
+  statMaxes: Record<string, number>;
 }
 
 export default function Team(props: TeamProps) {

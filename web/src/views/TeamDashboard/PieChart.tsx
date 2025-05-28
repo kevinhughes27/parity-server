@@ -38,13 +38,11 @@ export default function PieChart(props: PieChartProps) {
       },
       tooltips: {
         callbacks: {
-          label: (tooltipItem: any, data: any) => {
+          label: (tooltipItem: { datasetIndex: number; index: number }, data: { datasets: { data: number[]; label: string[] }[]; labels: string[] }) => {
             const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
             const label = data.labels[tooltipItem.index]
-
             const salary = Math.round(value)
             const text = format({prefix: '$'})(salary)
-
             return label + ' ' + text
           }
         }

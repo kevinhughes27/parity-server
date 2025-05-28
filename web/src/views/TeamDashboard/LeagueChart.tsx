@@ -48,7 +48,7 @@ interface ChartDataset {
   barPercentage: number;
 }
 
-export default function Chart(props: LeagueChartProps): JSX.Element {
+export default function Chart(props: LeagueChartProps): React.ReactElement {
   const { players, teamNames, salaryCap, salaryFloor } = props
 
   const data = {
@@ -106,11 +106,11 @@ export default function Chart(props: LeagueChartProps): JSX.Element {
       tooltip: {
         position: 'nearest' as keyof TooltipPositionerMap,
         callbacks: {
-          title: (items: any[]) => {
+          title: (items: { datasetIndex: number }[]) => {
             const item = data.datasets[items[0].datasetIndex]
             return item.stack
           },
-          label: (item: any) => {
+          label: (item: { datasetIndex: number; dataIndex: number }) => {
             const dataset = data.datasets[item.datasetIndex]
             const value = dataset.data[item.dataIndex]
             return `${dataset.label} ${format({prefix: '$'})(Math.round(value.y))}`

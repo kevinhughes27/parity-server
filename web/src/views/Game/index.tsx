@@ -36,15 +36,19 @@ export default function GameShow() {
   const [game, setGame] = useState<Game|null>(null)
 
   React.useEffect(() => {
+    if (!leagueId || !gameId) return;
     const fetchData = async () => {
       setLoading(true)
       const game = await fetchGame(gameId, leagueId)
       setGame(game)
       setLoading(false)
     }
-
     fetchData()
   }, [leagueId, gameId])
+
+  if (!leagueId || !gameId) {
+    return <div>Invalid game parameters</div>
+  }
 
   const Main = () => {
     if (loading || game == null) return (<Loading />)

@@ -22,7 +22,7 @@ const columnsMeta = [
       searchable: true,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: string) => {
           return `Team: ${v}`;
         }
       },
@@ -37,7 +37,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Goals: ${v}`;
         }
       }
@@ -51,7 +51,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Assists: ${v}`;
         }
       }
@@ -65,7 +65,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Second Assists: ${v}`;
         }
       }
@@ -79,7 +79,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Callahans: ${v}`;
         }
       }
@@ -93,7 +93,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `D Blocks: ${v}`;
         }
       }
@@ -107,7 +107,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Catches: ${v}`;
         }
       }
@@ -121,7 +121,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Completions: ${v}`;
         }
       }
@@ -135,7 +135,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Throw Aways: ${v}`;
         }
       }
@@ -149,7 +149,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Threw Drops: ${v}`;
         }
       }
@@ -163,7 +163,7 @@ const columnsMeta = [
       searchable: false,
       filter: true,
       customFilterListOptions: {
-        render: (v: any) => {
+        render: (v: number) => {
           return `Drops: ${v}`;
         }
       }
