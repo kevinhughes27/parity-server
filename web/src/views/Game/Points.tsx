@@ -43,10 +43,10 @@ export default function Points(props: {game: Game}) {
     }
   }
 
-  const playerFocused = (_event: React.ChangeEvent<{}>, player: string | null) => {
+  const playerFocused = (_event: React.SyntheticEvent, player: string | null) => {
     setFocus(player as string)
 
-    let playerPoints: number[] = []
+    const playerPoints: number[] = []
 
     points.forEach((p, idx) => {
       if (includes(JSON.stringify(p.events), player)) {
@@ -149,7 +149,7 @@ export default function Points(props: {game: Game}) {
               const highlight = ev.firstActor === focus || ev.secondActor === focus
               const mute = focus && !highlight
 
-              const styles: any = {}
+              const styles: Record<string, string | number> = {}
 
               if (highlight) {
                 styles['fontWeight'] = 'bold'

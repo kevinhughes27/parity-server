@@ -4,10 +4,8 @@ import Layout from '../../layout/'
 import Loading from '../../components/Loading'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-import { Typography, CircularProgress, Box } from '@mui/material'
+import { Typography } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star'
-import CelebrationIcon from '@mui/icons-material/Celebration'
-import ReplyIcon from '@mui/icons-material/Reply'
 import { styled } from '@mui/material/styles'
 import { Link } from 'react-router-dom'
 import Paper from '@mui/material/Paper'
@@ -30,10 +28,9 @@ const TeamName = styled(Typography)({
 })
 
 export default function GameShow() {
-  let params = useParams();
-
-  const leagueId = params.leagueId as string
-  const gameId = params.gameId as string
+  const params = useParams<{ leagueId: string; gameId: string }>();
+  const leagueId = params.leagueId
+  const gameId = params.gameId
 
   const [loading, setLoading] = useState(true)
   const [game, setGame] = useState<Game|null>(null)
@@ -147,11 +144,6 @@ function Game({ game }: GameProps) {
               </TeamName>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid size={12}>
-          <Typography variant="body2" color="textSecondary">
-            {game.date}
-          </Typography>
         </Grid>
       </Grid>
     </StyledPaper>

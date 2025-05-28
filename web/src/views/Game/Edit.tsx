@@ -7,7 +7,7 @@ import { fetchGame, Game } from '../../api'
 
 
 export default function GameEdit() {
-  let params = useParams();
+  const params = useParams();
 
   const leagueId = params.leagueId as string
   const gameId = params.gameId as string
