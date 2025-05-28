@@ -6,6 +6,10 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  TooltipPositionerMap,
+  Scale,
+  CoreScaleOptions,
+  Tick
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import format from 'format-number'
@@ -71,10 +75,8 @@ export default function Chart(props: LeagueChartProps) {
         ticks: {
           min: 0,
           suggestedMax: Math.round(salaryCap * 1.1),
-          callback: (data: any) => {
-            const value = Math.round(data)
-            const text = format({prefix: '$'})(value)
-            return  text
+          callback: function(this: Scale<CoreScaleOptions>, tickValue: number | string) {
+            return format({prefix: '$'})(Math.round(Number(tickValue)))
           }
         }
       }
@@ -86,49 +88,54 @@ export default function Chart(props: LeagueChartProps) {
       legend: {
         display: false
       },
-      tooltips: {
+      tooltip: {
+        position: 'nearest' as keyof TooltipPositionerMap,
         callbacks: {
-          title: (tooltipItem: any, data: any) => {
-            const item = data.datasets[tooltipItem[0].datasetIndex]
+          title: (items: any[]) => {
+            const item = data.datasets[items[0].datasetIndex]
             return item.stack
           },
-          label: (tooltipItem: any, data: any) => {
-            const item = data.datasets[tooltipItem.datasetIndex]
-            const value = item.data[tooltipItem.index]
-
-            const salary = Math.round(value)
-            const text = format({prefix: '$'})(salary)
-
-            return item.label + ' ' + text
+          label: (item: any) => {
+            const dataset = data.datasets[item.datasetIndex]
+            const value = dataset.data[item.dataIndex]
+            return `${dataset.label} ${format({prefix: '$'})(Math.round(value.y))}`
           }
         }
       },
       annotation: {
         annotations: {
           cap: {
-            type: 'line' as 'line',
-            scaleID: 'y',
-            value: salaryCap,
+            type: 'line' as const,
+            yMin: salaryCap,
+            yMax: salaryCap,
             borderColor: 'black',
             borderWidth: 2,
             label: {
-              position: 'end' as 'end',
-              backgroundColor: 'black',
+              display: true,
               content: 'Salary Cap',
-              enabled: true
+              position: 'end' as const,
+              backgroundColor: 'white',
+              color: 'black',
+              padding: 4,
+              xAdjust: 0,
+              yAdjust: -10
             }
           },
           floor: {
-            type: 'line' as 'line',
-            scaleID: 'y',
-            value: salaryFloor,
+            type: 'line' as const,
+            yMin: salaryFloor,
+            yMax: salaryFloor,
             borderColor: 'black',
             borderWidth: 2,
             label: {
-              position: 'start' as 'start',
-              backgroundColor: 'black',
+              display: true,
               content: 'Salary Floor',
-              enabled: true
+              position: 'start' as const,
+              backgroundColor: 'white',
+              color: 'black',
+              padding: 4,
+              xAdjust: 0,
+              yAdjust: 10
             }
           }
         }
@@ -137,7 +144,8 @@ export default function Chart(props: LeagueChartProps) {
   }
 
   const chartStyle = {
-    marginTop: 20
+    marginTop: 20,
+    position: 'relative' as const
   }
 
   return (
