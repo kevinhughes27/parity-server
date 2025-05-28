@@ -26,7 +26,7 @@ ChartJS.register(
 
 interface BarChartProps {
   stats: Stats;
-  statMaxes: any;
+  statMaxes: Record<string, number>;
   colors: string[];
 }
 
@@ -39,12 +39,12 @@ function BarChart(props: BarChartProps) {
     return {...props.stats[k], name: k}
   })
 
-  const sortedPlayers = sortBy(players, (p: any) => -p[stat])
+  const sortedPlayers = sortBy(players, (p: { [key: string]: number | string }) => -(p[stat] as number))
 
   const data = {
     labels: sortedPlayers.map (p => p.name),
     datasets: [{
-      data: sortedPlayers.map ((p: any) => p[stat]),
+      data: sortedPlayers.map ((p: { [key: string]: number | string }) => p[stat] as number),
       backgroundColor: props.colors
     }]
   };
@@ -59,7 +59,7 @@ function BarChart(props: BarChartProps) {
       },
       tooltips: {
         callbacks: {
-          label: (tooltipItem: any, data: any) => {
+          label: (tooltipItem: { datasetIndex: number; index: number }, data: { datasets: { data: number[] }[] }) => {
             return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
           }
         }
