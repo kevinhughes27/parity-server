@@ -4,20 +4,30 @@ import Layout from '../../layout/'
 import Loading from '../../components/Loading'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Typography, CircularProgress, Box } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star'
+import CelebrationIcon from '@mui/icons-material/Celebration'
+import ReplyIcon from '@mui/icons-material/Reply'
+import { styled } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
+import Paper from '@mui/material/Paper'
 
 import Team from './Team'
 import Points from './Points'
-import { fetchGame, Game } from '../../api'
+import { fetchGame } from '../../api'
+import type { Game } from '../../api'
 import { homeColors, awayColors } from '../../helpers'
 import { pickBy, includes, forIn } from 'lodash'
 
 interface StatMaxes {
   [key: string]: number
 }
+
+const TeamName = styled(Typography)({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '4px'
+})
 
 export default function GameShow() {
   let params = useParams();
@@ -44,12 +54,12 @@ export default function GameShow() {
 
     const homeWon = game.homeScore > game.awayScore
     const homeJsx = homeWon
-      ? <span><FontAwesomeIcon icon={faStar} /> {game.homeTeam}</span>
+      ? <span><StarIcon fontSize="small" /> {game.homeTeam}</span>
       : <span>{game.homeTeam}</span>
 
     const awayWon = game.awayScore > game.homeScore
     const awayJsx = awayWon
-      ? <span><FontAwesomeIcon icon={faStar} /> {game.awayTeam}</span>
+      ? <span><StarIcon fontSize="small" /> {game.awayTeam}</span>
       : <span>{game.awayTeam}</span>
 
     const homeStats = pickBy(game.stats, (_stat, player) => includes(game.homeRoster, player))
@@ -111,4 +121,50 @@ export default function GameShow() {
       <Main />
     </React.Fragment>
   )
+}
+
+const StyledPaper = styled(Paper)({
+  padding: 16,
+  marginBottom: 16
+});
+
+interface GameProps {
+  game: Game;
+}
+
+function Game({ game }: GameProps) {
+  return (
+    <StyledPaper>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Link to={`/game/${game.id}`}>
+            <Typography variant="h6">
+              {game.homeTeam} vs {game.awayTeam}
+            </Typography>
+          </Link>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <TeamName>
+                {game.homeTeam}
+                {game.homeScore > game.awayScore && <StarIcon fontSize="small" />}
+              </TeamName>
+            </Grid>
+            <Grid item xs={6}>
+              <TeamName>
+                {game.awayTeam}
+                {game.awayScore > game.homeScore && <StarIcon fontSize="small" />}
+              </TeamName>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body2" color="textSecondary">
+            {game.date}
+          </Typography>
+        </Grid>
+      </Grid>
+    </StyledPaper>
+  );
 }
