@@ -99,17 +99,6 @@ export default function GameShow() {
             />
           </Grid>
         </Grid>
-        <Typography variant="h4" style={{marginBottom: 20}}>
-          {game.homeTeamRanked
-            ? <span><StarIcon fontSize="small" /> {game.homeTeam}</span>
-            : game.homeTeam
-          }
-          {' vs '}
-          {game.awayTeamRanked
-            ? <span><StarIcon fontSize="small" /> {game.awayTeam}</span>
-            : game.awayTeam
-          }
-        </Typography>
         <Points game={game} />
       </Container>
     )
