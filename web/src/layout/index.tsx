@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Hidden from '@mui/material/Hidden';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import NavItems from './NavItems';
 
@@ -38,8 +37,8 @@ function Layout(props: {children?: React.ReactNode}) {
           <MenuIcon />
         </StyledIconButton>
 
-        <StyledTypography variant="h5">
-          <Hidden lgDown>Parity 2.0</Hidden>
+        <StyledTypography variant="h5" sx={{ display: { xs: 'none', lg: 'block' } }}>
+          Parity 2.0
         </StyledTypography>
 
         {props.children ? props.children : null}
