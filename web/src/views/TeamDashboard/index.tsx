@@ -109,7 +109,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     newPlayers[playerAIdx] = { ...newPlayers[playerAIdx], team: newPlayers[playerBIdx].team };
     newPlayers[playerBIdx] = { ...newPlayers[playerBIdx], team: newPlayers[playerAIdx].team };
 
-    const newTrades = remove([...trades], t => isEqual(t, trade));
+    const newTrades = [...trades].filter(t => !isEqual(t, trade));
 
     updateAllPlayers(newPlayers);
     setTrades(newTrades);
