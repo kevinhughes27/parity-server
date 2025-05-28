@@ -3,23 +3,35 @@ import { NavLink } from 'react-router-dom'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
+import { styled } from '@mui/material/styles'
+
+const StyledNavLink = styled(NavLink)({
+  color: 'black',
+  textDecoration: 'none'
+});
+
+const StyledAnchor = styled('a')({
+  color: 'black',
+  textDecoration: 'none'
+});
 
 function NavItems(props: {closeNav: () => void}) {
   const NavItem = (path: string, text: string) => (
-    <NavLink to={path} style={{ color: 'black',  textDecoration: 'None' }} key={text} onClick={() => props.closeNav()}>
-      <ListItem button>
+    <StyledNavLink to={path} key={text} onClick={() => props.closeNav()}>
+      <ListItemButton>
         <ListItemText primary={text} />
-      </ListItem>
-    </NavLink>
+      </ListItemButton>
+    </StyledNavLink>
   );
 
   const ExternalItem = (path: string, text: string) => (
-    <a href={path} target='_blank' rel='noopener noreferrer' style={{ color: 'black', textDecoration: 'None' }} key={text}>
-      <ListItem button>
+    <StyledAnchor href={path} target='_blank' rel='noopener noreferrer' key={text}>
+      <ListItemButton>
         <ListItemText primary={text} />
-      </ListItem>
-    </a>
+      </ListItemButton>
+    </StyledAnchor>
   );
 
   return (

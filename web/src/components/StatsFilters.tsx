@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
-import LeaguePicker from '../components/LeaguePicker'
-import WeekPicker from '../components/WeekPicker'
+import LeaguePicker from './LeaguePicker'
+import WeekPicker from './WeekPicker'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material'
 import Stack from '@mui/material/Stack'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import { useMediaQuery } from 'react-responsive'
 
-const StatsFilters = ({data, changeWeek}: any) => {
-  const [filtersOpen, openFilters] = useState(false)
+interface StatsFiltersProps {
+  data: {
+    week?: number;
+    weeks: number[];
+  };
+  changeWeek: (week: number) => void;
+}
+
+const StatsFilters = ({ data, changeWeek }: StatsFiltersProps) => {
+  const [filtersOpen, setFiltersOpen] = useState(false)
 
   const isMobile = useMediaQuery({ query: '(max-device-width: 480px)' });
 
@@ -17,7 +25,7 @@ const StatsFilters = ({data, changeWeek}: any) => {
   if (isMobile) {
     return (
       <React.Fragment>
-        <IconButton onClick={() => openFilters(true)} size="large">
+        <IconButton onClick={() => setFiltersOpen(true)} size="large">
           <FilterListIcon style={{color: "white"}} />
         </IconButton>
         <Dialog
@@ -25,16 +33,16 @@ const StatsFilters = ({data, changeWeek}: any) => {
           maxWidth="sm"
           fullWidth={true}
           open={filtersOpen}
-          onClose={() => openFilters(false)}>
+          onClose={() => setFiltersOpen(false)}>
           <DialogTitle>Filters</DialogTitle>
           <DialogContent style={{paddingTop: 10}}>
             <Stack spacing={2}>
-              <LeaguePicker onChange={() => openFilters(false)} mobile={true} />
-              <WeekPicker week={week} weeks={weekOptions} onChange={(w) => { openFilters(false); changeWeek(w) }} mobile={true} />
+              <LeaguePicker onChange={() => setFiltersOpen(false)} mobile={true} />
+              <WeekPicker week={week} weeks={weekOptions} onChange={(w) => { setFiltersOpen(false); changeWeek(w) }} mobile={true} />
             </Stack>
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => openFilters(false)} color="primary">
+            <Button onClick={() => setFiltersOpen(false)} color="primary">
               Close
             </Button>
           </DialogActions>
@@ -45,7 +53,7 @@ const StatsFilters = ({data, changeWeek}: any) => {
     return (
       <React.Fragment>
         <LeaguePicker mobile={false} />
-        <WeekPicker week={week} weeks={weekOptions} onChange={(w) => changeWeek(w)} mobile={false} />
+        <WeekPicker week={week} weeks={weekOptions} onChange={changeWeek} mobile={false} />
       </React.Fragment>
     )
   }

@@ -5,12 +5,13 @@
   "private": true,
   "dependencies": {
     "@codemirror/lang-json": "^6.0.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@mui/icons-material": "^5.2.0",
-    "@mui/material": "^5.2.2",
-    "@mui/styles": "^5.2.2",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/material": "^6.0.0",
     "@types/capitalize": "^2.0.2",
     "@types/lodash": "^4.17.17",
     "@types/mui-datatables": "^4.3.12",
@@ -57,19 +58,14 @@
   },
   "browserslist": {
     "production": [
-      ">0.3%",
-      "not ie 11",
+      ">0.2%",
       "not dead",
       "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version",
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all"
+      "last 1 safari version"
     ]
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"

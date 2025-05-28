@@ -7,27 +7,25 @@ import { styled } from '@mui/material/styles'
 import InputBase from '@mui/material/InputBase'
 import { map } from 'lodash'
 
-const WeekInput = styled(InputBase)(() => ({
+const WeekInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
-    color: 'white'
+    color: theme.palette.common.white
   },
   '& .MuiSelect-icon': {
-    color: 'white'
+    color: theme.palette.common.white
   }
 }));
 
-function WeekPicker(
-  props: {
-    week: number;
-    weeks: number[];
-    onChange: (week: number) => void;
-    mobile: boolean
-  }
-) {
-  const { week, weeks, mobile } = props
+interface WeekPickerProps {
+  week: number;
+  weeks: number[];
+  onChange: (week: number) => void;
+  mobile: boolean;
+}
 
-  const onChange = (event: SelectChangeEvent) => {
-    props.onChange(parseInt(event.target.value));
+function WeekPicker({ week, weeks, onChange, mobile }: WeekPickerProps) {
+  const handleChange = (event: SelectChangeEvent) => {
+    onChange(parseInt(event.target.value));
   };
 
   const weekText = (num: number) => {
@@ -55,18 +53,17 @@ function WeekPicker(
           id="week-picker"
           value={week.toString()}
           label="Week"
-          onChange={onChange}
-        >
+          onChange={handleChange}>
           {weekOptions}
         </Select>
       </FormControl>
-    )
+    );
   } else {
     return (
       <Select
         variant='standard'
         value={week.toString()}
-        onChange={onChange}
+        onChange={handleChange}
         input={<WeekInput/>}
       >
         {weekOptions}

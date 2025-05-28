@@ -103,11 +103,11 @@ function BarChart(props: BarChartProps) {
           Stat
         </InputLabel>
         <Select
+          variant="standard"
           labelId="stat-select"
           label="Stat"
           value={stat}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           <MenuItem value={'goals'}>Goals</MenuItem>
           <MenuItem value={'assists'}>Assists</MenuItem>
           <MenuItem value={'second_assists'}>Second Assists</MenuItem>
@@ -121,7 +121,7 @@ function BarChart(props: BarChartProps) {
       </FormControl>
       <Bar data={data} {...chartProps} options={options}/>
     </div>
-  )
+  );
 }
 
 export default BarChart
