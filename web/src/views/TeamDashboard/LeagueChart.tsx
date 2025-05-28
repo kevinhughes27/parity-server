@@ -118,7 +118,7 @@ export default function Chart(props: LeagueChartProps) {
               color: 'black',
               padding: 4,
               xAdjust: 0,
-              yAdjust: -10
+              yAdjust: -14
             }
           },
           floor: {
@@ -135,7 +135,7 @@ export default function Chart(props: LeagueChartProps) {
               color: 'black',
               padding: 4,
               xAdjust: 0,
-              yAdjust: 10
+              yAdjust: 14
             }
           }
         }
