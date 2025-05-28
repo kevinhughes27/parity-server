@@ -15,7 +15,7 @@ import * as ls from 'local-storage'
 import { Player } from '../../api'
 
 const storageKey = 'currentTeam'
-const defaultPlayer = {name: '', team: '', salary: 0}
+const defaultPlayer: Player = {name: '', team: '', salary: 0}
 
 interface ITrade {
   playerA: Player;
@@ -37,13 +37,13 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     currentTeam = defaultTeam
   }
 
-  const [allPlayers, updateAllPlayers] = useState(props.players)
-  const [team, setTeam] = useState(currentTeam)
-  const [modalOpen, setModalOpen] = useState(false)
+  const [allPlayers, updateAllPlayers] = useState<Player[]>(props.players)
+  const [team, setTeam] = useState<string>(currentTeam)
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
   const [trades, setTrades] = useState<ITrade[]>([])
   const [playerA, setPlayerA] = useState<Player>(defaultPlayer)
   const [playerB, setPlayerB] = useState<Player>(defaultPlayer)
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState<number>(0)
 
   const forceUpdate = React.useReducer(bool => !bool, false)[1];
 
@@ -52,7 +52,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     setTeam(teamName)
   }
 
-  const tabChanged = (_event: React.ChangeEvent<{}>, tab: number) => {
+  const tabChanged = (_event: React.SyntheticEvent, tab: number) => {
     setTab(tab)
   }
 
@@ -77,16 +77,14 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     const playerAIdx = findIndex(allPlayers, (p) => p.name === playerA.name)
     const playerBIdx = findIndex(allPlayers, (p) => p.name === playerB.name)
 
-    const teamA = allPlayers[playerAIdx]['team']
-    const teamB = allPlayers[playerBIdx]['team']
+    const newPlayers = [...allPlayers]
+    newPlayers[playerAIdx] = { ...newPlayers[playerAIdx], team: newPlayers[playerBIdx].team }
+    newPlayers[playerBIdx] = { ...newPlayers[playerBIdx], team: newPlayers[playerAIdx].team }
 
-    allPlayers[playerAIdx]['team'] = teamB
-    allPlayers[playerBIdx]['team'] = teamA
+    const newTrades = [...trades, {playerA, playerB}]
 
-    trades.push({playerA, playerB})
-
-    updateAllPlayers(allPlayers)
-    setTrades(trades)
+    updateAllPlayers(newPlayers)
+    setTrades(newTrades)
 
     closeTradeModal()
   }
@@ -95,16 +93,14 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     const playerAIdx = findIndex(allPlayers, (p) => p.name === trade.playerA.name)
     const playerBIdx = findIndex(allPlayers, (p) => p.name === trade.playerB.name)
 
-    const teamA = allPlayers[playerAIdx]['team']
-    const teamB = allPlayers[playerBIdx]['team']
+    const newPlayers = [...allPlayers]
+    newPlayers[playerAIdx] = { ...newPlayers[playerAIdx], team: newPlayers[playerBIdx].team }
+    newPlayers[playerBIdx] = { ...newPlayers[playerBIdx], team: newPlayers[playerAIdx].team }
 
-    allPlayers[playerAIdx]['team'] = teamB
-    allPlayers[playerBIdx]['team'] = teamA
+    const newTrades = remove([...trades], (t) => isEqual(t, trade))
 
-    remove(trades, (t) => isEqual(t, trade))
-
-    updateAllPlayers(allPlayers)
-    setTrades(trades)
+    updateAllPlayers(newPlayers)
+    setTrades(newTrades)
     forceUpdate()
   }
 
@@ -112,7 +108,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
   const otherPlayers = difference(allPlayers, teamPlayers);
   const sortedPlayers = sortBy(teamPlayers, (p) => p.salary).reverse();
 
-  const maxSalary = max(map(allPlayers, (p) => p.salary));
+  const maxSalary = max(map(allPlayers, (p) => p.salary)) || 0;
   const salaries = map(sortedPlayers, (p) => p.salary);
   const teamSalary = sum(salaries);
   const { salaryCap, salaryFloor } = calcSalaryLimits(props.weeks, allPlayers);
@@ -164,7 +160,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
           { tab === 0 &&
             <BarChart
               players={sortedPlayers}
-              maxSalary={maxSalary!}
+              maxSalary={maxSalary}
               overCap={overCap}
               underFloor={underFloor}
             />

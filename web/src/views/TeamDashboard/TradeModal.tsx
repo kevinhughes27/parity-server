@@ -48,8 +48,10 @@ export default function TradeModal(props: TradeModalProps) {
     width: '100%'
   }
 
-  const updateTrade = (_event: React.ChangeEvent<{}>, value: any) => {
-    props.updateTrade(value as Player);
+  const updateTrade = (_event: React.SyntheticEvent, value: string | Player | null) => {
+    if (value && typeof value !== 'string') {
+      props.updateTrade(value);
+    }
   }
 
   return (
@@ -74,7 +76,9 @@ export default function TradeModal(props: TradeModalProps) {
               renderInput={params => (
                 <TextField {...params} variant="outlined" fullWidth />
               )}
-              getOptionLabel={option => option.name}
+              getOptionLabel={(option: string | Player) => 
+                typeof option === 'string' ? option : option.name
+              }
               renderOption={(props, option) => {
                 const diff = option.salary - playerA.salary
                 const color = diff >= 0 ? '#00e676' : '#f44336'

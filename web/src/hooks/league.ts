@@ -16,4 +16,4 @@ type UseLeague = [
 export function useLeague(): UseLeague {
   const [league, setLeague] = useLeagueState(initialLeague);
   return [league, setLeague];
-};
+}

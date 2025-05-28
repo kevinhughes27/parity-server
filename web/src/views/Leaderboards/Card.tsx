@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import capitalize from 'capitalize';
 import format from 'format-number';
 import { map, keys, sortBy, sum } from 'lodash';
-import { Stats, StatLine } from '../../api';
+import { Stats } from '../../api';
 
 const StyledPaper = styled(Paper)({
   minWidth: 300,
@@ -21,7 +21,12 @@ const StyledTypography = styled(Typography)({
   paddingTop: 10
 });
 
-function topPlayers(stats: Stats, stat: string, num: number) {
+interface PlayerStat {
+  name: string;
+  value: number;
+}
+
+function topPlayers(stats: Stats, stat: string, num: number): PlayerStat[] {
   const players = keys(stats).map(name => ({
     name,
     value: stats[name][stat] as number
@@ -29,7 +34,7 @@ function topPlayers(stats: Stats, stat: string, num: number) {
   return sortBy(players, (player) => -player.value).slice(0, num);
 }
 
-function hasNonZeroValues(stats: Stats, stat: string) {
+function hasNonZeroValues(stats: Stats, stat: string): boolean {
   const values = keys(stats).map(name => stats[name][stat] as number);
   return sum(values) > 0;
 }
@@ -41,7 +46,7 @@ interface CardProps {
   num?: number;
 }
 
-function Card({ stat, stats, money = false, num = 10 }: CardProps) {
+function Card({ stat, stats, money = false, num = 10 }: CardProps): JSX.Element | null {
   // Don't render if all values are zero
   if (!hasNonZeroValues(stats, stat)) {
     return null;

@@ -8,8 +8,7 @@ import {
   Legend,
   TooltipPositionerMap,
   Scale,
-  CoreScaleOptions,
-  Tick
+  CoreScaleOptions
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import format from 'format-number'
@@ -26,14 +25,30 @@ ChartJS.register(
   annotationPlugin
 )
 
+interface Player {
+  name: string;
+  team: string;
+  salary: number;
+}
+
 interface LeagueChartProps {
-  players: {name: string, team: string, salary: number}[]
+  players: Player[];
   teamNames: string[];
   salaryCap: number;
   salaryFloor: number;
 }
 
-export default function Chart(props: LeagueChartProps) {
+interface ChartDataset {
+  label: string;
+  stack: string;
+  data: Array<{x: string; y: number}>;
+  backgroundColor: string;
+  hoverBackgroundColor: string;
+  categoryPercentage: number;
+  barPercentage: number;
+}
+
+export default function Chart(props: LeagueChartProps): JSX.Element {
   const { players, teamNames, salaryCap, salaryFloor } = props
 
   const data = {
@@ -60,7 +75,7 @@ export default function Chart(props: LeagueChartProps) {
           hoverBackgroundColor: teamColors[idx],
           categoryPercentage: 0.2,
           barPercentage: 24.0
-        }
+        } as ChartDataset
       })
     }))
   }

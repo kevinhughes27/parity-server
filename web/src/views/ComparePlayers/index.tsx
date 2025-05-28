@@ -24,12 +24,12 @@ export default function ComparePlayers(props: {stats: Stats}) {
   const [playerA, setPlayerA] = useState(ls.get<string>('playerA') || playerNames[0])
   const [playerB, setPlayerB] = useState(ls.get<string>('playerB') || playerNames[1])
 
-  const playerAChanged = (_event: React.ChangeEvent<{}>, value: string | null) => {
+  const playerAChanged = (_event: React.SyntheticEvent, value: string | null) => {
     ls.set<string>('playerA', value as string)
     setPlayerA(value as string)
   }
 
-  const playerBChanged = (_event: React.ChangeEvent<{}>, value: string | null) => {
+  const playerBChanged = (_event: React.SyntheticEvent, value: string | null) => {
     ls.set<string>('playerB', value as string)
     setPlayerB(value as string)
   }
