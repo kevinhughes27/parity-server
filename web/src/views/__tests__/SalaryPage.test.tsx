@@ -20,8 +20,15 @@ vi.mock('../../api', () => ({
   ]
 }));
 
+// Mock useMediaQuery from MUI
+vi.mock('@mui/material/useMediaQuery', () => ({
+  __esModule: true,
+  default: vi.fn()
+}));
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 // Mock component for SalaryPage
-const MockSalaryComponent: FunctionComponent<any> = () => <div>Mock Salary</div>;
+const MockSalaryComponent: FunctionComponent = () => <div>Mock Salary</div>;
 
 describe('SalaryPage', () => {
   beforeEach(() => {
@@ -29,7 +36,10 @@ describe('SalaryPage', () => {
     vi.clearAllMocks();
 
     // Mock useLeague hook to return a tuple [leagueId, setLeague]
-    (leagueHooks.useLeague as any).mockReturnValue(['22', vi.fn()]);
+    (leagueHooks.useLeague as unknown as ReturnType<typeof vi.fn>).mockReturnValue(['22', vi.fn()]);
+
+    // Mock useMediaQuery hook
+    (useMediaQuery as ReturnType<typeof vi.fn>).mockReturnValue(false);
   });
 
   it('shows loading state then loaded state', async () => {
