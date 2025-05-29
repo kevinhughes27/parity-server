@@ -48,10 +48,10 @@ export interface Game {
   week: number;
   homeTeam: string;
   homeScore: number;
-  homeRoster: [string];
+  homeRoster: string[];
   awayTeam: string;
   awayScore: number;
-  awayRoster: [string];
+  awayRoster: string[];
   points: Point[];
   stats: Stats | undefined;
 }
