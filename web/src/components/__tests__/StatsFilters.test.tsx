@@ -6,9 +6,15 @@ vi.mock('react-responsive', () => ({
   useMediaQuery: vi.fn(),
 }));
 
+interface WeekPickerProps {
+  mobile: boolean;
+  onChange?: (week: number) => void;
+  [key: string]: unknown;
+}
+
 vi.mock('../LeaguePicker', () => ({
   __esModule: true,
-  default: ({ mobile, ...props }: { mobile: boolean; [key: string]: any }) => (
+  default: ({ mobile, ...props }: { mobile: boolean; [key: string]: unknown }) => (
     <div data-testid="league-picker" data-mobile={mobile} {...props}>
       LeaguePicker
     </div>
@@ -17,10 +23,20 @@ vi.mock('../LeaguePicker', () => ({
 
 vi.mock('../WeekPicker', () => ({
   __esModule: true,
-  default: ({ mobile, ...props }: { mobile: boolean; [key: string]: any }) => (
-    <div data-testid="week-picker" data-mobile={mobile} onClick={() => props.onChange && props.onChange(2)} {...props}>
+  default: ({ mobile, onChange, ...props }: WeekPickerProps) => (
+    <button
+      data-testid="week-picker"
+      data-mobile={mobile}
+      onClick={() => onChange?.(2)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onChange?.(2);
+        }
+      }}
+      {...props}
+    >
       WeekPicker
-    </div>
+    </button>
   ),
 }));
 
@@ -33,7 +49,7 @@ describe('StatsFilters', () => {
   });
 
   it('renders desktop filters', () => {
-    (useMediaQuery as any).mockReturnValue(false);
+    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
     const changeWeek = vi.fn();
     render(
       <StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />
@@ -47,7 +63,7 @@ describe('StatsFilters', () => {
   });
 
   it('renders mobile filters and handles dialog', () => {
-    (useMediaQuery as any).mockReturnValue(true);
+    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
     const changeWeek = vi.fn();
     render(
       <StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />

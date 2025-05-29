@@ -16,98 +16,63 @@ vi.mock('../../hooks/league', () => ({
 }));
 
 // Mock component for StatsPage
-const MockStatsComponent: FunctionComponent<any> = ({ stats }) => (
+const MockStatsComponent: FunctionComponent<{ stats: Record<string, unknown> }> = ({ stats }) => (
   <div>
-    {Object.values(stats).map((player: any) => (
-      <div key={player.name}>
-        <span>{player.name}</span>
-        <span>{player.team}</span>
-        <span>{player.goals}</span>
-      </div>
-    ))}
+    {Object.values(stats).map((value) => {
+      const player = value as { name: string; team: string; goals: number };
+      return (
+        <div key={player.name}>
+          <span>{player.name}</span>
+          <span>{player.team}</span>
+          <span>{player.goals}</span>
+        </div>
+      );
+    })}
   </div>
 );
 
 describe('StatsPage', () => {
   beforeEach(() => {
-    // Reset all mocks before each test
     vi.clearAllMocks();
+  });
 
-    // Mock useLeague hook to return a tuple [leagueId, setLeague]
-    (leagueHooks.useLeague as any).mockReturnValue(['22', vi.fn()]);
-
-    // Mock useStats hook
-    (statsHooks.useStats as any).mockReturnValue([
-      {
-        weeks: [1, 2, 3],
-        week: 1,
-        stats: {
-          'Alice': {
-            name: 'Alice',
-            team: 'Red',
-            goals: 5,
-            assists: 2,
-            second_assists: 1,
-            d_blocks: 3,
-            catches: 10,
-            completions: 20,
-            throw_aways: 1,
-            threw_drops: 0,
-            drops: 0,
-            o_points_for: 6,
-            o_points_against: 2,
-            d_points_for: 4,
-            d_points_against: 3,
-            callahan: 0,
-            pay: 1000
-          }
-        }
-      },
+  it('renders loading state initially', () => {
+    (statsHooks.useStats as unknown as ReturnType<typeof vi.fn>).mockReturnValue([
+      { week: 1, weeks: [1, 2, 3], stats: {} },
       true,
       vi.fn()
     ]);
-  });
+    (leagueHooks.useLeague as unknown as ReturnType<typeof vi.fn>).mockReturnValue(['22', vi.fn()]);
 
-  it('shows loading state', () => {
     render(
       <MemoryRouter>
         <StatsPage component={MockStatsComponent} />
       </MemoryRouter>
     );
+
     expect(screen.getByRole('progressbar')).toBeInTheDocument();
   });
 
-  it('shows loaded state', async () => {
-    // Update the mock to return loaded state
-    (statsHooks.useStats as any).mockReturnValue([
-      {
-        weeks: [1, 2, 3],
-        week: 1,
-        stats: {
-          'Alice': {
-            name: 'Alice',
-            team: 'Red',
-            goals: 5,
-            assists: 2,
-            second_assists: 1,
-            d_blocks: 3,
-            catches: 10,
-            completions: 20,
-            throw_aways: 1,
-            threw_drops: 0,
-            drops: 0,
-            o_points_for: 6,
-            o_points_against: 2,
-            d_points_for: 4,
-            d_points_against: 3,
-            callahan: 0,
-            pay: 1000
-          }
-        }
+  it('renders stats when loaded', async () => {
+    const mockStats = {
+      player1: {
+        name: 'Player 1',
+        team: 'Red',
+        goals: 5
       },
+      player2: {
+        name: 'Player 2',
+        team: 'Blue',
+        goals: 3
+      }
+    };
+
+    (statsHooks.useStats as unknown as ReturnType<typeof vi.fn>).mockReturnValue([
+      { week: 1, weeks: [1, 2, 3], stats: mockStats },
       false,
       vi.fn()
     ]);
+    (leagueHooks.useLeague as unknown as ReturnType<typeof vi.fn>).mockReturnValue(['22', vi.fn()]);
 
     render(
       <MemoryRouter>
@@ -116,11 +81,12 @@ describe('StatsPage', () => {
     );
 
     await waitFor(() => {
-      expect(screen.queryByRole('progressbar')).not.toBeInTheDocument();
+      expect(screen.getByText('Player 1')).toBeInTheDocument();
+      expect(screen.getByText('Player 2')).toBeInTheDocument();
+      expect(screen.getByText('Red')).toBeInTheDocument();
+      expect(screen.getByText('Blue')).toBeInTheDocument();
+      expect(screen.getByText('5')).toBeInTheDocument();
+      expect(screen.getByText('3')).toBeInTheDocument();
     });
-    // Assert on rendered content
-    expect(screen.getByText('Alice')).toBeInTheDocument();
-    expect(screen.getByText('Red')).toBeInTheDocument();
-    expect(screen.getByText('5')).toBeInTheDocument(); // goals
   });
 });

@@ -17,7 +17,6 @@ import {
   sortBy,
   findIndex,
   uniq,
-  remove,
   isEqual,
   difference,
   includes,

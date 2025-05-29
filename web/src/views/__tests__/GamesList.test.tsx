@@ -4,12 +4,17 @@ import { MemoryRouter } from 'react-router-dom';
 import GamesList from '../GamesList';
 import * as leagueHook from '../../hooks/league';
 import * as api from '../../api';
+import { useMediaQuery } from 'react-responsive';
+import type { Game, Stats } from '../../api';
 
 vi.mock('../../hooks/league');
 vi.mock('../../api');
+vi.mock('react-responsive', () => ({
+  useMediaQuery: vi.fn(),
+}));
 
 describe('GamesList', () => {
-  const mockGames = [
+  const mockGames: Game[] = [
     {
       id: '1',
       league_id: '22',
@@ -18,10 +23,10 @@ describe('GamesList', () => {
       awayTeam: 'Blue',
       homeScore: 10,
       awayScore: 8,
-      homeRoster: ['player1'] as [string],
-      awayRoster: ['player2'] as [string],
+      homeRoster: ['player1'],
+      awayRoster: ['player2'],
       points: [],
-      stats: {} as Record<string, any>
+      stats: {} as Stats
     },
     {
       id: '2',
@@ -31,10 +36,10 @@ describe('GamesList', () => {
       awayTeam: 'Yellow',
       homeScore: 12,
       awayScore: 10,
-      homeRoster: ['player1'] as [string],
-      awayRoster: ['player3'] as [string],
+      homeRoster: ['player1'],
+      awayRoster: ['player3'],
       points: [],
-      stats: {} as Record<string, any>
+      stats: {} as Stats
     },
   ];
 
@@ -49,6 +54,8 @@ describe('GamesList', () => {
         { id: '23', name: 'Another League' },
       ]
     });
+    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
+    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
   });
 
   it('renders GamesList with games grouped by week', async () => {
