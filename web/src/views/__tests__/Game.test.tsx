@@ -7,7 +7,7 @@ import * as api from '../../api';
 vi.mock('../../api');
 vi.mock('../../layout', () => ({
   __esModule: true,
-  default: ({ children }: { children: React.ReactNode }) => <div>{children}</div>
+  default: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
 }));
 
 describe('Game', () => {
@@ -30,22 +30,22 @@ describe('Game', () => {
             timestamp: 'Oct 26, 2017 8:51:17 PM',
             type: 'PULL',
             firstActor: 'player1',
-            secondActor: ''
+            secondActor: '',
           },
           {
             timestamp: 'Oct 26, 2017 8:51:20 PM',
             type: 'PASS',
             firstActor: 'player1',
-            secondActor: 'player3'
+            secondActor: 'player3',
           },
           {
             timestamp: 'Oct 26, 2017 8:51:21 PM',
             type: 'POINT',
             firstActor: 'player3',
-            secondActor: ''
-          }
-        ]
-      }
+            secondActor: '',
+          },
+        ],
+      },
     ],
     stats: {
       player1: {
@@ -63,7 +63,7 @@ describe('Game', () => {
         o_points_against: 0,
         d_points_for: 0,
         d_points_against: 0,
-        pay: 0
+        pay: 0,
       },
       player3: {
         name: 'player3',
@@ -80,9 +80,9 @@ describe('Game', () => {
         o_points_against: 0,
         d_points_for: 0,
         d_points_against: 0,
-        pay: 0
-      }
-    }
+        pay: 0,
+      },
+    },
   };
 
   beforeEach(() => {

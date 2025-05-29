@@ -7,7 +7,7 @@ import { FunctionComponent } from 'react';
 
 // Mock the hooks
 vi.mock('../../hooks/league', () => ({
-  useLeague: vi.fn()
+  useLeague: vi.fn(),
 }));
 
 // Mock the API calls
@@ -16,14 +16,14 @@ vi.mock('../../api', () => ({
   fetchWeeks: vi.fn().mockResolvedValue([1, 2, 3]),
   leagues: [
     { id: 22, name: 'Test League' },
-    { id: 23, name: 'Other League' }
-  ]
+    { id: 23, name: 'Other League' },
+  ],
 }));
 
 // Mock useMediaQuery from MUI
 vi.mock('@mui/material/useMediaQuery', () => ({
   __esModule: true,
-  default: vi.fn()
+  default: vi.fn(),
 }));
 import useMediaQuery from '@mui/material/useMediaQuery';
 

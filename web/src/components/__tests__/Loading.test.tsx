@@ -9,4 +9,4 @@ describe('Loading', () => {
     expect(spinner).toBeInTheDocument();
     expect(spinner).toHaveClass('MuiCircularProgress-colorSecondary');
   });
-}); 
+});

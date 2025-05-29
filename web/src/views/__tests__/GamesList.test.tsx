@@ -26,7 +26,7 @@ describe('GamesList', () => {
       homeRoster: ['player1'],
       awayRoster: ['player2'],
       points: [],
-      stats: {} as Stats
+      stats: {} as Stats,
     },
     {
       id: '2',
@@ -39,7 +39,7 @@ describe('GamesList', () => {
       homeRoster: ['player1'],
       awayRoster: ['player3'],
       points: [],
-      stats: {} as Stats
+      stats: {} as Stats,
     },
   ];
 
@@ -52,7 +52,7 @@ describe('GamesList', () => {
       value: [
         { id: '22', name: 'Test League' },
         { id: '23', name: 'Another League' },
-      ]
+      ],
     });
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
@@ -80,4 +80,4 @@ describe('GamesList', () => {
     expect(screen.getByText('10 - 8')).toBeInTheDocument();
     expect(screen.getByText('12 - 10')).toBeInTheDocument();
   });
-}); 
+});
