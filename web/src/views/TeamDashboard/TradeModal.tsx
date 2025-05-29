@@ -35,6 +35,8 @@ export default function TradeModal(props: TradeModalProps) {
   const tradeeIdx = findIndex(sortedPlayers, p => p.salary >= playerA.salary);
   const lessExpensivePlayers = sortedPlayers.slice(0, tradeeIdx);
   const moreExpensivePlayers = sortedPlayers.slice(tradeeIdx, -1);
+  const green = '#00e676';
+  const red = '#f44336';
 
   const options = props.overCap
     ? lessExpensivePlayers.reverse().concat(moreExpensivePlayers)
@@ -73,7 +75,7 @@ export default function TradeModal(props: TradeModalProps) {
               renderOption={(props, option) => {
                 const { key, ...rest } = props;
                 const diff = option.salary - playerA.salary;
-                const color = diff >= 0 ? '#00e676' : '#f44336';
+                const color = diff >= 0 ? green : red;
                 const prefix = diff >= 0 ? '+ $' : '- $';
                 const value = Math.abs(diff);
 

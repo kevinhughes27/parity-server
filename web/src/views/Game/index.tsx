@@ -4,11 +4,7 @@ import Layout from '../../layout/';
 import Loading from '../../components/Loading';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { Typography } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
-import Paper from '@mui/material/Paper';
 
 import Team from './Team';
 import Points from './Points';
@@ -21,13 +17,7 @@ interface StatMaxes {
   [key: string]: number;
 }
 
-const TeamName = styled(Typography)({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '4px',
-});
-
-export default function GameShow() {
+function GameShow() {
   const params = useParams<{ leagueId: string; gameId: string }>();
   const leagueId = params.leagueId;
   const gameId = params.gameId;
@@ -121,43 +111,4 @@ export default function GameShow() {
   );
 }
 
-const StyledPaper = styled(Paper)({
-  padding: 16,
-  marginBottom: 16,
-});
-
-interface GameProps {
-  game: Game;
-}
-
-function Game({ game }: GameProps) {
-  return (
-    <StyledPaper>
-      <Grid container spacing={2}>
-        <Grid size={12}>
-          <Link to={`/game/${game.id}`}>
-            <Typography variant="h6">
-              {game.homeTeam} vs {game.awayTeam}
-            </Typography>
-          </Link>
-        </Grid>
-        <Grid size={12}>
-          <Grid container spacing={2}>
-            <Grid size={6}>
-              <TeamName>
-                {game.homeTeam}
-                {game.homeScore > game.awayScore && <StarIcon fontSize="small" />}
-              </TeamName>
-            </Grid>
-            <Grid size={6}>
-              <TeamName>
-                {game.awayTeam}
-                {game.awayScore > game.homeScore && <StarIcon fontSize="small" />}
-              </TeamName>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-    </StyledPaper>
-  );
-}
+export default GameShow;

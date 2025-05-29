@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 // Mock useMediaQuery before importing StatsFilters
@@ -44,14 +44,12 @@ import StatsFilters from '../StatsFilters';
 import { useMediaQuery } from 'react-responsive';
 
 describe('StatsFilters', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   it('renders desktop filters', () => {
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
     const changeWeek = vi.fn();
+
     render(<StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />);
+
     const leaguePicker = screen.getByTestId('league-picker');
     const weekPicker = screen.getByTestId('week-picker');
     expect(leaguePicker).toBeInTheDocument();
@@ -63,14 +61,18 @@ describe('StatsFilters', () => {
   it('renders mobile filters and handles dialog', () => {
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
     const changeWeek = vi.fn();
+
     render(<StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />);
+
     // Open the dialog
     const filterButton = screen.getByRole('button');
     fireEvent.click(filterButton);
+
     // WeekPicker should be in the dialog
     const weekPicker = screen.getByTestId('week-picker');
     expect(weekPicker).toBeInTheDocument();
     expect(weekPicker).toHaveAttribute('data-mobile', 'true');
+
     // Simulate week change
     fireEvent.click(weekPicker);
     expect(changeWeek).toHaveBeenCalledWith(2);
