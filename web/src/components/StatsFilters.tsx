@@ -8,6 +8,7 @@ import {
   DialogContent,
   DialogActions,
   Button,
+  Box,
 } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -32,9 +33,11 @@ const StatsFilters = ({ data, changeWeek }: StatsFiltersProps) => {
   if (isMobile) {
     return (
       <React.Fragment>
-        <IconButton onClick={() => setFiltersOpen(true)} size="large">
-          <FilterListIcon style={{ color: 'white' }} />
-        </IconButton>
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+          <IconButton onClick={() => setFiltersOpen(true)} size="large">
+            <FilterListIcon style={{ color: 'white' }} />
+          </IconButton>
+        </Box>
         <Dialog
           disableEscapeKeyDown
           maxWidth="sm"

@@ -8,13 +8,17 @@ vi.mock('react-responsive', () => ({
 
 vi.mock('../LeaguePicker', () => ({
   __esModule: true,
-  default: (props: any) => <div data-testid="league-picker" {...props}>LeaguePicker</div>,
+  default: ({ mobile, ...props }: { mobile: boolean; [key: string]: any }) => (
+    <div data-testid="league-picker" data-mobile={mobile} {...props}>
+      LeaguePicker
+    </div>
+  ),
 }));
 
 vi.mock('../WeekPicker', () => ({
   __esModule: true,
-  default: (props: any) => (
-    <div data-testid="week-picker" onClick={() => props.onChange && props.onChange(2)} {...props}>
+  default: ({ mobile, ...props }: { mobile: boolean; [key: string]: any }) => (
+    <div data-testid="week-picker" data-mobile={mobile} onClick={() => props.onChange && props.onChange(2)} {...props}>
       WeekPicker
     </div>
   ),
@@ -34,8 +38,12 @@ describe('StatsFilters', () => {
     render(
       <StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />
     );
-    expect(screen.getByTestId('league-picker')).toBeInTheDocument();
-    expect(screen.getByTestId('week-picker')).toBeInTheDocument();
+    const leaguePicker = screen.getByTestId('league-picker');
+    const weekPicker = screen.getByTestId('week-picker');
+    expect(leaguePicker).toBeInTheDocument();
+    expect(weekPicker).toBeInTheDocument();
+    expect(leaguePicker).toHaveAttribute('data-mobile', 'false');
+    expect(weekPicker).toHaveAttribute('data-mobile', 'false');
   });
 
   it('renders mobile filters and handles dialog', () => {
@@ -48,9 +56,11 @@ describe('StatsFilters', () => {
     const filterButton = screen.getByRole('button');
     fireEvent.click(filterButton);
     // WeekPicker should be in the dialog
-    expect(screen.getByTestId('week-picker')).toBeInTheDocument();
+    const weekPicker = screen.getByTestId('week-picker');
+    expect(weekPicker).toBeInTheDocument();
+    expect(weekPicker).toHaveAttribute('data-mobile', 'true');
     // Simulate week change
-    fireEvent.click(screen.getByTestId('week-picker'));
+    fireEvent.click(weekPicker);
     expect(changeWeek).toHaveBeenCalledWith(2);
   });
 }); 
