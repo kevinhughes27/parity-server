@@ -5,7 +5,7 @@ import TeamDashboard from '../TeamDashboard';
 // Mock local-storage
 vi.mock('local-storage', () => ({
   get: vi.fn().mockReturnValue('Red'),
-  set: vi.fn()
+  set: vi.fn(),
 }));
 
 describe('TeamDashboard', () => {
@@ -13,7 +13,7 @@ describe('TeamDashboard', () => {
   const mockPlayers = [
     { name: 'Alice', team: 'Red', salary: 1000 },
     { name: 'Bob', team: 'Red', salary: 2000 },
-    { name: 'Charlie', team: 'Blue', salary: 1500 }
+    { name: 'Charlie', team: 'Blue', salary: 1500 },
   ];
 
   it('renders TeamDashboard with correct team salary and components', () => {

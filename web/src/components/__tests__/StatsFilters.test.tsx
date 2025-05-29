@@ -28,7 +28,7 @@ vi.mock('../WeekPicker', () => ({
       data-testid="week-picker"
       data-mobile={mobile}
       onClick={() => onChange?.(2)}
-      onKeyDown={(e) => {
+      onKeyDown={e => {
         if (e.key === 'Enter' || e.key === ' ') {
           onChange?.(2);
         }
@@ -51,9 +51,7 @@ describe('StatsFilters', () => {
   it('renders desktop filters', () => {
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
     const changeWeek = vi.fn();
-    render(
-      <StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />
-    );
+    render(<StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />);
     const leaguePicker = screen.getByTestId('league-picker');
     const weekPicker = screen.getByTestId('week-picker');
     expect(leaguePicker).toBeInTheDocument();
@@ -65,9 +63,7 @@ describe('StatsFilters', () => {
   it('renders mobile filters and handles dialog', () => {
     (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
     const changeWeek = vi.fn();
-    render(
-      <StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />
-    );
+    render(<StatsFilters data={{ week: 1, weeks: [1, 2, 3] }} changeWeek={changeWeek} />);
     // Open the dialog
     const filterButton = screen.getByRole('button');
     fireEvent.click(filterButton);
@@ -79,4 +75,4 @@ describe('StatsFilters', () => {
     fireEvent.click(weekPicker);
     expect(changeWeek).toHaveBeenCalledWith(2);
   });
-}); 
+});

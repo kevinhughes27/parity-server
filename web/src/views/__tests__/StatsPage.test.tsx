@@ -8,17 +8,17 @@ import { FunctionComponent } from 'react';
 
 // Mock the hooks
 vi.mock('../../hooks/stats', () => ({
-  useStats: vi.fn()
+  useStats: vi.fn(),
 }));
 
 vi.mock('../../hooks/league', () => ({
-  useLeague: vi.fn()
+  useLeague: vi.fn(),
 }));
 
 // Mock component for StatsPage
 const MockStatsComponent: FunctionComponent<{ stats: Record<string, unknown> }> = ({ stats }) => (
   <div>
-    {Object.values(stats).map((value) => {
+    {Object.values(stats).map(value => {
       const player = value as { name: string; team: string; goals: number };
       return (
         <div key={player.name}>
@@ -40,7 +40,7 @@ describe('StatsPage', () => {
     (statsHooks.useStats as unknown as ReturnType<typeof vi.fn>).mockReturnValue([
       { week: 1, weeks: [1, 2, 3], stats: {} },
       true,
-      vi.fn()
+      vi.fn(),
     ]);
     (leagueHooks.useLeague as unknown as ReturnType<typeof vi.fn>).mockReturnValue(['22', vi.fn()]);
 
@@ -58,19 +58,19 @@ describe('StatsPage', () => {
       player1: {
         name: 'Player 1',
         team: 'Red',
-        goals: 5
+        goals: 5,
       },
       player2: {
         name: 'Player 2',
         team: 'Blue',
-        goals: 3
-      }
+        goals: 3,
+      },
     };
 
     (statsHooks.useStats as unknown as ReturnType<typeof vi.fn>).mockReturnValue([
       { week: 1, weeks: [1, 2, 3], stats: mockStats },
       false,
-      vi.fn()
+      vi.fn(),
     ]);
     (leagueHooks.useLeague as unknown as ReturnType<typeof vi.fn>).mockReturnValue(['22', vi.fn()]);
 

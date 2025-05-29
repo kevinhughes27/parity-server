@@ -45,4 +45,4 @@ describe('LeaguePicker', () => {
     fireEvent.click(league2);
     expect(onChange).toHaveBeenCalledWith(2);
   });
-}); 
+});
