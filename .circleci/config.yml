@@ -60,6 +60,10 @@ jobs:
           command: cd web && yarn format:check
 
       - run:
+          name: "check formatting"
+          command: cd web && yarn test
+
+      - run:
           name: "Build"
           command: cd web && yarn build
 

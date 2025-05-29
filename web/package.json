@@ -67,8 +67,7 @@
     "lint:fix": "eslint src/**/*.ts{,x} --fix",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
+    "test:coverage": "vitest run --coverage"
   },
   "eslintConfig": {
     "extends": [
