@@ -1,6 +1,5 @@
 import React, { useState, ReactNode } from 'react';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Roster from './Roster';
@@ -39,11 +38,7 @@ export default function Team(props: TeamProps) {
           <Tab label="Team Stats" />
           <Tab label="Graphs" />
         </Tabs>
-        {tab === 0 && (
-          <Paper>
-            <Roster players={players} />
-          </Paper>
-        )}
+        {tab === 0 && <Roster players={players} />}
         {tab === 1 && <TeamStats score={score} players={players} points={points} />}
         {tab === 2 && <Chart stats={stats} statMaxes={statMaxes} colors={colors} />}
       </div>

@@ -4,13 +4,15 @@ import { MemoryRouter } from 'react-router-dom';
 import GamesList from '../GamesList';
 import * as leagueHook from '../../hooks/league';
 import * as api from '../../api';
-import { useMediaQuery } from 'react-responsive';
 import type { Game, Stats } from '../../api';
 
 vi.mock('../../hooks/league');
-vi.mock('../../api');
-vi.mock('react-responsive', () => ({
-  useMediaQuery: vi.fn(),
+vi.mock('../../api', () => ({
+  fetchGames: vi.fn().mockResolvedValue([]),
+  leagues: [
+    { id: 22, name: 'Test League' },
+    { id: 23, name: 'Other League' },
+  ],
 }));
 
 describe('GamesList', () => {
@@ -44,18 +46,8 @@ describe('GamesList', () => {
   ];
 
   beforeEach(() => {
-    vi.clearAllMocks();
     vi.mocked(leagueHook.useLeague).mockReturnValue(['22', vi.fn()]);
     vi.mocked(api.fetchGames).mockResolvedValue(mockGames);
-    // Mock leagues as a property of the api module
-    Object.defineProperty(api, 'leagues', {
-      value: [
-        { id: '22', name: 'Test League' },
-        { id: '23', name: 'Another League' },
-      ],
-    });
-    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(false);
-    (useMediaQuery as unknown as ReturnType<typeof vi.fn>).mockReturnValue(true);
   });
 
   it('renders GamesList with games grouped by week', async () => {

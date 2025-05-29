@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import TeamDashboard from '../TeamDashboard';
 
-// Mock local-storage
 vi.mock('local-storage', () => ({
   get: vi.fn().mockReturnValue('Red'),
   set: vi.fn(),

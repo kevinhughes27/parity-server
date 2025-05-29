@@ -88,8 +88,9 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
         ticks: {
           min: 0,
           suggestedMax: Math.round(salaryCap * 1.1),
-          callback: function (this: Scale<CoreScaleOptions>, tickValue: number | string) {
-            return format({ prefix: '$' })(Math.round(Number(tickValue)));
+          callback: function (this: Scale<CoreScaleOptions>, tickValue: number) {
+            const value = Math.round(tickValue);
+            return format({ prefix: '$' })(value);
           },
         },
       },
@@ -111,7 +112,11 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
           label: (item: { datasetIndex: number; dataIndex: number }) => {
             const dataset = data.datasets[item.datasetIndex];
             const value = dataset.data[item.dataIndex];
-            return `${dataset.label} ${format({ prefix: '$' })(Math.round(value.y))}`;
+
+            const salary = Math.round(value.y);
+            const text = format({ prefix: '$' })(salary);
+
+            return `${dataset.label} ${text}`;
           },
         },
       },

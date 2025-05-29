@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Game from '../Game';
@@ -84,10 +84,6 @@ describe('Game', () => {
       },
     },
   };
-
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
 
   it('shows loading state initially', () => {
     vi.mocked(api.fetchGame).mockImplementation(() => new Promise(() => {}));

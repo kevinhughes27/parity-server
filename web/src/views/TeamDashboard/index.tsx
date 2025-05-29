@@ -119,7 +119,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
   const otherPlayers = difference(allPlayers, teamPlayers);
   const sortedPlayers = sortBy(teamPlayers, p => p.salary).reverse();
 
-  const maxSalary = max(map(allPlayers, p => p.salary)) || 0;
+  const maxSalary = max(map(allPlayers, p => p.salary));
   const salaries = map(sortedPlayers, p => p.salary);
   const teamSalary = sum(salaries);
   const { salaryCap, salaryFloor } = calcSalaryLimits(props.weeks, allPlayers);
@@ -167,7 +167,7 @@ export default function TeamDashboard(props: TeamDashboardProps) {
           {tab === 0 && (
             <BarChart
               players={sortedPlayers}
-              maxSalary={maxSalary}
+              maxSalary={maxSalary || 0}
               overCap={overCap}
               underFloor={underFloor}
             />

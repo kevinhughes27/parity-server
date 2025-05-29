@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import StatsPage from '../StatsPage';
@@ -32,10 +32,6 @@ const MockStatsComponent: FunctionComponent<{ stats: Record<string, unknown> }> 
 );
 
 describe('StatsPage', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   it('renders loading state initially', () => {
     (statsHooks.useStats as unknown as ReturnType<typeof vi.fn>).mockReturnValue([
       { week: 1, weeks: [1, 2, 3], stats: {} },
