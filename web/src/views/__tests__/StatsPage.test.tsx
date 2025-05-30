@@ -7,12 +7,6 @@ import * as leagueHooks from '../../hooks/league';
 import { ReactNode } from 'react';
 import { Stats } from '../../api';
 
-interface IStatsPageComponentProps {
-  week: number;
-  stats: Stats;
-}
-
-// Mock the hooks
 vi.mock('../../hooks/stats', () => ({
   useStats: vi.fn(),
 }));
@@ -22,6 +16,11 @@ vi.mock('../../hooks/league', () => ({
 }));
 
 // Mock component for StatsPage
+interface IStatsPageComponentProps {
+  week: number;
+  stats: Stats;
+}
+
 const MockStatsComponent = ({ stats }: IStatsPageComponentProps): ReactNode => (
   <div>
     {Object.values(stats).map(value => {

@@ -19,7 +19,6 @@ export default [
         }
       },
       globals: {
-        // Browser globals
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
@@ -30,12 +29,6 @@ export default [
         console: 'readonly',
         JSX: 'readonly',
         React: 'readonly',
-        // Node.js globals
-        process: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly'
       }
     },
     plugins: {
@@ -45,27 +38,14 @@ export default [
       'jsx-a11y': jsxA11yPlugin
     },
     rules: {
-      // React specific rules
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      
-      // TypeScript specific rules
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': ['warn', { 
+      '@typescript-eslint/no-unused-vars': ['error', {
         'argsIgnorePattern': '^_',
         'varsIgnorePattern': '^_',
-        'ignoreRestSiblings': true
+        'caughtErrorsIgnorePattern': '^_'
       }],
-      
-      // General rules
-      'no-console': ['warn', { 'allow': ['warn', 'error'] }],
-      'no-unused-vars': 'off', // Turn off base rule as it can report incorrect errors
-      '@typescript-eslint/no-unused-vars': ['warn', {
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'ignoreRestSiblings': true
-      }]
+      'no-unused-vars': 'off',
+      'react/jsx-uses-vars': 'error',
+      'react/jsx-uses-react': 'error'
     },
     settings: {
       react: {
@@ -73,4 +53,4 @@ export default [
       }
     }
   }
-]; 
+];
