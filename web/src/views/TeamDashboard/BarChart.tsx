@@ -53,7 +53,7 @@ export default function BarChart(props: BarChartProps) {
       },
       tooltip: {
         callbacks: {
-          label: function(tooltipItem: TooltipItem<'bar'>) {
+          label: function (tooltipItem: TooltipItem<'bar'>) {
             const value = tooltipItem.raw as number;
             const salary = Math.round(value);
             const text = format({ prefix: '$' })(salary);
@@ -72,7 +72,12 @@ export default function BarChart(props: BarChartProps) {
         beginAtZero: true,
         max: maxSalary,
         ticks: {
-          callback: function(this: Scale<CoreScaleOptions>, tickValue: string | number, _index: number, _ticks: Tick[]) {
+          callback: function (
+            this: Scale<CoreScaleOptions>,
+            tickValue: string | number,
+            _index: number,
+            _ticks: Tick[]
+          ) {
             const value = typeof tickValue === 'string' ? parseFloat(tickValue) : tickValue;
             const salary = Math.round(value);
             const text = format({ prefix: '$' })(salary);

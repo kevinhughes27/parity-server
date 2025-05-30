@@ -90,7 +90,12 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
         beginAtZero: true,
         suggestedMax: Math.round(salaryCap * 1.1),
         ticks: {
-          callback: function(this: Scale<CoreScaleOptions>, tickValue: string | number, _index: number, _ticks: Tick[]) {
+          callback: function (
+            this: Scale<CoreScaleOptions>,
+            tickValue: string | number,
+            _index: number,
+            _ticks: Tick[]
+          ) {
             const value = typeof tickValue === 'string' ? parseFloat(tickValue) : tickValue;
             const salary = Math.round(value);
             return format({ prefix: '$' })(salary);
