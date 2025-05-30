@@ -1,5 +1,5 @@
 import React from 'react';
-import MUIDataTable from 'mui-datatables';
+import MUIDataTable, { MUIDataTableOptions, MUIDataTableProps } from 'mui-datatables';
 import { map, keys } from 'lodash';
 import * as ls from 'local-storage';
 import { Stats } from '../api';
@@ -220,31 +220,37 @@ function StatsTable(props: { stats: Stats }) {
     };
   });
 
+  const options: MUIDataTableOptions = {
+    responsive: 'standard',
+    search: true,
+    searchOpen: true,
+    onSearchChange: (searchText: string | null) => {
+      ls.set<string>(storageKey, searchText || '');
+    },
+    searchText: ls.get<string>(storageKey) || '',
+    sort: true,
+    sortOrder: {
+      name: 'pay',
+      direction: 'desc',
+    },
+    selectableRows: 'none',
+    pagination: false,
+    download: false,
+    print: false,
+  };
+
+  const tableProps: MUIDataTableProps = {
+    title: null,
+    columns: columnsMeta,
+    data: statsArray,
+    options,
+  };
+
+  const TableComponent = MUIDataTable as React.ComponentType<MUIDataTableProps>;
+
   return (
     <div className="responsive-table">
-      <MUIDataTable
-        title={null}
-        columns={columnsMeta}
-        data={statsArray}
-        options={{
-          responsive: 'standard',
-          search: true,
-          searchOpen: true,
-          onSearchChange: (searchText: string | null) => {
-            ls.set<string>(storageKey, searchText || '');
-          },
-          searchText: ls.get<string>(storageKey) || '',
-          sort: true,
-          sortOrder: {
-            name: 'pay',
-            direction: 'desc',
-          },
-          selectableRows: 'none',
-          pagination: false,
-          download: false,
-          print: false,
-        }}
-      />
+      <TableComponent {...tableProps} />
     </div>
   );
 }

@@ -4,7 +4,13 @@ import { MemoryRouter } from 'react-router-dom';
 import StatsPage from '../StatsPage';
 import * as statsHooks from '../../hooks/stats';
 import * as leagueHooks from '../../hooks/league';
-import { FunctionComponent } from 'react';
+import { ReactNode } from 'react';
+import { Stats } from '../../api';
+
+interface IStatsPageComponentProps {
+  week: number;
+  stats: Stats;
+}
 
 // Mock the hooks
 vi.mock('../../hooks/stats', () => ({
@@ -16,7 +22,7 @@ vi.mock('../../hooks/league', () => ({
 }));
 
 // Mock component for StatsPage
-const MockStatsComponent: FunctionComponent<{ stats: Record<string, unknown> }> = ({ stats }) => (
+const MockStatsComponent = ({ stats }: IStatsPageComponentProps): ReactNode => (
   <div>
     {Object.values(stats).map(value => {
       const player = value as { name: string; team: string; goals: number };

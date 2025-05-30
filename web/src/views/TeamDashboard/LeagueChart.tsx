@@ -9,6 +9,8 @@ import {
   TooltipPositionerMap,
   Scale,
   CoreScaleOptions,
+  ChartOptions,
+  Tick,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import format from 'format-number';
@@ -78,19 +80,20 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
     ),
   };
 
-  const options = {
+  const options: ChartOptions<'bar'> = {
     scales: {
       x: {
         display: false,
       },
       y: {
         stacked: true,
+        beginAtZero: true,
+        suggestedMax: Math.round(salaryCap * 1.1),
         ticks: {
-          min: 0,
-          suggestedMax: Math.round(salaryCap * 1.1),
-          callback: function (this: Scale<CoreScaleOptions>, tickValue: number) {
-            const value = Math.round(tickValue);
-            return format({ prefix: '$' })(value);
+          callback: function(this: Scale<CoreScaleOptions>, tickValue: string | number, _index: number, _ticks: Tick[]) {
+            const value = typeof tickValue === 'string' ? parseFloat(tickValue) : tickValue;
+            const salary = Math.round(value);
+            return format({ prefix: '$' })(salary);
           },
         },
       },

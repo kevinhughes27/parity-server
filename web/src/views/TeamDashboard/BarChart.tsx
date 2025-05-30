@@ -6,6 +6,11 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  ChartOptions,
+  TooltipItem,
+  Scale,
+  CoreScaleOptions,
+  Tick,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import format from 'format-number';
@@ -41,18 +46,15 @@ export default function BarChart(props: BarChartProps) {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<'bar'> = {
     plugins: {
       legend: {
         display: false,
       },
-      tooltips: {
+      tooltip: {
         callbacks: {
-          label: (
-            tooltipItem: { datasetIndex: number; index: number },
-            data: { datasets: { data: number[] }[] }
-          ) => {
-            const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+          label: function(tooltipItem: TooltipItem<'bar'>) {
+            const value = tooltipItem.raw as number;
             const salary = Math.round(value);
             const text = format({ prefix: '$' })(salary);
             return text;
@@ -67,12 +69,13 @@ export default function BarChart(props: BarChartProps) {
         },
       },
       y: {
+        beginAtZero: true,
+        max: maxSalary,
         ticks: {
-          min: 0,
-          max: maxSalary,
-          callback: (data: number) => {
-            const value = Math.round(data);
-            const text = format({ prefix: '$' })(value);
+          callback: function(this: Scale<CoreScaleOptions>, tickValue: string | number, _index: number, _ticks: Tick[]) {
+            const value = typeof tickValue === 'string' ? parseFloat(tickValue) : tickValue;
+            const salary = Math.round(value);
+            const text = format({ prefix: '$' })(salary);
             return text;
           },
         },

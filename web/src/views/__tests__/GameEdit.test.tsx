@@ -1,3 +1,4 @@
+/* global HTMLElement */
 import { describe, it, expect, vi } from 'vitest';
 import { render, waitFor, act } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
