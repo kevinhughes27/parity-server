@@ -18,6 +18,12 @@ class ResizeObserver {
 
 window.ResizeObserver = ResizeObserver;
 
+// Mock window.scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: vi.fn(),
+  writable: true,
+});
+
 // Robust mock for getClientRects for all elements
 Object.defineProperty(Element.prototype, 'getClientRects', {
   configurable: true,
