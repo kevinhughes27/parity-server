@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import GameEdit from '../Game/Edit';
 import { fetchGame } from '../../api';
@@ -13,13 +13,17 @@ vi.mock('../../api', () => ({
 
 describe('GameEdit', () => {
   it('renders the Editor component after loading', async () => {
-    const { container } = render(
-      <MemoryRouter initialEntries={['/league1/game1']}>
-        <Routes>
-          <Route path="/:leagueId/:gameId" element={<GameEdit />} />
-        </Routes>
-      </MemoryRouter>
-    );
+    let container: HTMLElement;
+    await act(async () => {
+      const rendered = render(
+        <MemoryRouter initialEntries={['/league1/game1']}>
+          <Routes>
+            <Route path="/:leagueId/:gameId" element={<GameEdit />} />
+          </Routes>
+        </MemoryRouter>
+      );
+      container = rendered.container;
+    });
 
     // Wait for fetchGame to resolve
     await vi.waitFor(() => {
