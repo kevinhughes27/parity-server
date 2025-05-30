@@ -56,6 +56,10 @@ jobs:
           command: cd web && yarn lint
 
       - run:
+          name: "tsc check"
+          command: cd web && yarn type-check
+
+      - run:
           name: "check formatting"
           command: cd web && yarn format:check
 
