@@ -24,7 +24,9 @@ vi.mock('../../api', () => ({
   ],
 }));
 
-const MockSalaryComponent = (_props: ISalaryPageComponentProps): ReactNode => <div>Mock Salary</div>;
+const MockSalaryComponent = (_props: ISalaryPageComponentProps): ReactNode => (
+  <div>Mock Salary</div>
+);
 
 describe('SalaryPage', () => {
   beforeEach(() => {
