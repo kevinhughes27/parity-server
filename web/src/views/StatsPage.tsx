@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Layout from '../layout';
 import Loading from '../components/Loading';
 import StatsFilters from '../components/StatsFilters';
@@ -11,7 +11,7 @@ interface IStatsPageComponentProps {
   stats: Stats;
 }
 
-function StatsPage(props: { component: React.FunctionComponent<IStatsPageComponentProps> }) {
+function StatsPage(props: { component: (props: IStatsPageComponentProps) => ReactNode }) {
   const [league] = useLeague();
   const [data, loading, changeWeek] = useStats(league);
 

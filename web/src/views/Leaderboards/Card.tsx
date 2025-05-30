@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -46,7 +46,7 @@ interface CardProps {
   num?: number;
 }
 
-function Card({ stat, stats, money = false, num = 10 }: CardProps): JSX.Element | null {
+function Card({ stat, stats, money = false, num = 10 }: CardProps): ReactNode {
   // Don't render if all values are zero
   if (!hasNonZeroValues(stats, stat)) {
     return null;

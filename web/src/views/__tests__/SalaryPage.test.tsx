@@ -3,7 +3,13 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import SalaryPage from '../SalaryPage';
 import * as leagueHooks from '../../hooks/league';
-import { FunctionComponent } from 'react';
+import { ReactNode } from 'react';
+import { Player } from '../../api';
+
+interface ISalaryPageComponentProps {
+  weeks: number[];
+  players: Player[];
+}
 
 vi.mock('../../hooks/league', () => ({
   useLeague: vi.fn(),
@@ -18,7 +24,7 @@ vi.mock('../../api', () => ({
   ],
 }));
 
-const MockSalaryComponent: FunctionComponent = () => <div>Mock Salary</div>;
+const MockSalaryComponent = (_props: ISalaryPageComponentProps): ReactNode => <div>Mock Salary</div>;
 
 describe('SalaryPage', () => {
   beforeEach(() => {

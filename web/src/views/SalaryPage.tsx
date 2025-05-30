@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import Layout from '../layout';
 import Loading from '../components/Loading';
 import LeaguePicker from '../components/LeaguePicker';
@@ -10,7 +10,7 @@ interface ISalaryPageComponentProps {
   players: Player[];
 }
 
-function SalaryProvider(props: { component: React.FunctionComponent<ISalaryPageComponentProps> }) {
+function SalaryProvider(props: { component: (props: ISalaryPageComponentProps) => ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [players, setPlayers] = useState<Player[]>([]);
   const [weeks, setWeeks] = useState<number[]>([]);
