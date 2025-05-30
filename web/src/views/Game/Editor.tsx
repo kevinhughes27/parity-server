@@ -81,12 +81,10 @@ export default function GameEditor(props: { gameId: string; leagueId: string; ga
           const response = await deleteGame(props.gameId, props.leagueId, password);
 
           if (response.status === 200) {
-            // eslint-disable-next-line no-console
             console.log(`[Success] ${props.gameId} deleted.`);
             navigate('/games/');
           } else {
             const text = await response.text();
-            // eslint-disable-next-line no-console
             console.log(text);
             setSaving(false);
           }
@@ -104,12 +102,10 @@ export default function GameEditor(props: { gameId: string; leagueId: string; ga
           const response = await saveGame(props.gameId, props.leagueId, json, password);
 
           if (response.status === 200) {
-            // eslint-disable-next-line no-console
             console.log(`[Success] ${props.gameId} updated.`);
             setSaving(false);
           } else {
             const text = await response.text();
-            // eslint-disable-next-line no-console
             console.log(text);
             setSaving(false);
           }
