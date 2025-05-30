@@ -66,11 +66,11 @@ describe('Leaderboards', () => {
 
   it('renders money stats with proper formatting', () => {
     render(<Leaderboards stats={mockStats} />);
-    
+
     // Check for money stat titles
     expect(screen.getByText('Pay')).toBeInTheDocument();
     expect(screen.getByText('Salary per point')).toBeInTheDocument();
-    
+
     // Check for formatted money values
     expect(screen.getByText('$2,000')).toBeInTheDocument();
     expect(screen.getByText('$1,500')).toBeInTheDocument();
@@ -79,16 +79,17 @@ describe('Leaderboards', () => {
 
   it('renders number stats with proper sorting', () => {
     render(<Leaderboards stats={mockStats} />);
-    
+
     // Check for number stat titles
     expect(screen.getByText('Goals')).toBeInTheDocument();
     expect(screen.getByText('Assists')).toBeInTheDocument();
-    
+
     // Find the Goals table and check its values
     const goalsTable = screen.getByText('Goals').closest('div')?.querySelector('table');
-    const goalsValues = Array.from(goalsTable?.querySelectorAll('td:nth-child(2)') || [])
-      .map(cell => cell.textContent);
-    
+    const goalsValues = Array.from(goalsTable?.querySelectorAll('td:nth-child(2)') || []).map(
+      cell => cell.textContent
+    );
+
     expect(goalsValues[0]).toBe('5'); // Player 1 should be first
     expect(goalsValues[1]).toBe('4'); // Player 3 should be second
     expect(goalsValues[2]).toBe('3'); // Player 2 should be third
@@ -107,14 +108,14 @@ describe('Leaderboards', () => {
     };
 
     render(<Leaderboards stats={statsWithZeros} />);
-    
+
     // The callahan stat should not be rendered since all values are zero
     expect(screen.queryByText('Callahan')).not.toBeInTheDocument();
   });
 
   it('renders all stat types', () => {
     render(<Leaderboards stats={mockStats} />);
-    
+
     // Check for all stat types
     expect(screen.getByText('Pay')).toBeInTheDocument();
     expect(screen.getByText('Salary per point')).toBeInTheDocument();
@@ -127,4 +128,4 @@ describe('Leaderboards', () => {
     expect(screen.getByText('D blocks')).toBeInTheDocument();
     expect(screen.getByText('Throw aways')).toBeInTheDocument();
   });
-}); 
+});

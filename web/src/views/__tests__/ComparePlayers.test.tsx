@@ -4,7 +4,7 @@ import ComparePlayers from '../ComparePlayers';
 import { Stats } from '../../api';
 
 const mockStats: Stats = {
-  'Alice': {
+  Alice: {
     name: 'Alice',
     team: 'Red',
     goals: 7,
@@ -23,7 +23,7 @@ const mockStats: Stats = {
     pay: 1200,
     salary_per_point: 120,
   },
-  'Bob': {
+  Bob: {
     name: 'Bob',
     team: 'Blue',
     goals: 4,
@@ -51,4 +51,4 @@ describe('ComparePlayers', () => {
     expect(screen.getAllByDisplayValue('Alice').length).toBeGreaterThan(0);
     expect(screen.getAllByDisplayValue('Bob').length).toBeGreaterThan(0);
   });
-}); 
+});

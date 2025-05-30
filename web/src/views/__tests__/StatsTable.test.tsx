@@ -4,7 +4,7 @@ import StatsTable from '../StatsTable';
 import { Stats } from '../../api';
 
 const mockStats: Stats = {
-  'Alice': {
+  Alice: {
     name: 'Alice',
     team: 'Red',
     goals: 7,
@@ -23,7 +23,7 @@ const mockStats: Stats = {
     pay: 1200,
     salary_per_point: 120,
   },
-  'Bob': {
+  Bob: {
     name: 'Bob',
     team: 'Blue',
     goals: 4,
@@ -64,4 +64,4 @@ describe('StatsTable', () => {
     expect(screen.getByText('$1,200')).toBeInTheDocument();
     expect(screen.getByText('$900')).toBeInTheDocument();
   });
-}); 
+});
