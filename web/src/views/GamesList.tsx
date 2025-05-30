@@ -7,7 +7,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import { styled } from '@mui/material/styles';
 import { groupBy } from 'lodash';
 import { useLeague } from '../hooks/league';
@@ -65,15 +64,22 @@ function GamesList() {
   };
 
   const renderGame = (game: Game) => {
+    const styles = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
     return (
       <StyledNavLink key={game.id} to={`/${game.league_id}/games/${game.id}`}>
         <ListItemButton divider>
-          <ListItemText style={{ paddingRight: 60 }}>
-            {game.homeTeam} vs {game.awayTeam}
-            <ListItemSecondaryAction>
-              {game.homeScore} - {game.awayScore}
-            </ListItemSecondaryAction>
-          </ListItemText>
+          <ListItemText
+            primary={
+              <div style={styles}>
+                <span>
+                  {game.homeTeam} vs {game.awayTeam}
+                </span>
+                <span>
+                  {game.homeScore} - {game.awayScore}
+                </span>
+              </div>
+            }
+          />
         </ListItemButton>
       </StyledNavLink>
     );

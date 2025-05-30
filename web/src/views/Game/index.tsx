@@ -25,6 +25,10 @@ function GameShow() {
   const [loading, setLoading] = useState(true);
   const [game, setGame] = useState<Game | null>(null);
 
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   React.useEffect(() => {
     if (!leagueId || !gameId) return;
     const fetchData = async () => {
