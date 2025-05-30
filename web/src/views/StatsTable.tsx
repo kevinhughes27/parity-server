@@ -78,6 +78,7 @@ const columnsMeta = [
       sortDescFirst: true,
       searchable: false,
       filter: true,
+      display: false,
       customFilterListOptions: {
         render: (v: number) => {
           return `Callahans: ${v}`;
