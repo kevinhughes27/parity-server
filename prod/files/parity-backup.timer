@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Parity Backup Sunday Night
+
+[Timer]
+# this is UTC which == Sunday 9pm EST
+OnCalendar=Mon 1:30 America/Toronto
+
+[Install]
+WantedBy=timers.target

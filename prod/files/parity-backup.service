@@ -1,0 +1,7 @@
+[Unit]
+Description=Parity Backup
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server/server
+ExecStart=/bin/bash -c 'cp db.sqlite /home/ubuntu/backups/db_$(date +%%b-%%d).sqlite'

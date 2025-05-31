@@ -1,0 +1,8 @@
+[Unit]
+Description=Zuluru Sync
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server
+EnvironmentFile=/home/ubuntu/zuluru-sync.env
+ExecStart=/home/ubuntu/.local/bin/uv run server/zuluru_sync.py

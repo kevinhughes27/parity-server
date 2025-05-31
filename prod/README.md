@@ -17,6 +17,29 @@
 
   the IP address is listed in the AWS console. Note this IP can change
 
+6. Install the required dependencies `uv` and `caddy`
+
+7. The deploy script will create and update most of the other required files with the exception of the following EnvironmentFiles which need to be created manually.
+
+TODO test that these vars are working
+
+/home/ubuntu/parity-server.env:
+
+```
+
+PARITY_EDIT_PASSWORD=...
+
+```
+
+/home/ubuntu/zuluru-sync.env:
+
+```
+
+ZULURU_USER=...
+ZULURU_PASSWORD=...
+
+```
+
 
 ### SSH Config
 
