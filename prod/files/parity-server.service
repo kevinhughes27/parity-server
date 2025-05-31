@@ -1,0 +1,14 @@
+[Unit]
+Description=Parity Server
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parity-server/server
+EnvironmentFile=/home/ubuntu/parity-server.env
+ExecStart=/home/ubuntu/.local/bin/uv run fastapi run --workers 2 --port 8080
+TimeoutSec=30
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

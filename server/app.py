@@ -28,7 +28,7 @@ if not react_app_path.exists():
 # Logging
 logging.basicConfig()
 logger = logging.getLogger("sqlalchemy.engine")
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.WARN)  # INFO to see queries
 
 # Dependencies
 SessionDep = Annotated[Session, Depends(db.get_session)]
