@@ -21,23 +21,17 @@
 
 7. The deploy script will create and update most of the other required files with the exception of the following EnvironmentFiles which need to be created manually.
 
-TODO test that these vars are working
-
 /home/ubuntu/parity-server.env:
 
 ```
-
 PARITY_EDIT_PASSWORD=...
-
 ```
 
 /home/ubuntu/zuluru-sync.env:
 
 ```
-
 ZULURU_USER=...
 ZULURU_PASSWORD=...
-
 ```
 
 
@@ -52,8 +46,6 @@ Host parity-server
   HostName 3.98.197.218
   User ubuntu
   IdentityFile ~/.ssh/parity.pem
-  ForwardAgent yes
-  RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
 ```
 
 
@@ -64,5 +56,4 @@ To deploy we use the deploy script `prod/deploy.sh` which will copy the systemd 
 
 ```sh
 ./prod/deploy.sh -r parity-server
-
 ```
