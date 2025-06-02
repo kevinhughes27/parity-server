@@ -1,10 +1,11 @@
-import { Bookkeeper } from './Bookkeeper';
-import { db } from './db'; // We'll mock this or use an in-memory version
-import { StoredGame } from './db';
-import { EventModel, EventType } from './models/EventModel';
-import { PointModel } from './models/PointModel';
-import Dexie from 'dexie';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { Bookkeeper } from '../Bookkeeper';
+import { db } from '../db'; // We'll mock this or use an in-memory version
+import { StoredGame } from '../db';
+import { EventModel, EventType } from '../models/EventModel';
+import { PointModel } from '../models/PointModel';
 import 'fake-indexeddb/auto'; // Polyfills IndexedDB in Node.js environment for testing
+import Dexie from 'dexie';
 
 // Define a type for our test database
 interface TestDB extends Dexie {
@@ -48,7 +49,7 @@ describe('Bookkeeper', () => {
 
     bookkeeper = new Bookkeeper(gameId, testDb as any); // Cast 'any' for simplicity if db types don't perfectly align for test
     await bookkeeper.loadGame();
-    
+
     // Set initial lines for points, similar to recordActivePlayers
     // Tests can override this by calling setCurrentLine again if needed.
     bookkeeper.setCurrentLine([...initialHomeRoster], [...initialAwayRoster]);
@@ -108,7 +109,7 @@ describe('Bookkeeper', () => {
     await recordPass(); // PLAYER1 passes to PLAYER2
     bookkeeper.firstActor = PLAYER2; // Ensure PLAYER2 is scorer
     await bookkeeper.recordPoint();
-    
+
     expect(bookkeeper.gameData.homeScore).toBe(1);
     await bookkeeper.undo();
 
@@ -143,9 +144,9 @@ describe('Bookkeeper', () => {
     // Home (PLAYER1) has disc
     bookkeeper.recordFirstActor(PLAYER1, true);
     await bookkeeper.recordThrowAway(); // Turnover, Away possession
-    
+
     // Away (PLAYER2) picks up
-    bookkeeper.recordFirstActor(PLAYER2, false); 
+    bookkeeper.recordFirstActor(PLAYER2, false);
     expect(bookkeeper.homePossession).toBe(false); // Away has disc
 
     // PLAYER2 (Away) throws, PLAYER3 (Home) gets D
@@ -165,7 +166,7 @@ describe('Bookkeeper', () => {
     // Home (PLAYER1) has disc
     bookkeeper.recordFirstActor(PLAYER1, true);
     await bookkeeper.recordThrowAway(); // Turnover, Away possession
-    
+
     // Away (PLAYER2) picks up
     bookkeeper.recordFirstActor(PLAYER2, false);
     expect(bookkeeper.homePossession).toBe(false);
@@ -215,12 +216,12 @@ describe('Bookkeeper', () => {
 
     // Away team (PLAYER2) picks up
     bookkeeper.recordFirstActor(PLAYER2, false); // PLAYER2 (Away) has disc
-    
+
     // Simulating the Java test's sequence for CatchD and subsequent undos
     // After PLAYER2 (Away) is firstActor (from pickup):
     // bookkeeper.firstActor = PLAYER2; bookkeeper.homePossession = false;
     await bookkeeper.recordCatchD(); // P2 (Away) gets D. homePossession becomes true. firstActor is P2.
-    
+
     await bookkeeper.undo();   //undo CatchD. firstActor=P2(A), homePossession=false. activePoint has TA.
     expect(bookkeeper.firstActor).toBe(PLAYER2);
     expect(bookkeeper.homePossession).toBe(false); // Possession back to Away
@@ -229,22 +230,22 @@ describe('Bookkeeper', () => {
 
     await bookkeeper.undo();   //undo recordFirstActor(P2, false). firstActor=null, homePossession=false (still Away's possession after Home's TA).
     expect(bookkeeper.firstActor).toBeNull();
-    expect(bookkeeper.homePossession).toBe(false); 
+    expect(bookkeeper.homePossession).toBe(false);
     expect(bookkeeper.activePoint?.getLastEvent()?.type).toBe(EventType.THROWAWAY);
 
 
     // Home team (PLAYER1) gets a D (disc was loose or thrown by Away)
     bookkeeper.recordFirstActor(PLAYER1, true); // PLAYER1 (Home) selected for the D. homePossession becomes true.
     await bookkeeper.recordD(); // PLAYER1 (Home) gets D. firstActor is null. homePossession is true.
-    
+
     // Away team (PLAYER2) picks up
     bookkeeper.recordFirstActor(PLAYER2, false); // PLAYER2 (Away) picks up. homePossession = false.
-    
+
     await bookkeeper.recordPass(PLAYER3); // PLAYER2 (Away) passes to PLAYER3 (Away). firstActor = P3 (Away).
     await bookkeeper.recordPoint(); // PLAYER3 (Away) scores. AwayScore = 1.
-    
+
     await bookkeeper.undo(); // Undo point. firstActor = P3 (Away). AwayScore = 0. activePoint has D and Pass.
 
-    verifyComplexScenarioEvents(); 
+    verifyComplexScenarioEvents();
   });
 });
