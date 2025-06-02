@@ -46,23 +46,19 @@ const EditRoster: React.FC<EditRosterProps> = ({
     }
   };
   
-  // Effect to update currentRosterNames if initialRosterPlayers changes and it's the first load
-  // This helps sync if the parent component re-selects a team
+  // Effect to update currentRosterNames if initialRosterPlayers changes (e.g. team selection changes in parent)
+  // This ensures that if the parent component changes the team, the roster here resets to the new team's default.
   useEffect(() => {
-    const initialNames = initialRosterPlayers.map(p => p.name);
-    // A simple way to check if it's a "reset" based on team selection rather than ongoing edits
-    // This might need refinement based on how NewGameSetup manages state on team change
-    if (JSON.stringify(initialNames.sort()) !== JSON.stringify(currentRosterNames.filter(name => initialRosterPlayers.find(p=>p.name === name)).sort())) {
-         onRosterChange(initialNames);
-    }
+     onRosterChange(initialRosterPlayers.map(p => p.name));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialRosterPlayers]); // Only re-run if the initial players prop changes
+  }, [initialRosterPlayers]); // Rerun when the initial set of players (from team selection) changes. onRosterChange is stable.
 
 
   return (
     <div style={{ border: '1px solid #e0e0e0', padding: '15px', borderRadius: '5px', marginBottom: '20px' }}>
       <h4>{teamName} Roster ({currentRosterNames.length} players)</h4>
-      <ul style={{ listStyleType: 'none', paddingLeft: 0, maxHeight: '200px', overflowY: 'auto' }}>
+      {/* Removed maxHeight and overflowY to show full roster */}
+      <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         {currentRosterNames.map(playerName => (
           <li key={playerName} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: '1px solid #f0f0f0' }}>
             {playerName}
