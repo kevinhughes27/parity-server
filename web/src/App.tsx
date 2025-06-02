@@ -15,6 +15,7 @@ import TeamDashboard from './views/TeamDashboard';
 import StatKeeper from './views/StatKeeper';
 import LocalGame from './views/StatKeeper/LocalGame';
 import NewGameSetup from './views/StatKeeper/NewGameSetup'; 
+import EditGameRosters from './views/StatKeeper/EditGameRosters'; // New Import
 
 function App() {
   return (
@@ -32,8 +33,8 @@ function App() {
         <Route path="/stat_keeper" element={<StatKeeper />} />
         <Route path="/stat_keeper/game/:localGameId" element={<LocalGame />} />
         <Route path="/stat_keeper/new_game" element={<NewGameSetup />} />
-        {/* Route for editing existing game setup, reuses NewGameSetup component */}
-        <Route path="/stat_keeper/edit_game_setup/:localGameId" element={<NewGameSetup />} /> 
+        {/* Route for editing existing game rosters, uses the new EditGameRosters component */}
+        <Route path="/stat_keeper/edit_game_setup/:localGameId" element={<EditGameRosters />} /> 
       </Routes>
     </BrowserRouter>
   );

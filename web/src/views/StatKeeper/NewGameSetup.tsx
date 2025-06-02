@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link, useParams } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from '../../db';
 import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
 
@@ -7,10 +7,9 @@ import EditRoster from './EditRoster';
 
 function NewGameSetup() {
   const navigate = useNavigate();
-  const { localGameId: paramGameId } = useParams<{ localGameId: string }>();
 
-  const [editingGameId, setEditingGameId] = useState<number | null>(null);
-  const [loadedGameForEdit, setLoadedGameForEdit] = useState<StoredGame | null>(null);
+  // Removed state and effects related to editing an existing game
+  // (paramGameId, editingGameId, loadedGameForEdit, isInitialRosterSetForEdit)
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues.length > 0 ? leagues[0].id : '');
   const [leagueTeams, setLeagueTeams] = useState<LeagueTeam[]>([]);
@@ -26,36 +25,6 @@ function NewGameSetup() {
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
   const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
-  const [isInitialRosterSetForEdit, setIsInitialRosterSetForEdit] = useState(false);
-
-
-  // Effect to handle loading game for editing
-  useEffect(() => {
-    const gameIdToEdit = paramGameId ? parseInt(paramGameId, 10) : null;
-    if (gameIdToEdit && !isNaN(gameIdToEdit)) {
-      setEditingGameId(gameIdToEdit);
-      db.games.get(gameIdToEdit).then(game => {
-        if (game) {
-          setLoadedGameForEdit(game);
-          setSelectedLeagueId(game.league_id); // This will trigger team loading
-          setWeek(game.week);
-          setIsInitialRosterSetForEdit(false); // Reset flag for new game load
-        } else {
-          navigate('/stat_keeper'); // Game not found, redirect
-        }
-      });
-    } else {
-      // Reset fields if navigating from edit mode to new game mode (e.g. browser back)
-      setEditingGameId(null);
-      setLoadedGameForEdit(null);
-      setSelectedLeagueId(leagues.length > 0 ? leagues[0].id : '');
-      setWeek(1);
-      setHomeTeamId('');
-      setAwayTeamId('');
-      // Rosters will be cleared by team selection change effect
-      setIsInitialRosterSetForEdit(false);
-    }
-  }, [paramGameId, navigate]);
 
   // Effect to fetch teams when selectedLeagueId changes
   useEffect(() => {
@@ -66,11 +35,9 @@ function NewGameSetup() {
     }
     setLoadingTeams(true);
     setErrorTeams(null);
-    // Don't reset team selections if we are loading for an existing game and teams for its league are being fetched
-    if (!editingGameId || (loadedGameForEdit && selectedLeagueId !== loadedGameForEdit.league_id)) {
-        setHomeTeamId(''); 
-        setAwayTeamId('');
-    }
+    setHomeTeamId(''); 
+    setAwayTeamId('');
+    // Rosters will be cleared by team selection change effect below
 
     fetchLeagueTeams(selectedLeagueId)
       .then(teams => {
@@ -93,108 +60,64 @@ function NewGameSetup() {
       .finally(() => {
         setLoadingTeams(false);
       });
-  }, [selectedLeagueId, editingGameId, loadedGameForEdit]);
-
-  // Effect to populate team IDs and rosters when editing and teams are loaded
-  useEffect(() => {
-    if (editingGameId && loadedGameForEdit && leagueTeams.length > 0 && !isInitialRosterSetForEdit) {
-      const homeTeam = leagueTeams.find(t => t.name === loadedGameForEdit.homeTeam);
-      const awayTeam = leagueTeams.find(t => t.name === loadedGameForEdit.awayTeam);
-
-      if (homeTeam) setHomeTeamId(homeTeam.id.toString());
-      if (awayTeam) setAwayTeamId(awayTeam.id.toString());
-      
-      // Set rosters from the loaded game *after* team IDs are potentially set
-      // This ensures EditRoster receives initialRosterPlayers based on selected team,
-      // but then we immediately set the actual saved roster.
-      setHomeRosterNames([...loadedGameForEdit.homeRoster]);
-      setAwayRosterNames([...loadedGameForEdit.awayRoster]);
-      setIsInitialRosterSetForEdit(true); // Mark as set to prevent re-running this part
-    }
-  }, [editingGameId, loadedGameForEdit, leagueTeams, isInitialRosterSetForEdit]);
-
+  }, [selectedLeagueId]);
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamId);
 
-  // Update home roster when home team selection changes (for new games or if team is changed during edit)
+  // Update home roster when home team selection changes
    useEffect(() => {
-    if (editingGameId && isInitialRosterSetForEdit && selectedHomeTeamObj?.name === loadedGameForEdit?.homeTeam) {
-      // If editing, initial roster is set, and team hasn't changed from loaded game, don't override with default
-      return;
-    }
     setHomeRosterNames(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
-  }, [selectedHomeTeamObj, editingGameId, isInitialRosterSetForEdit, loadedGameForEdit]);
+  }, [selectedHomeTeamObj]);
 
-  // Update away roster when away team selection changes (for new games or if team is changed during edit)
+  // Update away roster when away team selection changes
   useEffect(() => {
-    if (editingGameId && isInitialRosterSetForEdit && selectedAwayTeamObj?.name === loadedGameForEdit?.awayTeam) {
-      // If editing, initial roster is set, and team hasn't changed from loaded game, don't override with default
-      return;
-    }
     setAwayRosterNames(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
-  }, [selectedAwayTeamObj, editingGameId, isInitialRosterSetForEdit, loadedGameForEdit]);
+  }, [selectedAwayTeamObj]);
 
 
-  const handleSaveGame = async () => {
+  const handleCreateGame = async () => { // Renamed from handleSaveGame
     if (!selectedLeagueId || !selectedHomeTeamObj || !selectedAwayTeamObj || homeRosterNames.length === 0 || awayRosterNames.length === 0) {
       alert('Please select a league, both teams, and ensure rosters are not empty.');
       return;
     }
 
-    const gameDataPayload = {
+    const newGameData: Omit<StoredGame, 'localId'> = {
+      serverId: undefined, // Explicitly undefined for new games
       league_id: selectedLeagueId,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
-      homeScore: editingGameId && loadedGameForEdit ? loadedGameForEdit.homeScore : 0,
+      homeScore: 0,
       homeRoster: homeRosterNames,
       awayTeam: selectedAwayTeamObj.name,
-      awayScore: editingGameId && loadedGameForEdit ? loadedGameForEdit.awayScore : 0,
+      awayScore: 0,
       awayRoster: awayRosterNames,
-      points: editingGameId && loadedGameForEdit ? loadedGameForEdit.points : [],
-      stats: editingGameId && loadedGameForEdit ? loadedGameForEdit.stats : undefined,
-      status: editingGameId && loadedGameForEdit ? loadedGameForEdit.status : 'new',
+      points: [],
+      stats: undefined,
+      status: 'new',
       lastModified: new Date(),
-      // serverId is not managed here, it's part of StoredGame but not directly editable in this form
     };
 
     try {
-      if (editingGameId) {
-        // Update existing game
-        // Ensure we pass all StoredGame fields, even if not directly edited here (like serverId)
-        const updatePayload: StoredGame = {
-            ...loadedGameForEdit!, // Contains original serverId, localId etc.
-            ...gameDataPayload, // Overwrite with new/edited fields
-        };
-        await db.games.update(editingGameId, updatePayload);
-        console.log(`Game with localId: ${editingGameId} updated successfully.`);
-        navigate(`/stat_keeper/game/${editingGameId}`);
-      } else {
-        // Create new game
-        const newGameData: Omit<StoredGame, 'localId'> = {
-            ...gameDataPayload,
-            serverId: undefined, // Explicitly undefined for new games
-        };
-        const id = await db.games.add(newGameData as StoredGame);
-        console.log(`New game added with localId: ${id}`);
-        navigate(`/stat_keeper/game/${id}`);
-      }
+      const id = await db.games.add(newGameData as StoredGame);
+      console.log(`New game added with localId: ${id}`);
+      navigate(`/stat_keeper/game/${id}`);
     } catch (error) {
-      console.error("Failed to save game:", error);
-      alert(`Failed to save game: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      console.error("Failed to create new game:", error);
+      alert(`Failed to create game: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
   
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamId);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamId);
 
-  const pageTitle = editingGameId ? "Edit Game Setup" : "Create New Game";
-  const buttonText = editingGameId ? "Update Game Details" : "Create Game & Start Stat-Taking";
+  const pageTitle = "Create New Game";
+  const buttonText = "Create Game & Start Stat-Taking";
 
   return (
-    <div style={{ padding: '20px' }}>
-      <Link to={editingGameId ? `/stat_keeper/game/${editingGameId}` : "/stat_keeper"} style={{ marginBottom: '20px', display: 'inline-block' }}>
-        &larr; Back
+    <div style={{ padding: '20px', paddingBottom: '40px' }}> {/* Added more padding at the bottom */}
+      <Link to={"/stat_keeper"} style={{ marginBottom: '20px', display: 'inline-block' }}>
+        &larr; Back to StatKeeper Home
       </Link>
       <h1>{pageTitle}</h1>
 
@@ -203,10 +126,7 @@ function NewGameSetup() {
         <select
           id="league-select"
           value={selectedLeagueId}
-          onChange={(e) => {
-            setSelectedLeagueId(e.target.value);
-            setIsInitialRosterSetForEdit(false); // If league changes, rosters need re-evaluation
-          }}
+          onChange={(e) => setSelectedLeagueId(e.target.value)}
           style={{ padding: '8px' }}
         >
           {leagues.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
@@ -236,13 +156,7 @@ function NewGameSetup() {
               <select
                 id="home-team-select"
                 value={homeTeamId}
-                onChange={(e) => {
-                    setHomeTeamId(e.target.value);
-                    // If editing, changing team should reset initial roster flag for that team
-                    if(editingGameId && loadedGameForEdit && selectedHomeTeamObj?.name !== loadedGameForEdit.homeTeam) {
-                        setIsInitialRosterSetForEdit(false); 
-                    }
-                }}
+                onChange={(e) => setHomeTeamId(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
                 disabled={availableHomeTeams.length === 0 && !homeTeamId}
               >
@@ -250,7 +164,6 @@ function NewGameSetup() {
                 {availableHomeTeams.map(team => (
                   <option key={team.id} value={team.id.toString()}>{team.name}</option>
                 ))}
-                 {/* Ensure selected team is in list even if it would be filtered out */}
                 {homeTeamId && !availableHomeTeams.find(t => t.id.toString() === homeTeamId) && selectedHomeTeamObj && (
                     <option key={selectedHomeTeamObj.id} value={selectedHomeTeamObj.id.toString()}>{selectedHomeTeamObj.name}</option>
                 )}
@@ -261,12 +174,7 @@ function NewGameSetup() {
               <select
                 id="away-team-select"
                 value={awayTeamId}
-                onChange={(e) => {
-                    setAwayTeamId(e.target.value);
-                     if(editingGameId && loadedGameForEdit && selectedAwayTeamObj?.name !== loadedGameForEdit.awayTeam) {
-                        setIsInitialRosterSetForEdit(false);
-                    }
-                }}
+                onChange={(e) => setAwayTeamId(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
                 disabled={availableAwayTeams.length === 0 && !awayTeamId}
               >
@@ -284,25 +192,23 @@ function NewGameSetup() {
           {selectedHomeTeamObj && (
             <EditRoster
               teamName={selectedHomeTeamObj.name}
-              initialRosterPlayers={selectedHomeTeamObj.players}
               allLeaguePlayers={allLeaguePlayers}
-              currentRosterNames={homeRosterNames}
+              currentRosterNames={homeRosterNames} // Parent (this component) manages this state
               onRosterChange={setHomeRosterNames}
             />
           )}
           {selectedAwayTeamObj && (
             <EditRoster
               teamName={selectedAwayTeamObj.name}
-              initialRosterPlayers={selectedAwayTeamObj.players}
               allLeaguePlayers={allLeaguePlayers}
-              currentRosterNames={awayRosterNames}
+              currentRosterNames={awayRosterNames} // Parent (this component) manages this state
               onRosterChange={setAwayRosterNames}
             />
           )}
           
           {(selectedHomeTeamObj && selectedAwayTeamObj) && (
             <button 
-                onClick={handleSaveGame} 
+                onClick={handleCreateGame} 
                 style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '5px' }}
                 disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
             >
