@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from '../../db'; // Ensure this path is correct
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
-import { leagues } from '../../api'; // To display league name
+import { db, StoredGame } from './db'; // Updated import path
+import { Link, useNavigate } from 'react-router-dom'; 
+import { leagues } from '../../api'; 
 
 // Helper function to get league name from ID
 const getLeagueName = (leagueId: string): string => {
@@ -11,7 +11,7 @@ const getLeagueName = (leagueId: string): string => {
 };
 
 function StatKeeper() {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const games = useLiveQuery(
     () => db.games.orderBy('lastModified').reverse().toArray(),
@@ -19,7 +19,6 @@ function StatKeeper() {
   );
 
   const handleStartNewGame = () => {
-    // Navigate to the new game setup screen
     navigate('/stat_keeper/new_game');
   };
 
@@ -35,7 +34,6 @@ function StatKeeper() {
       try {
         await db.games.delete(localId);
         console.log(`Game with localId: ${localId} deleted successfully.`);
-        // The list will re-render automatically due to useLiveQuery
       } catch (error) {
         console.error("Failed to delete game:", error);
         alert(`Failed to delete game: ${error instanceof Error ? error.message : 'Unknown error'}`);

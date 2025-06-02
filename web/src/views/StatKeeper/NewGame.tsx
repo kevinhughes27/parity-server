@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { db, StoredGame } from '../../db';
+import { db, StoredGame } from './db'; // Updated import path
 import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
 
 import EditRoster from './EditRoster';
 
-function NewGame() { // Renamed from NewGameSetup
+function NewGame() { 
   const navigate = useNavigate();
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues.length > 0 ? leagues[0].id : '');
@@ -23,7 +23,6 @@ function NewGame() { // Renamed from NewGameSetup
 
   const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
 
-  // Effect to fetch teams when selectedLeagueId changes
   useEffect(() => {
     if (!selectedLeagueId) {
       setLeagueTeams([]);
@@ -34,7 +33,6 @@ function NewGame() { // Renamed from NewGameSetup
     setErrorTeams(null);
     setHomeTeamId('');
     setAwayTeamId('');
-    // Rosters will be cleared by team selection change effect below
 
     fetchLeagueTeams(selectedLeagueId)
       .then(teams => {
@@ -62,12 +60,10 @@ function NewGame() { // Renamed from NewGameSetup
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamId);
 
-  // Update home roster when home team selection changes
    useEffect(() => {
     setHomeRosterNames(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
   }, [selectedHomeTeamObj]);
 
-  // Update away roster when away team selection changes
   useEffect(() => {
     setAwayRosterNames(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
   }, [selectedAwayTeamObj]);
@@ -80,7 +76,7 @@ function NewGame() { // Renamed from NewGameSetup
     }
 
     const newGameData: Omit<StoredGame, 'localId'> = {
-      serverId: undefined, // Explicitly undefined for new games
+      serverId: undefined, 
       league_id: selectedLeagueId,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
@@ -219,4 +215,4 @@ function NewGame() { // Renamed from NewGameSetup
   );
 }
 
-export default NewGame; // Renamed export
+export default NewGame;
