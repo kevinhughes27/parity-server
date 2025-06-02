@@ -14,7 +14,7 @@ import StatsTable from './views/StatsTable';
 import TeamDashboard from './views/TeamDashboard';
 import StatKeeper from './views/StatKeeper';
 import LocalGame from './views/StatKeeper/LocalGame';
-import NewGameSetup from './views/StatKeeper/NewGameSetup'; // New import
+import NewGameSetup from './views/StatKeeper/NewGameSetup'; 
 
 function App() {
   return (
@@ -31,7 +31,9 @@ function App() {
         {/* StatKeeper Routes */}
         <Route path="/stat_keeper" element={<StatKeeper />} />
         <Route path="/stat_keeper/game/:localGameId" element={<LocalGame />} />
-        <Route path="/stat_keeper/new_game" element={<NewGameSetup />} /> {/* New route for game setup */}
+        <Route path="/stat_keeper/new_game" element={<NewGameSetup />} />
+        {/* Route for editing existing game setup, reuses NewGameSetup component */}
+        <Route path="/stat_keeper/edit_game_setup/:localGameId" element={<NewGameSetup />} /> 
       </Routes>
     </BrowserRouter>
   );
