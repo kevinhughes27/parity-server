@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link, useParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from '../../db';
+import { db, StoredGame } from './db'; // Updated import path
 import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
 import EditRoster from './EditRoster';
 
-// Helper function to get league name from ID (can be moved to a utils file if used elsewhere)
 const getLeagueName = (leagueId: string): string => {
   const league = leagues.find(l => l.id === leagueId);
   return league ? league.name : `Unknown League (${leagueId})`;
@@ -13,7 +12,7 @@ const getLeagueName = (leagueId: string): string => {
 
 const LOADING_GAME_SENTINEL = Symbol("loading_game");
 
-function EditGame() { // Renamed from EditGameRosters
+function EditGame() { 
   const navigate = useNavigate();
   const { localGameId: paramGameId } = useParams<{ localGameId: string }>();
   const numericGameId = paramGameId ? parseInt(paramGameId, 10) : undefined;
@@ -24,7 +23,6 @@ function EditGame() { // Renamed from EditGameRosters
   const [loadingLeaguePlayers, setLoadingLeaguePlayers] = useState<boolean>(false);
   const [errorLeaguePlayers, setErrorLeaguePlayers] = useState<string | null>(null);
 
-  // Fetch the game to edit
   const game = useLiveQuery<StoredGame | undefined | typeof LOADING_GAME_SENTINEL>(
     async () => {
       if (numericGameId === undefined || isNaN(numericGameId)) {
@@ -36,7 +34,6 @@ function EditGame() { // Renamed from EditGameRosters
     LOADING_GAME_SENTINEL
   );
 
-  // Effect to fetch all league players once the game is loaded
   useEffect(() => {
     if (game && game !== LOADING_GAME_SENTINEL && game.league_id) {
       setLoadingLeaguePlayers(true);
@@ -63,7 +60,6 @@ function EditGame() { // Renamed from EditGameRosters
     }
   }, [game]);
 
-  // Effect to initialize roster states once the game is loaded
   useEffect(() => {
     if (game && game !== LOADING_GAME_SENTINEL) {
       setHomeRosterNames([...game.homeRoster]);
@@ -161,4 +157,4 @@ function EditGame() { // Renamed from EditGameRosters
   );
 }
 
-export default EditGame; // Renamed export
+export default EditGame;
