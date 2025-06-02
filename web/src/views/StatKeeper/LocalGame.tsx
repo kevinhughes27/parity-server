@@ -10,60 +10,53 @@ const getLeagueName = (leagueId: string): string => {
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 
+// A unique sentinel value to represent the loading state for useLiveQuery's defaultValue
+const LOADING_SENTINEL = Symbol("loading");
+
 function LocalGame() {
-  const { localGameId } = useParams<{ localGameId: string }>();
+  const { localGameId } = useParams<{ localGameId: string }>(); // Hook 1: Called unconditionally
   const numericLocalGameId = localGameId ? parseInt(localGameId, 10) : undefined;
 
-  // Fetch the specific game from Dexie using the localGameId
-  const game = useLiveQuery(
+  // Hook 2: Fetch the specific game from Dexie using the localGameId. Called unconditionally.
+  const game: StoredGame | undefined | typeof LOADING_SENTINEL = useLiveQuery(
     async () => {
       if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
+        // If the ID is invalid for the query, resolve to undefined.
         return undefined;
       }
+      // db.games.get() will return the game object or undefined if not found.
       return db.games.get(numericLocalGameId);
     },
-    [numericLocalGameId] // Dependencies array: re-run query if localGameId changes
+    [numericLocalGameId], // Dependencies array: re-run query if localGameId changes
+    LOADING_SENTINEL // Default value: returned until the async querier resolves for the first time
   );
 
+  // Handle invalid ID parsed from URL
   if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
     return (
-      <div>
+      <div style={{ padding: '20px' }}>
         <p>Invalid game ID.</p>
         <Link to="/stat_keeper">Back to StatKeeper Home</Link>
       </div>
     );
   }
 
-  if (game === undefined && numericLocalGameId !== undefined) {
-    // useLiveQuery returns undefined on first render or if game not found
-    // We check numericLocalGameId to distinguish initial load from "not found" after query
-    const gameStillLoading = useLiveQuery(async () => {
-        const g = await db.games.get(numericLocalGameId);
-        return g === undefined; // Returns true if still loading (or truly not found)
-    }, [numericLocalGameId], null); // Default to null to avoid undefined flicker
-
-    if (gameStillLoading === null || gameStillLoading) {
-        return <p>Loading game data...</p>;
-    }
-    return (
-        <div>
-            <p>Game with ID {localGameId} not found.</p>
-            <Link to="/stat_keeper">Back to StatKeeper Home</Link>
-        </div>
-    );
+  // Handle loading state (game is the sentinel value)
+  if (game === LOADING_SENTINEL) {
+    return <p style={{ padding: '20px' }}>Loading game data...</p>;
   }
-  
-  if (!game) {
-    // This case should ideally be caught by the above, but as a fallback
+
+  // Handle game not found (query resolved, but game is undefined)
+  if (game === undefined) {
     return (
-        <div>
-            <p>Game with ID {localGameId} not found.</p>
-            <Link to="/stat_keeper">Back to StatKeeper Home</Link>
-        </div>
+      <div style={{ padding: '20px' }}>
+        <p>Game with ID {localGameId} not found.</p>
+        <Link to="/stat_keeper">Back to StatKeeper Home</Link>
+      </div>
     );
   }
 
-
+  // If we reach here, game is a StoredGame object and is loaded successfully
   return (
     <div style={{ padding: '20px' }}>
       <Link to="/stat_keeper" style={{ marginBottom: '20px', display: 'inline-block' }}>
