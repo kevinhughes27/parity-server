@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from '../../db';
 import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
 
@@ -15,7 +15,7 @@ function NewGameSetup() {
 
   const [homeTeamId, setHomeTeamId] = useState<string>('');
   const [awayTeamId, setAwayTeamId] = useState<string>('');
-  
+
   const [week, setWeek] = useState<number>(1);
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
@@ -107,7 +107,7 @@ function NewGameSetup() {
       alert(`Failed to create game: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
-  
+
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamId);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamId);
 
@@ -130,15 +130,15 @@ function NewGameSetup() {
           {leagues.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
         </select>
       </div>
-      
+
       {/* Week Selection */}
       <div style={{ marginBottom: '15px' }}>
         <label htmlFor="week-select" style={{ marginRight: '10px' }}>Week:</label>
-        <input 
-            type="number" 
-            id="week-select" 
-            value={week} 
-            onChange={(e) => setWeek(parseInt(e.target.value,10) || 1)} 
+        <input
+            type="number"
+            id="week-select"
+            value={week}
+            onChange={(e) => setWeek(parseInt(e.target.value,10) || 1)}
             min="1"
             style={{ padding: '8px' }}
         />
@@ -202,10 +202,10 @@ function NewGameSetup() {
               onRosterChange={setAwayRosterNames}
             />
           )}
-          
+
           {(selectedHomeTeam && selectedAwayTeam) && (
-            <button 
-                onClick={handleCreateGame} 
+            <button
+                onClick={handleCreateGame}
                 style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '5px' }}
                 disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
             >
