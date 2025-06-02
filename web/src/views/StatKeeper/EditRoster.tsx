@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { TeamPlayer } from '../../api'; // Assuming TeamPlayer is defined in api.ts
+import { TeamPlayer } from '../../api'; 
 
 interface EditRosterProps {
   teamName: string;
-  initialRosterPlayers: TeamPlayer[]; // Players from the selected team
+  // currentSavedRoster: string[]; // The actual roster names currently saved with the game for this team
+  // defaultTeamPlayers: TeamPlayer[]; // Players originally on this team as per league data (for reference or future use)
+  
+  // Simpler approach: parent manages the roster state fully. EditRoster just displays and calls back.
+  // Let's revert to the parent (NewGameSetup or EditGameRosters) managing the roster state (homeRosterNames, awayRosterNames)
+  // and passing it down as currentRosterNames. EditRoster calls onRosterChange to update that parent state.
+  // The useEffect that was problematic will be removed. The parent is responsible for initialization.
+
   allLeaguePlayers: TeamPlayer[]; // All players in the league for adding subs
-  currentRosterNames: string[]; // Current list of names for this team's roster
+  currentRosterNames: string[]; // Current list of names for this team's roster, managed by parent
   onRosterChange: (newRosterNames: string[]) => void;
 }
 
 const EditRoster: React.FC<EditRosterProps> = ({
   teamName,
-  initialRosterPlayers,
   allLeaguePlayers,
-  currentRosterNames,
+  currentRosterNames, // This is the source of truth for displayed roster
   onRosterChange,
 }) => {
   const [newSubName, setNewSubName] = useState('');
@@ -46,18 +52,15 @@ const EditRoster: React.FC<EditRosterProps> = ({
     }
   };
   
-  // Effect to update currentRosterNames if initialRosterPlayers changes (e.g. team selection changes in parent)
-  // This ensures that if the parent component changes the team, the roster here resets to the new team's default.
-  useEffect(() => {
-     onRosterChange(initialRosterPlayers.map(p => p.name));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialRosterPlayers]); // Rerun when the initial set of players (from team selection) changes. onRosterChange is stable.
-
+  // The problematic useEffect that reset currentRosterNames based on initialRosterPlayers
+  // has been removed. The parent component (NewGameSetup or EditGameRosters) is now
+  // responsible for initializing and passing the correct currentRosterNames.
+  // NewGameSetup initializes from default team players.
+  // EditGameRosters initializes from the game's saved rosters.
 
   return (
     <div style={{ border: '1px solid #e0e0e0', padding: '15px', borderRadius: '5px', marginBottom: '20px' }}>
       <h4>{teamName} Roster ({currentRosterNames.length} players)</h4>
-      {/* Removed maxHeight and overflowY to show full roster */}
       <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         {currentRosterNames.map(playerName => (
           <li key={playerName} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: '1px solid #f0f0f0' }}>
