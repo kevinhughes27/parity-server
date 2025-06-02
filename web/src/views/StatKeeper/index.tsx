@@ -23,6 +23,27 @@ function StatKeeper() {
     navigate('/stat_keeper/new_game');
   };
 
+  const handleDeleteGame = async (localId: number | undefined) => {
+    if (localId === undefined) {
+      console.error("Cannot delete game with undefined ID.");
+      return;
+    }
+    const gameToDelete = games?.find(g => g.localId === localId);
+    const gameName = gameToDelete ? `${gameToDelete.homeTeam} vs ${gameToDelete.awayTeam}` : `Game ID ${localId}`;
+    
+    if (window.confirm(`Are you sure you want to delete the game: ${gameName}? This action cannot be undone.`)) {
+      try {
+        await db.games.delete(localId);
+        console.log(`Game with localId: ${localId} deleted successfully.`);
+        // The list will re-render automatically due to useLiveQuery
+      } catch (error) {
+        console.error("Failed to delete game:", error);
+        alert(`Failed to delete game: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      }
+    }
+  };
+
+
   if (games === undefined) {
     return <p>Loading local games...</p>;
   }
@@ -58,11 +79,19 @@ function StatKeeper() {
                 <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
               </p>
               
-              {(game.status === 'new' || game.status === 'in-progress' || game.status === 'paused') && game.localId && (
-                <Link to={`/stat_keeper/game/${game.localId}`}>
-                  <button style={{ marginTop: '10px', padding: '8px 12px', cursor: 'pointer' }}>Resume Game</button>
-                </Link>
-              )}
+              <div style={{ marginTop: '10px' }}>
+                {(game.status === 'new' || game.status === 'in-progress' || game.status === 'paused') && game.localId && (
+                  <Link to={`/stat_keeper/game/${game.localId}`}>
+                    <button style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}>Resume Game</button>
+                  </Link>
+                )}
+                <button 
+                  onClick={() => handleDeleteGame(game.localId)} 
+                  style={{ padding: '8px 12px', cursor: 'pointer', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
+                >
+                  Delete
+                </button>
+              </div>
             </li>
           ))}
         </ul>
