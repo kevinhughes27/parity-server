@@ -63,8 +63,9 @@ function LocalGame() {
         <Link to="/stat_keeper" style={{ display: 'inline-block' }}>
           &larr; Back to StatKeeper Home
         </Link>
-        <Link to={`/stat_keeper/edit_game_setup/${game.localId}`}>
-          <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Edit Game Setup</button>
+        {/* Updated link to point to /stat_keeper/edit_game/:localGameId */}
+        <Link to={`/stat_keeper/edit_game/${game.localId}`}> 
+          <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Edit Game</button>
         </Link>
       </div>
       <h1>Game: {game.homeTeam} vs {game.awayTeam}</h1>
