@@ -12,7 +12,8 @@ import ComparePlayers from './views/ComparePlayers';
 import SalaryPage from './views/SalaryPage';
 import StatsTable from './views/StatsTable';
 import TeamDashboard from './views/TeamDashboard';
-import StatKeeper from './views/StatKeeper'; // New import
+import StatKeeper from './views/StatKeeper'; // Existing import
+import LocalGame from './views/StatKeeper/LocalGame'; // New import for individual local game
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
         <Route path="/leaderboards" element={<StatsPage component={Leaderboards} />} />
         <Route path="/compare_players" element={<StatsPage component={ComparePlayers} />} />
         <Route path="/team_dashboard" element={<SalaryPage component={TeamDashboard} />} />
-        <Route path="/stat_keeper" element={<StatKeeper />} /> {/* New route */}
+        
+        {/* StatKeeper Routes */}
+        <Route path="/stat_keeper" element={<StatKeeper />} />
+        <Route path="/stat_keeper/game/:localGameId" element={<LocalGame />} /> {/* New route for specific local game */}
       </Routes>
     </BrowserRouter>
   );
