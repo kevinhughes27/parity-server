@@ -150,7 +150,7 @@ function EditGameRosters() {
           />
           <button
             onClick={handleUpdateRosters}
-            style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}
+            style={{ marginBottom: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}
             disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
           >
             Update Rosters
