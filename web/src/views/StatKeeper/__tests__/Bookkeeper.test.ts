@@ -1,7 +1,6 @@
-import { Bookkeeper } from '../Bookkeeper';
-import { EventType, League, Team, Event, GameModel, PointModel, SerializedGameData } from '../models';
-import 'fake-indexeddb/auto';
-import { db, StoredGame } from '../db';
+import { Bookkeeper } from '../../../statkeeper_lib/Bookkeeper';
+import { EventType, League, Team, Event, GameModel, PointModel, SerializedGameData } from '../../../statkeeper_lib/models';
+import { db, StoredGame } from '../../web/src/views/StatKeeper/db'; // Adjust path as needed
 
 const PLAYER1 = "Kevin Hughes";
 const PLAYER2 = "Allan Godding";
@@ -40,15 +39,15 @@ describe('Bookkeeper', () => {
     function verifyEvent(event: Event, type: EventType, firstActor: string, secondActor?: string | null) {
         expect(event.type).toBe(type);
         expect(event.firstActor).toBe(firstActor);
-        if (secondActor === undefined) {
-            expect(event.secondActor === null || event.secondActor === undefined).toBe(true);
-        } else {
+        if (secondActor === undefined) { // Check if secondActor was intentionally omitted in the call to verifyEvent
+             expect(event.secondActor === null || event.secondActor === undefined).toBe(true);
+        } else { // secondActor is explicitly passed as null or a string to verifyEvent
             expect(event.secondActor).toBe(secondActor);
         }
         expect(event.timestamp).toBeDefined();
         expect(typeof event.timestamp).toBe('string');
     }
-
+    
     function recordPass() { // PLAYER1 (home) passes to PLAYER2 (home)
         // For this helper, assume PLAYER1 and PLAYER2 are on the same (home) team line
         const currentHomeLine = [PLAYER1, PLAYER2, PLAYER3, "HP4", "HP5", "HP6", "HP7"];
@@ -148,9 +147,10 @@ describe('Bookkeeper', () => {
     test('testComplexScenario from Java test', () => {
         // Re-setup for this specific scenario to match Java test's implied player movements
         bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, new GameModel());
-        const complexHomeLine = [PLAYER1, PLAYER3];
-        const complexAwayLine = [PLAYER2]; // PLAYER3 will also act for away in one step
+        const complexHomeLine = [PLAYER1, PLAYER3]; // As per Java test, P3 acts for Home then Away
+        const complexAwayLine = [PLAYER2, PLAYER3]; // P3 is also on away for receiving a pass
         bookkeeper.recordActivePlayers(complexHomeLine, complexAwayLine);
+
 
         //1. P2 (Away) has disc, to pull. Point starts. Away possession.
         bookkeeper.recordFirstActor(PLAYER2, false);
@@ -162,11 +162,14 @@ describe('Bookkeeper', () => {
         bookkeeper.undo();
         //5. P3 (Home) picks up instead. firstActor is P3.
         bookkeeper.recordFirstActor(PLAYER3, true);
-        //6. P3 (Home) passes to P1 (Home). firstActor is P1.
-        bookkeeper.recordPass(PLAYER1);
-        //7. P1 (Home) throws away. Away possession. firstActor is null.
+        //6. P3 (Home) passes to P2 (Home - this is PLAYER2 from Java test). firstActor is P2.
+        //   To match Java test, PLAYER2 needs to be on home line for this pass.
+        bookkeeper.recordActivePlayers([PLAYER1, PLAYER2, PLAYER3], complexAwayLine);
+        bookkeeper.recordPass(PLAYER2);
+        //7. P2 (Home) throws away. Away possession. firstActor is null.
         bookkeeper.recordThrowAway();
-        //8. P2 (Away) picks up. firstActor is P2.
+        //8. P2 (Away - original PLAYER2) picks up. firstActor is P2.
+        bookkeeper.recordActivePlayers(complexHomeLine, complexAwayLine); // Reset lines
         bookkeeper.recordFirstActor(PLAYER2, false);
         //9. P2 (Away) gets a D (e.g., on a pass from teammate, or self). firstActor is P2.
         bookkeeper.recordCatchD(); // Using CatchD as it keeps P2 as firstActor
@@ -180,10 +183,6 @@ describe('Bookkeeper', () => {
         //13. P2 (Away) picks up after P1's D. firstActor is P2. Away possession.
         bookkeeper.recordFirstActor(PLAYER2, false);
         //14. P2 (Away) passes to P3 (Away). firstActor is P3.
-        // For this step, P3 needs to be on away team. Let's assume P3 can be an away player for this.
-        // This highlights a complexity if players switch teams or play for both.
-        // For the test, we'll assume P3 is a valid receiver for away.
-        bookkeeper.recordActivePlayers(complexHomeLine, [PLAYER2, PLAYER3]); // Temporarily add P3 to away line
         bookkeeper.recordPass(PLAYER3);
         //15. P3 (Away) scores. Away score = 1.
         bookkeeper.recordPoint();
@@ -195,9 +194,11 @@ describe('Bookkeeper', () => {
         const events = bookkeeper.activePoint!.events;
         expect(events.length).toBe(5);
 
+        // Expected events from Java test:
+        // PULL(P2), PASS(P3->P2), THROWAWAY(P2), DEFENSE(P1), PASS(P2->P3)
         verifyEvent(events[0], EventType.PULL, PLAYER2, null);
-        verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER1);
-        verifyEvent(events[2], EventType.THROWAWAY, PLAYER1, null);
+        verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER2);
+        verifyEvent(events[2], EventType.THROWAWAY, PLAYER2, null);
         verifyEvent(events[3], EventType.DEFENSE, PLAYER1, null);
         verifyEvent(events[4], EventType.PASS, PLAYER2, PLAYER3);
         expect(bookkeeper.awayScore).toBe(0);
@@ -207,7 +208,7 @@ describe('Bookkeeper', () => {
     test('should save and load game state with mementos via Dexie', async () => {
         // 1. Setup initial Bookkeeper state and perform actions
         bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts
-        bookkeeper.recordPass(PLAYER2); // P1 to P2 (Home)
+        recordPass(); // P1 to P2 (Home)
         bookkeeper.recordThrowAway(); // P2 (Home) throws away
         const mementosCountBeforeSave = bookkeeper.getMementosCount();
         const homeScoreBeforeSave = bookkeeper.homeScore;
@@ -271,8 +272,8 @@ describe('Bookkeeper', () => {
         expect(newBookkeeper.awayScore).toBe(awayScoreBeforeSave);
         expect(newBookkeeper.firstActor).toBe(firstActorBeforeSave); // null
         expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave);
-        expect(newBookkeeper.activePoint).toBeNull(); // After a throwaway, activePoint is set, but firstActor is null.
-                                                      // The current activePoint should be the one with the throwaway.
+        expect(newBookkeeper.activePoint).not.toBeNull(); // After a throwaway, activePoint is NOT null.
+                                                      // It contains the events of the current point.
         expect(serializedData.bookkeeperState.activePoint?.events.length).toBe(2); // Pass, ThrowAway
         expect(newBookkeeper.serialize().bookkeeperState.activePoint?.events.length).toBe(2);
 
