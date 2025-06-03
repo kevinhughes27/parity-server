@@ -7,15 +7,15 @@ import { useLocalGame, useTeams } from './hooks'; // Removed GAME_LOADING_SENTIN
 
 function EditGame() {
   const navigate = useNavigate();
-  // Use the custom hook to load game data
+
   const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
 
   // Use the useTeams hook to get all league players based on the game's league_id
   // Pass game?.league_id to handle the case where game is initially undefined
-  const { 
-    allLeaguePlayers, 
-    loadingTeams: loadingLeaguePlayers, 
-    errorTeams: errorLeaguePlayers 
+  const {
+    allLeaguePlayers,
+    loadingTeams: loadingLeaguePlayers,
+    errorTeams: errorLeaguePlayers
   } = useTeams(game?.league_id);
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
@@ -27,7 +27,6 @@ function EditGame() {
       setHomeRosterNames([...game.homeRoster]);
       setAwayRosterNames([...game.awayRoster]);
     } else {
-      // Reset rosters if game is not available (e.g., loading, error, or not found)
       setHomeRosterNames([]);
       setAwayRosterNames([]);
     }
@@ -81,7 +80,6 @@ function EditGame() {
     );
   }
 
-  // If we reach here, game is loaded
   return (
     <div style={{ padding: '20px', paddingBottom: '40px' }}>
       <Link to={`/stat_keeper/game/${numericGameId}`} style={{ marginBottom: '20px', display: 'inline-block' }}>
@@ -100,13 +98,13 @@ function EditGame() {
         <>
           <EditRoster
             teamName={game.homeTeam}
-            allLeaguePlayers={allLeaguePlayers} // Provided by useTeams
+            allLeaguePlayers={allLeaguePlayers}
             currentRosterNames={homeRosterNames}
             onRosterChange={setHomeRosterNames}
           />
           <EditRoster
             teamName={game.awayTeam}
-            allLeaguePlayers={allLeaguePlayers} // Provided by useTeams
+            allLeaguePlayers={allLeaguePlayers}
             currentRosterNames={awayRosterNames}
             onRosterChange={setAwayRosterNames}
           />
