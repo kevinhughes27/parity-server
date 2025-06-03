@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { leagues, fetchTeams, Team, TeamPlayer } from '../../api';
+import { leagues, Team, TeamPlayer } from '../../api'; // fetchTeams is no longer needed here
+import { useTeams } from './hooks'; // Import the new useTeams hook
 
 import EditRoster from './EditRoster';
 
@@ -9,52 +10,21 @@ function NewGame() {
   const navigate = useNavigate();
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<number>(leagues[0].id);
-  const [leagueTeams, setLeagueTeams] = useState<Team[]>([]);
-  const [loadingTeams, setLoadingTeams] = useState<boolean>(false);
-  const [errorTeams, setErrorTeams] = useState<string | null>(null);
+  
+  // Use the custom hook to manage teams and players
+  const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(selectedLeagueId);
 
   const [homeTeamId, setHomeTeamId] = useState<string>('');
   const [awayTeamId, setAwayTeamId] = useState<string>('');
-
   const [week, setWeek] = useState<number>(1);
-
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
-  const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
-
+  // Effect to reset team selections when league changes
   useEffect(() => {
-    if (!selectedLeagueId) {
-      setLeagueTeams([]);
-      setAllLeaguePlayers([]);
-      return;
-    }
-    setLoadingTeams(true);
-    setErrorTeams(null);
     setHomeTeamId('');
     setAwayTeamId('');
-
-    fetchTeams(selectedLeagueId)
-      .then(teams => {
-        setLeagueTeams(teams);
-        const allPlayers = teams.reduce((acc, team) => {
-          team.players.forEach(p => {
-            if (!acc.find(ap => ap.name === p.name)) {
-              acc.push(p);
-            }
-          });
-          return acc;
-        }, [] as TeamPlayer[]);
-        setAllLeaguePlayers(allPlayers);
-      })
-      .catch(err => {
-        setErrorTeams(err instanceof Error ? err.message : 'Failed to load teams');
-        setLeagueTeams([]);
-        setAllLeaguePlayers([]);
-      })
-      .finally(() => {
-        setLoadingTeams(false);
-      });
+    // Rosters will be reset by their own useEffects below if team IDs change
   }, [selectedLeagueId]);
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
@@ -118,7 +88,7 @@ function NewGame() {
         <select
           id="league-select"
           value={selectedLeagueId}
-          onChange={(e) => setSelectedLeagueId(e.target.value)}
+          onChange={(e) => setSelectedLeagueId(parseInt(e.target.value, 10))} // Ensure value is parsed to number
           style={{ padding: '8px' }}
         >
           {leagues.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
@@ -209,7 +179,7 @@ function NewGame() {
           )}
         </>
       )}
-       {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && <p>No teams found for the selected league.</p>}
+       {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && <p>No teams found for the selected league.</p>}
     </div>
   );
 }
