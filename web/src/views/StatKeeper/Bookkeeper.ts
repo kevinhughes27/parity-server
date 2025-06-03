@@ -77,7 +77,7 @@ export class Bookkeeper {
 
         // Reconstruct mementos with their apply functions
         this.mementos = data.mementos.map(sm => {
-            const mData = sm.data;
+            const mData = sm.data; // mData here is sm.data from the serialized memento
             let applyFn: () => void;
 
             switch (sm.type) {
@@ -370,7 +370,7 @@ export class Bookkeeper {
             type: MementoType.RecordPoint,
             data: mementoData,
             apply: () => {
-                if (mData.wasHomePossession) {
+                if (mementoData.wasHomePossession) { // Changed mData to mementoData
                     this.homeScore--;
                 } else {
                     this.awayScore--;
@@ -380,10 +380,10 @@ export class Bookkeeper {
                     this.activePoint = undonePoint;
                     this.activePoint.removeLastEvent();
                 }
-                this.homePlayers = mData.savedHomePlayers;
-                this.awayPlayers = mData.savedAwayPlayers;
-                this.firstActor = mData.savedFirstActor;
-                this.homePossession = mData.wasHomePossession;
+                this.homePlayers = mementoData.savedHomePlayers; // Changed mData to mementoData
+                this.awayPlayers = mementoData.savedAwayPlayers; // Changed mData to mementoData
+                this.firstActor = mementoData.savedFirstActor; // Changed mData to mementoData
+                this.homePossession = mementoData.wasHomePossession; // Changed mData to mementoData
                 // Participant undo is not handled here, same as Java
             }
         });
