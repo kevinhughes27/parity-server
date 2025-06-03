@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { leagues, fetchTeams, TeamPlayer } from '../../api';
+import { getLeagueName, fetchTeams, TeamPlayer } from '../../api';
 import EditRoster from './EditRoster';
-import { useLocalGameLoader, GAME_LOADING_SENTINEL } from './useLocalGameLoader'; // Import the hook
-
-const getLeagueName = (leagueId: string): string => {
-  const league = leagues.find(l => l.id === leagueId);
-  return league ? league.name : `Unknown League (${leagueId})`;
-};
+import { useLocalGame, GAME_LOADING_SENTINEL } from './useLocalGame';
 
 function EditGame() {
   const navigate = useNavigate();
   // Use the custom hook to load game data
-  const { game, isLoading: isLoadingGame, error: gameError, numericGameId, rawGameData } = useLocalGameLoader();
+  const { game, isLoading: isLoadingGame, error: gameError, numericGameId, rawGameData } = useLocalGame();
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
