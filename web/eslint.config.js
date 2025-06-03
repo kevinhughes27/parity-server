@@ -29,6 +29,7 @@ export default [
         console: 'readonly',
         JSX: 'readonly',
         React: 'readonly',
+        alert: 'readonly',
       }
     },
     plugins: {
