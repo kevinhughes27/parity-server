@@ -1,4 +1,5 @@
-import { Bookkeeper } from '../Bookkeeper';
+import { describe, expect, beforeEach, afterAll, test } from 'vitest';
+import { Bookkeeper } from '../bookkeeper';
 import { EventType, League, Team, Event, GameModel, PointModel, SerializedGameData } from '../models';
 import 'fake-indexeddb/auto';
 import { db, StoredGame } from '../db';
