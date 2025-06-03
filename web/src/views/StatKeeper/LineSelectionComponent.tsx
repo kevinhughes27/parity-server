@@ -6,9 +6,9 @@ interface LineSelectionProps {
   selectedHomeLine: string[];
   selectedAwayLine: string[];
   leagueLineSize: number;
-  isHomePullingNext: boolean;
+  // isHomePullingNext: boolean; // Removed
   onPlayerToggleLine: (player: string, isHomeTeam: boolean) => void;
-  onSetIsHomePullingNext: (isHomePulling: boolean) => void;
+  // onSetIsHomePullingNext: (isHomePulling: boolean) => void; // Removed
   onStartPoint: () => void;
   homeTeamName: string;
   awayTeamName: string;
@@ -19,9 +19,9 @@ const LineSelectionComponent: React.FC<LineSelectionProps> = ({
   selectedHomeLine,
   selectedAwayLine,
   leagueLineSize,
-  isHomePullingNext,
+  // isHomePullingNext, // Removed
   onPlayerToggleLine,
-  onSetIsHomePullingNext,
+  // onSetIsHomePullingNext, // Removed
   onStartPoint,
   homeTeamName,
   awayTeamName,
@@ -55,7 +55,8 @@ const LineSelectionComponent: React.FC<LineSelectionProps> = ({
     <>
       <div style={{ width: '45%', textAlign: 'center' }}> 
         <h3>{homeTeamName} ({selectedHomeLine.length}/{leagueLineSize})</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxHeight: '300px', overflowY: 'auto', border: '1px solid #eee', padding: '5px' }}>
+        {/* Removed maxHeight and overflowY to show all players */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #eee', padding: '5px' }}>
           {(gameData.homeRoster || []).map(player =>
             renderPlayerButton(player, true)
           )}
@@ -64,37 +65,17 @@ const LineSelectionComponent: React.FC<LineSelectionProps> = ({
 
       <div style={{ width: '45%', textAlign: 'center' }}> 
         <h3>{awayTeamName} ({selectedAwayLine.length}/{leagueLineSize})</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxHeight: '300px', overflowY: 'auto', border: '1px solid #eee', padding: '5px' }}>
+        {/* Removed maxHeight and overflowY to show all players */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #eee', padding: '5px' }}>
           {(gameData.awayRoster || []).map(player =>
             renderPlayerButton(player, false)
           )}
         </div>
       </div>
       
+      {/* "Who is Pulling?" section removed */}
+      
       <div style={{ width: '100%', textAlign: 'center', marginTop: '20px' }}>
-        <h4>Who is Pulling?</h4>
-        <div style={{ marginBottom: '20px'}}>
-          <label style={{ marginRight: '10px' }}>
-            <input 
-              type="radio" 
-              name="pullingTeam" 
-              value="home" 
-              checked={isHomePullingNext} 
-              onChange={() => onSetIsHomePullingNext(true)} 
-            /> 
-            {homeTeamName}
-          </label>
-          <label>
-            <input 
-              type="radio" 
-              name="pullingTeam" 
-              value="away" 
-              checked={!isHomePullingNext} 
-              onChange={() => onSetIsHomePullingNext(false)} 
-            /> 
-            {awayTeamName}
-          </label>
-        </div>
         <button 
             onClick={onStartPoint} 
             style={{ padding: '10px 15px', fontSize: '1.1em' }}

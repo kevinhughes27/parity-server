@@ -24,7 +24,7 @@ function LocalGame() {
   const [bookkeeper, setBookkeeper] = useState<Bookkeeper | null>(null);
   const [selectedHomeLineForNextPoint, setSelectedHomeLineForNextPoint] = useState<string[]>([]);
   const [selectedAwayLineForNextPoint, setSelectedAwayLineForNextPoint] = useState<string[]>([]);
-  const [isHomePullingNext, setIsHomePullingNext] = useState<boolean>(true);
+  // const [isHomePullingNext, setIsHomePullingNext] = useState<boolean>(true); // Removed
   
   const [currentPointInitialHomeLine, setCurrentPointInitialHomeLine] = useState<string[]>([]);
   const [currentPointInitialAwayLine, setCurrentPointInitialAwayLine] = useState<string[]>([]);
@@ -34,8 +34,6 @@ function LocalGame() {
   const [actionCounter, setActionCounter] = useState(0); 
   const [leagueLineSize, setLeagueLineSize] = useState<number>(7);
 
-  // This useLiveQuery hook is primarily for the loading state and initial data check.
-  // Bookkeeper manages its own game data instance after loading.
   const storedGameFromDb = useLiveQuery<StoredGame | undefined | typeof LOADING_SENTINEL>(
     async () => {
       if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
@@ -99,9 +97,8 @@ function LocalGame() {
     setSelectedHomeLineForNextPoint(nextHomeLine);
     setSelectedAwayLineForNextPoint(nextAwayLine);
 
-  }, [bookkeeper, leagueLineSize]); // Relies on stable setters from useState
+  }, [bookkeeper, leagueLineSize]); 
 
-  // Effect for initializing or changing the bookkeeper instance
   useEffect(() => {
     if (numericLocalGameId !== undefined && !isNaN(numericLocalGameId)) {
       const bk = new Bookkeeper(numericLocalGameId, db);
@@ -116,20 +113,16 @@ function LocalGame() {
       setBookkeeper(null);
     }
     return () => {
-      // Cleanup if bookkeeper instance held resources, e.g., save pending changes.
-      // For now, just resetting state.
       setBookkeeper(null); 
     };
   }, [numericLocalGameId]);
 
-  // Effect to trigger a UI refresh when the bookkeeper instance is newly set or changed.
   useEffect(() => {
     if (bookkeeper) {
       triggerRefresh();
     }
-  }, [bookkeeper, triggerRefresh]); // triggerRefresh is stable
+  }, [bookkeeper, triggerRefresh]); 
 
-  // Effect for syncing UI state from bookkeeper and handling conditional auto-selection of lines.
   useEffect(() => {
     if (bookkeeper) {
       setCurrentGameState(bookkeeper.getGameState());
@@ -137,16 +130,10 @@ function LocalGame() {
 
       if (bookkeeper.activePoint === null && 
           (selectedHomeLineForNextPoint.length === 0 || selectedAwayLineForNextPoint.length === 0)) {
-        // If no point is active (e.g., game start, or after a point scored)
-        // AND lines are currently empty, try to auto-select them.
-        // This check prevents re-selecting if lines were manually adjusted or already populated.
         autoSelectNextLines();
       }
     }
   }, [bookkeeper, actionCounter, selectedHomeLineForNextPoint, selectedAwayLineForNextPoint, autoSelectNextLines]);
-  // autoSelectNextLines is included here because its definition changes with bookkeeper or leagueLineSize,
-  // and this effect's logic depends on having the correct version of it.
-  // The loop is broken if autoSelectNextLines populates the lines, making the condition false on the next run.
 
 
   const handlePlayerToggleLineForSelection = (player: string, isHomeTeam: boolean) => {
@@ -181,25 +168,30 @@ function LocalGame() {
     setCurrentPointInitialAwayLine([...selectedAwayLineForNextPoint]);
     
     await bookkeeper.setCurrentLine(selectedHomeLineForNextPoint, selectedAwayLineForNextPoint);
-    await bookkeeper.startPoint(isHomePullingNext);
+    await bookkeeper.startPoint(); // Removed isHomePullingNext argument
     triggerRefresh();
   };
   
   const handlePlayerTapStatTaking = async (player: string, isPlayerFromHomeTeamList: boolean) => {
     if (!bookkeeper || !bookkeeper.activePoint) return;
 
-    if (bookkeeper.firstActor) { 
+    // If GameState is Start (after lines confirmed, before puller selected), tapping a player sets them as firstActor (puller).
+    // This logic is now primarily handled within Bookkeeper.recordFirstActor.
+    // The StatTakingComponent's renderPlayerButton enables/disables based on who *can* be tapped.
+    
+    // If firstActor is already set (e.g., puller selected, or player has disc), then it's a pass or selecting a defender.
+    if (bookkeeper.firstActor && bookkeeper.getGameState() !== GameState.Start) { 
       const tappedPlayerTeamHasPossession = bookkeeper.homePossession === isPlayerFromHomeTeamList;
-      if (tappedPlayerTeamHasPossession) {
-        if (bookkeeper.firstActor !== player) { 
+      if (tappedPlayerTeamHasPossession) { // Tapped player is on the team with possession
+        if (bookkeeper.firstActor !== player) { // Cannot pass to self
             await bookkeeper.recordPass(player);
         } else {
-            return; 
+            return; // Tapped self, do nothing
         }
-      } else { 
+      } else { // Tapped player is on defense, record them as firstActor for a potential D
         await bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList); 
       }
-    } else { 
+    } else { // No firstActor, or GameState is Start (meaning we are selecting the puller or picker-upper)
       await bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
     }
     triggerRefresh();
@@ -233,8 +225,6 @@ function LocalGame() {
     await actionFnToExecute(); 
     
     if (actionKey === 'recordPoint' && bookkeeper.activePoint === null) {
-      // If a point was just scored, activePoint becomes null.
-      // We need to select lines for the next point.
       autoSelectNextLines(); 
     }
     triggerRefresh(); 
@@ -249,7 +239,6 @@ function LocalGame() {
   if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
     return <div style={{ padding: '20px' }}><p>Invalid game ID.</p><Link to="/stat_keeper">Back to StatKeeper Home</Link></div>;
   }
-  // Check against bookkeeper and its gameData for readiness, as storedGameFromDb is more of a loading signal.
   if (storedGameFromDb === LOADING_SENTINEL || !bookkeeper || !bookkeeper.gameData) {
     return <p style={{ padding: '20px' }}>Loading game data and bookkeeper...</p>;
   }
@@ -268,12 +257,12 @@ function LocalGame() {
         <p>Week: {game.week} | League: {getLeagueName(game.league_id)} | Line Size: {leagueLineSize}</p>
         {bookkeeper.activePoint && (
           <>
-            <p>Possession: {bookkeeper.homePossession ? game.homeTeam : game.awayTeam}</p>
+            <p>Possession: {bookkeeper.homePossession ? game.homeTeam : game.awayTeam} (is on Offense)</p>
             <p>Current Game State: {GameState[currentGameState]} ({currentGameState})</p>
             {bookkeeper.firstActor && <p>Player with Disc/Action: {bookkeeper.firstActor}</p>}
           </>
         )}
-         {!bookkeeper.activePoint && <p>Please select lines and pulling team to start the next point.</p>}
+         {!bookkeeper.activePoint && <p>Please select lines to start the next point.</p>}
       </div>
       
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', marginBottom: '20px' }}>
@@ -283,9 +272,9 @@ function LocalGame() {
             selectedHomeLine={selectedHomeLineForNextPoint}
             selectedAwayLine={selectedAwayLineForNextPoint}
             leagueLineSize={leagueLineSize}
-            isHomePullingNext={isHomePullingNext}
+            // isHomePullingNext prop removed
             onPlayerToggleLine={handlePlayerToggleLineForSelection}
-            onSetIsHomePullingNext={setIsHomePullingNext}
+            // onSetIsHomePullingNext prop removed
             onStartPoint={handleStartPoint}
             homeTeamName={game.homeTeam}
             awayTeamName={game.awayTeam}

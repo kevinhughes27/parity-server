@@ -25,13 +25,13 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
   currentGameState,
   onBookkeeperAction,
   onPlayerTap,
-  firstActor,
+  firstActor, // Note: firstActor prop might be slightly delayed vs bookkeeper.firstActor
   homeTeamName,
   awayTeamName,
   pointEventHistory,
 }) => {
 
-  const renderPlayerButton = (player: string, isHomeTeamPlayerList: boolean) => {
+  const renderPlayerButton = (player: string, isPlayerFromHomeTeamList: boolean) => {
     let isDisabled = false;
     let buttonStyle: React.CSSProperties = { 
         margin: '5px', padding: '10px', cursor: 'pointer', 
@@ -40,34 +40,41 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
         boxSizing: 'border-box'
     };
 
-    const playerIsFirstActor = bookkeeper.isFirstActor(player);
-    const playerListTeamHasPossession = bookkeeper.homePossession === isHomeTeamPlayerList;
+    const playerIsCurrentlyFirstActor = bookkeeper.isFirstActor(player); // Use bookkeeper directly for most up-to-date
+    const playerTeamIsCurrentlyOffense = bookkeeper.homePossession === isPlayerFromHomeTeamList;
 
-    // Players not on the field for this point are not interactive (though they shouldn't be rendered by this component)
-    // This component receives currentPointInitialHomeLine and currentPointInitialAwayLine which are the on-field players.
-
-    if (currentGameState === GameState.Start) { // Should not happen if activePoint exists
+    if (!bookkeeper.activePoint) { 
         isDisabled = true; 
+    } else if (currentGameState === GameState.Start) {
+        // Point started, no events, waiting to select PULLER.
+        // Puller must be from the team currently on DEFENSE.
+        // Player is on DEFENSE if their team is NOT on offense.
+        isDisabled = playerTeamIsCurrentlyOffense; // Disable if player is on Offense, enable if on Defense.
     } else if (currentGameState === GameState.Pull) {
-        isDisabled = true; // Only pull button active, player selection disabled
+        // Puller selected, "Pull" button is active, player buttons generally disabled.
+        isDisabled = true; 
     } else if (currentGameState === GameState.WhoPickedUpDisc) {
-        isDisabled = !playerListTeamHasPossession; 
+        // Disc is loose (after pull, turnover, non-catch D).
+        // Player who picks up must be on the team that now has possession (is on Offense).
+        isDisabled = !playerTeamIsCurrentlyOffense; // Disable if player's team does NOT have possession.
     } else { // Normal, FirstD, SecondD, FirstThrowQuebecVariant
         if (bookkeeper.firstActor) { 
-            if (playerListTeamHasPossession) { // Player's team has disc
-                isDisabled = playerIsFirstActor; // Cannot pass to self
-            } else { // Player is on defense, can be selected as firstActor for a D/CatchD
+            if (playerTeamIsCurrentlyOffense) { // Player's team has disc (is on Offense)
+                isDisabled = playerIsCurrentlyFirstActor; // Cannot pass to self
+            } else { // Player is on Defense, can be selected as firstActor for a D/CatchD
                 isDisabled = false; 
             }
         } else { 
-            // This case should ideally not happen if a player needs to be selected for an action
-            // e.g. after a turnover, WhoPickedUpDisc state handles selection.
-            // If firstActor is null in Normal play, it implies an issue or ready for puller selection (handled by Pull state)
-            isDisabled = true; 
+            // No firstActor in these active play states.
+            // This means we might be waiting to select a defender for a D, or a player to pick up a disc
+            // if the state transition was complex (e.g. after a D where firstActor was cleared).
+            // If player is on D, they can be tapped to become firstActor (for a D).
+            // If player is on O, and no one has disc, they can't do much (can't receive from no one).
+            isDisabled = playerTeamIsCurrentlyOffense; // Disable if on O and no one has disc. Enable if on D.
         }
     }
     
-    if (playerIsFirstActor) { 
+    if (playerIsCurrentlyFirstActor) { 
         buttonStyle.border = '3px solid #007bff'; 
         buttonStyle.fontWeight = 'bold';
     }
@@ -79,7 +86,7 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
     return (
       <button
         key={player}
-        onClick={() => onPlayerTap(player, isHomeTeamPlayerList)}
+        onClick={() => onPlayerTap(player, isPlayerFromHomeTeamList)}
         disabled={isDisabled}
         style={buttonStyle}
       >
@@ -134,18 +141,21 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
         {actionButtonsConfig.map(btn => {
           let isDisabled = !btn.states.includes(currentGameState);
           if (btn.label === 'Pull') {
-              isDisabled = currentGameState !== GameState.Pull || !bookkeeper.firstActor;
-          } else if (!['Undo', 'Record Half'].includes(btn.label) && btn.actionKey !== 'recordPoint') { 
-              // For D, Catch D, Drop, Throw Away, firstActor must be set
-              // Point can be scored by current firstActor or if state implies it (e.g. after a D by non-firstActor)
-              isDisabled = isDisabled || !bookkeeper.firstActor;
+              // Pull button enabled only if in Pull state AND puller (firstActor) is selected.
+              isDisabled = !(currentGameState === GameState.Pull && !!bookkeeper.firstActor);
           } else if (btn.actionKey === 'recordPoint') {
-             // Point can be scored if firstActor is set (scorer) or if it's a Callahan scenario (GameState.FirstD/SecondD and defender is firstActor)
-             // Or if it's a generic point situation. The bookkeeper logic handles validity.
-             // For UI, enable if in a state where point is possible.
-             // If firstActor is null, it's likely not a direct scoring action by a player holding disc.
-             // This might need refinement based on specific game rules / bookkeeper state transitions.
-             // Simplification: if in a scorable state, button is generally enabled. Bookkeeper will validate.
+            // Point can be scored if firstActor is set (scorer) or if it's a Callahan scenario.
+            // Bookkeeper logic handles validity. Enable if in a state where point is possible.
+            // If firstActor is null, it's likely not a direct scoring action by a player holding disc.
+            // For UI, enable if in a scorable state AND firstActor is set (unless it's a state like FirstD where firstActor is the defender).
+            // Simplification: if in a scorable state, button is generally enabled if firstActor is set.
+            if (btn.states.includes(currentGameState) && !bookkeeper.firstActor && 
+                ![GameState.FirstD, GameState.SecondD].includes(currentGameState) /* Callahan might not need firstActor if implicit */ ) {
+                // isDisabled = true; // Re-evaluating this, bookkeeper should handle if firstActor is needed
+            }
+          } else if (!['Undo', 'Record Half'].includes(btn.label)) { 
+              // For D, Catch D, Drop, Throw Away, firstActor must be set.
+              isDisabled = isDisabled || !bookkeeper.firstActor;
           }
 
 
