@@ -14,6 +14,8 @@ interface MementoState {
   currentLineHomeSnapshot: string[];
   currentLineAwaySnapshot: string[];
   pointsAtHalfRecordedSnapshot: number;
+  pendingDTypeSnapshot: 'D' | 'CatchD' | null;
+  playerWhoThrewTurnoverForDSnapshot: string | null;
 }
 
 export class Bookkeeper {
@@ -22,13 +24,18 @@ export class Bookkeeper {
 
   public activePoint: PointModel | null = null;
   public firstActor: string | null = null;
-  public homePossession: boolean = true; // True if home team has possession or is on offense
+  public homePossession: boolean = true; 
 
   private currentLineHome: string[] = [];
   private currentLineAway: string[] = [];
   public pointsAtHalfRecorded: number = 0; 
 
   private mementos: MementoState[] = [];
+
+  // For two-step D/CatchD
+  private pendingDType: 'D' | 'CatchD' | null = null;
+  private playerWhoThrewTurnoverForD: string | null = null;
+
 
   constructor(private localGameId: number, dexieDbInstance: DexieDB) {
     this.db = dexieDbInstance;
@@ -38,8 +45,8 @@ export class Bookkeeper {
     const game = await this.db.games.get(this.localGameId);
     if (game) {
       this.gameData = game;
-      // homePossession determines who is on O for the *next* point or at game start.
       this.homePossession = this.determineInitialPossession();
+      this.pointsAtHalfRecorded = game.pointsAtHalfRecorded || 0; 
       return true;
     }
     console.error(`Bookkeeper: Game with localId ${this.localGameId} not found.`);
@@ -47,51 +54,39 @@ export class Bookkeeper {
         localId: this.localGameId, 
         league_id: '', week: 0, homeTeam: 'Error', awayTeam: 'Error', 
         homeScore:0, awayScore:0, homeRoster:[], awayRoster:[], points:[], 
-        status:'sync-error', lastModified: new Date()
+        status:'sync-error', lastModified: new Date(), pointsAtHalfRecorded: 0
     };
     return false;
   }
 
   private determineInitialPossession(): boolean {
     if (!this.gameData || this.gameData.points.length === 0) {
-      return true; // Default: Home team starts on offense (Away team pulls first)
+      return true; 
     }
     const lastPoint = this.gameData.points[this.gameData.points.length - 1];
     if (!lastPoint.events || lastPoint.events.length === 0) {
-        // Should not happen if a point is recorded, but as a fallback:
-        return true; // Default to home on O
+        return true; 
     }
 
     const lastEventOfLastPoint = lastPoint.events[lastPoint.events.length - 1];
 
     if (lastEventOfLastPoint.type === EventType.POINT.toString()) {
       const scorer = lastEventOfLastPoint.firstActor;
-      // Was the scoring team the one listed as offense for that point?
-      if (lastPoint.offensePlayers.includes(scorer)) { 
-        // Scorer was on the O-line. Which team was that?
-        // A simple check: if the first player on that O-line is in homeRoster, it was home team.
-        // This assumes rosters are somewhat stable and representative.
-        if (this.gameData.homeRoster.includes(lastPoint.offensePlayers[0])) { 
-            // Home team scored. Away team on O next.
-            return false; 
-        } else { 
-            // Away team scored. Home team on O next.
-            return true; 
-        }
-      } else { // Callahan: scorer was on the D-line.
-          // Which team was the scorer on?
-          if (this.gameData.homeRoster.includes(scorer)) { 
-              // Home player (on D) scored Callahan. Home team scored. Away on O next.
-              return false; 
-          } else { 
-              // Away player (on D) scored Callahan. Away team scored. Home on O next.
-              return true; 
-          }
+      const homeRosterSet = new Set(this.gameData.homeRoster);
+      const awayRosterSet = new Set(this.gameData.awayRoster);
+
+      let scorerWasHomeTeam: boolean;
+      if (homeRosterSet.has(scorer)) {
+          scorerWasHomeTeam = true;
+      } else if (awayRosterSet.has(scorer)) {
+          scorerWasHomeTeam = false;
+      } else {
+          console.warn("Scorer not found in home or away roster. Defaulting possession.");
+          return true; 
       }
+      return !scorerWasHomeTeam;
     }
-    // If last point didn't end in a score (e.g. game abandoned), this logic might need adjustment.
-    // For now, assume points end with scores.
-    return true; // Default fallback
+    return true; 
   }
 
   private async saveGameData(): Promise<void> {
@@ -100,7 +95,8 @@ export class Bookkeeper {
         return;
     }
     this.gameData.lastModified = new Date();
-    // Deep clone for saving to avoid Dexie specific "DataCloneError" with class instances
+    this.gameData.pointsAtHalfRecorded = this.pointsAtHalfRecorded;
+
     const gameDataToSave = JSON.parse(JSON.stringify({
         ...this.gameData,
         points: this.gameData.points.map(p => ({
@@ -113,13 +109,15 @@ export class Bookkeeper {
 
   private pushMemento(): void {
     this.mementos.push({
-      gameDataSnapshot: JSON.parse(JSON.stringify(this.gameData)), // Deep clone
+      gameDataSnapshot: JSON.parse(JSON.stringify(this.gameData)),
       activePointSnapshot: this.activePoint ? this.activePoint.toApiPoint() : null,
       firstActorSnapshot: this.firstActor,
       homePossessionSnapshot: this.homePossession,
       currentLineHomeSnapshot: [...this.currentLineHome],
       currentLineAwaySnapshot: [...this.currentLineAway],
       pointsAtHalfRecordedSnapshot: this.pointsAtHalfRecorded,
+      pendingDTypeSnapshot: this.pendingDType,
+      playerWhoThrewTurnoverForDSnapshot: this.playerWhoThrewTurnoverForD,
     });
   }
 
@@ -135,27 +133,35 @@ export class Bookkeeper {
       this.currentLineHome = memento.currentLineHomeSnapshot;
       this.currentLineAway = memento.currentLineAwaySnapshot;
       this.pointsAtHalfRecorded = memento.pointsAtHalfRecordedSnapshot;
-      // No save here, as undo is reverting to a previously saved state.
-      // However, the UI will need to refresh, which happens via LocalGame's triggerRefresh.
+      this.pendingDType = memento.pendingDTypeSnapshot;
+      this.playerWhoThrewTurnoverForD = memento.playerWhoThrewTurnoverForDSnapshot;
     }
   }
 
+  public isPullPoint(): boolean {
+    if (!this.gameData) return false;
+    const numPointsPlayed = this.gameData.points.length;
+    return numPointsPlayed === 0 || (this.pointsAtHalfRecorded > 0 && numPointsPlayed === this.pointsAtHalfRecorded);
+  }
+
   public getGameState(): GameState {
+    if (this.pendingDType) { // Highest priority: if we are selecting a defender
+        return GameState.SelectDefenderForD;
+    }
     if (!this.activePoint) { 
         return GameState.Start; // Line selection mode
     }
     
     const eventCount = this.activePoint.getEventCount();
     
-    if (eventCount === 0) {
-        // Point has been started, no events yet.
-        if (this.firstActor) {
-            // Puller has been selected.
-            return GameState.Pull;
+    if (eventCount === 0) { // Point just started, no events yet
+        if (this.isPullPoint()) {
+            // On a pull point, if firstActor (puller) is selected, state is Pull. Otherwise, Start (to select puller).
+            return this.firstActor ? GameState.Pull : GameState.Start; 
         } else {
-            // Waiting for puller to be selected from the defensive team.
-            // UI should guide this. GameState.Start implies pre-action for the point.
-            return GameState.Start; 
+            // Not a pull point, offense starts with disc. Needs to select who picks up.
+            // firstActor will be null here.
+            return GameState.WhoPickedUpDisc;
         }
     }
 
@@ -164,52 +170,40 @@ export class Bookkeeper {
       switch (lastEventInActivePoint.type) {
         case EventType.PULL: 
           return GameState.WhoPickedUpDisc;
-        case EventType.THROWAWAY:
+        case EventType.THROWAWAY: // This now also covers the first part of a D/CatchD
         case EventType.DROP: 
           return GameState.WhoPickedUpDisc;
-        case EventType.DEFENSE: 
-          // After DEFENSE event:
-          // If firstActor is set, it was a CatchD (defender has disc).
-          // If firstActor is null, it was a D (disc loose).
+        case EventType.DEFENSE: // This is after the defender has been selected for D/CatchD
           return this.firstActor ? GameState.FirstThrowQuebecVariant : GameState.WhoPickedUpDisc;
         case EventType.PICK_UP: 
             return GameState.FirstThrowQuebecVariant; 
         case EventType.PASS: 
             return GameState.Normal;
-        default: // Should not happen if events are well-defined
+        default: 
           return GameState.Normal;
       }
     }
-    // Fallback if activePoint exists but somehow no last event (should be covered by eventCount === 0)
     return GameState.Normal; 
   }
 
   public setCurrentLine(homePlayers: string[], awayPlayers: string[]): void {
-    // This is synchronous, called before startPoint.
     this.currentLineHome = [...homePlayers];
     this.currentLineAway = [...awayPlayers];
   }
 
   public async startPoint(): Promise<void> {
-    if (!this.gameData) {
-        console.error("Bookkeeper: Game data not loaded, cannot start point.");
-        return;
-    }
-    if (this.currentLineHome.length === 0 || this.currentLineAway.length === 0) {
-        console.error("Bookkeeper: Lines not set, cannot start point.");
-        return;
-    }
+    if (!this.gameData) return;
+    if (this.currentLineHome.length === 0 || this.currentLineAway.length === 0) return;
 
     this.pushMemento();
 
-    // this.homePossession is already set (by loadGame or recordPoint)
-    // to indicate which team is on Offense for this new point.
     const offenseLine = this.homePossession ? this.currentLineHome : this.currentLineAway;
     const defenseLine = this.homePossession ? this.currentLineAway : this.currentLineHome;
 
     this.activePoint = new PointModel(offenseLine, defenseLine);
-    this.firstActor = null; // Puller needs to be selected from the defenseLine
-
+    this.firstActor = null; 
+    this.pendingDType = null; // Ensure this is reset at start of new point
+    this.playerWhoThrewTurnoverForD = null;
     await this.saveGameData();
   }
 
@@ -217,142 +211,170 @@ export class Bookkeeper {
     this.pushMemento();
 
     if (!this.activePoint) {
-        console.error("Bookkeeper: recordFirstActor called but activePoint is null. Point should be started first.");
-        this.mementos.pop();
-        return;
+        console.error("Bookkeeper: recordFirstActor called but activePoint is null.");
+        this.mementos.pop(); return;
     }
 
-    const currentGameState = this.getGameState(); // Get state *before* potential changes
+    const currentGameState = this.getGameState(); 
     let stateChanged = false;
 
-    // Scenario 1: Selecting a puller
-    // (activePoint exists, 0 events, current firstActor is null, GameState is Start)
-    if (this.activePoint.getEventCount() === 0 && this.firstActor === null && currentGameState === GameState.Start) {
+    if (this.pendingDType && this.playerWhoThrewTurnoverForD) { // currentGameState will be SelectDefenderForD
+        // Step 2 of D/CatchD: Selecting the defender
+        const originalOffensiveTeamWasHome = this.gameData.homeRoster.includes(this.playerWhoThrewTurnoverForD) || this.currentLineHome.includes(this.playerWhoThrewTurnoverForD);
+        
+        // The defender must be on the team that was NOT originally on offense.
+        const defenderIsOnCorrectTeam = isPlayerFromHomeTeamList !== originalOffensiveTeamWasHome;
+
+        if (!defenderIsOnCorrectTeam) {
+            alert("Defender selected from the same team as the thrower. Please select a player from the defensive team.");
+            console.error("Bookkeeper: Defender selected from the same team as the thrower.");
+            this.mementos.pop(); return;
+        }
+
+        this.activePoint.addEvent(new EventModel(EventType.DEFENSE, player)); 
+        this.homePossession = !this.homePossession; 
+
+        if (this.pendingDType === 'CatchD') {
+            this.firstActor = player; 
+        } else { 
+            this.firstActor = null; 
+        }
+        this.pendingDType = null;
+        this.playerWhoThrewTurnoverForD = null;
+        stateChanged = true;
+
+    } else if (currentGameState === GameState.Start && this.isPullPoint() && this.firstActor === null) {
+        // Selecting a puller (only on pull points, before puller is set)
         const playerIsOnExpectedDefensiveTeam = isPlayerFromHomeTeamList !== this.homePossession;
         if (!playerIsOnExpectedDefensiveTeam) {
-            console.warn("Bookkeeper: Puller selected from the team currently designated as offense. This might be a misclick or lines were swapped mentally.");
-            // Allow for now, but UI should guide selection from the D line.
+            alert("Puller should be selected from the team on defense.");
+            console.warn("Bookkeeper: Puller selected from team designated as offense.");
+            this.mementos.pop(); return;
         }
-        this.firstActor = player; // This player is now the designated puller
+        this.firstActor = player; 
         stateChanged = true;
     } 
-    // Scenario 2: Picking up the disc
-    else if (currentGameState === GameState.WhoPickedUpDisc || (currentGameState === GameState.FirstThrowQuebecVariant && !this.firstActor && lastEventWasDefenseAndDiscLoose())) {
-        // lastEventWasDefenseAndDiscLoose is a helper to ensure we are picking up after a non-catch D
+    else if (currentGameState === GameState.WhoPickedUpDisc) {
+        // Picking up the disc (after pull, turnover, non-catch D, or start of non-pull point)
         const playerIsOnPossessingTeam = isPlayerFromHomeTeamList === this.homePossession;
         if (!playerIsOnPossessingTeam) {
+            alert("Player selected to pick up disc is not on the team with possession.");
             console.error("Bookkeeper: Player selected to pick up disc is not on the team with possession.");
-            this.mementos.pop();
-            return;
+            this.mementos.pop(); return;
         }
         this.activePoint.addEvent(new EventModel(EventType.PICK_UP, player));
         this.firstActor = player;
         stateChanged = true;
     } 
-    // Scenario 3: Selecting a defender for a D action, or (less commonly) selecting an offensive player if firstActor was cleared
-    else if (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) {
-        const playerIsOnDefensiveTeam = isPlayerFromHomeTeamList !== this.homePossession;
-        if (playerIsOnDefensiveTeam) { // Selecting a defender
-            this.firstActor = player;
+    else if ((currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant) && !this.firstActor) {
+        // This case handles if firstActor was somehow cleared in Normal play, and an offensive player is tapped.
+        const playerIsOnOffensiveTeam = isPlayerFromHomeTeamList === this.homePossession;
+        if (playerIsOnOffensiveTeam) {
+            this.activePoint.addEvent(new EventModel(EventType.PICK_UP, player));
+            this.firstActor = player; 
             stateChanged = true;
-        } else { // Player is on offensive team
-            if (!this.firstActor) { // If no one had the disc, and offensive player tapped
-                this.firstActor = player; // They now have it (e.g., after a confusing state)
-                // Consider adding a PICK_UP event here if appropriate for the flow
-                this.activePoint.addEvent(new EventModel(EventType.PICK_UP, player));
-                stateChanged = true;
-            } else {
-                // firstActor is already set and is offensive, tapping another offensive player should be a pass.
-                // This function (recordFirstActor) shouldn't be called for a pass.
-                console.warn("Bookkeeper: recordFirstActor called for offensive player when firstActor (offensive) already set. This should be a pass.");
-                this.mementos.pop(); 
-                return;
-            }
+        } else {
+            // Tapping a defensive player when no one has the disc in Normal play.
+            // This should ideally be initiated by D/CatchD buttons.
+            // For now, let's assume this sets them up for a D.
+            this.firstActor = player; // Sets defender as first actor, D/CatchD buttons become active
+            stateChanged = true;
         }
     } else {
-        console.warn(`Bookkeeper: recordFirstActor called in unhandled game state: ${GameState[currentGameState]} or unexpected condition.`);
-        this.mementos.pop();
-        return;
+        console.warn(`Bookkeeper: recordFirstActor called in unhandled game state: ${GameState[currentGameState]} or condition. FirstActor: ${this.firstActor}, PendingD: ${this.pendingDType}`);
+        this.mementos.pop(); return;
     }
 
     if (stateChanged) {
         await this.saveGameData();
     } else {
-        this.mementos.pop(); // No change, pop memento
+        this.mementos.pop(); 
     }
   }
   
-  // Helper for recordFirstActor logic
-  private lastEventWasDefenseAndDiscLoose(): boolean {
-    if (!this.activePoint || this.activePoint.getEventCount() === 0) return false;
-    const lastEvent = this.activePoint.getLastEvent();
-    return lastEvent?.type === EventType.DEFENSE && this.firstActor === null;
-  }
-
-
   public async recordPull(): Promise<void> {
-    if (!this.firstActor || !this.activePoint) {
-        console.error("Bookkeeper: Cannot record pull. Puller (firstActor) or activePoint not set.");
+    if (!this.firstActor || !this.activePoint || !this.isPullPoint() || this.getGameState() !== GameState.Pull) {
+        console.error("Bookkeeper: Cannot record pull. Conditions not met.");
         return;
     }
-    // Basic check: puller should be on the team that is currently on defense.
-    // this.homePossession is true if Home is on O, so Away is on D.
-    // Puller's team (isHomeTeam) should be !this.homePossession.
-    const pullerIsHomeTeam = this.gameData.homeRoster.includes(this.firstActor); // General check
-    // A more precise check would be against currentLineHome/Away, but roster check is broader.
-    if (pullerIsHomeTeam === this.homePossession) {
-        console.warn(`Bookkeeper: Puller (${this.firstActor}) seems to be from the offensive team. Possession: ${this.homePossession ? 'Home' : 'Away'}. Puller isHome: ${pullerIsHomeTeam}. Proceeding.`);
-    }
-
     this.pushMemento();
     this.activePoint.addEvent(new EventModel(EventType.PULL, this.firstActor));
-    this.firstActor = null; // Disc is in the air, no one possesses it.
-    // homePossession remains as is (reflecting the receiving team).
-    // activePoint O/D lines remain as is.
+    // After pull, disc is in air, receiver will pick up. Possession is with receiving team.
+    // this.homePossession was already set for the receiving team.
+    this.firstActor = null; 
     await this.saveGameData();
   }
 
   public async recordPass(receiver: string): Promise<void> {
     if (!this.firstActor || !this.activePoint) return;
+    
+    const firstActorIsHome = this.currentLineHome.includes(this.firstActor);
+    const receiverIsHome = this.currentLineHome.includes(receiver);
+
+    if (firstActorIsHome !== receiverIsHome) {
+        alert("Pass recorded to a player on the opposing team. This is likely a D or misclick. Use D/CatchD buttons for blocks.");
+        console.error("Bookkeeper: Pass recorded to a player on the opposing team.");
+        return;
+    }
+    if (this.firstActor === receiver) {
+        alert("Cannot pass to self.");
+        return;
+    }
+
     this.pushMemento();
     this.activePoint.addEvent(new EventModel(EventType.PASS, this.firstActor, receiver));
     this.firstActor = receiver;
     await this.saveGameData();
   }
 
-  private async handleTurnover(type: EventType.THROWAWAY | EventType.DROP): Promise<void> {
+  private async handleDirectTurnover(type: EventType.THROWAWAY | EventType.DROP): Promise<void> {
     if (!this.firstActor || !this.activePoint) return;
     this.pushMemento();
     this.activePoint.addEvent(new EventModel(type, this.firstActor));
-    this.homePossession = !this.homePossession; // Possession flips
-    this.firstActor = null; // Disc is loose or turned over
+    this.homePossession = !this.homePossession; 
+    this.firstActor = null; 
     await this.saveGameData();
   }
 
-  public async recordThrowAway(): Promise<void> {
-    await this.handleTurnover(EventType.THROWAWAY);
+  public async recordThrowAway(): Promise<void> { 
+    await this.handleDirectTurnover(EventType.THROWAWAY);
   }
 
   public async recordDrop(): Promise<void> {
-    await this.handleTurnover(EventType.DROP);
+    await this.handleDirectTurnover(EventType.DROP);
+  }
+
+  private async initiateDSequence(dType: 'D' | 'CatchD'): Promise<void> {
+    if (!this.firstActor || !this.activePoint) {
+        alert(`Cannot initiate ${dType}. Player with disc (firstActor) not set.`);
+        console.error(`Bookkeeper: Cannot initiate ${dType}. firstActor or activePoint not set.`);
+        return;
+    }
+    // Ensure firstActor is on the current offensive team
+    const firstActorIsHome = this.currentLineHome.includes(this.firstActor);
+    if (firstActorIsHome !== this.homePossession) {
+        alert("D/Catch D can only be initiated by the player currently with the disc on offense.");
+        console.error("Bookkeeper: D/Catch D initiated by player not on offense.");
+        return;
+    }
+
+    this.pushMemento(); 
+
+    this.playerWhoThrewTurnoverForD = this.firstActor;
+    this.activePoint.addEvent(new EventModel(EventType.THROWAWAY, this.playerWhoThrewTurnoverForD));
+    
+    this.pendingDType = dType;
+    this.firstActor = null; 
+    // game state becomes SelectDefenderForD via getGameState()
+    await this.saveGameData();
   }
 
   public async recordD(): Promise<void> { 
-    if (!this.firstActor || !this.activePoint) return; 
-    this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor, null));
-    this.homePossession = !this.homePossession; // Possession flips to the D-ing team
-    this.firstActor = null; // Disc is loose, D-ing team needs to pick up.
-    await this.saveGameData();
+    await this.initiateDSequence('D');
   }
 
   public async recordCatchD(): Promise<void> { 
-    if (!this.firstActor || !this.activePoint) return;
-    this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor, null)); 
-    this.homePossession = !this.homePossession; // Possession flips to the D-ing team
-    // this.firstActor (the defender) remains firstActor because they caught the D.
-    await this.saveGameData();
+    await this.initiateDSequence('CatchD');
   }
 
   public async recordPoint(): Promise<void> {
@@ -370,27 +392,21 @@ export class Bookkeeper {
     
     this.activePoint = null;
     this.firstActor = null;
-    // Possession flips for the *next* point: team that was scored on receives.
     this.homePossession = !this.homePossession; 
     this.currentLineHome = []; 
     this.currentLineAway = [];
+    this.pendingDType = null;
+    this.playerWhoThrewTurnoverForD = null;
 
     await this.saveGameData();
   }
 
   public async recordHalf(): Promise<void> {
     if (!this.gameData) return;
-    // Only record half if it hasn't been recorded or if it's a different number of points
     if (this.pointsAtHalfRecorded === 0 || this.pointsAtHalfRecorded !== this.gameData.points.length) {
         this.pushMemento();
         this.pointsAtHalfRecorded = this.gameData.points.length;
-        console.log(`Half recorded at ${this.pointsAtHalfRecorded} points.`);
-        // Consider if saving game data is needed here if only pointsAtHalfRecorded changed for memento
-        // For now, assume other actions will trigger save if necessary.
-        // Or, explicitly save if this is a standalone action that needs persisting.
         await this.saveGameData(); 
-    } else {
-        console.log("Half already recorded at this point count or not applicable.");
     }
   }
   
@@ -400,9 +416,5 @@ export class Bookkeeper {
 
   public isFirstActor(player: string): boolean {
     return this.firstActor === player;
-  }
-
-  public teamHasPossession(isPlayerFromHomeTeamList: boolean): boolean {
-      return this.homePossession === isPlayerFromHomeTeamList;
   }
 }

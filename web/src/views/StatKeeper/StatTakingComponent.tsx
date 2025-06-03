@@ -25,7 +25,7 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
   currentGameState,
   onBookkeeperAction,
   onPlayerTap,
-  firstActor, // Note: firstActor prop might be slightly delayed vs bookkeeper.firstActor
+  firstActor, 
   homeTeamName,
   awayTeamName,
   pointEventHistory,
@@ -40,37 +40,41 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
         boxSizing: 'border-box'
     };
 
-    const playerIsCurrentlyFirstActor = bookkeeper.isFirstActor(player); // Use bookkeeper directly for most up-to-date
-    const playerTeamIsCurrentlyOffense = bookkeeper.homePossession === isPlayerFromHomeTeamList;
-
+    const playerIsCurrentlyFirstActor = bookkeeper.isFirstActor(player);
+    
     if (!bookkeeper.activePoint) { 
         isDisabled = true; 
-    } else if (currentGameState === GameState.Start) {
-        // Point started, no events, waiting to select PULLER.
-        // Puller must be from the team currently on DEFENSE.
-        // Player is on DEFENSE if their team is NOT on offense.
-        isDisabled = playerTeamIsCurrentlyOffense; // Disable if player is on Offense, enable if on Defense.
-    } else if (currentGameState === GameState.Pull) {
-        // Puller selected, "Pull" button is active, player buttons generally disabled.
+    } else if (currentGameState === GameState.Start && bookkeeper.isPullPoint()) {
+        // Waiting to select PULLER. Puller must be from the team currently on DEFENSE.
+        // bookkeeper.homePossession is true if Home is on Offense.
+        // So, if player is home team (isPlayerFromHomeTeamList=true) AND home is on Offense (bk.homePossession=true), player is on O, so disable.
+        // If player is home team (isPlayerFromHomeTeamList=true) AND home is on Defense (bk.homePossession=false), player is on D, so enable.
+        isDisabled = isPlayerFromHomeTeamList === bookkeeper.homePossession; 
+    } else if (currentGameState === GameState.Pull) { 
         isDisabled = true; 
-    } else if (currentGameState === GameState.WhoPickedUpDisc) {
-        // Disc is loose (after pull, turnover, non-catch D).
-        // Player who picks up must be on the team that now has possession (is on Offense).
-        isDisabled = !playerTeamIsCurrentlyOffense; // Disable if player's team does NOT have possession.
-    } else { // Normal, FirstD, SecondD, FirstThrowQuebecVariant
+    } else if (currentGameState === GameState.WhoPickedUpDisc) { 
+        // Player picking up must be on the team that now has possession (is on Offense).
+        isDisabled = isPlayerFromHomeTeamList !== bookkeeper.homePossession;
+    } else if (currentGameState === GameState.SelectDefenderForD) {
+        // Waiting to select the DEFENDER. Defender must be on the team that was on DEFENSE
+        // when D/CatchD was pressed. At this stage, bookkeeper.homePossession still reflects
+        // the *original* offensive team. So, enable players on the team that is NOT bookkeeper.homePossession.
+        isDisabled = isPlayerFromHomeTeamList === bookkeeper.homePossession; 
+    } else { // Normal, FirstThrowQuebecVariant (player has disc or ready for D selection)
         if (bookkeeper.firstActor) { 
-            if (playerTeamIsCurrentlyOffense) { // Player's team has disc (is on Offense)
+            // Player's team has disc if (isPlayerFromHomeTeamList === bookkeeper.homePossession)
+            const playerTeamHasPossession = isPlayerFromHomeTeamList === bookkeeper.homePossession;
+            if (playerTeamHasPossession) { // Player's team has disc (is on Offense)
                 isDisabled = playerIsCurrentlyFirstActor; // Cannot pass to self
-            } else { // Player is on Defense, can be selected as firstActor for a D/CatchD
-                isDisabled = false; 
+            } else { // Player is on Defense. Can be selected as firstActor for a D/CatchD (but buttons should handle this)
+                // This path for tapping a defender when someone else has the disc is less common.
+                // D/CatchD buttons are primary. If a defender is tapped, it might set them as firstActor.
+                isDisabled = false; // Allow tapping a defender to select them (e.g. if firstActor was cleared)
             }
         } else { 
-            // No firstActor in these active play states.
-            // This means we might be waiting to select a defender for a D, or a player to pick up a disc
-            // if the state transition was complex (e.g. after a D where firstActor was cleared).
-            // If player is on D, they can be tapped to become firstActor (for a D).
-            // If player is on O, and no one has disc, they can't do much (can't receive from no one).
-            isDisabled = playerTeamIsCurrentlyOffense; // Disable if on O and no one has disc. Enable if on D.
+            // No firstActor in active play states like Normal. This implies disc is loose or needs pickup.
+            // Should typically be WhoPickedUpDisc state. If somehow in Normal with no firstActor, disable all.
+            isDisabled = true; 
         }
     }
     
@@ -97,12 +101,31 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
 
   const actionButtonsConfig = [
     { label: 'Pull', actionKey: 'recordPull', states: [GameState.Pull] },
-    { label: 'Point', actionKey: 'recordPoint', states: [GameState.Normal, GameState.SecondD, GameState.FirstD, GameState.FirstThrowQuebecVariant] },
-    { label: 'Drop', actionKey: 'recordDrop', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD] },
-    { label: 'D', actionKey: 'recordD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
-    { label: 'Catch D', actionKey: 'recordCatchD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
-    { label: 'Throw Away', actionKey: 'recordThrowAway', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD] },
+    { label: 'Point', actionKey: 'recordPoint', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.FirstD, GameState.SecondD] },
+    { label: 'Drop', actionKey: 'recordDrop', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.FirstD, GameState.SecondD] },
+    { label: 'D', actionKey: 'recordD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.FirstD, GameState.SecondD] }, 
+    { label: 'Catch D', actionKey: 'recordCatchD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.FirstD, GameState.SecondD] }, 
+    { label: 'Throw Away', actionKey: 'recordThrowAway', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.FirstD, GameState.SecondD] },
   ];
+
+  // Determine if the current firstActor is on the offensive team
+  let firstActorIsOffensive = false;
+  if (bookkeeper.firstActor && bookkeeper.activePoint) {
+      const firstActorIsHome = currentPointInitialHomeLine.includes(bookkeeper.firstActor) || currentPointInitialAwayLine.includes(bookkeeper.firstActor) && !currentPointInitialHomeLine.includes(bookkeeper.firstActor); // Simplified check
+      // More robust: check against activePoint.offensePlayers/defensePlayers if available and reliable
+      if (bookkeeper.activePoint.offensePlayers.includes(bookkeeper.firstActor)) {
+          firstActorIsOffensive = true;
+      } else if (bookkeeper.activePoint.defensePlayers.includes(bookkeeper.firstActor) && !bookkeeper.homePossession === firstActorIsHome) {
+          // This case is tricky: if firstActor is on D line but their team now has possession (e.g. after CatchD)
+          // For D/CatchD buttons, we care if firstActor is on the team that *started* the possession.
+          // Simpler: if bookkeeper.firstActor is set, and their team (based on homePossession) has the disc.
+          if ((currentPointInitialHomeLine.includes(bookkeeper.firstActor) && bookkeeper.homePossession) ||
+              (currentPointInitialAwayLine.includes(bookkeeper.firstActor) && !bookkeeper.homePossession)) {
+              firstActorIsOffensive = true;
+          }
+      }
+  }
+
 
   return (
     <>
@@ -126,6 +149,9 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
         ) : (
           <p style={{fontSize: '0.9em', color: '#777'}}>(No events yet for this point)</p>
         )}
+         {currentGameState === GameState.SelectDefenderForD && <p style={{color: 'blue', fontWeight: 'bold'}}>Select the player who made the D.</p>}
+         {currentGameState === GameState.Start && bookkeeper.isPullPoint() && <p style={{color: 'blue', fontWeight: 'bold'}}>Select the Puller.</p>}
+         {currentGameState === GameState.WhoPickedUpDisc && <p style={{color: 'blue', fontWeight: 'bold'}}>Select player who picked up the disc.</p>}
       </div>
 
       <div style={{ width: '35%', textAlign: 'right' }}> 
@@ -141,24 +167,16 @@ const StatTakingComponent: React.FC<StatTakingProps> = ({
         {actionButtonsConfig.map(btn => {
           let isDisabled = !btn.states.includes(currentGameState);
           if (btn.label === 'Pull') {
-              // Pull button enabled only if in Pull state AND puller (firstActor) is selected.
               isDisabled = !(currentGameState === GameState.Pull && !!bookkeeper.firstActor);
-          } else if (btn.actionKey === 'recordPoint') {
-            // Point can be scored if firstActor is set (scorer) or if it's a Callahan scenario.
-            // Bookkeeper logic handles validity. Enable if in a state where point is possible.
-            // If firstActor is null, it's likely not a direct scoring action by a player holding disc.
-            // For UI, enable if in a scorable state AND firstActor is set (unless it's a state like FirstD where firstActor is the defender).
-            // Simplification: if in a scorable state, button is generally enabled if firstActor is set.
-            if (btn.states.includes(currentGameState) && !bookkeeper.firstActor && 
-                ![GameState.FirstD, GameState.SecondD].includes(currentGameState) /* Callahan might not need firstActor if implicit */ ) {
-                // isDisabled = true; // Re-evaluating this, bookkeeper should handle if firstActor is needed
-            }
-          } else if (!['Undo', 'Record Half'].includes(btn.label)) { 
-              // For D, Catch D, Drop, Throw Away, firstActor must be set.
-              isDisabled = isDisabled || !bookkeeper.firstActor;
+          } else if (['D', 'Catch D'].includes(btn.label)) {
+              // D/CatchD enabled if in a normal play state AND firstActor (offensive player) is set.
+              // Disabled if already selecting a defender.
+              isDisabled = isDisabled || !bookkeeper.firstActor || !firstActorIsOffensive || currentGameState === GameState.SelectDefenderForD;
+          } else if (['Drop', 'Throw Away', 'Point'].includes(btn.label)) {
+              // These actions require a firstActor who is on offense.
+              isDisabled = isDisabled || !bookkeeper.firstActor || !firstActorIsOffensive;
           }
-
-
+          
           return (
               <button
               key={btn.label}
