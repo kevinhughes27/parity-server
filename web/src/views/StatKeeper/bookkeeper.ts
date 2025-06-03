@@ -1,5 +1,5 @@
 import {
-    EventType, GameState, League, Team, Event, PointModel, GameModel,
+    EventType, GameState, League, Team, PointModel, GameModel,
     SerializedMemento, MementoType, BookkeeperVolatileState, SerializedGameData
 } from './models';
 
