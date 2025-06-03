@@ -65,7 +65,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate": "sqlite3 ../server/db.sqlite '.mode json' 'select id,name from league order by id desc' | jq > src/leagues.json",
+    "generate": "sqlite3 ../server/db.sqlite '.mode json' 'select id,name,line_size as lineSize from league order by id desc' | jq > src/leagues.json",
     "format": "prettier --write src/**/*.ts{,x} --log-level warn",
     "format:check": "prettier --check src/**/*.ts{,x}",
     "lint": "eslint src/**/*.ts{,x}",
