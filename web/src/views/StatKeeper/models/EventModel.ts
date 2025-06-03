@@ -60,10 +60,13 @@ export class EventModel implements EventModelData {
       case EventType.POINT:
         return `${this.firstActor} scored!`;
       case EventType.DEFENSE:
+        // If secondActor exists, it means it was a block on a specific player.
+        // The firstActor is the defender.
+        // If secondActor is null, it implies a "Catch D" where the defender is the sole focus.
         if (this.secondActor) {
-          return `${this.firstActor} got a block on ${this.secondActor}`;
+          return `${this.firstActor} got a D on ${this.secondActor}`; // Or simply: `${this.firstActor} got a D`;
         }
-        return `${this.firstActor} got a catch D`; 
+        return `${this.firstActor} got a Catch D`; 
       case EventType.THROWAWAY:
         return `${this.firstActor} threw it away`;
       case EventType.DROP:
