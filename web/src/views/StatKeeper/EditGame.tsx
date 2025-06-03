@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link, useParams } from 'react-router-dom';
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
 import { leagues, fetchTeams, TeamPlayer } from '../../api';
 import EditRoster from './EditRoster';
+import { useLocalGameLoader, GAME_LOADING_SENTINEL } from './useLocalGameLoader'; // Import the hook
 
 const getLeagueName = (leagueId: string): string => {
   const league = leagues.find(l => l.id === leagueId);
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 
-const LOADING_GAME_SENTINEL = Symbol("loading_game");
-
 function EditGame() {
   const navigate = useNavigate();
-  const { localGameId: paramGameId } = useParams<{ localGameId: string }>();
-  const numericGameId = paramGameId ? parseInt(paramGameId, 10) : undefined;
+  // Use the custom hook to load game data
+  const { game, isLoading: isLoadingGame, error: gameError, numericGameId, rawGameData } = useLocalGameLoader();
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
@@ -23,22 +21,15 @@ function EditGame() {
   const [loadingLeaguePlayers, setLoadingLeaguePlayers] = useState<boolean>(false);
   const [errorLeaguePlayers, setErrorLeaguePlayers] = useState<string | null>(null);
 
-  const game = useLiveQuery<StoredGame | undefined | typeof LOADING_GAME_SENTINEL>(
-    async () => {
-      if (numericGameId === undefined || isNaN(numericGameId)) {
-        return undefined;
-      }
-      return db.games.get(numericGameId);
-    },
-    [numericGameId],
-    LOADING_GAME_SENTINEL
-  );
-
+  // Effect to fetch league players when game data is available (or changes)
   useEffect(() => {
-    if (game && game !== LOADING_GAME_SENTINEL && game.league_id) {
+    // rawGameData is used here because it reflects the direct output of useLiveQuery,
+    // including the sentinel, which helps manage the loading sequence correctly.
+    if (rawGameData && rawGameData !== GAME_LOADING_SENTINEL && rawGameData.league_id) {
+      const currentGame = rawGameData as StoredGame; // Safe assertion after checks
       setLoadingLeaguePlayers(true);
       setErrorLeaguePlayers(null);
-      fetchTeams(game.league_id)
+      fetchTeams(currentGame.league_id)
         .then(teams => {
           const allPlayers = teams.reduce((acc, team) => {
             team.players.forEach(p => {
@@ -57,19 +48,27 @@ function EditGame() {
         .finally(() => {
           setLoadingLeaguePlayers(false);
         });
+    } else if (!rawGameData || rawGameData === GAME_LOADING_SENTINEL) {
+      // Reset if game is not loaded or is still loading
+      setAllLeaguePlayers([]);
+      setErrorLeaguePlayers(null); // Clear previous league player errors
     }
-  }, [game]);
+  }, [rawGameData]); // Dependency on rawGameData ensures this runs when game data changes
 
+  // Effect to initialize/update component's roster states when the resolved 'game' object changes
   useEffect(() => {
-    if (game && game !== LOADING_GAME_SENTINEL) {
+    if (game) { // 'game' is the fully resolved StoredGame object from the hook
       setHomeRosterNames([...game.homeRoster]);
       setAwayRosterNames([...game.awayRoster]);
+    } else {
+      // Reset rosters if game is not available (e.g., loading, error, or not found)
+      setHomeRosterNames([]);
+      setAwayRosterNames([]);
     }
-  }, [game]);
-
+  }, [game]); // Dependency on the resolved 'game' object
 
   const handleUpdateRosters = async () => {
-    if (!game || game === LOADING_GAME_SENTINEL || numericGameId === undefined) {
+    if (!game || numericGameId === undefined) { // Check against 'game' from hook
       alert('Game data is not loaded correctly.');
       return;
     }
@@ -94,28 +93,30 @@ function EditGame() {
     }
   };
 
-  if (numericGameId === undefined || isNaN(numericGameId)) {
-    return (
-      <div style={{ padding: '20px' }}>
-        <p>Invalid game ID provided.</p>
-        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
-      </div>
-    );
-  }
-
-  if (game === LOADING_GAME_SENTINEL) {
+  if (isLoadingGame) {
     return <p style={{ padding: '20px' }}>Loading game details...</p>;
   }
 
-  if (!game) {
+  if (gameError) {
     return (
       <div style={{ padding: '20px' }}>
-        <p>Game with ID {paramGameId} not found.</p>
+        <p>{gameError}</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
   }
 
+  if (!game) {
+    // This state should also generally be covered by 'gameError' if an ID was present.
+    return (
+      <div style={{ padding: '20px' }}>
+        <p>Game not found or ID is invalid.</p>
+        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
+      </div>
+    );
+  }
+
+  // If we reach here, game is loaded
   return (
     <div style={{ padding: '20px', paddingBottom: '40px' }}>
       <Link to={`/stat_keeper/game/${numericGameId}`} style={{ marginBottom: '20px', display: 'inline-block' }}>
@@ -147,7 +148,7 @@ function EditGame() {
           <button
             onClick={handleUpdateRosters}
             style={{ marginBottom: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}
-            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0 || loadingLeaguePlayers}
           >
             Update Rosters
           </button>
