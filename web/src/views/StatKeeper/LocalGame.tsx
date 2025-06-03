@@ -1,8 +1,7 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from './db';
+import { Link } from 'react-router-dom';
 import { leagues } from '../../api';
+import { useLocalGameLoader } from './useLocalGameLoader'; // Import the hook
 
 // Helper function to get league name from ID
 const getLeagueName = (leagueId: string): string => {
@@ -10,42 +9,31 @@ const getLeagueName = (leagueId: string): string => {
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 
-// A unique sentinel value to represent the loading state for useLiveQuery's defaultValue
-const LOADING_SENTINEL = Symbol("loading");
-
 function LocalGame() {
-  const { localGameId } = useParams<{ localGameId: string }>();
-  const numericLocalGameId = localGameId ? parseInt(localGameId, 10) : undefined;
+  const { game, isLoading, error, numericGameId } = useLocalGameLoader();
 
-  const game: StoredGame | undefined | typeof LOADING_SENTINEL = useLiveQuery(
-    async () => {
-      if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
-        return undefined;
-      }
-      return db.games.get(numericLocalGameId);
-    },
-    [numericLocalGameId],
-    LOADING_SENTINEL
-  );
+  if (isLoading) {
+    return <p style={{ padding: '20px' }}>Loading game data...</p>;
+  }
 
-  if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
+  if (error) {
     return (
       <div style={{ padding: '20px' }}>
-        <p>Invalid game ID.</p>
-        <Link to="/stat_keeper">Back to StatKeeper Home</Link>
+        <p>{error}</p>
+        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
   }
 
-  if (game === LOADING_SENTINEL) {
-    return <p style={{ padding: '20px' }}>Loading game data...</p>;
-  }
-
-  if (game === undefined) {
+  if (!game) {
+    // This state should generally be covered by the 'error' or 'isLoading' states.
+    // If numericGameId was valid but game not found, 'error' will be set.
+    // If numericGameId was invalid, 'error' will be set.
+    // This is a fallback.
     return (
       <div style={{ padding: '20px' }}>
-        <p>Game with ID {localGameId} not found.</p>
-        <Link to="/stat_keeper">Back to StatKeeper Home</Link>
+        <p>Game not found or ID is invalid.</p>
+        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
   }
@@ -56,7 +44,8 @@ function LocalGame() {
         <Link to="/stat_keeper" style={{ display: 'inline-block' }}>
           &larr; Back to StatKeeper Home
         </Link>
-        <Link to={`/stat_keeper/edit_game/${game.localId}`}>
+        {/* numericGameId from the hook should be defined if game is loaded */}
+        <Link to={`/stat_keeper/edit_game/${numericGameId}`}>
           <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Edit Game</button>
         </Link>
       </div>

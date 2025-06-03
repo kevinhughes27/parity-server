@@ -86,7 +86,6 @@ function NewGame() {
       awayScore: 0,
       awayRoster: awayRosterNames,
       points: [],
-      stats: undefined,
       status: 'new',
       lastModified: new Date(),
     };
