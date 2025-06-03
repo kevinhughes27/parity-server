@@ -1,6 +1,7 @@
-import { Bookkeeper } from '../../../statkeeper_lib/Bookkeeper';
-import { EventType, League, Team, Event, GameModel, PointModel, SerializedGameData } from '../../../statkeeper_lib/models';
-import { db, StoredGame } from '../../web/src/views/StatKeeper/db'; // Adjust path as needed
+import { Bookkeeper } from '../Bookkeeper';
+import { EventType, League, Team, Event, GameModel, PointModel, SerializedGameData } from '../models';
+import 'fake-indexeddb/auto';
+import { db, StoredGame } from '../db';
 
 const PLAYER1 = "Kevin Hughes";
 const PLAYER2 = "Allan Godding";
@@ -47,7 +48,7 @@ describe('Bookkeeper', () => {
         expect(event.timestamp).toBeDefined();
         expect(typeof event.timestamp).toBe('string');
     }
-    
+
     function recordPass() { // PLAYER1 (home) passes to PLAYER2 (home)
         // For this helper, assume PLAYER1 and PLAYER2 are on the same (home) team line
         const currentHomeLine = [PLAYER1, PLAYER2, PLAYER3, "HP4", "HP5", "HP6", "HP7"];
