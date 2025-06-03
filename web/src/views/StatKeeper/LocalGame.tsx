@@ -52,7 +52,7 @@ function LocalGame() {
       lastPoint.defensePlayers.forEach(p => lastPointPlayers.add(p));
     }
 
-    if (lastPointPlayers.size === 0) { // First point of the game or no players in last point (should not happen)
+    if (lastPointPlayers.size === 0) { // First point of the game or no players in last point
       setCurrentHomeLine(game.homeRoster.slice(0, MAX_PLAYERS_ON_LINE));
       setCurrentAwayLine(game.awayRoster.slice(0, MAX_PLAYERS_ON_LINE));
     } else {
@@ -69,7 +69,10 @@ function LocalGame() {
       bk.loadGame().then(loaded => {
         if (loaded) {
           setBookkeeper(bk);
-          autoSelectNextLines(); // Auto-select lines on initial load based on last point (if any)
+          // Only call autoSelectNextLines if bookkeeper is successfully loaded
+          if (bk.gameData) { // Ensure gameData is available for autoSelectNextLines
+            autoSelectNextLines(); 
+          }
           setUiMode('line-selection'); 
           setActionCounter(c => c + 1); 
         } else {
@@ -81,7 +84,7 @@ function LocalGame() {
       setBookkeeper(null);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps 
-  }, [numericLocalGameId]); // autoSelectNextLines is stable due to useCallback wrapping bookkeeper
+  }, [numericLocalGameId]); 
 
   useEffect(() => {
     if (bookkeeper) {
@@ -141,9 +144,6 @@ function LocalGame() {
       }
       bookkeeper.setCurrentLine(currentHomeLine, currentAwayLine);
       setUiMode('stat-taking');
-      // If starting a point, and no firstActor is set (e.g. after confirming lines),
-      // the game state should reflect this (e.g. GameState.Start or WhoPickedUpDisc if after score)
-      // The UI will then guide selection of firstActor.
     } else { // Switching from 'stat-taking' to 'line-selection'
       setUiMode('line-selection');
       autoSelectNextLines(); // Auto-select lines for the next point
@@ -154,15 +154,14 @@ function LocalGame() {
   const handleBookkeeperAction = async (actionFn: () => Promise<void> | void) => {
     if (!bookkeeper) return;
     
-    const isPointAction = (actionFn === bookkeeper.recordPoint);
+    await actionFn(); // Perform the bookkeeper action (e.g., recordPoint, recordPull, etc.)
+    triggerRefresh(); // Update the UI based on the new state from the bookkeeper
 
-    await actionFn();
-    triggerRefresh();
-
-    if (isPointAction && bookkeeper.activePoint === null) { // Point was successfully recorded
-      setUiMode('line-selection'); // Switch to line selection for next point
-      autoSelectNextLines(); // Auto-populate lines for the next point
-    }
+    // After a point is scored, bookkeeper.activePoint will be null.
+    // The UI will remain in 'stat-taking' mode.
+    // The game state (currentGameState) will update to GameState.Start.
+    // Action buttons will be enabled/disabled based on GameState.Start.
+    // The user must manually click "Change Line / Pause Point" to go to 'line-selection' mode.
   };
 
   const renderPlayerButton = (player: string, isHomeTeamPlayerList: boolean, onField: boolean) => {
@@ -179,7 +178,6 @@ function LocalGame() {
       }
     } else if (uiMode === 'stat-taking' && bookkeeper) {
         const playerIsFirstActor = bookkeeper.isFirstActor(player);
-        // Determine if the player's list (home or away) corresponds to the team with possession
         const playerListTeamHasPossession = bookkeeper.homePossession === isHomeTeamPlayerList;
 
         if (!onField) { 
@@ -191,7 +189,6 @@ function LocalGame() {
             } else if (currentGameState === GameState.Pull) {
                 isDisabled = true; 
             } else if (currentGameState === GameState.WhoPickedUpDisc) {
-                // Only players on the team that is determined to have possession should be enabled
                 isDisabled = !playerListTeamHasPossession; 
             } else { 
                 if (bookkeeper.firstActor) { 
