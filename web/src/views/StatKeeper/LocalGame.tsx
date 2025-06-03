@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from './db'; // Updated import path
-import { leagues } from '../../api'; 
+import { db, StoredGame } from './db';
+import { leagues } from '../../api';
 
 // Helper function to get league name from ID
 const getLeagueName = (leagueId: string): string => {
@@ -14,7 +14,7 @@ const getLeagueName = (leagueId: string): string => {
 const LOADING_SENTINEL = Symbol("loading");
 
 function LocalGame() {
-  const { localGameId } = useParams<{ localGameId: string }>(); 
+  const { localGameId } = useParams<{ localGameId: string }>();
   const numericLocalGameId = localGameId ? parseInt(localGameId, 10) : undefined;
 
   const game: StoredGame | undefined | typeof LOADING_SENTINEL = useLiveQuery(
@@ -24,8 +24,8 @@ function LocalGame() {
       }
       return db.games.get(numericLocalGameId);
     },
-    [numericLocalGameId], 
-    LOADING_SENTINEL 
+    [numericLocalGameId],
+    LOADING_SENTINEL
   );
 
   if (numericLocalGameId === undefined || isNaN(numericLocalGameId)) {
@@ -56,7 +56,7 @@ function LocalGame() {
         <Link to="/stat_keeper" style={{ display: 'inline-block' }}>
           &larr; Back to StatKeeper Home
         </Link>
-        <Link to={`/stat_keeper/edit_game/${game.localId}`}> 
+        <Link to={`/stat_keeper/edit_game/${game.localId}`}>
           <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Edit Game</button>
         </Link>
       </div>
