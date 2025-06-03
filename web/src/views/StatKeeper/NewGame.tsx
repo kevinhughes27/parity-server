@@ -8,7 +8,7 @@ import EditRoster from './EditRoster';
 function NewGame() {
   const navigate = useNavigate();
 
-  const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues.length > 0 ? leagues[0].id : '');
+  const [selectedLeagueId, setSelectedLeagueId] = useState<number>(leagues[0].id);
   const [leagueTeams, setLeagueTeams] = useState<Team[]>([]);
   const [loadingTeams, setLoadingTeams] = useState<boolean>(false);
   const [errorTeams, setErrorTeams] = useState<string | null>(null);

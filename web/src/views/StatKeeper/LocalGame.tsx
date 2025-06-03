@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { leagues } from '../../api';
-import { useLocalGameLoader } from './useLocalGameLoader'; // Import the hook
-
-// Helper function to get league name from ID
-const getLeagueName = (leagueId: string): string => {
-  const league = leagues.find(l => l.id === leagueId);
-  return league ? league.name : `Unknown League (${leagueId})`;
-};
+import { getLeagueName } from '../../api';
+import { useLocalGame } from './useLocalGame';
 
 function LocalGame() {
-  const { game, isLoading, error, numericGameId } = useLocalGameLoader();
+  const { game, isLoading, error, numericGameId } = useLocalGame();
 
   if (isLoading) {
     return <p style={{ padding: '20px' }}>Loading game data...</p>;
