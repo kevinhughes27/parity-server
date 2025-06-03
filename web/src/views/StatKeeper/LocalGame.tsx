@@ -2,18 +2,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
-import { leagues } from '../../api';
+import { leagues, ClientLeague } from '../../api'; // Import ClientLeague for typing
 import { Bookkeeper } from './Bookkeeper';
 import { GameState } from './models/GameState';
 import { EventType } from './models/EventModel';
 
 const getLeagueName = (leagueId: string): string => {
-  const league = leagues.find(l => l.id === leagueId);
+  const league = leagues.find(l => l.id.toString() === leagueId); // Ensure ID comparison is robust
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 
 const LOADING_SENTINEL = Symbol("loading_game_data");
-const MAX_PLAYERS_ON_LINE = 7;
 
 type UiMode = 'line-selection' | 'stat-taking';
 
@@ -27,7 +26,8 @@ function LocalGame() {
   const [currentAwayLine, setCurrentAwayLine] = useState<string[]>([]);
   const [currentGameState, setCurrentGameState] = useState<GameState>(GameState.Start);
   const [pointEventHistory, setPointEventHistory] = useState<string[]>([]);
-  const [actionCounter, setActionCounter] = useState(0);
+  const [actionCounter, setActionCounter] = useState(0); 
+  const [leagueLineSize, setLeagueLineSize] = useState<number>(7); // Default line size
 
   const storedGameFromDb = useLiveQuery<StoredGame | undefined | typeof LOADING_SENTINEL>(
     async () => {
@@ -39,11 +39,24 @@ function LocalGame() {
     [numericLocalGameId],
     LOADING_SENTINEL
   );
+  
+  useEffect(() => {
+    if (bookkeeper?.gameData?.league_id) {
+      const currentLeague = leagues.find(l => l.id.toString() === bookkeeper.gameData.league_id);
+      if (currentLeague && typeof currentLeague.lineSize === 'number') {
+        setLeagueLineSize(currentLeague.lineSize);
+      } else {
+        setLeagueLineSize(7); // Fallback if not found or not a number
+      }
+    }
+  }, [bookkeeper?.gameData?.league_id]);
+
 
   const autoSelectNextLines = useCallback(() => {
     if (!bookkeeper || !bookkeeper.gameData) return;
 
     const game = bookkeeper.gameData;
+    const currentLineSize = leagueLineSize; 
     let lastPointPlayers = new Set<string>();
 
     if (game.points.length > 0) {
@@ -52,16 +65,16 @@ function LocalGame() {
       lastPoint.defensePlayers.forEach(p => lastPointPlayers.add(p));
     }
 
-    if (lastPointPlayers.size === 0) { // First point of the game or no players in last point
-      setCurrentHomeLine(game.homeRoster.slice(0, MAX_PLAYERS_ON_LINE));
-      setCurrentAwayLine(game.awayRoster.slice(0, MAX_PLAYERS_ON_LINE));
+    if (lastPointPlayers.size === 0) { 
+      setCurrentHomeLine(game.homeRoster.slice(0, currentLineSize));
+      setCurrentAwayLine(game.awayRoster.slice(0, currentLineSize));
     } else {
-      const nextHomeLine = game.homeRoster.filter(p => !lastPointPlayers.has(p)).slice(0, MAX_PLAYERS_ON_LINE);
-      const nextAwayLine = game.awayRoster.filter(p => !lastPointPlayers.has(p)).slice(0, MAX_PLAYERS_ON_LINE);
+      const nextHomeLine = game.homeRoster.filter(p => !lastPointPlayers.has(p)).slice(0, currentLineSize);
+      const nextAwayLine = game.awayRoster.filter(p => !lastPointPlayers.has(p)).slice(0, currentLineSize);
       setCurrentHomeLine(nextHomeLine);
       setCurrentAwayLine(nextAwayLine);
     }
-  }, [bookkeeper]);
+  }, [bookkeeper, leagueLineSize]);
 
   useEffect(() => {
     if (numericLocalGameId !== undefined) {
@@ -69,21 +82,27 @@ function LocalGame() {
       bk.loadGame().then(loaded => {
         if (loaded) {
           setBookkeeper(bk);
-          if (bk.gameData) {
-            autoSelectNextLines();
-          }
-          setUiMode('line-selection');
-          setActionCounter(c => c + 1);
+          // autoSelectNextLines will be called once leagueLineSize is set via the other effect
+          // and bookkeeper is confirmed to be loaded with gameData.
+          setUiMode('line-selection'); 
+          setActionCounter(c => c + 1); 
         } else {
-          setBookkeeper(null);
+          setBookkeeper(null); 
         }
       });
     }
     return () => {
       setBookkeeper(null);
     };
+  }, [numericLocalGameId]); 
+
+  useEffect(() => {
+    if (bookkeeper && bookkeeper.gameData && leagueLineSize > 0) { // Ensure leagueLineSize is set
+        autoSelectNextLines();
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [numericLocalGameId]);
+  }, [bookkeeper?.gameData, leagueLineSize, autoSelectNextLines]); // Depend on gameData for initial load
+
 
   useEffect(() => {
     if (bookkeeper) {
@@ -105,10 +124,10 @@ function LocalGame() {
     if (currentLine.includes(player)) {
       setCurrentLine(currentLine.filter(p => p !== player));
     } else {
-      if (currentLine.length < MAX_PLAYERS_ON_LINE) {
+      if (currentLine.length < leagueLineSize) { 
         setCurrentLine([...currentLine, player]);
       } else {
-        alert(`Maximum ${MAX_PLAYERS_ON_LINE} players allowed on the line.`);
+        alert(`Maximum ${leagueLineSize} players allowed on the line.`);
       }
     }
   };
@@ -116,18 +135,18 @@ function LocalGame() {
   const handlePlayerTapStatTaking = async (player: string, isPlayerFromHomeTeamList: boolean) => {
     if (!bookkeeper || uiMode !== 'stat-taking') return;
 
-    if (bookkeeper.firstActor) {
+    if (bookkeeper.firstActor) { 
       const tappedPlayerTeamHasPossession = bookkeeper.homePossession === isPlayerFromHomeTeamList;
       if (tappedPlayerTeamHasPossession) {
         if (bookkeeper.firstActor !== player) {
             await bookkeeper.recordPass(player);
         } else {
-            return;
+            return; 
         }
-      } else {
-        bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
+      } else { 
+        bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList); 
       }
-    } else {
+    } else { 
       bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
     }
     triggerRefresh();
@@ -138,19 +157,23 @@ function LocalGame() {
 
     if (uiMode === 'line-selection') {
       if (currentHomeLine.length === 0 || currentAwayLine.length === 0) {
-        // Allow starting with fewer than MAX_PLAYERS_ON_LINE if necessary, but not empty.
         alert('Please select players for both lines.');
         return;
       }
+      if (currentHomeLine.length !== leagueLineSize || currentAwayLine.length !== leagueLineSize) {
+        if (!window.confirm(`Lines are not full (${leagueLineSize} players per team). Continue anyway?`)) {
+            return;
+        }
+      }
       bookkeeper.setCurrentLine(currentHomeLine, currentAwayLine);
       setUiMode('stat-taking');
-    } else { // Switching from 'stat-taking' to 'line-selection'
+    } else { 
       setUiMode('line-selection');
-      autoSelectNextLines();
+      autoSelectNextLines(); 
     }
     triggerRefresh();
   };
-
+  
   const handleBookkeeperAction = async (actionKey: keyof Bookkeeper | 'undo' | 'recordHalf') => {
     if (!bookkeeper) return;
 
@@ -171,60 +194,66 @@ function LocalGame() {
       console.error("Invalid action key for bookkeeper action:", actionKey);
       return;
     }
+    
+    await actionFnToExecute(); 
+    triggerRefresh(); 
 
-    await actionFnToExecute();
-    triggerRefresh();
-
-    // After a point is scored, switch to line selection and auto-select.
     if (actionKey === 'recordPoint' && bookkeeper.activePoint === null) {
       setUiMode('line-selection');
-      autoSelectNextLines();
+      autoSelectNextLines(); 
     }
   };
 
   const renderPlayerButton = (player: string, isHomeTeamPlayerList: boolean, onField: boolean) => {
     const isPlayerSelectedForLine = (isHomeTeamPlayerList ? currentHomeLine : currentAwayLine).includes(player);
     let isDisabled = false;
-    let buttonStyle: React.CSSProperties = { margin: '5px', padding: '10px', cursor: 'pointer', minWidth: '120px', textAlign: 'center', borderRadius: '4px' };
+    let buttonStyle: React.CSSProperties = { 
+        margin: '5px', padding: '10px', cursor: 'pointer', 
+        width: 'calc(100% - 10px)', // Make buttons take full width of their column minus margin
+        textAlign: 'center', borderRadius: '4px',
+        boxSizing: 'border-box'
+    };
+
 
     if (uiMode === 'line-selection') {
       if (isPlayerSelectedForLine) {
-        buttonStyle.backgroundColor = '#d4edda';
+        buttonStyle.backgroundColor = '#d4edda'; 
         buttonStyle.borderColor = '#c3e6cb';
       } else {
-        buttonStyle.backgroundColor = '#f8f9fa';
+        buttonStyle.backgroundColor = '#f8f9fa'; 
       }
     } else if (uiMode === 'stat-taking' && bookkeeper) {
         const playerIsFirstActor = bookkeeper.isFirstActor(player);
         const playerListTeamHasPossession = bookkeeper.homePossession === isHomeTeamPlayerList;
 
-        if (!onField) {
+        if (!onField) { 
             isDisabled = true;
             buttonStyle.opacity = 0.3;
         } else {
-            if (currentGameState === GameState.Start) {
-                isDisabled = false;
-            } else if (currentGameState === GameState.Pull) {
-                isDisabled = true;
-            } else if (currentGameState === GameState.WhoPickedUpDisc) {
+            if (currentGameState === GameState.Start) { 
+                // Only enable players on the team that has possession (pulling team)
                 isDisabled = !playerListTeamHasPossession;
-            } else {
-                if (bookkeeper.firstActor) {
-                    if (playerListTeamHasPossession) {
-                        isDisabled = playerIsFirstActor;
-                    } else {
-                        isDisabled = false;
+            } else if (currentGameState === GameState.Pull) {
+                isDisabled = true; 
+            } else if (currentGameState === GameState.WhoPickedUpDisc) {
+                isDisabled = !playerListTeamHasPossession; 
+            } else { 
+                if (bookkeeper.firstActor) { 
+                    if (playerListTeamHasPossession) { 
+                        isDisabled = playerIsFirstActor; 
+                    } else { 
+                        isDisabled = false; 
                     }
-                } else {
-                    isDisabled = true;
+                } else { 
+                    isDisabled = true; 
                 }
             }
         }
         if (playerIsFirstActor) {
-            buttonStyle.border = '3px solid #007bff';
+            buttonStyle.border = '3px solid #007bff'; 
             buttonStyle.fontWeight = 'bold';
         }
-        if (isDisabled && onField) {
+        if (isDisabled && onField) { 
              buttonStyle.opacity = 0.6;
         }
     }
@@ -256,15 +285,15 @@ function LocalGame() {
   if (storedGameFromDb === LOADING_SENTINEL || !bookkeeper || !bookkeeper.gameData) {
     return <p style={{ padding: '20px' }}>Loading game data and bookkeeper...</p>;
   }
-
-  const game = bookkeeper.gameData;
+  
+  const game = bookkeeper.gameData; 
 
   return (
     <div style={{ padding: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
         <Link to="/stat_keeper">&larr; StatKeeper Home</Link>
         <button onClick={handleModeSwitch} style={{ padding: '10px 15px' }}>
-          {uiMode === 'line-selection' ? (currentHomeLine.length >= MAX_PLAYERS_ON_LINE && currentAwayLine.length >= MAX_PLAYERS_ON_LINE ? 'Confirm Lines & Start Point' : `Select Lines (${MAX_PLAYERS_ON_LINE} per team)`) : 'Change Line / Pause Point'}
+          {uiMode === 'line-selection' ? (currentHomeLine.length >= leagueLineSize && currentAwayLine.length >= leagueLineSize ? `Confirm Lines & Start Point (${leagueLineSize})` : `Select Lines (${leagueLineSize} per team)`) : 'Change Line / Pause Point'}
         </button>
         <Link to={`/stat_keeper/edit_game/${game.localId}`}>
           <button>Edit Rosters</button>
@@ -273,39 +302,56 @@ function LocalGame() {
 
       <div style={{ textAlign: 'center', marginBottom: '10px' }}>
         <h1>{game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}</h1>
-        <p>Week: {game.week} | League: {getLeagueName(game.league_id)} | Status: {game.status}</p>
-        <p>Possession: {bookkeeper.activePoint ? (bookkeeper.homePossession ? game.homeTeam : game.awayTeam) : "N/A (Point not started)"}</p>
+        <p>Week: {game.week} | League: {getLeagueName(game.league_id)} | Line Size: {leagueLineSize}</p>
+        <p>Possession: {bookkeeper.activePoint || currentGameState === GameState.Start ? (bookkeeper.homePossession ? game.homeTeam : game.awayTeam) : "N/A"}</p>
         <p>Current Game State: {GameState[currentGameState]} ({currentGameState})</p>
         {bookkeeper.firstActor && <p>Player with Disc/Action: {bookkeeper.firstActor}</p>}
       </div>
 
+      {/* Player Lists and Event History Area */}
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
-        <div style={{ width: '48%' }}>
-          <h3>{game.homeTeam} {uiMode === 'line-selection' ? `(${currentHomeLine.length}/${MAX_PLAYERS_ON_LINE})` : `(Line: ${currentHomeLine.length})`}</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+        {/* Home Team Players */}
+        <div style={{ width: '35%', textAlign: 'left' }}> 
+          <h3>{game.homeTeam} {uiMode === 'line-selection' ? `(${currentHomeLine.length}/${leagueLineSize})` : `(Line: ${currentHomeLine.length})`}</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             {(uiMode === 'line-selection' ? game.homeRoster : currentHomeLine).map(player =>
               renderPlayerButton(player, true, currentHomeLine.includes(player))
             )}
           </div>
         </div>
 
-        <div style={{ width: '48%' }}>
-          <h3>{game.awayTeam} {uiMode === 'line-selection' ? `(${currentAwayLine.length}/${MAX_PLAYERS_ON_LINE})` : `(Line: ${currentAwayLine.length})`}</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+        {/* Event History (Central Column) */}
+        <div style={{ width: '25%', borderLeft: '1px solid #eee', borderRight: '1px solid #eee', padding: '0 10px', maxHeight: '400px', overflowY: 'auto' }}> 
+          <h4>Current Point:</h4>
+          {pointEventHistory.length > 0 ? (
+            <ul style={{ listStyleType: 'decimal', paddingLeft: '20px', margin: 0 }}>
+              {pointEventHistory.map((eventStr, index) => (
+                <li key={index} style={{fontSize: '0.9em'}}>{eventStr}</li>
+              ))}
+            </ul>
+          ) : (
+            <p style={{fontSize: '0.9em', color: '#777'}}>{uiMode === 'stat-taking' ? '(No events yet for this point)' : '(Select lines to start point)'}</p>
+          )}
+        </div>
+
+        {/* Away Team Players */}
+        <div style={{ width: '35%', textAlign: 'right' }}> 
+          <h3>{game.awayTeam} {uiMode === 'line-selection' ? `(${currentAwayLine.length}/${leagueLineSize})` : `(Line: ${currentAwayLine.length})`}</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
             {(uiMode === 'line-selection' ? game.awayRoster : currentAwayLine).map(player =>
               renderPlayerButton(player, false, currentAwayLine.includes(player))
             )}
           </div>
         </div>
       </div>
-
+      
       {uiMode === 'stat-taking' && (
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
           {actionButtonsConfig.map(btn => {
             let isDisabled = !btn.states.includes(currentGameState);
             if (btn.label === 'Pull') {
                 isDisabled = currentGameState !== GameState.Pull || !bookkeeper.firstActor;
-            } else if (btn.label !== 'Undo' && btn.label !== 'Record Half') {
+            } else if (btn.label !== 'Undo' && btn.label !== 'Record Half') { 
                 isDisabled = isDisabled || !bookkeeper.firstActor;
             }
 
@@ -325,16 +371,6 @@ function LocalGame() {
         </div>
       )}
 
-      {uiMode === 'stat-taking' && pointEventHistory.length > 0 && (
-        <div style={{ marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '10px' }}>
-          <h4>Current Point Events:</h4>
-          <ul style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>
-            {pointEventHistory.map((eventStr, index) => (
-              <li key={index}>{eventStr}</li>
-            ))}
-          </ul>
-        </div>
-      )}
        <details style={{marginTop: '20px'}}>
             <summary>View All Game Points ({game.points.length})</summary>
             {game.points.map((p, pointIndex) => (
