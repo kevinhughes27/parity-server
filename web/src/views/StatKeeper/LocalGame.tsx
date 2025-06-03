@@ -69,8 +69,7 @@ function LocalGame() {
       bk.loadGame().then(loaded => {
         if (loaded) {
           setBookkeeper(bk);
-          // Only call autoSelectNextLines if bookkeeper is successfully loaded
-          if (bk.gameData) { // Ensure gameData is available for autoSelectNextLines
+          if (bk.gameData) { 
             autoSelectNextLines(); 
           }
           setUiMode('line-selection'); 
@@ -139,6 +138,7 @@ function LocalGame() {
 
     if (uiMode === 'line-selection') {
       if (currentHomeLine.length === 0 || currentAwayLine.length === 0) {
+        // Allow starting with fewer than MAX_PLAYERS_ON_LINE if necessary, but not empty.
         alert('Please select players for both lines.');
         return;
       }
@@ -146,22 +146,40 @@ function LocalGame() {
       setUiMode('stat-taking');
     } else { // Switching from 'stat-taking' to 'line-selection'
       setUiMode('line-selection');
-      autoSelectNextLines(); // Auto-select lines for the next point
+      autoSelectNextLines(); 
     }
     triggerRefresh();
   };
   
-  const handleBookkeeperAction = async (actionFn: () => Promise<void> | void) => {
+  const handleBookkeeperAction = async (actionKey: keyof Bookkeeper | 'undo' | 'recordHalf') => {
     if (!bookkeeper) return;
-    
-    await actionFn(); // Perform the bookkeeper action (e.g., recordPoint, recordPull, etc.)
-    triggerRefresh(); // Update the UI based on the new state from the bookkeeper
 
-    // After a point is scored, bookkeeper.activePoint will be null.
-    // The UI will remain in 'stat-taking' mode.
-    // The game state (currentGameState) will update to GameState.Start.
-    // Action buttons will be enabled/disabled based on GameState.Start.
-    // The user must manually click "Change Line / Pause Point" to go to 'line-selection' mode.
+    let actionFnToExecute: (() => Promise<void> | void) | undefined;
+
+    if (actionKey === 'undo') {
+      actionFnToExecute = bookkeeper.undo.bind(bookkeeper);
+    } else if (actionKey === 'recordHalf') {
+      actionFnToExecute = bookkeeper.recordHalf.bind(bookkeeper);
+    } else {
+      const method = bookkeeper[actionKey as keyof Bookkeeper];
+      if (typeof method === 'function') {
+        actionFnToExecute = method.bind(bookkeeper);
+      }
+    }
+
+    if (!actionFnToExecute) {
+      console.error("Invalid action key for bookkeeper action:", actionKey);
+      return;
+    }
+    
+    await actionFnToExecute(); 
+    triggerRefresh(); 
+
+    // After a point is scored, switch to line selection and auto-select.
+    if (actionKey === 'recordPoint' && bookkeeper.activePoint === null) {
+      setUiMode('line-selection');
+      autoSelectNextLines(); 
+    }
   };
 
   const renderPlayerButton = (player: string, isHomeTeamPlayerList: boolean, onField: boolean) => {
@@ -294,12 +312,7 @@ function LocalGame() {
             return (
                 <button
                 key={btn.label}
-                onClick={() => {
-                    const actionMethod = bookkeeper?.[btn.actionKey as keyof Bookkeeper];
-                    if (typeof actionMethod === 'function') {
-                        handleBookkeeperAction(actionMethod.bind(bookkeeper));
-                    }
-                }}
+                onClick={() => handleBookkeeperAction(btn.actionKey as keyof Bookkeeper | 'undo' | 'recordHalf')}
                 disabled={isDisabled}
                 style={{padding: '10px 15px'}}
                 >
@@ -307,8 +320,8 @@ function LocalGame() {
                 </button>
             );
         })}
-          <button onClick={() => handleBookkeeperAction(bookkeeper.undo)} style={{padding: '10px 15px', backgroundColor: '#ffc107'}}>Undo</button>
-          <button onClick={() => handleBookkeeperAction(bookkeeper.recordHalf)} style={{padding: '10px 15px', backgroundColor: '#17a2b8', color: 'white'}}>Record Half</button>
+          <button onClick={() => handleBookkeeperAction('undo')} style={{padding: '10px 15px', backgroundColor: '#ffc107'}}>Undo</button>
+          <button onClick={() => handleBookkeeperAction('recordHalf')} style={{padding: '10px 15px', backgroundColor: '#17a2b8', color: 'white'}}>Record Half</button>
         </div>
       )}
 
