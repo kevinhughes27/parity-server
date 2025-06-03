@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { leagues, Team, TeamPlayer } from '../../api'; // fetchTeams is no longer needed here
-import { useTeams } from './hooks'; // Import the new useTeams hook
+import { leagues } from '../../api';
+import { useTeams } from './hooks';
 
 import EditRoster from './EditRoster';
 
@@ -10,8 +10,7 @@ function NewGame() {
   const navigate = useNavigate();
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<number>(leagues[0].id);
-  
-  // Use the custom hook to manage teams and players
+
   const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(selectedLeagueId);
 
   const [homeTeamId, setHomeTeamId] = useState<string>('');
@@ -24,7 +23,6 @@ function NewGame() {
   useEffect(() => {
     setHomeTeamId('');
     setAwayTeamId('');
-    // Rosters will be reset by their own useEffects below if team IDs change
   }, [selectedLeagueId]);
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
