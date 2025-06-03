@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
 import { getLeagueName, fetchTeams, TeamPlayer } from '../../api';
 import EditRoster from './EditRoster';
-import { useLocalGame, GAME_LOADING_SENTINEL } from './useLocalGame';
+import { useLocalGame, GAME_LOADING_SENTINEL } from './hooks'; // Updated import path
 
 function EditGame() {
   const navigate = useNavigate();

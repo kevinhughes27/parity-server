@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getLeagueName } from '../../api';
-import { useLocalGame } from './useLocalGame';
+import { useLocalGame } from './hooks'; // Updated import path
 
 function LocalGame() {
   const { game, isLoading, error, numericGameId } = useLocalGame();
