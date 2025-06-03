@@ -4,8 +4,6 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { fetchTeams, Team, TeamPlayer } from '../../api';
 
-// --- Copied from useLocalGame.ts ---
-// A unique sentinel value to represent the loading state for useLiveQuery's defaultValue
 export const GAME_LOADING_SENTINEL = Symbol("loading_game_sentinel");
 
 export interface UseLocalGameResult {
@@ -13,7 +11,6 @@ export interface UseLocalGameResult {
   isLoading: boolean;
   error: string | null;
   numericGameId: number | undefined;
-  rawGameData: StoredGame | undefined | typeof GAME_LOADING_SENTINEL; // Raw output from useLiveQuery, useful for useEffect dependencies
 }
 
 export function useLocalGame(): UseLocalGameResult {
@@ -50,8 +47,8 @@ export function useLocalGame(): UseLocalGameResult {
       }
       return db.games.get(numericGameId);
     },
-    [numericGameId], 
-    GAME_LOADING_SENTINEL 
+    [numericGameId],
+    GAME_LOADING_SENTINEL
   );
 
   useEffect(() => {
@@ -62,10 +59,10 @@ export function useLocalGame(): UseLocalGameResult {
 
     if (rawGameData === GAME_LOADING_SENTINEL) {
       setInternalIsLoading(true);
-    } else if (rawGameData !== undefined) { 
+    } else if (rawGameData !== undefined) {
       setInternalIsLoading(false);
-      setError(null); 
-    } else { 
+      setError(null);
+    } else {
       setInternalIsLoading(false);
       setError(`Game with ID ${numericGameId} not found.`);
     }
@@ -79,11 +76,9 @@ export function useLocalGame(): UseLocalGameResult {
     isLoading: internalIsLoading,
     error,
     numericGameId,
-    rawGameData,
   };
 }
 
-// --- New useTeams hook ---
 export interface UseTeamsResult {
   leagueTeams: Team[];
   allLeaguePlayers: TeamPlayer[];
