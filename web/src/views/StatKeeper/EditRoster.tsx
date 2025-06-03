@@ -1,25 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { TeamPlayer } from '../../api'; 
+import React, { useState } from 'react';
+import { TeamPlayer } from '../../api';
 
 interface EditRosterProps {
   teamName: string;
-  // currentSavedRoster: string[]; // The actual roster names currently saved with the game for this team
-  // defaultTeamPlayers: TeamPlayer[]; // Players originally on this team as per league data (for reference or future use)
-  
-  // Simpler approach: parent manages the roster state fully. EditRoster just displays and calls back.
-  // Let's revert to the parent (NewGameSetup or EditGameRosters) managing the roster state (homeRosterNames, awayRosterNames)
-  // and passing it down as currentRosterNames. EditRoster calls onRosterChange to update that parent state.
-  // The useEffect that was problematic will be removed. The parent is responsible for initialization.
-
-  allLeaguePlayers: TeamPlayer[]; // All players in the league for adding subs
-  currentRosterNames: string[]; // Current list of names for this team's roster, managed by parent
+  allLeaguePlayers: TeamPlayer[];
+  currentRosterNames: string[]
   onRosterChange: (newRosterNames: string[]) => void;
 }
 
 const EditRoster: React.FC<EditRosterProps> = ({
   teamName,
   allLeaguePlayers,
-  currentRosterNames, // This is the source of truth for displayed roster
+  currentRosterNames,
   onRosterChange,
 }) => {
   const [newSubName, setNewSubName] = useState('');
@@ -46,17 +38,11 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const handleAddLeaguePlayer = () => {
     if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
       onRosterChange([...currentRosterNames, selectedLeaguePlayer]);
-      setSelectedLeaguePlayer(''); // Reset dropdown
+      setSelectedLeaguePlayer('');
     } else if (currentRosterNames.includes(selectedLeaguePlayer)) {
         alert(`${selectedLeaguePlayer} is already on the roster.`);
     }
   };
-  
-  // The problematic useEffect that reset currentRosterNames based on initialRosterPlayers
-  // has been removed. The parent component (NewGameSetup or EditGameRosters) is now
-  // responsible for initializing and passing the correct currentRosterNames.
-  // NewGameSetup initializes from default team players.
-  // EditGameRosters initializes from the game's saved rosters.
 
   return (
     <div style={{ border: '1px solid #e0e0e0', padding: '15px', borderRadius: '5px', marginBottom: '20px' }}>

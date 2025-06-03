@@ -1,13 +1,10 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Bookkeeper } from '../Bookkeeper';
-import { db } from '../db'; // We'll mock this or use an in-memory version
 import { StoredGame } from '../db';
 import { EventModel, EventType } from '../models/EventModel';
-import { PointModel } from '../models/PointModel';
-import 'fake-indexeddb/auto'; // Polyfills IndexedDB in Node.js environment for testing
+import 'fake-indexeddb/auto'; // needs to be imported before dexie
 import Dexie from 'dexie';
 
-// Define a type for our test database
 interface TestDB extends Dexie {
   games: Dexie.Table<StoredGame, number>;
 }
@@ -25,7 +22,6 @@ describe('Bookkeeper', () => {
   const initialAwayRoster = [PLAYER3, "AwayPlayer2", "AwayPlayer3"];
 
   beforeEach(async () => {
-    // Create a new in-memory database for each test
     testDb = new Dexie('TestStatKeeperDB') as TestDB;
     testDb.version(1).stores({
       games: '++localId, serverId, league_id, week, status, lastModified',
@@ -55,8 +51,8 @@ describe('Bookkeeper', () => {
     bookkeeper.setCurrentLine([...initialHomeRoster], [...initialAwayRoster]);
   });
 
+  // Clean up the database after each test
   afterEach(async () => {
-    // Clean up the database after each test
     await testDb.delete();
     testDb.close();
   });
