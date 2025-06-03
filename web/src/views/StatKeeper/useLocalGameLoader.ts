@@ -57,24 +57,38 @@ export function useLocalGameLoader(): UseLocalGameLoaderResult {
   );
 
   useEffect(() => {
-    // This effect determines the final isLoading state and sets "not found" error.
-    if (numericGameId === undefined && !error) {
-      // Error related to ID parsing is already set by the first useEffect.
-      // This handles cases where paramGameId might be undefined initially.
+    // If numericGameId is undefined, it means paramGameId was missing or invalid.
+    // The first useEffect already set an error and internalIsLoading = false.
+    // The useLiveQuery is essentially a no-op or returns undefined in this case.
+    if (numericGameId === undefined) {
+      // Ensure isLoading is false if it somehow got true, though the first effect should handle it.
       setInternalIsLoading(false);
       return;
     }
 
-    if (rawGameData === GAME_LOADING_SENTINEL && numericGameId !== undefined && !error) {
+    // At this point, numericGameId is valid.
+    // The first useEffect would have set error to null and internalIsLoading to true.
+    if (rawGameData === GAME_LOADING_SENTINEL) {
       setInternalIsLoading(true);
-    } else {
+      // setError(null); // Error is already reset by the first useEffect when paramGameId changes.
+                       // No need to reset it again here while actively loading.
+    } else if (rawGameData !== undefined) { // Game data is available and is the actual game object
       setInternalIsLoading(false);
-      if (numericGameId !== undefined && !error && rawGameData === undefined) {
-        // ID was valid, query ran, but no game was found
-        setError(`Game with ID ${numericGameId} not found.`);
-      }
+      setError(null); // Game found, clear any "not found" error from a previous state.
+    } else { // rawGameData is undefined (and not the sentinel), meaning query completed and found nothing
+      setInternalIsLoading(false);
+      // Set "not found" error. This check ensures we don't overwrite an error from
+      // the first useEffect (e.g. "Invalid game ID format") if numericGameId was
+      // somehow defined but an error was already set. However, the primary guard
+      // for param parsing errors is numericGameId being undefined.
+      // If error is already set (e.g. from first useEffect), this won't clear it,
+      // which is correct. If error is null, this will set the "not found" error.
+      // This specific path (numericId is defined, rawGameData is undefined) implies
+      // a "not found" scenario for a valid ID format.
+      setError(`Game with ID ${numericGameId} not found.`);
     }
-  }, [rawGameData, numericGameId, error]);
+  }, [rawGameData, numericGameId]);
+
 
   const game = (rawGameData && rawGameData !== GAME_LOADING_SENTINEL) ? (rawGameData as StoredGame) : undefined;
 
