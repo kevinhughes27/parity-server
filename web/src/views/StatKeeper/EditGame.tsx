@@ -1,58 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { getLeagueName, fetchTeams, TeamPlayer } from '../../api';
+import { getLeagueName } from '../../api'; // fetchTeams and TeamPlayer are no longer directly needed
 import EditRoster from './EditRoster';
-import { useLocalGame, GAME_LOADING_SENTINEL } from './hooks'; // Updated import path
+import { useLocalGame, useTeams } from './hooks'; // Removed GAME_LOADING_SENTINEL, added useTeams
 
 function EditGame() {
   const navigate = useNavigate();
   // Use the custom hook to load game data
-  const { game, isLoading: isLoadingGame, error: gameError, numericGameId, rawGameData } = useLocalGame();
+  const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
+
+  // Use the useTeams hook to get all league players based on the game's league_id
+  // Pass game?.league_id to handle the case where game is initially undefined
+  const { 
+    allLeaguePlayers, 
+    loadingTeams: loadingLeaguePlayers, 
+    errorTeams: errorLeaguePlayers 
+  } = useTeams(game?.league_id);
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
-  const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
-  const [loadingLeaguePlayers, setLoadingLeaguePlayers] = useState<boolean>(false);
-  const [errorLeaguePlayers, setErrorLeaguePlayers] = useState<string | null>(null);
 
-  // Effect to fetch league players when game data is available (or changes)
+  // Effect to initialize/update component's roster states when the 'game' object changes
   useEffect(() => {
-    // rawGameData is used here because it reflects the direct output of useLiveQuery,
-    // including the sentinel, which helps manage the loading sequence correctly.
-    if (rawGameData && rawGameData !== GAME_LOADING_SENTINEL && rawGameData.league_id) {
-      const currentGame = rawGameData as StoredGame; // Safe assertion after checks
-      setLoadingLeaguePlayers(true);
-      setErrorLeaguePlayers(null);
-      fetchTeams(currentGame.league_id)
-        .then(teams => {
-          const allPlayers = teams.reduce((acc, team) => {
-            team.players.forEach(p => {
-              if (!acc.find(ap => ap.name === p.name)) {
-                acc.push(p);
-              }
-            });
-            return acc;
-          }, [] as TeamPlayer[]);
-          setAllLeaguePlayers(allPlayers);
-        })
-        .catch(err => {
-          setErrorLeaguePlayers(err instanceof Error ? err.message : 'Failed to load league players');
-          setAllLeaguePlayers([]);
-        })
-        .finally(() => {
-          setLoadingLeaguePlayers(false);
-        });
-    } else if (!rawGameData || rawGameData === GAME_LOADING_SENTINEL) {
-      // Reset if game is not loaded or is still loading
-      setAllLeaguePlayers([]);
-      setErrorLeaguePlayers(null); // Clear previous league player errors
-    }
-  }, [rawGameData]); // Dependency on rawGameData ensures this runs when game data changes
-
-  // Effect to initialize/update component's roster states when the resolved 'game' object changes
-  useEffect(() => {
-    if (game) { // 'game' is the fully resolved StoredGame object from the hook
+    if (game) {
       setHomeRosterNames([...game.homeRoster]);
       setAwayRosterNames([...game.awayRoster]);
     } else {
@@ -63,7 +34,7 @@ function EditGame() {
   }, [game]); // Dependency on the resolved 'game' object
 
   const handleUpdateRosters = async () => {
-    if (!game || numericGameId === undefined) { // Check against 'game' from hook
+    if (!game || numericGameId === undefined) {
       alert('Game data is not loaded correctly.');
       return;
     }
@@ -102,7 +73,6 @@ function EditGame() {
   }
 
   if (!game) {
-    // This state should also generally be covered by 'gameError' if an ID was present.
     return (
       <div style={{ padding: '20px' }}>
         <p>Game not found or ID is invalid.</p>
@@ -124,19 +94,19 @@ function EditGame() {
       </div>
 
       {loadingLeaguePlayers && <p>Loading league player data...</p>}
-      {errorLeaguePlayers && <p style={{ color: 'red' }}>Error: {errorLeaguePlayers}</p>}
+      {errorLeaguePlayers && <p style={{ color: 'red' }}>Error loading league players: {errorLeaguePlayers}</p>}
 
       {!loadingLeaguePlayers && !errorLeaguePlayers && (
         <>
           <EditRoster
             teamName={game.homeTeam}
-            allLeaguePlayers={allLeaguePlayers}
+            allLeaguePlayers={allLeaguePlayers} // Provided by useTeams
             currentRosterNames={homeRosterNames}
             onRosterChange={setHomeRosterNames}
           />
           <EditRoster
             teamName={game.awayTeam}
-            allLeaguePlayers={allLeaguePlayers}
+            allLeaguePlayers={allLeaguePlayers} // Provided by useTeams
             currentRosterNames={awayRosterNames}
             onRosterChange={setAwayRosterNames}
           />
@@ -148,6 +118,10 @@ function EditGame() {
             Update Rosters
           </button>
         </>
+      )}
+      {/* Display if league players are loaded but the list is empty (e.g. league has no players) */}
+      {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length === 0 && game?.league_id && (
+         <p>No players found for the league: {getLeagueName(game.league_id)}.</p>
       )}
     </div>
   );
