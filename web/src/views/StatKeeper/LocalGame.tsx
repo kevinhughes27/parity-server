@@ -28,7 +28,7 @@ function LocalGame() {
   const [pointEventHistory, setPointEventHistory] = useState<string[]>([]);
   const [actionCounter, setActionCounter] = useState(0); 
   const [leagueLineSize, setLeagueLineSize] = useState<number>(7);
-  const [selectingDTargetFor, setSelectingDTargetFor] = useState<string | null>(null); 
+  // Removed selectingDTargetFor state
 
   const storedGameFromDb = useLiveQuery<StoredGame | undefined | typeof LOADING_SENTINEL>(
     async () => {
@@ -134,15 +134,7 @@ function LocalGame() {
   const handlePlayerTapStatTaking = async (player: string, isPlayerFromHomeTeamList: boolean) => {
     if (!bookkeeper || uiMode !== 'stat-taking') return;
 
-    if (selectingDTargetFor) { 
-        const defenderIsHome = bookkeeper.gameData.homeRoster.includes(selectingDTargetFor);
-        if (defenderIsHome === isPlayerFromHomeTeamList) {
-            alert("Select a player from the opposing team (who was on offense).");
-            return;
-        }
-        await bookkeeper.recordD(selectingDTargetFor, player);
-        setSelectingDTargetFor(null);
-    } else if (bookkeeper.firstActor) { 
+    if (bookkeeper.firstActor) { 
       const tappedPlayerTeamHasPossession = bookkeeper.homePossession === isPlayerFromHomeTeamList;
       if (tappedPlayerTeamHasPossession) {
         if (bookkeeper.firstActor !== player) { // Can't pass to self
@@ -153,7 +145,7 @@ function LocalGame() {
       } else { // Tapped player is on defense - select them as the active defender
         bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList); 
       }
-    } else { // No firstActor yet for the current action sequence
+    } else { // No firstActor yet for the current action sequence (e.g. picking up disc, selecting puller)
       bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
     }
     triggerRefresh();
@@ -161,7 +153,6 @@ function LocalGame() {
 
   const handleModeSwitch = () => {
     if (!bookkeeper) return;
-    setSelectingDTargetFor(null); 
 
     if (uiMode === 'line-selection') {
       if (currentHomeLine.length === 0 || currentAwayLine.length === 0) {
@@ -182,39 +173,25 @@ function LocalGame() {
     triggerRefresh();
   };
   
-  const handleBookkeeperAction = async (actionKey: keyof Bookkeeper | 'undo' | 'recordHalf' | 'D_initiate' | 'CatchD_initiate') => {
+  const handleBookkeeperAction = async (actionKey: keyof Bookkeeper | 'undo' | 'recordHalf') => {
     if (!bookkeeper) return;
     
     let actionFnToExecute: (() => Promise<void> | void) | undefined;
 
     if (actionKey === 'undo') {
       actionFnToExecute = bookkeeper.undo.bind(bookkeeper);
-      setSelectingDTargetFor(null); // Clear D target selection on undo
     } else if (actionKey === 'recordHalf') {
       actionFnToExecute = bookkeeper.recordHalf.bind(bookkeeper);
-      setSelectingDTargetFor(null);
-    } else if (actionKey === 'D_initiate') {
-        if (bookkeeper.firstActor) {
-            setSelectingDTargetFor(bookkeeper.firstActor); 
-            triggerRefresh(); 
-            return; 
-        } else {
-            alert("Select the player who made the D first by tapping them.");
-            return;
-        }
-    } else if (actionKey === 'CatchD_initiate') {
-        if (bookkeeper.firstActor) {
-            actionFnToExecute = () => bookkeeper.recordCatchD(bookkeeper.firstActor!);
-            setSelectingDTargetFor(null);
-        } else {
-            alert("Select the player who made the Catch D first by tapping them.");
-            return;
-        }
     } else {
+      // For D and CatchD, firstActor (the defender) must be set by tapping them.
+      // Then the D/CatchD button is pressed.
+      if ((actionKey === 'recordD' || actionKey === 'recordCatchD') && !bookkeeper.firstActor) {
+          alert("Select the player who made the D/Catch D first by tapping them.");
+          return;
+      }
       const method = bookkeeper[actionKey as keyof Bookkeeper];
       if (typeof method === 'function') {
         actionFnToExecute = method.bind(bookkeeper);
-        setSelectingDTargetFor(null);
       }
     }
 
@@ -253,10 +230,7 @@ function LocalGame() {
         const playerIsFirstActor = bookkeeper.isFirstActor(player);
         const playerListTeamHasPossession = bookkeeper.homePossession === isHomeTeamPlayerList;
 
-        if (selectingDTargetFor) { 
-            const defenderIsHome = bookkeeper.gameData.homeRoster.includes(selectingDTargetFor);
-            isDisabled = (defenderIsHome === isHomeTeamPlayerList) || !onField;
-        } else if (!onField) { 
+        if (!onField) { 
             isDisabled = true;
             buttonStyle.opacity = 0.3;
         } else { 
@@ -270,7 +244,7 @@ function LocalGame() {
                 if (bookkeeper.firstActor) { 
                     if (playerListTeamHasPossession) { 
                         isDisabled = playerIsFirstActor; 
-                    } else { 
+                    } else { // Player is on defense, can be selected as firstActor for a D/CatchD
                         isDisabled = false; 
                     }
                 } else { 
@@ -278,12 +252,8 @@ function LocalGame() {
                 }
             }
         }
-        if (playerIsFirstActor && !selectingDTargetFor) { 
+        if (playerIsFirstActor) { 
             buttonStyle.border = '3px solid #007bff'; 
-            buttonStyle.fontWeight = 'bold';
-        }
-        if (selectingDTargetFor && player === selectingDTargetFor) { 
-            buttonStyle.border = '3px solid #dc3545'; 
             buttonStyle.fontWeight = 'bold';
         }
         if (isDisabled && onField) { 
@@ -303,12 +273,13 @@ function LocalGame() {
     );
   };
 
+  // Updated actionButtonsConfig to use 'recordD' and 'recordCatchD' directly
   const actionButtonsConfig = [
     { label: 'Pull', actionKey: 'recordPull', states: [GameState.Pull] },
     { label: 'Point', actionKey: 'recordPoint', states: [GameState.Normal, GameState.SecondD, GameState.FirstD, GameState.FirstThrowQuebecVariant] },
     { label: 'Drop', actionKey: 'recordDrop', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD] },
-    { label: 'D', actionKey: 'D_initiate', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
-    { label: 'Catch D', actionKey: 'CatchD_initiate', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
+    { label: 'D', actionKey: 'recordD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
+    { label: 'Catch D', actionKey: 'recordCatchD', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD, GameState.FirstD] }, 
     { label: 'Throw Away', actionKey: 'recordThrowAway', states: [GameState.Normal, GameState.FirstThrowQuebecVariant, GameState.SecondD] },
   ];
 
@@ -337,8 +308,8 @@ function LocalGame() {
         <h1>{game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}</h1>
         <p>Week: {game.week} | League: {getLeagueName(game.league_id)} | Line Size: {leagueLineSize}</p>
         <p>Possession: {bookkeeper.activePoint || currentGameState === GameState.Start ? (bookkeeper.homePossession ? game.homeTeam : game.awayTeam) : "N/A"}</p>
-        <p>Current Game State: {GameState[currentGameState]} ({currentGameState}) {selectingDTargetFor ? `(Selecting player D'd by ${selectingDTargetFor})`: ""}</p>
-        {bookkeeper.firstActor && !selectingDTargetFor && <p>Player with Disc/Action: {bookkeeper.firstActor}</p>}
+        <p>Current Game State: {GameState[currentGameState]} ({currentGameState})</p>
+        {bookkeeper.firstActor && <p>Player with Disc/Action: {bookkeeper.firstActor}</p>}
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -360,7 +331,7 @@ function LocalGame() {
               ))}
             </ul>
           ) : (
-            <p style={{fontSize: '0.9em', color: '#777'}}>{uiMode === 'stat-taking' ? (selectingDTargetFor ? `Select player D'd by ${selectingDTargetFor}` : '(No events yet for this point)') : '(Select lines to start point)'}</p>
+            <p style={{fontSize: '0.9em', color: '#777'}}>{uiMode === 'stat-taking' ? '(No events yet for this point)' : '(Select lines to start point)'}</p>
           )}
         </div>
 
@@ -374,22 +345,21 @@ function LocalGame() {
         </div>
       </div>
       
-      {uiMode === 'stat-taking' && !selectingDTargetFor && ( 
+      {uiMode === 'stat-taking' && ( 
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
           {actionButtonsConfig.map(btn => {
             let isDisabled = !btn.states.includes(currentGameState);
             if (btn.label === 'Pull') {
                 isDisabled = currentGameState !== GameState.Pull || !bookkeeper.firstActor;
-            } else if (!['Undo', 'Record Half', 'D', 'Catch D'].includes(btn.label)) { 
-                isDisabled = isDisabled || !bookkeeper.firstActor;
-            } else if (['D', 'Catch D'].includes(btn.label)) {
+            } else if (!['Undo', 'Record Half'].includes(btn.label)) { 
+                // For D, Catch D, Point, Drop, Throw Away, firstActor must be set
                 isDisabled = isDisabled || !bookkeeper.firstActor;
             }
 
             return (
                 <button
                 key={btn.label}
-                onClick={() => handleBookkeeperAction(btn.actionKey as keyof Bookkeeper | 'undo' | 'recordHalf' | 'D_initiate' | 'CatchD_initiate')}
+                onClick={() => handleBookkeeperAction(btn.actionKey as keyof Bookkeeper | 'undo' | 'recordHalf')}
                 disabled={isDisabled}
                 style={{padding: '10px 15px'}}
                 >

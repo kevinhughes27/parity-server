@@ -62,23 +62,17 @@ export class Bookkeeper {
 
     if (lastEventOfLastPoint.type === EventType.POINT.toString()) {
       const scorer = lastEventOfLastPoint.firstActor;
-      // This logic assumes that if the scorer is in the homeRoster, the home team scored.
-      // This might need refinement if rosters are very dynamic or subs are common.
-      // A more robust way would be to check if the scorer was part of the `lastPoint.offensePlayers`.
-      if (lastPoint.offensePlayers.includes(scorer)) { // Scorer was on offense for that point
-        // Was that offense the home team or away team?
-        // Check if the first player of that point's offense is in the game's home roster
-        if (this.gameData.homeRoster.includes(lastPoint.offensePlayers[0])) { // Home team scored
-            return false; // Away team's possession
-        } else { // Away team scored
-            return true; // Home team's possession
+      if (lastPoint.offensePlayers.includes(scorer)) { 
+        if (this.gameData.homeRoster.includes(lastPoint.offensePlayers[0])) { 
+            return false; 
+        } else { 
+            return true; 
         }
-      } else { // Scorer was on defense (Callahan) - this case needs careful thought for possession
-          // If Callahan, the scoring team (defense) keeps possession for the next point (pulls)
-          if (this.gameData.homeRoster.includes(scorer)) { // Home player scored Callahan
-              return true; // Home team pulls
-          } else { // Away player scored Callahan
-              return false; // Away team pulls
+      } else { 
+          if (this.gameData.homeRoster.includes(scorer)) { 
+              return true; 
+          } else { 
+              return false; 
           }
       }
     }
@@ -129,13 +123,12 @@ export class Bookkeeper {
     const isFirstPointOfHalf = (this.gameData.points.length === this.pointsAtHalfRecorded);
 
     if (!this.activePoint) { 
-        return GameState.Start; // Ready to select players for point / select puller
+        return GameState.Start;
     }
     
-    // If point just started (e.g. after score, lines set), and no first actor selected yet
     if (firstEventOfPoint && !this.firstActor) {
-        if (isFirstPointOfHalf) return GameState.Start; // Select puller
-        return GameState.WhoPickedUpDisc; // Select player to pick up disc
+        if (isFirstPointOfHalf) return GameState.Start; 
+        return GameState.WhoPickedUpDisc; 
     }
     
     if (isFirstPointOfHalf && firstEventOfPoint && this.firstActor) { 
@@ -144,23 +137,21 @@ export class Bookkeeper {
 
     if (lastEventInActivePoint) {
       switch (lastEventInActivePoint.type) {
-        case EventType.PULL: // After pull, waiting for pickup
+        case EventType.PULL: 
           return GameState.WhoPickedUpDisc;
         case EventType.THROWAWAY:
-        case EventType.DROP: // After turnover, waiting for pickup
+        case EventType.DROP: 
           return GameState.WhoPickedUpDisc;
-        case EventType.DEFENSE: // After a D
-          // If firstActor is set, it means it was a CatchD, player has disc
-          // If firstActor is null, it was a block, waiting for pickup
+        case EventType.DEFENSE: 
           return this.firstActor ? GameState.SecondD : GameState.WhoPickedUpDisc;
-        case EventType.PICK_UP: // After a pick up, ready for first throw
+        case EventType.PICK_UP: 
             return GameState.FirstThrowQuebecVariant; 
-        case EventType.PASS: // Normal play
+        case EventType.PASS: 
             return GameState.Normal;
         default: 
           return GameState.Normal;
       }
-    } else { // Active point exists but has no events (should be handled by logic above)
+    } else { 
         if (isFirstPointOfHalf) return this.firstActor ? GameState.Pull : GameState.Start; 
         return GameState.WhoPickedUpDisc; 
     }
@@ -192,12 +183,11 @@ export class Bookkeeper {
       }
     }
 
-    // Check if this action is a "pick up"
     const lastEvent = this.activePoint.getLastEvent();
     if (
         (lastEvent && (lastEvent.type === EventType.PULL || lastEvent.type === EventType.THROWAWAY || lastEvent.type === EventType.DROP)) ||
-        (lastEvent && lastEvent.type === EventType.DEFENSE && this.firstActor === null) || // After a non-catch D
-        (this.activePoint.getEventCount() === 0 && this.gameData.points.length !== this.pointsAtHalfRecorded) // Start of a new point (not first of half)
+        (lastEvent && lastEvent.type === EventType.DEFENSE && this.firstActor === null) || 
+        (this.activePoint.getEventCount() === 0 && this.gameData.points.length !== this.pointsAtHalfRecorded) 
     ) {
         this.activePoint.addEvent(new EventModel(EventType.PICK_UP, player));
     }
@@ -211,7 +201,7 @@ export class Bookkeeper {
     this.activePoint.addEvent(new EventModel(EventType.PULL, this.firstActor));
     this.activePoint.swapOffenseAndDefense(); 
     this.homePossession = !this.homePossession; 
-    this.firstActor = null; // Disc is now loose, waiting for pick up
+    this.firstActor = null; 
     await this.saveGameData();
   }
 
@@ -240,21 +230,25 @@ export class Bookkeeper {
     await this.handleTurnover(EventType.DROP);
   }
 
-  public async recordD(defender: string, offensivePlayerBlocked: string): Promise<void> { 
-    if (!this.activePoint) return; 
+  // Defender (firstActor) gets a block. Disc is loose.
+  public async recordD(): Promise<void> { 
+    if (!this.firstActor || !this.activePoint) return; 
     this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, defender, offensivePlayerBlocked));
+    // The firstActor is the defender. No secondActor for this event.
+    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor, null));
     this.homePossession = !this.homePossession; 
     this.firstActor = null; // Disc is loose, waiting for pickup by D-ing team
     await this.saveGameData();
   }
 
-  public async recordCatchD(defender: string): Promise<void> { 
-    if (!this.activePoint) return;
+  // Defender (firstActor) gets a block and catches it.
+  public async recordCatchD(): Promise<void> { 
+    if (!this.firstActor || !this.activePoint) return;
     this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, defender)); 
+    // The firstActor is the defender. No secondActor.
+    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor, null)); 
     this.homePossession = !this.homePossession; 
-    this.firstActor = defender; // Defender now has the disc
+    // this.firstActor (the defender) remains the firstActor because they have the disc.
     await this.saveGameData();
   }
 

@@ -27,7 +27,7 @@ export class EventModel implements EventModelData {
   constructor(type: EventType, firstActor: string, secondActor: string | null = null) {
     this.type = type;
     this.firstActor = firstActor;
-    this.secondActor = secondActor;
+    this.secondActor = secondActor; // Will be null for D events as per new requirement
     this.timestamp = new Date().toISOString();
   }
 
@@ -60,13 +60,14 @@ export class EventModel implements EventModelData {
       case EventType.POINT:
         return `${this.firstActor} scored!`;
       case EventType.DEFENSE:
-        // If secondActor exists, it means it was a block on a specific player.
-        // The firstActor is the defender.
-        // If secondActor is null, it implies a "Catch D" where the defender is the sole focus.
-        if (this.secondActor) {
-          return `${this.firstActor} got a D on ${this.secondActor}`; // Or simply: `${this.firstActor} got a D`;
-        }
-        return `${this.firstActor} got a Catch D`; 
+        // Simplified: firstActor is always the defender.
+        // If secondActor was null (as it will be for recordD, or for recordCatchD), it's a general D.
+        // The distinction for "Catch D" can be made by the game state if needed, or if we want a different message for CatchD.
+        // For now, aligning with "got a D" or "got a block".
+        // If it was a Catch D, the Bookkeeper logic ensures firstActor is the one with the disc.
+        // If it was a regular D, Bookkeeper sets firstActor to null (disc loose).
+        // The Java version's Event.prettyPrint for DEFENSE is: firstActor + " got a block";
+        return `${this.firstActor} got a D`; 
       case EventType.THROWAWAY:
         return `${this.firstActor} threw it away`;
       case EventType.DROP:
