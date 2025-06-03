@@ -303,7 +303,7 @@ export class Bookkeeper {
 
         this.activePoint.swapOffenseAndDefense();
         this.changePossession();
-        this.activePoint.addEvent({ type: EventType.PULL, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.PULL, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.firstActor = null;
     }
 
@@ -312,7 +312,7 @@ export class Bookkeeper {
 
         this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway));
         this.changePossession();
-        this.activePoint.addEvent({ type: EventType.THROWAWAY, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.THROWAWAY, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.firstActor = null;
     }
 
@@ -329,7 +329,7 @@ export class Bookkeeper {
 
         this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordDrop));
         this.changePossession();
-        this.activePoint.addEvent({ type: EventType.DROP, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.DROP, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.firstActor = null;
     }
 
@@ -337,7 +337,7 @@ export class Bookkeeper {
         if (!this.activePoint || !this.firstActor) return;
 
         this.mementos.push(this.createGenericUndoLastEventMemento(MementoType.RecordD));
-        this.activePoint.addEvent({ type: EventType.DEFENSE, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.DEFENSE, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.firstActor = null;
     }
 
@@ -353,7 +353,7 @@ export class Bookkeeper {
                 // this.firstActor = mementoData.savedFirstActor; // Not strictly needed as it wasn't changed
             }
         });
-        this.activePoint.addEvent({ type: EventType.DEFENSE, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.DEFENSE, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
     }
 
     public recordPoint(): void {
@@ -370,7 +370,7 @@ export class Bookkeeper {
             type: MementoType.RecordPoint,
             data: mementoData,
             apply: () => {
-                if (mementoData.wasHomePossession) {
+                if (mData.wasHomePossession) {
                     this.homeScore--;
                 } else {
                     this.awayScore--;
@@ -380,15 +380,15 @@ export class Bookkeeper {
                     this.activePoint = undonePoint;
                     this.activePoint.removeLastEvent();
                 }
-                this.homePlayers = mementoData.savedHomePlayers;
-                this.awayPlayers = mementoData.savedAwayPlayers;
-                this.firstActor = mementoData.savedFirstActor;
-                this.homePossession = mementoData.wasHomePossession;
+                this.homePlayers = mData.savedHomePlayers;
+                this.awayPlayers = mData.savedAwayPlayers;
+                this.firstActor = mData.savedFirstActor;
+                this.homePossession = mData.wasHomePossession;
                 // Participant undo is not handled here, same as Java
             }
         });
 
-        this.activePoint.addEvent({ type: EventType.POINT, firstActor: this.firstActor!, timestamp: new Date().toISOString() });
+        this.activePoint.addEvent({ type: EventType.POINT, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.activeGame.addPoint(this.activePoint);
 
         if (this.homePossession) {
