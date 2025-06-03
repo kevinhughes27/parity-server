@@ -7,7 +7,7 @@ export interface StoredGame {
   serverId?: string;      // Game ID from the server, if uploaded. Optional.
 
   // Core game data, similar to api.ts Game interface
-  league_id: string;
+  league_id: number;
   week: number;
   homeTeam: string;
   homeScore: number;

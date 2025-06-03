@@ -6,7 +6,7 @@ import { db, StoredGame } from './db';
 // A unique sentinel value to represent the loading state for useLiveQuery's defaultValue
 export const GAME_LOADING_SENTINEL = Symbol("loading_game_sentinel");
 
-export interface UseLocalGameLoaderResult {
+export interface UseLocalGameResult {
   game: StoredGame | undefined; // The resolved game object, or undefined if not found/error
   isLoading: boolean;
   error: string | null;
@@ -14,7 +14,7 @@ export interface UseLocalGameLoaderResult {
   rawGameData: StoredGame | undefined | typeof GAME_LOADING_SENTINEL; // Raw output from useLiveQuery, useful for useEffect dependencies
 }
 
-export function useLocalGameLoader(): UseLocalGameLoaderResult {
+export function useLocalGame(): UseLocalGameResult {
   const { localGameId: paramGameId } = useParams<{ localGameId: string }>();
   const [numericGameId, setNumericGameId] = useState<number | undefined>(undefined);
   const [error, setError] = useState<string | null>(null);

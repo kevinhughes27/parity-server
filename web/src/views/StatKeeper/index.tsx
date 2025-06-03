@@ -2,13 +2,7 @@ import React from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from './db';
 import { Link, useNavigate } from 'react-router-dom';
-import { leagues } from '../../api';
-
-// Helper function to get league name from ID
-const getLeagueName = (leagueId: string): string => {
-  const league = leagues.find(l => l.id === leagueId);
-  return league ? league.name : `Unknown League (${leagueId})`;
-};
+import { getLeagueName } from '../../api';
 
 function StatKeeper() {
   const navigate = useNavigate();
