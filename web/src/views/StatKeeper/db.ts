@@ -1,11 +1,10 @@
 import Dexie, { type EntityTable } from 'dexie';
-// Adjust path to api.ts: from ./api to ../../api
-import { type Point, type Stats } from '../../api'; 
+import { type Point } from '../../api';
 
 // Define the structure of the game object to be stored in Dexie
 export interface StoredGame {
   localId?: number;       // Primary key, auto-incrementing. Optional because it's set by Dexie on add.
-  serverId?: string;      // Game ID from the server, if synced/downloaded. Optional.
+  serverId?: string;      // Game ID from the server, if uploaded. Optional.
 
   // Core game data, similar to api.ts Game interface
   league_id: string;
@@ -16,8 +15,7 @@ export interface StoredGame {
   awayTeam: string;
   awayScore: number;
   awayRoster: string[];
-  points: Point[];        // Array of points, can be empty initially
-  stats?: Stats;          // Optional, might be calculated or populated later
+  points: Point[];
 
   // Local metadata
   status: 'new' | 'in-progress' | 'paused' | 'completed' | 'submitted' | 'sync-error';
@@ -42,4 +40,3 @@ db.version(1).stores({
 });
 
 export { db };
-// StoredGame is already exported by its declaration

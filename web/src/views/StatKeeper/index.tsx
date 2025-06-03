@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from './db'; // Updated import path
-import { Link, useNavigate } from 'react-router-dom'; 
-import { leagues } from '../../api'; 
+import { db } from './db';
+import { Link, useNavigate } from 'react-router-dom';
+import { leagues } from '../../api';
 
 // Helper function to get league name from ID
 const getLeagueName = (leagueId: string): string => {
@@ -11,7 +11,7 @@ const getLeagueName = (leagueId: string): string => {
 };
 
 function StatKeeper() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const games = useLiveQuery(
     () => db.games.orderBy('lastModified').reverse().toArray(),
@@ -29,7 +29,7 @@ function StatKeeper() {
     }
     const gameToDelete = games?.find(g => g.localId === localId);
     const gameName = gameToDelete ? `${gameToDelete.homeTeam} vs ${gameToDelete.awayTeam}` : `Game ID ${localId}`;
-    
+
     if (window.confirm(`Are you sure you want to delete the game: ${gameName}? This action cannot be undone.`)) {
       try {
         await db.games.delete(localId);
@@ -41,7 +41,6 @@ function StatKeeper() {
     }
   };
 
-
   if (games === undefined) {
     return <p>Loading local games...</p>;
   }
@@ -49,8 +48,8 @@ function StatKeeper() {
   return (
     <div style={{ padding: '20px' }}>
       <h1>StatKeeper</h1>
-      <button 
-        onClick={handleStartNewGame} 
+      <button
+        onClick={handleStartNewGame}
         style={{ marginBottom: '20px', padding: '10px 15px', fontSize: '16px', cursor: 'pointer' }}
       >
         Start New Game
@@ -76,15 +75,15 @@ function StatKeeper() {
               <p style={{ margin: '5px 0' }}>
                 <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
               </p>
-              
+
               <div style={{ marginTop: '10px' }}>
                 {(game.status === 'new' || game.status === 'in-progress' || game.status === 'paused') && game.localId && (
                   <Link to={`/stat_keeper/game/${game.localId}`}>
                     <button style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}>Resume Game</button>
                   </Link>
                 )}
-                <button 
-                  onClick={() => handleDeleteGame(game.localId)} 
+                <button
+                  onClick={() => handleDeleteGame(game.localId)}
                   style={{ padding: '8px 12px', cursor: 'pointer', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
                 >
                   Delete

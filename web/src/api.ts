@@ -32,6 +32,16 @@ const cachedFetch = (url: string, _options = {}) => {
   });
 };
 
+// to save an API call round trip to get the leagues instead we
+// generate the json at build time. see `generate` in package.json
+//
+// const fetchLeagues = async () => {
+//   const response = await cachedFetch(`/api/leagues`)
+//   const leagues = await response.json()
+//   // nothing to display for league_id=1
+//   return leagues.filter((l) => l.id > 1)
+// }
+
 export interface Game {
   id: string;
   league_id: string;
@@ -118,13 +128,13 @@ export interface TeamPlayer {
   is_male: boolean;
 }
 
-export interface LeagueTeam {
+export interface Team {
   id: number; // Team ID
   name: string;
   players: TeamPlayer[];
 }
 
-const fetchLeagueTeams = async (leagueId: string): Promise<LeagueTeam[]> => {
+const fetchTeams = async (leagueId: string): Promise<Team[]> => {
   const response = await cachedFetch(`/api/${leagueId}/teams`);
   if (!response.ok) {
     throw new Error(`Failed to fetch teams for league ${leagueId}: ${response.statusText}`);
@@ -181,7 +191,7 @@ export {
   leagues,
   fetchGames,
   fetchGame,
-  fetchLeagueTeams, // Export new function
+  fetchTeams,
   fetchPlayers,
   fetchWeeks,
   fetchStats,

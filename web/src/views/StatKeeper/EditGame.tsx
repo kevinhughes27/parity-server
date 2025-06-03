@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link, useParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from './db'; // Updated import path
-import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
+import { db, StoredGame } from './db';
+import { leagues, fetchTeams, TeamPlayer } from '../../api';
 import EditRoster from './EditRoster';
 
 const getLeagueName = (leagueId: string): string => {
@@ -12,7 +12,7 @@ const getLeagueName = (leagueId: string): string => {
 
 const LOADING_GAME_SENTINEL = Symbol("loading_game");
 
-function EditGame() { 
+function EditGame() {
   const navigate = useNavigate();
   const { localGameId: paramGameId } = useParams<{ localGameId: string }>();
   const numericGameId = paramGameId ? parseInt(paramGameId, 10) : undefined;
@@ -38,7 +38,7 @@ function EditGame() {
     if (game && game !== LOADING_GAME_SENTINEL && game.league_id) {
       setLoadingLeaguePlayers(true);
       setErrorLeaguePlayers(null);
-      fetchLeagueTeams(game.league_id)
+      fetchTeams(game.league_id)
         .then(teams => {
           const allPlayers = teams.reduce((acc, team) => {
             team.players.forEach(p => {

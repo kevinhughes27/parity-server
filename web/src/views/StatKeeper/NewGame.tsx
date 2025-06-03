@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { db, StoredGame } from './db'; // Updated import path
-import { leagues, fetchLeagueTeams, LeagueTeam, TeamPlayer } from '../../api';
+import { db, StoredGame } from './db';
+import { leagues, fetchTeams, Team, TeamPlayer } from '../../api';
 
 import EditRoster from './EditRoster';
 
-function NewGame() { 
+function NewGame() {
   const navigate = useNavigate();
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues.length > 0 ? leagues[0].id : '');
-  const [leagueTeams, setLeagueTeams] = useState<LeagueTeam[]>([]);
+  const [leagueTeams, setLeagueTeams] = useState<Team[]>([]);
   const [loadingTeams, setLoadingTeams] = useState<boolean>(false);
   const [errorTeams, setErrorTeams] = useState<string | null>(null);
 
@@ -34,7 +34,7 @@ function NewGame() {
     setHomeTeamId('');
     setAwayTeamId('');
 
-    fetchLeagueTeams(selectedLeagueId)
+    fetchTeams(selectedLeagueId)
       .then(teams => {
         setLeagueTeams(teams);
         const allPlayers = teams.reduce((acc, team) => {
@@ -76,7 +76,7 @@ function NewGame() {
     }
 
     const newGameData: Omit<StoredGame, 'localId'> = {
-      serverId: undefined, 
+      serverId: undefined,
       league_id: selectedLeagueId,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
@@ -186,7 +186,7 @@ function NewGame() {
             <EditRoster
               teamName={selectedHomeTeamObj.name}
               allLeaguePlayers={allLeaguePlayers}
-              currentRosterNames={homeRosterNames} 
+              currentRosterNames={homeRosterNames}
               onRosterChange={setHomeRosterNames}
             />
           )}
@@ -194,7 +194,7 @@ function NewGame() {
             <EditRoster
               teamName={selectedAwayTeamObj.name}
               allLeaguePlayers={allLeaguePlayers}
-              currentRosterNames={awayRosterNames} 
+              currentRosterNames={awayRosterNames}
               onRosterChange={setAwayRosterNames}
             />
           )}
