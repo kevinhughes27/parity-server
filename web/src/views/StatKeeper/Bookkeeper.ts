@@ -13,12 +13,11 @@ interface MementoState {
   homePossessionSnapshot: boolean;
   currentLineHomeSnapshot: string[];
   currentLineAwaySnapshot: string[];
-  pointsAtHalfRecordedSnapshot: number; // Added this
+  pointsAtHalfRecordedSnapshot: number;
 }
 
 export class Bookkeeper {
   private db: DexieDB;
-  // Make gameData public and non-null after loadGame ensures it's set
   public gameData!: StoredGame; 
 
   public activePoint: PointModel | null = null;
@@ -27,7 +26,7 @@ export class Bookkeeper {
 
   private currentLineHome: string[] = [];
   private currentLineAway: string[] = [];
-  public pointsAtHalfRecorded: number = 0; // Made public for UI access if needed
+  public pointsAtHalfRecorded: number = 0; 
 
   private mementos: MementoState[] = [];
 
@@ -39,14 +38,10 @@ export class Bookkeeper {
     const game = await this.db.games.get(this.localGameId);
     if (game) {
       this.gameData = game;
-      // If StoredGame is extended to save pointsAtHalfRecorded:
-      // this.pointsAtHalfRecorded = (game as any).pointsAtHalfRecorded || 0; 
       this.homePossession = this.determineInitialPossession();
       return true;
     }
     console.error(`Bookkeeper: Game with localId ${this.localGameId} not found.`);
-    // Initialize a default gameData structure if not found to prevent crashes,
-    // though this scenario should ideally be handled by the caller.
     this.gameData = { 
         localId: this.localGameId, 
         league_id: '', week: 0, homeTeam: 'Error', awayTeam: 'Error', 
@@ -61,22 +56,30 @@ export class Bookkeeper {
       return true; 
     }
     const lastPoint = this.gameData.points[this.gameData.points.length - 1];
-    if (!lastPoint.events || lastPoint.events.length === 0) return true; // Should not happen for a completed point
+    if (!lastPoint.events || lastPoint.events.length === 0) return true;
 
     const lastEventOfLastPoint = lastPoint.events[lastPoint.events.length - 1];
 
     if (lastEventOfLastPoint.type === EventType.POINT.toString()) {
       const scorer = lastEventOfLastPoint.firstActor;
-      // Check if scorer was on the team that was on offense for that point
-      // A simple check: if scorer is in homeRoster and homeTeam was on offense for that point.
-      // This requires knowing which team was on O.
-      // For now, if scorer is in homeRoster, assume home scored.
-      if (this.gameData.homeRoster.includes(scorer)) { 
-        // If home team scored, away team gets possession
-        return false; 
-      } else { 
-        // If away team scored (or scorer not on home roster), home team gets possession
-        return true; 
+      // This logic assumes that if the scorer is in the homeRoster, the home team scored.
+      // This might need refinement if rosters are very dynamic or subs are common.
+      // A more robust way would be to check if the scorer was part of the `lastPoint.offensePlayers`.
+      if (lastPoint.offensePlayers.includes(scorer)) { // Scorer was on offense for that point
+        // Was that offense the home team or away team?
+        // Check if the first player of that point's offense is in the game's home roster
+        if (this.gameData.homeRoster.includes(lastPoint.offensePlayers[0])) { // Home team scored
+            return false; // Away team's possession
+        } else { // Away team scored
+            return true; // Home team's possession
+        }
+      } else { // Scorer was on defense (Callahan) - this case needs careful thought for possession
+          // If Callahan, the scoring team (defense) keeps possession for the next point (pulls)
+          if (this.gameData.homeRoster.includes(scorer)) { // Home player scored Callahan
+              return true; // Home team pulls
+          } else { // Away player scored Callahan
+              return false; // Away team pulls
+          }
       }
     }
     return true; 
@@ -88,8 +91,6 @@ export class Bookkeeper {
         return;
     }
     this.gameData.lastModified = new Date();
-    // If StoredGame is extended for pointsAtHalfRecorded:
-    // (this.gameData as any).pointsAtHalfRecorded = this.pointsAtHalfRecorded;
     const gameDataToSave = JSON.parse(JSON.stringify(this.gameData));
     await this.db.games.update(this.localGameId, gameDataToSave);
   }
@@ -125,40 +126,47 @@ export class Bookkeeper {
   public getGameState(): GameState {
     const lastEventInActivePoint = this.activePoint?.getLastEvent();
     const firstEventOfPoint = !this.activePoint || this.activePoint.getEventCount() === 0;
-    
     const isFirstPointOfHalf = (this.gameData.points.length === this.pointsAtHalfRecorded);
 
     if (!this.activePoint) { 
-        return GameState.Start;
+        return GameState.Start; // Ready to select players for point / select puller
     }
     
-    if (isFirstPointOfHalf && firstEventOfPoint) { 
-        return this.firstActor ? GameState.Pull : GameState.Start; 
+    // If point just started (e.g. after score, lines set), and no first actor selected yet
+    if (firstEventOfPoint && !this.firstActor) {
+        if (isFirstPointOfHalf) return GameState.Start; // Select puller
+        return GameState.WhoPickedUpDisc; // Select player to pick up disc
+    }
+    
+    if (isFirstPointOfHalf && firstEventOfPoint && this.firstActor) { 
+        return GameState.Pull; 
     }
 
     if (lastEventInActivePoint) {
       switch (lastEventInActivePoint.type) {
-        case EventType.PULL:
-          return this.firstActor ? GameState.FirstThrowQuebecVariant : GameState.WhoPickedUpDisc;
+        case EventType.PULL: // After pull, waiting for pickup
+          return GameState.WhoPickedUpDisc;
         case EventType.THROWAWAY:
-        case EventType.DROP:
-          return this.firstActor ? GameState.FirstD : GameState.WhoPickedUpDisc;
-        case EventType.DEFENSE:
+        case EventType.DROP: // After turnover, waiting for pickup
+          return GameState.WhoPickedUpDisc;
+        case EventType.DEFENSE: // After a D
+          // If firstActor is set, it means it was a CatchD, player has disc
+          // If firstActor is null, it was a block, waiting for pickup
           return this.firstActor ? GameState.SecondD : GameState.WhoPickedUpDisc;
+        case EventType.PICK_UP: // After a pick up, ready for first throw
+            return GameState.FirstThrowQuebecVariant; 
+        case EventType.PASS: // Normal play
+            return GameState.Normal;
         default: 
-          if (firstEventOfPoint && this.firstActor) return GameState.FirstThrowQuebecVariant;
-          if (firstEventOfPoint && !this.firstActor) return GameState.WhoPickedUpDisc;
           return GameState.Normal;
       }
-    } else { 
+    } else { // Active point exists but has no events (should be handled by logic above)
         if (isFirstPointOfHalf) return this.firstActor ? GameState.Pull : GameState.Start; 
-        return this.firstActor ? GameState.FirstThrowQuebecVariant : GameState.WhoPickedUpDisc;
+        return GameState.WhoPickedUpDisc; 
     }
   }
 
   public setCurrentLine(homePlayers: string[], awayPlayers: string[]): void {
-    // No memento push here, as this is setup before a point-altering action.
-    // Memento should be pushed by the action that *uses* these lines to start a point.
     this.currentLineHome = [...homePlayers];
     this.currentLineAway = [...awayPlayers];
   }
@@ -170,7 +178,7 @@ export class Bookkeeper {
       const offense = this.homePossession ? this.currentLineHome : this.currentLineAway;
       const defense = this.homePossession ? this.currentLineAway : this.currentLineHome;
       
-      if (offense.length === 0 && this.gameData) { // Fallback to full roster if line not set
+      if (offense.length === 0 && this.gameData) {
         this.activePoint = new PointModel(
             this.homePossession ? this.gameData.homeRoster : this.gameData.awayRoster,
             this.homePossession ? this.gameData.awayRoster : this.gameData.homeRoster
@@ -178,14 +186,23 @@ export class Bookkeeper {
       } else if (offense.length > 0) {
          this.activePoint = new PointModel(offense, defense);
       } else {
-        // This case should be prevented by UI (e.g., ensuring lines are set)
         console.error("Cannot start point: lines not set and gameData unavailable for fallback.");
-        this.mementos.pop(); // Revert memento push as action failed
+        this.mementos.pop(); 
         return;
       }
     }
+
+    // Check if this action is a "pick up"
+    const lastEvent = this.activePoint.getLastEvent();
+    if (
+        (lastEvent && (lastEvent.type === EventType.PULL || lastEvent.type === EventType.THROWAWAY || lastEvent.type === EventType.DROP)) ||
+        (lastEvent && lastEvent.type === EventType.DEFENSE && this.firstActor === null) || // After a non-catch D
+        (this.activePoint.getEventCount() === 0 && this.gameData.points.length !== this.pointsAtHalfRecorded) // Start of a new point (not first of half)
+    ) {
+        this.activePoint.addEvent(new EventModel(EventType.PICK_UP, player));
+    }
+    
     this.firstActor = player;
-    // No saveGameData here, this is usually an intermediate step.
   }
 
   public async recordPull(): Promise<void> {
@@ -194,7 +211,7 @@ export class Bookkeeper {
     this.activePoint.addEvent(new EventModel(EventType.PULL, this.firstActor));
     this.activePoint.swapOffenseAndDefense(); 
     this.homePossession = !this.homePossession; 
-    this.firstActor = null;
+    this.firstActor = null; // Disc is now loose, waiting for pick up
     await this.saveGameData();
   }
 
@@ -211,7 +228,7 @@ export class Bookkeeper {
     this.pushMemento();
     this.activePoint.addEvent(new EventModel(type, this.firstActor));
     this.homePossession = !this.homePossession; 
-    this.firstActor = null;
+    this.firstActor = null; 
     await this.saveGameData();
   }
 
@@ -223,20 +240,21 @@ export class Bookkeeper {
     await this.handleTurnover(EventType.DROP);
   }
 
-  public async recordD(): Promise<void> { 
-    if (!this.firstActor || !this.activePoint) return;
+  public async recordD(defender: string, offensivePlayerBlocked: string): Promise<void> { 
+    if (!this.activePoint) return; 
     this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor));
+    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, defender, offensivePlayerBlocked));
     this.homePossession = !this.homePossession; 
-    this.firstActor = null; 
+    this.firstActor = null; // Disc is loose, waiting for pickup by D-ing team
     await this.saveGameData();
   }
 
-  public async recordCatchD(): Promise<void> { 
-    if (!this.firstActor || !this.activePoint) return;
+  public async recordCatchD(defender: string): Promise<void> { 
+    if (!this.activePoint) return;
     this.pushMemento();
-    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, this.firstActor));
+    this.activePoint.addEvent(new EventModel(EventType.DEFENSE, defender)); 
     this.homePossession = !this.homePossession; 
+    this.firstActor = defender; // Defender now has the disc
     await this.saveGameData();
   }
 
@@ -268,8 +286,6 @@ export class Bookkeeper {
         this.pushMemento();
         this.pointsAtHalfRecorded = this.gameData.points.length;
         console.log(`Half recorded at ${this.pointsAtHalfRecorded} points.`);
-        // If StoredGame is extended to save pointsAtHalfRecorded, call saveGameData()
-        // await this.saveGameData(); 
     }
   }
   
@@ -277,13 +293,10 @@ export class Bookkeeper {
     return this.activePoint ? this.activePoint.prettyPrintEvents() : [];
   }
 
-  // Helper to check if a player is the current firstActor
   public isFirstActor(player: string): boolean {
     return this.firstActor === player;
   }
 
-  // Helper to check if a team (based on player) currently has possession
-  // This is a simplified check. A more robust way would be to check if player is in current offense line.
   public teamHasPossession(isPlayerFromHomeTeamList: boolean): boolean {
       return this.homePossession === isPlayerFromHomeTeamList;
   }

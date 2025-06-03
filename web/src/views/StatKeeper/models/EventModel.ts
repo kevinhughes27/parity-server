@@ -8,6 +8,7 @@ export enum EventType {
   DEFENSE = 'DEFENSE', // "D" or "Block"
   THROWAWAY = 'THROWAWAY',
   DROP = 'DROP',
+  PICK_UP = 'PICK_UP', // New event type
 }
 
 export interface EventModelData {
@@ -43,8 +44,6 @@ export class EventModel implements EventModelData {
     const eventTypeKey = data.type.toUpperCase() as keyof typeof EventType;
     const eventType = EventType[eventTypeKey];
     if (!eventType) {
-      // This case should ideally not happen if data is clean.
-      // Consider throwing an error or using a default with a warning.
       console.warn(`Unknown event type "${data.type}" during EventModel.fromApiEventData. Defaulting to THROWAWAY.`);
     }
     const model = new EventModel(eventType || EventType.THROWAWAY, data.firstActor, data.secondActor);
@@ -61,13 +60,17 @@ export class EventModel implements EventModelData {
       case EventType.POINT:
         return `${this.firstActor} scored!`;
       case EventType.DEFENSE:
-        return `${this.firstActor} got a block`;
+        if (this.secondActor) {
+          return `${this.firstActor} got a block on ${this.secondActor}`;
+        }
+        return `${this.firstActor} got a catch D`; 
       case EventType.THROWAWAY:
         return `${this.firstActor} threw it away`;
       case EventType.DROP:
         return `${this.firstActor} dropped the disc`;
+      case EventType.PICK_UP:
+        return `${this.firstActor} picked up the disc`;
       default:
-        // This should be unreachable if all EventType cases are handled
         const exhaustiveCheck: never = this.type;
         return `Unknown event: ${exhaustiveCheck}`;
     }
