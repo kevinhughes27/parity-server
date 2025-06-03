@@ -27,7 +27,7 @@ function LocalGame() {
   const [currentAwayLine, setCurrentAwayLine] = useState<string[]>([]);
   const [currentGameState, setCurrentGameState] = useState<GameState>(GameState.Start);
   const [pointEventHistory, setPointEventHistory] = useState<string[]>([]);
-  const [actionCounter, setActionCounter] = useState(0); 
+  const [actionCounter, setActionCounter] = useState(0);
 
   const storedGameFromDb = useLiveQuery<StoredGame | undefined | typeof LOADING_SENTINEL>(
     async () => {
@@ -69,21 +69,21 @@ function LocalGame() {
       bk.loadGame().then(loaded => {
         if (loaded) {
           setBookkeeper(bk);
-          if (bk.gameData) { 
-            autoSelectNextLines(); 
+          if (bk.gameData) {
+            autoSelectNextLines();
           }
-          setUiMode('line-selection'); 
-          setActionCounter(c => c + 1); 
+          setUiMode('line-selection');
+          setActionCounter(c => c + 1);
         } else {
-          setBookkeeper(null); 
+          setBookkeeper(null);
         }
       });
     }
     return () => {
       setBookkeeper(null);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps 
-  }, [numericLocalGameId]); 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [numericLocalGameId]);
 
   useEffect(() => {
     if (bookkeeper) {
@@ -116,18 +116,18 @@ function LocalGame() {
   const handlePlayerTapStatTaking = async (player: string, isPlayerFromHomeTeamList: boolean) => {
     if (!bookkeeper || uiMode !== 'stat-taking') return;
 
-    if (bookkeeper.firstActor) { 
+    if (bookkeeper.firstActor) {
       const tappedPlayerTeamHasPossession = bookkeeper.homePossession === isPlayerFromHomeTeamList;
       if (tappedPlayerTeamHasPossession) {
         if (bookkeeper.firstActor !== player) {
             await bookkeeper.recordPass(player);
         } else {
-            return; 
+            return;
         }
       } else {
-        bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList); 
+        bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
       }
-    } else { 
+    } else {
       bookkeeper.recordFirstActor(player, isPlayerFromHomeTeamList);
     }
     triggerRefresh();
@@ -146,11 +146,11 @@ function LocalGame() {
       setUiMode('stat-taking');
     } else { // Switching from 'stat-taking' to 'line-selection'
       setUiMode('line-selection');
-      autoSelectNextLines(); 
+      autoSelectNextLines();
     }
     triggerRefresh();
   };
-  
+
   const handleBookkeeperAction = async (actionKey: keyof Bookkeeper | 'undo' | 'recordHalf') => {
     if (!bookkeeper) return;
 
@@ -171,14 +171,14 @@ function LocalGame() {
       console.error("Invalid action key for bookkeeper action:", actionKey);
       return;
     }
-    
-    await actionFnToExecute(); 
-    triggerRefresh(); 
+
+    await actionFnToExecute();
+    triggerRefresh();
 
     // After a point is scored, switch to line selection and auto-select.
     if (actionKey === 'recordPoint' && bookkeeper.activePoint === null) {
       setUiMode('line-selection');
-      autoSelectNextLines(); 
+      autoSelectNextLines();
     }
   };
 
@@ -189,42 +189,42 @@ function LocalGame() {
 
     if (uiMode === 'line-selection') {
       if (isPlayerSelectedForLine) {
-        buttonStyle.backgroundColor = '#d4edda'; 
+        buttonStyle.backgroundColor = '#d4edda';
         buttonStyle.borderColor = '#c3e6cb';
       } else {
-        buttonStyle.backgroundColor = '#f8f9fa'; 
+        buttonStyle.backgroundColor = '#f8f9fa';
       }
     } else if (uiMode === 'stat-taking' && bookkeeper) {
         const playerIsFirstActor = bookkeeper.isFirstActor(player);
         const playerListTeamHasPossession = bookkeeper.homePossession === isHomeTeamPlayerList;
 
-        if (!onField) { 
+        if (!onField) {
             isDisabled = true;
             buttonStyle.opacity = 0.3;
         } else {
-            if (currentGameState === GameState.Start) { 
-                isDisabled = false; 
+            if (currentGameState === GameState.Start) {
+                isDisabled = false;
             } else if (currentGameState === GameState.Pull) {
-                isDisabled = true; 
+                isDisabled = true;
             } else if (currentGameState === GameState.WhoPickedUpDisc) {
-                isDisabled = !playerListTeamHasPossession; 
-            } else { 
-                if (bookkeeper.firstActor) { 
-                    if (playerListTeamHasPossession) { 
-                        isDisabled = playerIsFirstActor; 
-                    } else { 
-                        isDisabled = false; 
+                isDisabled = !playerListTeamHasPossession;
+            } else {
+                if (bookkeeper.firstActor) {
+                    if (playerListTeamHasPossession) {
+                        isDisabled = playerIsFirstActor;
+                    } else {
+                        isDisabled = false;
                     }
-                } else { 
-                    isDisabled = true; 
+                } else {
+                    isDisabled = true;
                 }
             }
         }
         if (playerIsFirstActor) {
-            buttonStyle.border = '3px solid #007bff'; 
+            buttonStyle.border = '3px solid #007bff';
             buttonStyle.fontWeight = 'bold';
         }
-        if (isDisabled && onField) { 
+        if (isDisabled && onField) {
              buttonStyle.opacity = 0.6;
         }
     }
@@ -256,8 +256,8 @@ function LocalGame() {
   if (storedGameFromDb === LOADING_SENTINEL || !bookkeeper || !bookkeeper.gameData) {
     return <p style={{ padding: '20px' }}>Loading game data and bookkeeper...</p>;
   }
-  
-  const game = bookkeeper.gameData; 
+
+  const game = bookkeeper.gameData;
 
   return (
     <div style={{ padding: '20px' }}>
@@ -267,7 +267,7 @@ function LocalGame() {
           {uiMode === 'line-selection' ? (currentHomeLine.length >= MAX_PLAYERS_ON_LINE && currentAwayLine.length >= MAX_PLAYERS_ON_LINE ? 'Confirm Lines & Start Point' : `Select Lines (${MAX_PLAYERS_ON_LINE} per team)`) : 'Change Line / Pause Point'}
         </button>
         <Link to={`/stat_keeper/edit_game/${game.localId}`}>
-          <button>Edit Game Details</button>
+          <button>Edit Rosters</button>
         </Link>
       </div>
 
@@ -298,14 +298,14 @@ function LocalGame() {
           </div>
         </div>
       </div>
-      
+
       {uiMode === 'stat-taking' && (
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
           {actionButtonsConfig.map(btn => {
             let isDisabled = !btn.states.includes(currentGameState);
             if (btn.label === 'Pull') {
                 isDisabled = currentGameState !== GameState.Pull || !bookkeeper.firstActor;
-            } else if (btn.label !== 'Undo' && btn.label !== 'Record Half') { 
+            } else if (btn.label !== 'Undo' && btn.label !== 'Record Half') {
                 isDisabled = isDisabled || !bookkeeper.firstActor;
             }
 
