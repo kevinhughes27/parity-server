@@ -1,32 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { leagues } from '../../api';
+import { leagues as apiLeagues } from '../../api'; // Renamed import
 import { useTeams } from './hooks';
+import { BookkeeperVolatileState, SerializedMemento } from './models';
 
 import EditRoster from './EditRoster';
 
 function NewGame() {
   const navigate = useNavigate();
 
-  const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues[0].id);
+  const [selectedLeagueId, setSelectedLeagueId] = useState<string>(apiLeagues[0].id);
 
   const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(selectedLeagueId);
 
-  const [homeTeamId, setHomeTeamId] = useState<string>('');
-  const [awayTeamId, setAwayTeamId] = useState<string>('');
+  const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>(''); // Store as string from select
+  const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>(''); // Store as string from select
   const [week, setWeek] = useState<number>(1);
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
   // Effect to reset team selections when league changes
   useEffect(() => {
-    setHomeTeamId('');
-    setAwayTeamId('');
+    setHomeTeamIdStr('');
+    setAwayTeamIdStr('');
   }, [selectedLeagueId]);
 
-  const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
-  const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamId);
+  const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamIdStr);
+  const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamIdStr);
 
   useEffect(() => {
     setHomeRosterNames(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
@@ -48,19 +49,38 @@ function NewGame() {
       return;
     }
 
+    const initialBookkeeperState: BookkeeperVolatileState = {
+      activePoint: null,
+      firstActor: null,
+      homePossession: true, // Default, can be changed by coin toss logic later if implemented
+      pointsAtHalf: 0,
+      homePlayers: null,
+      awayPlayers: null,
+      homeScore: 0,
+      awayScore: 0,
+      homeParticipants: [...homeRosterNames], // Initialize with full roster
+      awayParticipants: [...awayRosterNames], // Initialize with full roster
+    };
+
+    const initialMementos: SerializedMemento[] = [];
+
     const newGameData: Omit<StoredGame, 'localId'> = {
       serverId: undefined,
       league_id: selectedLeagueId,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
-      homeScore: 0,
-      homeRoster: homeRosterNames,
+      homeTeamId: selectedHomeTeamObj.id, // Save numeric ID
+      homeScore: 0, // Will be driven by bookkeeperState
+      homeRoster: homeRosterNames, // Initial roster
       awayTeam: selectedAwayTeamObj.name,
-      awayScore: 0,
-      awayRoster: awayRosterNames,
-      points: [],
+      awayTeamId: selectedAwayTeamObj.id, // Save numeric ID
+      awayScore: 0, // Will be driven by bookkeeperState
+      awayRoster: awayRosterNames, // Initial roster
+      points: [], // Starts empty
       status: 'new',
       lastModified: new Date(),
+      bookkeeperState: initialBookkeeperState, // Add initial state
+      mementos: initialMementos, // Add initial mementos
     };
 
     try {
@@ -73,8 +93,8 @@ function NewGame() {
     }
   };
 
-  const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamId);
-  const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamId);
+  const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamIdStr);
+  const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamIdStr);
 
   const pageTitle = 'Create New Game';
   const buttonText = 'Create Game & Start Stat-Taking';
@@ -96,7 +116,7 @@ function NewGame() {
           onChange={e => setSelectedLeagueId(e.target.value)}
           style={{ padding: '8px' }}
         >
-          {leagues.map(l => (
+          {apiLeagues.map(l => (
             <option key={l.id} value={l.id}>
               {l.name}
             </option>
@@ -130,10 +150,10 @@ function NewGame() {
               </label>
               <select
                 id="home-team-select"
-                value={homeTeamId}
-                onChange={e => setHomeTeamId(e.target.value)}
+                value={homeTeamIdStr}
+                onChange={e => setHomeTeamIdStr(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
-                disabled={availableHomeTeams.length === 0 && !homeTeamId}
+                disabled={availableHomeTeams.length === 0 && !homeTeamIdStr}
               >
                 <option value="">Select Home Team</option>
                 {availableHomeTeams.map(team => (
@@ -141,8 +161,8 @@ function NewGame() {
                     {team.name}
                   </option>
                 ))}
-                {homeTeamId &&
-                  !availableHomeTeams.find(t => t.id.toString() === homeTeamId) &&
+                {homeTeamIdStr &&
+                  !availableHomeTeams.find(t => t.id.toString() === homeTeamIdStr) &&
                   selectedHomeTeamObj && (
                     <option key={selectedHomeTeamObj.id} value={selectedHomeTeamObj.id.toString()}>
                       {selectedHomeTeamObj.name}
@@ -156,10 +176,10 @@ function NewGame() {
               </label>
               <select
                 id="away-team-select"
-                value={awayTeamId}
-                onChange={e => setAwayTeamId(e.target.value)}
+                value={awayTeamIdStr}
+                onChange={e => setAwayTeamIdStr(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
-                disabled={availableAwayTeams.length === 0 && !awayTeamId}
+                disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
               >
                 <option value="">Select Away Team</option>
                 {availableAwayTeams.map(team => (
@@ -167,8 +187,8 @@ function NewGame() {
                     {team.name}
                   </option>
                 ))}
-                {awayTeamId &&
-                  !availableAwayTeams.find(t => t.id.toString() === awayTeamId) &&
+                {awayTeamIdStr &&
+                  !availableAwayTeams.find(t => t.id.toString() === awayTeamIdStr) &&
                   selectedAwayTeamObj && (
                     <option key={selectedAwayTeamObj.id} value={selectedAwayTeamObj.id.toString()}>
                       {selectedAwayTeamObj.name}

@@ -36,6 +36,7 @@ export enum MementoType {
 export interface League {
   id: string;
   name: string;
+  lineSize: number; // Added lineSize
 }
 
 export interface Team {
@@ -106,8 +107,11 @@ export class PointModel {
         case EventType.DROP:
           return `${event.firstActor} dropped it`;
         default: {
-          const _exhaustiveCheck: never = event.type; // Ensures all cases are handled
-          return 'Unknown event';
+          // This exhaustive check helps ensure all event types are handled.
+          // If a new EventType is added without a case here, TypeScript will error.
+          const _exhaustiveCheck: never = event.type;
+          console.warn('Unknown event type in prettyPrint:', event.type);
+          return `Unknown event: ${event.type}`;
         }
       }
     });
@@ -117,14 +121,14 @@ export class PointModel {
     return {
       offensePlayers: [...this.offensePlayers],
       defensePlayers: [...this.defensePlayers],
-      events: this.events.map(e => ({ ...e })),
+      events: this.events.map(e => ({ ...e })), // Event.type is EventType enum
     };
   }
 
   static fromJSON(json: {
     offensePlayers: string[];
     defensePlayers: string[];
-    events: Event[];
+    events: Event[]; // Expects Event with EventType enum
   }): PointModel {
     return new PointModel(json.offensePlayers, json.defensePlayers, json.events);
   }
@@ -150,7 +154,7 @@ export class GameModel {
   }
 
   toJSON(): {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
+    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>; // Event.type is EventType enum
   } {
     return {
       points: this.points.map(p => p.toJSON()),
@@ -158,7 +162,7 @@ export class GameModel {
   }
 
   static fromJSON(json: {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
+    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>; // Expects Event with EventType enum
   }): GameModel {
     return new GameModel(json.points.map(pJson => PointModel.fromJSON(pJson)));
   }
@@ -166,7 +170,7 @@ export class GameModel {
 
 // For Bookkeeper state serialization
 export interface BookkeeperVolatileState {
-  activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } | null;
+  activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } | null; // Event.type is EventType enum
   firstActor: string | null;
   homePossession: boolean;
   pointsAtHalf: number;
@@ -182,13 +186,13 @@ export interface SerializedGameData {
   // Game metadata from original Bookkeeper.serialize
   league_id: string;
   week: number;
-  homeTeamName: string; // Renamed from homeTeam to avoid conflict with Team object
-  awayTeamName: string; // Renamed from awayTeam to avoid conflict with Team object
+  homeTeamName: string;
+  awayTeamName: string;
   homeTeamId: number;
   awayTeamId: number;
 
   // Core game data (points)
-  game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }> };
+  game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }> }; // Event.type is EventType enum
 
   // Bookkeeper's volatile operational state
   bookkeeperState: BookkeeperVolatileState;

@@ -5,25 +5,55 @@ import {
   League,
   Team,
   Event,
-  // GameModel, // No longer directly passed as GameModel
   PointModel,
   SerializedGameData,
+  BookkeeperVolatileState, // Added for explicit typing
+  SerializedMemento, // Added for explicit typing
 } from '../models';
 import 'fake-indexeddb/auto';
 import { db, StoredGame } from '../db';
+import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api'; // For typing points stored in DB
 
 const PLAYER1 = 'Kevin Hughes';
 const PLAYER2 = 'Allan Godding';
 const PLAYER3 = 'Patrick Kenzie';
 const PLAYER4 = 'Player 4';
 
-const mockLeague: League = { name: 'OCUA', id: '101' };
+const mockLeague: League = { name: 'OCUA', id: '101', lineSize: 7 }; // Added lineSize
 const mockHomeTeam: Team = { name: 'Team A', id: 1 };
 const mockAwayTeam: Team = { name: 'Team B', id: 2 };
 const mockWeek = 1;
 
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
 const awayLine = [PLAYER2, PLAYER4, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
+
+// Helper to map Model Event (enum type) to API PointEvent (string type) for storage
+function mapModelEventToApiPointEvent(modelEvent: Event): ApiPointEvent {
+  return {
+    type: modelEvent.type.toString(),
+    firstActor: modelEvent.firstActor,
+    secondActor: modelEvent.secondActor || '',
+    timestamp: modelEvent.timestamp,
+  };
+}
+
+// Helper to map API PointEvent (string type) to Model Event (enum type) for Bookkeeper
+function mapApiPointEventToModelEvent(apiEvent: ApiPointEvent): Event {
+  const eventTypeString = apiEvent.type.toUpperCase();
+  const eventType = EventType[eventTypeString as keyof typeof EventType];
+
+  if (!eventType) {
+    console.warn(`Unknown event type string during test hydration: ${apiEvent.type}`);
+    throw new Error(`Unknown event type string: ${apiEvent.type}`);
+  }
+
+  return {
+    type: eventType,
+    firstActor: apiEvent.firstActor,
+    secondActor: apiEvent.secondActor,
+    timestamp: apiEvent.timestamp,
+  };
+}
 
 // Helper to create initial SerializedGameData for a new game
 const createInitialGameData = (
@@ -43,10 +73,10 @@ const createInitialGameData = (
     bookkeeperState: {
       activePoint: null,
       firstActor: null,
-      homePossession: true, // Default for a new game, typically home starts on O or D decided by flip
+      homePossession: true,
       pointsAtHalf: 0,
-      homePlayers: null, // Will be set by recordActivePlayers
-      awayPlayers: null, // Will be set by recordActivePlayers
+      homePlayers: null,
+      awayPlayers: null,
       homeScore: 0,
       awayScore: 0,
       homeParticipants: [],
@@ -172,8 +202,8 @@ describe('Bookkeeper', () => {
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    verifyEventCount(1);
-    expect(bookkeeper.firstActor).toBe(PLAYER2);
+    verifyEventCount(1); // The THROW AWAY event
+    expect(bookkeeper.firstActor).toBe(PLAYER2); // D undos to player having disc before D
   });
 
   test('testUndoCatchD', () => {
@@ -184,8 +214,8 @@ describe('Bookkeeper', () => {
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    verifyEventCount(1);
-    expect(bookkeeper.firstActor).toBe(PLAYER2); // firstActor is not changed by CatchD, so it remains PLAYER2
+    verifyEventCount(1); // The THROW AWAY event
+    expect(bookkeeper.firstActor).toBe(PLAYER2); // CatchD undos to player having disc before CatchD
   });
 
   test('testComplexScenario', () => {
@@ -290,31 +320,47 @@ describe('Bookkeeper', () => {
     const awayScoreBeforeSave = bookkeeper.awayScore;
     const firstActorBeforeSave = bookkeeper.firstActor;
 
-    const serializedData = bookkeeper.serialize();
+    const serializedDataFromBk = bookkeeper.serialize();
+
+    // Transform points for storage (ModelEvent with enum -> ApiPointEvent with string)
+    const pointsForStorage: ApiPoint[] = serializedDataFromBk.game.points.map(modelPoint => ({
+      offensePlayers: [...modelPoint.offensePlayers],
+      defensePlayers: [...modelPoint.defensePlayers],
+      events: modelPoint.events.map(mapModelEventToApiPointEvent),
+    }));
+
+    // Transform activePoint for storage
+    let activePointForStorage: ApiPoint | null = null;
+    if (serializedDataFromBk.bookkeeperState.activePoint) {
+      activePointForStorage = {
+        offensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.offensePlayers],
+        defensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.defensePlayers],
+        events: serializedDataFromBk.bookkeeperState.activePoint.events.map(mapModelEventToApiPointEvent),
+      };
+    }
+    
+    const bookkeeperStateForStorage: BookkeeperVolatileState = {
+        ...serializedDataFromBk.bookkeeperState,
+        activePoint: activePointForStorage as any, // Cast because stored format differs slightly
+    };
+
 
     const gameToStore: StoredGame = {
-      league_id: serializedData.league_id,
-      week: serializedData.week,
-      homeTeam: serializedData.homeTeamName,
-      homeScore: serializedData.bookkeeperState.homeScore,
-      homeRoster: serializedData.bookkeeperState.homeParticipants, // Ensure these are correctly populated
-      awayTeam: serializedData.awayTeamName,
-      awayScore: serializedData.bookkeeperState.awayScore,
-      awayRoster: serializedData.bookkeeperState.awayParticipants, // Ensure these are correctly populated
-      points: serializedData.game.points.map(p => ({
-        offensePlayers: p.offensePlayers,
-        defensePlayers: p.defensePlayers,
-        events: p.events.map(e => ({
-          type: e.type.toString(),
-          firstActor: e.firstActor,
-          secondActor: e.secondActor || '',
-          timestamp: e.timestamp,
-        })),
-      })),
+      league_id: serializedDataFromBk.league_id,
+      week: serializedDataFromBk.week,
+      homeTeam: serializedDataFromBk.homeTeamName,
+      homeTeamId: mockHomeTeam.id, // Added
+      awayTeamId: mockAwayTeam.id, // Added
+      homeScore: serializedDataFromBk.bookkeeperState.homeScore,
+      homeRoster: serializedDataFromBk.bookkeeperState.homeParticipants,
+      awayTeam: serializedDataFromBk.awayTeamName,
+      awayScore: serializedDataFromBk.bookkeeperState.awayScore,
+      awayRoster: serializedDataFromBk.bookkeeperState.awayParticipants,
+      points: pointsForStorage,
       status: 'in-progress',
       lastModified: new Date(),
-      bookkeeperState: serializedData.bookkeeperState,
-      mementos: serializedData.mementos,
+      bookkeeperState: bookkeeperStateForStorage,
+      mementos: serializedDataFromBk.mementos,
     };
     const storedId = await db.games.add(gameToStore);
     expect(storedId).toBeDefined();
@@ -324,16 +370,39 @@ describe('Bookkeeper', () => {
     expect(retrievedGame!.mementos).toBeDefined();
     expect(retrievedGame!.bookkeeperState).toBeDefined();
 
+    // Transform points from storage for Bookkeeper hydration (ApiPointEvent string -> ModelEvent enum)
+    const gamePointsForHydration = retrievedGame!.points.map(apiPoint => ({
+        offensePlayers: [...apiPoint.offensePlayers],
+        defensePlayers: [...apiPoint.defensePlayers],
+        events: apiPoint.events.map(mapApiPointEventToModelEvent),
+    }));
+
+    let activePointForHydration: { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } | null = null;
+    if (retrievedGame!.bookkeeperState?.activePoint) {
+        const storedActivePoint = retrievedGame!.bookkeeperState.activePoint as unknown as ApiPoint;
+        activePointForHydration = {
+            offensePlayers: [...storedActivePoint.offensePlayers],
+            defensePlayers: [...storedActivePoint.defensePlayers],
+            events: storedActivePoint.events.map(mapApiPointEventToModelEvent),
+        };
+    }
+
+    const bookkeeperStateForHydration: BookkeeperVolatileState = {
+        ...(retrievedGame!.bookkeeperState!),
+        activePoint: activePointForHydration,
+    };
+
+
     const hydratedSerializedData: SerializedGameData = {
       league_id: retrievedGame!.league_id,
       week: retrievedGame!.week,
       homeTeamName: retrievedGame!.homeTeam,
       awayTeamName: retrievedGame!.awayTeam,
-      homeTeamId: mockHomeTeam.id,
-      awayTeamId: mockAwayTeam.id,
-      game: { points: retrievedGame!.points.map(p => PointModel.fromJSON(p as any)) },
-      bookkeeperState: retrievedGame!.bookkeeperState!,
-      mementos: retrievedGame!.mementos!,
+      homeTeamId: retrievedGame!.homeTeamId || mockHomeTeam.id, // Handle optional from DB
+      awayTeamId: retrievedGame!.awayTeamId || mockAwayTeam.id, // Handle optional from DB
+      game: { points: gamePointsForHydration },
+      bookkeeperState: bookkeeperStateForHydration,
+      mementos: retrievedGame!.mementos as SerializedMemento[],
     };
 
     const newBookkeeper = new Bookkeeper(
@@ -350,10 +419,9 @@ describe('Bookkeeper', () => {
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave);
     expect(newBookkeeper.activePoint).not.toBeNull();
 
-    const activePointEventsBeforeSave = serializedData.bookkeeperState.activePoint?.events;
+    const activePointEventsBeforeSave = serializedDataFromBk.bookkeeperState.activePoint?.events;
     const activePointEventsAfterLoad = newBookkeeper.serialize().bookkeeperState.activePoint?.events;
     expect(activePointEventsAfterLoad?.length).toBe(activePointEventsBeforeSave?.length);
-
 
     newBookkeeper.undo();
     expect(newBookkeeper.firstActor).toBe(PLAYER3);
@@ -361,7 +429,7 @@ describe('Bookkeeper', () => {
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave - 1);
 
     const currentPointEvents = newBookkeeper.serialize().bookkeeperState.activePoint?.events;
-    expect(currentPointEvents?.length).toBe(1);
+    expect(currentPointEvents?.length).toBe(1); // PASS event remains
     expect(currentPointEvents?.[0].type).toBe(EventType.PASS);
   });
 });
