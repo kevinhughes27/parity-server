@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bookkeeper } from './models';
+import { Bookkeeper } from './bookkeeper'
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
@@ -18,7 +18,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
-  
+
   // Determine if this is the first point of the game or after half
   // to implement the "flip players" logic from Android.
   // `bookkeeper.activePoint` is null after a point, or at game start.
@@ -26,7 +26,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   // `bookkeeper.pointsAtHalf` indicates if half has been recorded.
   // `bookkeeper.activeGame.getPointCount()` gives total points played.
   const isFirstPointOfGameOrHalf = bookkeeper.activePoint === null &&
-                                  (bookkeeper.activeGame.getPointCount() === 0 || 
+                                  (bookkeeper.activeGame.getPointCount() === 0 ||
                                    bookkeeper.activeGame.getPointCount() === bookkeeper['pointsAtHalf']); // Access private for logic
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   ) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
-    
+
     if (currentSelection.includes(playerName)) {
       setter(currentSelection.filter(p => p !== playerName));
     } else {
@@ -115,7 +115,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       }
     }
   };
-  
+
   const handleUndoLastAction = async () => {
     // This undo should take us back into the previous point's event recording
     // or undo the line selection if that was the last action.
@@ -159,15 +159,15 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           {renderPlayerList(awayRoster, false)}
         </div>
       </div>
-      <button 
-        onClick={handleDone} 
+      <button
+        onClick={handleDone}
         disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
         style={{ padding: '10px 15px', fontSize: '16px', marginRight: '10px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
       >
         Confirm Lines & Start Point
       </button>
       {bookkeeper.getMementosCount() > 0 && ( // Only show if there's something to undo
-         <button 
+         <button
             onClick={handleUndoLastAction}
             style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
           >
