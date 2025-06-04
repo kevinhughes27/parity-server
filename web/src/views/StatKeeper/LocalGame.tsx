@@ -27,6 +27,11 @@ function LocalGame() {
   const [currentView, setCurrentView] = useState<GameView>('loading');
   const [localError, setLocalError] = useState<string | null>(null);
 
+  // State for SelectLines pre-selection logic
+  const [lastPlayedLine, setLastPlayedLine] = useState<{ home: string[]; away: string[] } | null>(null);
+  const [isResumingPointMode, setIsResumingPointMode] = useState<boolean>(false);
+
+
   const initializeBookkeeper = useCallback((gameData: StoredGame) => {
     if (!gameData.homeTeamId || !gameData.awayTeamId) {
       setLocalError('Game data is missing team IDs. Cannot initialize Bookkeeper.');
@@ -36,7 +41,6 @@ function LocalGame() {
 
     if (!apiLeague) {
       setLocalError(`League configuration for ID ${gameData.league_id} not found or still loading.`);
-      // If apiLeague is loading, we should wait. setCurrentView to 'initializing' or similar.
       setCurrentView('initializing');
       return;
     }
@@ -51,29 +55,25 @@ function LocalGame() {
     const awayTeamForBk: ModelTeam = { id: gameData.awayTeamId, name: gameData.awayTeam };
 
     const transformedGamePoints = gameData.points.map(apiPoint => {
-      return PointModel.fromJSON({ // Pass structure expected by PointModel.fromJSON
+      return PointModel.fromJSON({ 
         offensePlayers: [...apiPoint.offensePlayers],
         defensePlayers: [...apiPoint.defensePlayers],
         events: apiPoint.events.map(mapApiPointEventToModelEvent),
       });
     });
-
-    // Transform activePoint from bookkeeperState if it exists
+    
     let activePointForHydration: PointModel | null = null;
     if (gameData.bookkeeperState?.activePoint) {
-        // Assuming gameData.bookkeeperState.activePoint stores events as ModelEvent (with enum type)
-        // which is consistent if BookkeeperVolatileState is saved directly.
-        // If it were stored as ApiPointEvent (string type), mapping would be needed here.
         activePointForHydration = PointModel.fromJSON(gameData.bookkeeperState.activePoint);
     }
 
     const bookkeeperStateForHydration: BookkeeperVolatileState = {
-        ...(gameData.bookkeeperState || { // Default if not present
+        ...(gameData.bookkeeperState || { 
             activePoint: null, firstActor: null, homePossession: true, pointsAtHalf: 0,
             homePlayers: null, awayPlayers: null, homeScore: 0, awayScore: 0,
             homeParticipants: gameData.homeRoster || [], awayParticipants: gameData.awayRoster || [],
         }),
-        activePoint: activePointForHydration ? activePointForHydration.toJSON() : null, // Ensure it's in JSON format for SerializedGameData
+        activePoint: activePointForHydration ? activePointForHydration.toJSON() : null, 
     };
 
 
@@ -84,7 +84,7 @@ function LocalGame() {
       awayTeamName: gameData.awayTeam,
       homeTeamId: gameData.homeTeamId,
       awayTeamId: gameData.awayTeamId,
-      game: { points: transformedGamePoints.map(p => p.toJSON()) }, // GameModel expects JSON points
+      game: { points: transformedGamePoints.map(p => p.toJSON()) }, 
       bookkeeperState: bookkeeperStateForHydration,
       mementos: gameData.mementos || [],
     };
@@ -93,8 +93,14 @@ function LocalGame() {
       const bk = new Bookkeeper(leagueForBk, gameData.week, homeTeamForBk, awayTeamForBk, initialSerializedData);
       setBookkeeperInstance(bk);
       if (bk.activePoint === null && (bk.homePlayers === null || bk.awayPlayers === null)) {
+        // If it's the start of a game or after a point, reset pre-selection flags
+        setIsResumingPointMode(false);
+        // lastPlayedLine would be set by handlePointScored if a point just ended
         setCurrentView('selectLines');
       } else {
+        // If loading into an active point, it's like resuming.
+        setIsResumingPointMode(true); 
+        setLastPlayedLine(null); // Not flipping players
         setCurrentView('recordStats');
       }
     } catch (e) {
@@ -119,13 +125,13 @@ function LocalGame() {
     }
     if (storedGame) {
       setLocalError(null);
-      if (apiLeague) { // Ensure apiLeague is loaded before initializing
+      if (apiLeague) { 
         initializeBookkeeper(storedGame);
-      } else if (!isLoadingApiLeague) { // apiLeague not found and not loading
+      } else if (!isLoadingApiLeague) { 
         setLocalError(`League details for league ID ${storedGame.league_id} could not be loaded.`);
         setCurrentView('error_state');
       } else {
-        setCurrentView('initializing'); // Waiting for apiLeague
+        setCurrentView('initializing'); 
       }
     } else if (!isLoadingGameHook && numericGameId !== undefined) {
       setLocalError(`Game with ID ${numericGameId} not found.`);
@@ -139,7 +145,6 @@ function LocalGame() {
     if (!numericGameId || !storedGame) {
       console.error('Cannot persist state: game ID or storedGame is missing.');
       setLocalError('Failed to save game: critical data missing.');
-      // setCurrentView('error_state'); // Avoid abrupt view change if possible
       return Promise.reject(new Error('Critical data missing for save.'));
     }
 
@@ -148,13 +153,11 @@ function LocalGame() {
     const pointsForStorage: ApiPoint[] = serializedData.game.points.map(modelPointJson => ({
       offensePlayers: [...modelPointJson.offensePlayers],
       defensePlayers: [...modelPointJson.defensePlayers],
-      events: modelPointJson.events.map(mapModelEventToApiPointEvent), // modelPointJson.events are ModelEvent[]
+      events: modelPointJson.events.map(mapModelEventToApiPointEvent), 
     }));
-
+    
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
         ...serializedData.bookkeeperState,
-        // activePoint in serializedData.bookkeeperState is already in JSON format with enum EventTypes
-        // This is fine for storing directly in StoredGame.bookkeeperState
     };
 
     const updatedGameFields: Partial<StoredGame> = {
@@ -166,7 +169,7 @@ function LocalGame() {
       homeRoster: serializedData.bookkeeperState.homeParticipants,
       awayRoster: serializedData.bookkeeperState.awayParticipants,
       lastModified: new Date(),
-      status: (bk.activePoint === null && bk.homePlayers === null && bk.getMementosCount() > 0) ? 'completed' : 'in-progress',
+      status: (bk.activePoint === null && bk.homePlayers === null && bk.getMementosCount() > 0 && bk.activeGame.getPointCount() > 0) ? 'completed' : 'in-progress',
     };
 
     try {
@@ -185,44 +188,71 @@ function LocalGame() {
   ) => {
     if (!bookkeeperInstance) return;
 
+    // Special handling for recordPoint to capture players before state changes
+    if (action.toString().includes('bk.recordPoint()')) { // A bit hacky, better to pass an identifier
+        setLastPlayedLine({
+            home: [...(bookkeeperInstance.homePlayers || [])],
+            away: [...(bookkeeperInstance.awayPlayers || [])],
+        });
+        setIsResumingPointMode(false); // After a point, it's a new line selection, not resuming
+    }
+
+
     action(bookkeeperInstance);
 
     const newBkInstance = Object.create(Object.getPrototypeOf(bookkeeperInstance));
     Object.assign(newBkInstance, bookkeeperInstance);
-    setBookkeeperInstance(newBkInstance); // Trigger re-render
+    setBookkeeperInstance(newBkInstance); 
 
     if (!options.skipSave) {
       try {
         await persistBookkeeperState(newBkInstance);
       } catch (saveError) {
-        // Error already logged and set by persistBookkeeperState
-        // Potentially revert UI or show more prominent error
         return;
       }
     }
 
     if (options.skipViewChange) return;
 
+    // Determine next view
     if (newBkInstance.activePoint === null && (newBkInstance.homePlayers === null || newBkInstance.awayPlayers === null)) {
+      // This means a point was just scored, or game just started and lines not set, or undone to this state.
+      // If not already set by recordPoint specific logic, ensure isResumingPointMode is false.
+      if (!action.toString().includes('bk.recordPoint()')) {
+          setIsResumingPointMode(false); // Default to not resuming if we land here from other actions (like undo)
+          setLastPlayedLine(null); // Clear last played line if not coming from a score
+      }
       setCurrentView('selectLines');
     } else if (newBkInstance.activePoint !== null || (newBkInstance.homePlayers !== null && newBkInstance.awayPlayers !== null)) {
+      // Active point exists, or lines are set but point hasn't started (e.g. after selecting lines)
+      // This is a scenario for RecordStats. If we came from SelectLines, isResumingPointMode should be true.
       setCurrentView('recordStats');
     } else {
-       setCurrentView('selectLines');
+       setCurrentView('selectLines'); 
     }
   };
-
-  const handleLinesSelected = () => {
+  
+  const handleLinesSelected = () => { // Called from SelectLines
     if (bookkeeperInstance && bookkeeperInstance.homePlayers && bookkeeperInstance.awayPlayers) {
+        // isResumingPointMode should have been set correctly before this by how we entered SelectLines
         setCurrentView('recordStats');
     } else {
         console.warn("Lines selected but bookkeeper player lines are not set.");
+        setIsResumingPointMode(false); // Fallback
+        setLastPlayedLine(null);
         setCurrentView('selectLines');
     }
   };
 
-  const handlePointScored = () => {
+  const handleChangeLine = () => { // Called from RecordStats "Change Line"
+    setIsResumingPointMode(true);
+    setLastPlayedLine(null); // Not flipping players, just re-selecting current
     setCurrentView('selectLines');
+  };
+
+  const handlePointScored = () => { // Called from RecordStats after point is recorded by handlePerformBookkeeperAction
+    // lastPlayedLine and isResumingPointMode are set within handlePerformBookkeeperAction for recordPoint
+    setCurrentView('selectLines'); 
   };
 
 
@@ -277,10 +307,12 @@ function LocalGame() {
       {currentView === 'selectLines' && (
         <SelectLines
           bookkeeper={bookkeeperInstance}
-          homeRoster={storedGame.homeRoster} // These are full team rosters
-          awayRoster={storedGame.awayRoster} // These are full team rosters
+          homeRoster={storedGame.homeRoster} 
+          awayRoster={storedGame.awayRoster} 
           onPerformAction={handlePerformBookkeeperAction}
           onLinesSelected={handleLinesSelected}
+          isResumingPointMode={isResumingPointMode}
+          lastPlayedLine={lastPlayedLine}
         />
       )}
 
@@ -289,7 +321,7 @@ function LocalGame() {
           bookkeeper={bookkeeperInstance}
           onPerformAction={handlePerformBookkeeperAction}
           onPointScored={handlePointScored}
-          onChangeLine={() => setCurrentView('selectLines')}
+          onChangeLine={handleChangeLine} // Use the new handler
         />
       )}
     </div>
