@@ -1,5 +1,6 @@
 import React from 'react';
-import { Bookkeeper, GameState } from './models'; // EventType not needed directly for button logic
+import { GameState } from './models'; // EventType not needed directly for button logic
+import { Bookkeeper } from './bookkeeper'
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
@@ -32,10 +33,10 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   const handleActionClick = async (actionFunc: (bk: Bookkeeper) => void) => {
     await onPerformAction(actionFunc);
   };
-  
+
   const handlePointClick = async () => {
     // skipViewChange is true because LocalGame will handle view change via onPointScored callback
-    await onPerformAction(bk => bk.recordPoint(), { skipViewChange: true }); 
+    await onPerformAction(bk => bk.recordPoint(), { skipViewChange: true });
     onPointScored(); // Notify LocalGame to change view
   };
 
@@ -62,13 +63,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           // Player who has the disc cannot pass to themselves
           isDisabled = true;
         }
-        if (bookkeeper.firstActor === null && 
+        if (bookkeeper.firstActor === null &&
             (currentGameState !== GameState.Start && currentGameState !== GameState.WhoPickedUpDisc)) {
           // If no one has the disc, and it's not a state where anyone can pick up (e.g. normal play after incomplete pass)
           // then player buttons should be disabled until an action like D, Throwaway, etc. resolves possession.
           // This case is tricky; usually an action button would be pressed first.
           // For simplicity, if firstActor is null in Normal play, players are disabled.
-           if (currentGameState === GameState.Normal || 
+           if (currentGameState === GameState.Normal ||
                currentGameState === GameState.FirstThrowQuebecVariant ||
                currentGameState === GameState.FirstD ||
                currentGameState === GameState.SecondD) {
@@ -76,7 +77,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
            }
         }
       }
-      
+
       // Specific state overrides
       if (currentGameState === GameState.Pull) isDisabled = true; // All player buttons disabled when setting up for a pull
 
@@ -97,7 +98,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   const btnPullEnabled = currentGameState === GameState.Pull && bookkeeper.firstActor !== null;
   const btnPointEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   const btnDropEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
-  
+
   // D and CatchD are actions by the player who just made the "throwaway" or "drop" effectively.
   // In the Java code, D/CatchD are enabled in FirstD state, implying the *other* team's player (who caused turnover) is 'firstActor'.
   // The current TS Bookkeeper sets firstActor to null after throwaway/drop.
@@ -162,21 +163,21 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <button onClick={() => handleActionClick(bk => bk.recordDrop())} disabled={!btnDropEnabled} style={{ margin: '5px', padding: '10px' }}>Drop</button>
         <button onClick={() => handleActionClick(bk => bk.recordThrowAway())} disabled={!btnThrowAwayEnabled} style={{ margin: '5px', padding: '10px' }}>Throwaway</button>
         <p style={{fontSize: '0.9em', margin: '5px'}}>For D / Catch D: Select the defensive player first, then click D / Catch D.</p>
-        <button 
+        <button
             onClick={() => {
                 if (!bookkeeper.firstActor) { alert("Select the player who got the D."); return; }
                 handleActionClick(bk => bk.recordD());
-            }} 
+            }}
             disabled={!(bookkeeper.firstActor && canMakeDefensivePlay && (bookkeeper.homePossession ? awayPlayers.includes(bookkeeper.firstActor) : homePlayers.includes(bookkeeper.firstActor)))}
             style={{ margin: '5px', padding: '10px' }}
         >
             D (Block)
         </button>
-        <button 
+        <button
             onClick={() => {
                 if (!bookkeeper.firstActor) { alert("Select the player who got the Catch D."); return; }
                 handleActionClick(bk => bk.recordCatchD());
-            }} 
+            }}
             disabled={!(bookkeeper.firstActor && canMakeDefensivePlay && (bookkeeper.homePossession ? awayPlayers.includes(bookkeeper.firstActor) : homePlayers.includes(bookkeeper.firstActor)))}
             style={{ margin: '5px', padding: '10px' }}
         >
@@ -184,7 +185,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         </button>
 
       </div>
-      
+
       <div style={{ marginBottom: '20px' }}>
         <button onClick={() => handleActionClick(bk => bk.undo())} disabled={!btnUndoEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: '#ff9800', color: 'white', border:'none', borderRadius:'4px' }}>Undo Last Event</button>
         <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>Change Line / Mode</button>
