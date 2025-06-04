@@ -28,7 +28,7 @@ function NewGame() {
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamId);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamId);
 
-   useEffect(() => {
+  useEffect(() => {
     setHomeRosterNames(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
   }, [selectedHomeTeamObj]);
 
@@ -36,9 +36,14 @@ function NewGame() {
     setAwayRosterNames(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
   }, [selectedAwayTeamObj]);
 
-
   const handleCreateGame = async () => {
-    if (!selectedLeagueId || !selectedHomeTeamObj || !selectedAwayTeamObj || homeRosterNames.length === 0 || awayRosterNames.length === 0) {
+    if (
+      !selectedLeagueId ||
+      !selectedHomeTeamObj ||
+      !selectedAwayTeamObj ||
+      homeRosterNames.length === 0 ||
+      awayRosterNames.length === 0
+    ) {
       alert('Please select a league, both teams, and ensure rosters are not empty.');
       return;
     }
@@ -63,7 +68,7 @@ function NewGame() {
       console.log(`New game added with localId: ${id}`);
       navigate(`/stat_keeper/game/${id}`);
     } catch (error) {
-      console.error("Failed to create new game:", error);
+      console.error('Failed to create new game:', error);
       alert(`Failed to create game: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
@@ -71,37 +76,45 @@ function NewGame() {
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamId);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamId);
 
-  const pageTitle = "Create New Game";
-  const buttonText = "Create Game & Start Stat-Taking";
+  const pageTitle = 'Create New Game';
+  const buttonText = 'Create Game & Start Stat-Taking';
 
   return (
     <div style={{ padding: '20px', paddingBottom: '40px' }}>
-      <Link to={"/stat_keeper"} style={{ marginBottom: '20px', display: 'inline-block' }}>
+      <Link to={'/stat_keeper'} style={{ marginBottom: '20px', display: 'inline-block' }}>
         &larr; Back to StatKeeper Home
       </Link>
       <h1>{pageTitle}</h1>
 
       <div style={{ marginBottom: '15px' }}>
-        <label htmlFor="league-select" style={{ marginRight: '10px' }}>League:</label>
+        <label htmlFor="league-select" style={{ marginRight: '10px' }}>
+          League:
+        </label>
         <select
           id="league-select"
           value={selectedLeagueId}
-          onChange={(e) => setSelectedLeagueId(e.target.value)}
+          onChange={e => setSelectedLeagueId(e.target.value)}
           style={{ padding: '8px' }}
         >
-          {leagues.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
+          {leagues.map(l => (
+            <option key={l.id} value={l.id}>
+              {l.name}
+            </option>
+          ))}
         </select>
       </div>
 
       <div style={{ marginBottom: '15px' }}>
-        <label htmlFor="week-select" style={{ marginRight: '10px' }}>Week:</label>
+        <label htmlFor="week-select" style={{ marginRight: '10px' }}>
+          Week:
+        </label>
         <input
-            type="number"
-            id="week-select"
-            value={week}
-            onChange={(e) => setWeek(parseInt(e.target.value,10) || 1)}
-            min="1"
-            style={{ padding: '8px' }}
+          type="number"
+          id="week-select"
+          value={week}
+          onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
+          min="1"
+          style={{ padding: '8px' }}
         />
       </div>
 
@@ -112,39 +125,55 @@ function NewGame() {
         <>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div style={{ flex: 1, marginRight: '10px' }}>
-              <label htmlFor="home-team-select" style={{ display: 'block', marginBottom: '5px' }}>Home Team:</label>
+              <label htmlFor="home-team-select" style={{ display: 'block', marginBottom: '5px' }}>
+                Home Team:
+              </label>
               <select
                 id="home-team-select"
                 value={homeTeamId}
-                onChange={(e) => setHomeTeamId(e.target.value)}
+                onChange={e => setHomeTeamId(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
                 disabled={availableHomeTeams.length === 0 && !homeTeamId}
               >
                 <option value="">Select Home Team</option>
                 {availableHomeTeams.map(team => (
-                  <option key={team.id} value={team.id.toString()}>{team.name}</option>
+                  <option key={team.id} value={team.id.toString()}>
+                    {team.name}
+                  </option>
                 ))}
-                {homeTeamId && !availableHomeTeams.find(t => t.id.toString() === homeTeamId) && selectedHomeTeamObj && (
-                    <option key={selectedHomeTeamObj.id} value={selectedHomeTeamObj.id.toString()}>{selectedHomeTeamObj.name}</option>
-                )}
+                {homeTeamId &&
+                  !availableHomeTeams.find(t => t.id.toString() === homeTeamId) &&
+                  selectedHomeTeamObj && (
+                    <option key={selectedHomeTeamObj.id} value={selectedHomeTeamObj.id.toString()}>
+                      {selectedHomeTeamObj.name}
+                    </option>
+                  )}
               </select>
             </div>
             <div style={{ flex: 1, marginLeft: '10px' }}>
-              <label htmlFor="away-team-select" style={{ display: 'block', marginBottom: '5px' }}>Away Team:</label>
+              <label htmlFor="away-team-select" style={{ display: 'block', marginBottom: '5px' }}>
+                Away Team:
+              </label>
               <select
                 id="away-team-select"
                 value={awayTeamId}
-                onChange={(e) => setAwayTeamId(e.target.value)}
+                onChange={e => setAwayTeamId(e.target.value)}
                 style={{ width: '100%', padding: '8px' }}
                 disabled={availableAwayTeams.length === 0 && !awayTeamId}
               >
                 <option value="">Select Away Team</option>
                 {availableAwayTeams.map(team => (
-                  <option key={team.id} value={team.id.toString()}>{team.name}</option>
+                  <option key={team.id} value={team.id.toString()}>
+                    {team.name}
+                  </option>
                 ))}
-                {awayTeamId && !availableAwayTeams.find(t => t.id.toString() === awayTeamId) && selectedAwayTeamObj && (
-                    <option key={selectedAwayTeamObj.id} value={selectedAwayTeamObj.id.toString()}>{selectedAwayTeamObj.name}</option>
-                )}
+                {awayTeamId &&
+                  !availableAwayTeams.find(t => t.id.toString() === awayTeamId) &&
+                  selectedAwayTeamObj && (
+                    <option key={selectedAwayTeamObj.id} value={selectedAwayTeamObj.id.toString()}>
+                      {selectedAwayTeamObj.name}
+                    </option>
+                  )}
               </select>
             </div>
           </div>
@@ -166,18 +195,29 @@ function NewGame() {
             />
           )}
 
-          {(selectedHomeTeamObj && selectedAwayTeamObj) && (
+          {selectedHomeTeamObj && selectedAwayTeamObj && (
             <button
-                onClick={handleCreateGame}
-                style={{ marginBottom: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '5px' }}
-                disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+              onClick={handleCreateGame}
+              style={{
+                marginBottom: '20px',
+                padding: '10px 20px',
+                fontSize: '16px',
+                cursor: 'pointer',
+                backgroundColor: 'green',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+              }}
+              disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
             >
               {buttonText}
             </button>
           )}
         </>
       )}
-       {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && <p>No teams found for the selected league.</p>}
+      {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && (
+        <p>No teams found for the selected league.</p>
+      )}
     </div>
   );
 }
