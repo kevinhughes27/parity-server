@@ -4,8 +4,8 @@ import { type SerializedMemento, type BookkeeperVolatileState } from './models';
 
 // Define the structure of the game object to be stored in Dexie
 export interface StoredGame {
-  localId?: number;       // Primary key, auto-incrementing. Optional because it's set by Dexie on add.
-  serverId?: string;      // Game ID from the server, if uploaded. Optional.
+  localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie on add.
+  serverId?: string; // Game ID from the server, if uploaded. Optional.
 
   // Core game data, similar to api.ts Game interface
   league_id: string;
@@ -45,23 +45,27 @@ db.version(1).stores({
   games: '++localId, serverId, league_id, week, status, lastModified',
 });
 
-db.version(2).stores({
+db.version(2)
+  .stores({
     games: '++localId, serverId, league_id, week, status, lastModified, *mementos, bookkeeperState',
-}).upgrade(tx => {
-  // Migration logic for existing data if needed.
-  // For new fields being optional, direct upgrade might be fine.
-  // If they must exist, iterate and add default values.
-  return tx.table('games').toCollection().modify(game => {
-    if (game.mementos === undefined) {
-      game.mementos = [];
-    }
-    if (game.bookkeeperState === undefined) {
-      // Initialize with sensible defaults if possible, or leave as potentially undefined
-      // if Bookkeeper handles it. For now, let's assume Bookkeeper can start fresh
-      // if this is missing for very old games.
-    }
+  })
+  .upgrade(tx => {
+    // Migration logic for existing data if needed.
+    // For new fields being optional, direct upgrade might be fine.
+    // If they must exist, iterate and add default values.
+    return tx
+      .table('games')
+      .toCollection()
+      .modify(game => {
+        if (game.mementos === undefined) {
+          game.mementos = [];
+        }
+        if (game.bookkeeperState === undefined) {
+          // Initialize with sensible defaults if possible, or leave as potentially undefined
+          // if Bookkeeper handles it. For now, let's assume Bookkeeper can start fresh
+          // if this is missing for very old games.
+        }
+      });
   });
-});
-
 
 export { db };

@@ -4,7 +4,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { fetchTeams, Team, TeamPlayer } from '../../api';
 
-export const GAME_LOADING_SENTINEL = Symbol("loading_game_sentinel");
+export const GAME_LOADING_SENTINEL = Symbol('loading_game_sentinel');
 
 export interface UseLocalGameResult {
   game: StoredGame | undefined; // The resolved game object, or undefined if not found/error
@@ -24,7 +24,7 @@ export function useLocalGame(): UseLocalGameResult {
     setError(null); // Reset error on param change
 
     if (!paramGameId) {
-      setError("No game ID provided in URL.");
+      setError('No game ID provided in URL.');
       setNumericGameId(undefined);
       setInternalIsLoading(false);
       return;
@@ -32,7 +32,7 @@ export function useLocalGame(): UseLocalGameResult {
 
     const id = parseInt(paramGameId, 10);
     if (isNaN(id)) {
-      setError("Invalid game ID format.");
+      setError('Invalid game ID format.');
       setNumericGameId(undefined);
       setInternalIsLoading(false);
     } else {
@@ -49,7 +49,7 @@ export function useLocalGame(): UseLocalGameResult {
         return undefined;
       }
       // setInternalIsLoading(true); // This might be set here or in the effect below.
-                                 // Dexie-react-hooks handles loading state implicitly.
+      // Dexie-react-hooks handles loading state implicitly.
       return db.games.get(numericGameId);
     },
     [numericGameId] // Dependencies array
@@ -109,14 +109,12 @@ export function useLocalGame(): UseLocalGameResult {
       // This means if rawGameData is undefined, we might briefly show loading, then "not found".
       setInternalIsLoading(false); // Assume query resolved, if undefined then it's not found.
       setError(`Game with ID ${numericGameId} not found.`);
-
-    } else { // rawGameData is a StoredGame object
+    } else {
+      // rawGameData is a StoredGame object
       setInternalIsLoading(false);
       setError(null);
     }
-
   }, [rawGameData, numericGameId, internalIsLoading]); // internalIsLoading in deps to re-evaluate if it changes.
-
 
   // rawGameData is StoredGame | undefined. It can no longer be GAME_LOADING_SENTINEL.
   const game = rawGameData ? rawGameData : undefined;
@@ -167,7 +165,8 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
         setLeagueTeams(teams);
         const allPlayers = teams.reduce((acc, team) => {
           team.players.forEach(p => {
-            if (!acc.some(ap => ap.name === p.name)) { // Ensure unique players
+            if (!acc.some(ap => ap.name === p.name)) {
+              // Ensure unique players
               acc.push(p);
             }
           });

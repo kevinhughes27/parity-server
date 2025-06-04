@@ -15,7 +15,7 @@ function EditGame() {
   const {
     allLeaguePlayers,
     loadingTeams: loadingLeaguePlayers,
-    errorTeams: errorLeaguePlayers
+    errorTeams: errorLeaguePlayers,
   } = useTeams(game?.league_id);
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
@@ -53,8 +53,10 @@ function EditGame() {
       console.log(`Rosters for game localId: ${numericGameId} updated successfully.`);
       navigate(`/stat_keeper/game/${numericGameId}`);
     } catch (error) {
-      console.error("Failed to update rosters:", error);
-      alert(`Failed to update rosters: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      console.error('Failed to update rosters:', error);
+      alert(
+        `Failed to update rosters: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     }
   };
 
@@ -82,17 +84,35 @@ function EditGame() {
 
   return (
     <div style={{ padding: '20px', paddingBottom: '40px' }}>
-      <Link to={`/stat_keeper/game/${numericGameId}`} style={{ marginBottom: '20px', display: 'inline-block' }}>
+      <Link
+        to={`/stat_keeper/game/${numericGameId}`}
+        style={{ marginBottom: '20px', display: 'inline-block' }}
+      >
         &larr; Back to Game
       </Link>
-      <h1>Edit Game Rosters: {game.homeTeam} vs {game.awayTeam}</h1>
-      <div style={{ marginBottom: '20px', backgroundColor: '#f0f0f0', padding: '10px', borderRadius: '5px' }}>
-        <p><strong>League:</strong> {getLeagueName(game.league_id)}</p>
-        <p><strong>Week:</strong> {game.week}</p>
+      <h1>
+        Edit Game Rosters: {game.homeTeam} vs {game.awayTeam}
+      </h1>
+      <div
+        style={{
+          marginBottom: '20px',
+          backgroundColor: '#f0f0f0',
+          padding: '10px',
+          borderRadius: '5px',
+        }}
+      >
+        <p>
+          <strong>League:</strong> {getLeagueName(game.league_id)}
+        </p>
+        <p>
+          <strong>Week:</strong> {game.week}
+        </p>
       </div>
 
       {loadingLeaguePlayers && <p>Loading league player data...</p>}
-      {errorLeaguePlayers && <p style={{ color: 'red' }}>Error loading league players: {errorLeaguePlayers}</p>}
+      {errorLeaguePlayers && (
+        <p style={{ color: 'red' }}>Error loading league players: {errorLeaguePlayers}</p>
+      )}
 
       {!loadingLeaguePlayers && !errorLeaguePlayers && (
         <>
@@ -110,17 +130,29 @@ function EditGame() {
           />
           <button
             onClick={handleUpdateRosters}
-            style={{ marginBottom: '20px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}
-            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0 || loadingLeaguePlayers}
+            style={{
+              marginBottom: '20px',
+              padding: '10px 20px',
+              fontSize: '16px',
+              cursor: 'pointer',
+              backgroundColor: 'blue',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+            }}
+            disabled={
+              homeRosterNames.length === 0 || awayRosterNames.length === 0 || loadingLeaguePlayers
+            }
           >
             Update Rosters
           </button>
         </>
       )}
       {/* Display if league players are loaded but the list is empty (e.g. league has no players) */}
-      {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length === 0 && game?.league_id && (
-         <p>No players found for the league: {getLeagueName(game.league_id)}.</p>
-      )}
+      {!loadingLeaguePlayers &&
+        !errorLeaguePlayers &&
+        allLeaguePlayers.length === 0 &&
+        game?.league_id && <p>No players found for the league: {getLeagueName(game.league_id)}.</p>}
     </div>
   );
 }
