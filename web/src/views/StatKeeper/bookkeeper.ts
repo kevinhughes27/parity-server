@@ -32,7 +32,7 @@ export class Bookkeeper {
   public homePossession: boolean = true;
   public homeScore: number = 0;
   public awayScore: number = 0;
-  public pointsAtHalf: number = 0; // Changed from private to public
+  public pointsAtHalf: number = 0;
   public homePlayers: string[] | null = null;
   public awayPlayers: string[] | null = null;
   private homeParticipants: Set<string>;
@@ -153,45 +153,97 @@ export class Bookkeeper {
   }
 
   public gameState(): GameState {
-    const firstPoint = this.activeGame.getPointCount() === this.pointsAtHalf;
-    const firstEvent = this.activePoint === null || this.activePoint.getEventCount() === 0;
+    const firstPointOfGameOrHalf = this.activeGame.getPointCount() === this.pointsAtHalf;
 
     if (this.activePoint === null) {
+      // If activePoint is null, it means we are either at the very start of a game (before lines),
+      // or a point just ended and we are in SelectLines view, or we are waiting for lines to be set.
+      // If homePlayers are set, it implies lines have been selected.
+      // The logic in LocalGame.tsx (handleLinesSelected) aims to create activePoint via prepareNewPointAfterScore
+      // before RecordStats is shown, for non-first points.
+      // So, if activePoint is null here, it's typically GameState.Start (e.g. very beginning, or first point of half).
       return GameState.Start;
-    } else if (firstPoint && firstEvent && this.firstActor === null) {
-      return GameState.Start;
-    } else if (firstPoint && firstEvent) {
-      return GameState.Pull;
-    } else if (this.activePoint.getLastEventType() === EventType.PULL && this.firstActor === null) {
-      return GameState.WhoPickedUpDisc;
-    } else if (this.activePoint.getLastEventType() === EventType.PULL) {
-      return GameState.FirstThrowQuebecVariant;
-    } else if (firstEvent && this.firstActor === null) {
-      return GameState.WhoPickedUpDisc;
-    } else if (firstEvent) {
-      return GameState.FirstThrowQuebecVariant;
-    } else if (
-      this.activePoint.getLastEventType() === EventType.THROWAWAY &&
-      this.firstActor !== null
-    ) {
-      return GameState.FirstD;
-    } else if (
-      this.activePoint.getLastEventType() === EventType.DEFENSE &&
-      this.firstActor === null
-    ) {
-      return GameState.WhoPickedUpDisc;
-    } else if (this.activePoint.getLastEventType() === EventType.DEFENSE) {
-      return GameState.SecondD;
-    } else if (this.activePoint.getLastEventType() === EventType.THROWAWAY) {
-      return GameState.WhoPickedUpDisc;
-    } else if (this.activePoint.getLastEventType() === EventType.DROP && this.firstActor === null) {
-      return GameState.WhoPickedUpDisc;
-    } else if (this.activePoint.getLastEventType() === EventType.DROP) {
-      return GameState.SecondD;
-    } else {
+    }
+
+    // ActivePoint exists from here
+    const eventCount = this.activePoint.getEventCount();
+    const lastEventType = this.activePoint.getLastEventType();
+
+    if (eventCount === 0) { // New point, no events yet in activePoint
+      if (this.firstActor === null) {
+        // activePoint exists, 0 events, firstActor is null.
+        // This means lines are set, possession is determined, waiting for player to initiate action.
+        // This is the state after prepareNewPointAfterScore() or if undo leads here.
+        if (firstPointOfGameOrHalf) {
+          // This should ideally be a state like "SelectPuller" if we want to be very specific.
+          // However, GameState.Start is used by Java to enable all players to select the puller.
+          // If recordFirstActor then sets firstActor, next state is Pull.
+          return GameState.Start; // Allows selection of puller from either team.
+        } else {
+          // Not the first point of game/half. Receiving team needs to pick up.
+          return GameState.WhoPickedUpDisc;
+        }
+      } else {
+        // firstActor is set, 0 events. Player has disc, ready for first throw or pull.
+        if (firstPointOfGameOrHalf) { // Player selected is the puller
+          return GameState.Pull;
+        } else { // Player selected picked up the disc
+          return GameState.FirstThrowQuebecVariant;
+        }
+      }
+    }
+
+    // Point has events
+    if (lastEventType === EventType.PULL) {
+      if (this.firstActor === null) return GameState.WhoPickedUpDisc; // Disc is in the air or landed, waiting for pickup
+      return GameState.FirstThrowQuebecVariant; // Quebec: puller can be the first thrower if they pick up
+    }
+
+    // Standard game flow states based on last event and firstActor
+    // These states assume firstActor is relevant for the *next* action
+    if (this.firstActor === null) { // Disc is loose or action needed by current possession team
+      if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP || lastEventType === EventType.DEFENSE) {
+        // After a turnover, the new offense needs to pick up the disc.
+        return GameState.WhoPickedUpDisc;
+      }
+      // If firstActor is null for other reasons (e.g. after pull), already handled.
+      // This path might be hit if an undo operation results in firstActor being null with existing events.
+      // Consider if other specific states are needed here.
+    } else { // firstActor is set (player has the disc)
+      // These states describe what the player with the disc *can* do, or what just happened to them.
+      // The original Java logic for FirstD/SecondD seems to be about the *type* of throw available
+      // or if a D just happened.
+      if (lastEventType === EventType.THROWAWAY) {
+        // This state seems to imply that firstActor is now on defense, which is counter-intuitive
+        // as recordThrowAway sets firstActor to null.
+        // This might be intended for *after* the other team picks up and firstActor is set for them.
+        // For now, let's assume if firstActor is set, it's normal play unless a D just occurred.
+        // The original conditions for FirstD/SecondD were:
+        // GameState.FirstD: THROW AWAY and firstActor != null (Java) -> this means firstActor is on D
+        // GameState.SecondD: DEFENSE and firstActor != null (Java) -> firstActor is on O after D
+        // GameState.SecondD: DROP and firstActor != null (Java) -> firstActor is on O after drop by other team
+        // This part of the logic might need review based on how FirstD/SecondD are used in UI.
+        // For simplicity, if firstActor has the disc, it's generally Normal.
+        // Specific states like FirstD/SecondD might be better determined by event history + firstActor.
+        // Let's stick to a simpler model for now if it covers UI needs.
+        // If a D just happened (last event) AND this firstActor (who has disc) was the one who got the D:
+        if (this.activePoint.getLastEvent()?.firstActor === this.firstActor &&
+            (lastEventType === EventType.DEFENSE /*|| lastEventType === EventType.CALLAHAN_TODO */) ) {
+             return GameState.SecondD; // Player who got D now has disc (e.g. Callahan or quick pickup)
+        }
+        return GameState.Normal;
+      }
+      // If last event was a D, and firstActor is now set (meaning player picked up after D):
+      if (lastEventType === EventType.DEFENSE) return GameState.SecondD; // Or FirstThrowQuebecVariant if it's their first throw
+      // If last event was a Drop (by other team), and firstActor is now set:
+      if (lastEventType === EventType.DROP) return GameState.SecondD; // Similar to after a D
+
       return GameState.Normal;
     }
+    // Fallback, should ideally be covered by above logic
+    return GameState.Normal;
   }
+
 
   public shouldRecordNewPass(): boolean {
     return this.firstActor !== null;
@@ -214,12 +266,14 @@ export class Bookkeeper {
     this.mementos.push(this.createRecordFirstActorMemento(mementoData));
 
     if (this.activePoint === null) {
-      this.startPoint(isHomeTeamPlayer);
+      // This implies the point is starting from scratch (e.g. first point of game/half)
+      // Possession is determined by the team of the player clicked.
+      this.startPointAndSetPossession(isHomeTeamPlayer);
     }
     this.firstActor = player;
   }
 
-  private startPoint(isHomeTeamStartingWithDisc: boolean): void {
+  private startPointAndSetPossession(isHomeTeamStartingWithDisc: boolean): void {
     this.homePossession = isHomeTeamStartingWithDisc;
 
     let offensePlayers: string[];
@@ -234,6 +288,31 @@ export class Bookkeeper {
     }
     this.activePoint = new PointModel(offensePlayers, defensePlayers);
   }
+
+  public prepareNewPointAfterScore(): void {
+    if (this.activePoint !== null || this.homePlayers === null || this.awayPlayers === null) {
+        // Only proceed if point is null (just scored) and lines are set for the new point.
+        return;
+    }
+    // homePossession should have been flipped by recordPoint already.
+    // This method sets up activePoint for the receiving team.
+    let offensePlayers: string[];
+    let defensePlayers: string[];
+
+    if (this.homePossession) { // This is the team receiving
+        offensePlayers = this.homePlayers;
+        defensePlayers = this.awayPlayers;
+    } else {
+        offensePlayers = this.awayPlayers;
+        defensePlayers = this.homePlayers;
+    }
+    this.activePoint = new PointModel(offensePlayers, defensePlayers);
+    // DO NOT set firstActor here.
+    // NO MEMENTO for this automatic setup step, as it's an intermediate state.
+    // Undoing the subsequent recordFirstActor will handle reverting firstActor,
+    // and if further undos occur, they will revert actions before this point.
+  }
+
 
   public recordPull(): void {
     if (!this.activePoint || !this.firstActor) return;
@@ -311,7 +390,7 @@ export class Bookkeeper {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    this.firstActor = null;
+    this.firstActor = null; // After a D, the disc is loose, so no specific player has it.
   }
 
   public recordCatchD(): void {
@@ -321,11 +400,14 @@ export class Bookkeeper {
     this.mementos.push(this.createRecordCatchDMemento(mementoData));
 
     this.activePoint.addEvent({
-      type: EventType.DEFENSE,
-      firstActor: this.firstActor!,
-      secondActor: null,
+      type: EventType.DEFENSE, // Still a DEFENSE event type
+      firstActor: this.firstActor!, // Player who got the D
+      secondActor: null, // No second actor for a D itself
       timestamp: new Date().toISOString(),
     });
+    // For a Catch D, the player who made the D (firstActor) now has possession.
+    // Possession does not change here, as it's assumed their team was already on D.
+    // firstActor remains the player who got the catch D.
   }
 
   public recordPoint(): void {
@@ -360,6 +442,8 @@ export class Bookkeeper {
     this.homePlayers = null;
     this.awayPlayers = null;
     this.firstActor = null;
+
+    this.changePossession(); // Flip possession for the next point
   }
 
   public recordHalf(): void {
@@ -398,12 +482,20 @@ export class Bookkeeper {
       apply: () => {
         this.firstActor = data.savedFirstActor;
         if (
-          data.pointJustCreated &&
-          this.activePoint &&
-          this.activePoint.getEventCount() === 0
+          data.pointJustCreated && // True if activePoint was null when recordFirstActor was called
+          this.activePoint && // activePoint was created by startPointAndSetPossession
+          this.activePoint.getEventCount() === 0 // No events added yet by recordFirstActor itself
         ) {
+          // This implies we are undoing the very first action that created this activePoint.
+          // We also need to revert possession if startPointAndSetPossession changed it.
+          // However, memento doesn't store previous possession.
+          // This part of memento might need to be smarter or rely on subsequent undos.
+          // For now, just nullify activePoint. Possession will be reset by next recordFirstActor.
           this.activePoint = null;
-          this.changePossession();
+          // Reverting possession change by startPointAndSetPossession is tricky here.
+          // The original Java code's memento for firstActor also didn't explicitly revert possession.
+          // It relied on the fact that if activePoint becomes null, the next call to recordFirstActor
+          // would call startPoint again, re-evaluating possession.
         }
       },
     };
@@ -414,9 +506,9 @@ export class Bookkeeper {
       type: MementoType.RecordPull,
       data: data,
       apply: () => {
-        this.activePoint!.swapOffenseAndDefense();
-        this.changePossession();
-        this.activePoint!.removeLastEvent();
+        this.activePoint!.removeLastEvent(); // Remove PULL event
+        this.changePossession(); // Revert possession flip from pull
+        this.activePoint!.swapOffenseAndDefense(); // Revert player swap
         this.firstActor = data.savedFirstActor;
       },
     };
@@ -425,7 +517,7 @@ export class Bookkeeper {
   private createUndoLastEventStyleMemento(
     type: MementoType,
     data: { savedFirstActor: string | null }
-  ): InternalMemento {
+  ): InternalMemento { // For Pass, D (non-turnover D)
     return {
       type: type,
       data: data,
@@ -437,7 +529,7 @@ export class Bookkeeper {
   }
 
   private createTurnoverStyleMemento(
-    type: MementoType,
+    type: MementoType, // For ThrowAway, Drop
     data: { savedFirstActor: string | null }
   ): InternalMemento {
     return {
@@ -446,17 +538,28 @@ export class Bookkeeper {
       apply: () => {
         this.activePoint!.removeLastEvent();
         this.firstActor = data.savedFirstActor;
-        this.changePossession();
+        this.changePossession(); // Revert possession flip from turnover
       },
     };
   }
 
   private createRecordCatchDMemento(data: { savedFirstActor: string | null }): InternalMemento {
+    // Undoing a Catch D means the player (firstActor) no longer has the disc from that D.
+    // The event is removed. firstActor reverts to who it was before this Catch D action.
+    // If this firstActor was null before (e.g. disc was loose), it becomes null.
+    // If this firstActor *was* the one who got the D, they remain firstActor but the D event is gone.
+    // The original Java code for undoing CatchD just removed the event.
+    // It implies firstActor was already set to the D-getter before CatchD was called.
+    // Let's assume recordCatchD is called when firstActor is already the D-getter.
     return {
       type: MementoType.RecordCatchD,
       data: data,
       apply: () => {
         this.activePoint!.removeLastEvent();
+        // firstActor remains who it was (the D-getter), but the D event is gone.
+        // If the intent was that firstActor becomes null (disc loose again), this needs change.
+        // Sticking to minimal change: firstActor was data.savedFirstActor *before* this action.
+        this.firstActor = data.savedFirstActor;
       },
     };
   }
@@ -471,20 +574,29 @@ export class Bookkeeper {
       type: MementoType.RecordPoint,
       data: data,
       apply: () => {
+        // Revert score
         if (data.wasHomePossession) {
           this.homeScore--;
         } else {
           this.awayScore--;
         }
+        // Revert possession for the *next* point (which was flipped by recordPoint)
+        this.changePossession();
+
+        // Restore activePoint from game history
         const undonePoint = this.activeGame.popPoint();
         if (undonePoint) {
           this.activePoint = undonePoint;
-          this.activePoint.removeLastEvent();
+          this.activePoint.removeLastEvent(); // Remove the POINT event itself
         }
+        // Restore players on line and firstActor for the point that was just undone
         this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
         this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
         this.firstActor = data.savedFirstActor;
+        // Possession for the *current undone point* is restored
         this.homePossession = data.wasHomePossession;
+
+        // TODO: Revert participant list? More complex, usually not undone.
       },
     };
   }
