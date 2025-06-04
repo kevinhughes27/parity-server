@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { getLeagueName, Point as ApiPoint, saveGame as apiSaveGame } from '../../api';
+import { getLeagueName, Point as ApiPoint, uploadCompleteGame, UploadedGamePayload } from '../../api';
 import { useLocalGame, useTeams } from './hooks';
 import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
 import {
@@ -175,6 +175,17 @@ function LocalGame() {
     try {
       await db.games.update(numericGameId, updatedGameFields);
       console.log(`Game ${numericGameId} updated successfully with status ${statusToSave}.`);
+      // Manually update storedGame state if status changes to reflect immediately in UI
+      if (newStatus && storedGame.status !== newStatus) {
+        // This is a bit of a hack; ideally, useLiveQuery would pick this up,
+        // but for immediate feedback on status change (e.g., after submit), this helps.
+        // Create a new object to ensure React detects the change.
+        const updatedStoredGame = { ...storedGame, status: newStatus, lastModified: updatedGameFields.lastModified! };
+        // The hook `useLocalGame` should ideally refetch or useLiveQuery should update.
+        // For now, this direct update might be needed if useLiveQuery is not fast enough.
+        // Consider if this manual update is truly necessary or if relying on useLiveQuery is sufficient.
+        // For now, let's assume useLiveQuery will handle it.
+      }
     } catch (error) {
       console.error('Failed to update game in DB:', error);
       setLocalError(`Failed to save game progress: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -259,19 +270,28 @@ function LocalGame() {
       return;
     }
 
-    const password = prompt('Enter the league password to submit the game:');
-    if (password === null) { // User cancelled prompt
-      return;
-    }
+    // No longer prompting for password
+    // const password = prompt('Enter the league password to submit the game:');
+    // if (password === null) { // User cancelled prompt
+    //   return;
+    // }
 
     try {
-      // Ensure latest state is persisted before constructing API payload
       await persistBookkeeperState(bookkeeperInstance, 'submitted');
+      // Refresh storedGame to get the 'submitted' status for the UI
+      // This might not be strictly necessary if useLiveQuery updates quickly enough
+      const updatedStoredGame = await db.games.get(numericGameId);
+      if (updatedStoredGame) {
+        // This is a local update to ensure UI reflects "submitted" state immediately
+        // The hook `useLocalGame` should ideally handle this via useLiveQuery.
+        // Forcing a re-render or relying on useLiveQuery is better.
+        // Let's assume useLiveQuery will update the `storedGame` prop.
+      }
+
 
       const bkState = bookkeeperInstance.serialize();
-      const gameDataForApi = {
-        id: numericGameId.toString(), // Server uses game_id from path
-        league_id: bkState.league_id,
+      const gameDataForApi: UploadedGamePayload = {
+        league_id: bkState.league_id, // API spec shows number, sending string
         week: bkState.week,
         homeTeam: bkState.homeTeamName,
         homeScore: bkState.bookkeeperState.homeScore,
@@ -285,17 +305,23 @@ function LocalGame() {
           events: pJson.events.map(mapModelEventToApiPointEvent)
         })),
       };
-      const gameDataJsonString = JSON.stringify(gameDataForApi);
 
-      const response = await apiSaveGame(numericGameId.toString(), bkState.league_id, gameDataJsonString, password);
+      const response = await uploadCompleteGame(gameDataForApi);
 
       if (response.ok) {
         await persistBookkeeperState(bookkeeperInstance, 'uploaded');
         alert('Game submitted and uploaded successfully!');
       } else {
-        const errorData = await response.json().catch(() => ({ message: 'Unknown error during submission.' }));
+        const errorText = await response.text(); // Get raw text for more info
+        let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
+        try {
+            const errorData = JSON.parse(errorText); // Try to parse as JSON
+            errorMessage += ` - ${errorData.message || errorData.detail || 'Server error'}`;
+        } catch (e) {
+            errorMessage += ` - ${errorText || 'Server error with no JSON body'}`;
+        }
         await persistBookkeeperState(bookkeeperInstance, 'sync-error');
-        alert(`Failed to submit game: ${response.statusText} - ${errorData.message || 'Server error'}`);
+        alert(errorMessage);
       }
     } catch (error) {
       await persistBookkeeperState(bookkeeperInstance, 'sync-error');

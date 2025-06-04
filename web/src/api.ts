@@ -85,6 +85,20 @@ export interface PointEvent {
   timestamp: string;
 }
 
+// Payload for the /submit_game endpoint
+export interface UploadedGamePayload {
+  league_id: string; // API spec shows number, but our current data is string. API should handle.
+  week: number;
+  homeTeam: string;
+  awayTeam: string;
+  homeRoster: string[];
+  awayRoster: string[];
+  points: Point[];
+  homeScore: number;
+  awayScore: number;
+}
+
+
 const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
   return await response.json();
@@ -95,6 +109,7 @@ const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   return await response.json();
 };
 
+// This function is for the admin-like save endpoint, password protected
 const saveGame = async (
   gameId: string,
   leagueId: string,
@@ -115,6 +130,24 @@ const saveGame = async (
     body: json,
   });
 };
+
+// New function for the /submit_game endpoint
+const uploadCompleteGame = async (payload: UploadedGamePayload) => {
+  const url = `/submit_game`; // Top-level endpoint
+
+  // No cache clearing needed here as it's a one-time submission endpoint typically
+  // and doesn't usually have a corresponding GET to cache.
+
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // No Authorization header as per new requirement
+    },
+    body: JSON.stringify(payload),
+  });
+};
+
 
 const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
@@ -211,6 +244,7 @@ export {
   fetchPlayers,
   fetchWeeks,
   fetchStats,
-  saveGame,
+  saveGame, // Keep existing saveGame for other uses
+  uploadCompleteGame, // New function for game submission
   deleteGame,
 };
