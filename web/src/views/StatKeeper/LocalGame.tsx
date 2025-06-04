@@ -160,6 +160,13 @@ function LocalGame() {
         ...serializedData.bookkeeperState,
     };
 
+    let newStatus = storedGame.status;
+    if (newStatus === 'new') {
+        newStatus = 'in-progress';
+    }
+    // Game status will not be automatically set to 'completed' here.
+    // It remains 'in-progress' or its current state until explicitly changed by other actions (e.g., submitting game).
+
     const updatedGameFields: Partial<StoredGame> = {
       homeScore: serializedData.bookkeeperState.homeScore,
       awayScore: serializedData.bookkeeperState.awayScore,
@@ -169,7 +176,7 @@ function LocalGame() {
       homeRoster: serializedData.bookkeeperState.homeParticipants,
       awayRoster: serializedData.bookkeeperState.awayParticipants,
       lastModified: new Date(),
-      status: (bk.activePoint === null && bk.homePlayers === null && bk.getMementosCount() > 0 && bk.activeGame.getPointCount() > 0) ? 'completed' : 'in-progress',
+      status: newStatus, 
     };
 
     try {
