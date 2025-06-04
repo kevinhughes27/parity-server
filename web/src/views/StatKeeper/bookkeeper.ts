@@ -15,7 +15,7 @@ export class Bookkeeper {
     public awayTeam: Team;
     public week: number;
 
-    private activeGame: GameModel;
+    private activeGame: GameModel = new GameModel(); // Initialize to satisfy TS2564
     private mementos: InternalMemento[];
 
     // Volatile state - needs to be serialized/deserialized
@@ -105,8 +105,8 @@ export class Bookkeeper {
                         this.firstActor = mData.savedFirstActor;
                     };
                     break;
-                case MementoType.RecordDrop: // Or UndoTurnover
-                case MementoType.RecordThrowAway: // Or UndoTurnover
+                case MementoType.RecordDrop:
+                case MementoType.RecordThrowAway: // Restored this case
                 case MementoType.UndoTurnover:
                     applyFn = () => {
                         this.activePoint!.removeLastEvent();
@@ -310,7 +310,7 @@ export class Bookkeeper {
     public recordThrowAway(): void {
         if (!this.activePoint || !this.firstActor) return;
 
-        this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway));
+        this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway)); // Changed back to RecordThrowAway
         this.changePossession();
         this.activePoint.addEvent({ type: EventType.THROWAWAY, firstActor: this.firstActor!, secondActor: null, timestamp: new Date().toISOString() });
         this.firstActor = null;
@@ -370,7 +370,7 @@ export class Bookkeeper {
             type: MementoType.RecordPoint,
             data: mementoData,
             apply: () => {
-                if (mementoData.wasHomePossession) { // Changed mData to mementoData
+                if (mementoData.wasHomePossession) {
                     this.homeScore--;
                 } else {
                     this.awayScore--;
@@ -380,10 +380,10 @@ export class Bookkeeper {
                     this.activePoint = undonePoint;
                     this.activePoint.removeLastEvent();
                 }
-                this.homePlayers = mementoData.savedHomePlayers; // Changed mData to mementoData
-                this.awayPlayers = mementoData.savedAwayPlayers; // Changed mData to mementoData
-                this.firstActor = mementoData.savedFirstActor; // Changed mData to mementoData
-                this.homePossession = mementoData.wasHomePossession; // Changed mData to mementoData
+                this.homePlayers = mementoData.savedHomePlayers;
+                this.awayPlayers = mementoData.savedAwayPlayers;
+                this.firstActor = mementoData.savedFirstActor;
+                this.homePossession = mementoData.wasHomePossession;
                 // Participant undo is not handled here, same as Java
             }
         });

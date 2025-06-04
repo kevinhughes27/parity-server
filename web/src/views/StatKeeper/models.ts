@@ -23,9 +23,10 @@ export enum MementoType {
     UndoTurnover,
     RecordFirstActor,
     RecordPull,
-    RecordPass, // Added for completeness, though generic might cover it
-    RecordDrop, // Added for completeness
-    RecordD,    // Added for completeness
+    RecordPass,
+    RecordDrop,
+    RecordThrowAway, // Added this missing type
+    RecordD,
     RecordCatchD,
     RecordPoint,
     RecordHalf,
