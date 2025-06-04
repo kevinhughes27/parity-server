@@ -25,7 +25,7 @@ export enum MementoType {
   RecordPull,
   RecordPass,
   RecordDrop,
-  RecordThrowAway, // Added this missing type
+  RecordThrowAway,
   RecordD,
   RecordCatchD,
   RecordPoint,
