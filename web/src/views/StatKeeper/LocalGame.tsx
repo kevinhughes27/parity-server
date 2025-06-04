@@ -99,6 +99,8 @@ function LocalGame() {
         setCurrentView('selectLines');
       } else {
         // If loading into an active point, it's like resuming.
+        // Or, if activePoint is null but players are set (e.g. after undoing to line selection)
+        // or if prepareNewPointAfterScore has run.
         setIsResumingPointMode(true); 
         setLastPlayedLine(null); // Not flipping players
         setCurrentView('recordStats');
@@ -196,7 +198,7 @@ function LocalGame() {
     if (!bookkeeperInstance) return;
 
     // Special handling for recordPoint to capture players before state changes
-    if (action.toString().includes('bk.recordPoint()')) { // A bit hacky, better to pass an identifier
+    if (action.name === 'bound recordPoint' || action.toString().includes('bk.recordPoint()')) { 
         setLastPlayedLine({
             home: [...(bookkeeperInstance.homePlayers || [])],
             away: [...(bookkeeperInstance.awayPlayers || [])],
@@ -224,41 +226,45 @@ function LocalGame() {
     // Determine next view
     if (newBkInstance.activePoint === null && (newBkInstance.homePlayers === null || newBkInstance.awayPlayers === null)) {
       // This means a point was just scored, or game just started and lines not set, or undone to this state.
-      // If not already set by recordPoint specific logic, ensure isResumingPointMode is false.
       if (!action.toString().includes('bk.recordPoint()')) {
-          setIsResumingPointMode(false); // Default to not resuming if we land here from other actions (like undo)
-          setLastPlayedLine(null); // Clear last played line if not coming from a score
+          setIsResumingPointMode(false); 
+          setLastPlayedLine(null); 
       }
       setCurrentView('selectLines');
     } else if (newBkInstance.activePoint !== null || (newBkInstance.homePlayers !== null && newBkInstance.awayPlayers !== null)) {
-      // Active point exists, or lines are set but point hasn't started (e.g. after selecting lines)
-      // This is a scenario for RecordStats. If we came from SelectLines, isResumingPointMode should be true.
       setCurrentView('recordStats');
     } else {
        setCurrentView('selectLines'); 
     }
   };
   
-  const handleLinesSelected = () => { // Called from SelectLines
+  const handleLinesSelected = async () => { 
     if (bookkeeperInstance && bookkeeperInstance.homePlayers && bookkeeperInstance.awayPlayers) {
-        // isResumingPointMode should have been set correctly before this by how we entered SelectLines
+        const firstPointOfGameOrHalf = bookkeeperInstance.activeGame.getPointCount() === bookkeeperInstance.pointsAtHalf;
+        
+        // If activePoint is null (e.g., after a score and line selection, or undo to this state)
+        // and it's not the first point of the game/half, prepare the new point.
+        if (bookkeeperInstance.activePoint === null && !firstPointOfGameOrHalf) {
+            await handlePerformBookkeeperAction(bk => {
+                bk.prepareNewPointAfterScore();
+            }, { skipViewChange: true, skipSave: false }); // Save this intermediate state
+        }
         setCurrentView('recordStats');
     } else {
         console.warn("Lines selected but bookkeeper player lines are not set.");
-        setIsResumingPointMode(false); // Fallback
+        setIsResumingPointMode(false); 
         setLastPlayedLine(null);
         setCurrentView('selectLines');
     }
   };
 
-  const handleChangeLine = () => { // Called from RecordStats "Change Line"
+  const handleChangeLine = () => { 
     setIsResumingPointMode(true);
-    setLastPlayedLine(null); // Not flipping players, just re-selecting current
+    setLastPlayedLine(null); 
     setCurrentView('selectLines');
   };
 
-  const handlePointScored = () => { // Called from RecordStats after point is recorded by handlePerformBookkeeperAction
-    // lastPlayedLine and isResumingPointMode are set within handlePerformBookkeeperAction for recordPoint
+  const handlePointScored = () => { 
     setCurrentView('selectLines'); 
   };
 
@@ -328,7 +334,7 @@ function LocalGame() {
           bookkeeper={bookkeeperInstance}
           onPerformAction={handlePerformBookkeeperAction}
           onPointScored={handlePointScored}
-          onChangeLine={handleChangeLine} // Use the new handler
+          onChangeLine={handleChangeLine} 
         />
       )}
     </div>
