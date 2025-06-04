@@ -102,20 +102,16 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   const btnDropEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   const btnThrowAwayEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   
-  // D/CatchD logic: enabled if a defensive player (on the team that does *not* have possession, or if disc is loose) is selected as firstActor
-  // AND the game state allows for a defensive play.
-  const canMakeDefensivePlay = currentGameState === GameState.FirstD || 
-                               currentGameState === GameState.SecondD || 
-                               currentGameState === GameState.WhoPickedUpDisc; // Disc is loose or just turned over
-
-  // A D or Catch D is made by a player on the team that just gained possession or if disc is loose.
-  // firstActor must be set to the player making the D.
-  const isDefensivePlayerSelected = bookkeeper.firstActor !== null && 
-                                   ((bookkeeper.homePossession && awayPlayersOnLine.includes(bookkeeper.firstActor)) || 
-                                    (!bookkeeper.homePossession && homePlayersOnLine.includes(bookkeeper.firstActor)));
-
-  const btnDEnabled = bookkeeper.firstActor !== null && canMakeDefensivePlay && isDefensivePlayerSelected;
-  const btnCatchDEnabled = bookkeeper.firstActor !== null && canMakeDefensivePlay && isDefensivePlayerSelected;
+  // D/CatchD logic:
+  // Enabled if a player (firstActor) is selected AND
+  // the game state indicates that this player (who is on the current possessing team)
+  // could have just made a defensive play that led to this possession.
+  // GameState.FirstD: Occurs after a throwaway by the *other* team. firstActor is now the player on new offense.
+  // GameState.SecondD: Occurs after a drop by the *other* team. firstActor is now the player on new offense.
+  const btnDEnabled = bookkeeper.firstActor !== null &&
+                      (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
+  const btnCatchDEnabled = bookkeeper.firstActor !== null &&
+                           (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
   
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
 
