@@ -272,6 +272,9 @@ export class Bookkeeper {
     this.awayPlayers = [...activeAwayPlayers];
   }
 
+  // is this a bad abstraction? what if we had record pointStart and pickUp as separate events
+  // that would make undo simpler right?
+  // but is it worth doing? and maybe we can't fix all of them so it doesn't simplify anything in the greater scheme
   public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
     const mementoData = {
       savedFirstActor: this.firstActor,
