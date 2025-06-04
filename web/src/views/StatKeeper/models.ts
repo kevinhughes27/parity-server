@@ -72,11 +72,16 @@ export class PointModel {
     return this.events.length;
   }
 
-  getLastEventType(): EventType | null {
+  getLastEvent(): Event | null {
     if (this.events.length === 0) {
       return null;
     }
-    return this.events[this.events.length - 1].type;
+    return this.events[this.events.length - 1];
+  }
+
+  getLastEventType(): EventType | null {
+    const lastEvent = this.getLastEvent();
+    return lastEvent ? lastEvent.type : null;
   }
 
   removeLastEvent(): Event | undefined {
