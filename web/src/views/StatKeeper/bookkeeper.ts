@@ -38,19 +38,21 @@ export class Bookkeeper {
   private homeParticipants: Set<string>;
   private awayParticipants: Set<string>;
 
+  // I still think we need to streamline this constructor and persistence logic.
+  // the responsibilities between this and the db.ts overlap in a new way in the typescript version
+  // lets see how the UI integration changes things and revisit later.
   constructor(
     league: League,
     week: number,
     homeTeam: Team,
     awayTeam: Team,
-    initialData: SerializedGameData // Always require SerializedGameData
+    initialData: SerializedGameData
   ) {
     this.league = league;
     this.week = week;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
 
-    // Initialize collections before hydrate attempts to use or fill them
     this.mementos = [];
     this.homeParticipants = new Set<string>();
     this.awayParticipants = new Set<string>();
@@ -87,16 +89,16 @@ export class Bookkeeper {
         return this.createRecordPullMemento(mData as { savedFirstActor: string | null });
       case MementoType.RecordPass:
       case MementoType.RecordD:
-      case MementoType.GenericUndoLastEvent: // Handle old generic type
+      case MementoType.GenericUndoLastEvent:
         return this.createUndoLastEventStyleMemento(
-          sm.type, // Preserve original type for debugging if needed
+          sm.type,
           mData as { savedFirstActor: string | null }
         );
       case MementoType.RecordDrop:
       case MementoType.RecordThrowAway:
-      case MementoType.UndoTurnover: // Handle old generic type
+      case MementoType.UndoTurnover:
         return this.createTurnoverStyleMemento(
-          sm.type, // Preserve original type
+          sm.type,
           mData as { savedFirstActor: string | null }
         );
       case MementoType.RecordCatchD:
@@ -114,7 +116,7 @@ export class Bookkeeper {
         return this.createRecordHalfMemento(mData as { previousPointsAtHalf: number });
       default:
         console.warn('Unknown memento type during hydration:', sm.type);
-        return { type: sm.type, data: mData, apply: () => {} }; // No-op for unknown types
+        return { type: sm.type, data: mData, apply: () => {} };
     }
   }
 
@@ -324,7 +326,6 @@ export class Bookkeeper {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    // firstActor does not change for a catch D
   }
 
   public recordPoint(): void {
@@ -402,7 +403,7 @@ export class Bookkeeper {
           this.activePoint.getEventCount() === 0
         ) {
           this.activePoint = null;
-          this.changePossession(); // Revert possession change from startPoint
+          this.changePossession();
         }
       },
     };
@@ -456,15 +457,6 @@ export class Bookkeeper {
       data: data,
       apply: () => {
         this.activePoint!.removeLastEvent();
-        // firstActor is not restored from mData as it wasn't changed by the forward action,
-        // but if it were, it would be: this.firstActor = data.savedFirstActor;
-        // However, the forward action *does* use this.firstActor, so it should be part of the state
-        // to ensure consistency if the logic ever changes. The current forward action doesn't modify it.
-        // For safety and consistency with other mementos, let's assume it could be restored if needed.
-        // The original code commented out restoring it. If firstActor is truly unchanged by the
-        // forward action and is not part of the memento's responsibility, then it doesn't need to be in data.
-        // Given it's in data, restoring it makes the undo more robust to future changes.
-        // Let's stick to the original logic for now: firstActor is NOT restored from mData here.
       },
     };
   }
@@ -486,14 +478,13 @@ export class Bookkeeper {
         }
         const undonePoint = this.activeGame.popPoint();
         if (undonePoint) {
-          this.activePoint = undonePoint; // This point already contains the POINT event
-          this.activePoint.removeLastEvent(); // Remove the POINT event itself
+          this.activePoint = undonePoint;
+          this.activePoint.removeLastEvent();
         }
         this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
         this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
         this.firstActor = data.savedFirstActor;
         this.homePossession = data.wasHomePossession;
-        // Participant undo is not handled here, consistent with original logic
       },
     };
   }
