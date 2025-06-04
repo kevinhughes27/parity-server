@@ -23,7 +23,7 @@ export class Bookkeeper {
   public awayTeam: Team;
   public week: number;
 
-  private activeGame: GameModel = new GameModel(); // Initialize to satisfy TS2564
+  private activeGame: GameModel = new GameModel();
   private mementos: InternalMemento[];
 
   // Volatile state - needs to be serialized/deserialized
@@ -38,42 +38,24 @@ export class Bookkeeper {
   private homeParticipants: Set<string>;
   private awayParticipants: Set<string>;
 
-  // I think we can simplify this and always require all fields to be passed in to create a Bookkeeper.
-  // The true init can pass empty states
   constructor(
     league: League,
     week: number,
     homeTeam: Team,
     awayTeam: Team,
-    initialData?: SerializedGameData | GameModel
+    initialData: SerializedGameData // Always require SerializedGameData
   ) {
     this.league = league;
     this.week = week;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
 
+    // Initialize collections before hydrate attempts to use or fill them
     this.mementos = [];
     this.homeParticipants = new Set<string>();
     this.awayParticipants = new Set<string>();
 
-    if (initialData && 'bookkeeperState' in initialData) {
-      // Check if it's SerializedGameData
-      this.hydrate(initialData);
-    } else if (initialData instanceof GameModel) {
-      this.activeGame = initialData;
-      // Initialize fresh for a GameModel passed in (e.g. new game)
-      this.homeScore = 0;
-      this.awayScore = 0;
-      this.pointsAtHalf = 0;
-      this.homePossession = true; // Default for a new game
-    } else {
-      this.activeGame = new GameModel();
-      // Default fresh initialization
-      this.homeScore = 0;
-      this.awayScore = 0;
-      this.pointsAtHalf = 0;
-      this.homePossession = true;
-    }
+    this.hydrate(initialData);
   }
 
   private hydrate(data: SerializedGameData): void {
@@ -91,99 +73,49 @@ export class Bookkeeper {
     this.homeParticipants = new Set(state.homeParticipants);
     this.awayParticipants = new Set(state.awayParticipants);
 
-    // Reconstruct mementos with their apply functions
-    // I am not sure how I feel about this.
-    // could it be extracted to a shared function that we always use to create the memento?
-    // or would that abstract undo too far away and make it harder to understand
-    // or in a different direction - should we pull these into little classes instead? would that be better
-    this.mementos = data.mementos.map(sm => {
-      const mData = sm.data; // mData here is sm.data from the serialized memento
-      let applyFn: () => void;
+    this.mementos = data.mementos.map(sm => this.recreateInternalMemento(sm));
+  }
 
-      switch (sm.type) {
-        case MementoType.RecordFirstActor:
-          applyFn = () => {
-            this.firstActor = mData.savedFirstActor;
-            if (
-              mData.pointJustCreated &&
-              this.activePoint &&
-              this.activePoint.getEventCount() === 0
-            ) {
-              this.activePoint = null;
-              this.changePossession();
-            }
-          };
-          break;
-        case MementoType.RecordPull:
-          applyFn = () => {
-            this.activePoint!.swapOffenseAndDefense();
-            this.changePossession();
-            this.activePoint!.removeLastEvent();
-            this.firstActor = mData.savedFirstActor;
-          };
-          break;
-        case MementoType.RecordPass: // Or GenericUndoLastEvent
-        case MementoType.GenericUndoLastEvent:
-          applyFn = () => {
-            this.activePoint!.removeLastEvent();
-            this.firstActor = mData.savedFirstActor;
-          };
-          break;
-        case MementoType.RecordDrop:
-        case MementoType.RecordThrowAway:
-        case MementoType.UndoTurnover:
-          applyFn = () => {
-            this.activePoint!.removeLastEvent();
-            this.firstActor = mData.savedFirstActor;
-            this.changePossession();
-          };
-          break;
-        case MementoType.RecordD:
-          applyFn = () => {
-            // Same as GenericUndoLastEvent
-            this.activePoint!.removeLastEvent();
-            this.firstActor = mData.savedFirstActor;
-          };
-          break;
-        case MementoType.RecordCatchD:
-          applyFn = () => {
-            this.activePoint!.removeLastEvent();
-            // firstActor is not restored from mData as it wasn't changed by forward action
-            // but if it was part of mData, it would be: this.firstActor = mData.savedFirstActor;
-          };
-          break;
-        case MementoType.RecordPoint:
-          applyFn = () => {
-            if (mData.wasHomePossession) {
-              this.homeScore--;
-            } else {
-              this.awayScore--;
-            }
-            const undonePoint = this.activeGame.popPoint();
-            if (undonePoint) {
-              this.activePoint = undonePoint;
-              this.activePoint.removeLastEvent();
-            }
-            this.homePlayers = mData.savedHomePlayers ? [...mData.savedHomePlayers] : null;
-            this.awayPlayers = mData.savedAwayPlayers ? [...mData.savedAwayPlayers] : null;
-            this.firstActor = mData.savedFirstActor;
-            this.homePossession = mData.wasHomePossession;
-            // Note: Participant undo is complex and usually not fully implemented in simple mementos
-            // For this, we'd need to track exact additions per point.
-            // Current Java version also doesn't undo participant list changes.
-          };
-          break;
-        case MementoType.RecordHalf:
-          applyFn = () => {
-            this.pointsAtHalf = mData.previousPointsAtHalf;
-          };
-          break;
-        default:
-          console.warn('Unknown memento type during hydration:', sm.type);
-          applyFn = () => {}; // No-op for unknown types
-      }
-      return { type: sm.type, data: mData, apply: applyFn };
-    });
+  private recreateInternalMemento(sm: SerializedMemento): InternalMemento {
+    const mData = sm.data;
+    switch (sm.type) {
+      case MementoType.RecordFirstActor:
+        return this.createRecordFirstActorMemento(
+          mData as { savedFirstActor: string | null; pointJustCreated: boolean }
+        );
+      case MementoType.RecordPull:
+        return this.createRecordPullMemento(mData as { savedFirstActor: string | null });
+      case MementoType.RecordPass:
+      case MementoType.RecordD:
+      case MementoType.GenericUndoLastEvent: // Handle old generic type
+        return this.createUndoLastEventStyleMemento(
+          sm.type, // Preserve original type for debugging if needed
+          mData as { savedFirstActor: string | null }
+        );
+      case MementoType.RecordDrop:
+      case MementoType.RecordThrowAway:
+      case MementoType.UndoTurnover: // Handle old generic type
+        return this.createTurnoverStyleMemento(
+          sm.type, // Preserve original type
+          mData as { savedFirstActor: string | null }
+        );
+      case MementoType.RecordCatchD:
+        return this.createRecordCatchDMemento(mData as { savedFirstActor: string | null });
+      case MementoType.RecordPoint:
+        return this.createRecordPointMemento(
+          mData as {
+            savedFirstActor: string | null;
+            savedHomePlayers: string[] | null;
+            savedAwayPlayers: string[] | null;
+            wasHomePossession: boolean;
+          }
+        );
+      case MementoType.RecordHalf:
+        return this.createRecordHalfMemento(mData as { previousPointsAtHalf: number });
+      default:
+        console.warn('Unknown memento type during hydration:', sm.type);
+        return { type: sm.type, data: mData, apply: () => {} }; // No-op for unknown types
+    }
   }
 
   public serialize(): SerializedGameData {
@@ -272,30 +204,12 @@ export class Bookkeeper {
     this.awayPlayers = [...activeAwayPlayers];
   }
 
-  // is this a bad abstraction? what if we had record pointStart and pickUp as separate events
-  // that would make undo simpler right?
-  // but is it worth doing? and maybe we can't fix all of them so it doesn't simplify anything in the greater scheme
   public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
     const mementoData = {
       savedFirstActor: this.firstActor,
       pointJustCreated: this.activePoint === null,
     };
-
-    this.mementos.push({
-      type: MementoType.RecordFirstActor,
-      data: mementoData,
-      apply: () => {
-        this.firstActor = mementoData.savedFirstActor;
-        if (
-          mementoData.pointJustCreated &&
-          this.activePoint &&
-          this.activePoint.getEventCount() === 0
-        ) {
-          this.activePoint = null;
-          this.changePossession(); // Revert possession change from startPoint
-        }
-      },
-    });
+    this.mementos.push(this.createRecordFirstActorMemento(mementoData));
 
     if (this.activePoint === null) {
       this.startPoint(isHomeTeamPlayer);
@@ -303,12 +217,8 @@ export class Bookkeeper {
     this.firstActor = player;
   }
 
-  private startPoint(isHomeTeamPullingOrReceiving: boolean): void {
-    // Possession is for the team that will be on OFfense.
-    // If home team is pulling, away team has possession.
-    // If home team is receiving (e.g. away pulled), home team has possession.
-    // The parameter `isHomeTeamPullingOrReceiving` should reflect who is starting with the disc on O.
-    this.homePossession = isHomeTeamPullingOrReceiving;
+  private startPoint(isHomeTeamStartingWithDisc: boolean): void {
+    this.homePossession = isHomeTeamStartingWithDisc;
 
     let offensePlayers: string[];
     let defensePlayers: string[];
@@ -327,16 +237,7 @@ export class Bookkeeper {
     if (!this.activePoint || !this.firstActor) return;
 
     const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push({
-      type: MementoType.RecordPull,
-      data: mementoData,
-      apply: () => {
-        this.activePoint!.swapOffenseAndDefense();
-        this.changePossession();
-        this.activePoint!.removeLastEvent();
-        this.firstActor = mementoData.savedFirstActor;
-      },
-    });
+    this.mementos.push(this.createRecordPullMemento(mementoData));
 
     this.activePoint.swapOffenseAndDefense();
     this.changePossession();
@@ -352,7 +253,9 @@ export class Bookkeeper {
   public recordThrowAway(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway));
+    const mementoData = { savedFirstActor: this.firstActor };
+    this.mementos.push(this.createTurnoverStyleMemento(MementoType.RecordThrowAway, mementoData));
+
     this.changePossession();
     this.activePoint.addEvent({
       type: EventType.THROWAWAY,
@@ -366,7 +269,9 @@ export class Bookkeeper {
   public recordPass(receiver: string): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.mementos.push(this.createGenericUndoLastEventMemento(MementoType.RecordPass));
+    const mementoData = { savedFirstActor: this.firstActor };
+    this.mementos.push(this.createUndoLastEventStyleMemento(MementoType.RecordPass, mementoData));
+
     this.activePoint.addEvent({
       type: EventType.PASS,
       firstActor: this.firstActor!,
@@ -379,7 +284,9 @@ export class Bookkeeper {
   public recordDrop(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordDrop));
+    const mementoData = { savedFirstActor: this.firstActor };
+    this.mementos.push(this.createTurnoverStyleMemento(MementoType.RecordDrop, mementoData));
+
     this.changePossession();
     this.activePoint.addEvent({
       type: EventType.DROP,
@@ -393,7 +300,9 @@ export class Bookkeeper {
   public recordD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.mementos.push(this.createGenericUndoLastEventMemento(MementoType.RecordD));
+    const mementoData = { savedFirstActor: this.firstActor };
+    this.mementos.push(this.createUndoLastEventStyleMemento(MementoType.RecordD, mementoData));
+
     this.activePoint.addEvent({
       type: EventType.DEFENSE,
       firstActor: this.firstActor!,
@@ -406,55 +315,28 @@ export class Bookkeeper {
   public recordCatchD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor }; // firstActor does not change
-    this.mementos.push({
-      type: MementoType.RecordCatchD,
-      data: mementoData,
-      apply: () => {
-        this.activePoint!.removeLastEvent();
-        // this.firstActor = mementoData.savedFirstActor; // Not strictly needed as it wasn't changed
-      },
-    });
+    const mementoData = { savedFirstActor: this.firstActor };
+    this.mementos.push(this.createRecordCatchDMemento(mementoData));
+
     this.activePoint.addEvent({
       type: EventType.DEFENSE,
       firstActor: this.firstActor!,
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
+    // firstActor does not change for a catch D
   }
 
   public recordPoint(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    // could abstract a createPointMemento
     const mementoData = {
       savedFirstActor: this.firstActor,
       savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
       savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
       wasHomePossession: this.homePossession,
     };
-
-    this.mementos.push({
-      type: MementoType.RecordPoint,
-      data: mementoData,
-      apply: () => {
-        if (mementoData.wasHomePossession) {
-          this.homeScore--;
-        } else {
-          this.awayScore--;
-        }
-        const undonePoint = this.activeGame.popPoint();
-        if (undonePoint) {
-          this.activePoint = undonePoint;
-          this.activePoint.removeLastEvent();
-        }
-        this.homePlayers = mementoData.savedHomePlayers;
-        this.awayPlayers = mementoData.savedAwayPlayers;
-        this.firstActor = mementoData.savedFirstActor;
-        this.homePossession = mementoData.wasHomePossession;
-        // Participant undo is not handled here, same as Java
-      },
-    });
+    this.mementos.push(this.createRecordPointMemento(mementoData));
 
     this.activePoint.addEvent({
       type: EventType.POINT,
@@ -477,26 +359,22 @@ export class Bookkeeper {
     this.homePlayers = null;
     this.awayPlayers = null;
     this.firstActor = null;
-    // homePossession for next point is determined by who starts with disc
   }
 
   public recordHalf(): void {
-    if (this.pointsAtHalf > 0) return;
+    if (this.pointsAtHalf > 0) return; // Half already recorded
 
     const mementoData = { previousPointsAtHalf: this.pointsAtHalf };
-    this.mementos.push({
-      type: MementoType.RecordHalf,
-      data: mementoData,
-      apply: () => {
-        this.pointsAtHalf = mementoData.previousPointsAtHalf;
-      },
-    });
+    this.mementos.push(this.createRecordHalfMemento(mementoData));
     this.pointsAtHalf = this.activeGame.getPointCount();
   }
 
   public undo(): void {
     if (this.mementos.length > 0) {
-      this.mementos.pop()!.apply();
+      const lastMemento = this.mementos.pop();
+      if (lastMemento) {
+        lastMemento.apply();
+      }
     }
   }
 
@@ -508,27 +386,124 @@ export class Bookkeeper {
     }
   }
 
-  private createGenericUndoLastEventMemento(type: MementoType): InternalMemento {
-    const mementoData = { savedFirstActor: this.firstActor };
+  // Memento Creation Helpers
+  private createRecordFirstActorMemento(data: {
+    savedFirstActor: string | null;
+    pointJustCreated: boolean;
+  }): InternalMemento {
     return {
-      type: type, // More specific type
-      data: mementoData,
+      type: MementoType.RecordFirstActor,
+      data: data,
       apply: () => {
-        this.activePoint!.removeLastEvent();
-        this.firstActor = mementoData.savedFirstActor;
+        this.firstActor = data.savedFirstActor;
+        if (
+          data.pointJustCreated &&
+          this.activePoint &&
+          this.activePoint.getEventCount() === 0
+        ) {
+          this.activePoint = null;
+          this.changePossession(); // Revert possession change from startPoint
+        }
       },
     };
   }
 
-  private createUndoTurnoverMemento(type: MementoType): InternalMemento {
-    const mementoData = { savedFirstActor: this.firstActor };
+  private createRecordPullMemento(data: { savedFirstActor: string | null }): InternalMemento {
     return {
-      type: type, // More specific type
-      data: mementoData,
+      type: MementoType.RecordPull,
+      data: data,
+      apply: () => {
+        this.activePoint!.swapOffenseAndDefense();
+        this.changePossession();
+        this.activePoint!.removeLastEvent();
+        this.firstActor = data.savedFirstActor;
+      },
+    };
+  }
+
+  private createUndoLastEventStyleMemento(
+    type: MementoType,
+    data: { savedFirstActor: string | null }
+  ): InternalMemento {
+    return {
+      type: type,
+      data: data,
       apply: () => {
         this.activePoint!.removeLastEvent();
-        this.firstActor = mementoData.savedFirstActor;
+        this.firstActor = data.savedFirstActor;
+      },
+    };
+  }
+
+  private createTurnoverStyleMemento(
+    type: MementoType,
+    data: { savedFirstActor: string | null }
+  ): InternalMemento {
+    return {
+      type: type,
+      data: data,
+      apply: () => {
+        this.activePoint!.removeLastEvent();
+        this.firstActor = data.savedFirstActor;
         this.changePossession();
+      },
+    };
+  }
+
+  private createRecordCatchDMemento(data: { savedFirstActor: string | null }): InternalMemento {
+    return {
+      type: MementoType.RecordCatchD,
+      data: data,
+      apply: () => {
+        this.activePoint!.removeLastEvent();
+        // firstActor is not restored from mData as it wasn't changed by the forward action,
+        // but if it were, it would be: this.firstActor = data.savedFirstActor;
+        // However, the forward action *does* use this.firstActor, so it should be part of the state
+        // to ensure consistency if the logic ever changes. The current forward action doesn't modify it.
+        // For safety and consistency with other mementos, let's assume it could be restored if needed.
+        // The original code commented out restoring it. If firstActor is truly unchanged by the
+        // forward action and is not part of the memento's responsibility, then it doesn't need to be in data.
+        // Given it's in data, restoring it makes the undo more robust to future changes.
+        // Let's stick to the original logic for now: firstActor is NOT restored from mData here.
+      },
+    };
+  }
+
+  private createRecordPointMemento(data: {
+    savedFirstActor: string | null;
+    savedHomePlayers: string[] | null;
+    savedAwayPlayers: string[] | null;
+    wasHomePossession: boolean;
+  }): InternalMemento {
+    return {
+      type: MementoType.RecordPoint,
+      data: data,
+      apply: () => {
+        if (data.wasHomePossession) {
+          this.homeScore--;
+        } else {
+          this.awayScore--;
+        }
+        const undonePoint = this.activeGame.popPoint();
+        if (undonePoint) {
+          this.activePoint = undonePoint; // This point already contains the POINT event
+          this.activePoint.removeLastEvent(); // Remove the POINT event itself
+        }
+        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
+        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
+        this.firstActor = data.savedFirstActor;
+        this.homePossession = data.wasHomePossession;
+        // Participant undo is not handled here, consistent with original logic
+      },
+    };
+  }
+
+  private createRecordHalfMemento(data: { previousPointsAtHalf: number }): InternalMemento {
+    return {
+      type: MementoType.RecordHalf,
+      data: data,
+      apply: () => {
+        this.pointsAtHalf = data.previousPointsAtHalf;
       },
     };
   }
