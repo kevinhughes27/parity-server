@@ -19,54 +19,19 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
-  // Determine if this is the first point of the game or after half
-  // to implement the "flip players" logic from Android.
-  // `bookkeeper.activePoint` is null after a point, or at game start.
-  // `bookkeeper.homePlayers` is null after a point, or at game start.
-  // `bookkeeper.pointsAtHalf` indicates if half has been recorded.
-  // `bookkeeper.activeGame.getPointCount()` gives total points played.
   const isFirstPointOfGameOrHalf = bookkeeper.activePoint === null &&
                                   (bookkeeper.activeGame.getPointCount() === 0 ||
-                                   bookkeeper.activeGame.getPointCount() === bookkeeper['pointsAtHalf']); // Access private for logic
+                                   bookkeeper.activeGame.getPointCount() === bookkeeper['pointsAtHalf']); 
 
   useEffect(() => {
-    // Pre-selection logic (flipping players)
-    // This runs when the component mounts or when bookkeeper instance might change relevant state.
-    if (bookkeeper.activePoint === null) { // Indicates start of a new point selection phase
-        const lastHomePlayers = bookkeeper.homeParticipants; // Players who have participated
-        const lastAwayPlayers = bookkeeper.awayParticipants;
-
-        // If it's not the very first point of the game (i.e., some players have participated)
-        // and we are in a state to flip (e.g. after a point, not after an undo that lands here)
-        // The original Java code flips players based on who was *not* in the last line.
-        // Bookkeeper's home/awayParticipants track everyone who has played in the game.
-        // For a true flip, we'd need the immediate previous line.
-        // A simpler approach for now: if players were just cleared (after a point),
-        // we could try to select those who were *not* in `bookkeeper.homeParticipants` / `awayParticipants`
-        // if that set represented the *last line only*. But it represents *all* participants.
-
-        // Let's use the logic from Android's SelectPlayers#selectPlayers(Boolean flipPlayers)
-        // which uses the full roster and removes players who were just on.
-        // This requires knowing who was *just* on. Bookkeeper clears `homePlayers`/`awayPlayers` after a point.
-        // We'd need to pass the previous line's players or enhance Bookkeeper.
-
-        // For now, let's implement a simpler pre-selection:
-        // If it's after a point (indicated by bookkeeper.homePlayers being null, but game has points)
-        // and not the very start of the game.
-        if (bookkeeper.activeGame.getPointCount() > 0 && bookkeeper.homePlayers === null) {
-            // This implies a point was just scored.
-            // The Android app pre-selects players NOT in the previous line.
-            // We don't have the immediate previous line easily here after Bookkeeper clears it.
-            // So, for now, we will not auto-flip and require manual selection.
-            // setSelectedHomePlayers([]);
-            // setSelectedAwayPlayers([]);
-        } else {
-            // Game start or other scenarios, no pre-selection or default to empty.
-            // setSelectedHomePlayers([]);
-            // setSelectedAwayPlayers([]);
-        }
+    if (bookkeeper.activePoint === null) { 
+        // Logic for pre-selecting players (flipping) can be added here if desired.
+        // For now, it defaults to manual selection.
+        // Example: if a point was just scored, you might want to pre-select players
+        // who were *not* in the last line. This requires more state from Bookkeeper
+        // or passing previous line info.
     }
-  }, [bookkeeper]); // Re-run if bookkeeper instance changes significantly
+  }, [bookkeeper]); 
 
 
   const leagueLineSize = bookkeeper.league.lineSize;
@@ -77,6 +42,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   ) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
+    const teamName = isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name;
 
     if (currentSelection.includes(playerName)) {
       setter(currentSelection.filter(p => p !== playerName));
@@ -84,7 +50,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       if (currentSelection.length < leagueLineSize) {
         setter([...currentSelection, playerName]);
       } else {
-        alert(`Cannot select more than ${leagueLineSize} players for ${isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}.`);
+        alert(`Cannot select more than ${leagueLineSize} players for ${teamName}.`);
       }
     }
   };
@@ -117,31 +83,33 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   };
 
   const handleUndoLastAction = async () => {
-    // This undo should take us back into the previous point's event recording
-    // or undo the line selection if that was the last action.
-    // LocalGame's handlePerformBookkeeperAction will manage view changes.
     await onPerformAction(bk => bk.undo());
   };
 
 
-  const renderPlayerList = (players: string[], isHomeTeam: boolean) => {
+  const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
+    const isSelected = selectedList.includes(playerName);
+
     return (
-      <ul style={{ listStyleType: 'none', padding: 0, maxHeight: '300px', overflowY: 'auto' }}>
-        {players.map(player => (
-          <li key={player} style={{ marginBottom: '5px' }}>
-            <label style={{ display: 'block', padding: '5px', cursor: 'pointer', backgroundColor: selectedList.includes(player) ? '#e0f7fa' : 'transparent' }}>
-              <input
-                type="checkbox"
-                checked={selectedList.includes(player)}
-                onChange={() => togglePlayerSelection(player, isHomeTeam)}
-                style={{ marginRight: '8px' }}
-              />
-              {player}
-            </label>
-          </li>
-        ))}
-      </ul>
+      <button
+        key={playerName}
+        onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
+        style={{
+          display: 'block',
+          width: '100%',
+          padding: '10px',
+          marginBottom: '5px',
+          textAlign: 'left',
+          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0', // Light blue for selected, light grey for default
+          border: isSelected ? '1px solid #007bff' : '1px solid #ccc',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          fontWeight: isSelected ? 'bold' : 'normal',
+        }}
+      >
+        {playerName}
+      </button>
     );
   };
 
@@ -149,31 +117,33 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     <div>
       <h3>Select Lines for Next Point</h3>
       <p>Required players per team: {leagueLineSize}</p>
-      <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '20px', flexWrap: 'wrap' }}>
-        <div style={{minWidth: '250px', margin: '10px'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'nowrap' }}>
+        <div style={{ flex: 1, marginRight: '10px' }}>
           <h4>{bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})</h4>
-          {renderPlayerList(homeRoster, true)}
+          {homeRoster.map(player => renderPlayerButton(player, true))}
         </div>
-        <div style={{minWidth: '250px', margin: '10px'}}>
+        <div style={{ flex: 1, marginLeft: '10px' }}>
           <h4>{bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})</h4>
-          {renderPlayerList(awayRoster, false)}
+          {awayRoster.map(player => renderPlayerButton(player, false))}
         </div>
       </div>
-      <button
-        onClick={handleDone}
-        disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
-        style={{ padding: '10px 15px', fontSize: '16px', marginRight: '10px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
-      >
-        Confirm Lines & Start Point
-      </button>
-      {bookkeeper.getMementosCount() > 0 && ( // Only show if there's something to undo
-         <button
-            onClick={handleUndoLastAction}
-            style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
-          >
-           Undo Last Action
-         </button>
-      )}
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={handleDone}
+          disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
+          style={{ padding: '10px 15px', fontSize: '16px', marginRight: '10px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
+        >
+          Confirm Lines & Start Point
+        </button>
+        {bookkeeper.getMementosCount() > 0 && (
+           <button
+              onClick={handleUndoLastAction}
+              style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
+            >
+             Undo Last Action
+           </button>
+        )}
+      </div>
       <p style={{marginTop: '15px', fontSize: '0.9em', color: 'gray'}}>
         {isFirstPointOfGameOrHalf ? "Select players for the first point." : "Select players for the next point."}
         <br/>

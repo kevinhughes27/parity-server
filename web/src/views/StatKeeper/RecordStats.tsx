@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameState } from './models'; // EventType not needed directly for button logic
+import { GameState } from './models'; 
 import { Bookkeeper } from './bookkeeper'
 
 interface RecordStatsProps {
@@ -16,16 +16,14 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   onChangeLine,
 }) => {
   const currentGameState = bookkeeper.gameState();
-  const homePlayers = bookkeeper.homePlayers || []; // Current players on the line
-  const awayPlayers = bookkeeper.awayPlayers || []; // Current players on the line
-  const playByPlay = bookkeeper.undoHistory(); // Events for the current activePoint
+  const homePlayersOnLine = bookkeeper.homePlayers || []; 
+  const awayPlayersOnLine = bookkeeper.awayPlayers || []; 
+  const playByPlay = bookkeeper.undoHistory(); 
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
       await onPerformAction(bk => bk.recordPass(playerName));
     } else {
-      // Determine if the player is on the team that currently has possession
-      // This logic is simplified; Bookkeeper's recordFirstActor handles possession setting.
       await onPerformAction(bk => bk.recordFirstActor(playerName, isHomeTeamPlayer));
     }
   };
@@ -33,175 +31,159 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   const handleActionClick = async (actionFunc: (bk: Bookkeeper) => void) => {
     await onPerformAction(actionFunc);
   };
-
+  
   const handlePointClick = async () => {
-    // skipViewChange is true because LocalGame will handle view change via onPointScored callback
-    await onPerformAction(bk => bk.recordPoint(), { skipViewChange: true });
-    onPointScored(); // Notify LocalGame to change view
+    await onPerformAction(bk => bk.recordPoint(), { skipViewChange: true }); 
+    onPointScored(); 
   };
 
-  const renderPlayerButtons = (playersOnLine: string[], isHomeTeamLine: boolean) => {
-    // Determine if this team's player buttons should be generally enabled
-    let teamButtonsGenerallyEnabled = false;
-    if (currentGameState === GameState.Start || currentGameState === GameState.WhoPickedUpDisc) {
-        // If firstActor is null, any player on the team that *should* have possession can act.
-        // Bookkeeper.homePossession reflects who *will* have possession after firstActor is set.
-        // For Start/WhoPickedUpDisc, if firstActor is null, players on the team that *will* possess are active.
-        teamButtonsGenerallyEnabled = isHomeTeamLine === bookkeeper.homePossession;
-    } else if (bookkeeper.firstActor !== null) { // Disc is live with a player
-        teamButtonsGenerallyEnabled = isHomeTeamLine === bookkeeper.homePossession;
-    } else if (currentGameState === GameState.Pull) { // No player actions during pull setup
-        teamButtonsGenerallyEnabled = false;
+  const renderPlayerButton = (playerName: string, isHomeTeamLine: boolean) => {
+    let isDisabled = false;
+    let isActivePlayer = false; // Player currently has the disc
+    let isGenerallyEnabledForTeam = false; // Team currently has possession or can pick up
+
+    // Determine if this player is the one with the disc
+    if (bookkeeper.firstActor === playerName) {
+        isActivePlayer = true;
     }
 
+    // Determine general button enablement based on possession and game state
+    if (currentGameState === GameState.Start || currentGameState === GameState.WhoPickedUpDisc) {
+        isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
+    } else if (bookkeeper.firstActor !== null) { 
+        isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
+    } else if (currentGameState === GameState.Pull) {
+        isGenerallyEnabledForTeam = false; // No player actions during pull setup
+    } else {
+        // If no firstActor and not Start/WhoPickedUpDisc/Pull, typically means disc is loose after turnover
+        // Enable players on the team that *would* get possession
+        isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
+    }
+    
+    isDisabled = !isGenerallyEnabledForTeam;
 
-    return playersOnLine.map(player => {
-      let isDisabled = !teamButtonsGenerallyEnabled; // Base disable state
-
-      if (teamButtonsGenerallyEnabled) {
-        if (bookkeeper.firstActor === player && bookkeeper.shouldRecordNewPass()) {
-          // Player who has the disc cannot pass to themselves
-          isDisabled = true;
+    if (isGenerallyEnabledForTeam) {
+        if (bookkeeper.firstActor === playerName && bookkeeper.shouldRecordNewPass()) {
+            isDisabled = true; // Cannot pass to self
         }
-        if (bookkeeper.firstActor === null &&
-            (currentGameState !== GameState.Start && currentGameState !== GameState.WhoPickedUpDisc)) {
-          // If no one has the disc, and it's not a state where anyone can pick up (e.g. normal play after incomplete pass)
-          // then player buttons should be disabled until an action like D, Throwaway, etc. resolves possession.
-          // This case is tricky; usually an action button would be pressed first.
-          // For simplicity, if firstActor is null in Normal play, players are disabled.
-           if (currentGameState === GameState.Normal ||
-               currentGameState === GameState.FirstThrowQuebecVariant ||
-               currentGameState === GameState.FirstD ||
-               currentGameState === GameState.SecondD) {
-               // isDisabled = true; // This might be too restrictive. Let Bookkeeper logic handle invalid actions.
-           }
-        }
-      }
+    }
+    if (currentGameState === GameState.Pull) isDisabled = true;
 
-      // Specific state overrides
-      if (currentGameState === GameState.Pull) isDisabled = true; // All player buttons disabled when setting up for a pull
 
-      return (
+    const buttonStyle: React.CSSProperties = {
+        display: 'block',
+        width: '100%',
+        padding: '10px',
+        marginBottom: '5px',
+        textAlign: 'left',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+        cursor: isDisabled ? 'not-allowed' : 'pointer',
+        fontWeight: isActivePlayer ? 'bold' : 'normal',
+        backgroundColor: isDisabled ? '#e0e0e0' : (isActivePlayer ? '#a7d7f5' : '#f0f0f0'), // Light grey default, lighter blue if active player
+        color: isDisabled ? '#999' : '#000',
+    };
+    
+    return (
         <button
-          key={player}
+          key={playerName}
           onClick={() => handlePlayerClick(player, isHomeTeamLine)}
           disabled={isDisabled}
-          style={{ margin: '5px', padding: '8px 12px', backgroundColor: isDisabled ? '#e0e0e0' : (isHomeTeamLine ? '#bbdefb' : '#ffcdd2') }}
+          style={buttonStyle}
         >
           {player}
         </button>
       );
-    });
   };
 
-  // Button enabled states based on Java's updateUI logic & Bookkeeper state
+  // Button enabled states
   const btnPullEnabled = currentGameState === GameState.Pull && bookkeeper.firstActor !== null;
   const btnPointEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   const btnDropEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
-
-  // D and CatchD are actions by the player who just made the "throwaway" or "drop" effectively.
-  // In the Java code, D/CatchD are enabled in FirstD state, implying the *other* team's player (who caused turnover) is 'firstActor'.
-  // The current TS Bookkeeper sets firstActor to null after throwaway/drop.
-  // Let's adjust: D/CatchD are actions of the *defensive* player.
-  // So, they should be enabled when the disc is turned over (e.g., after ThrowAway/Drop, firstActor is null, possession changed).
-  // The player who gets the D will be selected *after* pressing D.
-  // This means D/CatchD are more like "meta" actions that then require a player selection.
-  // For now, let's follow the pattern: if an action requires a firstActor, it's enabled if firstActor is set.
-  // The Java logic for D/CatchD seems to imply firstActor is the one who *committed* the turnover.
-  // Let's assume for D/CatchD, firstActor is the DEFENSIVE player making the play.
-  // This means after a throwaway, firstActor is null. User clicks D, then clicks player.
-  // So, D/CatchD should be enabled when firstActor is NULL and it's a turnover situation.
-  const btnDEnabled = (currentGameState === GameState.FirstD || currentGameState === GameState.WhoPickedUpDisc) && bookkeeper.firstActor === null && !bookkeeper.homePossession === (bookkeeper.activePoint?.offensePlayers === bookkeeper.homePlayers);
-  const btnCatchDEnabled = (currentGameState === GameState.FirstD || currentGameState === GameState.WhoPickedUpDisc) && bookkeeper.firstActor === null && !bookkeeper.homePossession === (bookkeeper.activePoint?.offensePlayers === bookkeeper.homePlayers);
-  // Simplified: D/CatchD enabled if it's a turnover state and no one has picked up yet.
-  // The original Java logic: btnD.setEnabled(state == GameState.FirstD); btnCatchD.setEnabled(state == GameState.FirstD);
-  // This implies firstActor (thrower) is still set. Our TS bookkeeper clears firstActor on turnover.
-  // Let's adapt: D/CatchD are for the player *making* the block.
-  // So, they are enabled when the *other* team just had the disc.
-  // And firstActor should be the player making the D.
-  // This means D/CatchD are like Pass - first select player, then action.
-  // The current model is: Action -> Player or Player -> Action.
-  // Let's stick to Java: D/CatchD are enabled when firstActor (thrower) is set and state is FirstD.
-  // This means bookkeeper.recordD() uses the current firstActor as the one who *got* D'd. This is unusual.
-  // The Java code: bookkeeper.recordD() uses bookkeeper.firstActor (who is the thrower). This is wrong.
-  // A "D" is by a defensive player.
-  // Let's assume D/CatchD are pressed, then a player is selected.
-  // So, these buttons are enabled if the state allows a D.
-  const canMakeDefensivePlay = currentGameState === GameState.FirstD || // After a throwaway by other team
-                               currentGameState === GameState.SecondD || // After a drop by other team
-                               currentGameState === GameState.WhoPickedUpDisc; // Disc is loose
-
   const btnThrowAwayEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
+  
+  // D/CatchD logic: enabled if a defensive player (on the team that does *not* have possession, or if disc is loose) is selected as firstActor
+  // AND the game state allows for a defensive play.
+  const canMakeDefensivePlay = currentGameState === GameState.FirstD || 
+                               currentGameState === GameState.SecondD || 
+                               currentGameState === GameState.WhoPickedUpDisc; // Disc is loose or just turned over
+
+  // A D or Catch D is made by a player on the team that just gained possession or if disc is loose.
+  // firstActor must be set to the player making the D.
+  const isDefensivePlayerSelected = bookkeeper.firstActor !== null && 
+                                   ((bookkeeper.homePossession && awayPlayersOnLine.includes(bookkeeper.firstActor)) || 
+                                    (!bookkeeper.homePossession && homePlayersOnLine.includes(bookkeeper.firstActor)));
+
+  const btnDEnabled = bookkeeper.firstActor !== null && canMakeDefensivePlay && isDefensivePlayerSelected;
+  const btnCatchDEnabled = bookkeeper.firstActor !== null && canMakeDefensivePlay && isDefensivePlayerSelected;
+  
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
 
-
   return (
-    <div>
-      <h3>Record Events</h3>
-      <div style={{ marginBottom: '15px', padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '4px' }}>
-        <strong>Current Possession:</strong> {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
+    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' /* Adjust as needed for header/footer */ }}>
+      <div style={{ padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '4px', textAlign: 'center', marginBottom: '10px' }}>
+        <strong>Possession:</strong> {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
         {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
         <br/>
         <strong>Game State:</strong> {GameState[currentGameState]}
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '20px', flexWrap: 'wrap' }}>
-        <div style={{minWidth: '280px', margin: '10px', padding: '10px', border: '1px solid #eee', borderRadius: '4px'}}>
+      <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden' }}>
+        {/* Home Team Players */}
+        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
           <h4>{bookkeeper.homeTeam.name} (Line)</h4>
-          {renderPlayerButtons(homePlayers, true)}
+          {homePlayersOnLine.map(player => renderPlayerButton(player, true))}
         </div>
-        <div style={{minWidth: '280px', margin: '10px', padding: '10px', border: '1px solid #eee', borderRadius: '4px'}}>
+
+        {/* Play by Play */}
+        <div style={{ flex: 1.5, padding: '0 10px', borderLeft: '1px solid #ccc', borderRight: '1px solid #ccc', overflowY: 'auto' }}>
+          <h4>Play by Play (Current Point)</h4>
+          {playByPlay.length === 0 ? (
+            <p>No events yet for this point.</p>
+          ) : (
+            <ul style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>
+              {playByPlay.map((eventStr, index) => (
+                <li key={index}>{eventStr}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* Away Team Players */}
+        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
           <h4>{bookkeeper.awayTeam.name} (Line)</h4>
-          {renderPlayerButtons(awayPlayers, false)}
+          {awayPlayersOnLine.map(player => renderPlayerButton(player, false))}
         </div>
       </div>
 
-      <div style={{ marginBottom: '20px', borderTop: '1px solid #ccc', paddingTop: '15px' }}>
-        <h4>Actions</h4>
+      {/* Action Buttons Row */}
+      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', padding: '10px 0', borderTop: '1px solid #ccc', marginTop: '10px' }}>
         <button onClick={() => handleActionClick(bk => bk.recordPull())} disabled={!btnPullEnabled} style={{ margin: '5px', padding: '10px' }}>Pull</button>
         <button onClick={handlePointClick} disabled={!btnPointEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: 'lightgreen' }}>Point!</button>
         <button onClick={() => handleActionClick(bk => bk.recordDrop())} disabled={!btnDropEnabled} style={{ margin: '5px', padding: '10px' }}>Drop</button>
         <button onClick={() => handleActionClick(bk => bk.recordThrowAway())} disabled={!btnThrowAwayEnabled} style={{ margin: '5px', padding: '10px' }}>Throwaway</button>
-        <p style={{fontSize: '0.9em', margin: '5px'}}>For D / Catch D: Select the defensive player first, then click D / Catch D.</p>
-        <button
+        <button 
             onClick={() => {
-                if (!bookkeeper.firstActor) { alert("Select the player who got the D."); return; }
+                if (!bookkeeper.firstActor) { alert("Select the player who got the D first."); return; }
                 handleActionClick(bk => bk.recordD());
-            }}
-            disabled={!(bookkeeper.firstActor && canMakeDefensivePlay && (bookkeeper.homePossession ? awayPlayers.includes(bookkeeper.firstActor) : homePlayers.includes(bookkeeper.firstActor)))}
+            }} 
+            disabled={!btnDEnabled}
             style={{ margin: '5px', padding: '10px' }}
         >
             D (Block)
         </button>
-        <button
+        <button 
             onClick={() => {
-                if (!bookkeeper.firstActor) { alert("Select the player who got the Catch D."); return; }
+                if (!bookkeeper.firstActor) { alert("Select the player who got the Catch D first."); return; }
                 handleActionClick(bk => bk.recordCatchD());
-            }}
-            disabled={!(bookkeeper.firstActor && canMakeDefensivePlay && (bookkeeper.homePossession ? awayPlayers.includes(bookkeeper.firstActor) : homePlayers.includes(bookkeeper.firstActor)))}
+            }} 
+            disabled={!btnCatchDEnabled}
             style={{ margin: '5px', padding: '10px' }}
         >
             Catch D
         </button>
-
-      </div>
-
-      <div style={{ marginBottom: '20px' }}>
-        <button onClick={() => handleActionClick(bk => bk.undo())} disabled={!btnUndoEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: '#ff9800', color: 'white', border:'none', borderRadius:'4px' }}>Undo Last Event</button>
-        <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>Change Line / Mode</button>
-      </div>
-
-      <div style={{ marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '10px' }}>
-        <h4>Play by Play (Current Point)</h4>
-        {playByPlay.length === 0 ? (
-          <p>No events yet for this point.</p>
-        ) : (
-          <ul style={{ listStyleType: 'decimal', paddingLeft: '20px', maxHeight: '200px', overflowY: 'auto' }}>
-            {playByPlay.map((eventStr, index) => (
-              <li key={index}>{eventStr}</li>
-            ))}
-          </ul>
-        )}
+        <button onClick={() => handleActionClick(bk => bk.undo())} disabled={!btnUndoEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: '#ff9800', color: 'white', border:'none', borderRadius:'4px' }}>Undo</button>
+        <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>Change Line</button>
       </div>
     </div>
   );
