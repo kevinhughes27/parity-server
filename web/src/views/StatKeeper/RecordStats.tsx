@@ -1,12 +1,15 @@
 import React from 'react';
 import { GameState } from './models'; 
 import { Bookkeeper } from './bookkeeper'
+import { StoredGame } from './db'; // Import StoredGame for status type
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
   onPerformAction: (action: (bk: Bookkeeper) => void, options?: { skipViewChange?: boolean, skipSave?: boolean }) => Promise<void>;
   onPointScored: () => void;
   onChangeLine: () => void;
+  onSubmitGame: () => Promise<void>; // New prop for submitting game
+  gameStatus: StoredGame['status']; // New prop for game status
 }
 
 const RecordStats: React.FC<RecordStatsProps> = ({
@@ -14,6 +17,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   onPerformAction,
   onPointScored,
   onChangeLine,
+  onSubmitGame, // Destructure new prop
+  gameStatus,   // Destructure new prop
 }) => {
   const currentGameState = bookkeeper.gameState();
   const homePlayersOnLine = bookkeeper.homePlayers || []; 
@@ -39,31 +44,22 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
   const renderPlayerButton = (playerName: string, isHomeTeamLine: boolean) => {
     let isDisabled = false;
-    let isActivePlayer = false; // Player currently has the disc
-    let isGenerallyEnabledForTeam = false; // Team currently has possession or can pick up
+    let isActivePlayer = false; 
+    let isGenerallyEnabledForTeam = false; 
 
-    // Determine if this player is the one with the disc
     if (bookkeeper.firstActor === playerName) {
         isActivePlayer = true;
     }
 
-    // Determine general button enablement based on possession and game state
     if (currentGameState === GameState.Start) {
-        // For Start state, players on BOTH teams should be enabled.
-        // User selects player who picks up disc (if receiving) or who is pulling (if first point of game/half).
         isGenerallyEnabledForTeam = true; 
     } else if (currentGameState === GameState.WhoPickedUpDisc) {
-        // WhoPickedUpDisc: only team with possession can select a player
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
     } else if (currentGameState === GameState.Pull) {
-        // Pull state: firstActor (the puller) is already set. No other player actions.
         isGenerallyEnabledForTeam = false;
     } else if (bookkeeper.firstActor !== null) { 
-        // Normal play with an active player: only that player's team can act
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
     } else {
-        // No firstActor, and not Start/WhoPickedUpDisc/Pull.
-        // Typically means disc is loose after turnover. Enable players on the team that *would* get possession.
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
     }
     
@@ -71,11 +67,9 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
     if (isGenerallyEnabledForTeam) {
         if (bookkeeper.firstActor === playerName && bookkeeper.shouldRecordNewPass()) {
-            // Player who has the disc cannot pass to themselves
             isDisabled = true; 
         }
     }
-
 
     const buttonStyle: React.CSSProperties = {
         display: 'block',
@@ -87,7 +81,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         borderRadius: '4px',
         cursor: isDisabled ? 'not-allowed' : 'pointer',
         fontWeight: isActivePlayer ? 'bold' : 'normal',
-        backgroundColor: isDisabled ? '#e0e0e0' : (isActivePlayer ? '#a7d7f5' : '#f0f0f0'), // Light grey default, lighter blue if active player
+        backgroundColor: isDisabled ? '#e0e0e0' : (isActivePlayer ? '#a7d7f5' : '#f0f0f0'),
         color: isDisabled ? '#999' : '#000',
     };
     
@@ -103,7 +97,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
       );
   };
 
-  // Button enabled states
   const btnPullEnabled = currentGameState === GameState.Pull && bookkeeper.firstActor !== null;
   const btnPointEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   const btnDropEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
@@ -115,9 +108,10 @@ const RecordStats: React.FC<RecordStatsProps> = ({
                            (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
   
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
+  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' /* Adjust as needed for header/footer */ }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' }}>
       <div style={{ padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '4px', textAlign: 'center', marginBottom: '10px' }}>
         <strong>Possession:</strong> {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
         {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
@@ -126,13 +120,11 @@ const RecordStats: React.FC<RecordStatsProps> = ({
       </div>
 
       <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden' }}>
-        {/* Home Team Players */}
         <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
           <h4>{bookkeeper.homeTeam.name} (Line)</h4>
           {homePlayersOnLine.map(player => renderPlayerButton(player, true))}
         </div>
 
-        {/* Play by Play */}
         <div style={{ flex: 1.5, padding: '0 10px', borderLeft: '1px solid #ccc', borderRight: '1px solid #ccc', overflowY: 'auto' }}>
           <h4>Play by Play (Current Point)</h4>
           {playByPlay.length === 0 ? (
@@ -146,14 +138,12 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           )}
         </div>
 
-        {/* Away Team Players */}
         <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
           <h4>{bookkeeper.awayTeam.name} (Line)</h4>
           {awayPlayersOnLine.map(player => renderPlayerButton(player, false))}
         </div>
       </div>
 
-      {/* Action Buttons Row */}
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', padding: '10px 0', borderTop: '1px solid #ccc', marginTop: '10px' }}>
         <button onClick={() => handleActionClick(bk => bk.recordPull())} disabled={!btnPullEnabled} style={{ margin: '5px', padding: '10px' }}>Pull</button>
         <button onClick={handlePointClick} disabled={!btnPointEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: 'lightgreen' }}>Point!</button>
@@ -181,6 +171,21 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         </button>
         <button onClick={() => handleActionClick(bk => bk.undo())} disabled={!btnUndoEnabled} style={{ margin: '5px', padding: '10px', backgroundColor: '#ff9800', color: 'white', border:'none', borderRadius:'4px' }}>Undo</button>
         <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>Change Line</button>
+        <button
+            onClick={onSubmitGame}
+            disabled={!canSubmitGame}
+            style={{ 
+                margin: '5px', 
+                padding: '10px', 
+                backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
+                color: 'white', 
+                border: 'none', 
+                borderRadius: '4px' 
+            }}
+            title={canSubmitGame ? "Submit game to server" : `Game status: ${gameStatus}`}
+        >
+            Submit Game
+        </button>
       </div>
     </div>
   );

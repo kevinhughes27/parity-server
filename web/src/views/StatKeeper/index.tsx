@@ -83,9 +83,11 @@ function StatKeeper() {
                     color:
                       game.status === 'in-progress'
                         ? 'green'
-                        : game.status === 'completed' || game.status === 'submitted'
+                        : game.status === 'completed' || game.status === 'submitted' || game.status === 'uploaded'
                           ? 'blue'
-                          : 'black',
+                          : game.status === 'sync-error' 
+                            ? 'red'
+                            : 'black',
                   }}
                 >
                   {game.status}
@@ -102,16 +104,26 @@ function StatKeeper() {
               <div style={{ marginTop: '10px' }}>
                 {(game.status === 'new' ||
                   game.status === 'in-progress' ||
-                  game.status === 'paused') &&
+                  game.status === 'paused' ||
+                  game.status === 'sync-error') && // Allow resuming if sync-error to try again
                   game.localId && (
                     <Link to={`/stat_keeper/game/${game.localId}`}>
                       <button
                         style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}
                       >
-                        Resume Game
+                        {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
                       </button>
                     </Link>
                   )}
+                {(game.status === 'submitted' || game.status === 'uploaded' || game.status === 'completed') && game.localId && (
+                     <Link to={`/stat_keeper/game/${game.localId}`}>
+                        <button
+                            style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px', backgroundColor: '#eee' }}
+                        >
+                            View Game
+                        </button>
+                     </Link>
+                )}
                 <button
                   onClick={() => handleDeleteGame(game.localId)}
                   style={{
