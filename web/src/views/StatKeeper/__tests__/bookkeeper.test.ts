@@ -8,7 +8,7 @@ const PLAYER1 = "Kevin Hughes";
 const PLAYER2 = "Allan Godding";
 const PLAYER3 = "Patrick Kenzie";
 
-const mockLeague: League = { name: "OCUA", id: 101 };
+const mockLeague: League = { name: "OCUA", id: "101" };
 const mockHomeTeam: Team = { name: "Team A", id: 1 };
 const mockAwayTeam: Team = { name: "Team B", id: 2 };
 const mockWeek = 1;
