@@ -7,6 +7,8 @@ interface SelectLinesProps {
   awayRoster: string[]; // Full team roster
   onPerformAction: (action: (bk: Bookkeeper) => void, options?: { skipViewChange?: boolean, skipSave?: boolean }) => Promise<void>;
   onLinesSelected: () => void;
+  isResumingPointMode: boolean;
+  lastPlayedLine: { home: string[]; away: string[] } | null;
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({
@@ -15,26 +17,30 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   awayRoster,
   onPerformAction,
   onLinesSelected,
+  isResumingPointMode,
+  lastPlayedLine,
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
-  const isFirstPointOfGameOrHalf = bookkeeper.activePoint === null &&
-                                  (bookkeeper.activeGame.getPointCount() === 0 ||
-                                   bookkeeper.activeGame.getPointCount() === bookkeeper['pointsAtHalf']); 
+  const leagueLineSize = bookkeeper.league.lineSize;
 
   useEffect(() => {
-    if (bookkeeper.activePoint === null) { 
-        // Logic for pre-selecting players (flipping) can be added here if desired.
-        // For now, it defaults to manual selection.
-        // Example: if a point was just scored, you might want to pre-select players
-        // who were *not* in the last line. This requires more state from Bookkeeper
-        // or passing previous line info.
+    if (isResumingPointMode) {
+      // Pre-select players who are currently on the line in Bookkeeper
+      setSelectedHomePlayers(bookkeeper.homePlayers || []);
+      setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
+    } else if (lastPlayedLine) {
+      // Pre-select players who were NOT on the line that just finished
+      setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
+      setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
+    } else {
+      // Default: Start of game or after an undo that clears lines, no pre-selection
+      setSelectedHomePlayers([]);
+      setSelectedAwayPlayers([]);
     }
-  }, [bookkeeper]); 
+  }, [isResumingPointMode, lastPlayedLine, bookkeeper.homePlayers, bookkeeper.awayPlayers, homeRoster, awayRoster]);
 
-
-  const leagueLineSize = bookkeeper.league.lineSize;
 
   const togglePlayerSelection = (
     playerName: string,
@@ -47,9 +53,17 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     if (currentSelection.includes(playerName)) {
       setter(currentSelection.filter(p => p !== playerName));
     } else {
+      // Allow selecting more than lineSize if isResumingPointMode is false (i.e. selecting for a new point)
+      // but still cap at lineSize if isResumingPointMode is true (just confirming/adjusting current line)
+      // However, the original Android app allows overriding line size with confirmation.
+      // For simplicity, let's always check against lineSize for adding.
       if (currentSelection.length < leagueLineSize) {
         setter([...currentSelection, playerName]);
       } else {
+        // If already at line size, only allow if we are not in "resuming point" mode,
+        // as the user might be intentionally selecting more for a new point (with override).
+        // But the confirm dialog handles the override. So, this alert is for strict enforcement.
+        // Let's keep the alert for now.
         alert(`Cannot select more than ${leagueLineSize} players for ${teamName}.`);
       }
     }
@@ -84,6 +98,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   const handleUndoLastAction = async () => {
     await onPerformAction(bk => bk.undo());
+    // After undo, the view might change, or pre-selection logic might need to re-run.
+    // LocalGame's handlePerformBookkeeperAction will manage the view.
+    // The useEffect in this component will re-evaluate pre-selection based on new bookkeeper state.
   };
 
 
@@ -101,7 +118,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           padding: '10px',
           marginBottom: '5px',
           textAlign: 'left',
-          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0', // Light blue for selected, light grey for default
+          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0', 
           border: isSelected ? '1px solid #007bff' : '1px solid #ccc',
           borderRadius: '4px',
           cursor: 'pointer',
@@ -113,9 +130,16 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     );
   };
 
+  const buttonText = isResumingPointMode ? "Resume Point" : "Confirm Lines & Start Point";
+  const helpText = isResumingPointMode 
+    ? "Adjust the current line if needed, then click 'Resume Point'."
+    : (lastPlayedLine 
+        ? "Players not on the previous line are pre-selected. Adjust and confirm." 
+        : "Select players for the first point.");
+
   return (
     <div>
-      <h3>Select Lines for Next Point</h3>
+      <h3>{isResumingPointMode ? "Adjust Current Line" : "Select Lines for Next Point"}</h3>
       <p>Required players per team: {leagueLineSize}</p>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'nowrap' }}>
         <div style={{ flex: 1, marginRight: '10px' }}>
@@ -133,7 +157,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
           style={{ padding: '10px 15px', fontSize: '16px', marginRight: '10px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
         >
-          Confirm Lines & Start Point
+          {buttonText}
         </button>
         {bookkeeper.getMementosCount() > 0 && (
            <button
@@ -145,7 +169,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         )}
       </div>
       <p style={{marginTop: '15px', fontSize: '0.9em', color: 'gray'}}>
-        {isFirstPointOfGameOrHalf ? "Select players for the first point." : "Select players for the next point."}
+        {helpText}
         <br/>
         If a point was just scored, 'Undo Last Action' will revert the score and take you back to editing the last event of that point.
       </p>
