@@ -87,11 +87,11 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     return (
         <button
           key={playerName}
-          onClick={() => handlePlayerClick(player, isHomeTeamLine)}
+          onClick={() => handlePlayerClick(playerName, isHomeTeamLine)}
           disabled={isDisabled}
           style={buttonStyle}
         >
-          {player}
+          {playerName}
         </button>
       );
   };
