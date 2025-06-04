@@ -4,7 +4,6 @@ import { getLeagueName, Point as ApiPoint } from '../../api';
 import { useLocalGame, useTeams } from './hooks';
 import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
 import {
-  Bookkeeper,
   League as ModelLeague,
   Team as ModelTeam,
   SerializedGameData,
@@ -13,7 +12,7 @@ import {
   BookkeeperVolatileState,
   // SerializedMemento, // Not directly used here
 } from './models';
-
+import { Bookkeeper } from './bookkeeper';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 
@@ -58,7 +57,7 @@ function LocalGame() {
         events: apiPoint.events.map(mapApiPointEventToModelEvent),
       });
     });
-    
+
     // Transform activePoint from bookkeeperState if it exists
     let activePointForHydration: PointModel | null = null;
     if (gameData.bookkeeperState?.activePoint) {
@@ -151,7 +150,7 @@ function LocalGame() {
       defensePlayers: [...modelPointJson.defensePlayers],
       events: modelPointJson.events.map(mapModelEventToApiPointEvent), // modelPointJson.events are ModelEvent[]
     }));
-    
+
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
         ...serializedData.bookkeeperState,
         // activePoint in serializedData.bookkeeperState is already in JSON format with enum EventTypes
@@ -212,7 +211,7 @@ function LocalGame() {
        setCurrentView('selectLines');
     }
   };
-  
+
   const handleLinesSelected = () => {
     if (bookkeeperInstance && bookkeeperInstance.homePlayers && bookkeeperInstance.awayPlayers) {
         setCurrentView('recordStats');
