@@ -156,92 +156,75 @@ export class Bookkeeper {
     const firstPointOfGameOrHalf = this.activeGame.getPointCount() === this.pointsAtHalf;
 
     if (this.activePoint === null) {
-      // If activePoint is null, it means we are either at the very start of a game (before lines),
-      // or a point just ended and we are in SelectLines view, or we are waiting for lines to be set.
-      // If homePlayers are set, it implies lines have been selected.
-      // The logic in LocalGame.tsx (handleLinesSelected) aims to create activePoint via prepareNewPointAfterScore
-      // before RecordStats is shown, for non-first points.
-      // So, if activePoint is null here, it's typically GameState.Start (e.g. very beginning, or first point of half).
       return GameState.Start;
     }
 
-    // ActivePoint exists from here
     const eventCount = this.activePoint.getEventCount();
     const lastEventType = this.activePoint.getLastEventType();
 
-    if (eventCount === 0) { // New point, no events yet in activePoint
-      if (this.firstActor === null) {
-        // activePoint exists, 0 events, firstActor is null.
-        // This means lines are set, possession is determined, waiting for player to initiate action.
-        // This is the state after prepareNewPointAfterScore() or if undo leads here.
+    if (eventCount === 0) { // New point, no events yet
+      if (this.firstActor === null) { // Waiting for player to initiate
         if (firstPointOfGameOrHalf) {
-          // This should ideally be a state like "SelectPuller" if we want to be very specific.
-          // However, GameState.Start is used by Java to enable all players to select the puller.
-          // If recordFirstActor then sets firstActor, next state is Pull.
-          return GameState.Start; // Allows selection of puller from either team.
+          return GameState.Start; // Select puller
         } else {
-          // Not the first point of game/half. Receiving team needs to pick up.
-          return GameState.WhoPickedUpDisc;
+          return GameState.WhoPickedUpDisc; // Receiving team picks up
         }
-      } else {
-        // firstActor is set, 0 events. Player has disc, ready for first throw or pull.
-        if (firstPointOfGameOrHalf) { // Player selected is the puller
-          return GameState.Pull;
-        } else { // Player selected picked up the disc
-          return GameState.FirstThrowQuebecVariant;
+      } else { // Player selected, ready for first action
+        if (firstPointOfGameOrHalf) {
+          return GameState.Pull; // Puller selected, ready to pull
+        } else {
+          return GameState.FirstThrowQuebecVariant; // Player picked up, ready for first throw
         }
       }
     }
 
-    // Point has events
+    // Point has events from here
+
     if (lastEventType === EventType.PULL) {
-      if (this.firstActor === null) return GameState.WhoPickedUpDisc; // Disc is in the air or landed, waiting for pickup
-      return GameState.FirstThrowQuebecVariant; // Quebec: puller can be the first thrower if they pick up
+      if (this.firstActor === null) return GameState.WhoPickedUpDisc; // Pull in air/landed
+      // If firstActor is set after a PULL, it means they picked up the pull.
+      return GameState.FirstThrowQuebecVariant;
     }
 
-    // Standard game flow states based on last event and firstActor
-    // These states assume firstActor is relevant for the *next* action
-    if (this.firstActor === null) { // Disc is loose or action needed by current possession team
+    // Logic for states when firstActor is set vs. null, after the initial events (pull/pickup)
+    if (this.firstActor === null) { // Disc is loose or action just completed that made it loose
       if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP || lastEventType === EventType.DEFENSE) {
-        // After a turnover, the new offense needs to pick up the disc.
+        // After a turnover (Throwaway, Drop) or a D (where disc is loose, not a catch D),
+        // the new offense needs to pick up the disc.
         return GameState.WhoPickedUpDisc;
       }
-      // If firstActor is null for other reasons (e.g. after pull), already handled.
-      // This path might be hit if an undo operation results in firstActor being null with existing events.
-      // Consider if other specific states are needed here.
+      // Fallback for other cases where firstActor might be null with events.
+      // This could happen if an undo operation leads to an unexpected state.
+      console.warn("GameState: firstActor is null with events, but not a standard turnover/D/pull state. Defaulting to WhoPickedUpDisc.");
+      return GameState.WhoPickedUpDisc;
     } else { // firstActor is set (player has the disc)
-      // These states describe what the player with the disc *can* do, or what just happened to them.
-      // The original Java logic for FirstD/SecondD seems to be about the *type* of throw available
-      // or if a D just happened.
-      if (lastEventType === EventType.THROWAWAY) {
-        // This state seems to imply that firstActor is now on defense, which is counter-intuitive
-        // as recordThrowAway sets firstActor to null.
-        // This might be intended for *after* the other team picks up and firstActor is set for them.
-        // For now, let's assume if firstActor is set, it's normal play unless a D just occurred.
-        // The original conditions for FirstD/SecondD were:
-        // GameState.FirstD: THROW AWAY and firstActor != null (Java) -> this means firstActor is on D
-        // GameState.SecondD: DEFENSE and firstActor != null (Java) -> firstActor is on O after D
-        // GameState.SecondD: DROP and firstActor != null (Java) -> firstActor is on O after drop by other team
-        // This part of the logic might need review based on how FirstD/SecondD are used in UI.
-        // For simplicity, if firstActor has the disc, it's generally Normal.
-        // Specific states like FirstD/SecondD might be better determined by event history + firstActor.
-        // Let's stick to a simpler model for now if it covers UI needs.
-        // If a D just happened (last event) AND this firstActor (who has disc) was the one who got the D:
-        if (this.activePoint.getLastEvent()?.firstActor === this.firstActor &&
-            (lastEventType === EventType.DEFENSE /*|| lastEventType === EventType.CALLAHAN_TODO */) ) {
-             return GameState.SecondD; // Player who got D now has disc (e.g. Callahan or quick pickup)
-        }
+
+      // Case 1: Disc was turned over (Throwaway/Drop by OTHER team), and THIS player (firstActor) picked it up.
+      // This is the "First D" opportunity. Player can throw, or make an immediate D.
+      if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP) {
+        return GameState.FirstD;
+      }
+
+      // Case 2: A D just occurred (last event was DEFENSE), and THIS player (firstActor) now has the disc.
+      // This could be because they made a catch D, or picked up after a block by self/teammate.
+      // This is the "Second D" opportunity. Player can throw, or make another D.
+      if (lastEventType === EventType.DEFENSE) {
+        return GameState.SecondD;
+      }
+      
+      // Case 3: Player has the disc after a pass.
+      // (Picking up a pull is handled by eventCount=0 or lastEvent=PULL logic above).
+      // This is normal ongoing play.
+      if (lastEventType === EventType.PASS) {
         return GameState.Normal;
       }
-      // If last event was a D, and firstActor is now set (meaning player picked up after D):
-      if (lastEventType === EventType.DEFENSE) return GameState.SecondD; // Or FirstThrowQuebecVariant if it's their first throw
-      // If last event was a Drop (by other team), and firstActor is now set:
-      if (lastEventType === EventType.DROP) return GameState.SecondD; // Similar to after a D
 
+      // Fallback for any other combination where firstActor is set and point has events.
+      // This might include scenarios like the very first throw of a point if not covered by FirstThrowQuebecVariant,
+      // or if an undo leads to an unusual state.
+      console.warn(`GameState: Unhandled state with firstActor=${this.firstActor}, lastEvent=${lastEventType}. Defaulting to Normal.`);
       return GameState.Normal;
     }
-    // Fallback, should ideally be covered by above logic
-    return GameState.Normal;
   }
 
 
@@ -487,15 +470,7 @@ export class Bookkeeper {
           this.activePoint.getEventCount() === 0 // No events added yet by recordFirstActor itself
         ) {
           // This implies we are undoing the very first action that created this activePoint.
-          // We also need to revert possession if startPointAndSetPossession changed it.
-          // However, memento doesn't store previous possession.
-          // This part of memento might need to be smarter or rely on subsequent undos.
-          // For now, just nullify activePoint. Possession will be reset by next recordFirstActor.
           this.activePoint = null;
-          // Reverting possession change by startPointAndSetPossession is tricky here.
-          // The original Java code's memento for firstActor also didn't explicitly revert possession.
-          // It relied on the fact that if activePoint becomes null, the next call to recordFirstActor
-          // would call startPoint again, re-evaluating possession.
         }
       },
     };
@@ -544,21 +519,11 @@ export class Bookkeeper {
   }
 
   private createRecordCatchDMemento(data: { savedFirstActor: string | null }): InternalMemento {
-    // Undoing a Catch D means the player (firstActor) no longer has the disc from that D.
-    // The event is removed. firstActor reverts to who it was before this Catch D action.
-    // If this firstActor was null before (e.g. disc was loose), it becomes null.
-    // If this firstActor *was* the one who got the D, they remain firstActor but the D event is gone.
-    // The original Java code for undoing CatchD just removed the event.
-    // It implies firstActor was already set to the D-getter before CatchD was called.
-    // Let's assume recordCatchD is called when firstActor is already the D-getter.
     return {
       type: MementoType.RecordCatchD,
       data: data,
       apply: () => {
         this.activePoint!.removeLastEvent();
-        // firstActor remains who it was (the D-getter), but the D event is gone.
-        // If the intent was that firstActor becomes null (disc loose again), this needs change.
-        // Sticking to minimal change: firstActor was data.savedFirstActor *before* this action.
         this.firstActor = data.savedFirstActor;
       },
     };
@@ -595,8 +560,6 @@ export class Bookkeeper {
         this.firstActor = data.savedFirstActor;
         // Possession for the *current undone point* is restored
         this.homePossession = data.wasHomePossession;
-
-        // TODO: Revert participant list? More complex, usually not undone.
       },
     };
   }
