@@ -32,7 +32,7 @@ export class Bookkeeper {
   public homePossession: boolean = true;
   public homeScore: number = 0;
   public awayScore: number = 0;
-  private pointsAtHalf: number = 0;
+  public pointsAtHalf: number = 0; // Changed from private to public
   public homePlayers: string[] | null = null;
   public awayPlayers: string[] | null = null;
   private homeParticipants: Set<string>;
