@@ -1,6 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import { type Point } from '../../api'; // Point here is the API's Point, not PointModel
-import { type SerializedMemento, type BookkeeperVolatileState } from '../../../statkeeper_lib/models'; // Adjust path as needed
+import { type SerializedMemento, type BookkeeperVolatileState } from './models';
 
 // Define the structure of the game object to be stored in Dexie
 export interface StoredGame {
@@ -8,7 +8,7 @@ export interface StoredGame {
   serverId?: string;      // Game ID from the server, if uploaded. Optional.
 
   // Core game data, similar to api.ts Game interface
-  league_id: number;
+  league_id: string;
   week: number;
   homeTeam: string; // This is homeTeamName
   homeScore: number; // This will be derived from bookkeeperState.homeScore
