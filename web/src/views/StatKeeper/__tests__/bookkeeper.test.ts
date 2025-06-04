@@ -15,6 +15,7 @@ import { db, StoredGame } from '../db';
 const PLAYER1 = 'Kevin Hughes';
 const PLAYER2 = 'Allan Godding';
 const PLAYER3 = 'Patrick Kenzie';
+const PLAYER4 = 'Player 4';
 
 const mockLeague: League = { name: 'OCUA', id: '101' };
 const mockHomeTeam: Team = { name: 'Team A', id: 1 };
@@ -22,7 +23,7 @@ const mockAwayTeam: Team = { name: 'Team B', id: 2 };
 const mockWeek = 1;
 
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
-const awayLine = [PLAYER2, 'AP2', 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
+const awayLine = [PLAYER2, PLAYER4, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
 
 describe('Bookkeeper', () => {
   let bookkeeper: Bookkeeper;
@@ -63,11 +64,6 @@ describe('Bookkeeper', () => {
     expect(event.timestamp).toBeDefined();
     expect(typeof event.timestamp).toBe('string');
   }
-
-  // function recordPass() {
-  //   bookkeeper.recordFirstActor(PLAYER1, true);
-  //   bookkeeper.recordPass(PLAYER3);
-  // }
 
   test('testUndoRecordFirstActor', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts with disc
@@ -135,11 +131,12 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.homePossession).toBe(true);
   });
 
+  // Note - to record a D or Catch D we first need to record a throwaway
+
   test('testUndoD', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home has disc
     bookkeeper.recordThrowAway(); // Home throws away, Away should pick up
     bookkeeper.recordFirstActor(PLAYER2, false); // Away (PLAYER2) has disc
-
     bookkeeper.recordD(); // record d started
     bookkeeper.undo();
 
@@ -152,7 +149,6 @@ describe('Bookkeeper', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home has disc
     bookkeeper.recordThrowAway(); // Home throws away
     bookkeeper.recordFirstActor(PLAYER2, false); // Away (PLAYER2) picks up
-
     bookkeeper.recordCatchD(); // PLAYER2 (Away) catches the D
     bookkeeper.undo();
 
@@ -161,74 +157,98 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.firstActor).toBe(PLAYER2);
   });
 
-  test('testComplexScenario from Java test', () => {
-    // Re-setup for this specific scenario to match Java test's implied player movements
+  test('testComplexScenario', () => {
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, new GameModel());
-    // sad part is this might be true...
-    // we don't set the rosters in the java test so you could mix and match
-    const complexHomeLine = [PLAYER1, PLAYER3]; // As per Java test, P3 acts for Home then Away
-    const complexAwayLine = [PLAYER2, PLAYER3]; // P3 is also on away for receiving a pass
-    bookkeeper.recordActivePlayers(complexHomeLine, complexAwayLine);
+    bookkeeper.recordActivePlayers(homeLine, awayLine);
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.
     bookkeeper.recordFirstActor(PLAYER2, false);
+    expect(bookkeeper.homePossession).toBe(false);
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+
     //2. P2 (Away) pulls. Home possession. firstActor is null.
     bookkeeper.recordPull();
-    //3. P1 (Home) picks up.
+    expect(bookkeeper.homePossession).toBe(true)
+    expect(bookkeeper.firstActor).toBe(null);
+
+    //3. P1 (Home) picks up. firstActor is P1
     bookkeeper.recordFirstActor(PLAYER1, true);
+    expect(bookkeeper.firstActor).toBe(PLAYER1);
+
     //4. Undo P1 picks up. firstActor is null.
     bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBe(null);
+
     //5. P3 (Home) picks up instead. firstActor is P3.
     bookkeeper.recordFirstActor(PLAYER3, true);
-    //6. P3 (Home) passes to P2 (Home - this is PLAYER2 from Java test). firstActor is P2.
-    //   To match Java test, PLAYER2 needs to be on home line for this pass.
-    bookkeeper.recordActivePlayers([PLAYER1, PLAYER2, PLAYER3], complexAwayLine);
-    bookkeeper.recordPass(PLAYER2);
-    //7. P2 (Home) throws away. Away possession. firstActor is null.
+    expect(bookkeeper.firstActor).toBe(PLAYER3);
+
+    //6. P3 (Home) passes to P1. firstActor is P1
+    bookkeeper.recordPass(PLAYER1);
+    expect(bookkeeper.firstActor).toBe(PLAYER1);
+
+    //7. P1 (Home) throws away. Away possession. firstActor is null.
     bookkeeper.recordThrowAway();
-    //8. P2 (Away - original PLAYER2) picks up. firstActor is P2.
-    bookkeeper.recordActivePlayers(complexHomeLine, complexAwayLine); // Reset lines
+    expect(bookkeeper.homePossession).toBe(false);
+    expect(bookkeeper.firstActor).toBe(null);
+
+    //8. firstActor is P2 (Away).
     bookkeeper.recordFirstActor(PLAYER2, false);
-    //9. P2 (Away) gets a D (e.g., on a pass from teammate, or self). firstActor is P2.
-    bookkeeper.recordCatchD(); // Using CatchD as it keeps P2 as firstActor
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+
+    //9. P2 (Away) got a Catch D firstActor is P2.
+    bookkeeper.recordCatchD();
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+
     //10. Undo CatchD. Event removed. firstActor is P2.
     bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+
     //11. Undo P2 picks up. firstActor is null. Disc is loose after throwaway.
     bookkeeper.undo();
-    //12. P1 (Home) gets a D on the loose disc. firstActor is P1 (Home). Home possession.
-    bookkeeper.recordFirstActor(PLAYER1, true); // P1 is on D, this means P1 is initiating action
-    bookkeeper.recordD(); // P1 gets the D. firstActor is null.
-    //13. P2 (Away) picks up after P1's D. firstActor is P2. Away possession.
+    expect(bookkeeper.firstActor).toBe(null);
+
+    //12. P4 (Away) gets a D on the loose disc.
+    bookkeeper.recordFirstActor(PLAYER4, true);
+    bookkeeper.recordD();
+    expect(bookkeeper.firstActor).toBe(null);
+
+    //13. P2 (Away) picks up after P4's D. firstActor is P2. Away possession.
     bookkeeper.recordFirstActor(PLAYER2, false);
-    //14. P2 (Away) passes to P3 (Away). firstActor is P3.
-    bookkeeper.recordPass(PLAYER3);
-    //15. P3 (Away) scores. Away score = 1.
+    expect(bookkeeper.homePossession).toBe(false);
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+
+    //14. P2 (Away) passes to P4 (Away). firstActor is P4.
+    bookkeeper.recordPass(PLAYER4);
+    expect(bookkeeper.firstActor).toBe(PLAYER4);
+
+    //15. P4 (Away) scores. Away score = 1.
     bookkeeper.recordPoint();
     expect(bookkeeper.awayScore).toBe(1);
-    //16. Undo point. P3 (Away) has disc. Away score = 0.
+    expect(bookkeeper.firstActor).toBe(null);
+
+    //16. Undo point. P4 (Away) has disc. Away score = 0.
     bookkeeper.undo();
+    expect(bookkeeper.awayScore).toBe(0);
+    expect(bookkeeper.firstActor).toBe(PLAYER4);
 
     expect(bookkeeper.activePoint).not.toBeNull();
     const events = bookkeeper.activePoint!.events;
     expect(events.length).toBe(5);
 
-    // Expected events from Java test:
-    // PULL(P2), PASS(P3->P2), THROWAWAY(P2), DEFENSE(P1), PASS(P2->P3)
     verifyEvent(events[0], EventType.PULL, PLAYER2, null);
-    verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER2);
-    verifyEvent(events[2], EventType.THROWAWAY, PLAYER2, null);
-    verifyEvent(events[3], EventType.DEFENSE, PLAYER1, null);
-    verifyEvent(events[4], EventType.PASS, PLAYER2, PLAYER3);
-    expect(bookkeeper.awayScore).toBe(0);
-    expect(bookkeeper.firstActor).toBe(PLAYER3); // P3 (Away) has disc
+    verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER1);
+    verifyEvent(events[2], EventType.THROWAWAY, PLAYER1, null);
+    verifyEvent(events[3], EventType.DEFENSE, PLAYER4, null);
+    verifyEvent(events[4], EventType.PASS, PLAYER2, PLAYER4);
   });
 
   test('should save and load game state with mementos via Dexie', async () => {
     // 1. Setup initial Bookkeeper state and perform actions
     bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts
     bookkeeper.recordPass(PLAYER3);
-
     bookkeeper.recordThrowAway(); // P3 (Home) throws away
+
     const mementosCountBeforeSave = bookkeeper.getMementosCount();
     const homeScoreBeforeSave = bookkeeper.homeScore;
     const awayScoreBeforeSave = bookkeeper.awayScore;
