@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper'
+import { StoredGame } from './db'; // Import StoredGame for status type
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
@@ -9,6 +10,8 @@ interface SelectLinesProps {
   onLinesSelected: () => void;
   isResumingPointMode: boolean;
   lastPlayedLine: { home: string[]; away: string[] } | null;
+  onSubmitGame: () => Promise<void>; // New prop for submitting game
+  gameStatus: StoredGame['status']; // New prop for game status
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({
@@ -19,6 +22,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   onLinesSelected,
   isResumingPointMode,
   lastPlayedLine,
+  onSubmitGame, // Destructure new prop
+  gameStatus,   // Destructure new prop
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
@@ -53,17 +58,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     if (currentSelection.includes(playerName)) {
       setter(currentSelection.filter(p => p !== playerName));
     } else {
-      // Allow selecting more than lineSize if isResumingPointMode is false (i.e. selecting for a new point)
-      // but still cap at lineSize if isResumingPointMode is true (just confirming/adjusting current line)
-      // However, the original Android app allows overriding line size with confirmation.
-      // For simplicity, let's always check against lineSize for adding.
       if (currentSelection.length < leagueLineSize) {
         setter([...currentSelection, playerName]);
       } else {
-        // If already at line size, only allow if we are not in "resuming point" mode,
-        // as the user might be intentionally selecting more for a new point (with override).
-        // But the confirm dialog handles the override. So, this alert is for strict enforcement.
-        // Let's keep the alert for now.
         alert(`Cannot select more than ${leagueLineSize} players for ${teamName}.`);
       }
     }
@@ -98,9 +95,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   const handleUndoLastAction = async () => {
     await onPerformAction(bk => bk.undo());
-    // After undo, the view might change, or pre-selection logic might need to re-run.
-    // LocalGame's handlePerformBookkeeperAction will manage the view.
-    // The useEffect in this component will re-evaluate pre-selection based on new bookkeeper state.
   };
 
   const handleRecordHalf = async () => {
@@ -108,11 +102,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         alert("Half has already been recorded.");
         return;
     }
-    // Consider adding a confirmation dialog if desired
-    // if (window.confirm("Are you sure you want to record half time?")) {
     await onPerformAction(bk => bk.recordHalf());
-    alert("Half time recorded."); // Simple feedback
-    // }
+    alert("Half time recorded."); 
   };
 
 
@@ -150,6 +141,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         : "Select players for the first point.");
 
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
+  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
 
   return (
     <div>
@@ -188,6 +180,21 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             title={isHalfRecorded ? "Half time has already been recorded" : "Record Half Time"}
         >
             Record Half
+        </button>
+        <button
+            onClick={onSubmitGame}
+            disabled={!canSubmitGame}
+            style={{ 
+                padding: '10px 15px', 
+                fontSize: '16px', 
+                backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
+                color: 'white', 
+                border: 'none', 
+                borderRadius: '4px' 
+            }}
+            title={canSubmitGame ? "Submit game to server" : `Game status: ${gameStatus}`}
+        >
+            Submit Game
         </button>
       </div>
       <p style={{marginTop: '15px', fontSize: '0.9em', color: 'gray'}}>
