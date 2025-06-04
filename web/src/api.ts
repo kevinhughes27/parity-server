@@ -1,5 +1,16 @@
 import 'whatwg-fetch';
-import leagues from './leagues.json';
+import rawLeagues from './leagues.json'; // Renamed to rawLeagues to avoid conflict
+
+// Define an explicit interface for a League object from leagues.json
+export interface LeagueFromJson {
+  id: string;
+  name: string;
+  lineSize: number;
+  // Add other properties that exist in your leagues.json entries if needed
+}
+
+// Type the imported leagues data
+export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
 
 const getLeagueName = (leagueId: string): string => {
   const league = leagues.find(l => l.id === leagueId);
@@ -68,9 +79,9 @@ export interface Point {
 }
 
 export interface PointEvent {
-  type: string;
+  type: string; // Event types are strings here, e.g., "PASS", "PULL"
   firstActor: string;
-  secondActor: string;
+  secondActor: string; // Ensure this is not optional if API always provides it, or handle null/undefined
   timestamp: string;
 }
 
@@ -192,7 +203,7 @@ const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => 
 };
 
 export {
-  leagues,
+  // leagues is already exported above with its new type
   getLeagueName,
   fetchGames,
   fetchGame,
