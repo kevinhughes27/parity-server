@@ -38,6 +38,8 @@ export class Bookkeeper {
   private homeParticipants: Set<string>;
   private awayParticipants: Set<string>;
 
+  // I think we can simplify this and always require all fields to be passed in to create a Bookkeeper.
+  // The true init can pass empty states
   constructor(
     league: League,
     week: number,
@@ -90,6 +92,10 @@ export class Bookkeeper {
     this.awayParticipants = new Set(state.awayParticipants);
 
     // Reconstruct mementos with their apply functions
+    // I am not sure how I feel about this.
+    // could it be extracted to a shared function that we always use to create the memento?
+    // or would that abstract undo too far away and make it harder to understand
+    // or in a different direction - should we pull these into little classes instead? would that be better
     this.mementos = data.mementos.map(sm => {
       const mData = sm.data; // mData here is sm.data from the serialized memento
       let applyFn: () => void;
@@ -124,7 +130,7 @@ export class Bookkeeper {
           };
           break;
         case MementoType.RecordDrop:
-        case MementoType.RecordThrowAway: // Restored this case
+        case MementoType.RecordThrowAway:
         case MementoType.UndoTurnover:
           applyFn = () => {
             this.activePoint!.removeLastEvent();
@@ -343,7 +349,7 @@ export class Bookkeeper {
   public recordThrowAway(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway)); // Changed back to RecordThrowAway
+    this.mementos.push(this.createUndoTurnoverMemento(MementoType.RecordThrowAway));
     this.changePossession();
     this.activePoint.addEvent({
       type: EventType.THROWAWAY,
@@ -417,6 +423,7 @@ export class Bookkeeper {
   public recordPoint(): void {
     if (!this.activePoint || !this.firstActor) return;
 
+    // could abstract a createPointMemento
     const mementoData = {
       savedFirstActor: this.firstActor,
       savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
