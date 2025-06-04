@@ -4,7 +4,7 @@ import { TeamPlayer } from '../../api';
 interface EditRosterProps {
   teamName: string;
   allLeaguePlayers: TeamPlayer[];
-  currentRosterNames: string[]
+  currentRosterNames: string[];
   onRosterChange: (newRosterNames: string[]) => void;
 }
 
@@ -18,9 +18,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
 
   // Filter out players already on the current roster from the "add league player" dropdown
-  const availableLeaguePlayers = allLeaguePlayers.filter(
-    p => !currentRosterNames.includes(p.name)
-  );
+  const availableLeaguePlayers = allLeaguePlayers.filter(p => !currentRosterNames.includes(p.name));
 
   const handleRemovePlayer = (playerName: string) => {
     onRosterChange(currentRosterNames.filter(name => name !== playerName));
@@ -40,18 +38,45 @@ const EditRoster: React.FC<EditRosterProps> = ({
       onRosterChange([...currentRosterNames, selectedLeaguePlayer]);
       setSelectedLeaguePlayer('');
     } else if (currentRosterNames.includes(selectedLeaguePlayer)) {
-        alert(`${selectedLeaguePlayer} is already on the roster.`);
+      alert(`${selectedLeaguePlayer} is already on the roster.`);
     }
   };
 
   return (
-    <div style={{ border: '1px solid #e0e0e0', padding: '15px', borderRadius: '5px', marginBottom: '20px' }}>
-      <h4>{teamName} Roster ({currentRosterNames.length} players)</h4>
+    <div
+      style={{
+        border: '1px solid #e0e0e0',
+        padding: '15px',
+        borderRadius: '5px',
+        marginBottom: '20px',
+      }}
+    >
+      <h4>
+        {teamName} Roster ({currentRosterNames.length} players)
+      </h4>
       <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         {currentRosterNames.map(playerName => (
-          <li key={playerName} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: '1px solid #f0f0f0' }}>
+          <li
+            key={playerName}
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '5px 0',
+              borderBottom: '1px solid #f0f0f0',
+            }}
+          >
             {playerName}
-            <button onClick={() => handleRemovePlayer(playerName)} style={{ marginLeft: '10px', cursor: 'pointer', color: 'red', border: 'none', background: 'transparent' }}>
+            <button
+              onClick={() => handleRemovePlayer(playerName)}
+              style={{
+                marginLeft: '10px',
+                cursor: 'pointer',
+                color: 'red',
+                border: 'none',
+                background: 'transparent',
+              }}
+            >
               Remove
             </button>
           </li>
@@ -63,7 +88,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
         <h5>Add Player from League</h5>
         <select
           value={selectedLeaguePlayer}
-          onChange={(e) => setSelectedLeaguePlayer(e.target.value)}
+          onChange={e => setSelectedLeaguePlayer(e.target.value)}
           style={{ marginRight: '10px', padding: '5px' }}
         >
           <option value="">Select Player</option>
@@ -73,7 +98,11 @@ const EditRoster: React.FC<EditRosterProps> = ({
             </option>
           ))}
         </select>
-        <button onClick={handleAddLeaguePlayer} disabled={!selectedLeaguePlayer} style={{ padding: '5px 10px', cursor: 'pointer' }}>
+        <button
+          onClick={handleAddLeaguePlayer}
+          disabled={!selectedLeaguePlayer}
+          style={{ padding: '5px 10px', cursor: 'pointer' }}
+        >
           Add Selected Player
         </button>
       </div>
@@ -83,11 +112,15 @@ const EditRoster: React.FC<EditRosterProps> = ({
         <input
           type="text"
           value={newSubName}
-          onChange={(e) => setNewSubName(e.target.value)}
+          onChange={e => setNewSubName(e.target.value)}
           placeholder="Enter substitute name"
           style={{ marginRight: '10px', padding: '5px' }}
         />
-        <button onClick={handleAddSubByName} disabled={!newSubName.trim()} style={{ padding: '5px 10px', cursor: 'pointer' }}>
+        <button
+          onClick={handleAddSubByName}
+          disabled={!newSubName.trim()}
+          style={{ padding: '5px 10px', cursor: 'pointer' }}
+        >
           Add Sub
         </button>
       </div>
