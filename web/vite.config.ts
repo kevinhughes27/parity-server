@@ -13,6 +13,10 @@ export default defineConfig({
         target: 'http://localhost:8000',
         changeOrigin: true,
       },
+      '/submit_game': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
     },
   },
 });
