@@ -64,14 +64,10 @@ describe('Bookkeeper', () => {
     expect(typeof event.timestamp).toBe('string');
   }
 
-  function recordPass() {
-    // PLAYER1 (home) passes to PLAYER2 (home)
-    // For this helper, assume PLAYER1 and PLAYER2 are on the same (home) team line
-    const currentHomeLine = [PLAYER1, PLAYER2, PLAYER3, 'HP4', 'HP5', 'HP6', 'HP7'];
-    bookkeeper.recordActivePlayers(currentHomeLine, awayLine);
-    bookkeeper.recordFirstActor(PLAYER1, true); // Home player has disc
-    bookkeeper.recordPass(PLAYER2);
-  }
+  // function recordPass() {
+  //   bookkeeper.recordFirstActor(PLAYER1, true);
+  //   bookkeeper.recordPass(PLAYER3);
+  // }
 
   test('testUndoRecordFirstActor', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts with disc
@@ -92,7 +88,8 @@ describe('Bookkeeper', () => {
   });
 
   test('testUndoPass', () => {
-    recordPass(); // PLAYER1 passes to PLAYER2
+    bookkeeper.recordFirstActor(PLAYER1, true);
+    bookkeeper.recordPass(PLAYER3);
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
@@ -101,14 +98,15 @@ describe('Bookkeeper', () => {
   });
 
   test('testUndoPoint', () => {
-    recordPass(); // PLAYER1 (home) passes to PLAYER2
-    bookkeeper.recordPoint(); // PLAYER2 scores for home
+    bookkeeper.recordFirstActor(PLAYER1, true);
+    bookkeeper.recordPass(PLAYER3);
+    bookkeeper.recordPoint();
     expect(bookkeeper.homeScore).toBe(1);
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1); // Point event removed, pass event remains
-    expect(bookkeeper.firstActor).toBe(PLAYER2);
+    expect(bookkeeper.firstActor).toBe(PLAYER3);
     expect(bookkeeper.homeScore).toBe(0);
   });
 
@@ -125,14 +123,15 @@ describe('Bookkeeper', () => {
   });
 
   test('testUndoThrowAwayAfterPass', () => {
-    recordPass(); // PLAYER1 (home) passes to PLAYER2
-    bookkeeper.recordThrowAway(); // PLAYER2 (home) throws away
+    bookkeeper.recordFirstActor(PLAYER1, true);
+    bookkeeper.recordPass(PLAYER3);
+    bookkeeper.recordThrowAway();
     expect(bookkeeper.homePossession).toBe(false);
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1);
-    expect(bookkeeper.firstActor).toBe(PLAYER2);
+    expect(bookkeeper.firstActor).toBe(PLAYER3);
     expect(bookkeeper.homePossession).toBe(true);
   });
 
@@ -140,7 +139,8 @@ describe('Bookkeeper', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home has disc
     bookkeeper.recordThrowAway(); // Home throws away, Away should pick up
     bookkeeper.recordFirstActor(PLAYER2, false); // Away (PLAYER2) has disc
-    bookkeeper.recordD(); // PLAYER2 (Away) gets a D (e.g., handblock on self, or teammate gets D)
+
+    bookkeeper.recordD(); // record d started
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
@@ -152,6 +152,7 @@ describe('Bookkeeper', () => {
     bookkeeper.recordFirstActor(PLAYER1, true); // Home has disc
     bookkeeper.recordThrowAway(); // Home throws away
     bookkeeper.recordFirstActor(PLAYER2, false); // Away (PLAYER2) picks up
+
     bookkeeper.recordCatchD(); // PLAYER2 (Away) catches the D
     bookkeeper.undo();
 
@@ -163,6 +164,8 @@ describe('Bookkeeper', () => {
   test('testComplexScenario from Java test', () => {
     // Re-setup for this specific scenario to match Java test's implied player movements
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, new GameModel());
+    // sad part is this might be true...
+    // we don't set the rosters in the java test so you could mix and match
     const complexHomeLine = [PLAYER1, PLAYER3]; // As per Java test, P3 acts for Home then Away
     const complexAwayLine = [PLAYER2, PLAYER3]; // P3 is also on away for receiving a pass
     bookkeeper.recordActivePlayers(complexHomeLine, complexAwayLine);
@@ -223,8 +226,9 @@ describe('Bookkeeper', () => {
   test('should save and load game state with mementos via Dexie', async () => {
     // 1. Setup initial Bookkeeper state and perform actions
     bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts
-    recordPass(); // P1 to P2 (Home)
-    bookkeeper.recordThrowAway(); // P2 (Home) throws away
+    bookkeeper.recordPass(PLAYER3);
+
+    bookkeeper.recordThrowAway(); // P3 (Home) throws away
     const mementosCountBeforeSave = bookkeeper.getMementosCount();
     const homeScoreBeforeSave = bookkeeper.homeScore;
     const awayScoreBeforeSave = bookkeeper.awayScore;
@@ -301,7 +305,7 @@ describe('Bookkeeper', () => {
 
     // Try an undo on the new Bookkeeper
     newBookkeeper.undo(); // Undo the throwaway
-    expect(newBookkeeper.firstActor).toBe(PLAYER2); // P2 had it before throwaway
+    expect(newBookkeeper.firstActor).toBe(PLAYER3); // P3 had it before throwaway
     expect(newBookkeeper.homePossession).toBe(true);
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave - 1);
 
