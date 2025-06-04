@@ -106,14 +106,14 @@ describe('Bookkeeper', () => {
   });
 
   test('testUndoPull', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); 
+    bookkeeper.recordFirstActor(PLAYER1, true);
     bookkeeper.recordPull();
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(0);
     expect(bookkeeper.firstActor).toBe(PLAYER1);
-    expect(bookkeeper.homePossession).toBe(true); 
+    expect(bookkeeper.homePossession).toBe(true);
   });
 
   test('testUndoPass', () => {
@@ -134,15 +134,15 @@ describe('Bookkeeper', () => {
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    verifyEventCount(1); 
+    verifyEventCount(1);
     expect(bookkeeper.firstActor).toBe(PLAYER3);
     expect(bookkeeper.homeScore).toBe(0);
   });
 
   test('testUndoThrowAway', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); 
+    bookkeeper.recordFirstActor(PLAYER1, true);
     bookkeeper.recordThrowAway();
-    expect(bookkeeper.homePossession).toBe(false); 
+    expect(bookkeeper.homePossession).toBe(false);
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
@@ -165,22 +165,22 @@ describe('Bookkeeper', () => {
   });
 
   test('testUndoD', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); 
-    bookkeeper.recordThrowAway(); 
-    bookkeeper.recordFirstActor(PLAYER2, false); 
-    bookkeeper.recordD(); 
+    bookkeeper.recordFirstActor(PLAYER1, true);
+    bookkeeper.recordThrowAway();
+    bookkeeper.recordFirstActor(PLAYER2, false);
+    bookkeeper.recordD();
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    verifyEventCount(1); 
+    verifyEventCount(1);
     expect(bookkeeper.firstActor).toBe(PLAYER2);
   });
 
   test('testUndoCatchD', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); 
-    bookkeeper.recordThrowAway(); 
-    bookkeeper.recordFirstActor(PLAYER2, false); 
-    bookkeeper.recordCatchD(); 
+    bookkeeper.recordFirstActor(PLAYER1, true);
+    bookkeeper.recordThrowAway();
+    bookkeeper.recordFirstActor(PLAYER2, false);
+    bookkeeper.recordCatchD();
     bookkeeper.undo();
 
     expect(bookkeeper.activePoint).not.toBeNull();
@@ -246,21 +246,6 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.firstActor).toBe(null);
 
     //12. P4 (Away) gets a D on the loose disc.
-    // For a D on a loose disc, the player making the D is recorded as firstActor.
-    // The team that *would* have possessed the disc (Home, in this case, as Away threw it away)
-    // is the context for `isHomeTeamPlayer`.
-    // However, the current logic for recordD assumes firstActor is the one who *would have* picked up.
-    // Let's follow the existing pattern: after a turnover, the new possessing team's player picks up.
-    // If P4 (Away) gets a D, it implies they are now on offense.
-    // So, P4 (Away) picks up, then gets a D. This seems like a CatchD scenario if P4 is Away.
-    // If it's a D on a *pass* from Home, then Away player (P4) makes D, then Away player picks up.
-    // The test implies P1 (Home) threw away. Disc is loose. P4 (Away) makes a play.
-    // If P4 (Away) gets a D, it means they prevented completion.
-    // Then someone from Away (e.g. P2) picks up.
-    // The original test had: bookkeeper.recordFirstActor(PLAYER4, true); bookkeeper.recordD();
-    // This implies PLAYER4 (Away) was recorded as firstActor, but with isHomeTeamPlayer=true, which is contradictory.
-    // Let's assume P4 (Away) is making the D. So, after throwaway by Home, Away has possession.
-    // P4 (Away) is selected as the player who will act (e.g. pick up).
     bookkeeper.recordFirstActor(PLAYER4, false); // P4 (Away) is about to act
     bookkeeper.recordD(); // P4 (Away) gets a D. firstActor becomes null.
     expect(bookkeeper.firstActor).toBe(null);
@@ -296,14 +281,14 @@ describe('Bookkeeper', () => {
   });
 
   test('should save and load game state with mementos via Dexie', async () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); 
+    bookkeeper.recordFirstActor(PLAYER1, true);
     bookkeeper.recordPass(PLAYER3);
-    bookkeeper.recordThrowAway(); 
+    bookkeeper.recordThrowAway();
 
     const mementosCountBeforeSave = bookkeeper.getMementosCount();
     const homeScoreBeforeSave = bookkeeper.homeScore;
     const awayScoreBeforeSave = bookkeeper.awayScore;
-    const firstActorBeforeSave = bookkeeper.firstActor; 
+    const firstActorBeforeSave = bookkeeper.firstActor;
 
     const serializedData = bookkeeper.serialize();
 
@@ -322,7 +307,7 @@ describe('Bookkeeper', () => {
         events: p.events.map(e => ({
           type: e.type.toString(),
           firstActor: e.firstActor,
-          secondActor: e.secondActor || '', 
+          secondActor: e.secondActor || '',
           timestamp: e.timestamp,
         })),
       })),
@@ -344,9 +329,9 @@ describe('Bookkeeper', () => {
       week: retrievedGame!.week,
       homeTeamName: retrievedGame!.homeTeam,
       awayTeamName: retrievedGame!.awayTeam,
-      homeTeamId: mockHomeTeam.id, 
-      awayTeamId: mockAwayTeam.id, 
-      game: { points: retrievedGame!.points.map(p => PointModel.fromJSON(p as any)) }, 
+      homeTeamId: mockHomeTeam.id,
+      awayTeamId: mockAwayTeam.id,
+      game: { points: retrievedGame!.points.map(p => PointModel.fromJSON(p as any)) },
       bookkeeperState: retrievedGame!.bookkeeperState!,
       mementos: retrievedGame!.mementos!,
     };
@@ -361,17 +346,17 @@ describe('Bookkeeper', () => {
 
     expect(newBookkeeper.homeScore).toBe(homeScoreBeforeSave);
     expect(newBookkeeper.awayScore).toBe(awayScoreBeforeSave);
-    expect(newBookkeeper.firstActor).toBe(firstActorBeforeSave); 
+    expect(newBookkeeper.firstActor).toBe(firstActorBeforeSave);
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave);
-    expect(newBookkeeper.activePoint).not.toBeNull(); 
-    
+    expect(newBookkeeper.activePoint).not.toBeNull();
+
     const activePointEventsBeforeSave = serializedData.bookkeeperState.activePoint?.events;
     const activePointEventsAfterLoad = newBookkeeper.serialize().bookkeeperState.activePoint?.events;
     expect(activePointEventsAfterLoad?.length).toBe(activePointEventsBeforeSave?.length);
 
 
-    newBookkeeper.undo(); 
-    expect(newBookkeeper.firstActor).toBe(PLAYER3); 
+    newBookkeeper.undo();
+    expect(newBookkeeper.firstActor).toBe(PLAYER3);
     expect(newBookkeeper.homePossession).toBe(true);
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave - 1);
 
