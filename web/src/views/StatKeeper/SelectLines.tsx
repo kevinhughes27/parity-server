@@ -103,6 +103,18 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     // The useEffect in this component will re-evaluate pre-selection based on new bookkeeper state.
   };
 
+  const handleRecordHalf = async () => {
+    if (bookkeeper.pointsAtHalf > 0) {
+        alert("Half has already been recorded.");
+        return;
+    }
+    // Consider adding a confirmation dialog if desired
+    // if (window.confirm("Are you sure you want to record half time?")) {
+    await onPerformAction(bk => bk.recordHalf());
+    alert("Half time recorded."); // Simple feedback
+    // }
+  };
+
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
@@ -137,6 +149,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         ? "Players not on the previous line are pre-selected. Adjust and confirm." 
         : "Select players for the first point.");
 
+  const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
+
   return (
     <div>
       <h3>{isResumingPointMode ? "Adjust Current Line" : "Select Lines for Next Point"}</h3>
@@ -151,11 +165,11 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           {awayRoster.map(player => renderPlayerButton(player, false))}
         </div>
       </div>
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
         <button
           onClick={handleDone}
           disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
-          style={{ padding: '10px 15px', fontSize: '16px', marginRight: '10px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
+          style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
         >
           {buttonText}
         </button>
@@ -167,6 +181,14 @@ const SelectLines: React.FC<SelectLinesProps> = ({
              Undo Last Action
            </button>
         )}
+        <button
+            onClick={handleRecordHalf}
+            disabled={isHalfRecorded}
+            style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: isHalfRecorded ? '#cccccc' : '#007bff', color: 'white', border: 'none', borderRadius: '4px' }}
+            title={isHalfRecorded ? "Half time has already been recorded" : "Record Half Time"}
+        >
+            Record Half
+        </button>
       </div>
       <p style={{marginTop: '15px', fontSize: '0.9em', color: 'gray'}}>
         {helpText}
