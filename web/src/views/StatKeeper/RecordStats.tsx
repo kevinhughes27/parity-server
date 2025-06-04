@@ -48,17 +48,22 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     }
 
     // Determine general button enablement based on possession and game state
-    if (currentGameState === GameState.Pull) {
-        // For Pull state, players on BOTH teams should be enabled to select who is pulling.
-        // The firstActor is not yet set for the pull action itself.
+    if (currentGameState === GameState.Start) {
+        // For Start state, players on BOTH teams should be enabled.
+        // User selects player who picks up disc (if receiving) or who is pulling (if first point of game/half).
         isGenerallyEnabledForTeam = true; 
-    } else if (currentGameState === GameState.Start || currentGameState === GameState.WhoPickedUpDisc) {
+    } else if (currentGameState === GameState.WhoPickedUpDisc) {
+        // WhoPickedUpDisc: only team with possession can select a player
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
+    } else if (currentGameState === GameState.Pull) {
+        // Pull state: firstActor (the puller) is already set. No other player actions.
+        isGenerallyEnabledForTeam = false;
     } else if (bookkeeper.firstActor !== null) { 
+        // Normal play with an active player: only that player's team can act
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
     } else {
-        // If no firstActor and not Start/WhoPickedUpDisc/Pull, typically means disc is loose after turnover
-        // Enable players on the team that *would* get possession
+        // No firstActor, and not Start/WhoPickedUpDisc/Pull.
+        // Typically means disc is loose after turnover. Enable players on the team that *would* get possession.
         isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
     }
     
@@ -66,15 +71,10 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
     if (isGenerallyEnabledForTeam) {
         if (bookkeeper.firstActor === playerName && bookkeeper.shouldRecordNewPass()) {
-            isDisabled = true; // Cannot pass to self
+            // Player who has the disc cannot pass to themselves
+            isDisabled = true; 
         }
-        // If in Pull state, firstActor should be null before selecting the puller.
-        // If firstActor is already set in Pull state (which shouldn't happen before this selection),
-        // then only that player is active (handled by isActivePlayer styling).
-        // The Pull action button itself is only enabled if firstActor is set.
     }
-    // Note: The line `if (currentGameState === GameState.Pull) isDisabled = true;` was removed
-    // to allow player selection in Pull state.
 
 
     const buttonStyle: React.CSSProperties = {
@@ -109,12 +109,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   const btnDropEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   const btnThrowAwayEnabled = (currentGameState === GameState.Normal || currentGameState === GameState.FirstThrowQuebecVariant || currentGameState === GameState.FirstD || currentGameState === GameState.SecondD) && bookkeeper.firstActor !== null;
   
-  // D/CatchD logic:
-  // Enabled if a player (firstActor) is selected AND
-  // the game state indicates that this player (who is on the current possessing team)
-  // could have just made a defensive play that led to this possession.
-  // GameState.FirstD: Occurs after a throwaway by the *other* team. firstActor is now the player on new offense.
-  // GameState.SecondD: Occurs after a drop by the *other* team. firstActor is now the player on new offense.
   const btnDEnabled = bookkeeper.firstActor !== null &&
                       (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
   const btnCatchDEnabled = bookkeeper.firstActor !== null &&
