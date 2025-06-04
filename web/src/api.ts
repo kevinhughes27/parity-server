@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 import leagues from './leagues.json';
 
-const getLeagueName = (leagueId: number): string => {
+const getLeagueName = (leagueId: string): string => {
   const league = leagues.find(l => l.id === leagueId);
   return league ? league.name : `Unknown League (${leagueId})`;
 };
@@ -48,8 +48,8 @@ const cachedFetch = (url: string, _options = {}) => {
 // }
 
 export interface Game {
-  id: number;
-  league_id: number;
+  id: string;
+  league_id: string;
   week: number;
   homeTeam: string;
   homeScore: number;
@@ -74,19 +74,19 @@ export interface PointEvent {
   timestamp: string;
 }
 
-const fetchGames = async (leagueId: number): Promise<Game[]> => {
+const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
   return await response.json();
 };
 
-const fetchGame = async (gameId: number, leagueId: number): Promise<Game> => {
+const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   const response = await cachedFetch(`/api/${leagueId}/games/${gameId}`);
   return await response.json();
 };
 
 const saveGame = async (
-  gameId: number,
-  leagueId: number,
+  gameId: string,
+  leagueId: string,
   json: string,
   password: string | null
 ) => {
@@ -105,7 +105,7 @@ const saveGame = async (
   });
 };
 
-const deleteGame = async (gameId: number, leagueId: number, password: string | null) => {
+const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
 
   // clear cache
@@ -138,7 +138,7 @@ export interface Team {
   players: TeamPlayer[];
 }
 
-const fetchTeams = async (leagueId: number): Promise<Team[]> => {
+const fetchTeams = async (leagueId: string): Promise<Team[]> => {
   const response = await cachedFetch(`/api/${leagueId}/teams`);
   if (!response.ok) {
     throw new Error(`Failed to fetch teams for league ${leagueId}: ${response.statusText}`);
@@ -146,12 +146,12 @@ const fetchTeams = async (leagueId: number): Promise<Team[]> => {
   return await response.json();
 };
 
-const fetchPlayers = async (leagueId: number): Promise<Player[]> => {
+const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
   const response = await cachedFetch(`/api/${leagueId}/players`);
   return await response.json();
 };
 
-const fetchWeeks = async (leagueId: number): Promise<number[]> => {
+const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   const response = await cachedFetch(`/api/${leagueId}/weeks`);
   return await response.json();
 };
@@ -181,7 +181,7 @@ export interface StatLine {
   [key: string]: number | string;
 }
 
-const fetchStats = async (weekNum: number, leagueId: number): Promise<Stats> => {
+const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => {
   let url = `/api/${leagueId}/weeks/${weekNum}`;
   if (weekNum === 0) url = `/api/${leagueId}/stats`;
 
