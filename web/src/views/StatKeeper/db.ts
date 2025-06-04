@@ -21,7 +21,7 @@ export interface StoredGame {
   points: Point[]; // Storing points in the API format (PointEvent.type is string)
 
   // Local metadata
-  status: 'new' | 'in-progress' | 'paused' | 'completed' | 'submitted' | 'sync-error';
+  status: 'new' | 'in-progress' | 'paused' | 'completed' | 'submitted' | 'sync-error' | 'uploaded'; // Added 'uploaded'
   lastModified: Date;
 
   // Extended state for Bookkeeper
