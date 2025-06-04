@@ -86,7 +86,7 @@ export interface UseTeamsResult {
   errorTeams: string | null;
 }
 
-export function useTeams(leagueId: number | undefined): UseTeamsResult {
+export function useTeams(leagueId: string | undefined): UseTeamsResult {
   const [leagueTeams, setLeagueTeams] = useState<Team[]>([]);
   const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
   const [loadingTeams, setLoadingTeams] = useState<boolean>(false);

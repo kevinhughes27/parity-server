@@ -33,7 +33,7 @@ export enum MementoType {
 
 // Interfaces
 export interface League {
-    id: number; // Changed from string to number to match web/src/api.ts leagues.json
+    id: string;
     name: string;
 }
 
@@ -172,7 +172,7 @@ export interface BookkeeperVolatileState {
 
 export interface SerializedGameData {
     // Game metadata from original Bookkeeper.serialize
-    league_id: number;
+    league_id: string;
     week: number;
     homeTeamName: string; // Renamed from homeTeam to avoid conflict with Team object
     awayTeamName: string; // Renamed from awayTeam to avoid conflict with Team object

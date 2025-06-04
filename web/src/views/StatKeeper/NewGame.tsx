@@ -9,7 +9,7 @@ import EditRoster from './EditRoster';
 function NewGame() {
   const navigate = useNavigate();
 
-  const [selectedLeagueId, setSelectedLeagueId] = useState<number>(leagues[0].id);
+  const [selectedLeagueId, setSelectedLeagueId] = useState<string>(leagues[0].id);
 
   const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(selectedLeagueId);
 
@@ -86,7 +86,7 @@ function NewGame() {
         <select
           id="league-select"
           value={selectedLeagueId}
-          onChange={(e) => setSelectedLeagueId(parseInt(e.target.value, 10))} // Ensure value is parsed to number
+          onChange={(e) => setSelectedLeagueId(e.target.value)}
           style={{ padding: '8px' }}
         >
           {leagues.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
