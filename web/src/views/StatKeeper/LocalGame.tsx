@@ -107,13 +107,21 @@ function LocalGame() {
           awayPlayers: null,
           homeScore: 0,
           awayScore: 0,
-          homeParticipants: gameData.homeRoster ? [...gameData.homeRoster].sort((a,b) => a.localeCompare(b)) : [],
-          awayParticipants: gameData.awayRoster ? [...gameData.awayRoster].sort((a,b) => a.localeCompare(b)) : [],
+          homeParticipants: gameData.homeRoster
+            ? [...gameData.homeRoster].sort((a, b) => a.localeCompare(b))
+            : [],
+          awayParticipants: gameData.awayRoster
+            ? [...gameData.awayRoster].sort((a, b) => a.localeCompare(b))
+            : [],
         }),
         activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
         // Ensure participants are sorted when hydrating
-        homeParticipants: gameData.bookkeeperState?.homeParticipants ? [...gameData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)) : [...gameData.homeRoster].sort((a,b) => a.localeCompare(b)),
-        awayParticipants: gameData.bookkeeperState?.awayParticipants ? [...gameData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)) : [...gameData.awayRoster].sort((a,b) => a.localeCompare(b)),
+        homeParticipants: gameData.bookkeeperState?.homeParticipants
+          ? [...gameData.bookkeeperState.homeParticipants].sort((a, b) => a.localeCompare(b))
+          : [...gameData.homeRoster].sort((a, b) => a.localeCompare(b)),
+        awayParticipants: gameData.bookkeeperState?.awayParticipants
+          ? [...gameData.bookkeeperState.awayParticipants].sort((a, b) => a.localeCompare(b))
+          : [...gameData.awayRoster].sort((a, b) => a.localeCompare(b)),
       };
 
       const initialSerializedData: SerializedGameData = {
@@ -191,7 +199,6 @@ function LocalGame() {
     isLoadingApiLeague,
   ]);
 
-
   const persistBookkeeperState = async (bk: Bookkeeper, newStatus?: StoredGame['status']) => {
     if (!numericGameId || !storedGame) {
       console.error('Cannot persist state: game ID or storedGame is missing.');
@@ -210,8 +217,12 @@ function LocalGame() {
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
       ...serializedData.bookkeeperState,
       // Ensure participants are sorted before saving to bookkeeperState in DB
-      homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)),
-      awayParticipants: [...serializedData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)),
+      homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      awayParticipants: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
     };
 
     let statusToSave = newStatus || storedGame.status;
@@ -226,8 +237,12 @@ function LocalGame() {
       bookkeeperState: bookkeeperStateForStorage,
       mementos: serializedData.mementos,
       // Ensure StoredGame.homeRoster/awayRoster are also sorted
-      homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)),
-      awayRoster: [...serializedData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)),
+      homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      awayRoster: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
       lastModified: new Date(),
       status: statusToSave,
     };
@@ -343,10 +358,14 @@ function LocalGame() {
         week: bkState.week,
         homeTeam: bkState.homeTeamName,
         homeScore: bkState.bookkeeperState.homeScore,
-        homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)), // Ensure sorted for API
+        homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a, b) =>
+          a.localeCompare(b)
+        ), // Ensure sorted for API
         awayTeam: bkState.awayTeamName,
         awayScore: bkState.bookkeeperState.awayScore,
-        awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)), // Ensure sorted for API
+        awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a, b) =>
+          a.localeCompare(b)
+        ), // Ensure sorted for API
         points: bkState.game.points.map(pJson => ({
           offensePlayers: pJson.offensePlayers,
           defensePlayers: pJson.defensePlayers,
@@ -373,7 +392,7 @@ function LocalGame() {
       }
     } catch (error) {
       if (bookkeeperInstance) {
-         await persistBookkeeperState(bookkeeperInstance, 'sync-error');
+        await persistBookkeeperState(bookkeeperInstance, 'sync-error');
       }
       alert(
         `An error occurred during game submission: ${error instanceof Error ? error.message : 'Unknown error'}`
@@ -385,9 +404,7 @@ function LocalGame() {
   if (currentView === 'loading' || (currentView === 'initializing' && !localError)) {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p>
-          {currentView === 'loading' ? 'Loading game data...' : 'Initializing game logic...'}
-        </p>
+        <p>{currentView === 'loading' ? 'Loading game data...' : 'Initializing game logic...'}</p>
       </div>
     );
   }
@@ -417,7 +434,6 @@ function LocalGame() {
   const sortedHomeRoster = [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b));
   const sortedAwayRoster = [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b));
 
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar */}
@@ -437,7 +453,9 @@ function LocalGame() {
             marginBottom: '5px', // Reduced margin
           }}
         >
-          <Link to="/stat_keeper" style={{ fontSize: '0.9em' }}> {/* Slightly smaller link */}
+          <Link to="/stat_keeper" style={{ fontSize: '0.9em' }}>
+            {' '}
+            {/* Slightly smaller link */}
             &larr; StatKeeper Home
           </Link>
           <GameActionsMenu
@@ -448,10 +466,14 @@ function LocalGame() {
             onSubmitGame={handleSubmitGame}
           />
         </div>
-        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}> {/* Centered title */}
+        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}>
+          {' '}
+          {/* Centered title */}
           {storedGame.homeTeam} vs {storedGame.awayTeam}
         </h1>
-        <div style={{ textAlign: 'center', fontSize: '0.9em' }}> {/* Centered score/status */}
+        <div style={{ textAlign: 'center', fontSize: '0.9em' }}>
+          {' '}
+          {/* Centered score/status */}
           <p style={{ margin: '0 0 2px 0' }}>
             <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
           </p>
