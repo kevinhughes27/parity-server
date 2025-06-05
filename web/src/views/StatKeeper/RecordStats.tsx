@@ -1,7 +1,7 @@
 import React from 'react';
 import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
-import { StoredGame } from './db'; // Import StoredGame for status type
+import PointEventsDisplay from './PointEventsDisplay'; // Import the new component
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
@@ -11,8 +11,7 @@ interface RecordStatsProps {
   ) => Promise<void>;
   onPointScored: () => void;
   onChangeLine: () => void;
-  onSubmitGame: () => Promise<void>; // New prop for submitting game
-  gameStatus: StoredGame['status']; // New prop for game status
+  // onSubmitGame and gameStatus props are removed
 }
 
 const RecordStats: React.FC<RecordStatsProps> = ({
@@ -20,13 +19,11 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   onPerformAction,
   onPointScored,
   onChangeLine,
-  onSubmitGame, // Destructure new prop
-  gameStatus, // Destructure new prop
 }) => {
   const currentGameState = bookkeeper.gameState();
   const homePlayersOnLine = bookkeeper.homePlayers || [];
   const awayPlayersOnLine = bookkeeper.awayPlayers || [];
-  const playByPlay = bookkeeper.undoHistory();
+  const playByPlay = bookkeeper.getCurrentPointPrettyPrint(); // Renamed method
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -125,7 +122,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
 
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
-  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
+  // Removed canSubmitGame logic
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' }}>
@@ -145,34 +142,15 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <strong>Game State:</strong> {GameState[currentGameState]}
       </div>
 
-      <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden' }}>
-        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
+      <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '300px' }}> {/* Added minHeight */}
+        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto', height: '100%' }}>
           <h4>{bookkeeper.homeTeam.name} (Line)</h4>
           {homePlayersOnLine.map(player => renderPlayerButton(player, true))}
         </div>
 
-        <div
-          style={{
-            flex: 1.5,
-            padding: '0 10px',
-            borderLeft: '1px solid #ccc',
-            borderRight: '1px solid #ccc',
-            overflowY: 'auto',
-          }}
-        >
-          <h4>Play by Play (Current Point)</h4>
-          {playByPlay.length === 0 ? (
-            <p>No events yet for this point.</p>
-          ) : (
-            <ul style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>
-              {playByPlay.map((eventStr, index) => (
-                <li key={index}>{eventStr}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+        <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
 
-        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto' }}>
+        <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto', height: '100%' }}>
           <h4>{bookkeeper.awayTeam.name} (Line)</h4>
           {awayPlayersOnLine.map(player => renderPlayerButton(player, false))}
         </div>
@@ -259,21 +237,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>
           Change Line
         </button>
-        <button
-          onClick={onSubmitGame}
-          disabled={!canSubmitGame}
-          style={{
-            margin: '5px',
-            padding: '10px',
-            backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-          }}
-          title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}
-        >
-          Submit Game
-        </button>
+        {/* Submit Game button removed from here */}
       </div>
     </div>
   );

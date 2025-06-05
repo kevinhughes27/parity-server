@@ -23,7 +23,7 @@ export class Bookkeeper {
   public awayTeam: Team;
   public week: number;
 
-  private activeGame: GameModel = new GameModel();
+  public activeGame: GameModel = new GameModel(); // Made public for easier access in LocalGame
   private mementos: InternalMemento[];
 
   // Volatile state - needs to be serialized/deserialized
@@ -460,12 +460,20 @@ export class Bookkeeper {
     }
   }
 
-  public undoHistory(): string[] {
+  public getCurrentPointPrettyPrint(): string[] {
     if (this.activePoint !== null) {
       return this.activePoint.prettyPrint();
     } else {
       return [];
     }
+  }
+
+  public getLastCompletedPointPrettyPrint(): string[] {
+    if (this.activeGame.getPointCount() > 0) {
+      const lastPoint = this.activeGame.points[this.activeGame.getPointCount() - 1];
+      return lastPoint.prettyPrint();
+    }
+    return [];
   }
 
   // Memento Creation Helpers
