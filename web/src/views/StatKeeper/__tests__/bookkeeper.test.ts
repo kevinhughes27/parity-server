@@ -90,12 +90,7 @@ describe('Bookkeeper', () => {
 
   beforeEach(async () => {
     await db.games.clear();
-    const initialGameData = createInitialGameData(
-      mockLeague,
-      mockWeek,
-      mockHomeTeam,
-      mockAwayTeam
-    );
+    const initialGameData = createInitialGameData(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, initialGameData);
     bookkeeper.recordActivePlayers(homeLine, awayLine);
   });
@@ -218,12 +213,7 @@ describe('Bookkeeper', () => {
   });
 
   test('testComplexScenario', () => {
-    const initialGameData = createInitialGameData(
-      mockLeague,
-      mockWeek,
-      mockHomeTeam,
-      mockAwayTeam
-    );
+    const initialGameData = createInitialGameData(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, initialGameData);
     bookkeeper.recordActivePlayers(homeLine, awayLine);
 
@@ -234,7 +224,7 @@ describe('Bookkeeper', () => {
 
     //2. P2 (Away) pulls. Home possession. firstActor is null.
     bookkeeper.recordPull();
-    expect(bookkeeper.homePossession).toBe(true)
+    expect(bookkeeper.homePossession).toBe(true);
     expect(bookkeeper.firstActor).toBe(null);
 
     //3. P1 (Home) picks up. firstActor is P1
@@ -334,15 +324,16 @@ describe('Bookkeeper', () => {
       activePointForStorage = {
         offensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.offensePlayers],
         defensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.defensePlayers],
-        events: serializedDataFromBk.bookkeeperState.activePoint.events.map(mapModelEventToApiPointEvent),
+        events: serializedDataFromBk.bookkeeperState.activePoint.events.map(
+          mapModelEventToApiPointEvent
+        ),
       };
     }
 
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
-        ...serializedDataFromBk.bookkeeperState,
-        activePoint: activePointForStorage as any, // Cast because stored format differs slightly
+      ...serializedDataFromBk.bookkeeperState,
+      activePoint: activePointForStorage as any, // Cast because stored format differs slightly
     };
-
 
     const gameToStore: StoredGame = {
       league_id: serializedDataFromBk.league_id,
@@ -371,26 +362,29 @@ describe('Bookkeeper', () => {
 
     // Transform points from storage for Bookkeeper hydration (ApiPointEvent string -> ModelEvent enum)
     const gamePointsForHydration = retrievedGame!.points.map(apiPoint => ({
-        offensePlayers: [...apiPoint.offensePlayers],
-        defensePlayers: [...apiPoint.defensePlayers],
-        events: apiPoint.events.map(mapApiPointEventToModelEvent),
+      offensePlayers: [...apiPoint.offensePlayers],
+      defensePlayers: [...apiPoint.defensePlayers],
+      events: apiPoint.events.map(mapApiPointEventToModelEvent),
     }));
 
-    let activePointForHydration: { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } | null = null;
+    let activePointForHydration: {
+      offensePlayers: string[];
+      defensePlayers: string[];
+      events: Event[];
+    } | null = null;
     if (retrievedGame!.bookkeeperState?.activePoint) {
-        const storedActivePoint = retrievedGame!.bookkeeperState.activePoint as unknown as ApiPoint;
-        activePointForHydration = {
-            offensePlayers: [...storedActivePoint.offensePlayers],
-            defensePlayers: [...storedActivePoint.defensePlayers],
-            events: storedActivePoint.events.map(mapApiPointEventToModelEvent),
-        };
+      const storedActivePoint = retrievedGame!.bookkeeperState.activePoint as unknown as ApiPoint;
+      activePointForHydration = {
+        offensePlayers: [...storedActivePoint.offensePlayers],
+        defensePlayers: [...storedActivePoint.defensePlayers],
+        events: storedActivePoint.events.map(mapApiPointEventToModelEvent),
+      };
     }
 
     const bookkeeperStateForHydration: BookkeeperVolatileState = {
-        ...(retrievedGame!.bookkeeperState!),
-        activePoint: activePointForHydration,
+      ...retrievedGame!.bookkeeperState!,
+      activePoint: activePointForHydration,
     };
-
 
     const hydratedSerializedData: SerializedGameData = {
       league_id: retrievedGame!.league_id,
@@ -419,7 +413,8 @@ describe('Bookkeeper', () => {
     expect(newBookkeeper.activePoint).not.toBeNull();
 
     const activePointEventsBeforeSave = serializedDataFromBk.bookkeeperState.activePoint?.events;
-    const activePointEventsAfterLoad = newBookkeeper.serialize().bookkeeperState.activePoint?.events;
+    const activePointEventsAfterLoad =
+      newBookkeeper.serialize().bookkeeperState.activePoint?.events;
     expect(activePointEventsAfterLoad?.length).toBe(activePointEventsBeforeSave?.length);
 
     newBookkeeper.undo();

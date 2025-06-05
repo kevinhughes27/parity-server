@@ -83,9 +83,11 @@ function StatKeeper() {
                     color:
                       game.status === 'in-progress'
                         ? 'green'
-                        : game.status === 'completed' || game.status === 'submitted' || game.status === 'uploaded'
+                        : game.status === 'completed' ||
+                            game.status === 'submitted' ||
+                            game.status === 'uploaded'
                           ? 'blue'
-                          : game.status === 'sync-error' 
+                          : game.status === 'sync-error'
                             ? 'red'
                             : 'black',
                   }}
@@ -115,15 +117,23 @@ function StatKeeper() {
                       </button>
                     </Link>
                   )}
-                {(game.status === 'submitted' || game.status === 'uploaded' || game.status === 'completed') && game.localId && (
-                     <Link to={`/stat_keeper/game/${game.localId}`}>
-                        <button
-                            style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px', backgroundColor: '#eee' }}
-                        >
-                            View Game
-                        </button>
-                     </Link>
-                )}
+                {(game.status === 'submitted' ||
+                  game.status === 'uploaded' ||
+                  game.status === 'completed') &&
+                  game.localId && (
+                    <Link to={`/stat_keeper/game/${game.localId}`}>
+                      <button
+                        style={{
+                          padding: '8px 12px',
+                          cursor: 'pointer',
+                          marginRight: '10px',
+                          backgroundColor: '#eee',
+                        }}
+                      >
+                        View Game
+                      </button>
+                    </Link>
+                  )}
                 <button
                   onClick={() => handleDeleteGame(game.localId)}
                   style={{
