@@ -94,8 +94,7 @@ function StatKeeper() {
         </span>
       </p>
       <p style={{ margin: '5px 0' }}>
-        <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
-        {game.awayTeam}
+        <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}
       </p>
       <p style={{ margin: '5px 0' }}>
         <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
@@ -173,9 +172,7 @@ function StatKeeper() {
         </>
       )}
 
-      {games.length === 0 && (
-        <p>No games stored locally. Click "Start New Game" to begin.</p>
-      )}
+      {games.length === 0 && <p>No games stored locally. Click "Start New Game" to begin.</p>}
     </div>
   );
 }

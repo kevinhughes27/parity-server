@@ -86,7 +86,11 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
       await onPerformAction(
         // Pass sorted selections to bookkeeper
-        bk => bk.recordActivePlayers([...selectedHomePlayers].sort((a,b)=>a.localeCompare(b)), [...selectedAwayPlayers].sort((a,b)=>a.localeCompare(b))),
+        bk =>
+          bk.recordActivePlayers(
+            [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
+            [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
+          ),
         { skipViewChange: true, skipSave: false }
       );
       onLinesSelected();
@@ -103,7 +107,11 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       if (window.confirm(message)) {
         await onPerformAction(
           // Pass sorted selections to bookkeeper
-          bk => bk.recordActivePlayers([...selectedHomePlayers].sort((a,b)=>a.localeCompare(b)), [...selectedAwayPlayers].sort((a,b)=>a.localeCompare(b))),
+          bk =>
+            bk.recordActivePlayers(
+              [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
+              [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
+            ),
           { skipViewChange: true, skipSave: false }
         );
         onLinesSelected();
@@ -150,7 +158,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       : 'Select players for the first point.';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '10px' }}> {/* Added padding to overall component */}
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '10px' }}>
+      {' '}
+      {/* Added padding to overall component */}
       {/* Scrollable Content Area */}
       <div style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '10px' }}>
         <h3>{isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}</h3>
@@ -189,7 +199,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           editing the last event of that point.
         </p>
       </div>
-
       {/* Fixed Action Bar */}
       <div
         style={{

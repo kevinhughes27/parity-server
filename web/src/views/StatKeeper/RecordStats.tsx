@@ -109,11 +109,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
       border: '1px solid #ccc',
       borderRadius: '4px',
       fontWeight: isActivePlayer ? 'bold' : 'normal',
-      backgroundColor: finalIsDisabled
-        ? '#e0e0e0'
-        : isActivePlayer
-          ? '#a7d7f5'
-          : '#f0f0f0',
+      backgroundColor: finalIsDisabled ? '#e0e0e0' : isActivePlayer ? '#a7d7f5' : '#f0f0f0',
       color: finalIsDisabled ? '#999' : '#000',
       cursor: finalIsDisabled ? 'not-allowed' : 'pointer',
     };
@@ -165,9 +161,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Fill parent height */}
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      {' '}
+      {/* Fill parent height */}
       {/* Scrollable Content Area */}
-      <div style={{ flexGrow: 1, overflowY: 'auto', padding: '10px' }}> {/* Added padding to overall component */}
+      <div style={{ flexGrow: 1, overflowY: 'auto', padding: '10px' }}>
+        {' '}
+        {/* Added padding to overall component */}
         <div
           style={{
             padding: '8px', // Reduced padding
@@ -184,19 +184,22 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           <br />
           <strong>Game State:</strong> {GameState[currentGameState]}
         </div>
-
-        <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '200px' }}> {/* Adjusted minHeight */}
-          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}> {/* Reduced horizontal padding */}
+        <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '200px' }}>
+          {' '}
+          {/* Adjusted minHeight */}
+          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}>
+            {' '}
+            {/* Reduced horizontal padding */}
             <h4>{bookkeeper.homeTeam.name} (Roster)</h4>
             {/* fullHomeRoster is already sorted by LocalGame */}
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
           </div>
-
           <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
-
-          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}> {/* Reduced horizontal padding */}
+          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}>
+            {' '}
+            {/* Reduced horizontal padding */}
             <h4>{bookkeeper.awayTeam.name} (Roster)</h4>
             {/* fullAwayRoster is already sorted by LocalGame */}
             {fullAwayRoster.map(player =>
@@ -205,7 +208,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           </div>
         </div>
       </div>
-
       {/* Fixed Action Bar */}
       <div
         style={{
@@ -226,7 +228,14 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         }}
       >
         {/* Left group of action buttons */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'center' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+          }}
+        >
           <button
             onClick={() => handleActionClick(bk => bk.recordPull())}
             disabled={!btnPullEnabled}
@@ -284,8 +293,10 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         </div>
 
         {/* Right group of action buttons */}
-        <div style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center', marginLeft: 'auto' }}>
-          <button onClick={onChangeLine} style={{...actionButtonStyle, marginRight: '5px'}}>
+        <div
+          style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center', marginLeft: 'auto' }}
+        >
+          <button onClick={onChangeLine} style={{ ...actionButtonStyle, marginRight: '5px' }}>
             Change Line
           </button>
           <button

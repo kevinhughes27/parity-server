@@ -107,11 +107,17 @@ const EditRoster: React.FC<EditRosterProps> = ({
             </button>
           </li>
         ))}
-        {currentRosterNames.length === 0 && <li style={{ textAlign: 'center', color: '#777', padding: '10px' }}>No players on roster.</li>}
+        {currentRosterNames.length === 0 && (
+          <li style={{ textAlign: 'center', color: '#777', padding: '10px' }}>
+            No players on roster.
+          </li>
+        )}
       </ul>
 
       {/* Add Player Sections */}
-      <div style={{ flexShrink: 0 }}> {/* Prevent add sections from growing */}
+      <div style={{ flexShrink: 0 }}>
+        {' '}
+        {/* Prevent add sections from growing */}
         <div style={{ marginBottom: '10px' }}>
           <h5 style={{ margin: '0 0 5px 0', fontSize: '0.95em' }}>Add Player from League</h5>
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -137,7 +143,6 @@ const EditRoster: React.FC<EditRosterProps> = ({
             </button>
           </div>
         </div>
-
         <div>
           <h5 style={{ margin: '0 0 5px 0', fontSize: '0.95em' }}>Add Custom Substitute</h5>
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
