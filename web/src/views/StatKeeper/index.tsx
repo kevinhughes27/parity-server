@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db } from './db';
+import { db, StoredGame } from './db';
 import { Link, useNavigate } from 'react-router-dom';
 import { getLeagueName } from '../../api';
 
@@ -39,8 +39,113 @@ function StatKeeper() {
   };
 
   if (games === undefined) {
-    return <p>Loading local games...</p>;
+    return <p style={{ padding: '20px' }}>Loading local games...</p>;
   }
+
+  const resumableStatuses: StoredGame['status'][] = ['new', 'in-progress', 'paused', 'sync-error'];
+  const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
+  const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
+
+  const getStatusColor = (status: StoredGame['status']): string => {
+    switch (status) {
+      case 'new':
+      case 'in-progress':
+      case 'paused':
+        return 'blue';
+      case 'uploaded':
+        return 'green';
+      case 'sync-error':
+        return 'red';
+      case 'completed':
+      case 'submitted':
+        return 'black'; // Or a muted color like '#555'
+      default:
+        return 'black';
+    }
+  };
+
+  const renderGameItem = (game: StoredGame) => (
+    <li
+      key={game.localId}
+      style={{
+        marginBottom: '15px',
+        padding: '15px',
+        border: '1px solid #ccc',
+        borderRadius: '5px',
+        boxShadow: '2px 2px 5px rgba(0,0,0,0.1)',
+      }}
+    >
+      <h3>
+        {game.homeTeam} vs {game.awayTeam}
+      </h3>
+      <p style={{ margin: '5px 0' }}>
+        <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
+        {game.week}
+      </p>
+      <p style={{ margin: '5px 0' }}>
+        <strong>Status:</strong>{' '}
+        <span
+          style={{
+            fontWeight: 'bold',
+            color: getStatusColor(game.status),
+          }}
+        >
+          {game.status}
+        </span>
+      </p>
+      <p style={{ margin: '5px 0' }}>
+        <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
+        {game.awayTeam}
+      </p>
+      <p style={{ margin: '5px 0' }}>
+        <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
+      </p>
+
+      <div style={{ marginTop: '10px' }}>
+        {(game.status === 'new' ||
+          game.status === 'in-progress' ||
+          game.status === 'paused' ||
+          game.status === 'sync-error') &&
+          game.localId && (
+            <Link to={`/stat_keeper/game/${game.localId}`}>
+              <button style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}>
+                {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
+              </button>
+            </Link>
+          )}
+        {(game.status === 'submitted' ||
+          game.status === 'uploaded' ||
+          game.status === 'completed') &&
+          game.localId && (
+            <Link to={`/stat_keeper/game/${game.localId}`}>
+              <button
+                style={{
+                  padding: '8px 12px',
+                  cursor: 'pointer',
+                  marginRight: '10px',
+                  backgroundColor: '#eee',
+                }}
+              >
+                View Game
+              </button>
+            </Link>
+          )}
+        <button
+          onClick={() => handleDeleteGame(game.localId)}
+          style={{
+            padding: '8px 12px',
+            cursor: 'pointer',
+            backgroundColor: '#f44336',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+          }}
+        >
+          Delete
+        </button>
+      </div>
+    </li>
+  );
 
   return (
     <div style={{ padding: '20px' }}>
@@ -52,105 +157,24 @@ function StatKeeper() {
         Start New Game
       </button>
 
-      <h2>Locally Stored Games</h2>
-      {games.length === 0 ? (
-        <p>No games stored locally. Click "Start New Game" to begin.</p>
-      ) : (
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
-          {games.map(game => (
-            <li
-              key={game.localId}
-              style={{
-                marginBottom: '15px',
-                padding: '15px',
-                border: '1px solid #ccc',
-                borderRadius: '5px',
-                boxShadow: '2px 2px 5px rgba(0,0,0,0.1)',
-              }}
-            >
-              <h3>
-                {game.homeTeam} vs {game.awayTeam}
-              </h3>
-              <p style={{ margin: '5px 0' }}>
-                <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
-                {game.week}
-              </p>
-              <p style={{ margin: '5px 0' }}>
-                <strong>Status:</strong>{' '}
-                <span
-                  style={{
-                    fontWeight: 'bold',
-                    color:
-                      game.status === 'in-progress'
-                        ? 'green'
-                        : game.status === 'completed' ||
-                            game.status === 'submitted' ||
-                            game.status === 'uploaded'
-                          ? 'blue'
-                          : game.status === 'sync-error'
-                            ? 'red'
-                            : 'black',
-                  }}
-                >
-                  {game.status}
-                </span>
-              </p>
-              <p style={{ margin: '5px 0' }}>
-                <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
-                {game.awayTeam}
-              </p>
-              <p style={{ margin: '5px 0' }}>
-                <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
-              </p>
+      {resumableGames.length > 0 && (
+        <>
+          <h2>Resumable Games</h2>
+          <ul style={{ listStyleType: 'none', padding: 0 }}>
+            {resumableGames.map(renderGameItem)}
+          </ul>
+        </>
+      )}
 
-              <div style={{ marginTop: '10px' }}>
-                {(game.status === 'new' ||
-                  game.status === 'in-progress' ||
-                  game.status === 'paused' ||
-                  game.status === 'sync-error') && // Allow resuming if sync-error to try again
-                  game.localId && (
-                    <Link to={`/stat_keeper/game/${game.localId}`}>
-                      <button
-                        style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}
-                      >
-                        {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
-                      </button>
-                    </Link>
-                  )}
-                {(game.status === 'submitted' ||
-                  game.status === 'uploaded' ||
-                  game.status === 'completed') &&
-                  game.localId && (
-                    <Link to={`/stat_keeper/game/${game.localId}`}>
-                      <button
-                        style={{
-                          padding: '8px 12px',
-                          cursor: 'pointer',
-                          marginRight: '10px',
-                          backgroundColor: '#eee',
-                        }}
-                      >
-                        View Game
-                      </button>
-                    </Link>
-                  )}
-                <button
-                  onClick={() => handleDeleteGame(game.localId)}
-                  style={{
-                    padding: '8px 12px',
-                    cursor: 'pointer',
-                    backgroundColor: '#f44336',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                  }}
-                >
-                  Delete
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
+      {otherGames.length > 0 && (
+        <>
+          <h2>Other Local Games</h2>
+          <ul style={{ listStyleType: 'none', padding: 0 }}>{otherGames.map(renderGameItem)}</ul>
+        </>
+      )}
+
+      {games.length === 0 && (
+        <p>No games stored locally. Click "Start New Game" to begin.</p>
       )}
     </div>
   );
