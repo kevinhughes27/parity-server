@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { getLeagueName } from '../../api'; // fetchTeams and TeamPlayer are no longer directly needed
+import { getLeagueName } from '../../api';
 import EditRoster from './EditRoster';
-import { useLocalGame, useTeams } from './hooks'; // Removed GAME_LOADING_SENTINEL, added useTeams
+import { useLocalGame, useTeams } from './hooks';
+
+const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
 function EditGame() {
   const navigate = useNavigate();
-
   const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
-
-  // Use the useTeams hook to get all league players based on the game's league_id
-  // Pass game?.league_id to handle the case where game is initially undefined
   const {
     allLeaguePlayers,
     loadingTeams: loadingLeaguePlayers,
@@ -21,7 +19,6 @@ function EditGame() {
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
-  // Effect to initialize/update component's roster states when the 'game' object changes
   useEffect(() => {
     if (game) {
       setHomeRosterNames([...game.homeRoster]);
@@ -30,7 +27,7 @@ function EditGame() {
       setHomeRosterNames([]);
       setAwayRosterNames([]);
     }
-  }, [game]); // Dependency on the resolved 'game' object
+  }, [game]);
 
   const handleUpdateRosters = async () => {
     if (!game || numericGameId === undefined) {
@@ -61,13 +58,17 @@ function EditGame() {
   };
 
   if (isLoadingGame) {
-    return <p style={{ padding: '20px' }}>Loading game details...</p>;
+    return (
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
+        <p>Loading game details...</p>
+      </div>
+    );
   }
 
   if (gameError) {
     return (
-      <div style={{ padding: '20px' }}>
-        <p>{gameError}</p>
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
+        <p style={{ color: 'red' }}>{gameError}</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
@@ -75,7 +76,7 @@ function EditGame() {
 
   if (!game) {
     return (
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p>Game not found or ID is invalid.</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
@@ -83,41 +84,54 @@ function EditGame() {
   }
 
   return (
-    <div style={{ padding: '20px', paddingBottom: '40px' }}>
-      <Link
-        to={`/stat_keeper/game/${numericGameId}`}
-        style={{ marginBottom: '20px', display: 'inline-block' }}
-      >
-        &larr; Back to Game
-      </Link>
-      <h1>
-        Edit Game Rosters: {game.homeTeam} vs {game.awayTeam}
-      </h1>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+      {/* Top Bar */}
       <div
         style={{
-          marginBottom: '20px',
-          backgroundColor: '#f0f0f0',
-          padding: '10px',
-          borderRadius: '5px',
+          flexShrink: 0,
+          padding: '10px 15px',
+          borderBottom: '1px solid #eee',
+          backgroundColor: '#f8f9fa',
         }}
       >
-        <p>
-          <strong>League:</strong> {getLeagueName(game.league_id)}
-        </p>
-        <p>
-          <strong>Week:</strong> {game.week}
-        </p>
+        <Link
+          to={`/stat_keeper/game/${numericGameId}`}
+          style={{ fontSize: '0.9em', display: 'block', marginBottom: '5px' }}
+        >
+          &larr; Back to Game
+        </Link>
+        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}>
+          Edit Rosters: {game.homeTeam} vs {game.awayTeam}
+        </h1>
+        <div style={{ textAlign: 'center', fontSize: '0.9em' }}>
+          <p style={{ margin: '0 0 2px 0' }}>
+            <strong>League:</strong> {getLeagueName(game.league_id)}
+          </p>
+          <p style={{ margin: 0 }}>
+            <strong>Week:</strong> {game.week}
+          </p>
+        </div>
       </div>
 
-      {loadingLeaguePlayers && <p>Loading league player data...</p>}
-      {errorLeaguePlayers && (
-        <p style={{ color: 'red' }}>Error loading league players: {errorLeaguePlayers}</p>
-      )}
+      {/* Main Content Area (Scrollable Roster Columns) */}
+      <div
+        style={{
+          flexGrow: 1,
+          display: 'flex',
+          overflow: 'hidden', // Prevent this div from scrolling, children will scroll
+          padding: '10px', // Add some padding around the roster editors
+          paddingBottom: ACTION_BAR_HEIGHT, // Space for the fixed bottom bar
+          gap: '10px', // Space between the two roster columns
+        }}
+      >
+        {loadingLeaguePlayers && <p style={{ flex: 1, textAlign: 'center' }}>Loading league player data...</p>}
+        {errorLeaguePlayers && (
+          <p style={{ color: 'red', flex: 1, textAlign: 'center' }}>Error loading league players: {errorLeaguePlayers}</p>
+        )}
 
-      {!loadingLeaguePlayers && !errorLeaguePlayers && (
-        <>
-          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px' }}>
-            <div style={{ flex: 1 }}>
+        {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
+          <>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.homeTeam}
                 allLeaguePlayers={allLeaguePlayers}
@@ -125,7 +139,7 @@ function EditGame() {
                 onRosterChange={setHomeRosterNames}
               />
             </div>
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.awayTeam}
                 allLeaguePlayers={allLeaguePlayers}
@@ -133,13 +147,40 @@ function EditGame() {
                 onRosterChange={setAwayRosterNames}
               />
             </div>
-          </div>
+          </>
+        )}
+        {!loadingLeaguePlayers &&
+          !errorLeaguePlayers &&
+          allLeaguePlayers.length === 0 &&
+          game?.league_id && (
+            <p style={{ flex: 1, textAlign: 'center' }}>No players found for the league: {getLeagueName(game.league_id)}.</p>
+          )}
+      </div>
+
+      {/* Fixed Bottom Action Bar */}
+      {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: ACTION_BAR_HEIGHT,
+            padding: '10px 15px',
+            backgroundColor: 'white',
+            borderTop: '1px solid #ccc',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center', // Center the button
+            boxSizing: 'border-box',
+            zIndex: 100,
+          }}
+        >
           <button
             onClick={handleUpdateRosters}
             style={{
-              marginTop: '20px', // Added margin top for spacing from roster editors
               padding: '10px 20px',
-              fontSize: '16px',
+              fontSize: '1em',
               cursor: 'pointer',
               backgroundColor: 'blue',
               color: 'white',
@@ -147,18 +188,13 @@ function EditGame() {
               borderRadius: '5px',
             }}
             disabled={
-              homeRosterNames.length === 0 || awayRosterNames.length === 0 || loadingLeaguePlayers
+              homeRosterNames.length === 0 || awayRosterNames.length === 0
             }
           >
             Update Rosters
           </button>
-        </>
+        </div>
       )}
-      {/* Display if league players are loaded but the list is empty (e.g. league has no players) */}
-      {!loadingLeaguePlayers &&
-        !errorLeaguePlayers &&
-        allLeaguePlayers.length === 0 &&
-        game?.league_id && <p>No players found for the league: {getLeagueName(game.league_id)}.</p>}
     </div>
   );
 }
