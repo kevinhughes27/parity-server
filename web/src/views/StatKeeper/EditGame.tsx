@@ -116,22 +116,28 @@ function EditGame() {
 
       {!loadingLeaguePlayers && !errorLeaguePlayers && (
         <>
-          <EditRoster
-            teamName={game.homeTeam}
-            allLeaguePlayers={allLeaguePlayers}
-            currentRosterNames={homeRosterNames}
-            onRosterChange={setHomeRosterNames}
-          />
-          <EditRoster
-            teamName={game.awayTeam}
-            allLeaguePlayers={allLeaguePlayers}
-            currentRosterNames={awayRosterNames}
-            onRosterChange={setAwayRosterNames}
-          />
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px' }}>
+            <div style={{ flex: 1 }}>
+              <EditRoster
+                teamName={game.homeTeam}
+                allLeaguePlayers={allLeaguePlayers}
+                currentRosterNames={homeRosterNames}
+                onRosterChange={setHomeRosterNames}
+              />
+            </div>
+            <div style={{ flex: 1 }}>
+              <EditRoster
+                teamName={game.awayTeam}
+                allLeaguePlayers={allLeaguePlayers}
+                currentRosterNames={awayRosterNames}
+                onRosterChange={setAwayRosterNames}
+              />
+            </div>
+          </div>
           <button
             onClick={handleUpdateRosters}
             style={{
-              marginBottom: '20px',
+              marginTop: '20px', // Added margin top for spacing from roster editors
               padding: '10px 20px',
               fontSize: '16px',
               cursor: 'pointer',
