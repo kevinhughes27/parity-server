@@ -117,8 +117,13 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
 
     fetchTeams(leagueId)
       .then(teams => {
-        setLeagueTeams(teams);
-        const allPlayers = teams.reduce((acc, team) => {
+        const sortedTeams = teams.map(team => ({
+          ...team,
+          players: [...team.players].sort((a, b) => a.name.localeCompare(b.name)),
+        }));
+        setLeagueTeams(sortedTeams);
+
+        const allPlayers = sortedTeams.reduce((acc, team) => {
           team.players.forEach(p => {
             if (!acc.some(ap => ap.name === p.name)) {
               acc.push(p);
@@ -126,7 +131,7 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
           });
           return acc;
         }, [] as TeamPlayer[]);
-        setAllLeaguePlayers(allPlayers);
+        setAllLeaguePlayers([...allPlayers].sort((a, b) => a.name.localeCompare(b.name)));
       })
       .catch(err => {
         setErrorTeams(err instanceof Error ? err.message : 'Failed to load teams from API');
