@@ -63,11 +63,10 @@ export function useLocalGame(): UseLocalGameResult {
       // If data is found, clear any "not found" error.
       // This handles cases where an error might have been set transiently.
       if (error === `Game with ID ${numericGameId} not found.`) {
-         setError(null);
+        setError(null);
       }
     }
   }, [numericGameId, rawGameData, isLoading, error]);
-
 
   return {
     game: rawGameData,
@@ -80,7 +79,7 @@ export function useLocalGame(): UseLocalGameResult {
 export interface UseTeamsResult {
   leagueTeams: Team[]; // Teams within the league
   allLeaguePlayers: TeamPlayer[]; // All unique players across those teams
-  apiLeague: typeof apiLeagues[0] | undefined; // The specific league object from apiLeagues
+  apiLeague: (typeof apiLeagues)[0] | undefined; // The specific league object from apiLeagues
   loadingTeams: boolean;
   errorTeams: string | null;
 }
@@ -88,7 +87,7 @@ export interface UseTeamsResult {
 export function useTeams(leagueId: string | undefined): UseTeamsResult {
   const [leagueTeams, setLeagueTeams] = useState<Team[]>([]);
   const [allLeaguePlayers, setAllLeaguePlayers] = useState<TeamPlayer[]>([]);
-  const [apiLeague, setApiLeague] = useState<typeof apiLeagues[0] | undefined>(undefined);
+  const [apiLeague, setApiLeague] = useState<(typeof apiLeagues)[0] | undefined>(undefined);
   const [loadingTeams, setLoadingTeams] = useState<boolean>(false);
   const [errorTeams, setErrorTeams] = useState<string | null>(null);
 

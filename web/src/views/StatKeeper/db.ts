@@ -1,6 +1,11 @@
 import Dexie, { type EntityTable } from 'dexie';
 import { type Point, type PointEvent as ApiPointEvent } from '../../api'; // Point here is the API's Point
-import { type SerializedMemento, type BookkeeperVolatileState, EventType, Event as ModelEvent } from './models';
+import {
+  type SerializedMemento,
+  type BookkeeperVolatileState,
+  EventType,
+  Event as ModelEvent,
+} from './models';
 
 // Define the structure of the game object to be stored in Dexie
 export interface StoredGame {
@@ -26,10 +31,10 @@ export interface StoredGame {
 
   // Extended state for Bookkeeper
   bookkeeperState?: BookkeeperVolatileState; // Contains activePoint (with enum types), firstActor, scores, etc.
-                                          // Note: activePoint within bookkeeperState will store events with EventType enum.
-                                          // When saving to StoredGame, this needs conversion if StoredGame.bookkeeperState.activePoint
-                                          // is expected to have string event types. For simplicity, we'll store BookkeeperVolatileState
-                                          // as is, and handle conversion during hydration/serialization for StoredGame.points.
+  // Note: activePoint within bookkeeperState will store events with EventType enum.
+  // When saving to StoredGame, this needs conversion if StoredGame.bookkeeperState.activePoint
+  // is expected to have string event types. For simplicity, we'll store BookkeeperVolatileState
+  // as is, and handle conversion during hydration/serialization for StoredGame.points.
   mementos?: SerializedMemento[];
 }
 
@@ -65,7 +70,8 @@ db.version(2)
 db.version(3)
   .stores({
     // Added homeTeamId, awayTeamId to the index for potential future queries, though not strictly necessary for current functionality.
-    games: '++localId, serverId, league_id, week, homeTeamId, awayTeamId, status, lastModified, *mementos, bookkeeperState',
+    games:
+      '++localId, serverId, league_id, week, homeTeamId, awayTeamId, status, lastModified, *mementos, bookkeeperState',
   })
   .upgrade(tx => {
     return tx

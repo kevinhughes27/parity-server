@@ -98,7 +98,6 @@ export interface UploadedGamePayload {
   awayScore: number;
 }
 
-
 const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
   return await response.json();
@@ -147,7 +146,6 @@ const uploadCompleteGame = async (payload: UploadedGamePayload) => {
     body: JSON.stringify(payload),
   });
 };
-
 
 const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;

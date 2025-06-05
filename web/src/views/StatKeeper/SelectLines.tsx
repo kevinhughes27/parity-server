@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Bookkeeper } from './bookkeeper'
+import { Bookkeeper } from './bookkeeper';
 import { StoredGame } from './db'; // Import StoredGame for status type
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
   homeRoster: string[]; // Full team roster
   awayRoster: string[]; // Full team roster
-  onPerformAction: (action: (bk: Bookkeeper) => void, options?: { skipViewChange?: boolean, skipSave?: boolean }) => Promise<void>;
+  onPerformAction: (
+    action: (bk: Bookkeeper) => void,
+    options?: { skipViewChange?: boolean; skipSave?: boolean }
+  ) => Promise<void>;
   onLinesSelected: () => void;
   isResumingPointMode: boolean;
   lastPlayedLine: { home: string[]; away: string[] } | null;
@@ -23,7 +26,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   isResumingPointMode,
   lastPlayedLine,
   onSubmitGame, // Destructure new prop
-  gameStatus,   // Destructure new prop
+  gameStatus, // Destructure new prop
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
@@ -44,13 +47,16 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
     }
-  }, [isResumingPointMode, lastPlayedLine, bookkeeper.homePlayers, bookkeeper.awayPlayers, homeRoster, awayRoster]);
+  }, [
+    isResumingPointMode,
+    lastPlayedLine,
+    bookkeeper.homePlayers,
+    bookkeeper.awayPlayers,
+    homeRoster,
+    awayRoster,
+  ]);
 
-
-  const togglePlayerSelection = (
-    playerName: string,
-    isHomeTeam: boolean
-  ) => {
+  const togglePlayerSelection = (playerName: string, isHomeTeam: boolean) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
     const teamName = isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name;
@@ -74,20 +80,26 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     const rightCorrectNumPlayers = rightPlayerCount === leagueLineSize;
 
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-      await onPerformAction(bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers), { skipViewChange: true, skipSave: false });
+      await onPerformAction(
+        bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers),
+        { skipViewChange: true, skipSave: false }
+      );
       onLinesSelected();
     } else {
-      let message = "Incorrect number of players:";
+      let message = 'Incorrect number of players:';
       if (!leftCorrectNumPlayers) {
         message += `\n${bookkeeper.homeTeam.name}: ${leftPlayerCount}/${leagueLineSize} selected`;
       }
       if (!rightCorrectNumPlayers) {
         message += `\n${bookkeeper.awayTeam.name}: ${rightPlayerCount}/${leagueLineSize} selected`;
       }
-      message += "\n\nContinue with these players anyway?";
+      message += '\n\nContinue with these players anyway?';
 
       if (window.confirm(message)) {
-        await onPerformAction(bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers), { skipViewChange: true, skipSave: false });
+        await onPerformAction(
+          bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers),
+          { skipViewChange: true, skipSave: false }
+        );
         onLinesSelected();
       }
     }
@@ -99,13 +111,12 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   const handleRecordHalf = async () => {
     if (bookkeeper.pointsAtHalf > 0) {
-        alert("Half has already been recorded.");
-        return;
+      alert('Half has already been recorded.');
+      return;
     }
     await onPerformAction(bk => bk.recordHalf());
-    alert("Half time recorded."); 
+    alert('Half time recorded.');
   };
-
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
@@ -121,7 +132,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           padding: '10px',
           marginBottom: '5px',
           textAlign: 'left',
-          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0', 
+          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0',
           border: isSelected ? '1px solid #007bff' : '1px solid #ccc',
           borderRadius: '4px',
           cursor: 'pointer',
@@ -133,27 +144,38 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     );
   };
 
-  const buttonText = isResumingPointMode ? "Resume Point" : "Confirm Lines & Start Point";
-  const helpText = isResumingPointMode 
+  const buttonText = isResumingPointMode ? 'Resume Point' : 'Confirm Lines & Start Point';
+  const helpText = isResumingPointMode
     ? "Adjust the current line if needed, then click 'Resume Point'."
-    : (lastPlayedLine 
-        ? "Players not on the previous line are pre-selected. Adjust and confirm." 
-        : "Select players for the first point.");
+    : lastPlayedLine
+      ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
+      : 'Select players for the first point.';
 
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
   const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
 
   return (
     <div>
-      <h3>{isResumingPointMode ? "Adjust Current Line" : "Select Lines for Next Point"}</h3>
+      <h3>{isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}</h3>
       <p>Required players per team: {leagueLineSize}</p>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'nowrap' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginBottom: '20px',
+          flexWrap: 'nowrap',
+        }}
+      >
         <div style={{ flex: 1, marginRight: '10px' }}>
-          <h4>{bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})</h4>
+          <h4>
+            {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
+          </h4>
           {homeRoster.map(player => renderPlayerButton(player, true))}
         </div>
         <div style={{ flex: 1, marginLeft: '10px' }}>
-          <h4>{bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})</h4>
+          <h4>
+            {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
+          </h4>
           {awayRoster.map(player => renderPlayerButton(player, false))}
         </div>
       </div>
@@ -161,46 +183,68 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         <button
           onClick={handleDone}
           disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
-          style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '4px' }}
+          style={{
+            padding: '10px 15px',
+            fontSize: '16px',
+            backgroundColor: 'green',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+          }}
         >
           {buttonText}
         </button>
         {bookkeeper.getMementosCount() > 0 && (
-           <button
-              onClick={handleUndoLastAction}
-              style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
-            >
-             Undo Last Action
-           </button>
+          <button
+            onClick={handleUndoLastAction}
+            style={{
+              padding: '10px 15px',
+              fontSize: '16px',
+              backgroundColor: '#f44336',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+            }}
+          >
+            Undo Last Action
+          </button>
         )}
         <button
-            onClick={handleRecordHalf}
-            disabled={isHalfRecorded}
-            style={{ padding: '10px 15px', fontSize: '16px', backgroundColor: isHalfRecorded ? '#cccccc' : '#007bff', color: 'white', border: 'none', borderRadius: '4px' }}
-            title={isHalfRecorded ? "Half time has already been recorded" : "Record Half Time"}
+          onClick={handleRecordHalf}
+          disabled={isHalfRecorded}
+          style={{
+            padding: '10px 15px',
+            fontSize: '16px',
+            backgroundColor: isHalfRecorded ? '#cccccc' : '#007bff',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+          }}
+          title={isHalfRecorded ? 'Half time has already been recorded' : 'Record Half Time'}
         >
-            Record Half
+          Record Half
         </button>
         <button
-            onClick={onSubmitGame}
-            disabled={!canSubmitGame}
-            style={{ 
-                padding: '10px 15px', 
-                fontSize: '16px', 
-                backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
-                color: 'white', 
-                border: 'none', 
-                borderRadius: '4px' 
-            }}
-            title={canSubmitGame ? "Submit game to server" : `Game status: ${gameStatus}`}
+          onClick={onSubmitGame}
+          disabled={!canSubmitGame}
+          style={{
+            padding: '10px 15px',
+            fontSize: '16px',
+            backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+          }}
+          title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}
         >
-            Submit Game
+          Submit Game
         </button>
       </div>
-      <p style={{marginTop: '15px', fontSize: '0.9em', color: 'gray'}}>
+      <p style={{ marginTop: '15px', fontSize: '0.9em', color: 'gray' }}>
         {helpText}
-        <br/>
-        If a point was just scored, 'Undo Last Action' will revert the score and take you back to editing the last event of that point.
+        <br />
+        If a point was just scored, 'Undo Last Action' will revert the score and take you back to
+        editing the last event of that point.
       </p>
     </div>
   );
