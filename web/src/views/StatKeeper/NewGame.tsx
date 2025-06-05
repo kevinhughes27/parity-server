@@ -9,6 +9,22 @@ import EditRoster from './EditRoster';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
+const placeholderRosterStyle: React.CSSProperties = {
+  border: '1px dashed #ccc',
+  padding: '20px',
+  textAlign: 'center',
+  height: '100%', // Fill the column
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: '#f9f9f9',
+  borderRadius: '5px',
+  boxSizing: 'border-box',
+  fontSize: '0.9em',
+  color: '#555',
+};
+
 function NewGame() {
   const navigate = useNavigate();
 
@@ -122,53 +138,61 @@ function NewGame() {
         <h1 style={{ fontSize: '1.5em', margin: '0', textAlign: 'center' }}>{pageTitle}</h1>
       </div>
 
-      {/* Main Content Area (Scrollable) */}
+      {/* Main Content Area */}
       <div
         style={{
-          flexGrow: 1,
-          overflowY: 'auto',
+          flexGrow: 1, // Takes available vertical space
+          display: 'flex', // Enables flex for children
+          flexDirection: 'column', // Stacks children vertically
+          overflowY: 'auto', // Allows this section to scroll if its content overflows
           padding: '15px',
-          paddingBottom: `calc(${ACTION_BAR_HEIGHT} + 15px)`, // Space for the fixed bottom bar + some padding
+          paddingBottom: `calc(${ACTION_BAR_HEIGHT} + 15px)`, // Space for the fixed action bar
         }}
       >
-        <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label htmlFor="league-select" style={{ flexShrink: 0 }}>
-            League:
-          </label>
-          <select
-            id="league-select"
-            value={selectedLeagueId}
-            onChange={e => setSelectedLeagueId(e.target.value)}
-            style={{ padding: '8px', flexGrow: 1 }}
-          >
-            {apiLeagues.map(l => (
-              <option key={l.id} value={l.id}>
-                {l.name}
-              </option>
-            ))}
-          </select>
+        {/* Section 1: League and Week Selectors (does not grow vertically) */}
+        <div style={{ flexShrink: 0 }}>
+          <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <label htmlFor="league-select" style={{ flexShrink: 0 }}>
+              League:
+            </label>
+            <select
+              id="league-select"
+              value={selectedLeagueId}
+              onChange={e => setSelectedLeagueId(e.target.value)}
+              style={{ padding: '8px', flexGrow: 1 }}
+            >
+              {apiLeagues.map(l => (
+                <option key={l.id} value={l.id}>
+                  {l.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <label htmlFor="week-select" style={{ flexShrink: 0 }}>
+              Week:
+            </label>
+            <input
+              type="number"
+              id="week-select"
+              value={week}
+              onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
+              min="1"
+              style={{ padding: '8px', width: '80px' }}
+            />
+          </div>
         </div>
 
-        <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label htmlFor="week-select" style={{ flexShrink: 0 }}>
-            Week:
-          </label>
-          <input
-            type="number"
-            id="week-select"
-            value={week}
-            onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
-            min="1"
-            style={{ padding: '8px', width: '80px' }} // Fixed width for week input
-          />
-        </div>
+        {/* Loading/Error Messages (does not grow vertically) */}
+        {loadingTeams && <p style={{ flexShrink: 0 }}>Loading teams...</p>}
+        {errorTeams && <p style={{ color: 'red', flexShrink: 0 }}>Error: {errorTeams}</p>}
 
-        {loadingTeams && <p>Loading teams...</p>}
-        {errorTeams && <p style={{ color: 'red' }}>Error: {errorTeams}</p>}
-
+        {/* Section 2: Team Selectors and Roster Editors (this section grows vertically) */}
         {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
-          <>
-            <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+          <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' /* Important: children manage their height/scroll */ }}>
+            {/* Team Selection Dropdowns (does not grow vertically within this section) */}
+            <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', flexShrink: 0 }}>
               <div style={{ flex: 1 }}>
                 <label
                   htmlFor="home-team-select"
@@ -235,32 +259,45 @@ function NewGame() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '20px' }}>
-              {selectedHomeTeamObj && (
-                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            {/* Roster Editing Columns (this div grows vertically to fill space, and its children are side-by-side) */}
+            <div style={{ display: 'flex', gap: '20px', flexGrow: 1, overflow: 'hidden' /* Children (EditRoster/Placeholder) will fill height */ }}>
+              {/* Home Roster Column */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                {selectedHomeTeamObj ? (
                   <EditRoster
                     teamName={selectedHomeTeamObj.name}
                     allLeaguePlayers={allLeaguePlayers}
                     currentRosterNames={homeRosterNames}
                     onRosterChange={setHomeRosterNames}
                   />
-                </div>
-              )}
-              {selectedAwayTeamObj && (
-                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                ) : (
+                  <div style={placeholderRosterStyle}>
+                    <p>Select Home Team to edit roster.</p>
+                  </div>
+                )}
+              </div>
+              {/* Away Roster Column */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                {selectedAwayTeamObj ? (
                   <EditRoster
                     teamName={selectedAwayTeamObj.name}
                     allLeaguePlayers={allLeaguePlayers}
                     currentRosterNames={awayRosterNames}
                     onRosterChange={setAwayRosterNames}
                   />
-                </div>
-              )}
+                ) : (
+                  <div style={placeholderRosterStyle}>
+                    <p>Select Away Team to edit roster.</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </>
+          </div>
         )}
+
+        {/* Message if no teams found (does not grow vertically) */}
         {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && (
-          <p>No teams found for the selected league.</p>
+          <p style={{ flexShrink: 0 }}>No teams found for the selected league.</p>
         )}
       </div>
 
