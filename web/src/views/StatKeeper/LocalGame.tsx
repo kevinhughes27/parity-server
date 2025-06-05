@@ -22,8 +22,10 @@ import GameActionsMenu from './GameActionsMenu'; // Import the new menu componen
 
 type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
 
+const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
+
 function LocalGame() {
-  const navigate = useNavigate(); // For "Edit Game" in menu
+  const navigate = useNavigate();
   const {
     game: storedGame,
     isLoading: isLoadingGameHook,
@@ -40,7 +42,23 @@ function LocalGame() {
     null
   );
   const [isResumingPointMode, setIsResumingPointMode] = useState<boolean>(false);
-  // No longer need lastCompletedPointEvents state, will derive from bookkeeperInstance
+
+  useEffect(() => {
+    const elem = document.documentElement;
+    const requestFullScreen =
+      elem.requestFullscreen ||
+      (elem as any).mozRequestFullScreen ||
+      (elem as any).webkitRequestFullscreen ||
+      (elem as any).msRequestFullscreen;
+
+    if (requestFullScreen) {
+      requestFullScreen.call(elem).catch((err: Error) => {
+        console.warn(`Fullscreen request failed: ${err.message} (${err.name})`);
+        // Note: Fullscreen requests usually require a user gesture.
+        // Automatic requests might be blocked by the browser.
+      });
+    }
+  }, []); // Run once on mount
 
   const initializeBookkeeper = useCallback(
     (gameData: StoredGame) => {
@@ -54,7 +72,7 @@ function LocalGame() {
         setLocalError(
           `League configuration for ID ${gameData.league_id} not found or still loading.`
         );
-        setCurrentView('initializing'); // Stay in initializing if apiLeague not ready
+        setCurrentView('initializing');
         return;
       }
 
@@ -133,13 +151,13 @@ function LocalGame() {
         setCurrentView('error_state');
       }
     },
-    [apiLeague] // apiLeague is a dependency
+    [apiLeague]
   );
 
   useEffect(() => {
     if (isLoadingGameHook || isLoadingApiLeague) {
       setCurrentView('loading');
-      setBookkeeperInstance(null); // Ensure bookkeeper is cleared while loading
+      setBookkeeperInstance(null);
       return;
     }
     if (gameErrorHook) {
@@ -149,33 +167,26 @@ function LocalGame() {
       return;
     }
     if (storedGame) {
-      setLocalError(null); // Clear previous errors
-      if (apiLeague) { // Only initialize if apiLeague is also loaded
+      setLocalError(null);
+      if (apiLeague) {
         initializeBookkeeper(storedGame);
       } else {
-        // This case means storedGame is loaded, but apiLeague is not (and not loading anymore)
-        // This could happen if fetchTeams failed or leagueId is bad.
-        // useTeams hook should set an error in this case, which would be caught by errorTeams in useTeams.
-        // For safety, we can set a local error or rely on the initializing state.
         setLocalError(`League details for league ID ${storedGame.league_id} could not be loaded.`);
-        setCurrentView('error_state'); // Or 'initializing' if we expect apiLeague to eventually load
+        setCurrentView('error_state');
       }
     } else if (!isLoadingGameHook && numericGameId !== undefined) {
-      // Game not found, and not loading
       setLocalError(`Game with ID ${numericGameId} not found.`);
       setCurrentView('error_state');
       setBookkeeperInstance(null);
     }
-    // If storedGame is undefined and isLoadingGameHook is false, it means no game ID or invalid ID.
-    // This case should be handled by gameErrorHook or numericGameId being undefined.
   }, [
     storedGame,
     isLoadingGameHook,
     gameErrorHook,
     numericGameId,
     initializeBookkeeper,
-    apiLeague, // Add apiLeague as a dependency
-    isLoadingApiLeague, // Add isLoadingApiLeague
+    apiLeague,
+    isLoadingApiLeague,
   ]);
 
 
@@ -209,8 +220,8 @@ function LocalGame() {
       points: pointsForStorage,
       bookkeeperState: bookkeeperStateForStorage,
       mementos: serializedData.mementos,
-      homeRoster: serializedData.bookkeeperState.homeParticipants, // Ensure rosters are updated
-      awayRoster: serializedData.bookkeeperState.awayParticipants, // Ensure rosters are updated
+      homeRoster: serializedData.bookkeeperState.homeParticipants,
+      awayRoster: serializedData.bookkeeperState.awayParticipants,
       lastModified: new Date(),
       status: statusToSave,
     };
@@ -235,7 +246,6 @@ function LocalGame() {
 
     const actionName = action.name || action.toString();
     if (actionName.includes('recordPoint')) {
-      // No need to setLastCompletedPointEvents here, it will be derived
       setLastPlayedLine({
         home: [...(bookkeeperInstance.homePlayers || [])],
         away: [...(bookkeeperInstance.awayPlayers || [])],
@@ -281,7 +291,7 @@ function LocalGame() {
           bk => {
             bk.prepareNewPointAfterScore();
           },
-          { skipViewChange: true, skipSave: false } // skipSave was false, ensure it's correct
+          { skipViewChange: true, skipSave: false }
         );
       }
       setCurrentView('recordStats');
@@ -300,7 +310,6 @@ function LocalGame() {
   };
 
   const handlePointScored = () => {
-    // lastCompletedPointEvents will be derived from bookkeeperInstance.getLastCompletedPointPrettyPrint()
     setCurrentView('selectLines');
   };
 
@@ -321,10 +330,7 @@ function LocalGame() {
     }
 
     try {
-      // Persist current state with 'submitted' status first
       await persistBookkeeperState(bookkeeperInstance, 'submitted');
-      // The useLiveQuery for storedGame should update the UI to reflect "submitted"
-
       const bkState = bookkeeperInstance.serialize();
       const gameDataForApi: UploadedGamePayload = {
         league_id: bkState.league_id,
@@ -360,8 +366,7 @@ function LocalGame() {
         alert(errorMessage);
       }
     } catch (error) {
-      // Ensure state is 'sync-error' if any part of submission fails
-      if (bookkeeperInstance) { // Check if bookkeeperInstance is still valid
+      if (bookkeeperInstance) {
          await persistBookkeeperState(bookkeeperInstance, 'sync-error');
       }
       alert(
@@ -371,18 +376,19 @@ function LocalGame() {
     }
   };
 
-
   if (currentView === 'loading' || (currentView === 'initializing' && !localError)) {
     return (
-      <p style={{ padding: '20px' }}>
-        {currentView === 'loading' ? 'Loading game data...' : 'Initializing game logic...'}
-      </p>
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
+        <p>
+          {currentView === 'loading' ? 'Loading game data...' : 'Initializing game logic...'}
+        </p>
+      </div>
     );
   }
 
   if (currentView === 'error_state' || localError) {
     return (
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p style={{ color: 'red' }}>Error: {localError || 'An unexpected error occurred.'}</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
@@ -390,10 +396,8 @@ function LocalGame() {
   }
 
   if (!bookkeeperInstance || !storedGame) {
-    // This case should ideally be covered by loading/error states,
-    // but as a fallback:
     return (
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p>Game logic or data not available. Please try again or check console for errors.</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
@@ -404,62 +408,84 @@ function LocalGame() {
   const isHalfRecorded = bookkeeperInstance.pointsAtHalf > 0;
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+      {/* Top Bar */}
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '20px',
+          flexShrink: 0,
+          padding: '10px 15px', // Reduced padding
           borderBottom: '1px solid #eee',
-          paddingBottom: '10px',
+          backgroundColor: '#f8f9fa', // Light background for top bar
         }}
       >
-        <Link to="/stat_keeper" style={{ display: 'inline-block', fontSize: '1em' }}>
-          &larr; StatKeeper Home
-        </Link>
-        <GameActionsMenu
-          numericGameId={numericGameId}
-          gameStatus={storedGame.status}
-          isHalfRecorded={isHalfRecorded}
-          onRecordHalf={handleRecordHalf}
-          onSubmitGame={handleSubmitGame}
-        />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '5px', // Reduced margin
+          }}
+        >
+          <Link to="/stat_keeper" style={{ fontSize: '0.9em' }}> {/* Slightly smaller link */}
+            &larr; StatKeeper Home
+          </Link>
+          <GameActionsMenu
+            numericGameId={numericGameId}
+            gameStatus={storedGame.status}
+            isHalfRecorded={isHalfRecorded}
+            onRecordHalf={handleRecordHalf}
+            onSubmitGame={handleSubmitGame}
+          />
+        </div>
+        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}> {/* Centered title */}
+          {storedGame.homeTeam} vs {storedGame.awayTeam}
+        </h1>
+        <div style={{ textAlign: 'center', fontSize: '0.9em' }}> {/* Centered score/status */}
+          <p style={{ margin: '0 0 2px 0' }}>
+            <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
+          </p>
+          <p style={{ margin: 0 }}>
+            <strong>Status:</strong> <span style={{ fontWeight: 'bold' }}>{storedGame.status}</span>
+          </p>
+        </div>
       </div>
-      <h1>
-        {storedGame.homeTeam} vs {storedGame.awayTeam}
-      </h1>
-      <p>
-        <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
-      </p>
-      <p>
-        <strong>Status:</strong> <span style={{ fontWeight: 'bold' }}>{storedGame.status}</span>
-      </p>
-      <hr style={{ margin: '20px 0' }} />
 
-      {currentView === 'selectLines' && (
-        <SelectLines
-          bookkeeper={bookkeeperInstance}
-          homeRoster={storedGame.homeRoster}
-          awayRoster={storedGame.awayRoster}
-          onPerformAction={handlePerformBookkeeperAction}
-          onLinesSelected={handleLinesSelected}
-          isResumingPointMode={isResumingPointMode}
-          lastPlayedLine={lastPlayedLine}
-          lastCompletedPointEvents={lastCompletedPointEvents}
-        />
-      )}
+      {/* Main Content Area (Scrollable) */}
+      <div
+        style={{
+          flexGrow: 1,
+          overflowY: 'auto',
+          paddingBottom: ACTION_BAR_HEIGHT, // Space for the fixed bottom bar
+          position: 'relative', // For potential absolutely positioned children if needed
+        }}
+      >
+        {currentView === 'selectLines' && (
+          <SelectLines
+            bookkeeper={bookkeeperInstance}
+            homeRoster={storedGame.homeRoster}
+            awayRoster={storedGame.awayRoster}
+            onPerformAction={handlePerformBookkeeperAction}
+            onLinesSelected={handleLinesSelected}
+            isResumingPointMode={isResumingPointMode}
+            lastPlayedLine={lastPlayedLine}
+            lastCompletedPointEvents={lastCompletedPointEvents}
+            actionBarHeight={ACTION_BAR_HEIGHT}
+          />
+        )}
 
-      {currentView === 'recordStats' && (
-        <RecordStats
-          bookkeeper={bookkeeperInstance}
-          fullHomeRoster={storedGame.homeRoster}
-          fullAwayRoster={storedGame.awayRoster}
-          onPerformAction={handlePerformBookkeeperAction}
-          onPointScored={handlePointScored}
-          onChangeLine={handleChangeLine}
-        />
-      )}
+        {currentView === 'recordStats' && (
+          <RecordStats
+            bookkeeper={bookkeeperInstance}
+            fullHomeRoster={storedGame.homeRoster}
+            fullAwayRoster={storedGame.awayRoster}
+            onPerformAction={handlePerformBookkeeperAction}
+            onPointScored={handlePointScored}
+            onChangeLine={handleChangeLine}
+            actionBarHeight={ACTION_BAR_HEIGHT}
+          />
+        )}
+      </div>
+      {/* The fixed action bar is now rendered by SelectLines/RecordStats */}
     </div>
   );
 }
