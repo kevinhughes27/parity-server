@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate
+import { Link } from 'react-router-dom';
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -25,7 +25,6 @@ type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'ini
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
 function LocalGame() {
-  const navigate = useNavigate();
   const {
     game: storedGame,
     isLoading: isLoadingGameHook,

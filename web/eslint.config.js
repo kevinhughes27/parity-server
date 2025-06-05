@@ -30,6 +30,9 @@ export default [
         JSX: 'readonly',
         React: 'readonly',
         alert: 'readonly',
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
       }
     },
     plugins: {
