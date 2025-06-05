@@ -38,22 +38,30 @@ function NewGame() {
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
+  const sortAndSetHomeRoster = (roster: string[]) => {
+    setHomeRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  };
+
+  const sortAndSetAwayRoster = (roster: string[]) => {
+    setAwayRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  };
+
   useEffect(() => {
     setHomeTeamIdStr('');
     setAwayTeamIdStr('');
-    setHomeRosterNames([]);
-    setAwayRosterNames([]);
+    sortAndSetHomeRoster([]);
+    sortAndSetAwayRoster([]);
   }, [selectedLeagueId]);
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamIdStr);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamIdStr);
 
   useEffect(() => {
-    setHomeRosterNames(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
+    sortAndSetHomeRoster(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
   }, [selectedHomeTeamObj]);
 
   useEffect(() => {
-    setAwayRosterNames(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
+    sortAndSetAwayRoster(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
   }, [selectedAwayTeamObj]);
 
   const handleCreateGame = async () => {
@@ -77,8 +85,8 @@ function NewGame() {
       awayPlayers: null,
       homeScore: 0,
       awayScore: 0,
-      homeParticipants: [...homeRosterNames],
-      awayParticipants: [...awayRosterNames],
+      homeParticipants: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      awayParticipants: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
     };
 
     const initialMementos: SerializedMemento[] = [];
@@ -90,11 +98,11 @@ function NewGame() {
       homeTeam: selectedHomeTeamObj.name,
       homeTeamId: selectedHomeTeamObj.id,
       homeScore: 0,
-      homeRoster: homeRosterNames,
+      homeRoster: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
       awayTeam: selectedAwayTeamObj.name,
       awayTeamId: selectedAwayTeamObj.id,
       awayScore: 0,
-      awayRoster: awayRosterNames,
+      awayRoster: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
       points: [],
       status: 'new',
       lastModified: new Date(),
@@ -266,9 +274,9 @@ function NewGame() {
                 {selectedHomeTeamObj ? (
                   <EditRoster
                     teamName={selectedHomeTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers}
-                    currentRosterNames={homeRosterNames}
-                    onRosterChange={setHomeRosterNames}
+                    allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
+                    currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
+                    onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
                   />
                 ) : (
                   <div style={placeholderRosterStyle}>
@@ -281,9 +289,9 @@ function NewGame() {
                 {selectedAwayTeamObj ? (
                   <EditRoster
                     teamName={selectedAwayTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers}
-                    currentRosterNames={awayRosterNames}
-                    onRosterChange={setAwayRosterNames}
+                    allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
+                    currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
+                    onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
                   />
                 ) : (
                   <div style={placeholderRosterStyle}>

@@ -3,9 +3,9 @@ import { TeamPlayer } from '../../api';
 
 interface EditRosterProps {
   teamName: string;
-  allLeaguePlayers: TeamPlayer[];
-  currentRosterNames: string[];
-  onRosterChange: (newRosterNames: string[]) => void;
+  allLeaguePlayers: TeamPlayer[]; // Assumed to be pre-sorted by parent
+  currentRosterNames: string[]; // Assumed to be pre-sorted by parent
+  onRosterChange: (newRosterNames: string[]) => void; // Parent will handle sorting after update
 }
 
 const EditRoster: React.FC<EditRosterProps> = ({
@@ -17,7 +17,13 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const [newSubName, setNewSubName] = useState('');
   const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
 
-  const availableLeaguePlayers = allLeaguePlayers.filter(p => !currentRosterNames.includes(p.name));
+  // Filter out players already on the current roster for the dropdown
+  // allLeaguePlayers is already sorted, so this will maintain a semblance of that order
+  // or could be re-sorted if desired, but the parent sorts the final list.
+  const availableLeaguePlayersForDropdown = allLeaguePlayers.filter(
+    p => !currentRosterNames.includes(p.name)
+  );
+  // The dropdown itself will be sorted by name if allLeaguePlayers is sorted.
 
   const handleRemovePlayer = (playerName: string) => {
     onRosterChange(currentRosterNames.filter(name => name !== playerName));
@@ -58,7 +64,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
         {teamName} Roster ({currentRosterNames.length} players)
       </h4>
 
-      {/* Scrollable Player List */}
+      {/* Scrollable Player List - currentRosterNames is already sorted by parent */}
       <ul
         style={{
           listStyleType: 'none',
@@ -115,7 +121,8 @@ const EditRoster: React.FC<EditRosterProps> = ({
               style={{ flexGrow: 1, padding: '6px', fontSize: '0.9em', minWidth: '100px' }} // Allow select to grow
             >
               <option value="">Select Player</option>
-              {availableLeaguePlayers.map(player => (
+              {/* availableLeaguePlayersForDropdown is derived from sorted allLeaguePlayers */}
+              {availableLeaguePlayersForDropdown.map(player => (
                 <option key={player.name} value={player.name}>
                   {player.name} ({player.team})
                 </option>

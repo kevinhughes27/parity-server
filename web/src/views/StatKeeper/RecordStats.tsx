@@ -5,8 +5,8 @@ import PointEventsDisplay from './PointEventsDisplay';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
-  fullHomeRoster: string[];
-  fullAwayRoster: string[];
+  fullHomeRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
+  fullAwayRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
   onPerformAction: (
     action: (bk: Bookkeeper) => void,
     options?: { skipViewChange?: boolean; skipSave?: boolean }
@@ -18,8 +18,8 @@ interface RecordStatsProps {
 
 const RecordStats: React.FC<RecordStatsProps> = ({
   bookkeeper,
-  fullHomeRoster,
-  fullAwayRoster,
+  fullHomeRoster, // Already sorted
+  fullAwayRoster, // Already sorted
   onPerformAction,
   onPointScored,
   onChangeLine,
@@ -188,6 +188,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '200px' }}> {/* Adjusted minHeight */}
           <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}> {/* Reduced horizontal padding */}
             <h4>{bookkeeper.homeTeam.name} (Roster)</h4>
+            {/* fullHomeRoster is already sorted by LocalGame */}
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
@@ -197,6 +198,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
           <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}> {/* Reduced horizontal padding */}
             <h4>{bookkeeper.awayTeam.name} (Roster)</h4>
+            {/* fullAwayRoster is already sorted by LocalGame */}
             {fullAwayRoster.map(player =>
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}

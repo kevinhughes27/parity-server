@@ -11,7 +11,7 @@ function EditGame() {
   const navigate = useNavigate();
   const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
   const {
-    allLeaguePlayers,
+    allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
     errorTeams: errorLeaguePlayers,
   } = useTeams(game?.league_id);
@@ -19,13 +19,21 @@ function EditGame() {
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
+  const sortAndSetHomeRoster = (roster: string[]) => {
+    setHomeRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  };
+
+  const sortAndSetAwayRoster = (roster: string[]) => {
+    setAwayRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  };
+
   useEffect(() => {
     if (game) {
-      setHomeRosterNames([...game.homeRoster]);
-      setAwayRosterNames([...game.awayRoster]);
+      sortAndSetHomeRoster([...game.homeRoster]);
+      sortAndSetAwayRoster([...game.awayRoster]);
     } else {
-      setHomeRosterNames([]);
-      setAwayRosterNames([]);
+      sortAndSetHomeRoster([]);
+      sortAndSetAwayRoster([]);
     }
   }, [game]);
 
@@ -40,8 +48,8 @@ function EditGame() {
     }
 
     const updatedGameData: Partial<StoredGame> = {
-      homeRoster: homeRosterNames,
-      awayRoster: awayRosterNames,
+      homeRoster: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      awayRoster: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
       lastModified: new Date(),
     };
 
@@ -134,17 +142,17 @@ function EditGame() {
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.homeTeam}
-                allLeaguePlayers={allLeaguePlayers}
-                currentRosterNames={homeRosterNames}
-                onRosterChange={setHomeRosterNames}
+                allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
+                currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
+                onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
               />
             </div>
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.awayTeam}
-                allLeaguePlayers={allLeaguePlayers}
-                currentRosterNames={awayRosterNames}
-                onRosterChange={setAwayRosterNames}
+                allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
+                currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
+                onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
               />
             </div>
           </>

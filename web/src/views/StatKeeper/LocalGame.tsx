@@ -108,10 +108,13 @@ function LocalGame() {
           awayPlayers: null,
           homeScore: 0,
           awayScore: 0,
-          homeParticipants: gameData.homeRoster || [],
-          awayParticipants: gameData.awayRoster || [],
+          homeParticipants: gameData.homeRoster ? [...gameData.homeRoster].sort((a,b) => a.localeCompare(b)) : [],
+          awayParticipants: gameData.awayRoster ? [...gameData.awayRoster].sort((a,b) => a.localeCompare(b)) : [],
         }),
         activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
+        // Ensure participants are sorted when hydrating
+        homeParticipants: gameData.bookkeeperState?.homeParticipants ? [...gameData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)) : [...gameData.homeRoster].sort((a,b) => a.localeCompare(b)),
+        awayParticipants: gameData.bookkeeperState?.awayParticipants ? [...gameData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)) : [...gameData.awayRoster].sort((a,b) => a.localeCompare(b)),
       };
 
       const initialSerializedData: SerializedGameData = {
@@ -207,6 +210,9 @@ function LocalGame() {
 
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
       ...serializedData.bookkeeperState,
+      // Ensure participants are sorted before saving to bookkeeperState in DB
+      homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)),
+      awayParticipants: [...serializedData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)),
     };
 
     let statusToSave = newStatus || storedGame.status;
@@ -220,8 +226,9 @@ function LocalGame() {
       points: pointsForStorage,
       bookkeeperState: bookkeeperStateForStorage,
       mementos: serializedData.mementos,
-      homeRoster: serializedData.bookkeeperState.homeParticipants,
-      awayRoster: serializedData.bookkeeperState.awayParticipants,
+      // Ensure StoredGame.homeRoster/awayRoster are also sorted
+      homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)),
+      awayRoster: [...serializedData.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)),
       lastModified: new Date(),
       status: statusToSave,
     };
@@ -337,10 +344,10 @@ function LocalGame() {
         week: bkState.week,
         homeTeam: bkState.homeTeamName,
         homeScore: bkState.bookkeeperState.homeScore,
-        homeRoster: bkState.bookkeeperState.homeParticipants,
+        homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a,b) => a.localeCompare(b)), // Ensure sorted for API
         awayTeam: bkState.awayTeamName,
         awayScore: bkState.bookkeeperState.awayScore,
-        awayRoster: bkState.bookkeeperState.awayParticipants,
+        awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a,b) => a.localeCompare(b)), // Ensure sorted for API
         points: bkState.game.points.map(pJson => ({
           offensePlayers: pJson.offensePlayers,
           defensePlayers: pJson.defensePlayers,
@@ -407,6 +414,11 @@ function LocalGame() {
   const lastCompletedPointEvents = bookkeeperInstance.getLastCompletedPointPrettyPrint();
   const isHalfRecorded = bookkeeperInstance.pointsAtHalf > 0;
 
+  // Sort rosters from storedGame before passing to children
+  const sortedHomeRoster = [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b));
+  const sortedAwayRoster = [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b));
+
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar */}
@@ -462,8 +474,8 @@ function LocalGame() {
         {currentView === 'selectLines' && (
           <SelectLines
             bookkeeper={bookkeeperInstance}
-            homeRoster={storedGame.homeRoster}
-            awayRoster={storedGame.awayRoster}
+            homeRoster={sortedHomeRoster}
+            awayRoster={sortedAwayRoster}
             onPerformAction={handlePerformBookkeeperAction}
             onLinesSelected={handleLinesSelected}
             isResumingPointMode={isResumingPointMode}
@@ -476,8 +488,8 @@ function LocalGame() {
         {currentView === 'recordStats' && (
           <RecordStats
             bookkeeper={bookkeeperInstance}
-            fullHomeRoster={storedGame.homeRoster}
-            fullAwayRoster={storedGame.awayRoster}
+            fullHomeRoster={sortedHomeRoster}
+            fullAwayRoster={sortedAwayRoster}
             onPerformAction={handlePerformBookkeeperAction}
             onPointScored={handlePointScored}
             onChangeLine={handleChangeLine}

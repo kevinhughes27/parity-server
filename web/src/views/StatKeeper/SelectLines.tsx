@@ -4,8 +4,8 @@ import PointEventsDisplay from './PointEventsDisplay';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
-  homeRoster: string[];
-  awayRoster: string[];
+  homeRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
+  awayRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
   onPerformAction: (
     action: (bk: Bookkeeper) => void,
     options?: { skipViewChange?: boolean; skipSave?: boolean }
@@ -19,8 +19,8 @@ interface SelectLinesProps {
 
 const SelectLines: React.FC<SelectLinesProps> = ({
   bookkeeper,
-  homeRoster,
-  awayRoster,
+  homeRoster, // Already sorted
+  awayRoster, // Already sorted
   onPerformAction,
   onLinesSelected,
   isResumingPointMode,
@@ -38,6 +38,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       setSelectedHomePlayers(bookkeeper.homePlayers || []);
       setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
     } else if (lastPlayedLine) {
+      // Pre-select players NOT on the last played line.
+      // homeRoster and awayRoster are already sorted.
       setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
       setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
     } else {
@@ -58,15 +60,20 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
     const teamName = isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name;
 
+    let newSelection;
     if (currentSelection.includes(playerName)) {
-      setter(currentSelection.filter(p => p !== playerName));
+      newSelection = currentSelection.filter(p => p !== playerName);
     } else {
       if (currentSelection.length < leagueLineSize) {
-        setter([...currentSelection, playerName]);
+        newSelection = [...currentSelection, playerName];
       } else {
         alert(`Cannot select more than ${leagueLineSize} players for ${teamName}.`);
+        return; // Do not update selection
       }
     }
+    // Sort the selection before setting state, though this is mainly for internal consistency
+    // as the display order is driven by the main roster lists.
+    setter(newSelection.sort((a, b) => a.localeCompare(b)));
   };
 
   const handleDone = async () => {
@@ -78,7 +85,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
       await onPerformAction(
-        bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers),
+        // Pass sorted selections to bookkeeper
+        bk => bk.recordActivePlayers([...selectedHomePlayers].sort((a,b)=>a.localeCompare(b)), [...selectedAwayPlayers].sort((a,b)=>a.localeCompare(b))),
         { skipViewChange: true, skipSave: false }
       );
       onLinesSelected();
@@ -94,7 +102,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
       if (window.confirm(message)) {
         await onPerformAction(
-          bk => bk.recordActivePlayers(selectedHomePlayers, selectedAwayPlayers),
+          // Pass sorted selections to bookkeeper
+          bk => bk.recordActivePlayers([...selectedHomePlayers].sort((a,b)=>a.localeCompare(b)), [...selectedAwayPlayers].sort((a,b)=>a.localeCompare(b))),
           { skipViewChange: true, skipSave: false }
         );
         onLinesSelected();
@@ -159,6 +168,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             <h4>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
             </h4>
+            {/* homeRoster is already sorted by LocalGame */}
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </div>
 
@@ -168,6 +178,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             <h4>
               {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
             </h4>
+            {/* awayRoster is already sorted by LocalGame */}
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </div>
         </div>
