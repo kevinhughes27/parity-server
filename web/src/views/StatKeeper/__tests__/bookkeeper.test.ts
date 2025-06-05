@@ -5,7 +5,6 @@ import {
   League,
   Team,
   Event,
-  PointModel,
   SerializedGameData,
   BookkeeperVolatileState, // Added for explicit typing
   SerializedMemento, // Added for explicit typing
@@ -338,7 +337,7 @@ describe('Bookkeeper', () => {
         events: serializedDataFromBk.bookkeeperState.activePoint.events.map(mapModelEventToApiPointEvent),
       };
     }
-    
+
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
         ...serializedDataFromBk.bookkeeperState,
         activePoint: activePointForStorage as any, // Cast because stored format differs slightly

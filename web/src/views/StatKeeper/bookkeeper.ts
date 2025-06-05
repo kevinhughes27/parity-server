@@ -153,8 +153,6 @@ export class Bookkeeper {
   }
 
   public gameState(): GameState {
-    const firstPointOfGameOrHalf = this.activeGame.getPointCount() === this.pointsAtHalf;
-
     if (this.activePoint === null) {
       return GameState.Start;
     }
@@ -164,13 +162,13 @@ export class Bookkeeper {
 
     if (eventCount === 0) { // New point, no events yet
       if (this.firstActor === null) { // Waiting for player to initiate
-        if (firstPointOfGameOrHalf) {
+        if (this.firstPointOfGameOrHalf()) {
           return GameState.Start; // Select puller
         } else {
           return GameState.WhoPickedUpDisc; // Receiving team picks up
         }
       } else { // Player selected, ready for first action
-        if (firstPointOfGameOrHalf) {
+        if (this.firstPointOfGameOrHalf()) {
           return GameState.Pull; // Puller selected, ready to pull
         } else {
           return GameState.FirstThrowQuebecVariant; // Player picked up, ready for first throw
@@ -211,7 +209,7 @@ export class Bookkeeper {
       if (lastEventType === EventType.DEFENSE) {
         return GameState.SecondD;
       }
-      
+
       // Case 3: Player has the disc after a pass.
       // (Picking up a pull is handled by eventCount=0 or lastEvent=PULL logic above).
       // This is normal ongoing play.
@@ -230,6 +228,10 @@ export class Bookkeeper {
 
   public shouldRecordNewPass(): boolean {
     return this.firstActor !== null;
+  }
+
+  public firstPointOfGameOrHalf(): boolean {
+    return this.activeGame.getPointCount() === this.pointsAtHalf;
   }
 
   private changePossession(): void {

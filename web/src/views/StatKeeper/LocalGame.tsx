@@ -53,25 +53,25 @@ function LocalGame() {
     const awayTeamForBk: ModelTeam = { id: gameData.awayTeamId, name: gameData.awayTeam };
 
     const transformedGamePoints = gameData.points.map(apiPoint => {
-      return PointModel.fromJSON({ 
+      return PointModel.fromJSON({
         offensePlayers: [...apiPoint.offensePlayers],
         defensePlayers: [...apiPoint.defensePlayers],
         events: apiPoint.events.map(mapApiPointEventToModelEvent),
       });
     });
-    
+
     let activePointForHydration: PointModel | null = null;
     if (gameData.bookkeeperState?.activePoint) {
         activePointForHydration = PointModel.fromJSON(gameData.bookkeeperState.activePoint);
     }
 
     const bookkeeperStateForHydration: BookkeeperVolatileState = {
-        ...(gameData.bookkeeperState || { 
+        ...(gameData.bookkeeperState || {
             activePoint: null, firstActor: null, homePossession: true, pointsAtHalf: 0,
             homePlayers: null, awayPlayers: null, homeScore: 0, awayScore: 0,
             homeParticipants: gameData.homeRoster || [], awayParticipants: gameData.awayRoster || [],
         }),
-        activePoint: activePointForHydration ? activePointForHydration.toJSON() : null, 
+        activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
     };
 
 
@@ -82,7 +82,7 @@ function LocalGame() {
       awayTeamName: gameData.awayTeam,
       homeTeamId: gameData.homeTeamId,
       awayTeamId: gameData.awayTeamId,
-      game: { points: transformedGamePoints.map(p => p.toJSON()) }, 
+      game: { points: transformedGamePoints.map(p => p.toJSON()) },
       bookkeeperState: bookkeeperStateForHydration,
       mementos: gameData.mementos || [],
     };
@@ -94,8 +94,8 @@ function LocalGame() {
         setIsResumingPointMode(false);
         setCurrentView('selectLines');
       } else {
-        setIsResumingPointMode(true); 
-        setLastPlayedLine(null); 
+        setIsResumingPointMode(true);
+        setLastPlayedLine(null);
         setCurrentView('recordStats');
       }
     } catch (e) {
@@ -120,13 +120,13 @@ function LocalGame() {
     }
     if (storedGame) {
       setLocalError(null);
-      if (apiLeague) { 
+      if (apiLeague) {
         initializeBookkeeper(storedGame);
-      } else if (!isLoadingApiLeague) { 
+      } else if (!isLoadingApiLeague) {
         setLocalError(`League details for league ID ${storedGame.league_id} could not be loaded.`);
         setCurrentView('error_state');
       } else {
-        setCurrentView('initializing'); 
+        setCurrentView('initializing');
       }
     } else if (!isLoadingGameHook && numericGameId !== undefined) {
       setLocalError(`Game with ID ${numericGameId} not found.`);
@@ -148,9 +148,9 @@ function LocalGame() {
     const pointsForStorage: ApiPoint[] = serializedData.game.points.map(modelPointJson => ({
       offensePlayers: [...modelPointJson.offensePlayers],
       defensePlayers: [...modelPointJson.defensePlayers],
-      events: modelPointJson.events.map(mapModelEventToApiPointEvent), 
+      events: modelPointJson.events.map(mapModelEventToApiPointEvent),
     }));
-    
+
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
         ...serializedData.bookkeeperState,
     };
@@ -169,23 +169,23 @@ function LocalGame() {
       homeRoster: serializedData.bookkeeperState.homeParticipants,
       awayRoster: serializedData.bookkeeperState.awayParticipants,
       lastModified: new Date(),
-      status: statusToSave, 
+      status: statusToSave,
     };
 
     try {
       await db.games.update(numericGameId, updatedGameFields);
       console.log(`Game ${numericGameId} updated successfully with status ${statusToSave}.`);
-      // Manually update storedGame state if status changes to reflect immediately in UI
-      if (newStatus && storedGame.status !== newStatus) {
-        // This is a bit of a hack; ideally, useLiveQuery would pick this up,
-        // but for immediate feedback on status change (e.g., after submit), this helps.
-        // Create a new object to ensure React detects the change.
-        const updatedStoredGame = { ...storedGame, status: newStatus, lastModified: updatedGameFields.lastModified! };
-        // The hook `useLocalGame` should ideally refetch or useLiveQuery should update.
-        // For now, this direct update might be needed if useLiveQuery is not fast enough.
-        // Consider if this manual update is truly necessary or if relying on useLiveQuery is sufficient.
-        // For now, let's assume useLiveQuery will handle it.
-      }
+      // // Manually update storedGame state if status changes to reflect immediately in UI
+      // if (newStatus && storedGame.status !== newStatus) {
+      //   // This is a bit of a hack; ideally, useLiveQuery would pick this up,
+      //   // but for immediate feedback on status change (e.g., after submit), this helps.
+      //   // Create a new object to ensure React detects the change.
+      //   const updatedStoredGame = { ...storedGame, status: newStatus, lastModified: updatedGameFields.lastModified! };
+      //   // The hook `useLocalGame` should ideally refetch or useLiveQuery should update.
+      //   // For now, this direct update might be needed if useLiveQuery is not fast enough.
+      //   // Consider if this manual update is truly necessary or if relying on useLiveQuery is sufficient.
+      //   // For now, let's assume useLiveQuery will handle it.
+      // }
     } catch (error) {
       console.error('Failed to update game in DB:', error);
       setLocalError(`Failed to save game progress: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -199,69 +199,63 @@ function LocalGame() {
   ) => {
     if (!bookkeeperInstance) return;
 
-    if (action.name === 'bound recordPoint' || action.toString().includes('bk.recordPoint()')) { 
+    if (action.name === 'bound recordPoint' || action.toString().includes('bk.recordPoint()')) {
         setLastPlayedLine({
             home: [...(bookkeeperInstance.homePlayers || [])],
             away: [...(bookkeeperInstance.awayPlayers || [])],
         });
-        setIsResumingPointMode(false); 
+        setIsResumingPointMode(false);
     }
 
     action(bookkeeperInstance);
 
     const newBkInstance = Object.create(Object.getPrototypeOf(bookkeeperInstance));
     Object.assign(newBkInstance, bookkeeperInstance);
-    setBookkeeperInstance(newBkInstance); 
+    setBookkeeperInstance(newBkInstance);
 
     if (!options.skipSave) {
-      try {
         await persistBookkeeperState(newBkInstance);
-      } catch (saveError) {
-        return;
-      }
     }
 
     if (options.skipViewChange) return;
 
     if (newBkInstance.activePoint === null && (newBkInstance.homePlayers === null || newBkInstance.awayPlayers === null)) {
       if (!action.toString().includes('bk.recordPoint()')) {
-          setIsResumingPointMode(false); 
-          setLastPlayedLine(null); 
+          setIsResumingPointMode(false);
+          setLastPlayedLine(null);
       }
       setCurrentView('selectLines');
     } else if (newBkInstance.activePoint !== null || (newBkInstance.homePlayers !== null && newBkInstance.awayPlayers !== null)) {
       setCurrentView('recordStats');
     } else {
-       setCurrentView('selectLines'); 
+       setCurrentView('selectLines');
     }
   };
-  
-  const handleLinesSelected = async () => { 
+
+  const handleLinesSelected = async () => {
     if (bookkeeperInstance && bookkeeperInstance.homePlayers && bookkeeperInstance.awayPlayers) {
-        const firstPointOfGameOrHalf = bookkeeperInstance.activeGame.getPointCount() === bookkeeperInstance.pointsAtHalf;
-        
-        if (bookkeeperInstance.activePoint === null && !firstPointOfGameOrHalf) {
+        if (bookkeeperInstance.activePoint === null && !bookkeeperInstance.firstPointOfGameOrHalf()) {
             await handlePerformBookkeeperAction(bk => {
                 bk.prepareNewPointAfterScore();
-            }, { skipViewChange: true, skipSave: false }); 
+            }, { skipViewChange: true, skipSave: false });
         }
         setCurrentView('recordStats');
     } else {
         console.warn("Lines selected but bookkeeper player lines are not set.");
-        setIsResumingPointMode(false); 
+        setIsResumingPointMode(false);
         setLastPlayedLine(null);
         setCurrentView('selectLines');
     }
   };
 
-  const handleChangeLine = () => { 
+  const handleChangeLine = () => {
     setIsResumingPointMode(true);
-    setLastPlayedLine(null); 
+    setLastPlayedLine(null);
     setCurrentView('selectLines');
   };
 
-  const handlePointScored = () => { 
-    setCurrentView('selectLines'); 
+  const handlePointScored = () => {
+    setCurrentView('selectLines');
   };
 
   const handleSubmitGame = async () => {
@@ -317,7 +311,7 @@ function LocalGame() {
         try {
             const errorData = JSON.parse(errorText); // Try to parse as JSON
             errorMessage += ` - ${errorData.message || errorData.detail || 'Server error'}`;
-        } catch (e) {
+        } catch {
             errorMessage += ` - ${errorText || 'Server error with no JSON body'}`;
         }
         await persistBookkeeperState(bookkeeperInstance, 'sync-error');
@@ -385,8 +379,8 @@ function LocalGame() {
       {currentView === 'selectLines' && (
         <SelectLines
           bookkeeper={bookkeeperInstance}
-          homeRoster={storedGame.homeRoster} 
-          awayRoster={storedGame.awayRoster} 
+          homeRoster={storedGame.homeRoster}
+          awayRoster={storedGame.awayRoster}
           onPerformAction={handlePerformBookkeeperAction}
           onLinesSelected={handleLinesSelected}
           isResumingPointMode={isResumingPointMode}
@@ -401,7 +395,7 @@ function LocalGame() {
           bookkeeper={bookkeeperInstance}
           onPerformAction={handlePerformBookkeeperAction}
           onPointScored={handlePointScored}
-          onChangeLine={handleChangeLine} 
+          onChangeLine={handleChangeLine}
           onSubmitGame={handleSubmitGame}
           gameStatus={storedGame.status}
         />
