@@ -85,8 +85,8 @@ function NewGame() {
       awayPlayers: null,
       homeScore: 0,
       awayScore: 0,
-      homeParticipants: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
-      awayParticipants: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      homeParticipants: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
+      awayParticipants: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
     };
 
     const initialMementos: SerializedMemento[] = [];
@@ -98,11 +98,11 @@ function NewGame() {
       homeTeam: selectedHomeTeamObj.name,
       homeTeamId: selectedHomeTeamObj.id,
       homeScore: 0,
-      homeRoster: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
       awayTeam: selectedAwayTeamObj.name,
       awayTeamId: selectedAwayTeamObj.id,
       awayScore: 0,
-      awayRoster: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
       points: [],
       status: 'new',
       lastModified: new Date(),
@@ -198,7 +198,14 @@ function NewGame() {
 
         {/* Section 2: Team Selectors and Roster Editors (this section grows vertically) */}
         {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
-          <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' /* Important: children manage their height/scroll */ }}>
+          <div
+            style={{
+              flexGrow: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden' /* Important: children manage their height/scroll */,
+            }}
+          >
             {/* Team Selection Dropdowns (does not grow vertically within this section) */}
             <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', flexShrink: 0 }}>
               <div style={{ flex: 1 }}>
@@ -268,9 +275,18 @@ function NewGame() {
             </div>
 
             {/* Roster Editing Columns (this div grows vertically to fill space, and its children are side-by-side) */}
-            <div style={{ display: 'flex', gap: '20px', flexGrow: 1, overflow: 'hidden' /* Children (EditRoster/Placeholder) will fill height */ }}>
+            <div
+              style={{
+                display: 'flex',
+                gap: '20px',
+                flexGrow: 1,
+                overflow: 'hidden' /* Children (EditRoster/Placeholder) will fill height */,
+              }}
+            >
               {/* Home Roster Column */}
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <div
+                style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+              >
                 {selectedHomeTeamObj ? (
                   <EditRoster
                     teamName={selectedHomeTeamObj.name}
@@ -285,7 +301,9 @@ function NewGame() {
                 )}
               </div>
               {/* Away Roster Column */}
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <div
+                style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+              >
                 {selectedAwayTeamObj ? (
                   <EditRoster
                     teamName={selectedAwayTeamObj.name}
@@ -310,41 +328,45 @@ function NewGame() {
       </div>
 
       {/* Fixed Bottom Action Bar */}
-      {!loadingTeams && !errorTeams && leagueTeams.length > 0 && selectedHomeTeamObj && selectedAwayTeamObj && (
-        <div
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: ACTION_BAR_HEIGHT,
-            padding: '10px 15px',
-            backgroundColor: 'white',
-            borderTop: '1px solid #ccc',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxSizing: 'border-box',
-            zIndex: 100,
-          }}
-        >
-          <button
-            onClick={handleCreateGame}
+      {!loadingTeams &&
+        !errorTeams &&
+        leagueTeams.length > 0 &&
+        selectedHomeTeamObj &&
+        selectedAwayTeamObj && (
+          <div
             style={{
-              padding: '10px 20px',
-              fontSize: '1em',
-              cursor: 'pointer',
-              backgroundColor: 'green',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: ACTION_BAR_HEIGHT,
+              padding: '10px 15px',
+              backgroundColor: 'white',
+              borderTop: '1px solid #ccc',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxSizing: 'border-box',
+              zIndex: 100,
             }}
-            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
           >
-            {buttonText}
-          </button>
-        </div>
-      )}
+            <button
+              onClick={handleCreateGame}
+              style={{
+                padding: '10px 20px',
+                fontSize: '1em',
+                cursor: 'pointer',
+                backgroundColor: 'green',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+              }}
+              disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+            >
+              {buttonText}
+            </button>
+          </div>
+        )}
     </div>
   );
 }

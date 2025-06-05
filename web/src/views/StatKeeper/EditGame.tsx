@@ -48,8 +48,8 @@ function EditGame() {
     }
 
     const updatedGameData: Partial<StoredGame> = {
-      homeRoster: [...homeRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
-      awayRoster: [...awayRosterNames].sort((a,b) => a.localeCompare(b)), // Ensure sorted on save
+      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
+      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
       lastModified: new Date(),
     };
 
@@ -132,9 +132,13 @@ function EditGame() {
           gap: '10px', // Space between the two roster columns
         }}
       >
-        {loadingLeaguePlayers && <p style={{ flex: 1, textAlign: 'center' }}>Loading league player data...</p>}
+        {loadingLeaguePlayers && (
+          <p style={{ flex: 1, textAlign: 'center' }}>Loading league player data...</p>
+        )}
         {errorLeaguePlayers && (
-          <p style={{ color: 'red', flex: 1, textAlign: 'center' }}>Error loading league players: {errorLeaguePlayers}</p>
+          <p style={{ color: 'red', flex: 1, textAlign: 'center' }}>
+            Error loading league players: {errorLeaguePlayers}
+          </p>
         )}
 
         {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
@@ -161,7 +165,9 @@ function EditGame() {
           !errorLeaguePlayers &&
           allLeaguePlayers.length === 0 &&
           game?.league_id && (
-            <p style={{ flex: 1, textAlign: 'center' }}>No players found for the league: {getLeagueName(game.league_id)}.</p>
+            <p style={{ flex: 1, textAlign: 'center' }}>
+              No players found for the league: {getLeagueName(game.league_id)}.
+            </p>
           )}
       </div>
 
@@ -195,9 +201,7 @@ function EditGame() {
               border: 'none',
               borderRadius: '5px',
             }}
-            disabled={
-              homeRosterNames.length === 0 || awayRosterNames.length === 0
-            }
+            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
           >
             Update Rosters
           </button>
