@@ -160,14 +160,17 @@ export class Bookkeeper {
     const eventCount = this.activePoint.getEventCount();
     const lastEventType = this.activePoint.getLastEventType();
 
-    if (eventCount === 0) { // New point, no events yet
-      if (this.firstActor === null) { // Waiting for player to initiate
+    if (eventCount === 0) {
+      // New point, no events yet
+      if (this.firstActor === null) {
+        // Waiting for player to initiate
         if (this.firstPointOfGameOrHalf()) {
           return GameState.Start; // Select puller
         } else {
           return GameState.WhoPickedUpDisc; // Receiving team picks up
         }
-      } else { // Player selected, ready for first action
+      } else {
+        // Player selected, ready for first action
         if (this.firstPointOfGameOrHalf()) {
           return GameState.Pull; // Puller selected, ready to pull
         } else {
@@ -185,17 +188,25 @@ export class Bookkeeper {
     }
 
     // Logic for states when firstActor is set vs. null, after the initial events (pull/pickup)
-    if (this.firstActor === null) { // Disc is loose or action just completed that made it loose
-      if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP || lastEventType === EventType.DEFENSE) {
+    if (this.firstActor === null) {
+      // Disc is loose or action just completed that made it loose
+      if (
+        lastEventType === EventType.THROWAWAY ||
+        lastEventType === EventType.DROP ||
+        lastEventType === EventType.DEFENSE
+      ) {
         // After a turnover (Throwaway, Drop) or a D (where disc is loose, not a catch D),
         // the new offense needs to pick up the disc.
         return GameState.WhoPickedUpDisc;
       }
       // Fallback for other cases where firstActor might be null with events.
       // This could happen if an undo operation leads to an unexpected state.
-      console.warn("GameState: firstActor is null with events, but not a standard turnover/D/pull state. Defaulting to WhoPickedUpDisc.");
+      console.warn(
+        'GameState: firstActor is null with events, but not a standard turnover/D/pull state. Defaulting to WhoPickedUpDisc.'
+      );
       return GameState.WhoPickedUpDisc;
-    } else { // firstActor is set (player has the disc)
+    } else {
+      // firstActor is set (player has the disc)
 
       // Case 1: Disc was turned over (Throwaway/Drop by OTHER team), and THIS player (firstActor) picked it up.
       // This is the "First D" opportunity. Player can throw, or make an immediate D.
@@ -220,11 +231,12 @@ export class Bookkeeper {
       // Fallback for any other combination where firstActor is set and point has events.
       // This might include scenarios like the very first throw of a point if not covered by FirstThrowQuebecVariant,
       // or if an undo leads to an unusual state.
-      console.warn(`GameState: Unhandled state with firstActor=${this.firstActor}, lastEvent=${lastEventType}. Defaulting to Normal.`);
+      console.warn(
+        `GameState: Unhandled state with firstActor=${this.firstActor}, lastEvent=${lastEventType}. Defaulting to Normal.`
+      );
       return GameState.Normal;
     }
   }
-
 
   public shouldRecordNewPass(): boolean {
     return this.firstActor !== null;
@@ -276,20 +288,21 @@ export class Bookkeeper {
 
   public prepareNewPointAfterScore(): void {
     if (this.activePoint !== null || this.homePlayers === null || this.awayPlayers === null) {
-        // Only proceed if point is null (just scored) and lines are set for the new point.
-        return;
+      // Only proceed if point is null (just scored) and lines are set for the new point.
+      return;
     }
     // homePossession should have been flipped by recordPoint already.
     // This method sets up activePoint for the receiving team.
     let offensePlayers: string[];
     let defensePlayers: string[];
 
-    if (this.homePossession) { // This is the team receiving
-        offensePlayers = this.homePlayers;
-        defensePlayers = this.awayPlayers;
+    if (this.homePossession) {
+      // This is the team receiving
+      offensePlayers = this.homePlayers;
+      defensePlayers = this.awayPlayers;
     } else {
-        offensePlayers = this.awayPlayers;
-        defensePlayers = this.homePlayers;
+      offensePlayers = this.awayPlayers;
+      defensePlayers = this.homePlayers;
     }
     this.activePoint = new PointModel(offensePlayers, defensePlayers);
     // DO NOT set firstActor here.
@@ -297,7 +310,6 @@ export class Bookkeeper {
     // Undoing the subsequent recordFirstActor will handle reverting firstActor,
     // and if further undos occur, they will revert actions before this point.
   }
-
 
   public recordPull(): void {
     if (!this.activePoint || !this.firstActor) return;
@@ -494,7 +506,8 @@ export class Bookkeeper {
   private createUndoLastEventStyleMemento(
     type: MementoType,
     data: { savedFirstActor: string | null }
-  ): InternalMemento { // For Pass, D (non-turnover D)
+  ): InternalMemento {
+    // For Pass, D (non-turnover D)
     return {
       type: type,
       data: data,
