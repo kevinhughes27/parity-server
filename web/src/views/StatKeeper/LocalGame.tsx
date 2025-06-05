@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -18,10 +18,12 @@ import {
 import { Bookkeeper } from './bookkeeper';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
+import GameActionsMenu from './GameActionsMenu'; // Import the new menu component
 
 type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
 
 function LocalGame() {
+  const navigate = useNavigate(); // For "Edit Game" in menu
   const {
     game: storedGame,
     isLoading: isLoadingGameHook,
@@ -34,11 +36,11 @@ function LocalGame() {
   const [currentView, setCurrentView] = useState<GameView>('loading');
   const [localError, setLocalError] = useState<string | null>(null);
 
-  // State for SelectLines pre-selection logic
   const [lastPlayedLine, setLastPlayedLine] = useState<{ home: string[]; away: string[] } | null>(
     null
   );
   const [isResumingPointMode, setIsResumingPointMode] = useState<boolean>(false);
+  // No longer need lastCompletedPointEvents state, will derive from bookkeeperInstance
 
   const initializeBookkeeper = useCallback(
     (gameData: StoredGame) => {
@@ -52,7 +54,7 @@ function LocalGame() {
         setLocalError(
           `League configuration for ID ${gameData.league_id} not found or still loading.`
         );
-        setCurrentView('initializing');
+        setCurrentView('initializing'); // Stay in initializing if apiLeague not ready
         return;
       }
 
@@ -131,13 +133,13 @@ function LocalGame() {
         setCurrentView('error_state');
       }
     },
-    [apiLeague]
+    [apiLeague] // apiLeague is a dependency
   );
 
   useEffect(() => {
     if (isLoadingGameHook || isLoadingApiLeague) {
       setCurrentView('loading');
-      setBookkeeperInstance(null);
+      setBookkeeperInstance(null); // Ensure bookkeeper is cleared while loading
       return;
     }
     if (gameErrorHook) {
@@ -147,29 +149,35 @@ function LocalGame() {
       return;
     }
     if (storedGame) {
-      setLocalError(null);
-      if (apiLeague) {
+      setLocalError(null); // Clear previous errors
+      if (apiLeague) { // Only initialize if apiLeague is also loaded
         initializeBookkeeper(storedGame);
-      } else if (!isLoadingApiLeague) {
-        setLocalError(`League details for league ID ${storedGame.league_id} could not be loaded.`);
-        setCurrentView('error_state');
       } else {
-        setCurrentView('initializing');
+        // This case means storedGame is loaded, but apiLeague is not (and not loading anymore)
+        // This could happen if fetchTeams failed or leagueId is bad.
+        // useTeams hook should set an error in this case, which would be caught by errorTeams in useTeams.
+        // For safety, we can set a local error or rely on the initializing state.
+        setLocalError(`League details for league ID ${storedGame.league_id} could not be loaded.`);
+        setCurrentView('error_state'); // Or 'initializing' if we expect apiLeague to eventually load
       }
     } else if (!isLoadingGameHook && numericGameId !== undefined) {
+      // Game not found, and not loading
       setLocalError(`Game with ID ${numericGameId} not found.`);
       setCurrentView('error_state');
       setBookkeeperInstance(null);
     }
+    // If storedGame is undefined and isLoadingGameHook is false, it means no game ID or invalid ID.
+    // This case should be handled by gameErrorHook or numericGameId being undefined.
   }, [
     storedGame,
     isLoadingGameHook,
     gameErrorHook,
     numericGameId,
     initializeBookkeeper,
-    apiLeague,
-    isLoadingApiLeague,
+    apiLeague, // Add apiLeague as a dependency
+    isLoadingApiLeague, // Add isLoadingApiLeague
   ]);
+
 
   const persistBookkeeperState = async (bk: Bookkeeper, newStatus?: StoredGame['status']) => {
     if (!numericGameId || !storedGame) {
@@ -192,7 +200,6 @@ function LocalGame() {
 
     let statusToSave = newStatus || storedGame.status;
     if (statusToSave === 'new' && !newStatus) {
-      // only transition from new if not explicitly setting status
       statusToSave = 'in-progress';
     }
 
@@ -202,8 +209,8 @@ function LocalGame() {
       points: pointsForStorage,
       bookkeeperState: bookkeeperStateForStorage,
       mementos: serializedData.mementos,
-      homeRoster: serializedData.bookkeeperState.homeParticipants,
-      awayRoster: serializedData.bookkeeperState.awayParticipants,
+      homeRoster: serializedData.bookkeeperState.homeParticipants, // Ensure rosters are updated
+      awayRoster: serializedData.bookkeeperState.awayParticipants, // Ensure rosters are updated
       lastModified: new Date(),
       status: statusToSave,
     };
@@ -211,17 +218,6 @@ function LocalGame() {
     try {
       await db.games.update(numericGameId, updatedGameFields);
       console.log(`Game ${numericGameId} updated successfully with status ${statusToSave}.`);
-      // // Manually update storedGame state if status changes to reflect immediately in UI
-      // if (newStatus && storedGame.status !== newStatus) {
-      //   // This is a bit of a hack; ideally, useLiveQuery would pick this up,
-      //   // but for immediate feedback on status change (e.g., after submit), this helps.
-      //   // Create a new object to ensure React detects the change.
-      //   const updatedStoredGame = { ...storedGame, status: newStatus, lastModified: updatedGameFields.lastModified! };
-      //   // The hook `useLocalGame` should ideally refetch or useLiveQuery should update.
-      //   // For now, this direct update might be needed if useLiveQuery is not fast enough.
-      //   // Consider if this manual update is truly necessary or if relying on useLiveQuery is sufficient.
-      //   // For now, let's assume useLiveQuery will handle it.
-      // }
     } catch (error) {
       console.error('Failed to update game in DB:', error);
       setLocalError(
@@ -237,7 +233,9 @@ function LocalGame() {
   ) => {
     if (!bookkeeperInstance) return;
 
-    if (action.name === 'bound recordPoint' || action.toString().includes('bk.recordPoint()')) {
+    const actionName = action.name || action.toString();
+    if (actionName.includes('recordPoint')) {
+      // No need to setLastCompletedPointEvents here, it will be derived
       setLastPlayedLine({
         home: [...(bookkeeperInstance.homePlayers || [])],
         away: [...(bookkeeperInstance.awayPlayers || [])],
@@ -261,7 +259,7 @@ function LocalGame() {
       newBkInstance.activePoint === null &&
       (newBkInstance.homePlayers === null || newBkInstance.awayPlayers === null)
     ) {
-      if (!action.toString().includes('bk.recordPoint()')) {
+      if (!actionName.includes('recordPoint')) {
         setIsResumingPointMode(false);
         setLastPlayedLine(null);
       }
@@ -283,7 +281,7 @@ function LocalGame() {
           bk => {
             bk.prepareNewPointAfterScore();
           },
-          { skipViewChange: true, skipSave: false }
+          { skipViewChange: true, skipSave: false } // skipSave was false, ensure it's correct
         );
       }
       setCurrentView('recordStats');
@@ -302,7 +300,18 @@ function LocalGame() {
   };
 
   const handlePointScored = () => {
+    // lastCompletedPointEvents will be derived from bookkeeperInstance.getLastCompletedPointPrettyPrint()
     setCurrentView('selectLines');
+  };
+
+  const handleRecordHalf = async () => {
+    if (!bookkeeperInstance) return;
+    if (bookkeeperInstance.pointsAtHalf > 0) {
+      alert('Half has already been recorded.');
+      return;
+    }
+    await handlePerformBookkeeperAction(bk => bk.recordHalf());
+    alert('Half time recorded.');
   };
 
   const handleSubmitGame = async () => {
@@ -311,27 +320,14 @@ function LocalGame() {
       return;
     }
 
-    // No longer prompting for password
-    // const password = prompt('Enter the league password to submit the game:');
-    // if (password === null) { // User cancelled prompt
-    //   return;
-    // }
-
     try {
+      // Persist current state with 'submitted' status first
       await persistBookkeeperState(bookkeeperInstance, 'submitted');
-      // Refresh storedGame to get the 'submitted' status for the UI
-      // This might not be strictly necessary if useLiveQuery updates quickly enough
-      const updatedStoredGame = await db.games.get(numericGameId);
-      if (updatedStoredGame) {
-        // This is a local update to ensure UI reflects "submitted" state immediately
-        // The hook `useLocalGame` should ideally handle this via useLiveQuery.
-        // Forcing a re-render or relying on useLiveQuery is better.
-        // Let's assume useLiveQuery will update the `storedGame` prop.
-      }
+      // The useLiveQuery for storedGame should update the UI to reflect "submitted"
 
       const bkState = bookkeeperInstance.serialize();
       const gameDataForApi: UploadedGamePayload = {
-        league_id: bkState.league_id, // API spec shows number, sending string
+        league_id: bkState.league_id,
         week: bkState.week,
         homeTeam: bkState.homeTeamName,
         homeScore: bkState.bookkeeperState.homeScore,
@@ -352,10 +348,10 @@ function LocalGame() {
         await persistBookkeeperState(bookkeeperInstance, 'uploaded');
         alert('Game submitted and uploaded successfully!');
       } else {
-        const errorText = await response.text(); // Get raw text for more info
+        const errorText = await response.text();
         let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
         try {
-          const errorData = JSON.parse(errorText); // Try to parse as JSON
+          const errorData = JSON.parse(errorText);
           errorMessage += ` - ${errorData.message || errorData.detail || 'Server error'}`;
         } catch {
           errorMessage += ` - ${errorText || 'Server error with no JSON body'}`;
@@ -364,7 +360,10 @@ function LocalGame() {
         alert(errorMessage);
       }
     } catch (error) {
-      await persistBookkeeperState(bookkeeperInstance, 'sync-error');
+      // Ensure state is 'sync-error' if any part of submission fails
+      if (bookkeeperInstance) { // Check if bookkeeperInstance is still valid
+         await persistBookkeeperState(bookkeeperInstance, 'sync-error');
+      }
       alert(
         `An error occurred during game submission: ${error instanceof Error ? error.message : 'Unknown error'}`
       );
@@ -372,7 +371,8 @@ function LocalGame() {
     }
   };
 
-  if (currentView === 'loading' || currentView === 'initializing') {
+
+  if (currentView === 'loading' || (currentView === 'initializing' && !localError)) {
     return (
       <p style={{ padding: '20px' }}>
         {currentView === 'loading' ? 'Loading game data...' : 'Initializing game logic...'}
@@ -390,13 +390,18 @@ function LocalGame() {
   }
 
   if (!bookkeeperInstance || !storedGame) {
+    // This case should ideally be covered by loading/error states,
+    // but as a fallback:
     return (
       <div style={{ padding: '20px' }}>
-        <p>Game logic or data not available. Please try again.</p>
+        <p>Game logic or data not available. Please try again or check console for errors.</p>
         <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
   }
+
+  const lastCompletedPointEvents = bookkeeperInstance.getLastCompletedPointPrettyPrint();
+  const isHalfRecorded = bookkeeperInstance.pointsAtHalf > 0;
 
   return (
     <div style={{ padding: '20px' }}>
@@ -406,17 +411,23 @@ function LocalGame() {
           justifyContent: 'space-between',
           alignItems: 'center',
           marginBottom: '20px',
+          borderBottom: '1px solid #eee',
+          paddingBottom: '10px',
         }}
       >
-        <Link to="/stat_keeper" style={{ display: 'inline-block' }}>
-          &larr; Back to StatKeeper Home
+        <Link to="/stat_keeper" style={{ display: 'inline-block', fontSize: '1em' }}>
+          &larr; StatKeeper Home
         </Link>
-        <Link to={`/stat_keeper/edit_game/${numericGameId}`}>
-          <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Edit Game Details</button>
-        </Link>
+        <GameActionsMenu
+          numericGameId={numericGameId}
+          gameStatus={storedGame.status}
+          isHalfRecorded={isHalfRecorded}
+          onRecordHalf={handleRecordHalf}
+          onSubmitGame={handleSubmitGame}
+        />
       </div>
       <h1>
-        Game: {storedGame.homeTeam} vs {storedGame.awayTeam}
+        {storedGame.homeTeam} vs {storedGame.awayTeam}
       </h1>
       <p>
         <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
@@ -435,8 +446,7 @@ function LocalGame() {
           onLinesSelected={handleLinesSelected}
           isResumingPointMode={isResumingPointMode}
           lastPlayedLine={lastPlayedLine}
-          onSubmitGame={handleSubmitGame}
-          gameStatus={storedGame.status}
+          lastCompletedPointEvents={lastCompletedPointEvents}
         />
       )}
 
@@ -446,8 +456,6 @@ function LocalGame() {
           onPerformAction={handlePerformBookkeeperAction}
           onPointScored={handlePointScored}
           onChangeLine={handleChangeLine}
-          onSubmitGame={handleSubmitGame}
-          gameStatus={storedGame.status}
         />
       )}
     </div>
