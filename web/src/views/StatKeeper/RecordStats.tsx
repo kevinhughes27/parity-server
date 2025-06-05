@@ -1,29 +1,32 @@
 import React from 'react';
 import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
-import PointEventsDisplay from './PointEventsDisplay'; // Import the new component
+import PointEventsDisplay from './PointEventsDisplay';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
+  fullHomeRoster: string[]; // New prop for the complete home team roster
+  fullAwayRoster: string[]; // New prop for the complete away team roster
   onPerformAction: (
     action: (bk: Bookkeeper) => void,
     options?: { skipViewChange?: boolean; skipSave?: boolean }
   ) => Promise<void>;
   onPointScored: () => void;
   onChangeLine: () => void;
-  // onSubmitGame and gameStatus props are removed
 }
 
 const RecordStats: React.FC<RecordStatsProps> = ({
   bookkeeper,
+  fullHomeRoster,
+  fullAwayRoster,
   onPerformAction,
   onPointScored,
   onChangeLine,
 }) => {
   const currentGameState = bookkeeper.gameState();
-  const homePlayersOnLine = bookkeeper.homePlayers || [];
-  const awayPlayersOnLine = bookkeeper.awayPlayers || [];
-  const playByPlay = bookkeeper.getCurrentPointPrettyPrint(); // Renamed method
+  const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
+  const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
+  const playByPlay = bookkeeper.getCurrentPointPrettyPrint();
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -42,34 +45,70 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     onPointScored();
   };
 
-  const renderPlayerButton = (playerName: string, isHomeTeamLine: boolean) => {
-    let isDisabled = false;
-    let isActivePlayer = false;
-    let isGenerallyEnabledForTeam = false;
-
-    if (bookkeeper.firstActor === playerName) {
-      isActivePlayer = true;
+  const renderPlayerButton = (
+    playerName: string,
+    isHomeTeamButton: boolean,
+    isPlayerOnActiveLine: boolean
+  ) => {
+    // Default: if not on active line, button is completely disabled and styled differently.
+    if (!isPlayerOnActiveLine) {
+      const style: React.CSSProperties = {
+        display: 'block',
+        width: '100%',
+        padding: '10px',
+        marginBottom: '5px',
+        textAlign: 'left',
+        border: '1px solid #eee', // Lighter border for off-line players
+        borderRadius: '4px',
+        backgroundColor: '#f8f9fa', // Distinctly "off-line" background
+        color: '#adb5bd', // Greyed out text
+        cursor: 'not-allowed',
+        fontWeight: 'normal',
+      };
+      return (
+        <button key={playerName} disabled style={style}>
+          {playerName}
+        </button>
+      );
     }
+
+    // Player IS on the active line. Now apply game state logic for interactivity.
+    let isDisabledByGameState = false;
+    const isActivePlayer = bookkeeper.firstActor === playerName; // Player currently has the disc
 
     if (currentGameState === GameState.Start) {
-      isGenerallyEnabledForTeam = true;
+      // Any player on an active line can be selected to start the point.
+      isDisabledByGameState = false;
     } else if (currentGameState === GameState.WhoPickedUpDisc) {
-      isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
+      // Only players on the team that currently has possession (to pick up the disc).
+      isDisabledByGameState = !(isHomeTeamButton === bookkeeper.homePossession);
     } else if (currentGameState === GameState.Pull) {
-      isGenerallyEnabledForTeam = false;
+      // Puller is already selected (firstActor), no other player interaction until "Pull" button is pressed.
+      isDisabledByGameState = true;
     } else if (bookkeeper.firstActor !== null) {
-      isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
-    } else {
-      isGenerallyEnabledForTeam = isHomeTeamLine === bookkeeper.homePossession;
-    }
-
-    isDisabled = !isGenerallyEnabledForTeam;
-
-    if (isGenerallyEnabledForTeam) {
-      if (bookkeeper.firstActor === playerName && bookkeeper.shouldRecordNewPass()) {
-        isDisabled = true;
+      // A player (firstActor) has the disc.
+      if (isHomeTeamButton === bookkeeper.homePossession) {
+        // Player is on the team with possession.
+        if (isActivePlayer && bookkeeper.shouldRecordNewPass()) {
+          // The player with the disc cannot pass to themselves.
+          isDisabledByGameState = true;
+        } else {
+          // Other players on the team with possession can receive a pass.
+          // Or, if it's the active player, other actions might be available (e.g. throwaway, point).
+          isDisabledByGameState = false;
+        }
+      } else {
+        // Player is on the team without possession, cannot act.
+        isDisabledByGameState = true;
       }
+    } else {
+      // bookkeeper.firstActor is null, and not Start, WhoPickedUpDisc, or Pull.
+      // This implies disc is loose (e.g. after a D, throwaway, drop).
+      // Should effectively be GameState.WhoPickedUpDisc.
+      isDisabledByGameState = !(isHomeTeamButton === bookkeeper.homePossession);
     }
+
+    const finalIsDisabled = isDisabledByGameState;
 
     const buttonStyle: React.CSSProperties = {
       display: 'block',
@@ -79,17 +118,21 @@ const RecordStats: React.FC<RecordStatsProps> = ({
       textAlign: 'left',
       border: '1px solid #ccc',
       borderRadius: '4px',
-      cursor: isDisabled ? 'not-allowed' : 'pointer',
       fontWeight: isActivePlayer ? 'bold' : 'normal',
-      backgroundColor: isDisabled ? '#e0e0e0' : isActivePlayer ? '#a7d7f5' : '#f0f0f0',
-      color: isDisabled ? '#999' : '#000',
+      backgroundColor: finalIsDisabled
+        ? '#e0e0e0' // On line, but disabled by game state
+        : isActivePlayer
+          ? '#a7d7f5' // Active player (has disc)
+          : '#f0f0f0', // On line and enabled for interaction
+      color: finalIsDisabled ? '#999' : '#000',
+      cursor: finalIsDisabled ? 'not-allowed' : 'pointer',
     };
 
     return (
       <button
         key={playerName}
-        onClick={() => handlePlayerClick(playerName, isHomeTeamLine)}
-        disabled={isDisabled}
+        onClick={() => handlePlayerClick(playerName, isHomeTeamButton)}
+        disabled={finalIsDisabled}
         style={buttonStyle}
       >
         {playerName}
@@ -122,7 +165,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
 
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
-  // Removed canSubmitGame logic
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 120px)' }}>
@@ -142,17 +184,21 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <strong>Game State:</strong> {GameState[currentGameState]}
       </div>
 
-      <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '300px' }}> {/* Added minHeight */}
+      <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '300px' }}>
         <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto', height: '100%' }}>
-          <h4>{bookkeeper.homeTeam.name} (Line)</h4>
-          {homePlayersOnLine.map(player => renderPlayerButton(player, true))}
+          <h4>{bookkeeper.homeTeam.name} (Roster)</h4>
+          {fullHomeRoster.map(player =>
+            renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
+          )}
         </div>
 
         <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
 
         <div style={{ flex: 1, padding: '0 10px', overflowY: 'auto', height: '100%' }}>
-          <h4>{bookkeeper.awayTeam.name} (Line)</h4>
-          {awayPlayersOnLine.map(player => renderPlayerButton(player, false))}
+          <h4>{bookkeeper.awayTeam.name} (Roster)</h4>
+          {fullAwayRoster.map(player =>
+            renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
+          )}
         </div>
       </div>
 
@@ -237,7 +283,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         <button onClick={onChangeLine} style={{ margin: '5px', padding: '10px' }}>
           Change Line
         </button>
-        {/* Submit Game button removed from here */}
       </div>
     </div>
   );
