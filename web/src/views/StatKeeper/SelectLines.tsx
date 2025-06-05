@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
-import PointEventsDisplay from './PointEventsDisplay'; // Import the new component
-// StoredGame import removed as gameStatus is no longer a prop
+import PointEventsDisplay from './PointEventsDisplay';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
-  homeRoster: string[]; // Full team roster
-  awayRoster: string[]; // Full team roster
+  homeRoster: string[];
+  awayRoster: string[];
   onPerformAction: (
     action: (bk: Bookkeeper) => void,
     options?: { skipViewChange?: boolean; skipSave?: boolean }
@@ -14,8 +13,8 @@ interface SelectLinesProps {
   onLinesSelected: () => void;
   isResumingPointMode: boolean;
   lastPlayedLine: { home: string[]; away: string[] } | null;
-  lastCompletedPointEvents: string[] | null; // New prop for previous point's events
-  // onSubmitGame and gameStatus props are removed
+  lastCompletedPointEvents: string[] | null;
+  actionBarHeight: string; // Added prop
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({
@@ -27,7 +26,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   isResumingPointMode,
   lastPlayedLine,
   lastCompletedPointEvents,
-  // onSubmitGame and gameStatus are destructured out as they are no longer used
+  actionBarHeight,
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
@@ -107,8 +106,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     await onPerformAction(bk => bk.undo());
   };
 
-  // handleRecordHalf removed
-
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const isSelected = selectedList.includes(playerName);
@@ -120,7 +117,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         style={{
           display: 'block',
           width: '100%',
-          padding: '10px',
+          padding: '8px', // Reduced padding
+          fontSize: '0.9em', // Slightly smaller font
           marginBottom: '5px',
           textAlign: 'left',
           backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0',
@@ -142,50 +140,74 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
       : 'Select players for the first point.';
 
-  // isHalfRecorded and canSubmitGame logic removed
-
   return (
-    <div>
-      <h3>{isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}</h3>
-      <p>Required players per team: {leagueLineSize}</p>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '10px' }}> {/* Added padding to overall component */}
+      {/* Scrollable Content Area */}
+      <div style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '10px' }}>
+        <h3>{isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}</h3>
+        <p>Required players per team: {leagueLineSize}</p>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexWrap: 'nowrap',
+            minHeight: '200px', // Adjusted minHeight
+            overflow: 'hidden', // Children handle their own scroll
+          }}
+        >
+          <div style={{ flex: 1, marginRight: '10px', overflowY: 'auto', height: '100%' }}>
+            <h4>
+              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
+            </h4>
+            {homeRoster.map(player => renderPlayerButton(player, true))}
+          </div>
+
+          <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
+
+          <div style={{ flex: 1, marginLeft: '10px', overflowY: 'auto', height: '100%' }}>
+            <h4>
+              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
+            </h4>
+            {awayRoster.map(player => renderPlayerButton(player, false))}
+          </div>
+        </div>
+        <p style={{ marginTop: '15px', fontSize: '0.9em', color: 'gray' }}>
+          {helpText}
+          <br />
+          If a point was just scored, 'Undo Last Action' will revert the score and take you back to
+          editing the last event of that point.
+        </p>
+      </div>
+
+      {/* Fixed Action Bar */}
       <div
         style={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: actionBarHeight,
+          padding: '10px 15px',
+          backgroundColor: 'white',
+          borderTop: '1px solid #ccc',
           display: 'flex',
-          justifyContent: 'space-between',
-          marginBottom: '20px',
-          flexWrap: 'nowrap', // Ensure side-by-side layout
-          minHeight: '300px', // Give some default height for the content area
-          maxHeight: 'calc(100vh - 300px)', // Prevent excessive height
-          overflow: 'hidden', // Child overflowY will handle scrolling
+          alignItems: 'center',
+          justifyContent: 'space-between', // Use space-between for two groups
+          boxSizing: 'border-box',
+          zIndex: 100,
         }}
       >
-        <div style={{ flex: 1, marginRight: '10px', overflowY: 'auto', height: '100%' }}>
-          <h4>
-            {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
-          </h4>
-          {homeRoster.map(player => renderPlayerButton(player, true))}
-        </div>
-
-        <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
-
-        <div style={{ flex: 1, marginLeft: '10px', overflowY: 'auto', height: '100%' }}>
-          <h4>
-            {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
-          </h4>
-          {awayRoster.map(player => renderPlayerButton(player, false))}
-        </div>
-      </div>
-      <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
         <button
           onClick={handleDone}
           disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
           style={{
             padding: '10px 15px',
-            fontSize: '16px',
+            fontSize: '1em', // Adjusted font size
             backgroundColor: 'green',
             color: 'white',
             border: 'none',
             borderRadius: '4px',
+            marginRight: '10px', // Add some margin if needed
           }}
         >
           {buttonText}
@@ -195,8 +217,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             onClick={handleUndoLastAction}
             style={{
               padding: '10px 15px',
-              fontSize: '16px',
-              backgroundColor: '#f44336',
+              fontSize: '1em', // Adjusted font size
+              backgroundColor: '#ff9800', // Consistent Undo color
               color: 'white',
               border: 'none',
               borderRadius: '4px',
@@ -205,14 +227,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             Undo Last Action
           </button>
         )}
-        {/* Record Half and Submit Game buttons removed */}
       </div>
-      <p style={{ marginTop: '15px', fontSize: '0.9em', color: 'gray' }}>
-        {helpText}
-        <br />
-        If a point was just scored, 'Undo Last Action' will revert the score and take you back to
-        editing the last event of that point.
-      </p>
     </div>
   );
 };
