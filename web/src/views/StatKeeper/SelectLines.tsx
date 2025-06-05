@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
-import { StoredGame } from './db'; // Import StoredGame for status type
+import PointEventsDisplay from './PointEventsDisplay'; // Import the new component
+// StoredGame import removed as gameStatus is no longer a prop
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
@@ -13,8 +14,8 @@ interface SelectLinesProps {
   onLinesSelected: () => void;
   isResumingPointMode: boolean;
   lastPlayedLine: { home: string[]; away: string[] } | null;
-  onSubmitGame: () => Promise<void>; // New prop for submitting game
-  gameStatus: StoredGame['status']; // New prop for game status
+  lastCompletedPointEvents: string[] | null; // New prop for previous point's events
+  // onSubmitGame and gameStatus props are removed
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({
@@ -25,8 +26,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   onLinesSelected,
   isResumingPointMode,
   lastPlayedLine,
-  onSubmitGame, // Destructure new prop
-  gameStatus, // Destructure new prop
+  lastCompletedPointEvents,
+  // onSubmitGame and gameStatus are destructured out as they are no longer used
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
@@ -35,15 +36,12 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   useEffect(() => {
     if (isResumingPointMode) {
-      // Pre-select players who are currently on the line in Bookkeeper
       setSelectedHomePlayers(bookkeeper.homePlayers || []);
       setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
     } else if (lastPlayedLine) {
-      // Pre-select players who were NOT on the line that just finished
       setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
       setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
     } else {
-      // Default: Start of game or after an undo that clears lines, no pre-selection
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
     }
@@ -109,14 +107,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     await onPerformAction(bk => bk.undo());
   };
 
-  const handleRecordHalf = async () => {
-    if (bookkeeper.pointsAtHalf > 0) {
-      alert('Half has already been recorded.');
-      return;
-    }
-    await onPerformAction(bk => bk.recordHalf());
-    alert('Half time recorded.');
-  };
+  // handleRecordHalf removed
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
@@ -151,8 +142,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
       : 'Select players for the first point.';
 
-  const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
-  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
+  // isHalfRecorded and canSubmitGame logic removed
 
   return (
     <div>
@@ -163,16 +153,22 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           display: 'flex',
           justifyContent: 'space-between',
           marginBottom: '20px',
-          flexWrap: 'nowrap',
+          flexWrap: 'nowrap', // Ensure side-by-side layout
+          minHeight: '300px', // Give some default height for the content area
+          maxHeight: 'calc(100vh - 300px)', // Prevent excessive height
+          overflow: 'hidden', // Child overflowY will handle scrolling
         }}
       >
-        <div style={{ flex: 1, marginRight: '10px' }}>
+        <div style={{ flex: 1, marginRight: '10px', overflowY: 'auto', height: '100%' }}>
           <h4>
             {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
           </h4>
           {homeRoster.map(player => renderPlayerButton(player, true))}
         </div>
-        <div style={{ flex: 1, marginLeft: '10px' }}>
+
+        <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
+
+        <div style={{ flex: 1, marginLeft: '10px', overflowY: 'auto', height: '100%' }}>
           <h4>
             {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
           </h4>
@@ -209,36 +205,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             Undo Last Action
           </button>
         )}
-        <button
-          onClick={handleRecordHalf}
-          disabled={isHalfRecorded}
-          style={{
-            padding: '10px 15px',
-            fontSize: '16px',
-            backgroundColor: isHalfRecorded ? '#cccccc' : '#007bff',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-          }}
-          title={isHalfRecorded ? 'Half time has already been recorded' : 'Record Half Time'}
-        >
-          Record Half
-        </button>
-        <button
-          onClick={onSubmitGame}
-          disabled={!canSubmitGame}
-          style={{
-            padding: '10px 15px',
-            fontSize: '16px',
-            backgroundColor: canSubmitGame ? '#5cb85c' : '#cccccc', // Green for active, grey for disabled
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-          }}
-          title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}
-        >
-          Submit Game
-        </button>
+        {/* Record Half and Submit Game buttons removed */}
       </div>
       <p style={{ marginTop: '15px', fontSize: '0.9em', color: 'gray' }}>
         {helpText}
