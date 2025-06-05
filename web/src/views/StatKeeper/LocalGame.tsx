@@ -453,6 +453,8 @@ function LocalGame() {
       {currentView === 'recordStats' && (
         <RecordStats
           bookkeeper={bookkeeperInstance}
+          fullHomeRoster={storedGame.homeRoster}
+          fullAwayRoster={storedGame.awayRoster}
           onPerformAction={handlePerformBookkeeperAction}
           onPointScored={handlePointScored}
           onChangeLine={handleChangeLine}
