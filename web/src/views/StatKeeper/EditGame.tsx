@@ -4,6 +4,7 @@ import { db, StoredGame } from './db';
 import { getLeagueName } from '../../api';
 import EditRoster from './EditRoster';
 import { useLocalGame, useTeams } from './hooks';
+import { AppBar, Toolbar, Box, Typography } from '@mui/material';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
@@ -93,33 +94,28 @@ function EditGame() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar */}
-      <div
-        style={{
-          flexShrink: 0,
-          padding: '10px 15px',
-          borderBottom: '1px solid #eee',
-          backgroundColor: '#f8f9fa',
-        }}
-      >
-        <Link
-          to={`/stat_keeper/game/${numericGameId}`}
-          style={{ fontSize: '0.9em', display: 'block', marginBottom: '5px' }}
-        >
-          &larr; Back to Game
-        </Link>
-        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}>
-          Edit Rosters: {game.homeTeam} vs {game.awayTeam}
-        </h1>
-        <div style={{ textAlign: 'center', fontSize: '0.9em' }}>
-          <p style={{ margin: '0 0 2px 0' }}>
+      {/* Top Bar with AppBar */}
+      <AppBar position="static" color="default" elevation={1}>
+        <Toolbar>
+          <Link
+            to={`/stat_keeper/game/${numericGameId}`}
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+          >
+            &larr; Back to Game
+          </Link>
+        </Toolbar>
+        <Box sx={{ textAlign: 'center', pb: 1 }}>
+          <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
+            Edit Rosters: {game.homeTeam} vs {game.awayTeam}
+          </Typography>
+          <Typography variant="body2" sx={{ fontSize: '0.9em', mb: 0.5 }}>
             <strong>League:</strong> {getLeagueName(game.league_id)}
-          </p>
-          <p style={{ margin: 0 }}>
+          </Typography>
+          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
             <strong>Week:</strong> {game.week}
-          </p>
-        </div>
-      </div>
+          </Typography>
+        </Box>
+      </AppBar>
 
       {/* Main Content Area (Scrollable Roster Columns) */}
       <div
