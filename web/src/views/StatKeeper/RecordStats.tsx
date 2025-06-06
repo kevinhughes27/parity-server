@@ -123,11 +123,11 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           justifyContent: 'flex-start',
           mb: 0.5,
           py: 1,
-          backgroundColor: finalIsDisabled 
+          backgroundColor: finalIsDisabled
             ? (isTeamInPossession ? '#90caf9' : '#e0e0e0') // Darker blue for disabled team in possession
-            : isActivePlayer 
-              ? '#a7d7f5' 
-              : isTeamInPossession 
+            : isActivePlayer
+              ? '#a7d7f5'
+              : isTeamInPossession
                 ? '#e3f2fd' // Light blue background for team in possession
                 : '#f0f0f0',
           color: finalIsDisabled ? (isTeamInPossession ? '#000' : '#999') : '#000',
@@ -181,11 +181,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           </Box>
 
           <Box sx={{ width: '34%' }}>
-            <Typography variant="body2">
-              <strong>Possession:</strong>{' '}
-              {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
-              {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
-            </Typography>
             <Typography variant="body2">
               <strong>Game State:</strong> {GameState[currentGameState]}
             </Typography>

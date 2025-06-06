@@ -4,12 +4,12 @@ import { db, StoredGame } from './db';
 import { leagues as apiLeagues } from '../../api'; // Renamed import
 import { useTeams } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
-import { 
-  AppBar, 
-  Toolbar, 
-  Box, 
-  Typography, 
-  Button, 
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Typography,
+  Button,
   FormControl,
   InputLabel,
   Select,
@@ -123,7 +123,7 @@ function NewGame() {
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamIdStr);
 
   const pageTitle = 'Create New Game';
-  const buttonText = 'Create Game & Start Stat-Taking';
+  const buttonText = 'Start';
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
@@ -238,7 +238,7 @@ function NewGame() {
                       )}
                   </Select>
                 </FormControl>
-                
+
                 <FormControl fullWidth>
                   <InputLabel id="away-team-select-label">Away Team</InputLabel>
                   <Select
@@ -291,11 +291,11 @@ function NewGame() {
                     onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
                   />
                 ) : (
-                  <Paper 
-                    elevation={1} 
-                    sx={{ 
-                      p: 3, 
-                      textAlign: 'center', 
+                  <Paper
+                    elevation={1}
+                    sx={{
+                      p: 3,
+                      textAlign: 'center',
                       height: '100%',
                       display: 'flex',
                       flexDirection: 'column',
@@ -312,7 +312,7 @@ function NewGame() {
                   </Paper>
                 )}
               </Box>
-              
+
               {/* Away Roster Column */}
               <Box
                 sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
@@ -325,11 +325,11 @@ function NewGame() {
                     onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
                   />
                 ) : (
-                  <Paper 
-                    elevation={1} 
-                    sx={{ 
-                      p: 3, 
-                      textAlign: 'center', 
+                  <Paper
+                    elevation={1}
+                    sx={{
+                      p: 3,
+                      textAlign: 'center',
                       height: '100%',
                       display: 'flex',
                       flexDirection: 'column',
