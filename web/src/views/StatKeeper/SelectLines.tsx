@@ -155,7 +155,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   };
 
   const buttonText = isResumingPointMode ? 'Resume Point' : 'Start Point';
-  
+
   // Base help text without undo information
   let helpText = isResumingPointMode
     ? "Adjust the current line if needed, then click 'Resume Point'."
@@ -168,18 +168,18 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
 
-          <Box sx={{ width: '33%', pr: 1 }}>
+          <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
 
-          <Box sx={{ width: '34%' }}>
+          <Box sx={{ width: '40%' }}>
             <PointEventsDisplay bookkeeper={bookkeeper} />
           </Box>
 
-          <Box sx={{ width: '33%', pl: 1 }}>
+          <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
             </Typography>
