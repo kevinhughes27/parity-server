@@ -87,15 +87,16 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
     let isDisabledByGameState = false;
     const isActivePlayer = bookkeeper.firstActor === playerName;
+    const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
 
     if (currentGameState === GameState.Start) {
       isDisabledByGameState = false;
     } else if (currentGameState === GameState.WhoPickedUpDisc) {
-      isDisabledByGameState = !(isHomeTeamButton === bookkeeper.homePossession);
+      isDisabledByGameState = !isTeamInPossession;
     } else if (currentGameState === GameState.Pull) {
       isDisabledByGameState = true;
     } else if (bookkeeper.firstActor !== null) {
-      if (isHomeTeamButton === bookkeeper.homePossession) {
+      if (isTeamInPossession) {
         if (isActivePlayer && bookkeeper.shouldRecordNewPass()) {
           isDisabledByGameState = true;
         } else {
@@ -105,7 +106,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         isDisabledByGameState = true;
       }
     } else {
-      isDisabledByGameState = !(isHomeTeamButton === bookkeeper.homePossession);
+      isDisabledByGameState = !isTeamInPossession;
     }
 
     const finalIsDisabled = isDisabledByGameState;
@@ -122,9 +123,15 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           justifyContent: 'flex-start',
           mb: 0.5,
           py: 1,
-          backgroundColor: finalIsDisabled ? '#e0e0e0' : isActivePlayer ? '#a7d7f5' : '#f0f0f0',
+          backgroundColor: finalIsDisabled 
+            ? '#e0e0e0' 
+            : isActivePlayer 
+              ? '#a7d7f5' 
+              : isTeamInPossession 
+                ? '#e3f2fd' // Light blue background for team in possession
+                : '#f0f0f0',
           color: finalIsDisabled ? '#999' : '#000',
-          border: '1px solid #ccc',
+          border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc', // Blue border for team in possession
           borderRadius: 1,
           fontWeight: isActivePlayer ? 'bold' : 'normal',
           fontSize: '0.9em',
