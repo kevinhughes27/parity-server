@@ -174,17 +174,17 @@ const RecordStats: React.FC<RecordStatsProps> = ({
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
 
         <Box sx={{ display: 'flex', height: '100%' }}>
-          <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
+          <Box sx={{ width: '30%', pr: 1, overflow: 'auto' }}>
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
           </Box>
 
-          <Box sx={{ width: '34%' }}>
+          <Box sx={{ width: '40%' }}>
             <PointEventsDisplay bookkeeper={bookkeeper} />
           </Box>
 
-          <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
+          <Box sx={{ width: '30%', pl: 1, overflow: 'auto' }}>
             {fullAwayRoster.map(player =>
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}
