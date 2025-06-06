@@ -10,15 +10,15 @@ interface PointEventsDisplayProps {
 const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
   const hasActivePoint = bookkeeper.activePoint !== null;
-  
+
   // Get events based on whether there's an active point
-  const events = hasActivePoint 
-    ? bookkeeper.getCurrentPointPrettyPrint() 
+  const events = hasActivePoint
+    ? bookkeeper.getCurrentPointPrettyPrint()
     : bookkeeper.getLastCompletedPointPrettyPrint();
-  
-  const title = hasActivePoint 
-    ? "Play by Play (Current Point)" 
-    : "Events from Last Point";
+
+  const title = hasActivePoint
+    ? "Play by Play (Current Point)"
+    : "Play by Play (Previous Point)";
 
   return (
     <Box
@@ -34,32 +34,27 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
     >
       {/* Game State Display */}
       {hasActivePoint && (
-        <Paper 
-          elevation={0} 
-          sx={{ 
-            p: 1, 
-            backgroundColor: '#f9f9f9', 
-            borderRadius: 1, 
-            textAlign: 'center', 
+        <Paper
+          elevation={0}
+          sx={{
+            p: 1,
+            backgroundColor: '#f9f9f9',
+            borderRadius: 1,
+            textAlign: 'center',
             mb: 1.25,
             fontSize: '0.9em'
           }}
         >
           <Typography variant="body2">
-            <strong>Possession:</strong>{' '}
-            {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
-            {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
-          </Typography>
-          <Typography variant="body2">
             <strong>Game State:</strong> {GameState[currentGameState]}
           </Typography>
         </Paper>
       )}
-      
+
       <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
         {title}
       </Typography>
-      
+
       {!events || events.length === 0 ? (
         <Typography variant="body2" color="text.secondary">
           No events to display.
@@ -67,17 +62,17 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
       ) : (
         <List dense sx={{ pl: 2 }}>
           {events.map((eventStr, index) => (
-            <ListItem 
-              key={index} 
-              sx={{ 
-                display: 'list-item', 
-                listStyleType: 'decimal', 
+            <ListItem
+              key={index}
+              sx={{
+                display: 'list-item',
+                listStyleType: 'decimal',
                 py: 0.5,
                 color: !hasActivePoint ? 'text.secondary' : 'inherit'
               }}
             >
-              <Typography 
-                variant="body2" 
+              <Typography
+                variant="body2"
                 sx={{ color: !hasActivePoint ? 'text.secondary' : 'inherit' }}
               >
                 {eventStr}
