@@ -8,7 +8,7 @@ import {
   uploadCompleteGame,
   UploadedGamePayload,
 } from '../../api';
-import { useLocalGame, useTeams } from './hooks';
+import { useLocalGame, useTeams, useFullscreen } from './hooks';
 import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
 import {
   League as ModelLeague,
@@ -44,22 +44,8 @@ function LocalGame() {
   );
   const [isResumingPointMode, setIsResumingPointMode] = useState<boolean>(false);
 
-  useEffect(() => {
-    const elem = document.documentElement;
-    const requestFullScreen =
-      elem.requestFullscreen ||
-      (elem as any).mozRequestFullScreen ||
-      (elem as any).webkitRequestFullscreen ||
-      (elem as any).msRequestFullscreen;
-
-    if (requestFullScreen) {
-      requestFullScreen.call(elem).catch((err: Error) => {
-        console.warn(`Fullscreen request failed: ${err.message} (${err.name})`);
-        // Note: Fullscreen requests usually require a user gesture.
-        // Automatic requests might be blocked by the browser.
-      });
-    }
-  }, []); // Run once on mount
+  // Use the fullscreen hook
+  useFullscreen();
 
   const initializeBookkeeper = useCallback(
     (gameData: StoredGame) => {

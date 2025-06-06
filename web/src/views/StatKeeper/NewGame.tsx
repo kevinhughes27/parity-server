@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
 import { leagues as apiLeagues } from '../../api'; // Renamed import
-import { useTeams } from './hooks';
+import { useTeams, useFullscreen } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
 import {
   AppBar,
@@ -27,6 +27,7 @@ const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
 function NewGame() {
   const navigate = useNavigate();
+  useFullscreen();
 
   const [selectedLeagueId, setSelectedLeagueId] = useState<string>(apiLeagues[0]?.id || '');
 
