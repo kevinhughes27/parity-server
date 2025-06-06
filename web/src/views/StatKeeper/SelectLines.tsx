@@ -166,7 +166,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
-        <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 120px)' }}>
+        <Box sx={{ display: 'flex', height: '100%' }}>
 
           <Box sx={{ width: '33%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
