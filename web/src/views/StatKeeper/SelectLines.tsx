@@ -25,13 +25,12 @@ interface SelectLinesProps {
 
 const SelectLines: React.FC<SelectLinesProps> = ({
   bookkeeper,
-  homeRoster, // Already sorted
-  awayRoster, // Already sorted
+  homeRoster,
+  awayRoster,
   onPerformAction,
   onLinesSelected,
   isResumingPointMode,
   lastPlayedLine,
-  lastCompletedPointEvents,
   actionBarHeight,
 }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
