@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box, Typography, List, ListItem } from '@mui/material';
 
 interface PointEventsDisplayProps {
   title: string;
@@ -7,27 +8,34 @@ interface PointEventsDisplayProps {
 
 const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ title, events }) => {
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         flex: 1.5,
-        padding: '0 10px',
+        px: 1.25,
         borderLeft: '1px solid #ccc',
         borderRight: '1px solid #ccc',
-        overflowY: 'auto',
-        height: '100%', // Ensure it takes height in flex container
+        overflow: 'auto',
+        height: '100%',
       }}
     >
-      <h4>{title}</h4>
+      <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+        {title}
+      </Typography>
+      
       {!events || events.length === 0 ? (
-        <p>No events to display.</p>
+        <Typography variant="body2" color="text.secondary">
+          No events to display.
+        </Typography>
       ) : (
-        <ul style={{ listStyleType: 'decimal', paddingLeft: '20px', margin: 0 }}>
+        <List dense sx={{ pl: 2 }}>
           {events.map((eventStr, index) => (
-            <li key={index}>{eventStr}</li>
+            <ListItem key={index} sx={{ display: 'list-item', listStyleType: 'decimal', py: 0.5 }}>
+              <Typography variant="body2">{eventStr}</Typography>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       )}
-    </div>
+    </Box>
   );
 };
 

@@ -435,27 +435,24 @@ function LocalGame() {
   const sortedAwayRoster = [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b));
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar */}
-      <div
-        style={{
-          flexShrink: 0,
-          padding: '10px 15px', // Reduced padding
-          borderBottom: '1px solid #eee',
-          backgroundColor: '#f8f9fa', // Light background for top bar
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '5px', // Reduced margin
-          }}
-        >
-          <Link to="/stat_keeper" style={{ fontSize: '0.9em' }}>
-            {' '}
-            {/* Slightly smaller link */}
+      <Box sx={{ 
+        flexShrink: 0, 
+        p: '10px 15px', 
+        borderBottom: '1px solid #eee', 
+        bgcolor: '#f8f9fa' 
+      }}>
+        <Box sx={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          mb: 0.5 
+        }}>
+          <Link 
+            to="/stat_keeper" 
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+          >
             &larr; StatKeeper Home
           </Link>
           <GameActionsMenu
@@ -465,31 +462,30 @@ function LocalGame() {
             onRecordHalf={handleRecordHalf}
             onSubmitGame={handleSubmitGame}
           />
-        </div>
-        <h1 style={{ fontSize: '1.5em', margin: '0 0 5px 0', textAlign: 'center' }}>
-          {' '}
-          {/* Centered title */}
+        </Box>
+        <Typography 
+          variant="h5" 
+          sx={{ fontSize: '1.5em', m: '0 0 5px 0', textAlign: 'center' }}
+        >
           {storedGame.homeTeam} vs {storedGame.awayTeam}
-        </h1>
-        <div style={{ textAlign: 'center', fontSize: '0.9em' }}>
-          {' '}
-          {/* Centered score/status */}
-          <p style={{ margin: '0 0 2px 0' }}>
+        </Typography>
+        <Box sx={{ textAlign: 'center', fontSize: '0.9em' }}>
+          <Typography variant="body2" sx={{ m: '0 0 2px 0' }}>
             <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
-          </p>
-          <p style={{ margin: 0 }}>
-            <strong>Status:</strong> <span style={{ fontWeight: 'bold' }}>{storedGame.status}</span>
-          </p>
-        </div>
-      </div>
+          </Typography>
+          <Typography variant="body2" sx={{ m: 0 }}>
+            <strong>Status:</strong> <Box component="span" sx={{ fontWeight: 'bold' }}>{storedGame.status}</Box>
+          </Typography>
+        </Box>
+      </Box>
 
       {/* Main Content Area (Scrollable) */}
-      <div
-        style={{
+      <Box
+        sx={{
           flexGrow: 1,
           overflowY: 'auto',
-          paddingBottom: ACTION_BAR_HEIGHT, // Space for the fixed bottom bar
-          position: 'relative', // For potential absolutely positioned children if needed
+          pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
+          position: 'relative',
         }}
       >
         {currentView === 'selectLines' && (
@@ -517,9 +513,9 @@ function LocalGame() {
             actionBarHeight={ACTION_BAR_HEIGHT}
           />
         )}
-      </div>
+      </Box>
       {/* The fixed action bar is now rendered by SelectLines/RecordStats */}
-    </div>
+    </Box>
   );
 }
 
