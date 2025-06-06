@@ -5,6 +5,7 @@ import { getLeagueName } from '../../api';
 import EditRoster from './EditRoster';
 import { useLocalGame, useTeams } from './hooks';
 import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
@@ -78,7 +79,9 @@ function EditGame() {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p style={{ color: 'red' }}>{gameError}</p>
-        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
+        <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
+          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
+        </Link>
       </div>
     );
   }
@@ -99,9 +102,9 @@ function EditGame() {
         <Toolbar>
           <Link
             to={`/stat_keeper/game/${numericGameId}`}
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
           >
-            &larr; Back to Game
+            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to Game
           </Link>
         </Toolbar>
         <Box sx={{ textAlign: 'center', pb: 1 }}>
