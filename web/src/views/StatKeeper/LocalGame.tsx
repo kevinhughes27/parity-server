@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { Box, Typography } from '@mui/material';
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -437,20 +438,20 @@ function LocalGame() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar */}
-      <Box sx={{ 
-        flexShrink: 0, 
-        p: '10px 15px', 
-        borderBottom: '1px solid #eee', 
-        bgcolor: '#f8f9fa' 
+      <Box sx={{
+        flexShrink: 0,
+        p: '10px 15px',
+        borderBottom: '1px solid #eee',
+        bgcolor: '#f8f9fa'
       }}>
-        <Box sx={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
-          mb: 0.5 
+        <Box sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          mb: 0.5
         }}>
-          <Link 
-            to="/stat_keeper" 
+          <Link
+            to="/stat_keeper"
             style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
           >
             &larr; StatKeeper Home
@@ -463,8 +464,8 @@ function LocalGame() {
             onSubmitGame={handleSubmitGame}
           />
         </Box>
-        <Typography 
-          variant="h5" 
+        <Typography
+          variant="h5"
           sx={{ fontSize: '1.5em', m: '0 0 5px 0', textAlign: 'center' }}
         >
           {storedGame.homeTeam} vs {storedGame.awayTeam}
@@ -472,9 +473,6 @@ function LocalGame() {
         <Box sx={{ textAlign: 'center', fontSize: '0.9em' }}>
           <Typography variant="body2" sx={{ m: '0 0 2px 0' }}>
             <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
-          </Typography>
-          <Typography variant="body2" sx={{ m: 0 }}>
-            <strong>Status:</strong> <Box component="span" sx={{ fontWeight: 'bold' }}>{storedGame.status}</Box>
           </Typography>
         </Box>
       </Box>
