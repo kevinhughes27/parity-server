@@ -1,6 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { StoredGame } from './db'; // For gameStatus type
+import { 
+  Box, 
+  IconButton, 
+  Menu, 
+  MenuItem, 
+  Tooltip, 
+  Divider 
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 interface GameActionsMenuProps {
   numericGameId: number | undefined;
@@ -17,125 +26,80 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
   onRecordHalf,
   onSubmitGame,
 }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  
   const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setMenuOpen(false);
-      }
-    };
-
-    if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [menuOpen]);
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleAction = async (action: () => Promise<void> | void) => {
     await action();
-    setMenuOpen(false);
+    handleClose();
   };
 
   if (!numericGameId) return null;
 
   return (
-    <div style={{ position: 'relative' }} ref={menuRef}>
-      <button
-        onClick={toggleMenu}
-        style={{
-          background: 'none',
-          border: '1px solid #ccc',
-          padding: '8px 10px',
-          cursor: 'pointer',
-          fontSize: '18px',
-          lineHeight: '1',
-        }}
+    <Box>
+      <IconButton
+        onClick={handleClick}
         aria-label="Game Actions Menu"
-        aria-expanded={menuOpen}
+        aria-controls={open ? 'game-actions-menu' : undefined}
         aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        size="medium"
+        sx={{ border: '1px solid #ccc' }}
       >
-        ☰
-      </button>
-      {menuOpen && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '100%',
-            right: 0,
-            backgroundColor: 'white',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-            zIndex: 1000,
-            minWidth: '200px',
-          }}
-          role="menu"
+        <MenuIcon />
+      </IconButton>
+      
+      <Menu
+        id="game-actions-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'game-actions-button',
+        }}
+      >
+        <MenuItem 
+          component={Link} 
+          to={`/stat_keeper/edit_game/${numericGameId}`}
+          onClick={handleClose}
         >
-          <Link
-            to={`/stat_keeper/edit_game/${numericGameId}`}
-            onClick={() => setMenuOpen(false)}
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              textDecoration: 'none',
-              color: 'black',
-              borderBottom: '1px solid #eee',
-            }}
-            role="menuitem"
-          >
-            Edit Game Details
-          </Link>
-          <button
+          Edit Game Details
+        </MenuItem>
+        
+        <Divider />
+        
+        <Tooltip title={isHalfRecorded ? 'Half time has already been recorded' : 'Record Half Time'}>
+          <MenuItem
             onClick={() => handleAction(onRecordHalf)}
             disabled={isHalfRecorded}
-            style={{
-              display: 'block',
-              width: '100%',
-              padding: '10px 15px',
-              textAlign: 'left',
-              border: 'none',
-              background: 'none',
-              cursor: isHalfRecorded ? 'not-allowed' : 'pointer',
-              color: isHalfRecorded ? '#999' : 'black',
-              borderBottom: '1px solid #eee',
-            }}
-            role="menuitem"
-            title={isHalfRecorded ? 'Half time has already been recorded' : 'Record Half Time'}
+            sx={{ color: isHalfRecorded ? '#999' : 'inherit' }}
           >
             Record Half
-          </button>
-          <button
+          </MenuItem>
+        </Tooltip>
+        
+        <Tooltip title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}>
+          <MenuItem
             onClick={() => handleAction(onSubmitGame)}
             disabled={!canSubmitGame}
-            style={{
-              display: 'block',
-              width: '100%',
-              padding: '10px 15px',
-              textAlign: 'left',
-              border: 'none',
-              background: 'none',
-              cursor: !canSubmitGame ? 'not-allowed' : 'pointer',
-              color: !canSubmitGame ? '#999' : 'black',
-            }}
-            role="menuitem"
-            title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}
+            sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
           >
             Submit Game
-          </button>
-        </div>
-      )}
-    </div>
+          </MenuItem>
+        </Tooltip>
+      </Menu>
+    </Box>
   );
 };
 

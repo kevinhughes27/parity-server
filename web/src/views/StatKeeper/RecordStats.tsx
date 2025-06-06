@@ -2,6 +2,14 @@ import React from 'react';
 import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
+import { 
+  Box, 
+  Button, 
+  Typography, 
+  Paper, 
+  Grid, 
+  Stack
+} from '@mui/material';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
@@ -53,24 +61,28 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     isPlayerOnActiveLine: boolean
   ) => {
     if (!isPlayerOnActiveLine) {
-      const style: React.CSSProperties = {
-        display: 'block',
-        width: '100%',
-        padding: '8px', // Reduced padding
-        fontSize: '0.9em', // Slightly smaller font
-        marginBottom: '5px',
-        textAlign: 'left',
-        border: '1px solid #eee',
-        borderRadius: '4px',
-        backgroundColor: '#f8f9fa',
-        color: '#adb5bd',
-        cursor: 'not-allowed',
-        fontWeight: 'normal',
-      };
       return (
-        <button key={playerName} disabled style={style}>
+        <Button
+          key={playerName}
+          disabled
+          fullWidth
+          variant="text"
+          size="small"
+          sx={{
+            justifyContent: 'flex-start',
+            mb: 0.5,
+            py: 1,
+            color: '#adb5bd',
+            backgroundColor: '#f8f9fa',
+            border: '1px solid #eee',
+            borderRadius: 1,
+            fontWeight: 'normal',
+            fontSize: '0.9em',
+            textTransform: 'none'
+          }}
+        >
           {playerName}
-        </button>
+        </Button>
       );
     }
 
@@ -99,30 +111,29 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
     const finalIsDisabled = isDisabledByGameState;
 
-    const buttonStyle: React.CSSProperties = {
-      display: 'block',
-      width: '100%',
-      padding: '8px', // Reduced padding
-      fontSize: '0.9em', // Slightly smaller font
-      marginBottom: '5px',
-      textAlign: 'left',
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      fontWeight: isActivePlayer ? 'bold' : 'normal',
-      backgroundColor: finalIsDisabled ? '#e0e0e0' : isActivePlayer ? '#a7d7f5' : '#f0f0f0',
-      color: finalIsDisabled ? '#999' : '#000',
-      cursor: finalIsDisabled ? 'not-allowed' : 'pointer',
-    };
-
     return (
-      <button
+      <Button
         key={playerName}
         onClick={() => handlePlayerClick(playerName, isHomeTeamButton)}
         disabled={finalIsDisabled}
-        style={buttonStyle}
+        fullWidth
+        variant="text"
+        size="small"
+        sx={{
+          justifyContent: 'flex-start',
+          mb: 0.5,
+          py: 1,
+          backgroundColor: finalIsDisabled ? '#e0e0e0' : isActivePlayer ? '#a7d7f5' : '#f0f0f0',
+          color: finalIsDisabled ? '#999' : '#000',
+          border: '1px solid #ccc',
+          borderRadius: 1,
+          fontWeight: isActivePlayer ? 'bold' : 'normal',
+          fontSize: '0.9em',
+          textTransform: 'none'
+        }}
       >
         {playerName}
-      </button>
+      </Button>
     );
   };
 
@@ -152,119 +163,112 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
   const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
 
-  const actionButtonStyle: React.CSSProperties = {
-    margin: '2px 4px', // Reduced margin for tighter packing
-    padding: '8px 10px', // Reduced padding
-    fontSize: '0.85em', // Slightly smaller font for action buttons
-    minWidth: '60px', // Ensure buttons have some minimum width
-    flexShrink: 0, // Prevent buttons from shrinking too much if space is tight
-  };
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      {' '}
-      {/* Fill parent height */}
-      {/* Scrollable Content Area */}
-      <div style={{ flexGrow: 1, overflowY: 'auto', padding: '10px' }}>
-        {' '}
-        {/* Added padding to overall component */}
-        <div
-          style={{
-            padding: '8px', // Reduced padding
-            backgroundColor: '#f9f9f9',
-            borderRadius: '4px',
-            textAlign: 'center',
-            marginBottom: '10px',
-            fontSize: '0.9em', // Smaller font for status
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
+      <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
+        <Paper 
+          elevation={0} 
+          sx={{ 
+            p: 1, 
+            backgroundColor: '#f9f9f9', 
+            borderRadius: 1, 
+            textAlign: 'center', 
+            mb: 1.25,
+            fontSize: '0.9em'
           }}
         >
-          <strong>Possession:</strong>{' '}
-          {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
-          {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
-          <br />
-          <strong>Game State:</strong> {GameState[currentGameState]}
-        </div>
-        <div style={{ display: 'flex', flexGrow: 1, overflow: 'hidden', minHeight: '200px' }}>
-          {' '}
-          {/* Adjusted minHeight */}
-          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}>
-            {' '}
-            {/* Reduced horizontal padding */}
-            <h4>{bookkeeper.homeTeam.name} (Roster)</h4>
-            {/* fullHomeRoster is already sorted by LocalGame */}
+          <Typography variant="body2">
+            <strong>Possession:</strong>{' '}
+            {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
+            {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
+          </Typography>
+          <Typography variant="body2">
+            <strong>Game State:</strong> {GameState[currentGameState]}
+          </Typography>
+        </Paper>
+        
+        <Grid container spacing={1} sx={{ minHeight: '200px' }}>
+          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+              {bookkeeper.homeTeam.name} (Roster)
+            </Typography>
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
-          </div>
-          <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
-          <div style={{ flex: 1, padding: '0 5px', overflowY: 'auto', height: '100%' }}>
-            {' '}
-            {/* Reduced horizontal padding */}
-            <h4>{bookkeeper.awayTeam.name} (Roster)</h4>
-            {/* fullAwayRoster is already sorted by LocalGame */}
+          </Grid>
+          
+          <Grid item xs={4}>
+            <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
+          </Grid>
+          
+          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+              {bookkeeper.awayTeam.name} (Roster)
+            </Typography>
             {fullAwayRoster.map(player =>
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}
-          </div>
-        </div>
-      </div>
-      {/* Fixed Action Bar */}
-      <div
-        style={{
+          </Grid>
+        </Grid>
+      </Box>
+
+      <Box
+        sx={{
           position: 'fixed',
           bottom: 0,
           left: 0,
           right: 0,
           height: actionBarHeight,
-          padding: '5px 10px', // Reduced padding for the bar itself
+          p: '5px 10px',
           backgroundColor: 'white',
           borderTop: '1px solid #ccc',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          flexWrap: 'nowrap', // Prevent main groups from wrapping, internal groups can wrap
+          flexWrap: 'nowrap',
           boxSizing: 'border-box',
           zIndex: 100,
         }}
       >
-        {/* Left group of action buttons */}
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-          }}
-        >
-          <button
+        <Stack direction="row" spacing={0.5} flexWrap="wrap" alignItems="center">
+          <Button
             onClick={() => handleActionClick(bk => bk.recordPull())}
             disabled={!btnPullEnabled}
-            style={actionButtonStyle}
+            size="small"
+            variant="outlined"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             Pull
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={handlePointClick}
             disabled={!btnPointEnabled}
-            style={{ ...actionButtonStyle, backgroundColor: 'lightgreen' }}
+            size="small"
+            variant="contained"
+            color="success"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             Point!
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => handleActionClick(bk => bk.recordDrop())}
             disabled={!btnDropEnabled}
-            style={actionButtonStyle}
+            size="small"
+            variant="outlined"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             Drop
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => handleActionClick(bk => bk.recordThrowAway())}
             disabled={!btnThrowAwayEnabled}
-            style={actionButtonStyle}
+            size="small"
+            variant="outlined"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             Throwaway
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => {
               if (!bookkeeper.firstActor) {
                 alert('Select the player who got the D first.');
@@ -273,11 +277,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               handleActionClick(bk => bk.recordD());
             }}
             disabled={!btnDEnabled}
-            style={actionButtonStyle}
+            size="small"
+            variant="outlined"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             D (Block)
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => {
               if (!bookkeeper.firstActor) {
                 alert('Select the player who got the Catch D first.');
@@ -286,35 +292,36 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               handleActionClick(bk => bk.recordCatchD());
             }}
             disabled={!btnCatchDEnabled}
-            style={actionButtonStyle}
+            size="small"
+            variant="outlined"
+            sx={{ fontSize: '0.85em', minWidth: '60px' }}
           >
             Catch D
-          </button>
-        </div>
+          </Button>
+        </Stack>
 
-        {/* Right group of action buttons */}
-        <div
-          style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center', marginLeft: 'auto' }}
-        >
-          <button onClick={onChangeLine} style={{ ...actionButtonStyle, marginRight: '5px' }}>
+        <Stack direction="row" spacing={0.5} alignItems="center">
+          <Button 
+            onClick={onChangeLine} 
+            size="small" 
+            variant="outlined"
+            sx={{ fontSize: '0.85em' }}
+          >
             Change Line
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => handleActionClick(bk => bk.undo())}
             disabled={!btnUndoEnabled}
-            style={{
-              ...actionButtonStyle,
-              backgroundColor: '#ff9800',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-            }}
+            size="small"
+            variant="contained"
+            color="warning"
+            sx={{ fontSize: '0.85em' }}
           >
             Undo
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Stack>
+      </Box>
+    </Box>
   );
 };
 

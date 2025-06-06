@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
+import { 
+  Box, 
+  Button, 
+  Typography, 
+  Grid, 
+  Paper
+} from '@mui/material';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
@@ -128,25 +135,23 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     const isSelected = selectedList.includes(playerName);
 
     return (
-      <button
+      <Button
         key={playerName}
         onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
-        style={{
-          display: 'block',
-          width: '100%',
-          padding: '8px', // Reduced padding
-          fontSize: '0.9em', // Slightly smaller font
-          marginBottom: '5px',
-          textAlign: 'left',
-          backgroundColor: isSelected ? '#cce7ff' : '#f0f0f0',
-          border: isSelected ? '1px solid #007bff' : '1px solid #ccc',
-          borderRadius: '4px',
-          cursor: 'pointer',
+        fullWidth
+        variant={isSelected ? "contained" : "outlined"}
+        color={isSelected ? "primary" : "inherit"}
+        sx={{
+          mb: 0.5,
+          py: 1,
+          justifyContent: 'flex-start',
+          textTransform: 'none',
           fontWeight: isSelected ? 'bold' : 'normal',
+          fontSize: '0.9em',
         }}
       >
         {playerName}
-      </button>
+      </Button>
     );
   };
 
@@ -158,97 +163,84 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       : 'Select players for the first point.';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '10px' }}>
-      {' '}
-      {/* Added padding to overall component */}
-      {/* Scrollable Content Area */}
-      <div style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '10px' }}>
-        <h3>{isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}</h3>
-        <p>Required players per team: {leagueLineSize}</p>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'nowrap',
-            minHeight: '200px', // Adjusted minHeight
-            overflow: 'hidden', // Children handle their own scroll
-          }}
-        >
-          <div style={{ flex: 1, marginRight: '10px', overflowY: 'auto', height: '100%' }}>
-            <h4>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
+      <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
+        <Typography variant="h5" sx={{ mb: 1 }}>
+          {isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          Required players per team: {leagueLineSize}
+        </Typography>
+        
+        <Grid container spacing={1.25} sx={{ minHeight: '200px' }}>
+          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
-            </h4>
-            {/* homeRoster is already sorted by LocalGame */}
+            </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
-          </div>
-
-          <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
-
-          <div style={{ flex: 1, marginLeft: '10px', overflowY: 'auto', height: '100%' }}>
-            <h4>
+          </Grid>
+          
+          <Grid item xs={4}>
+            <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
+          </Grid>
+          
+          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
-            </h4>
-            {/* awayRoster is already sorted by LocalGame */}
+            </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
-          </div>
-        </div>
-        <p style={{ marginTop: '15px', fontSize: '0.9em', color: 'gray' }}>
-          {helpText}
-          <br />
-          If a point was just scored, 'Undo Last Action' will revert the score and take you back to
-          editing the last event of that point.
-        </p>
-      </div>
-      {/* Fixed Action Bar */}
-      <div
-        style={{
+          </Grid>
+        </Grid>
+        
+        <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
+          <Typography variant="body2" color="text.secondary">
+            {helpText}
+            <br />
+            If a point was just scored, 'Undo Last Action' will revert the score and take you back to
+            editing the last event of that point.
+          </Typography>
+        </Paper>
+      </Box>
+      
+      <Box
+        sx={{
           position: 'fixed',
           bottom: 0,
           left: 0,
           right: 0,
           height: actionBarHeight,
-          padding: '10px 15px',
+          p: '10px 15px',
           backgroundColor: 'white',
           borderTop: '1px solid #ccc',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between', // Use space-between for two groups
+          justifyContent: 'space-between',
           boxSizing: 'border-box',
           zIndex: 100,
         }}
       >
-        <button
+        <Button
           onClick={handleDone}
           disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
-          style={{
-            padding: '10px 15px',
-            fontSize: '1em', // Adjusted font size
-            backgroundColor: 'green',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            marginRight: '10px', // Add some margin if needed
-          }}
+          variant="contained"
+          color="success"
+          sx={{ fontSize: '1em' }}
         >
           {buttonText}
-        </button>
+        </Button>
+        
         {bookkeeper.getMementosCount() > 0 && (
-          <button
+          <Button
             onClick={handleUndoLastAction}
-            style={{
-              padding: '10px 15px',
-              fontSize: '1em', // Adjusted font size
-              backgroundColor: '#ff9800', // Consistent Undo color
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-            }}
+            variant="contained"
+            color="warning"
+            sx={{ fontSize: '1em' }}
           >
             Undo Last Action
-          </button>
+          </Button>
         )}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
