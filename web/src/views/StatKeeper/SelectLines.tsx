@@ -172,25 +172,25 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           Required players per team: {leagueLineSize}
         </Typography>
         
-        <Grid container spacing={1.25} sx={{ minHeight: '200px' }}>
-          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+        <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 120px)' }}>
+          <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
-          </Grid>
+          </Box>
           
-          <Grid item xs={4}>
+          <Box sx={{ width: '34%' }}>
             <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
-          </Grid>
+          </Box>
           
-          <Grid item xs={4} sx={{ height: '100%', overflow: 'auto' }}>
+          <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
         
         <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
           <Typography variant="body2" color="text.secondary">

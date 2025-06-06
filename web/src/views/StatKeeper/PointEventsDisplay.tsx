@@ -10,12 +10,11 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ title, events }
   return (
     <Box
       sx={{
-        flex: 1.5,
+        height: '100%',
         px: 1.25,
         borderLeft: '1px solid #ccc',
         borderRight: '1px solid #ccc',
         overflow: 'auto',
-        height: '100%',
       }}
     >
       <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
