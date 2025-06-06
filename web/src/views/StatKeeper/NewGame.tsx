@@ -153,20 +153,32 @@ function NewGame() {
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar with AppBar */}
       <AppBar position="static" color="default" elevation={1}>
-        <Toolbar>
-          <Link
-            to={'/stat_keeper'}
-            style={{
-              fontSize: '0.9em',
-              textDecoration: 'none',
-              color: 'inherit',
-              display: 'flex',
-              alignItems: 'center',
+        <Toolbar sx={{ position: 'relative' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', zIndex: 2 }}>
+            <Link
+              to={'/stat_keeper'}
+              style={{
+                fontSize: '0.9em',
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
+            </Link>
+          </Box>
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              fontSize: '1.5em', 
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              textAlign: 'center',
+              zIndex: 1
             }}
           >
-            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
-          </Link>
-          <Typography variant="h5" sx={{ fontSize: '1.5em', textAlign: 'center', flex: 1 }}>
             {pageTitle}
           </Typography>
         </Toolbar>
