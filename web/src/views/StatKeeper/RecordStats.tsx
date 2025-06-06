@@ -6,8 +6,6 @@ import ActionBar from './ActionBar';
 import {
   Box,
   Button,
-  Typography,
-  Paper
 } from '@mui/material';
 
 interface RecordStatsProps {
@@ -29,13 +27,11 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   fullAwayRoster, // Already sorted
   onPerformAction,
   onPointScored,
-  onChangeLine,
   actionBarHeight,
 }) => {
   const currentGameState = bookkeeper.gameState();
   const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
   const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
-  const playByPlay = bookkeeper.getCurrentPointPrettyPrint();
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
