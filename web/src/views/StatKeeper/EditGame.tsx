@@ -4,7 +4,7 @@ import { db, StoredGame } from './db';
 import { getLeagueName } from '../../api';
 import EditRoster from './EditRoster';
 import { useLocalGame, useTeams } from './hooks';
-import { AppBar, Toolbar, Box, Typography } from '@mui/material';
+import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
@@ -106,13 +106,10 @@ function EditGame() {
         </Toolbar>
         <Box sx={{ textAlign: 'center', pb: 1 }}>
           <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-            Edit Rosters: {game.homeTeam} vs {game.awayTeam}
-          </Typography>
-          <Typography variant="body2" sx={{ fontSize: '0.9em', mb: 0.5 }}>
-            <strong>League:</strong> {getLeagueName(game.league_id)}
+            {game.homeTeam} vs {game.awayTeam}
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-            <strong>Week:</strong> {game.week}
+            <strong>Score:</strong> {game.homeScore} - {game.awayScore}
           </Typography>
         </Box>
       </AppBar>

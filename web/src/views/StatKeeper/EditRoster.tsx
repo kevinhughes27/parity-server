@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TeamPlayer } from '../../api';
+import { Box, Button, Typography } from '@mui/material';
 
 interface EditRosterProps {
   teamName: string;
@@ -61,7 +62,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
       }}
     >
       <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
-        {teamName} Roster ({currentRosterNames.length} players)
+        {currentRosterNames.length} players
       </Typography>
 
       {/* Scrollable Player List - currentRosterNames is already sorted by parent */}
@@ -128,10 +129,10 @@ const EditRoster: React.FC<EditRosterProps> = ({
               component="select"
               value={selectedLeaguePlayer}
               onChange={e => setSelectedLeaguePlayer(e.target.value)}
-              sx={{ 
-                flexGrow: 1, 
-                p: '6px', 
-                fontSize: '0.9em', 
+              sx={{
+                flexGrow: 1,
+                p: '6px',
+                fontSize: '0.9em',
                 minWidth: '100px',
                 borderRadius: 1,
                 border: '1px solid #ccc'
@@ -167,10 +168,10 @@ const EditRoster: React.FC<EditRosterProps> = ({
               value={newSubName}
               onChange={e => setNewSubName(e.target.value)}
               placeholder="Substitute name"
-              sx={{ 
-                flexGrow: 1, 
-                p: '6px', 
-                fontSize: '0.9em', 
+              sx={{
+                flexGrow: 1,
+                p: '6px',
+                fontSize: '0.9em',
                 minWidth: '100px',
                 borderRadius: 1,
                 border: '1px solid #ccc'
