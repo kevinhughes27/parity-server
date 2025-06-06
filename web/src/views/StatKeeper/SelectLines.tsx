@@ -20,7 +20,6 @@ interface SelectLinesProps {
   onLinesSelected: () => void;
   isResumingPointMode: boolean;
   lastPlayedLine: { home: string[]; away: string[] } | null;
-  lastCompletedPointEvents: string[] | null;
   actionBarHeight: string; // Added prop
 }
 
@@ -179,7 +178,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
               {isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}
             </Typography>
 
-            <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
+            <PointEventsDisplay bookkeeper={bookkeeper} />
           </Box>
 
           <Box sx={{ width: '33%', pl: 1 }}>

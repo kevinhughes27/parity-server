@@ -181,10 +181,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           </Box>
 
           <Box sx={{ width: '34%' }}>
-            <Typography variant="body2">
-              <strong>Game State:</strong> {GameState[currentGameState]}
-            </Typography>
-            <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
+            <PointEventsDisplay bookkeeper={bookkeeper} />
           </Box>
 
           <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
@@ -192,7 +189,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}
           </Box>
-
         </Box>
       </Box>
 
