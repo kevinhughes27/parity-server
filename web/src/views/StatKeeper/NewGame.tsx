@@ -32,9 +32,9 @@ function NewGame() {
   const [currentLeague, setCurrentLeague] = useState<CurrentLeagueResponse | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
-  
+
   const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(
-    currentLeague?.league?.id
+    currentLeague?.league?.id.toString()
   );
 
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
@@ -65,7 +65,7 @@ function NewGame() {
         setLoadingLeague(false);
       }
     };
-    
+
     loadCurrentLeague();
   }, []);
 
@@ -146,7 +146,7 @@ function NewGame() {
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamIdStr);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamIdStr);
 
-  const pageTitle = 'Create New Game';
+  const pageTitle = 'Create Game';
   const buttonText = 'Start';
 
   return (
@@ -166,12 +166,10 @@ function NewGame() {
           >
             <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
           </Link>
-        </Toolbar>
-        <Box sx={{ textAlign: 'center', pb: 1 }}>
-          <Typography variant="h5" sx={{ fontSize: '1.5em' }}>
+          <Typography variant="h5" sx={{ fontSize: '1.5em', textAlign: 'center', flex: 1 }}>
             {pageTitle}
           </Typography>
-        </Box>
+        </Toolbar>
       </AppBar>
 
       {/* Main Content Area */}
