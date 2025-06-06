@@ -10,7 +10,6 @@ interface EditRosterProps {
 }
 
 const EditRoster: React.FC<EditRosterProps> = ({
-  teamName,
   allLeaguePlayers,
   currentRosterNames,
   onRosterChange,
