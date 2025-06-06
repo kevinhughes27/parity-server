@@ -164,7 +164,7 @@ function NewGame() {
               alignItems: 'center',
             }}
           >
-            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
+            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
           </Link>
           <Typography variant="h5" sx={{ fontSize: '1.5em', textAlign: 'center', flex: 1 }}>
             {pageTitle}
