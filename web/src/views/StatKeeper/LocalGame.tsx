@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, AppBar, Toolbar } from '@mui/material';
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -437,19 +437,9 @@ function LocalGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar */}
-      <Box sx={{
-        flexShrink: 0,
-        p: '10px 15px',
-        borderBottom: '1px solid #eee',
-        bgcolor: '#f8f9fa'
-      }}>
-        <Box sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          mb: 0.5
-        }}>
+      {/* Top Bar with AppBar */}
+      <AppBar position="static" color="default" elevation={1}>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Link
             to="/stat_keeper"
             style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
@@ -475,19 +465,16 @@ function LocalGame() {
               onSubmitGame={handleSubmitGame}
             />
           </Box>
-        </Box>
-        <Typography
-          variant="h5"
-          sx={{ fontSize: '1.5em', m: '0 0 5px 0', textAlign: 'center' }}
-        >
-          {storedGame.homeTeam} vs {storedGame.awayTeam}
-        </Typography>
-        <Box sx={{ textAlign: 'center', fontSize: '0.9em' }}>
-          <Typography variant="body2" sx={{ m: '0 0 2px 0' }}>
+        </Toolbar>
+        <Box sx={{ textAlign: 'center', pb: 1 }}>
+          <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
+            {storedGame.homeTeam} vs {storedGame.awayTeam}
+          </Typography>
+          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
             <strong>Score:</strong> {bookkeeperInstance.homeScore} - {bookkeeperInstance.awayScore}
           </Typography>
         </Box>
-      </Box>
+      </AppBar>
 
       {/* Main Content Area (Scrollable) */}
       <Box
