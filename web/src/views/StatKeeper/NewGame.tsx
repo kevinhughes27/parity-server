@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { leagues as apiLeagues } from '../../api'; // Renamed import
+import { fetchCurrentLeague, CurrentLeagueResponse } from '../../api';
 import { useTeams, useFullscreen } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
 import {
@@ -29,9 +29,13 @@ function NewGame() {
   const navigate = useNavigate();
   useFullscreen();
 
-  const [selectedLeagueId, setSelectedLeagueId] = useState<string>(apiLeagues[0]?.id || '');
-
-  const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(selectedLeagueId);
+  const [currentLeague, setCurrentLeague] = useState<CurrentLeagueResponse | null>(null);
+  const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
+  const [errorLeague, setErrorLeague] = useState<string | null>(null);
+  
+  const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(
+    currentLeague?.league?.id
+  );
 
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
@@ -48,11 +52,29 @@ function NewGame() {
   };
 
   useEffect(() => {
+    const loadCurrentLeague = async () => {
+      setLoadingLeague(true);
+      setErrorLeague(null);
+      try {
+        const response = await fetchCurrentLeague();
+        setCurrentLeague(response);
+      } catch (error) {
+        console.error('Failed to fetch current league:', error);
+        setErrorLeague(error instanceof Error ? error.message : 'Failed to load current league');
+      } finally {
+        setLoadingLeague(false);
+      }
+    };
+    
+    loadCurrentLeague();
+  }, []);
+
+  useEffect(() => {
     setHomeTeamIdStr('');
     setAwayTeamIdStr('');
     sortAndSetHomeRoster([]);
     sortAndSetAwayRoster([]);
-  }, [selectedLeagueId]);
+  }, [currentLeague]);
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamIdStr);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamIdStr);
@@ -67,13 +89,13 @@ function NewGame() {
 
   const handleCreateGame = async () => {
     if (
-      !selectedLeagueId ||
+      !currentLeague?.league?.id ||
       !selectedHomeTeamObj ||
       !selectedAwayTeamObj ||
       homeRosterNames.length === 0 ||
       awayRosterNames.length === 0
     ) {
-      alert('Please select a league, both teams, and ensure rosters are not empty.');
+      alert('Please wait for league to load, select both teams, and ensure rosters are not empty.');
       return;
     }
 
@@ -94,7 +116,7 @@ function NewGame() {
 
     const newGameData: Omit<StoredGame, 'localId'> = {
       serverId: undefined,
-      league_id: selectedLeagueId,
+      league_id: currentLeague.league.id,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
       homeTeamId: selectedHomeTeamObj.id,
@@ -163,25 +185,20 @@ function NewGame() {
           pb: `calc(${ACTION_BAR_HEIGHT} + 16px)`,
         }}
       >
-        {/* Section 1: League and Week Selectors */}
+        {/* Section 1: League Info and Week Selector */}
         <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <FormControl fullWidth>
-              <InputLabel id="league-select-label">League</InputLabel>
-              <Select
-                labelId="league-select-label"
-                id="league-select"
-                value={selectedLeagueId}
-                onChange={e => setSelectedLeagueId(e.target.value)}
-                label="League"
-              >
-                {apiLeagues.map(l => (
-                  <MenuItem key={l.id} value={l.id}>
-                    {l.name}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            {loadingLeague ? (
+              <Typography>Loading current league...</Typography>
+            ) : errorLeague ? (
+              <Typography color="error">{errorLeague}</Typography>
+            ) : currentLeague ? (
+              <Typography variant="h6">
+                League: {currentLeague.league.name}
+              </Typography>
+            ) : (
+              <Typography color="error">No league data available</Typography>
+            )}
 
             <TextField
               id="week-select"
@@ -349,9 +366,9 @@ function NewGame() {
         )}
 
         {/* Message if no teams found */}
-        {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && (
+        {leagueTeams.length === 0 && !loadingTeams && currentLeague?.league?.id && !errorTeams && (
           <Typography sx={{ flexShrink: 0, p: 2 }}>
-            No teams found for the selected league.
+            No teams found for the current league.
           </Typography>
         )}
       </Box>

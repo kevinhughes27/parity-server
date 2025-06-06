@@ -9,8 +9,10 @@ export interface LeagueFromJson {
   // Add other properties that exist in your leagues.json entries if needed
 }
 
-// Type the imported leagues data
-export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
+// Type the imported leagues data and sort by numeric id
+export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort((a, b) => 
+  parseInt(a.id) - parseInt(b.id)
+);
 
 const getLeagueName = (leagueId: string): string => {
   const league = leagues.find(l => l.id === leagueId);
@@ -198,6 +200,15 @@ const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   return await response.json();
 };
 
+export interface CurrentLeagueResponse {
+  league: {
+    id: string;
+    zuluru_id: number;
+    name: string;
+    lineSize: number;
+  }
+}
+
 export interface Stats {
   [key: string]: StatLine;
 }
@@ -233,6 +244,11 @@ const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => 
   return data;
 };
 
+const fetchCurrentLeague = async (): Promise<CurrentLeagueResponse> => {
+  const response = await cachedFetch('/current_league');
+  return await response.json();
+};
+
 export {
   // leagues is already exported above with its new type
   getLeagueName,
@@ -245,4 +261,5 @@ export {
   saveGame, // Keep existing saveGame for other uses
   uploadCompleteGame, // New function for game submission
   deleteGame,
+  fetchCurrentLeague, // New function to fetch current league
 };
