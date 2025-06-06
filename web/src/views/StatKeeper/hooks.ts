@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { fetchTeams, Team, TeamPlayer, leagues as apiLeagues } from '../../api'; // Added apiLeagues
@@ -82,6 +82,43 @@ export interface UseTeamsResult {
   apiLeague: (typeof apiLeagues)[0] | undefined; // The specific league object from apiLeagues
   loadingTeams: boolean;
   errorTeams: string | null;
+}
+
+export function useFullscreen() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    const elem = document.documentElement;
+    const requestFullScreen =
+      elem.requestFullscreen ||
+      (elem as any).mozRequestFullScreen ||
+      (elem as any).webkitRequestFullscreen ||
+      (elem as any).msRequestFullscreen;
+    
+    const exitFullScreen =
+      document.exitFullscreen ||
+      (document as any).mozCancelFullScreen ||
+      (document as any).webkitExitFullscreen ||
+      (document as any).msExitFullscreen;
+    
+    // Enter fullscreen when component mounts
+    if (requestFullScreen && !location.pathname.endsWith('/stat_keeper')) {
+      requestFullScreen.call(elem).catch((err: Error) => {
+        console.warn(`Fullscreen request failed: ${err.message} (${err.name})`);
+        // Note: Fullscreen requests usually require a user gesture.
+        // Automatic requests might be blocked by the browser.
+      });
+    }
+    
+    // Exit fullscreen when navigating away
+    return () => {
+      if (document.fullscreenElement && exitFullScreen) {
+        exitFullScreen.call(document).catch((err: Error) => {
+          console.warn(`Exit fullscreen failed: ${err.message} (${err.name})`);
+        });
+      }
+    };
+  }, [location.pathname]);
 }
 
 export function useTeams(leagueId: string | undefined): UseTeamsResult {
