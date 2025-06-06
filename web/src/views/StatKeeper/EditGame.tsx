@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
 import { getLeagueName } from '../../api';
 import EditRoster from './EditRoster';
-import { useLocalGame, useTeams } from './hooks';
+import { useLocalGame, useTeams, useFullscreen } from './hooks';
 import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
@@ -12,6 +12,7 @@ const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 function EditGame() {
   const navigate = useNavigate();
   const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
+  useFullscreen();
   const {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
