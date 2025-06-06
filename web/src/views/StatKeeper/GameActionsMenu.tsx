@@ -45,33 +45,17 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
 
   return (
     <Box>
-      <IconButton
-        onClick={handleClick}
-        aria-label="Game Actions Menu"
-        aria-controls={open ? 'game-actions-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        size="medium"
-        sx={{ border: '1px solid #ccc' }}
-      >
+      <IconButton onClick={handleClick} size="medium" sx={{ border: '1px solid #ccc' }}>
         <MenuIcon />
       </IconButton>
 
-      <Menu
-        id="game-actions-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'game-actions-button',
-        }}
-      >
+      <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
           component={Link}
           to={`/stat_keeper/edit_game/${numericGameId}`}
           onClick={handleClose}
         >
-          Edit Game Details
+          Edit Rosters
         </MenuItem>
 
         {showChangeLineOption && (
