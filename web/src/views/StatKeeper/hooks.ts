@@ -101,18 +101,34 @@ export function useFullscreen() {
       (document as any).webkitExitFullscreen ||
       (document as any).msExitFullscreen;
     
-    // Enter fullscreen when component mounts
-    if (requestFullScreen && !location.pathname.endsWith('/stat_keeper')) {
-      requestFullScreen.call(elem).catch((err: Error) => {
-        console.warn(`Fullscreen request failed: ${err.message} (${err.name})`);
-        // Note: Fullscreen requests usually require a user gesture.
-        // Automatic requests might be blocked by the browser.
-      });
+    // Only exit fullscreen when navigating to the StatKeeper home
+    const shouldExitFullscreen = location.pathname.endsWith('/stat_keeper');
+    
+    // Always try to enter fullscreen when component mounts, unless we're on the home page
+    if (!shouldExitFullscreen && requestFullScreen && !document.fullscreenElement) {
+      // Add a small delay to ensure the component is fully mounted
+      const timer = setTimeout(() => {
+        requestFullScreen.call(elem).catch((err: Error) => {
+          console.warn(`Fullscreen request failed: ${err.message} (${err.name})`);
+          // Note: Fullscreen requests usually require a user gesture.
+          // Automatic requests might be blocked by the browser.
+        });
+      }, 100);
+      
+      return () => {
+        clearTimeout(timer);
+        // Only exit fullscreen when navigating to the StatKeeper home
+        if (shouldExitFullscreen && document.fullscreenElement && exitFullScreen) {
+          exitFullScreen.call(document).catch((err: Error) => {
+            console.warn(`Exit fullscreen failed: ${err.message} (${err.name})`);
+          });
+        }
+      };
     }
     
-    // Exit fullscreen when navigating away
     return () => {
-      if (document.fullscreenElement && exitFullScreen) {
+      // Only exit fullscreen when navigating to the StatKeeper home
+      if (shouldExitFullscreen && document.fullscreenElement && exitFullScreen) {
         exitFullScreen.call(document).catch((err: Error) => {
           console.warn(`Exit fullscreen failed: ${err.message} (${err.name})`);
         });
