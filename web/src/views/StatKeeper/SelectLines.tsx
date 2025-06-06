@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
+import ActionBar from './ActionBar';
 import {
   Box,
   Button,
   Typography,
-  Grid,
   Paper
 } from '@mui/material';
 
@@ -201,44 +201,30 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         </Typography>
       </Paper>
 
-      <Box
-        sx={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: actionBarHeight,
-          p: '10px 15px',
-          backgroundColor: 'white',
-          borderTop: '1px solid #ccc',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          boxSizing: 'border-box',
-          zIndex: 100,
-        }}
-      >
-        <Button
-          onClick={handleDone}
-          disabled={selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0}
-          variant="contained"
-          color="success"
-          sx={{ fontSize: '1em' }}
-        >
-          {buttonText}
-        </Button>
-
-        {bookkeeper.getMementosCount() > 0 && (
-          <Button
-            onClick={handleUndoLastAction}
-            variant="contained"
-            color="warning"
-            sx={{ fontSize: '1em' }}
-          >
-            Undo Last Action
-          </Button>
-        )}
-      </Box>
+      <ActionBar
+        actionBarHeight={actionBarHeight}
+        primaryActions={[
+          {
+            label: buttonText,
+            onClick: handleDone,
+            disabled: selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0,
+            color: 'success',
+            variant: 'contained'
+          }
+        ]}
+        secondaryActions={
+          bookkeeper.getMementosCount() > 0 
+            ? [
+                {
+                  label: 'Undo Last Action',
+                  onClick: handleUndoLastAction,
+                  color: 'warning',
+                  variant: 'contained'
+                }
+              ] 
+            : []
+        }
+      />
     </Box>
   );
 };

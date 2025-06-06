@@ -2,13 +2,12 @@ import React from 'react';
 import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
+import ActionBar from './ActionBar';
 import {
   Box,
   Button,
   Typography,
-  Paper,
-  Grid,
-  Stack
+  Paper
 } from '@mui/material';
 
 interface RecordStatsProps {
@@ -201,115 +200,74 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: actionBarHeight,
-          p: '5px 10px',
-          backgroundColor: 'white',
-          borderTop: '1px solid #ccc',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'nowrap',
-          boxSizing: 'border-box',
-          zIndex: 100,
-        }}
-      >
-        <Stack direction="row" spacing={0.5} flexWrap="wrap" alignItems="center">
-          <Button
-            onClick={() => handleActionClick(bk => bk.recordPull())}
-            disabled={!btnPullEnabled}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            Pull
-          </Button>
-          <Button
-            onClick={handlePointClick}
-            disabled={!btnPointEnabled}
-            size="small"
-            variant="contained"
-            color="success"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            Point!
-          </Button>
-          <Button
-            onClick={() => handleActionClick(bk => bk.recordDrop())}
-            disabled={!btnDropEnabled}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            Drop
-          </Button>
-          <Button
-            onClick={() => handleActionClick(bk => bk.recordThrowAway())}
-            disabled={!btnThrowAwayEnabled}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            Throwaway
-          </Button>
-          <Button
-            onClick={() => {
+      <ActionBar
+        actionBarHeight={actionBarHeight}
+        primaryActions={[
+          {
+            label: 'Pull',
+            onClick: () => handleActionClick(bk => bk.recordPull()),
+            disabled: !btnPullEnabled,
+            variant: 'outlined'
+          },
+          {
+            label: 'Point!',
+            onClick: handlePointClick,
+            disabled: !btnPointEnabled,
+            color: 'success',
+            variant: 'contained'
+          },
+          {
+            label: 'Drop',
+            onClick: () => handleActionClick(bk => bk.recordDrop()),
+            disabled: !btnDropEnabled,
+            variant: 'outlined'
+          },
+          {
+            label: 'Throwaway',
+            onClick: () => handleActionClick(bk => bk.recordThrowAway()),
+            disabled: !btnThrowAwayEnabled,
+            variant: 'outlined'
+          },
+          {
+            label: 'D (Block)',
+            onClick: () => {
               if (!bookkeeper.firstActor) {
                 alert('Select the player who got the D first.');
                 return;
               }
               handleActionClick(bk => bk.recordD());
-            }}
-            disabled={!btnDEnabled}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            D (Block)
-          </Button>
-          <Button
-            onClick={() => {
+            },
+            disabled: !btnDEnabled,
+            variant: 'outlined'
+          },
+          {
+            label: 'Catch D',
+            onClick: () => {
               if (!bookkeeper.firstActor) {
                 alert('Select the player who got the Catch D first.');
                 return;
               }
               handleActionClick(bk => bk.recordCatchD());
-            }}
-            disabled={!btnCatchDEnabled}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em', minWidth: '60px' }}
-          >
-            Catch D
-          </Button>
-        </Stack>
-
-        <Stack direction="row" spacing={0.5} alignItems="center">
-          <Button
-            onClick={onChangeLine}
-            size="small"
-            variant="outlined"
-            sx={{ fontSize: '0.85em' }}
-          >
-            Change Line
-          </Button>
-          <Button
-            onClick={() => handleActionClick(bk => bk.undo())}
-            disabled={!btnUndoEnabled}
-            size="small"
-            variant="contained"
-            color="warning"
-            sx={{ fontSize: '0.85em' }}
-          >
-            Undo
-          </Button>
-        </Stack>
-      </Box>
+            },
+            disabled: !btnCatchDEnabled,
+            variant: 'outlined'
+          }
+        ]}
+        secondaryActions={[
+          {
+            label: 'Change Line',
+            onClick: onChangeLine,
+            variant: 'outlined'
+          },
+          {
+            label: 'Undo',
+            onClick: () => handleActionClick(bk => bk.undo()),
+            disabled: !btnUndoEnabled,
+            color: 'warning',
+            variant: 'contained'
+          }
+        ]}
+      />
     </Box>
   );
 };
