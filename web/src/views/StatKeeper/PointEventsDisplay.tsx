@@ -76,20 +76,35 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
             No events to display.
           </Typography>
         ) : (
-          <List dense sx={{ pl: 2 }}>
+          <List dense sx={{ px: 0.5 }}>
             {events.map((eventStr, index) => (
               <ListItem
                 key={index}
                 sx={{
-                  display: 'list-item',
-                  listStyleType: 'decimal',
+                  display: 'flex',
                   py: 0.5,
+                  px: 0,
                   color: !hasActivePoint ? 'text.secondary' : 'inherit'
                 }}
               >
+                <Typography 
+                  variant="body2" 
+                  component="span"
+                  sx={{ 
+                    minWidth: '24px',
+                    mr: 1,
+                    fontWeight: 'bold',
+                    color: !hasActivePoint ? 'text.secondary' : 'inherit'
+                  }}
+                >
+                  {index + 1}.
+                </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: !hasActivePoint ? 'text.secondary' : 'inherit' }}
+                  sx={{ 
+                    color: !hasActivePoint ? 'text.secondary' : 'inherit',
+                    flexGrow: 1
+                  }}
                 >
                   {eventStr}
                 </Typography>
