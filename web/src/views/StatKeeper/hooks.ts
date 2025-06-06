@@ -86,7 +86,7 @@ export interface UseTeamsResult {
 
 export function useFullscreen() {
   const location = useLocation();
-  
+
   useEffect(() => {
     const elem = document.documentElement;
     const requestFullScreen =
@@ -94,7 +94,7 @@ export function useFullscreen() {
       (elem as any).mozRequestFullScreen ||
       (elem as any).webkitRequestFullscreen ||
       (elem as any).msRequestFullscreen;
-    
+
     // Always try to enter fullscreen when component mounts if not already in fullscreen
     if (requestFullScreen && !document.fullscreenElement) {
       // Add a small delay to ensure the component is fully mounted
@@ -105,12 +105,12 @@ export function useFullscreen() {
           // Automatic requests might be blocked by the browser.
         });
       }, 100);
-      
+
       return () => {
         clearTimeout(timer);
       };
     }
-    
+
     // No exit fullscreen logic - we want to stay in fullscreen mode
     return () => {};
   }, [location.pathname]);

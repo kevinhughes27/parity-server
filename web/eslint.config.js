@@ -23,6 +23,8 @@ export default [
         document: 'readonly',
         navigator: 'readonly',
         fetch: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
         Response: 'readonly',
         Blob: 'readonly',
         prompt: 'readonly',
