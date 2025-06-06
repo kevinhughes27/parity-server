@@ -47,29 +47,11 @@ function StatKeeper() {
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
-  const getStatusColor = (status: StoredGame['status']): string => {
-    switch (status) {
-      case 'new':
-      case 'in-progress':
-      case 'paused':
-        return 'blue';
-      case 'uploaded':
-        return 'green';
-      case 'sync-error':
-        return 'red';
-      case 'completed':
-      case 'submitted':
-        return 'black'; // Or a muted color like '#555'
-      default:
-        return 'black';
-    }
-  };
-
   const renderGameItem = (game: StoredGame) => (
-    <Card 
-      key={game.localId} 
-      sx={{ 
-        mb: 2, 
+    <Card
+      key={game.localId}
+      sx={{
+        mb: 2,
         boxShadow: 2,
         position: 'relative'
       }}
@@ -78,44 +60,44 @@ function StatKeeper() {
         <Typography variant="h6" component="div">
           {game.homeTeam} vs {game.awayTeam}
         </Typography>
-        
+
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
           <Typography variant="body2" color="text.secondary">
             <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong> {game.week}
           </Typography>
-          
-          <Chip 
-            label={game.status} 
+
+          <Chip
+            label={game.status}
             size="small"
             color={
-              game.status === 'uploaded' ? 'success' : 
-              game.status === 'sync-error' ? 'error' : 
-              (game.status === 'new' || game.status === 'in-progress') ? 'primary' : 
+              game.status === 'uploaded' ? 'success' :
+              game.status === 'sync-error' ? 'error' :
+              (game.status === 'new' || game.status === 'in-progress') ? 'primary' :
               'default'
             }
           />
         </Box>
-        
+
         <Typography variant="body1" sx={{ mt: 1 }}>
           <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}
         </Typography>
-        
+
         <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
           <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
         </Typography>
       </CardContent>
-      
+
       <CardActions>
         {(game.status === 'new' ||
           game.status === 'in-progress' ||
           game.status === 'paused' ||
           game.status === 'sync-error') &&
           game.localId && (
-            <Button 
-              size="small" 
-              variant="contained" 
+            <Button
+              size="small"
+              variant="contained"
               color="primary"
-              component={Link} 
+              component={Link}
               to={`/stat_keeper/game/${game.localId}`}
             >
               {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
@@ -125,10 +107,10 @@ function StatKeeper() {
           game.status === 'uploaded' ||
           game.status === 'completed') &&
           game.localId && (
-            <Button 
-              size="small" 
+            <Button
+              size="small"
               variant="outlined"
-              component={Link} 
+              component={Link}
               to={`/stat_keeper/game/${game.localId}`}
             >
               View Game
@@ -150,20 +132,20 @@ function StatKeeper() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="primary" elevation={1}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
             StatKeeper
           </Typography>
-          <Button 
-            color="inherit" 
-            variant="outlined" 
+          <Button
+            color="inherit"
+            variant="outlined"
             onClick={handleStartNewGame}
-            sx={{ ml: 2 }}
+            sx={{ ml: 2, color: 'white' }}
           >
             Start New Game
           </Button>
         </Toolbar>
       </AppBar>
-      
+
       <Container sx={{ mt: 3 }}>
 
         {resumableGames.length > 0 && (
