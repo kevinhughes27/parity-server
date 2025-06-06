@@ -17,9 +17,7 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
     ? bookkeeper.getCurrentPointPrettyPrint()
     : bookkeeper.getLastCompletedPointPrettyPrint();
 
-  const title = hasActivePoint
-    ? "Play by Play (Current Point)"
-    : "Play by Play (Previous Point)";
+  const title = hasActivePoint ? 'Play by Play (Current Point)' : 'Play by Play (Previous Point)';
 
   // Auto-scroll to bottom whenever events change
   useEffect(() => {
@@ -43,7 +41,9 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
       }}
     >
       {/* Game State Display - Fixed at top */}
-      <Box sx={{ flexShrink: 0 }}> {/* This box won't shrink */}
+      <Box sx={{ flexShrink: 0 }}>
+        {' '}
+        {/* This box won't shrink */}
         {hasActivePoint && (
           <Paper
             elevation={0}
@@ -53,7 +53,7 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
               borderRadius: 1,
               textAlign: 'center',
               mb: 1.25,
-              fontSize: '0.9em'
+              fontSize: '0.9em',
             }}
           >
             <Typography variant="body2">
@@ -61,17 +61,13 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
             </Typography>
           </Paper>
         )}
-
         <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
           {title}
         </Typography>
       </Box>
 
       {/* Scrollable Event List */}
-      <Box 
-        ref={eventsContainerRef}
-        sx={{ flexGrow: 1, overflow: 'auto' }}
-      > 
+      <Box ref={eventsContainerRef} sx={{ flexGrow: 1, overflow: 'auto' }}>
         {!events || events.length === 0 ? (
           <Typography variant="body2" color="text.secondary">
             No events to display.
@@ -85,26 +81,26 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
                   display: 'flex',
                   py: 0.5,
                   px: 0,
-                  color: !hasActivePoint ? 'text.secondary' : 'inherit'
+                  color: !hasActivePoint ? 'text.secondary' : 'inherit',
                 }}
               >
-                <Typography 
-                  variant="body2" 
+                <Typography
+                  variant="body2"
                   component="span"
-                  sx={{ 
+                  sx={{
                     minWidth: '24px',
                     mr: 1,
                     fontWeight: 'bold',
-                    color: !hasActivePoint ? 'text.secondary' : 'inherit'
+                    color: !hasActivePoint ? 'text.secondary' : 'inherit',
                   }}
                 >
                   {index + 1}.
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ 
+                  sx={{
                     color: !hasActivePoint ? 'text.secondary' : 'inherit',
-                    flexGrow: 1
+                    flexGrow: 1,
                   }}
                 >
                   {eventStr}
