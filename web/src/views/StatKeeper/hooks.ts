@@ -95,17 +95,8 @@ export function useFullscreen() {
       (elem as any).webkitRequestFullscreen ||
       (elem as any).msRequestFullscreen;
     
-    const exitFullScreen =
-      document.exitFullscreen ||
-      (document as any).mozCancelFullScreen ||
-      (document as any).webkitExitFullscreen ||
-      (document as any).msExitFullscreen;
-    
-    // Only exit fullscreen when navigating to the StatKeeper home
-    const shouldExitFullscreen = location.pathname.endsWith('/stat_keeper');
-    
-    // Always try to enter fullscreen when component mounts, unless we're on the home page
-    if (!shouldExitFullscreen && requestFullScreen && !document.fullscreenElement) {
+    // Always try to enter fullscreen when component mounts if not already in fullscreen
+    if (requestFullScreen && !document.fullscreenElement) {
       // Add a small delay to ensure the component is fully mounted
       const timer = setTimeout(() => {
         requestFullScreen.call(elem).catch((err: Error) => {
@@ -117,23 +108,11 @@ export function useFullscreen() {
       
       return () => {
         clearTimeout(timer);
-        // Only exit fullscreen when navigating to the StatKeeper home
-        if (shouldExitFullscreen && document.fullscreenElement && exitFullScreen) {
-          exitFullScreen.call(document).catch((err: Error) => {
-            console.warn(`Exit fullscreen failed: ${err.message} (${err.name})`);
-          });
-        }
       };
     }
     
-    return () => {
-      // Only exit fullscreen when navigating to the StatKeeper home
-      if (shouldExitFullscreen && document.fullscreenElement && exitFullScreen) {
-        exitFullScreen.call(document).catch((err: Error) => {
-          console.warn(`Exit fullscreen failed: ${err.message} (${err.name})`);
-        });
-      }
-    };
+    // No exit fullscreen logic - we want to stay in fullscreen mode
+    return () => {};
   }, [location.pathname]);
 }
 
