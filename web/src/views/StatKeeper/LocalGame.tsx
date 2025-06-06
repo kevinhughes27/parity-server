@@ -447,22 +447,14 @@ function LocalGame() {
             &larr; StatKeeper Home
           </Link>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            {currentView === 'recordStats' && (
-              <Button
-                onClick={handleChangeLine}
-                size="small"
-                variant="outlined"
-                sx={{ fontSize: '0.85em' }}
-              >
-                Change Line
-              </Button>
-            )}
             <GameActionsMenu
               numericGameId={numericGameId}
               gameStatus={storedGame.status}
               isHalfRecorded={isHalfRecorded}
               onRecordHalf={handleRecordHalf}
               onSubmitGame={handleSubmitGame}
+              onChangeLine={handleChangeLine}
+              showChangeLineOption={currentView === 'recordStats'}
             />
           </Box>
         </Toolbar>
