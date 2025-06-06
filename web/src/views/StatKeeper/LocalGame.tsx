@@ -444,7 +444,13 @@ function LocalGame() {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Link
             to="/stat_keeper"
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
+            style={{
+              fontSize: '0.9em',
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
           >
             <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
           </Link>
