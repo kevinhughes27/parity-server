@@ -173,7 +173,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
 
-        <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 60px)' }}>
+        <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))

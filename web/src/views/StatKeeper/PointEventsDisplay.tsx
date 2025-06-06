@@ -39,6 +39,7 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden', // Prevent outer container from scrolling
+        flexGrow: 1,
       }}
     >
       {/* Game State Display - Fixed at top */}
