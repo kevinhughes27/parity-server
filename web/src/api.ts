@@ -1,5 +1,23 @@
 import 'whatwg-fetch';
-import leagues from './leagues.json';
+import rawLeagues from './leagues.json'; // Renamed to rawLeagues to avoid conflict
+
+// Define an explicit interface for a League object from leagues.json
+export interface LeagueFromJson {
+  id: string;
+  name: string;
+  lineSize: number;
+  // Add other properties that exist in your leagues.json entries if needed
+}
+
+// Type the imported leagues data and sort by numeric id
+export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort(
+  (a, b) => parseInt(b.id) - parseInt(a.id)
+);
+
+const getLeagueName = (leagueId: string): string => {
+  const league = leagues.find(l => l.id === leagueId);
+  return league ? league.name : `Unknown League (${leagueId})`;
+};
 
 interface IDataCache {
   [key: string]: string;
@@ -63,10 +81,23 @@ export interface Point {
 }
 
 export interface PointEvent {
-  type: string;
+  type: string; // Event types are strings here, e.g., "PASS", "PULL"
   firstActor: string;
-  secondActor: string;
+  secondActor: string; // Ensure this is not optional if API always provides it, or handle null/undefined
   timestamp: string;
+}
+
+// Payload for the /submit_game endpoint
+export interface UploadedGamePayload {
+  league_id: string; // API spec shows number, but our current data is string. API should handle.
+  week: number;
+  homeTeam: string;
+  awayTeam: string;
+  homeRoster: string[];
+  awayRoster: string[];
+  points: Point[];
+  homeScore: number;
+  awayScore: number;
 }
 
 const fetchGames = async (leagueId: string): Promise<Game[]> => {
@@ -79,6 +110,7 @@ const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   return await response.json();
 };
 
+// This function is for the admin-like save endpoint, password protected
 const saveGame = async (
   gameId: string,
   leagueId: string,
@@ -97,6 +129,23 @@ const saveGame = async (
       Authorization: `${password}`,
     },
     body: json,
+  });
+};
+
+// New function for the /submit_game endpoint
+const uploadCompleteGame = async (payload: UploadedGamePayload) => {
+  const url = `/submit_game`; // Top-level endpoint
+
+  // No cache clearing needed here as it's a one-time submission endpoint typically
+  // and doesn't usually have a corresponding GET to cache.
+
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // No Authorization header as per new requirement
+    },
+    body: JSON.stringify(payload),
   });
 };
 
@@ -121,6 +170,26 @@ export interface Player {
   salary: number;
 }
 
+export interface TeamPlayer {
+  name: string;
+  team: string;
+  is_male: boolean;
+}
+
+export interface Team {
+  id: number;
+  name: string;
+  players: TeamPlayer[];
+}
+
+const fetchTeams = async (leagueId: string): Promise<Team[]> => {
+  const response = await cachedFetch(`/api/${leagueId}/teams`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch teams for league ${leagueId}: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
 const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
   const response = await cachedFetch(`/api/${leagueId}/players`);
   return await response.json();
@@ -130,6 +199,15 @@ const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   const response = await cachedFetch(`/api/${leagueId}/weeks`);
   return await response.json();
 };
+
+export interface CurrentLeagueResponse {
+  league: {
+    id: string;
+    zuluru_id: number;
+    name: string;
+    lineSize: number;
+  };
+}
 
 export interface Stats {
   [key: string]: StatLine;
@@ -166,13 +244,22 @@ const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => 
   return data;
 };
 
+const fetchCurrentLeague = async (): Promise<CurrentLeagueResponse> => {
+  const response = await cachedFetch('/current_league');
+  return await response.json();
+};
+
 export {
-  leagues,
+  // leagues is already exported above with its new type
+  getLeagueName,
   fetchGames,
   fetchGame,
+  fetchTeams,
   fetchPlayers,
   fetchWeeks,
   fetchStats,
-  saveGame,
+  saveGame, // Keep existing saveGame for other uses
+  uploadCompleteGame, // New function for game submission
   deleteGame,
+  fetchCurrentLeague, // New function to fetch current league
 };
