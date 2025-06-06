@@ -17,6 +17,7 @@ import {
   TextField,
   Paper
 } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import EditRoster from './EditRoster';
 
@@ -132,9 +133,9 @@ function NewGame() {
         <Toolbar>
           <Link
             to={'/stat_keeper'}
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
           >
-            &larr; Back to StatKeeper Home
+            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
           </Link>
         </Toolbar>
         <Box sx={{ textAlign: 'center', pb: 1 }}>

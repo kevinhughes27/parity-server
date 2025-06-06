@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Button, Typography, AppBar, Toolbar } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -414,7 +415,9 @@ function LocalGame() {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p style={{ color: 'red' }}>Error: {localError || 'An unexpected error occurred.'}</p>
-        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
+        <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
+          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
+        </Link>
       </div>
     );
   }
@@ -441,9 +444,9 @@ function LocalGame() {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Link
             to="/stat_keeper"
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
           >
-            &larr; StatKeeper Home
+            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
           </Link>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <GameActionsMenu
