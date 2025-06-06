@@ -428,7 +428,6 @@ function LocalGame() {
     );
   }
 
-  const lastCompletedPointEvents = bookkeeperInstance.getLastCompletedPointPrettyPrint();
   const isHalfRecorded = bookkeeperInstance.pointsAtHalf > 0;
 
   // Sort rosters from storedGame before passing to children
@@ -486,7 +485,6 @@ function LocalGame() {
             onLinesSelected={handleLinesSelected}
             isResumingPointMode={isResumingPointMode}
             lastPlayedLine={lastPlayedLine}
-            lastCompletedPointEvents={lastCompletedPointEvents}
             actionBarHeight={ACTION_BAR_HEIGHT}
           />
         )}
