@@ -168,15 +168,15 @@ function NewGame() {
               <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
             </Link>
           </Box>
-          <Typography 
-            variant="h5" 
-            sx={{ 
-              fontSize: '1.5em', 
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: '1.5em',
               position: 'absolute',
               left: 0,
               right: 0,
               textAlign: 'center',
-              zIndex: 1
+              zIndex: 1,
             }}
           >
             {pageTitle}
@@ -203,9 +203,7 @@ function NewGame() {
             ) : errorLeague ? (
               <Typography color="error">{errorLeague}</Typography>
             ) : currentLeague ? (
-              <Typography variant="h6">
-                League: {currentLeague.league.name}
-              </Typography>
+              <Typography variant="h6">League: {currentLeague.league.name}</Typography>
             ) : (
               <Typography color="error">No league data available</Typography>
             )}
