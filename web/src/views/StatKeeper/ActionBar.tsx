@@ -42,7 +42,7 @@ const ActionBar: React.FC<ActionBarProps> = ({
         zIndex: 100,
       }}
     >
-      <Stack direction="row" spacing={1} flexWrap="wrap" alignItems="center">
+      <Stack direction="row" spacing={0.5} flexWrap="nowrap" alignItems="center" sx={{ overflow: 'auto' }}>
         {primaryActions.map((action, index) => (
           <Button
             key={index}
@@ -50,15 +50,15 @@ const ActionBar: React.FC<ActionBarProps> = ({
             disabled={action.disabled}
             variant={action.variant || 'contained'}
             color={action.color || 'primary'}
-            size="medium"
-            sx={{ minWidth: '80px' }}
+            size="small"
+            sx={{ minWidth: '60px', fontSize: '0.8rem', whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>
         ))}
       </Stack>
 
-      <Stack direction="row" spacing={1} alignItems="center">
+      <Stack direction="row" spacing={0.5} alignItems="center">
         {secondaryActions.map((action, index) => (
           <Button
             key={index}
@@ -66,8 +66,8 @@ const ActionBar: React.FC<ActionBarProps> = ({
             disabled={action.disabled}
             variant={action.variant || 'outlined'}
             color={action.color || 'primary'}
-            size="medium"
-            sx={{ minWidth: '80px' }}
+            size="small"
+            sx={{ minWidth: '60px', fontSize: '0.8rem', whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>

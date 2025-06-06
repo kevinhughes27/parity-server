@@ -168,9 +168,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
         <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 60px)' }}>
           <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
-            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name} (Roster)
-            </Typography>
             {fullHomeRoster.map(player =>
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
@@ -189,9 +186,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           </Box>
 
           <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
-            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name} (Roster)
-            </Typography>
             {fullAwayRoster.map(player =>
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}
@@ -254,11 +248,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           }
         ]}
         secondaryActions={[
-          {
-            label: 'Change Line',
-            onClick: onChangeLine,
-            variant: 'outlined'
-          },
           {
             label: 'Undo',
             onClick: () => handleActionClick(bk => bk.undo()),

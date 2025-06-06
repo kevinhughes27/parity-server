@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import {
   getLeagueName,
   Point as ApiPoint,
@@ -456,13 +456,25 @@ function LocalGame() {
           >
             &larr; StatKeeper Home
           </Link>
-          <GameActionsMenu
-            numericGameId={numericGameId}
-            gameStatus={storedGame.status}
-            isHalfRecorded={isHalfRecorded}
-            onRecordHalf={handleRecordHalf}
-            onSubmitGame={handleSubmitGame}
-          />
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            {currentView === 'recordStats' && (
+              <Button
+                onClick={handleChangeLine}
+                size="small"
+                variant="outlined"
+                sx={{ fontSize: '0.85em' }}
+              >
+                Change Line
+              </Button>
+            )}
+            <GameActionsMenu
+              numericGameId={numericGameId}
+              gameStatus={storedGame.status}
+              isHalfRecorded={isHalfRecorded}
+              onRecordHalf={handleRecordHalf}
+              onSubmitGame={handleSubmitGame}
+            />
+          </Box>
         </Box>
         <Typography
           variant="h5"
