@@ -17,6 +17,8 @@ interface GameActionsMenuProps {
   isHalfRecorded: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
+  onChangeLine: () => void;
+  showChangeLineOption: boolean;
 }
 
 const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
@@ -25,6 +27,8 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
   isHalfRecorded,
   onRecordHalf,
   onSubmitGame,
+  onChangeLine,
+  showChangeLineOption,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -76,6 +80,14 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
         >
           Edit Game Details
         </MenuItem>
+        
+        {showChangeLineOption && (
+          <MenuItem
+            onClick={() => handleAction(onChangeLine)}
+          >
+            Change Line
+          </MenuItem>
+        )}
         
         <Divider />
         
