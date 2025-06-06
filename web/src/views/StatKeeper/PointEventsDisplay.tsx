@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Typography, List, ListItem, Paper } from '@mui/material';
 import { Bookkeeper } from './bookkeeper';
 import { GameState } from './models';
@@ -10,6 +10,7 @@ interface PointEventsDisplayProps {
 const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
   const hasActivePoint = bookkeeper.activePoint !== null;
+  const eventsContainerRef = useRef<HTMLDivElement>(null);
 
   // Get events based on whether there's an active point
   const events = hasActivePoint
@@ -19,6 +20,14 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
   const title = hasActivePoint
     ? "Play by Play (Current Point)"
     : "Play by Play (Previous Point)";
+
+  // Auto-scroll to bottom whenever events change
+  useEffect(() => {
+    if (eventsContainerRef.current && hasActivePoint) {
+      const container = eventsContainerRef.current;
+      container.scrollTop = container.scrollHeight;
+    }
+  }, [events, hasActivePoint]);
 
   return (
     <Box
@@ -58,7 +67,10 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
       </Box>
 
       {/* Scrollable Event List */}
-      <Box sx={{ flexGrow: 1, overflow: 'auto' }}> {/* This box will scroll */}
+      <Box 
+        ref={eventsContainerRef}
+        sx={{ flexGrow: 1, overflow: 'auto' }}
+      > 
         {!events || events.length === 0 ? (
           <Typography variant="body2" color="text.secondary">
             No events to display.
