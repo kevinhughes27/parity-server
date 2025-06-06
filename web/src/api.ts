@@ -10,8 +10,8 @@ export interface LeagueFromJson {
 }
 
 // Type the imported leagues data and sort by numeric id
-export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort((a, b) => 
-  parseInt(a.id) - parseInt(b.id)
+export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort((a, b) =>
+  parseInt(b.id) - parseInt(a.id)
 );
 
 const getLeagueName = (leagueId: string): string => {
