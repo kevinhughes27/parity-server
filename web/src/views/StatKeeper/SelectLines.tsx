@@ -174,10 +174,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           </Box>
 
           <Box sx={{ width: '34%' }}>
-            <Typography variant="h5" sx={{ mb: 1 }}>
-              {isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}
-            </Typography>
-
             <PointEventsDisplay bookkeeper={bookkeeper} />
           </Box>
 
@@ -212,7 +208,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           }
         ]}
         secondaryActions={
-          bookkeeper.getMementosCount() > 0 
+          bookkeeper.getMementosCount() > 0
             ? [
                 {
                   label: 'Undo Last Action',
@@ -220,7 +216,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
                   color: 'warning',
                   variant: 'contained'
                 }
-              ] 
+              ]
             : []
         }
       />
