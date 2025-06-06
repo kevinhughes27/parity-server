@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { Link, useNavigate } from 'react-router-dom';
 import { getLeagueName } from '../../api';
+import { AppBar, Toolbar, Typography, Button, Box, Container, Card, CardContent, CardActions, Chip } from '@mui/material';
 
 function StatKeeper() {
   const navigate = useNavigate();
@@ -65,115 +66,131 @@ function StatKeeper() {
   };
 
   const renderGameItem = (game: StoredGame) => (
-    <li
-      key={game.localId}
-      style={{
-        marginBottom: '15px',
-        padding: '15px',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-        boxShadow: '2px 2px 5px rgba(0,0,0,0.1)',
+    <Card 
+      key={game.localId} 
+      sx={{ 
+        mb: 2, 
+        boxShadow: 2,
+        position: 'relative'
       }}
     >
-      <h3>
-        {game.homeTeam} vs {game.awayTeam}
-      </h3>
-      <p style={{ margin: '5px 0' }}>
-        <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
-        {game.week}
-      </p>
-      <p style={{ margin: '5px 0' }}>
-        <strong>Status:</strong>{' '}
-        <span
-          style={{
-            fontWeight: 'bold',
-            color: getStatusColor(game.status),
-          }}
-        >
-          {game.status}
-        </span>
-      </p>
-      <p style={{ margin: '5px 0' }}>
-        <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}
-      </p>
-      <p style={{ margin: '5px 0' }}>
-        <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
-      </p>
-
-      <div style={{ marginTop: '10px' }}>
+      <CardContent>
+        <Typography variant="h6" component="div">
+          {game.homeTeam} vs {game.awayTeam}
+        </Typography>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
+          <Typography variant="body2" color="text.secondary">
+            <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong> {game.week}
+          </Typography>
+          
+          <Chip 
+            label={game.status} 
+            size="small"
+            color={
+              game.status === 'uploaded' ? 'success' : 
+              game.status === 'sync-error' ? 'error' : 
+              (game.status === 'new' || game.status === 'in-progress') ? 'primary' : 
+              'default'
+            }
+          />
+        </Box>
+        
+        <Typography variant="body1" sx={{ mt: 1 }}>
+          <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}
+        </Typography>
+        
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
+        </Typography>
+      </CardContent>
+      
+      <CardActions>
         {(game.status === 'new' ||
           game.status === 'in-progress' ||
           game.status === 'paused' ||
           game.status === 'sync-error') &&
           game.localId && (
-            <Link to={`/stat_keeper/game/${game.localId}`}>
-              <button style={{ padding: '8px 12px', cursor: 'pointer', marginRight: '10px' }}>
-                {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
-              </button>
-            </Link>
+            <Button 
+              size="small" 
+              variant="contained" 
+              color="primary"
+              component={Link} 
+              to={`/stat_keeper/game/${game.localId}`}
+            >
+              {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
+            </Button>
           )}
         {(game.status === 'submitted' ||
           game.status === 'uploaded' ||
           game.status === 'completed') &&
           game.localId && (
-            <Link to={`/stat_keeper/game/${game.localId}`}>
-              <button
-                style={{
-                  padding: '8px 12px',
-                  cursor: 'pointer',
-                  marginRight: '10px',
-                  backgroundColor: '#eee',
-                }}
-              >
-                View Game
-              </button>
-            </Link>
+            <Button 
+              size="small" 
+              variant="outlined"
+              component={Link} 
+              to={`/stat_keeper/game/${game.localId}`}
+            >
+              View Game
+            </Button>
           )}
-        <button
+        <Button
+          size="small"
+          variant="outlined"
+          color="error"
           onClick={() => handleDeleteGame(game.localId)}
-          style={{
-            padding: '8px 12px',
-            cursor: 'pointer',
-            backgroundColor: '#f44336',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-          }}
         >
           Delete
-        </button>
-      </div>
-    </li>
+        </Button>
+      </CardActions>
+    </Card>
   );
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>StatKeeper</h1>
-      <button
-        onClick={handleStartNewGame}
-        style={{ marginBottom: '20px', padding: '10px 15px', fontSize: '16px', cursor: 'pointer' }}
-      >
-        Start New Game
-      </button>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="primary" elevation={1}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            StatKeeper
+          </Typography>
+          <Button 
+            color="inherit" 
+            variant="outlined" 
+            onClick={handleStartNewGame}
+            sx={{ ml: 2 }}
+          >
+            Start New Game
+          </Button>
+        </Toolbar>
+      </AppBar>
+      
+      <Container sx={{ mt: 3 }}>
 
-      {resumableGames.length > 0 && (
-        <>
-          <h2>Resumable Games</h2>
-          <ul style={{ listStyleType: 'none', padding: 0 }}>
-            {resumableGames.map(renderGameItem)}
-          </ul>
-        </>
-      )}
+        {resumableGames.length > 0 && (
+          <>
+            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>Resumable Games</Typography>
+            <Box>
+              {resumableGames.map(renderGameItem)}
+            </Box>
+          </>
+        )}
 
-      {otherGames.length > 0 && (
-        <>
-          <h2>Other Local Games</h2>
-          <ul style={{ listStyleType: 'none', padding: 0 }}>{otherGames.map(renderGameItem)}</ul>
-        </>
-      )}
+        {otherGames.length > 0 && (
+          <>
+            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>Other Local Games</Typography>
+            <Box>
+              {otherGames.map(renderGameItem)}
+            </Box>
+          </>
+        )}
 
-      {games.length === 0 && <p>No games stored locally. Click "Start New Game" to begin.</p>}
-    </div>
+        {games.length === 0 && (
+          <Box sx={{ mt: 4, textAlign: 'center' }}>
+            <Typography variant="body1">No games stored locally. Click "Start New Game" to begin.</Typography>
+          </Box>
+        )}
+      </Container>
+    </Box>
   );
 }
 

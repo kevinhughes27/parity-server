@@ -4,6 +4,7 @@ import { db, StoredGame } from './db';
 import { leagues as apiLeagues } from '../../api'; // Renamed import
 import { useTeams } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
+import { AppBar, Toolbar, Box, Typography } from '@mui/material';
 
 import EditRoster from './EditRoster';
 
@@ -128,23 +129,22 @@ function NewGame() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar */}
-      <div
-        style={{
-          flexShrink: 0,
-          padding: '10px 15px',
-          borderBottom: '1px solid #eee',
-          backgroundColor: '#f8f9fa',
-        }}
-      >
-        <Link
-          to={'/stat_keeper'}
-          style={{ fontSize: '0.9em', display: 'block', marginBottom: '5px' }}
-        >
-          &larr; Back to StatKeeper Home
-        </Link>
-        <h1 style={{ fontSize: '1.5em', margin: '0', textAlign: 'center' }}>{pageTitle}</h1>
-      </div>
+      {/* Top Bar with AppBar */}
+      <AppBar position="static" color="default" elevation={1}>
+        <Toolbar>
+          <Link
+            to={'/stat_keeper'}
+            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit' }}
+          >
+            &larr; Back to StatKeeper Home
+          </Link>
+        </Toolbar>
+        <Box sx={{ textAlign: 'center', pb: 1 }}>
+          <Typography variant="h5" sx={{ fontSize: '1.5em' }}>
+            {pageTitle}
+          </Typography>
+        </Box>
+      </AppBar>
 
       {/* Main Content Area */}
       <div
