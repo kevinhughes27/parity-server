@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
-import { 
-  Box, 
-  Button, 
-  Typography, 
-  Grid, 
+import {
+  Box,
+  Button,
+  Typography,
+  Grid,
   Paper
 } from '@mui/material';
 
@@ -155,7 +155,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     );
   };
 
-  const buttonText = isResumingPointMode ? 'Resume Point' : 'Confirm Lines & Start Point';
+  const buttonText = isResumingPointMode ? 'Resume Point' : 'Start Point';
   const helpText = isResumingPointMode
     ? "Adjust the current line if needed, then click 'Resume Point'."
     : lastPlayedLine
@@ -165,43 +165,42 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
-        <Typography variant="h5" sx={{ mb: 1 }}>
-          {isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          Required players per team: {leagueLineSize}
-        </Typography>
-        
         <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 120px)' }}>
-          <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
+
+          <Box sx={{ width: '33%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
-          
+
           <Box sx={{ width: '34%' }}>
+            <Typography variant="h5" sx={{ mb: 1 }}>
+              {isResumingPointMode ? 'Adjust Current Line' : 'Select Lines for Next Point'}
+            </Typography>
+
             <PointEventsDisplay title="Events from Last Point" events={lastCompletedPointEvents} />
           </Box>
-          
-          <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
+
+          <Box sx={{ width: '33%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
+
         </Box>
-        
-        <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
-          <Typography variant="body2" color="text.secondary">
-            {helpText}
-            <br />
-            If a point was just scored, 'Undo Last Action' will revert the score and take you back to
-            editing the last event of that point.
-          </Typography>
-        </Paper>
       </Box>
-      
+
+      <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
+        <Typography variant="body2" color="text.secondary">
+          {helpText}
+          <br />
+          If a point was just scored, 'Undo Last Action' will revert the score and take you back to
+          editing the last event of that point.
+        </Typography>
+      </Paper>
+
       <Box
         sx={{
           position: 'fixed',
@@ -228,7 +227,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         >
           {buttonText}
         </Button>
-        
+
         {bookkeeper.getMementosCount() > 0 && (
           <Button
             onClick={handleUndoLastAction}

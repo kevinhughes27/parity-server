@@ -2,12 +2,12 @@ import React from 'react';
 import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
-import { 
-  Box, 
-  Button, 
-  Typography, 
-  Paper, 
-  Grid, 
+import {
+  Box,
+  Button,
+  Typography,
+  Paper,
+  Grid,
   Stack
 } from '@mui/material';
 
@@ -166,27 +166,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
-        <Paper 
-          elevation={0} 
-          sx={{ 
-            p: 1, 
-            backgroundColor: '#f9f9f9', 
-            borderRadius: 1, 
-            textAlign: 'center', 
-            mb: 1.25,
-            fontSize: '0.9em'
-          }}
-        >
-          <Typography variant="body2">
-            <strong>Possession:</strong>{' '}
-            {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
-            {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
-          </Typography>
-          <Typography variant="body2">
-            <strong>Game State:</strong> {GameState[currentGameState]}
-          </Typography>
-        </Paper>
-        
+
         <Box sx={{ display: 'flex', minHeight: '200px', height: 'calc(100% - 60px)' }}>
           <Box sx={{ width: '33%', pr: 1, overflow: 'auto' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
@@ -196,11 +176,19 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               renderPlayerButton(player, true, homePlayersOnActiveLine.includes(player))
             )}
           </Box>
-          
+
           <Box sx={{ width: '34%' }}>
+            <Typography variant="body2">
+              <strong>Possession:</strong>{' '}
+              {bookkeeper.homePossession ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name}
+              {bookkeeper.firstActor && ` (Disc with: ${bookkeeper.firstActor})`}
+            </Typography>
+            <Typography variant="body2">
+              <strong>Game State:</strong> {GameState[currentGameState]}
+            </Typography>
             <PointEventsDisplay title="Play by Play (Current Point)" events={playByPlay} />
           </Box>
-          
+
           <Box sx={{ width: '33%', pl: 1, overflow: 'auto' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name} (Roster)
@@ -209,6 +197,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               renderPlayerButton(player, false, awayPlayersOnActiveLine.includes(player))
             )}
           </Box>
+
         </Box>
       </Box>
 
@@ -301,9 +290,9 @@ const RecordStats: React.FC<RecordStatsProps> = ({
         </Stack>
 
         <Stack direction="row" spacing={0.5} alignItems="center">
-          <Button 
-            onClick={onChangeLine} 
-            size="small" 
+          <Button
+            onClick={onChangeLine}
+            size="small"
             variant="outlined"
             sx={{ fontSize: '0.85em' }}
           >
