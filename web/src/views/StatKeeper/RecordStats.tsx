@@ -124,13 +124,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           mb: 0.5,
           py: 1,
           backgroundColor: finalIsDisabled 
-            ? '#e0e0e0' 
+            ? (isTeamInPossession ? '#90caf9' : '#e0e0e0') // Darker blue for disabled team in possession
             : isActivePlayer 
               ? '#a7d7f5' 
               : isTeamInPossession 
                 ? '#e3f2fd' // Light blue background for team in possession
                 : '#f0f0f0',
-          color: finalIsDisabled ? '#999' : '#000',
+          color: finalIsDisabled ? (isTeamInPossession ? '#000' : '#999') : '#000',
           border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc', // Blue border for team in possession
           borderRadius: 1,
           fontWeight: isActivePlayer ? 'bold' : 'normal',
