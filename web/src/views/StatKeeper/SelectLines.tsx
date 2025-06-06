@@ -155,7 +155,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   };
 
   const buttonText = isResumingPointMode ? 'Resume Point' : 'Start Point';
-  const helpText = isResumingPointMode
+  
+  // Base help text without undo information
+  let helpText = isResumingPointMode
     ? "Adjust the current line if needed, then click 'Resume Point'."
     : lastPlayedLine
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
@@ -190,9 +192,13 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
         <Typography variant="body2" color="text.secondary">
           {helpText}
-          <br />
-          If a point was just scored, 'Undo Last Action' will revert the score and take you back to
-          editing the last event of that point.
+          {lastPlayedLine && !isResumingPointMode && (
+            <>
+              <br />
+              If a point was just scored, 'Undo Last Action' will revert the score and take you back to
+              editing the last event of that point.
+            </>
+          )}
         </Typography>
       </Paper>
 
@@ -208,7 +214,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           }
         ]}
         secondaryActions={
-          bookkeeper.getMementosCount() > 0
+          bookkeeper.getMementosCount() > 0 && !isResumingPointMode
             ? [
                 {
                   label: 'Undo Last Action',
