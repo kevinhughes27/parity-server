@@ -15,7 +15,7 @@ import {
   Select,
   MenuItem,
   TextField,
-  Paper
+  Paper,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
@@ -133,7 +133,13 @@ function NewGame() {
         <Toolbar>
           <Link
             to={'/stat_keeper'}
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
+            style={{
+              fontSize: '0.9em',
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
           >
             <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
           </Link>
@@ -189,9 +195,7 @@ function NewGame() {
         </Paper>
 
         {/* Loading/Error Messages */}
-        {loadingTeams && (
-          <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>
-        )}
+        {loadingTeams && <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>}
         {errorTeams && (
           <Typography sx={{ color: 'error.main', flexShrink: 0, p: 2 }}>
             Error: {errorTeams}
@@ -281,9 +285,7 @@ function NewGame() {
               }}
             >
               {/* Home Roster Column */}
-              <Box
-                sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
-              >
+              <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                 {selectedHomeTeamObj ? (
                   <EditRoster
                     teamName={selectedHomeTeamObj.name}
@@ -304,20 +306,16 @@ function NewGame() {
                       justifyContent: 'center',
                       bgcolor: '#f9f9f9',
                       borderRadius: 1,
-                      border: '1px dashed #ccc'
+                      border: '1px dashed #ccc',
                     }}
                   >
-                    <Typography color="text.secondary">
-                      Select Home Team to edit roster.
-                    </Typography>
+                    <Typography color="text.secondary">Select Home Team to edit roster.</Typography>
                   </Paper>
                 )}
               </Box>
 
               {/* Away Roster Column */}
-              <Box
-                sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
-              >
+              <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                 {selectedAwayTeamObj ? (
                   <EditRoster
                     teamName={selectedAwayTeamObj.name}
@@ -338,12 +336,10 @@ function NewGame() {
                       justifyContent: 'center',
                       bgcolor: '#f9f9f9',
                       borderRadius: 1,
-                      border: '1px dashed #ccc'
+                      border: '1px dashed #ccc',
                     }}
                   >
-                    <Typography color="text.secondary">
-                      Select Away Team to edit roster.
-                    </Typography>
+                    <Typography color="text.secondary">Select Away Team to edit roster.</Typography>
                   </Paper>
                 )}
               </Box>

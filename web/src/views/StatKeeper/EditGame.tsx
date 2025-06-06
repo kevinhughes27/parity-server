@@ -102,7 +102,13 @@ function EditGame() {
         <Toolbar>
           <Link
             to={`/stat_keeper/game/${numericGameId}`}
-            style={{ fontSize: '0.9em', textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
+            style={{
+              fontSize: '0.9em',
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
           >
             <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to Game
           </Link>
@@ -125,7 +131,7 @@ function EditGame() {
           overflow: 'hidden',
           p: 1.25,
           pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
-          gap: 1.25
+          gap: 1.25,
         }}
       >
         {loadingLeaguePlayers && (

@@ -3,10 +3,7 @@ import { GameState } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
-import {
-  Box,
-  Button,
-} from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
@@ -73,7 +70,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
             borderRadius: 1,
             fontWeight: 'normal',
             fontSize: '0.9em',
-            textTransform: 'none'
+            textTransform: 'none',
           }}
         >
           {playerName}
@@ -120,7 +117,9 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           mb: 0.5,
           py: 1,
           backgroundColor: finalIsDisabled
-            ? (isTeamInPossession ? '#90caf9' : '#e0e0e0') // Darker blue for disabled team in possession
+            ? isTeamInPossession
+              ? '#90caf9'
+              : '#e0e0e0' // Darker blue for disabled team in possession
             : isActivePlayer
               ? '#a7d7f5'
               : isTeamInPossession
@@ -131,7 +130,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           borderRadius: 1,
           fontWeight: isActivePlayer ? 'bold' : 'normal',
           fontSize: '0.9em',
-          textTransform: 'none'
+          textTransform: 'none',
         }}
       >
         {playerName}
@@ -168,7 +167,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
-
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1, overflow: 'auto' }}>
             {fullHomeRoster.map(player =>
@@ -195,26 +193,26 @@ const RecordStats: React.FC<RecordStatsProps> = ({
             label: 'Pull',
             onClick: () => handleActionClick(bk => bk.recordPull()),
             disabled: !btnPullEnabled,
-            variant: 'outlined'
+            variant: 'outlined',
           },
           {
             label: 'Point!',
             onClick: handlePointClick,
             disabled: !btnPointEnabled,
             color: 'success',
-            variant: 'contained'
+            variant: 'contained',
           },
           {
             label: 'Drop',
             onClick: () => handleActionClick(bk => bk.recordDrop()),
             disabled: !btnDropEnabled,
-            variant: 'outlined'
+            variant: 'outlined',
           },
           {
             label: 'Throwaway',
             onClick: () => handleActionClick(bk => bk.recordThrowAway()),
             disabled: !btnThrowAwayEnabled,
-            variant: 'outlined'
+            variant: 'outlined',
           },
           {
             label: 'D (Block)',
@@ -226,7 +224,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               handleActionClick(bk => bk.recordD());
             },
             disabled: !btnDEnabled,
-            variant: 'outlined'
+            variant: 'outlined',
           },
           {
             label: 'Catch D',
@@ -238,8 +236,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               handleActionClick(bk => bk.recordCatchD());
             },
             disabled: !btnCatchDEnabled,
-            variant: 'outlined'
-          }
+            variant: 'outlined',
+          },
         ]}
         secondaryActions={[
           {
@@ -247,8 +245,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({
             onClick: () => handleActionClick(bk => bk.undo()),
             disabled: !btnUndoEnabled,
             color: 'warning',
-            variant: 'contained'
-          }
+            variant: 'contained',
+          },
         ]}
       />
     </Box>

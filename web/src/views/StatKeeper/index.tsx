@@ -3,7 +3,18 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { Link, useNavigate } from 'react-router-dom';
 import { getLeagueName } from '../../api';
-import { AppBar, Toolbar, Typography, Button, Box, Container, Card, CardContent, CardActions, Chip } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  Container,
+  Card,
+  CardContent,
+  CardActions,
+  Chip,
+} from '@mui/material';
 
 function StatKeeper() {
   const navigate = useNavigate();
@@ -53,7 +64,7 @@ function StatKeeper() {
       sx={{
         mb: 2,
         boxShadow: 2,
-        position: 'relative'
+        position: 'relative',
       }}
     >
       <CardContent>
@@ -63,23 +74,28 @@ function StatKeeper() {
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
           <Typography variant="body2" color="text.secondary">
-            <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong> {game.week}
+            <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
+            {game.week}
           </Typography>
 
           <Chip
             label={game.status}
             size="small"
             color={
-              game.status === 'uploaded' ? 'success' :
-              game.status === 'sync-error' ? 'error' :
-              (game.status === 'new' || game.status === 'in-progress') ? 'primary' :
-              'default'
+              game.status === 'uploaded'
+                ? 'success'
+                : game.status === 'sync-error'
+                  ? 'error'
+                  : game.status === 'new' || game.status === 'in-progress'
+                    ? 'primary'
+                    : 'default'
             }
           />
         </Box>
 
         <Typography variant="body1" sx={{ mt: 1 }}>
-          <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore} {game.awayTeam}
+          <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
+          {game.awayTeam}
         </Typography>
 
         <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
@@ -147,28 +163,29 @@ function StatKeeper() {
       </AppBar>
 
       <Container sx={{ mt: 3 }}>
-
         {resumableGames.length > 0 && (
           <>
-            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>Resumable Games</Typography>
-            <Box>
-              {resumableGames.map(renderGameItem)}
-            </Box>
+            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
+              Resumable Games
+            </Typography>
+            <Box>{resumableGames.map(renderGameItem)}</Box>
           </>
         )}
 
         {otherGames.length > 0 && (
           <>
-            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>Other Local Games</Typography>
-            <Box>
-              {otherGames.map(renderGameItem)}
-            </Box>
+            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
+              Other Local Games
+            </Typography>
+            <Box>{otherGames.map(renderGameItem)}</Box>
           </>
         )}
 
         {games.length === 0 && (
           <Box sx={{ mt: 4, textAlign: 'center' }}>
-            <Typography variant="body1">No games stored locally. Click "Start New Game" to begin.</Typography>
+            <Typography variant="body1">
+              No games stored locally. Click "Start New Game" to begin.
+            </Typography>
           </Box>
         )}
       </Container>

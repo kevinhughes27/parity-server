@@ -19,10 +19,10 @@ interface ActionBarProps {
   }[];
 }
 
-const ActionBar: React.FC<ActionBarProps> = ({ 
-  actionBarHeight, 
-  primaryActions, 
-  secondaryActions 
+const ActionBar: React.FC<ActionBarProps> = ({
+  actionBarHeight,
+  primaryActions,
+  secondaryActions,
 }) => {
   return (
     <Box
@@ -42,7 +42,13 @@ const ActionBar: React.FC<ActionBarProps> = ({
         zIndex: 100,
       }}
     >
-      <Stack direction="row" spacing={0.5} flexWrap="nowrap" alignItems="center" sx={{ overflow: 'auto' }}>
+      <Stack
+        direction="row"
+        spacing={0.5}
+        flexWrap="nowrap"
+        alignItems="center"
+        sx={{ overflow: 'auto' }}
+      >
         {primaryActions.map((action, index) => (
           <Button
             key={index}

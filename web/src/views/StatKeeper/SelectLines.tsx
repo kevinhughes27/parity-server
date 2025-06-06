@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
-import {
-  Box,
-  Button,
-  Typography,
-  Paper
-} from '@mui/material';
+import { Box, Button, Typography, Paper } from '@mui/material';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
@@ -137,8 +132,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
         key={playerName}
         onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
         fullWidth
-        variant={isSelected ? "contained" : "outlined"}
-        color={isSelected ? "primary" : "inherit"}
+        variant={isSelected ? 'contained' : 'outlined'}
+        color={isSelected ? 'primary' : 'inherit'}
         sx={{
           mb: 0.5,
           py: 1,
@@ -166,7 +161,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
-
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
@@ -184,7 +178,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
-
         </Box>
       </Box>
 
@@ -194,8 +187,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
           {lastPlayedLine && !isResumingPointMode && (
             <>
               <br />
-              If a point was just scored, 'Undo Last Action' will revert the score and take you back to
-              editing the last event of that point.
+              If a point was just scored, 'Undo Last Action' will revert the score and take you back
+              to editing the last event of that point.
             </>
           )}
         </Typography>
@@ -209,8 +202,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
             onClick: handleDone,
             disabled: selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0,
             color: 'success',
-            variant: 'contained'
-          }
+            variant: 'contained',
+          },
         ]}
         secondaryActions={
           bookkeeper.getMementosCount() > 0 && !isResumingPointMode
@@ -219,8 +212,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({
                   label: 'Undo Last Action',
                   onClick: handleUndoLastAction,
                   color: 'warning',
-                  variant: 'contained'
-                }
+                  variant: 'contained',
+                },
               ]
             : []
         }

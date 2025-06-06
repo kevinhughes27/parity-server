@@ -108,10 +108,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
           </Box>
         ))}
         {currentRosterNames.length === 0 && (
-          <Box
-            component="li"
-            sx={{ textAlign: 'center', color: 'text.secondary', p: 1.25 }}
-          >
+          <Box component="li" sx={{ textAlign: 'center', color: 'text.secondary', p: 1.25 }}>
             <Typography variant="body2">No players on roster.</Typography>
           </Box>
         )}
@@ -134,7 +131,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
                 fontSize: '0.9em',
                 minWidth: '100px',
                 borderRadius: 1,
-                border: '1px solid #ccc'
+                border: '1px solid #ccc',
               }}
             >
               <option value="">Select Player</option>
@@ -173,7 +170,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
                 fontSize: '0.9em',
                 minWidth: '100px',
                 borderRadius: 1,
-                border: '1px solid #ccc'
+                border: '1px solid #ccc',
               }}
             />
             <Button
