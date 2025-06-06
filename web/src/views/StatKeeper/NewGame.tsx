@@ -4,27 +4,25 @@ import { db, StoredGame } from './db';
 import { leagues as apiLeagues } from '../../api'; // Renamed import
 import { useTeams } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
-import { AppBar, Toolbar, Box, Typography } from '@mui/material';
+import { 
+  AppBar, 
+  Toolbar, 
+  Box, 
+  Typography, 
+  Button, 
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  TextField,
+  Paper
+} from '@mui/material';
 
 import EditRoster from './EditRoster';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
-const placeholderRosterStyle: React.CSSProperties = {
-  border: '1px dashed #ccc',
-  padding: '20px',
-  textAlign: 'center',
-  height: '100%', // Fill the column
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: '#f9f9f9',
-  borderRadius: '5px',
-  boxSizing: 'border-box',
-  fontSize: '0.9em',
-  color: '#555',
-};
+// Removed placeholderRosterStyle as it's now defined inline with MUI sx prop
 
 function NewGame() {
   const navigate = useNavigate();
@@ -128,7 +126,7 @@ function NewGame() {
   const buttonText = 'Create Game & Start Stat-Taking';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar with AppBar */}
       <AppBar position="static" color="default" elevation={1}>
         <Toolbar>
@@ -147,145 +145,143 @@ function NewGame() {
       </AppBar>
 
       {/* Main Content Area */}
-      <div
-        style={{
-          flexGrow: 1, // Takes available vertical space
-          display: 'flex', // Enables flex for children
-          flexDirection: 'column', // Stacks children vertically
-          overflowY: 'auto', // Allows this section to scroll if its content overflows
-          padding: '15px',
-          paddingBottom: `calc(${ACTION_BAR_HEIGHT} + 15px)`, // Space for the fixed action bar
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          overflowY: 'auto',
+          p: 2,
+          pb: `calc(${ACTION_BAR_HEIGHT} + 16px)`,
         }}
       >
-        {/* Section 1: League and Week Selectors (does not grow vertically) */}
-        <div style={{ flexShrink: 0 }}>
-          <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <label htmlFor="league-select" style={{ flexShrink: 0 }}>
-              League:
-            </label>
-            <select
-              id="league-select"
-              value={selectedLeagueId}
-              onChange={e => setSelectedLeagueId(e.target.value)}
-              style={{ padding: '8px', flexGrow: 1 }}
-            >
-              {apiLeagues.map(l => (
-                <option key={l.id} value={l.id}>
-                  {l.name}
-                </option>
-              ))}
-            </select>
-          </div>
+        {/* Section 1: League and Week Selectors */}
+        <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <FormControl fullWidth>
+              <InputLabel id="league-select-label">League</InputLabel>
+              <Select
+                labelId="league-select-label"
+                id="league-select"
+                value={selectedLeagueId}
+                onChange={e => setSelectedLeagueId(e.target.value)}
+                label="League"
+              >
+                {apiLeagues.map(l => (
+                  <MenuItem key={l.id} value={l.id}>
+                    {l.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
 
-          <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <label htmlFor="week-select" style={{ flexShrink: 0 }}>
-              Week:
-            </label>
-            <input
-              type="number"
+            <TextField
               id="week-select"
+              label="Week"
+              type="number"
               value={week}
               onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
-              min="1"
-              style={{ padding: '8px', width: '80px' }}
+              inputProps={{ min: 1 }}
+              sx={{ width: '120px' }}
             />
-          </div>
-        </div>
+          </Box>
+        </Paper>
 
-        {/* Loading/Error Messages (does not grow vertically) */}
-        {loadingTeams && <p style={{ flexShrink: 0 }}>Loading teams...</p>}
-        {errorTeams && <p style={{ color: 'red', flexShrink: 0 }}>Error: {errorTeams}</p>}
+        {/* Loading/Error Messages */}
+        {loadingTeams && (
+          <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>
+        )}
+        {errorTeams && (
+          <Typography sx={{ color: 'error.main', flexShrink: 0, p: 2 }}>
+            Error: {errorTeams}
+          </Typography>
+        )}
 
-        {/* Section 2: Team Selectors and Roster Editors (this section grows vertically) */}
+        {/* Section 2: Team Selectors and Roster Editors */}
         {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
-          <div
-            style={{
+          <Box
+            sx={{
               flexGrow: 1,
               display: 'flex',
               flexDirection: 'column',
-              overflow: 'hidden' /* Important: children manage their height/scroll */,
+              overflow: 'hidden',
             }}
           >
-            {/* Team Selection Dropdowns (does not grow vertically within this section) */}
-            <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', flexShrink: 0 }}>
-              <div style={{ flex: 1 }}>
-                <label
-                  htmlFor="home-team-select"
-                  style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}
-                >
-                  Home Team:
-                </label>
-                <select
-                  id="home-team-select"
-                  value={homeTeamIdStr}
-                  onChange={e => setHomeTeamIdStr(e.target.value)}
-                  style={{ width: '100%', padding: '8px' }}
-                  disabled={availableHomeTeams.length === 0 && !homeTeamIdStr}
-                >
-                  <option value="">Select Home Team</option>
-                  {availableHomeTeams.map(team => (
-                    <option key={team.id} value={team.id.toString()}>
-                      {team.name}
-                    </option>
-                  ))}
-                  {homeTeamIdStr &&
-                    !availableHomeTeams.find(t => t.id.toString() === homeTeamIdStr) &&
-                    selectedHomeTeamObj && (
-                      <option
-                        key={selectedHomeTeamObj.id}
-                        value={selectedHomeTeamObj.id.toString()}
-                      >
-                        {selectedHomeTeamObj.name}
-                      </option>
-                    )}
-                </select>
-              </div>
-              <div style={{ flex: 1 }}>
-                <label
-                  htmlFor="away-team-select"
-                  style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}
-                >
-                  Away Team:
-                </label>
-                <select
-                  id="away-team-select"
-                  value={awayTeamIdStr}
-                  onChange={e => setAwayTeamIdStr(e.target.value)}
-                  style={{ width: '100%', padding: '8px' }}
-                  disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
-                >
-                  <option value="">Select Away Team</option>
-                  {availableAwayTeams.map(team => (
-                    <option key={team.id} value={team.id.toString()}>
-                      {team.name}
-                    </option>
-                  ))}
-                  {awayTeamIdStr &&
-                    !availableAwayTeams.find(t => t.id.toString() === awayTeamIdStr) &&
-                    selectedAwayTeamObj && (
-                      <option
-                        key={selectedAwayTeamObj.id}
-                        value={selectedAwayTeamObj.id.toString()}
-                      >
-                        {selectedAwayTeamObj.name}
-                      </option>
-                    )}
-                </select>
-              </div>
-            </div>
+            {/* Team Selection Dropdowns */}
+            <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
+              <Box sx={{ display: 'flex', gap: 2 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="home-team-select-label">Home Team</InputLabel>
+                  <Select
+                    labelId="home-team-select-label"
+                    id="home-team-select"
+                    value={homeTeamIdStr}
+                    onChange={e => setHomeTeamIdStr(e.target.value)}
+                    label="Home Team"
+                    disabled={availableHomeTeams.length === 0 && !homeTeamIdStr}
+                  >
+                    <MenuItem value="">Select Home Team</MenuItem>
+                    {availableHomeTeams.map(team => (
+                      <MenuItem key={team.id} value={team.id.toString()}>
+                        {team.name}
+                      </MenuItem>
+                    ))}
+                    {homeTeamIdStr &&
+                      !availableHomeTeams.find(t => t.id.toString() === homeTeamIdStr) &&
+                      selectedHomeTeamObj && (
+                        <MenuItem
+                          key={selectedHomeTeamObj.id}
+                          value={selectedHomeTeamObj.id.toString()}
+                        >
+                          {selectedHomeTeamObj.name}
+                        </MenuItem>
+                      )}
+                  </Select>
+                </FormControl>
+                
+                <FormControl fullWidth>
+                  <InputLabel id="away-team-select-label">Away Team</InputLabel>
+                  <Select
+                    labelId="away-team-select-label"
+                    id="away-team-select"
+                    value={awayTeamIdStr}
+                    onChange={e => setAwayTeamIdStr(e.target.value)}
+                    label="Away Team"
+                    disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
+                  >
+                    <MenuItem value="">Select Away Team</MenuItem>
+                    {availableAwayTeams.map(team => (
+                      <MenuItem key={team.id} value={team.id.toString()}>
+                        {team.name}
+                      </MenuItem>
+                    ))}
+                    {awayTeamIdStr &&
+                      !availableAwayTeams.find(t => t.id.toString() === awayTeamIdStr) &&
+                      selectedAwayTeamObj && (
+                        <MenuItem
+                          key={selectedAwayTeamObj.id}
+                          value={selectedAwayTeamObj.id.toString()}
+                        >
+                          {selectedAwayTeamObj.name}
+                        </MenuItem>
+                      )}
+                  </Select>
+                </FormControl>
+              </Box>
+            </Paper>
 
-            {/* Roster Editing Columns (this div grows vertically to fill space, and its children are side-by-side) */}
-            <div
-              style={{
+            {/* Roster Editing Columns */}
+            <Box
+              sx={{
                 display: 'flex',
-                gap: '20px',
+                gap: 2,
                 flexGrow: 1,
-                overflow: 'hidden' /* Children (EditRoster/Placeholder) will fill height */,
+                overflow: 'hidden',
               }}
             >
               {/* Home Roster Column */}
-              <div
-                style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+              <Box
+                sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
               >
                 {selectedHomeTeamObj ? (
                   <EditRoster
@@ -295,14 +291,31 @@ function NewGame() {
                     onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
                   />
                 ) : (
-                  <div style={placeholderRosterStyle}>
-                    <p>Select Home Team to edit roster.</p>
-                  </div>
+                  <Paper 
+                    elevation={1} 
+                    sx={{ 
+                      p: 3, 
+                      textAlign: 'center', 
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      bgcolor: '#f9f9f9',
+                      borderRadius: 1,
+                      border: '1px dashed #ccc'
+                    }}
+                  >
+                    <Typography color="text.secondary">
+                      Select Home Team to edit roster.
+                    </Typography>
+                  </Paper>
                 )}
-              </div>
+              </Box>
+              
               {/* Away Roster Column */}
-              <div
-                style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+              <Box
+                sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
               >
                 {selectedAwayTeamObj ? (
                   <EditRoster
@@ -312,20 +325,38 @@ function NewGame() {
                     onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
                   />
                 ) : (
-                  <div style={placeholderRosterStyle}>
-                    <p>Select Away Team to edit roster.</p>
-                  </div>
+                  <Paper 
+                    elevation={1} 
+                    sx={{ 
+                      p: 3, 
+                      textAlign: 'center', 
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      bgcolor: '#f9f9f9',
+                      borderRadius: 1,
+                      border: '1px dashed #ccc'
+                    }}
+                  >
+                    <Typography color="text.secondary">
+                      Select Away Team to edit roster.
+                    </Typography>
+                  </Paper>
                 )}
-              </div>
-            </div>
-          </div>
+              </Box>
+            </Box>
+          </Box>
         )}
 
-        {/* Message if no teams found (does not grow vertically) */}
+        {/* Message if no teams found */}
         {leagueTeams.length === 0 && !loadingTeams && selectedLeagueId && !errorTeams && (
-          <p style={{ flexShrink: 0 }}>No teams found for the selected league.</p>
+          <Typography sx={{ flexShrink: 0, p: 2 }}>
+            No teams found for the selected league.
+          </Typography>
         )}
-      </div>
+      </Box>
 
       {/* Fixed Bottom Action Bar */}
       {!loadingTeams &&
@@ -333,14 +364,14 @@ function NewGame() {
         leagueTeams.length > 0 &&
         selectedHomeTeamObj &&
         selectedAwayTeamObj && (
-          <div
-            style={{
+          <Box
+            sx={{
               position: 'fixed',
               bottom: 0,
               left: 0,
               right: 0,
               height: ACTION_BAR_HEIGHT,
-              padding: '10px 15px',
+              p: '10px 15px',
               backgroundColor: 'white',
               borderTop: '1px solid #ccc',
               display: 'flex',
@@ -350,24 +381,18 @@ function NewGame() {
               zIndex: 100,
             }}
           >
-            <button
+            <Button
               onClick={handleCreateGame}
-              style={{
-                padding: '10px 20px',
-                fontSize: '1em',
-                cursor: 'pointer',
-                backgroundColor: 'green',
-                color: 'white',
-                border: 'none',
-                borderRadius: '5px',
-              }}
+              variant="contained"
+              color="success"
               disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+              sx={{ fontSize: '1em', px: 3 }}
             >
               {buttonText}
-            </button>
-          </div>
+            </Button>
+          </Box>
         )}
-    </div>
+    </Box>
   );
 }
 

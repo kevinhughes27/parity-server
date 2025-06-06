@@ -93,7 +93,7 @@ function EditGame() {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar with AppBar */}
       <AppBar position="static" color="default" elevation={1}>
         <Toolbar>
@@ -118,92 +118,88 @@ function EditGame() {
       </AppBar>
 
       {/* Main Content Area (Scrollable Roster Columns) */}
-      <div
-        style={{
+      <Box
+        sx={{
           flexGrow: 1,
           display: 'flex',
-          overflow: 'hidden', // Prevent this div from scrolling, children will scroll
-          padding: '10px', // Add some padding around the roster editors
-          paddingBottom: ACTION_BAR_HEIGHT, // Space for the fixed bottom bar
-          gap: '10px', // Space between the two roster columns
+          overflow: 'hidden',
+          p: 1.25,
+          pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
+          gap: 1.25
         }}
       >
         {loadingLeaguePlayers && (
-          <p style={{ flex: 1, textAlign: 'center' }}>Loading league player data...</p>
+          <Typography sx={{ flex: 1, textAlign: 'center' }}>
+            Loading league player data...
+          </Typography>
         )}
         {errorLeaguePlayers && (
-          <p style={{ color: 'red', flex: 1, textAlign: 'center' }}>
+          <Typography sx={{ color: 'error.main', flex: 1, textAlign: 'center' }}>
             Error loading league players: {errorLeaguePlayers}
-          </p>
+          </Typography>
         )}
 
         {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
           <>
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.homeTeam}
                 allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
                 currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
                 onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
               />
-            </div>
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            </Box>
+            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
                 teamName={game.awayTeam}
                 allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
                 currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
                 onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
               />
-            </div>
+            </Box>
           </>
         )}
         {!loadingLeaguePlayers &&
           !errorLeaguePlayers &&
           allLeaguePlayers.length === 0 &&
           game?.league_id && (
-            <p style={{ flex: 1, textAlign: 'center' }}>
+            <Typography sx={{ flex: 1, textAlign: 'center' }}>
               No players found for the league: {getLeagueName(game.league_id)}.
-            </p>
+            </Typography>
           )}
-      </div>
+      </Box>
 
       {/* Fixed Bottom Action Bar */}
       {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
-        <div
-          style={{
+        <Box
+          sx={{
             position: 'fixed',
             bottom: 0,
             left: 0,
             right: 0,
             height: ACTION_BAR_HEIGHT,
-            padding: '10px 15px',
+            p: '10px 15px',
             backgroundColor: 'white',
             borderTop: '1px solid #ccc',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center', // Center the button
+            justifyContent: 'center',
             boxSizing: 'border-box',
             zIndex: 100,
           }}
         >
-          <button
+          <Button
             onClick={handleUpdateRosters}
-            style={{
-              padding: '10px 20px',
-              fontSize: '1em',
-              cursor: 'pointer',
-              backgroundColor: 'blue',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
-            }}
+            variant="contained"
+            color="primary"
             disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+            sx={{ fontSize: '1em', px: 3 }}
           >
             Update Rosters
-          </button>
-        </div>
+          </Button>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 }
 

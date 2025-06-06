@@ -48,83 +48,94 @@ const EditRoster: React.FC<EditRosterProps> = ({
   };
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         border: '1px solid #e0e0e0',
-        padding: '10px', // Reduced padding
-        borderRadius: '5px',
-        backgroundColor: '#f9f9f9', // Light background for each roster card
+        p: 1.25,
+        borderRadius: 1,
+        bgcolor: '#f9f9f9',
         display: 'flex',
         flexDirection: 'column',
-        height: '100%', // Fill available height from parent
-        overflow: 'hidden', // Ensure this container doesn't scroll
+        height: '100%',
+        overflow: 'hidden',
       }}
     >
-      <h4 style={{ margin: '0 0 10px 0', textAlign: 'center', flexShrink: 0 }}>
+      <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
         {teamName} Roster ({currentRosterNames.length} players)
-      </h4>
+      </Typography>
 
       {/* Scrollable Player List - currentRosterNames is already sorted by parent */}
-      <ul
-        style={{
+      <Box
+        component="ul"
+        sx={{
           listStyleType: 'none',
-          paddingLeft: 0,
-          margin: 0,
-          flexGrow: 1, // Allow list to take available space
-          overflowY: 'auto', // Make list scrollable
+          pl: 0,
+          m: 0,
+          flexGrow: 1,
+          overflowY: 'auto',
           border: '1px solid #ddd',
-          borderRadius: '4px',
-          padding: '5px',
-          marginBottom: '10px',
+          borderRadius: 1,
+          p: 0.5,
+          mb: 1,
         }}
       >
         {currentRosterNames.map(playerName => (
-          <li
+          <Box
+            component="li"
             key={playerName}
-            style={{
+            sx={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              padding: '6px 4px', // Compact padding
+              p: '6px 4px',
               fontSize: '0.9em',
               borderBottom: '1px solid #f0f0f0',
             }}
           >
-            <span>{playerName}</span>
-            <button
+            <Typography variant="body2">{playerName}</Typography>
+            <Button
               onClick={() => handleRemovePlayer(playerName)}
-              style={{
-                marginLeft: '8px',
-                cursor: 'pointer',
-                color: 'red',
-                border: 'none',
-                background: 'transparent',
-                padding: '2px 4px', // Smaller button
-                fontSize: '0.9em',
+              color="error"
+              size="small"
+              sx={{
+                minWidth: 'auto',
+                p: '2px 4px',
+                fontSize: '0.8em',
               }}
             >
               Remove
-            </button>
-          </li>
+            </Button>
+          </Box>
         ))}
         {currentRosterNames.length === 0 && (
-          <li style={{ textAlign: 'center', color: '#777', padding: '10px' }}>
-            No players on roster.
-          </li>
+          <Box
+            component="li"
+            sx={{ textAlign: 'center', color: 'text.secondary', p: 1.25 }}
+          >
+            <Typography variant="body2">No players on roster.</Typography>
+          </Box>
         )}
-      </ul>
+      </Box>
 
       {/* Add Player Sections */}
-      <div style={{ flexShrink: 0 }}>
-        {' '}
-        {/* Prevent add sections from growing */}
-        <div style={{ marginBottom: '10px' }}>
-          <h5 style={{ margin: '0 0 5px 0', fontSize: '0.95em' }}>Add Player from League</h5>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <select
+      <Box sx={{ flexShrink: 0 }}>
+        <Box sx={{ mb: 1.25 }}>
+          <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
+            Add Player from League
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+            <Box
+              component="select"
               value={selectedLeaguePlayer}
               onChange={e => setSelectedLeaguePlayer(e.target.value)}
-              style={{ flexGrow: 1, padding: '6px', fontSize: '0.9em', minWidth: '100px' }} // Allow select to grow
+              sx={{ 
+                flexGrow: 1, 
+                p: '6px', 
+                fontSize: '0.9em', 
+                minWidth: '100px',
+                borderRadius: 1,
+                border: '1px solid #ccc'
+              }}
             >
               <option value="">Select Player</option>
               {/* availableLeaguePlayersForDropdown is derived from sorted allLeaguePlayers */}
@@ -133,37 +144,51 @@ const EditRoster: React.FC<EditRosterProps> = ({
                   {player.name} ({player.team})
                 </option>
               ))}
-            </select>
-            <button
+            </Box>
+            <Button
               onClick={handleAddLeaguePlayer}
               disabled={!selectedLeaguePlayer}
-              style={{ padding: '6px 10px', fontSize: '0.9em', cursor: 'pointer', flexShrink: 0 }}
+              variant="outlined"
+              size="small"
+              sx={{ fontSize: '0.9em', flexShrink: 0 }}
             >
               Add
-            </button>
-          </div>
-        </div>
-        <div>
-          <h5 style={{ margin: '0 0 5px 0', fontSize: '0.95em' }}>Add Custom Substitute</h5>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <input
+            </Button>
+          </Box>
+        </Box>
+        <Box>
+          <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
+            Add Custom Substitute
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+            <Box
+              component="input"
               type="text"
               value={newSubName}
               onChange={e => setNewSubName(e.target.value)}
               placeholder="Substitute name"
-              style={{ flexGrow: 1, padding: '6px', fontSize: '0.9em', minWidth: '100px' }} // Allow input to grow
+              sx={{ 
+                flexGrow: 1, 
+                p: '6px', 
+                fontSize: '0.9em', 
+                minWidth: '100px',
+                borderRadius: 1,
+                border: '1px solid #ccc'
+              }}
             />
-            <button
+            <Button
               onClick={handleAddSubByName}
               disabled={!newSubName.trim()}
-              style={{ padding: '6px 10px', fontSize: '0.9em', cursor: 'pointer', flexShrink: 0 }}
+              variant="outlined"
+              size="small"
+              sx={{ fontSize: '0.9em', flexShrink: 0 }}
             >
               Add Sub
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
