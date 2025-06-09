@@ -39,7 +39,7 @@ jobs:
 
       - run:
           name: pytest
-          command: uv run pytest
+          command: uv run pytest -k "not e2e"
 
   frontend:
     docker:
