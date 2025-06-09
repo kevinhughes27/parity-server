@@ -71,9 +71,38 @@ jobs:
           name: "Build"
           command: cd web && yarn build
 
+  e2e:
+    docker:
+      - image: cimg/python:3.10-browsers
+    steps:
+      - checkout
+
+      - python/install-packages:
+          pkg-manager: uv
+
+      - node/install-packages:
+          pkg-manager: yarn
+          app-dir: web
+
+      - run:
+          name: "Build frontend"
+          command: cd web && yarn build
+
+      - run:
+          name: "Install Playwright browsers"
+          command: uv run playwright install
+
+      - run:
+          name: "Run e2e tests"
+          command: uv run pytest -k "e2e"
+
 workflows:
   version: 2
   build-and-test:
     jobs:
       - backend
       - frontend
+      - e2e:
+          requires:
+            - backend
+            - frontend
