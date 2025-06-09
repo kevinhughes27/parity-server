@@ -1,6 +1,7 @@
 from fastapi.testclient import TestClient
 from multiprocessing import Process
 from sqlmodel import Session, SQLModel, create_engine
+from typing import Generator
 import json
 import logging
 import pathlib
@@ -28,8 +29,9 @@ def session_fixture():
 
 
 @pytest.fixture(name="server", scope="function")
-def server_process(session: Session) -> Process:
+def server_process(session: Session) -> Generator[Process]:
     """Starts a uvicorn server in a separate process."""
+
     def get_session_override():
         return session
 
@@ -49,6 +51,7 @@ def server_process(session: Session) -> Process:
 @pytest.fixture(name="client", scope="function")
 def client_fixture(session: Session):
     """Test client for making api requests in tests."""
+
     def get_session_override():
         return session
 
@@ -75,13 +78,13 @@ def league_fixture(session):
 # players only get teams when created through a zuluru sync
 # otherwise subsitutes etc would change rosters
 @pytest.fixture(name="rosters", scope="function")
-def rosters_fixture(session, league) -> dict[str: list[str]]:
+def rosters_fixture(session, league) -> dict[str, list[str]]:
     fixture_path = pathlib.Path(__file__).parent / "./data/rosters.json"
 
     with open(fixture_path) as f:
         rosters_str = f.read()
 
-    rosters: dict[str: list[str]] = json.loads(rosters_str)
+    rosters: dict[str, list[str]] = json.loads(rosters_str)
 
     for idx, team in enumerate(rosters):
         t = db.Team(league_id=league.id, zuluru_id=idx, name=team)
