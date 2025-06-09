@@ -5,15 +5,19 @@ from sqlmodel import JSON, Column, Field, Relationship, Session, SQLModel, creat
 from typing import Optional
 import os
 
-db_path = Path(__file__).parent / "db.sqlite"
-db_uri = "sqlite:////" + str(db_path.absolute())
-if os.name == "nt":
-    db_uri = "sqlite:///" + str(db_path.absolute())
-
-engine = create_engine(db_uri)
-
 
 def get_session():
+    db_path = Path(__file__).parent / "db.sqlite"
+    db_uri = "sqlite:////" + str(db_path.absolute())
+
+    if os.name == "nt":
+        db_uri = "sqlite:///" + str(db_path.absolute())
+
+    if "DATABASE_URL" in os.environ:
+        db_uri = os.environ["DATABASE_URL"]
+
+    engine = create_engine(db_uri)
+
     with Session(engine) as session:
         yield session
 
