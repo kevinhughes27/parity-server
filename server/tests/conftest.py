@@ -29,7 +29,7 @@ def session_fixture():
 
 
 @pytest.fixture(name="server", scope="function")
-def server_process(session: Session) -> Generator[Process]:
+def server_process(session: Session) -> Generator[Process, None, None]:
     """Starts a uvicorn server in a separate process."""
 
     def get_session_override():
