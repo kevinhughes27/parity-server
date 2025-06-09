@@ -33,7 +33,9 @@ function LocalGame() {
     error: gameErrorHook,
     numericGameId,
   } = useLocalGame();
-  const { apiLeague, loadingTeams: isLoadingApiLeague } = useTeams(storedGame?.league_id.toString());
+  const { apiLeague, loadingTeams: isLoadingApiLeague } = useTeams(
+    storedGame?.league_id.toString()
+  );
 
   const [bookkeeperInstance, setBookkeeperInstance] = useState<Bookkeeper | null>(null);
   const [currentView, setCurrentView] = useState<GameView>('loading');
