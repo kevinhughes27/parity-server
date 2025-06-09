@@ -17,7 +17,7 @@ function EditGame() {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
     errorTeams: errorLeaguePlayers,
-  } = useTeams(game?.league_id);
+  } = useTeams(game?.league_id.toString());
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
