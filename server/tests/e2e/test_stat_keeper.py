@@ -105,8 +105,9 @@ def submit_game(page: Page):
     page.once("dialog", lambda dialog: dialog.accept())
     page.get_by_role("menuitem", name="Submit game to server").click()
 
-    # submitting the game doesn't redirect you anywhere right now...
-    # page.get_by_role("link", name="StatKeeper Home").click()
+    page.wait_for_url("**/stat_keeper")
+    expect(page.locator("#root")).to_contain_text("Other Local Games")
+    expect(page.locator("#root")).to_contain_text("uploaded")
 
 
 def get_stats():
@@ -214,7 +215,9 @@ def test_turnovers(server, league, rosters, page: Page) -> None:
 
     # pre turnover state
     expect_players_disabled(page, home_line)
-    expect_players_enabled(page, [p for p in away_line if p != "Heather McCabe"])  # player with the disk is enabled
+    expect_players_enabled(
+        page, [p for p in away_line if p != "Heather McCabe"]
+    )  # player with the disk is enabled
 
     # button state
     expect(page.get_by_role("button", name="Throwaway")).to_be_enabled()
@@ -438,6 +441,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
 
 def test_resume(server, league, rosters, page: Page) -> None:
+    # test undo after resume
     pass
 
 
@@ -472,10 +476,8 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     away_roster.remove("Kevin Barford")
     expect_rosters(page, home_roster, away_roster)
 
+    # start
     start_game(page)
-
-    # there is a race here because we don't assert the browser went somewhere after
-    time.sleep(1)
 
     # submit and check game rosters
     submit_game(page)
@@ -585,4 +587,6 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     # verify point
     game = get_game(1)
     assert "Kevin Barford" in game["points"][0]["offensePlayers"]
-    assert "Kyle Sprysa" in game["points"][0]["offensePlayers"]  # this is also not working which makes sense
+    assert (
+        "Kyle Sprysa" in game["points"][0]["offensePlayers"]
+    )  # this is also not working which makes sense
