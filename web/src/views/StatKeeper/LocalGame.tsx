@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Box, Typography, AppBar, Toolbar } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -48,6 +49,8 @@ function LocalGame() {
 
   // Use the fullscreen hook
   useFullscreen();
+
+  const navigate = useNavigate();
 
   const initializeBookkeeper = useCallback(
     (gameData: StoredGame) => {
@@ -368,6 +371,7 @@ function LocalGame() {
       if (response.ok) {
         await persistBookkeeperState(bookkeeperInstance, 'uploaded');
         alert('Game submitted and uploaded successfully!');
+        navigate('/stat_keeper')
       } else {
         const errorText = await response.text();
         let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
