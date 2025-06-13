@@ -140,7 +140,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     bookkeeper.firstActor !== null;
   const btnDropEnabled =
     (currentGameState === GameState.Normal ||
-      currentGameState === GameState.FirstThrowQuebecVariant ||
       currentGameState === GameState.FirstD ||
       currentGameState === GameState.SecondD) &&
     bookkeeper.firstActor !== null;
