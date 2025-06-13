@@ -2,7 +2,6 @@ from playwright.sync_api import Page, expect
 import pytest
 import re
 import requests
-import time
 
 from server.api import CURRENT_LEAGUE_ID
 
@@ -425,9 +424,286 @@ def test_callahan(server, league, rosters, page: Page) -> None:
 
 
 def test_undo(server, league, rosters, page: Page) -> None:
-    # undo turnovers
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+
+    # check possession
+    expect(page.get_by_role("button", name="Owen Lumley")).to_be_enabled()
+    expect(page.get_by_role("button", name="Heather McCabe")).to_be_disabled()
+
+    # undo pass
+    page.get_by_role("button", name="Undo").click()
+
+    # possesion moves back
+    expect(page.get_by_role("button", name="Owen Lumley")).to_be_disabled()
+    expect(page.get_by_role("button", name="Heather McCabe")).to_be_enabled()
+
+    # new pass
+    page.get_by_role("button", name="Kevin Barford").click()
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Kevin Barford",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+
+    # throw away undo
+    page.get_by_role("button", name="Throwaway").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+
+    # drop undo
+    page.get_by_role("button", name="Drop").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford dropped it")
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford dropped it")
+
+    # d undo
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Scott Higgins").click()
+    page.get_by_role("button", name="D (Block)").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    expect(page.get_by_role("list")).to_contain_text("Scott Higgins got a block")
+    expect(
+        page.get_by_role("button", name="Scott Higgins")
+    ).to_be_enabled()  # not a catch d so no one has possession
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    expect(page.get_by_role("list")).not_to_contain_text("Scott Higgins got a block")
+    # undo possession
+    expect(page.get_by_role("button", name="Scott Higgins")).to_be_disabled()
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("button", name="Scott Higgins")).to_be_enabled()
+    # undo throw away
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+
+    # catch d undo
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Scott Higgins").click()
+    page.get_by_role("button", name="Catch D").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    expect(page.get_by_role("list")).to_contain_text("Scott Higgins got a block")
+    expect(
+        page.get_by_role("button", name="Scott Higgins")
+    ).to_be_disabled()  # catch d so he has possession
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    expect(page.get_by_role("list")).not_to_contain_text("Scott Higgins got a block")
+    # undo possession
+    expect(page.get_by_role("button", name="Scott Higgins")).to_be_disabled()
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("button", name="Scott Higgins")).to_be_enabled()
+    # undo throw away
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+
     # undo point
-    pass
+    page.get_by_role("button", name="Point!").click()
+    expect(page.get_by_role("list")).to_contain_text("Kevin Barford scored!")
+    page.get_by_role("button", name="Undo Last").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford scored!")
+
+    # finish point
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Point!").click()
+
+    page.get_by_role("button", name="Kevin Barford").click()
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Kevin Barford",
+            "3.Kevin Barford passed to Owen Lumley",
+            "4.Owen Lumley scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
+
+    # start second point
+    start_point(page)
+
+    # undo callahan
+    page.get_by_role("button", name="Christopher Keates").click()
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Kyle Sprysa").click()
+    page.get_by_role("button", name="Catch D").click()
+    page.get_by_role("button", name="Point!").click()
+    page.get_by_role("button", name="Undo Last Action").click()
+    page.get_by_role("button", name="Kirsten Querbach").click()
+    page.get_by_role("button", name="Point!").click()
+
+    # submit
+    submit_game(page)
+
+    # verify submitted stats
+    stats = get_stats()
+
+    assert stats["Owen Lumley"]["goals"] == 1
+
+    assert stats["Kevin Barford"]["goals"] == 0
+    assert stats["Kevin Barford"]["throw_aways"] == 0
+    assert stats["Kevin Barford"]["drops"] == 0
+    assert stats["Kevin Barford"]["completions"] == 1
+    assert stats["Kevin Barford"]["assists"] == 1
+
+    assert stats["Scott Higgins"]["d_blocks"] == 0
+
+    assert stats["Kyle Sprysa"]["goals"] == 0
+    assert stats["Kyle Sprysa"]["callahan"] == 0
+
+    assert stats["Kirsten Querbach"]["goals"] == 1
+
+
+def test_button_states(server, league, rosters, page: Page) -> None:
+    # coverage for this logic is sprinkled around in other tests as well
+    # it is still nice to have one test explicitly focusing on this
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+
+    # all player buttons enabled
+    expect_players_enabled(page, rosters[home])
+    expect_players_enabled(page, rosters[away])
+
+    home_line = rosters[home][:6]
+    home_bench = rosters[home][6:]
+    away_line = rosters[away][:6]
+    away_bench = rosters[away][6:]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # lines active, bench disabled
+    expect_players_enabled(page, home_line)
+    expect_players_enabled(page, away_line)
+    expect_players_disabled(page, home_bench)
+    expect_players_disabled(page, away_bench)
+
+    # all actions disabled until a player is picked to start
+    expect(page.get_by_role("button", name="Pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="Point!")).to_be_disabled()
+    expect(page.get_by_role("button", name="Drop")).to_be_disabled()
+    expect(page.get_by_role("button", name="Throwaway")).to_be_disabled()
+    expect(page.get_by_role("button", name="D (Block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="Catch D")).to_be_disabled()
+    expect(
+        page.get_by_role("button", name="Undo")
+    ).to_be_disabled()  # nothing has happened yet
+
+    # player is chosen
+    # away is pulling
+    page.get_by_role("button", name="Owen Lumley").click()
+    expect_players_disabled(page, home_line)
+    expect_players_disabled(page, away_line)
+    expect(page.get_by_role("button", name="Pull")).to_be_enabled()
+    expect(page.get_by_role("button", name="Point!")).to_be_disabled()
+    expect(page.get_by_role("button", name="Drop")).to_be_disabled()
+    expect(page.get_by_role("button", name="Throwaway")).to_be_disabled()
+    expect(page.get_by_role("button", name="D (Block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="Catch D")).to_be_disabled()
+    expect(page.get_by_role("button", name="Undo")).to_be_enabled()
+
+    # Pull has to be next (or undo)
+    page.get_by_role("button", name="Pull").click()
+    expect_players_enabled(page, home_line)
+    expect_players_disabled(page, away_line)
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_disabled()
+    expect(page.get_by_role("button", name="drop")).to_be_disabled()
+    expect(page.get_by_role("button", name="throwaway")).to_be_disabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # player receives the pull or picks it up
+    page.get_by_role("button", name="Brian Kells").click()
+    expect_players_enabled(page, [p for p in home_line if p != "Brian Kells"])
+    expect_players_disabled(page, away_line)
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_disabled()
+    expect(page.get_by_role("button", name="drop")).to_be_enabled()
+    expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # pass
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
+    expect_players_disabled(page, away_line)
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_enabled()
+    expect(page.get_by_role("button", name="drop")).to_be_enabled()
+    expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # turnover
+    page.get_by_role("button", name="Throwaway").click()
+    expect_players_disabled(page, home_line)
+    expect_players_enabled(page, away_line)
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_disabled()
+    expect(page.get_by_role("button", name="drop")).to_be_disabled()
+    expect(page.get_by_role("button", name="throwaway")).to_be_disabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # player is selected next then a D or Catch D can be recorded or not for a pick up
+    page.get_by_role("button", name="Owen Lumley").click()
+    expect_players_disabled(page, home_line)
+    expect_players_enabled(page, [p for p in away_line if p != "Owen Lumley"])
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_disabled()
+    expect(
+        page.get_by_role("button", name="drop")
+    ).to_be_enabled()  # TODO this shouldn't be enabled (minor impossible stat)
+    expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_enabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_enabled()
+
+    # pass (d buttons get disabled now)
+    page.get_by_role("button", name="Heather McCabe").click()
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(page.get_by_role("button", name="point!")).to_be_enabled()
+    expect(page.get_by_role("button", name="drop")).to_be_enabled()
+    expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # undo pass, make it a catch d to show callahan button state
+    page.get_by_role("button", name="Undo").click()
+    page.get_by_role("button", name="Catch D").click()
+    expect(page.get_by_role("button", name="point!")).to_be_enabled()
 
 
 def test_halftime(server, league, rosters, page: Page) -> None:
