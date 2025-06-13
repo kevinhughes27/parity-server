@@ -26,9 +26,15 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   useEffect(() => {
     if (isResumingPointMode) {
-      // When resuming/changing lines mid-point, keep current line selected
-      setSelectedHomePlayers(bookkeeper.homePlayers || []);
-      setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
+      // When resuming/changing lines mid-point, use the preserved line data
+      if (lastPlayedLine) {
+        setSelectedHomePlayers(lastPlayedLine.home || []);
+        setSelectedAwayPlayers(lastPlayedLine.away || []);
+      } else {
+        // Fallback to current bookkeeper players if no preserved line
+        setSelectedHomePlayers(bookkeeper.homePlayers || []);
+        setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
+      }
     } else if (lastPlayedLine) {
       // Pre-select players NOT on the last played line.
       // homeRoster and awayRoster are already sorted.
