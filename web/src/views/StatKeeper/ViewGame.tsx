@@ -30,7 +30,19 @@ function ViewGame() {
     if (!bookkeeper) return;
 
     const serializedData = bookkeeper.serialize();
-    const jsonString = JSON.stringify(serializedData, null, 2);
+    // Remove bookkeeper state from downloaded JSON
+    const downloadData = {
+      league_id: serializedData.league_id,
+      week: serializedData.week,
+      homeTeamName: serializedData.homeTeamName,
+      awayTeamName: serializedData.awayTeamName,
+      homeTeamId: serializedData.homeTeamId,
+      awayTeamId: serializedData.awayTeamId,
+      game: serializedData.game,
+      mementos: serializedData.mementos,
+    };
+    
+    const jsonString = JSON.stringify(downloadData, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     
