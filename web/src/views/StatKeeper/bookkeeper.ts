@@ -361,6 +361,11 @@ export class Bookkeeper {
     this.awayPlayers = [...activeAwayPlayers];
   }
 
+  public updateParticipants(homeParticipants: string[], awayParticipants: string[]): void {
+    this.homeParticipants = new Set(homeParticipants);
+    this.awayParticipants = new Set(awayParticipants);
+  }
+
   // New: Unified action method that handles persistence
   async performAction(action: (bk: Bookkeeper) => void, options: ActionOptions = {}): Promise<void> {
     const actionName = action.name || action.toString();

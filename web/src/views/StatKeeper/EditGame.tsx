@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { db, StoredGame } from './db';
-import { getLeagueName } from '../../api';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import EditRoster from './EditRoster';
-import { useLocalGame, useTeams, useFullscreen } from './hooks';
-import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
+import { useBookkeeper, useTeams, useFullscreen } from './hooks';
+import ActionBar from './ActionBar';
+import { AppBar, Toolbar, Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
 function EditGame() {
+  const { localGameId } = useParams<{ localGameId: string }>();
   const navigate = useNavigate();
-  const { game, isLoading: isLoadingGame, error: gameError, numericGameId } = useLocalGame();
+  const bookkeeper = useBookkeeper(localGameId!);
   useFullscreen();
+
   const {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
     errorTeams: errorLeaguePlayers,
-  } = useTeams(game?.league_id.toString());
+  } = useTeams(bookkeeper?.league.id);
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
@@ -31,17 +32,17 @@ function EditGame() {
   };
 
   useEffect(() => {
-    if (game) {
-      sortAndSetHomeRoster([...game.homeRoster]);
-      sortAndSetAwayRoster([...game.awayRoster]);
+    if (bookkeeper) {
+      sortAndSetHomeRoster(bookkeeper.getHomeParticipants());
+      sortAndSetAwayRoster(bookkeeper.getAwayParticipants());
     } else {
       sortAndSetHomeRoster([]);
       sortAndSetAwayRoster([]);
     }
-  }, [game]);
+  }, [bookkeeper]);
 
   const handleUpdateRosters = async () => {
-    if (!game || numericGameId === undefined) {
+    if (!bookkeeper) {
       alert('Game data is not loaded correctly.');
       return;
     }
@@ -50,16 +51,17 @@ function EditGame() {
       return;
     }
 
-    const updatedGameData: Partial<StoredGame> = {
-      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
-      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
-      lastModified: new Date(),
-    };
-
     try {
-      await db.games.update(numericGameId, updatedGameData);
-      console.log(`Rosters for game localId: ${numericGameId} updated successfully.`);
-      navigate(`/stat_keeper/game/${numericGameId}`);
+      // Update the bookkeeper's participants and save
+      await bookkeeper.performAction(
+        (bk) => {
+          bk.updateParticipants(homeRosterNames, awayRosterNames);
+        },
+        { skipViewChange: true }
+      );
+      
+      console.log(`Rosters for game updated successfully.`);
+      navigate(`/stat_keeper/game/${localGameId}`);
     } catch (error) {
       console.error('Failed to update rosters:', error);
       alert(
@@ -68,7 +70,7 @@ function EditGame() {
     }
   };
 
-  if (isLoadingGame) {
+  if (!bookkeeper) {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
         <p>Loading game details...</p>
@@ -76,22 +78,13 @@ function EditGame() {
     );
   }
 
-  if (gameError) {
+  if (bookkeeper.getError()) {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p style={{ color: 'red' }}>{gameError}</p>
+        <p style={{ color: 'red' }}>{bookkeeper.getError()}</p>
         <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
           <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
         </Link>
-      </div>
-    );
-  }
-
-  if (!game) {
-    return (
-      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p>Game not found or ID is invalid.</p>
-        <Link to="/stat_keeper">&larr; Back to StatKeeper Home</Link>
       </div>
     );
   }
@@ -102,7 +95,7 @@ function EditGame() {
       <AppBar position="static" color="default" elevation={1}>
         <Toolbar>
           <Link
-            to={`/stat_keeper/game/${numericGameId}`}
+            to={`/stat_keeper/game/${localGameId}`}
             style={{
               fontSize: '0.9em',
               textDecoration: 'none',
@@ -116,10 +109,10 @@ function EditGame() {
         </Toolbar>
         <Box sx={{ textAlign: 'center', pb: 1 }}>
           <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-            {game.homeTeam} vs {game.awayTeam}
+            {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-            <strong>Score:</strong> {game.homeScore} - {game.awayScore}
+            <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
           </Typography>
         </Box>
       </AppBar>
@@ -150,7 +143,7 @@ function EditGame() {
           <>
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
-                teamName={game.homeTeam}
+                teamName={bookkeeper.homeTeam.name}
                 allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
                 currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
                 onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
@@ -158,7 +151,7 @@ function EditGame() {
             </Box>
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <EditRoster
-                teamName={game.awayTeam}
+                teamName={bookkeeper.awayTeam.name}
                 allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
                 currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
                 onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
@@ -169,42 +162,28 @@ function EditGame() {
         {!loadingLeaguePlayers &&
           !errorLeaguePlayers &&
           allLeaguePlayers.length === 0 &&
-          game?.league_id && (
+          bookkeeper?.league.id && (
             <Typography sx={{ flex: 1, textAlign: 'center' }}>
-              No players found for the league: {getLeagueName(game.league_id)}.
+              No players found for the league: {bookkeeper.league.name}.
             </Typography>
           )}
       </Box>
 
       {/* Fixed Bottom Action Bar */}
       {!loadingLeaguePlayers && !errorLeaguePlayers && allLeaguePlayers.length > 0 && (
-        <Box
-          sx={{
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: ACTION_BAR_HEIGHT,
-            p: '10px 15px',
-            backgroundColor: 'white',
-            borderTop: '1px solid #ccc',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxSizing: 'border-box',
-            zIndex: 100,
-          }}
-        >
-          <Button
-            onClick={handleUpdateRosters}
-            variant="contained"
-            color="primary"
-            disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
-            sx={{ fontSize: '1em', px: 3 }}
-          >
-            Update Rosters
-          </Button>
-        </Box>
+        <ActionBar
+          actionBarHeight={ACTION_BAR_HEIGHT}
+          primaryActions={[
+            {
+              label: 'Update Rosters',
+              onClick: handleUpdateRosters,
+              disabled: homeRosterNames.length === 0 || awayRosterNames.length === 0,
+              color: 'primary',
+              variant: 'contained',
+            },
+          ]}
+          secondaryActions={[]}
+        />
       )}
     </Box>
   );
