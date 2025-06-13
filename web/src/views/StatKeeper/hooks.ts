@@ -40,10 +40,6 @@ export function useBookkeeper(gameId: string) {
   return bookkeeper;
 }
 
-// GAME_LOADING_SENTINEL is no longer needed with the 2-argument useLiveQuery.
-// export const GAME_LOADING_SENTINEL = Symbol('loading_game_sentinel');
-
-
 export interface UseTeamsResult {
   leagueTeams: Team[]; // Teams within the league
   allLeaguePlayers: TeamPlayer[]; // All unique players across those teams
