@@ -25,7 +25,11 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   const leagueLineSize = bookkeeper.league.lineSize;
 
   useEffect(() => {
-    if (isResumingPointMode) {
+    // If halftime was just recorded, reset to blank slate
+    if (bookkeeper.homePlayers === null && bookkeeper.awayPlayers === null && !isResumingPointMode && !lastPlayedLine) {
+      setSelectedHomePlayers([]);
+      setSelectedAwayPlayers([]);
+    } else if (isResumingPointMode) {
       // When resuming/changing lines mid-point, use the preserved line data
       if (lastPlayedLine) {
         setSelectedHomePlayers(lastPlayedLine.home || []);
