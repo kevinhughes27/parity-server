@@ -29,20 +29,8 @@ function ViewGame() {
   const handleDownloadJson = () => {
     if (!bookkeeper) return;
 
-    const serializedData = bookkeeper.serialize();
-    // Remove bookkeeper state from downloaded JSON
-    const downloadData = {
-      league_id: serializedData.league_id,
-      week: serializedData.week,
-      homeTeamName: serializedData.homeTeamName,
-      awayTeamName: serializedData.awayTeamName,
-      homeTeamId: serializedData.homeTeamId,
-      awayTeamId: serializedData.awayTeamId,
-      game: serializedData.game,
-      mementos: serializedData.mementos,
-    };
-    
-    const jsonString = JSON.stringify(downloadData, null, 2);
+    const apiPayload = bookkeeper.transformForAPI();
+    const jsonString = JSON.stringify(apiPayload, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     
@@ -98,24 +86,7 @@ function ViewGame() {
 
   const gameStatus = bookkeeper.getGameStatus();
   const canResync = gameStatus === 'sync-error';
-  const serializedData = bookkeeper.serialize();
-
-  // Prepare organized data for display
-  const gameMetadata = {
-    league: bookkeeper.league.name,
-    week: bookkeeper.week,
-    homeTeam: bookkeeper.homeTeam.name,
-    awayTeam: bookkeeper.awayTeam.name,
-    homeScore: bookkeeper.homeScore,
-    awayScore: bookkeeper.awayScore,
-    totalPoints: bookkeeper.activeGame.getPointCount(),
-    pointsAtHalf: bookkeeper.pointsAtHalf,
-    status: gameStatus,
-  };
-
-  const gamePoints = serializedData.game.points;
-  const bookkeeperState = serializedData.bookkeeperState;
-  const mementos = serializedData.mementos;
+  const apiPayload = bookkeeper.transformForAPI();
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
@@ -165,7 +136,8 @@ function ViewGame() {
             {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-            <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore} | 
+            <strong>Score:</strong> {apiPayload.homeScore} - {apiPayload.awayScore} | 
+            <strong> Week:</strong> {apiPayload.week} | 
             <strong> Status:</strong> {gameStatus}
           </Typography>
         </Box>
@@ -183,40 +155,45 @@ function ViewGame() {
           </Alert>
         )}
 
-        {/* Game Metadata */}
+        {/* API Payload Overview */}
         <Paper elevation={1} sx={{ p: 2, mb: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>Game Metadata</Typography>
-          <JsonViewer data={gameMetadata} defaultExpanded={true} />
+          <Typography variant="h6" sx={{ mb: 1 }}>Game Summary</Typography>
+          <JsonViewer data={{
+            league_id: apiPayload.league_id,
+            week: apiPayload.week,
+            homeTeam: apiPayload.homeTeam,
+            awayTeam: apiPayload.awayTeam,
+            homeScore: apiPayload.homeScore,
+            awayScore: apiPayload.awayScore,
+            totalPoints: apiPayload.points.length,
+            homeRosterSize: apiPayload.homeRoster.length,
+            awayRosterSize: apiPayload.awayRoster.length,
+          }} defaultExpanded={true} />
         </Paper>
 
         {/* Game Points */}
         <Paper elevation={1} sx={{ p: 2, mb: 2 }}>
           <Typography variant="h6" sx={{ mb: 1 }}>
-            Points ({gamePoints.length} total)
+            Points ({apiPayload.points.length} total)
           </Typography>
-          <JsonViewer data={gamePoints} name="points" defaultExpanded={false} />
+          <JsonViewer data={apiPayload.points} name="points" defaultExpanded={true} />
         </Paper>
 
-        {/* Bookkeeper State */}
+        {/* Team Rosters */}
         <Paper elevation={1} sx={{ p: 2, mb: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>Bookkeeper State</Typography>
-          <JsonViewer data={bookkeeperState} name="bookkeeperState" defaultExpanded={false} />
-        </Paper>
-
-        {/* Mementos */}
-        <Paper elevation={1} sx={{ p: 2, mb: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>
-            Undo History ({mementos.length} actions)
-          </Typography>
-          <JsonViewer data={mementos} name="mementos" defaultExpanded={false} />
+          <Typography variant="h6" sx={{ mb: 1 }}>Team Rosters</Typography>
+          <JsonViewer data={{
+            homeRoster: apiPayload.homeRoster,
+            awayRoster: apiPayload.awayRoster,
+          }} defaultExpanded={false} />
         </Paper>
 
         <Divider sx={{ my: 2 }} />
 
-        {/* Full Serialized Data */}
+        {/* Complete API Payload */}
         <Paper elevation={1} sx={{ p: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>Complete Game Data (Raw JSON)</Typography>
-          <JsonViewer data={serializedData} name="fullGameData" defaultExpanded={false} />
+          <Typography variant="h6" sx={{ mb: 1 }}>Complete API Payload</Typography>
+          <JsonViewer data={apiPayload} name="apiPayload" defaultExpanded={false} />
         </Paper>
       </Box>
     </Box>
