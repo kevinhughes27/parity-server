@@ -66,8 +66,8 @@ function LocalGame() {
         // Clear the current line selection to allow re-selection
         bk.homePlayers = null;
         bk.awayPlayers = null;
-      },
-      { skipSave: true } // Don't save this intermediate state
+      }
+      // Don't skip view change - we want the view to update to selectLines
     );
     bookkeeper.setIsResumingPointMode(true);
     bookkeeper.setLastPlayedLine(null);
