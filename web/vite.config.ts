@@ -6,6 +6,7 @@ export default defineConfig({
   define: {global: 'window'},
   build: {
     outDir: 'build', // CRA's default build output
+    chunkSizeWarningLimit: 3000,
   },
   server: {
     proxy: {
