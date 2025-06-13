@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameState, EventType } from './models';
+import { EventType } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
@@ -17,9 +17,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   // Get sorted rosters from bookkeeper's participants
   const fullHomeRoster = bookkeeper.getHomeParticipants();
   const fullAwayRoster = bookkeeper.getAwayParticipants();
-  const currentGameState = bookkeeper.gameState();
-  const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
-  const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -37,96 +34,74 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     await bookkeeper.performAction(bk => bk.recordPoint());
   };
 
-  const renderPlayerButton = (
-    playerName: string,
-    isHomeTeamButton: boolean,
-    isPlayerOnActiveLine: boolean
-  ) => {
-    if (!isPlayerOnActiveLine) {
-      return (
-        <Button
-          key={playerName}
-          disabled
-          fullWidth
-          variant="text"
-          size="small"
-          sx={{
-            justifyContent: 'flex-start',
-            mb: 0.5,
-            py: 1,
+  const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
+    const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
+    
+    const getButtonStyles = () => {
+      switch (buttonState.variant) {
+        case 'not-on-line':
+          return {
             color: '#adb5bd',
             backgroundColor: '#f8f9fa',
             border: '1px solid #eee',
-            borderRadius: 1,
             fontWeight: 'normal',
-            fontSize: '0.9em',
-            textTransform: 'none',
-          }}
-        >
-          {playerName}
-        </Button>
-      );
-    }
-
-    let isDisabledByGameState = false;
-    const isActivePlayer = bookkeeper.firstActor === playerName;
-    const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
-    const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
-
-    if (currentGameState === GameState.Start) {
-      // Special case: after halftime, both teams can select who pulls
-      if (isFirstPointAfterHalftime) {
-        isDisabledByGameState = false; // Both teams enabled
-      } else {
-        isDisabledByGameState = false; // Normal start behavior
+          };
+        case 'active':
+          return {
+            color: '#000',
+            backgroundColor: '#a7d7f5',
+            border: '1px solid #2196f3',
+            fontWeight: 'bold',
+          };
+        case 'enabled':
+          const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
+          return {
+            color: '#000',
+            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+            fontWeight: 'normal',
+          };
+        case 'disabled-possession':
+          return {
+            color: '#000',
+            backgroundColor: '#90caf9',
+            border: '1px solid #2196f3',
+            fontWeight: 'normal',
+          };
+        case 'disabled-no-possession':
+          return {
+            color: '#999',
+            backgroundColor: '#e0e0e0',
+            border: '1px solid #ccc',
+            fontWeight: 'normal',
+          };
+        default:
+          return {
+            color: '#000',
+            backgroundColor: '#f0f0f0',
+            border: '1px solid #ccc',
+            fontWeight: 'normal',
+          };
       }
-    } else if (currentGameState === GameState.WhoPickedUpDisc) {
-      isDisabledByGameState = !isTeamInPossession;
-    } else if (currentGameState === GameState.Pull) {
-      isDisabledByGameState = true;
-    } else if (bookkeeper.firstActor !== null) {
-      if (isTeamInPossession) {
-        if (isActivePlayer && bookkeeper.shouldRecordNewPass()) {
-          isDisabledByGameState = true;
-        } else {
-          isDisabledByGameState = false;
-        }
-      } else {
-        isDisabledByGameState = true;
-      }
-    } else {
-      isDisabledByGameState = !isTeamInPossession;
-    }
-
-    const finalIsDisabled = isDisabledByGameState;
+    };
 
     return (
       <Button
         key={playerName}
         onClick={() => handlePlayerClick(playerName, isHomeTeamButton)}
-        disabled={finalIsDisabled}
+        disabled={!buttonState.enabled}
         fullWidth
         variant="text"
         size="small"
+        title={buttonState.reason}
         sx={{
           justifyContent: 'flex-start',
           mb: 0.5,
           py: 1,
-          backgroundColor: finalIsDisabled
-            ? isTeamInPossession
-              ? '#90caf9'
-              : '#e0e0e0' // Darker blue for disabled team in possession
-            : isActivePlayer
-              ? '#a7d7f5'
-              : isTeamInPossession
-                ? '#e3f2fd' // Light blue background for team in possession
-                : '#f0f0f0',
-          color: finalIsDisabled ? (isTeamInPossession ? '#000' : '#999') : '#000',
-          border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc', // Blue border for team in possession
           borderRadius: 1,
-          fontWeight: isActivePlayer ? 'bold' : 'normal',
           fontSize: '0.9em',
           textTransform: 'none',
+          ...getButtonStyles(),
         }}
       >
         {playerName}
@@ -134,35 +109,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     );
   };
 
-  const btnPullEnabled = currentGameState === GameState.Pull && bookkeeper.firstActor !== null;
-  const btnPointEnabled =
-    (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) &&
-    bookkeeper.firstActor !== null;
-  const btnDropEnabled =
-    (currentGameState === GameState.Normal ||
-      currentGameState === GameState.FirstThrowQuebecVariant ||
-      currentGameState === GameState.FirstD ||
-      currentGameState === GameState.SecondD) &&
-    bookkeeper.firstActor !== null &&
-    // Disable drop for picking up disc after a point (but not after a pull)
-    !(bookkeeper.activePoint?.getEventCount() === 0 && 
-      !bookkeeper.firstPointOfGameOrHalf() && 
-      bookkeeper.activePoint?.getLastEventType() !== EventType.PULL);
-  const btnThrowAwayEnabled =
-    (currentGameState === GameState.Normal ||
-      currentGameState === GameState.FirstThrowQuebecVariant ||
-      currentGameState === GameState.FirstD ||
-      currentGameState === GameState.SecondD) &&
-    bookkeeper.firstActor !== null;
-
-  const btnDEnabled =
-    bookkeeper.firstActor !== null &&
-    (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
-  const btnCatchDEnabled =
-    bookkeeper.firstActor !== null &&
-    (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD);
-
-  const btnUndoEnabled = bookkeeper.getMementosCount() > 0;
+  const pullState = bookkeeper.getActionButtonState('pull');
+  const pointState = bookkeeper.getActionButtonState('point');
+  const dropState = bookkeeper.getActionButtonState('drop');
+  const throwawayState = bookkeeper.getActionButtonState('throwaway');
+  const dState = bookkeeper.getActionButtonState('d');
+  const catchDState = bookkeeper.getActionButtonState('catchD');
+  const undoState = bookkeeper.getActionButtonState('undo');
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
@@ -192,26 +145,26 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           {
             label: 'Pull',
             onClick: () => handleActionClick(bk => bk.recordPull()),
-            disabled: !btnPullEnabled,
+            disabled: !pullState.enabled,
             variant: 'outlined',
           },
           {
             label: 'Point!',
             onClick: handlePointClick,
-            disabled: !btnPointEnabled,
+            disabled: !pointState.enabled,
             color: 'success',
             variant: 'contained',
           },
           {
             label: 'Drop',
             onClick: () => handleActionClick(bk => bk.recordDrop()),
-            disabled: !btnDropEnabled,
+            disabled: !dropState.enabled,
             variant: 'outlined',
           },
           {
             label: 'Throwaway',
             onClick: () => handleActionClick(bk => bk.recordThrowAway()),
-            disabled: !btnThrowAwayEnabled,
+            disabled: !throwawayState.enabled,
             variant: 'outlined',
           },
           {
@@ -223,7 +176,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               }
               handleActionClick(bk => bk.recordD());
             },
-            disabled: !btnDEnabled,
+            disabled: !dState.enabled,
             variant: 'outlined',
           },
           {
@@ -235,7 +188,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
               }
               handleActionClick(bk => bk.recordCatchD());
             },
-            disabled: !btnCatchDEnabled,
+            disabled: !catchDState.enabled,
             variant: 'outlined',
           },
         ]}
@@ -243,7 +196,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
           {
             label: 'Undo',
             onClick: () => handleActionClick(bk => bk.undo()),
-            disabled: !btnUndoEnabled,
+            disabled: !undoState.enabled,
             color: 'warning',
             variant: 'contained',
           },
