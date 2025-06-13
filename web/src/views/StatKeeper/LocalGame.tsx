@@ -371,7 +371,7 @@ function LocalGame() {
       if (response.ok) {
         await persistBookkeeperState(bookkeeperInstance, 'uploaded');
         alert('Game submitted and uploaded successfully!');
-        navigate('/stat_keeper')
+        navigate('/stat_keeper');
       } else {
         const errorText = await response.text();
         let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
