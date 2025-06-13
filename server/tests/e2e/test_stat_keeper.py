@@ -686,7 +686,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="point!")).to_be_disabled()
     expect(
         page.get_by_role("button", name="drop")
-    ).to_be_enabled()  # TODO this shouldn't be enabled (minor impossible stat)
+    ).to_be_disabled()
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
     expect(page.get_by_role("button", name="d (block)")).to_be_enabled()
     expect(page.get_by_role("button", name="catch d")).to_be_enabled()
@@ -724,7 +724,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="pull")).to_be_disabled()
     expect(
         page.get_by_role("button", name="drop")
-    ).to_be_enabled()  # ToDo this should be disabled
+    ).to_be_disabled()
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
 
 
@@ -838,8 +838,6 @@ def test_resume(
     # defeats the purpose and this is sufficient
     page.goto("http://localhost:8000/stat_keeper")
 
-    page.pause()
-
     # resume game
     expect(page.locator("#root")).to_contain_text(
         "Kells Angels Bicycle Club vs lumleysexuals"
@@ -849,8 +847,7 @@ def test_resume(
     )
     expect(page.locator("#root")).to_contain_text("in-progress")
     page.get_by_role("link", name="Resume Game").click()
-    # ToDo this should have the normal second line text. not the inital state. same bug as noted elsewhere
-    # expect_next_line_text(page)
+    expect(page.locator("#root")).to_contain_text("Select players for the next point.")
 
     # test undo after resume
     page.get_by_role("button", name="Undo Last Action").click()
@@ -957,15 +954,11 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Update Rosters").click()
 
     # select lines
-    # TODO this text is not correct when returning from edit rosters
-    # expect_next_line_text(page)
-    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Select players for the next point.")
     select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
 
-    # TODO there is a bug here. The sub is selected but then they don't show on the line
-    # if I add them again they do show up..?
     expect(page.get_by_role("button", name="Point!")).to_be_visible()
     expect(page.get_by_role("button", name="Kevin Hughes")).to_be_visible()
 
@@ -986,7 +979,9 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
-    select_lines(page, rosters[home][:6], rosters[away][:6])
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
 
@@ -999,6 +994,11 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     # change line
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
+
+    expect(page.locator("#root")).to_contain_text("Current line is selected. Make any adjustments needed, then click 'Resume Point'.")
+    expect_players_enabled(page, home_line)
+    expect_players_enabled(page, away_line)
+
     page.get_by_role("button", name="Kevin Barford").click()
     page.get_by_role("button", name="Kyle Sprysa").click()
     page.get_by_role("button", name="Resume Point").click()
@@ -1017,7 +1017,6 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # verify points played
     assert stats["Kevin Barford"]["points_played"] == 1
-    # TODO this is 0 right now which is a bug. might be a bug in current app too but still should fix
     assert stats["Kyle Sprysa"]["points_played"] == 1
 
     # verify point
@@ -1025,4 +1024,4 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     assert "Kevin Barford" in game["points"][0]["offensePlayers"]
     assert (
         "Kyle Sprysa" in game["points"][0]["offensePlayers"]
-    )  # this is also not working which makes sense
+    )
