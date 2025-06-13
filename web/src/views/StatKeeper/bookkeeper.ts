@@ -13,7 +13,7 @@ import {
   ActionOptions,
 } from './models';
 import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
-import { getLeagueName, uploadCompleteGame, UploadedGamePayload } from '../../api';
+import { getLeagueName, uploadCompleteGame, UploadedGamePayload, leagues as apiLeagues } from '../../api';
 
 interface InternalMemento {
   type: MementoType;
@@ -88,8 +88,7 @@ export class Bookkeeper {
       throw new Error('Game data is missing team IDs. Cannot initialize Bookkeeper.');
     }
 
-    // Import leagues dynamically to avoid circular dependencies
-    const { leagues: apiLeagues } = await import('../../api');
+    // Use statically imported leagues
     const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
 
     if (!apiLeague) {
