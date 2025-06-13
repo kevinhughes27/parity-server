@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Browser, Page, expect
 import pytest
 import re
 import requests
@@ -704,21 +704,181 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Undo").click()
     page.get_by_role("button", name="Catch D").click()
     expect(page.get_by_role("button", name="point!")).to_be_enabled()
+    page.get_by_role("button", name="Point!").click()
+
+    # setup next point
+    expect_next_line_text(page)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # line is now bench, bench is now active
+    # possession is known so only home is active
+    expect_players_disabled(page, home_line)
+    expect_players_disabled(page, away_line)
+    expect_players_enabled(page, home_bench)
+    expect_players_disabled(page, away_bench)
+
+    # select home player to start
+    page.get_by_role("button", name="Christopher Keates").click()
+    # no pull for other points
+    expect(page.get_by_role("button", name="pull")).to_be_disabled()
+    expect(
+        page.get_by_role("button", name="drop")
+    ).to_be_enabled()  # ToDo this should be disabled
+    expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
 
 
 def test_halftime(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
     # initial state (both teams enabled)
-    # expect_players_enabled(page, home_line)
-    # expect_players_enabled(page, away_line)
+    expect_players_enabled(page, home_line)
+    expect_players_enabled(page, away_line)
 
-    # ensure we start up with a pull again
-    # more detailed asserts on button "enabled" states here
-    pass
+    # pull to start
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Pull").click()
+
+    # first point
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    page.get_by_role("button", name="Point!").click()
+
+    # record half
+    expect_next_line_text(page)
+    open_hamburger_menu(page)
+    page.once("dialog", lambda dialog: dialog.accept())
+    page.get_by_role("menuitem", name="Record Half Time").click()
+
+    # select lines again
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # after half state (both teams enabled)
+    expect_players_enabled(page, home_line)
+    expect_players_enabled(page, away_line)
+
+    # pull to start
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+    page.get_by_role("button", name="Kevin Barford").click()
+    page.get_by_role("button", name="Point!").click()
+
+    # submit
+    submit_game(page)
+
+    # verify submitted stats
+    stats = get_stats()
+
+    assert stats["Owen Lumley"]["pulls"] == 1
+    assert stats["Brian Kells"]["pulls"] == 1
 
 
-def test_resume(server, league, rosters, page: Page) -> None:
+def test_resume(
+    server, league, rosters, browser_context_args, browser: Browser, page: Page
+) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+    page.get_by_role("button", name="Kevin Barford").click()
+    page.get_by_role("button", name="Point!").click()
+
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Heather McCabe",
+            "3.Heather McCabe passed to Kevin Barford",
+            "4.Kevin Barford scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
+
+    # reload the app to simulate a crash or restart etc
+    # playwright can spawn a new browser but they are isolated
+    # it can be configured to share state but extra config kind of
+    # defeats the purpose and this is sufficient
+    page.goto("http://localhost:8000/stat_keeper")
+
+    page.pause()
+
+    # resume game
+    expect(page.locator("#root")).to_contain_text(
+        "Kells Angels Bicycle Club vs lumleysexuals"
+    )
+    expect(page.locator("#root")).to_contain_text(
+        "Score: Kells Angels Bicycle Club 0 - 1 lumleysexuals"
+    )
+    expect(page.locator("#root")).to_contain_text("in-progress")
+    page.get_by_role("link", name="Resume Game").click()
+    # ToDo this should have the normal second line text. not the inital state. same bug as noted elsewhere
+    # expect_next_line_text(page)
+
     # test undo after resume
-    pass
+    page.get_by_role("button", name="Undo Last Action").click()
+    expect(
+        page.get_by_role("button", name="Kevin Barford")
+    ).to_be_disabled()  # has possession
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Point!").click()
+
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Heather McCabe",
+            "3.Heather McCabe passed to Kevin Barford",
+            "4.Kevin Barford passed to Owen Lumley",
+            "5.Owen Lumley scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
+
+    # submit
+    submit_game(page)
+
+    # verify submitted stats
+    stats = get_stats()
+    assert stats["Kevin Barford"]["assists"] == 1
+    assert stats["Owen Lumley"]["goals"] == 1
 
 
 def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
