@@ -195,7 +195,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     ? "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
     : lastPlayedLine
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
-      : 'Select players for the first point.';
+      : bookkeeper.activeGame.getPointCount() === 0 && bookkeeper.pointsAtHalf === 0
+        ? 'Select players for the first point.'
+        : 'Select players for the next point.';
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
