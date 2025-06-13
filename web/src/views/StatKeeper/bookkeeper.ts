@@ -445,8 +445,8 @@ export class Bookkeeper {
     // Execute the action
     action(this);
 
-    // Auto-save unless explicitly skipped
-    if (!options.skipSave) {
+    // Auto-save unless explicitly skipped or no game ID (for tests)
+    if (!options.skipSave && this.gameId !== null) {
       await this.saveToDatabase(options.newStatus);
     }
 
