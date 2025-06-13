@@ -1,8 +1,44 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
-import { fetchTeams, Team, TeamPlayer, leagues as apiLeagues } from '../../api'; // Added apiLeagues
+import { fetchTeams, Team, TeamPlayer, leagues as apiLeagues } from '../../api';
+import { Bookkeeper } from './bookkeeper';
+
+export function useBookkeeper(gameId: string) {
+  const [bookkeeper, setBookkeeper] = useState<Bookkeeper | null>(null);
+  const [, forceUpdate] = useReducer(x => x + 1, 0);
+
+  useEffect(() => {
+    let mounted = true;
+    let unsubscribe: (() => void) | null = null;
+    
+    Bookkeeper.loadFromDatabase(parseInt(gameId))
+      .then(bk => {
+        if (mounted) {
+          setBookkeeper(bk);
+          // Subscribe to bookkeeper changes
+          unsubscribe = bk.subscribe(() => forceUpdate());
+        }
+      })
+      .catch(error => {
+        if (mounted) {
+          console.error('Failed to load game:', error);
+          // Create an error bookkeeper state
+          setBookkeeper(null);
+        }
+      });
+
+    return () => { 
+      mounted = false;
+      if (unsubscribe) {
+        unsubscribe();
+      }
+    };
+  }, [gameId]);
+
+  return bookkeeper;
+}
 
 // GAME_LOADING_SENTINEL is no longer needed with the 2-argument useLiveQuery.
 // export const GAME_LOADING_SENTINEL = Symbol('loading_game_sentinel');
