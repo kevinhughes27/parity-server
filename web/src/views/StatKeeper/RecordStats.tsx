@@ -140,9 +140,12 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     bookkeeper.firstActor !== null;
   const btnDropEnabled =
     (currentGameState === GameState.Normal ||
+      currentGameState === GameState.FirstThrowQuebecVariant ||
       currentGameState === GameState.FirstD ||
       currentGameState === GameState.SecondD) &&
-    bookkeeper.firstActor !== null;
+    bookkeeper.firstActor !== null &&
+    // Disable drop for the very first event after a point (player picking up disc)
+    !(bookkeeper.activePoint?.getEventCount() === 0 && !bookkeeper.firstPointOfGameOrHalf());
   const btnThrowAwayEnabled =
     (currentGameState === GameState.Normal ||
       currentGameState === GameState.FirstThrowQuebecVariant ||
