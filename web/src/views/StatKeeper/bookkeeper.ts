@@ -48,7 +48,7 @@ export class Bookkeeper {
   private localError: string | null = null;
   private isResumingPointMode: boolean = false;
   private lastPlayedLine: { home: string[]; away: string[] } | null = null;
-  
+
   // New: Observer pattern for React integration
   private listeners: Set<() => void> = new Set();
 
@@ -90,8 +90,8 @@ export class Bookkeeper {
 
     // Import leagues dynamically to avoid circular dependencies
     const { leagues: apiLeagues } = await import('../../api');
-    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id);
-    
+    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
+
     if (!apiLeague) {
       throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
     }
@@ -369,7 +369,7 @@ export class Bookkeeper {
   // New: Unified action method that handles persistence
   async performAction(action: (bk: Bookkeeper) => void, options: ActionOptions = {}): Promise<void> {
     const actionName = action.name || action.toString();
-    
+
     // Track state for view transitions
     if (actionName.includes('recordPoint')) {
       this.lastPlayedLine = {
@@ -381,17 +381,17 @@ export class Bookkeeper {
 
     // Execute the action
     action(this);
-    
+
     // Auto-save unless explicitly skipped
     if (!options.skipSave) {
       await this.saveToDatabase(options.newStatus);
     }
-    
+
     // Update view state
     if (!options.skipViewChange) {
       this.updateViewState();
     }
-    
+
     // Notify React components
     this.notifyListeners();
   }
@@ -766,7 +766,7 @@ export class Bookkeeper {
 
     const serializedData = this.serialize();
     const dbData = this.transformForDatabase(serializedData, newStatus);
-    
+
     try {
       await db.games.update(this.gameId, dbData);
     } catch (error) {
@@ -815,12 +815,12 @@ export class Bookkeeper {
     if (!this.gameId) {
       throw new Error('Cannot submit: no game ID');
     }
-    
+
     try {
       await this.saveToDatabase('submitted');
       const apiPayload = this.transformForAPI();
       const response = await uploadCompleteGame(apiPayload);
-      
+
       if (response.ok) {
         await this.saveToDatabase('uploaded');
       } else {
@@ -883,12 +883,12 @@ export class Bookkeeper {
   getHomeParticipants(): string[] { return Array.from(this.homeParticipants).sort((a, b) => a.localeCompare(b)); }
   getAwayParticipants(): string[] { return Array.from(this.awayParticipants).sort((a, b) => a.localeCompare(b)); }
   getGameStatus(): StoredGame['status'] { return 'in-progress'; } // TODO: Track actual status
-  setIsResumingPointMode(value: boolean): void { 
-    this.isResumingPointMode = value; 
+  setIsResumingPointMode(value: boolean): void {
+    this.isResumingPointMode = value;
     this.notifyListeners();
   }
-  setLastPlayedLine(value: { home: string[]; away: string[] } | null): void { 
-    this.lastPlayedLine = value; 
+  setLastPlayedLine(value: { home: string[]; away: string[] } | null): void {
+    this.lastPlayedLine = value;
     this.notifyListeners();
   }
 
