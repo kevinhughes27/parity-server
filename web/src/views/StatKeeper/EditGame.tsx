@@ -18,7 +18,7 @@ function EditGame() {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
     errorTeams: errorLeaguePlayers,
-  } = useTeams(bookkeeper?.league.id);
+  } = useTeams(bookkeeper?.league.id.toString());
 
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
@@ -59,7 +59,7 @@ function EditGame() {
         },
         { skipViewChange: true }
       );
-      
+
       console.log(`Rosters for game updated successfully.`);
       navigate(`/stat_keeper/game/${localGameId}`);
     } catch (error) {
