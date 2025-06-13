@@ -72,11 +72,6 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
             <Typography variant="body2" sx={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
               {key && `${key}: `}[{value.length} items]
             </Typography>
-            <Tooltip title="Copy array">
-              <IconButton size="small" onClick={(e) => { e.stopPropagation(); handleCopy(value); }}>
-                <ContentCopyIcon fontSize="small" />
-              </IconButton>
-            </Tooltip>
           </Box>
           {isExpanded && (
             <Box sx={{ ml: 2, borderLeft: '1px solid #ddd', pl: 1 }}>
@@ -112,11 +107,6 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
             <Typography variant="body2" sx={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
               {key && `${key}: `}{'{'}...{'}'}
             </Typography>
-            <Tooltip title="Copy object">
-              <IconButton size="small" onClick={(e) => { e.stopPropagation(); handleCopy(value); }}>
-                <ContentCopyIcon fontSize="small" />
-              </IconButton>
-            </Tooltip>
           </Box>
           {isExpanded && (
             <Box sx={{ ml: 2, borderLeft: '1px solid #ddd', pl: 1 }}>
@@ -149,11 +139,6 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
           </Typography>
         )}
         {renderValue(data)}
-        <Tooltip title="Copy value">
-          <IconButton size="small" onClick={() => handleCopy(data)}>
-            <ContentCopyIcon fontSize="small" />
-          </IconButton>
-        </Tooltip>
       </Box>
     );
   }
