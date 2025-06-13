@@ -1,4 +1,4 @@
-import { describe, expect, beforeEach, afterAll, test } from 'vitest';
+import { describe, expect, beforeEach, afterAll, test, vi } from 'vitest';
 import 'fake-indexeddb/auto';
 import { Bookkeeper } from '../bookkeeper';
 import {
@@ -12,6 +12,22 @@ import {
 } from '../models';
 import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api';
 import { db, StoredGame } from '../db';
+
+// Mock the API leagues
+vi.mock('../../../api', async () => {
+  const actual = await vi.importActual('../../../api');
+  return {
+    ...actual,
+    leagues: [
+      {
+        id: '101',
+        name: 'OCUA',
+        lineSize: 7,
+      },
+    ],
+    getLeagueName: (id: string) => id === '101' ? 'OCUA' : 'Unknown League',
+  };
+});
 
 const PLAYER1 = 'Kevin Hughes';
 const PLAYER2 = 'Allan Godding';
