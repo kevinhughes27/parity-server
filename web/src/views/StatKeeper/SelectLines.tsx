@@ -112,8 +112,13 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     if (bookkeeper.homePlayers && bookkeeper.awayPlayers) {
       if (bookkeeper.activePoint === null && !bookkeeper.firstPointOfGameOrHalf()) {
         await bookkeeper.performAction(
-          bk => bk.prepareNewPointAfterScore(),
-          { skipViewChange: true }
+          bk => bk.prepareNewPointAfterScore()
+        );
+      } else {
+        // Force view transition to recordStats
+        await bookkeeper.performAction(
+          bk => {}, // No-op action
+          { skipSave: true }
         );
       }
     }
