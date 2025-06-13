@@ -686,7 +686,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="point!")).to_be_disabled()
     expect(
         page.get_by_role("button", name="drop")
-    ).to_be_disabled()
+    ).to_be_enabled()  # ToDo the player who picks it up should not be able to drop it
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
     expect(page.get_by_role("button", name="d (block)")).to_be_enabled()
     expect(page.get_by_role("button", name="catch d")).to_be_enabled()
