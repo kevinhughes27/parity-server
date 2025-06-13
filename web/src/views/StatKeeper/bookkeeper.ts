@@ -873,8 +873,10 @@ export class Bookkeeper {
 
   private transformForDatabase(serializedData: SerializedGameData, newStatus?: StoredGame['status']): Partial<StoredGame> {
     const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
-      offensePlayers: [...modelPointJson.offensePlayers],
-      defensePlayers: [...modelPointJson.defensePlayers],
+      // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
+      // Fall back to regular players for legacy data
+      offensePlayers: modelPointJson.allOffensePlayers ? Array.from(modelPointJson.allOffensePlayers).sort() : [...modelPointJson.offensePlayers],
+      defensePlayers: modelPointJson.allDefensePlayers ? Array.from(modelPointJson.allDefensePlayers).sort() : [...modelPointJson.defensePlayers],
       events: modelPointJson.events.map(mapModelEventToApiPointEvent),
     }));
 
@@ -953,8 +955,10 @@ export class Bookkeeper {
         a.localeCompare(b)
       ),
       points: bkState.game.points.map(pJson => ({
-        offensePlayers: pJson.offensePlayers,
-        defensePlayers: pJson.defensePlayers,
+        // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
+        // Fall back to regular players for legacy data
+        offensePlayers: pJson.allOffensePlayers ? Array.from(pJson.allOffensePlayers).sort() : pJson.offensePlayers,
+        defensePlayers: pJson.allDefensePlayers ? Array.from(pJson.allDefensePlayers).sort() : pJson.defensePlayers,
         events: pJson.events.map(mapModelEventToApiPointEvent),
       })),
     };
