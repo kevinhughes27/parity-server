@@ -7,44 +7,34 @@ import { Box, Button } from '@mui/material';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
-  fullHomeRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
-  fullAwayRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
-  onPerformAction: (
-    action: (bk: Bookkeeper) => void,
-    options?: { skipViewChange?: boolean; skipSave?: boolean }
-  ) => Promise<void>;
-  onPointScored: () => void;
-  onChangeLine: () => void;
-  actionBarHeight: string; // Added prop
+  actionBarHeight: string;
 }
 
 const RecordStats: React.FC<RecordStatsProps> = ({
   bookkeeper,
-  fullHomeRoster, // Already sorted
-  fullAwayRoster, // Already sorted
-  onPerformAction,
-  onPointScored,
   actionBarHeight,
 }) => {
+  // Get sorted rosters from bookkeeper's participants
+  const fullHomeRoster = bookkeeper.getHomeParticipants();
+  const fullAwayRoster = bookkeeper.getAwayParticipants();
   const currentGameState = bookkeeper.gameState();
   const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
   const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
-      await onPerformAction(bk => bk.recordPass(playerName));
+      await bookkeeper.performAction(bk => bk.recordPass(playerName));
     } else {
-      await onPerformAction(bk => bk.recordFirstActor(playerName, isHomeTeamPlayer));
+      await bookkeeper.performAction(bk => bk.recordFirstActor(playerName, isHomeTeamPlayer));
     }
   };
 
   const handleActionClick = async (actionFunc: (bk: Bookkeeper) => void) => {
-    await onPerformAction(actionFunc);
+    await bookkeeper.performAction(actionFunc);
   };
 
   const handlePointClick = async () => {
-    await onPerformAction(bk => bk.recordPoint(), { skipViewChange: true });
-    onPointScored();
+    await bookkeeper.performAction(bk => bk.recordPoint(), { skipViewChange: true });
   };
 
   const renderPlayerButton = (

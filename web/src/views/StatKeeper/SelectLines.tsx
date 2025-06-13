@@ -6,28 +6,19 @@ import { Box, Button, Typography, Paper } from '@mui/material';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
-  homeRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
-  awayRoster: string[]; // Assumed to be pre-sorted by parent (LocalGame)
-  onPerformAction: (
-    action: (bk: Bookkeeper) => void,
-    options?: { skipViewChange?: boolean; skipSave?: boolean }
-  ) => Promise<void>;
-  onLinesSelected: () => void;
-  isResumingPointMode: boolean;
-  lastPlayedLine: { home: string[]; away: string[] } | null;
-  actionBarHeight: string; // Added prop
+  actionBarHeight: string;
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({
   bookkeeper,
-  homeRoster,
-  awayRoster,
-  onPerformAction,
-  onLinesSelected,
-  isResumingPointMode,
-  lastPlayedLine,
   actionBarHeight,
 }) => {
+  const isResumingPointMode = bookkeeper.getIsResumingPointMode();
+  const lastPlayedLine = bookkeeper.getLastPlayedLine();
+  
+  // Get sorted rosters from bookkeeper's participants
+  const homeRoster = bookkeeper.getHomeParticipants();
+  const awayRoster = bookkeeper.getAwayParticipants();
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
@@ -84,16 +75,15 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     const rightCorrectNumPlayers = rightPlayerCount === leagueLineSize;
 
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-      await onPerformAction(
-        // Pass sorted selections to bookkeeper
+      await bookkeeper.performAction(
         bk =>
           bk.recordActivePlayers(
             [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
             [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
           ),
-        { skipViewChange: true, skipSave: false }
+        { skipViewChange: true }
       );
-      onLinesSelected();
+      await handleLinesSelected();
     } else {
       let message = 'Incorrect number of players:';
       if (!leftCorrectNumPlayers) {
@@ -105,22 +95,32 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       message += '\n\nContinue with these players anyway?';
 
       if (window.confirm(message)) {
-        await onPerformAction(
-          // Pass sorted selections to bookkeeper
+        await bookkeeper.performAction(
           bk =>
             bk.recordActivePlayers(
               [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
               [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
             ),
-          { skipViewChange: true, skipSave: false }
+          { skipViewChange: true }
         );
-        onLinesSelected();
+        await handleLinesSelected();
+      }
+    }
+  };
+
+  const handleLinesSelected = async () => {
+    if (bookkeeper.homePlayers && bookkeeper.awayPlayers) {
+      if (bookkeeper.activePoint === null && !bookkeeper.firstPointOfGameOrHalf()) {
+        await bookkeeper.performAction(
+          bk => bk.prepareNewPointAfterScore(),
+          { skipViewChange: true }
+        );
       }
     }
   };
 
   const handleUndoLastAction = async () => {
-    await onPerformAction(bk => bk.undo());
+    await bookkeeper.performAction(bk => bk.undo());
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {

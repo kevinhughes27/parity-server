@@ -187,6 +187,14 @@ export interface BookkeeperVolatileState {
   awayParticipants: string[];
 }
 
+export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
+
+export interface ActionOptions {
+  skipViewChange?: boolean;
+  skipSave?: boolean;
+  newStatus?: 'new' | 'in-progress' | 'paused' | 'completed' | 'submitted' | 'sync-error' | 'uploaded';
+}
+
 export interface SerializedGameData {
   // Game metadata from original Bookkeeper.serialize
   league_id: string;

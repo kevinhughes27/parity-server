@@ -9,7 +9,11 @@ import {
   MementoType,
   BookkeeperVolatileState,
   SerializedGameData,
+  GameView,
+  ActionOptions,
 } from './models';
+import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
+import { getLeagueName, uploadCompleteGame, UploadedGamePayload } from '../../api';
 
 interface InternalMemento {
   type: MementoType;
@@ -38,6 +42,16 @@ export class Bookkeeper {
   private homeParticipants: Set<string>;
   private awayParticipants: Set<string>;
 
+  // New: UI state management
+  private gameId: number | null = null;
+  private currentView: GameView = 'loading';
+  private localError: string | null = null;
+  private isResumingPointMode: boolean = false;
+  private lastPlayedLine: { home: string[]; away: string[] } | null = null;
+  
+  // New: Observer pattern for React integration
+  private listeners: Set<() => void> = new Set();
+
   // I still think we need to streamline this constructor and persistence logic.
   // the responsibilities between this and the db.ts overlap in a new way in the typescript version
   // lets see how the UI integration changes things and revisit later.
@@ -46,18 +60,110 @@ export class Bookkeeper {
     week: number,
     homeTeam: Team,
     awayTeam: Team,
-    initialData: SerializedGameData
+    initialData: SerializedGameData,
+    gameId?: number
   ) {
     this.league = league;
     this.week = week;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
+    this.gameId = gameId || null;
 
     this.mementos = [];
     this.homeParticipants = new Set<string>();
     this.awayParticipants = new Set<string>();
 
     this.hydrate(initialData);
+    this.determineInitialView();
+  }
+
+  // New: Static factory method to replace the complex initialization logic
+  static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
+    const storedGame = await db.games.get(gameId);
+    if (!storedGame) {
+      throw new Error(`Game ${gameId} not found`);
+    }
+
+    if (!storedGame.homeTeamId || !storedGame.awayTeamId) {
+      throw new Error('Game data is missing team IDs. Cannot initialize Bookkeeper.');
+    }
+
+    // Import leagues dynamically to avoid circular dependencies
+    const { leagues: apiLeagues } = await import('../../api');
+    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id);
+    
+    if (!apiLeague) {
+      throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
+    }
+
+    const leagueForBk: League = {
+      id: storedGame.league_id,
+      name: getLeagueName(storedGame.league_id) || 'Unknown League',
+      lineSize: apiLeague.lineSize,
+    };
+
+    const homeTeamForBk: Team = { id: storedGame.homeTeamId, name: storedGame.homeTeam };
+    const awayTeamForBk: Team = { id: storedGame.awayTeamId, name: storedGame.awayTeam };
+
+    const transformedGamePoints = storedGame.points.map(apiPoint => {
+      return PointModel.fromJSON({
+        offensePlayers: [...apiPoint.offensePlayers],
+        defensePlayers: [...apiPoint.defensePlayers],
+        events: apiPoint.events.map(mapApiPointEventToModelEvent),
+      });
+    });
+
+    let activePointForHydration: PointModel | null = null;
+    if (storedGame.bookkeeperState?.activePoint) {
+      activePointForHydration = PointModel.fromJSON(storedGame.bookkeeperState.activePoint);
+    }
+
+    const bookkeeperStateForHydration: BookkeeperVolatileState = {
+      ...(storedGame.bookkeeperState || {
+        activePoint: null,
+        firstActor: null,
+        homePossession: true,
+        pointsAtHalf: 0,
+        homePlayers: null,
+        awayPlayers: null,
+        homeScore: 0,
+        awayScore: 0,
+        homeParticipants: storedGame.homeRoster
+          ? [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b))
+          : [],
+        awayParticipants: storedGame.awayRoster
+          ? [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b))
+          : [],
+      }),
+      activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
+      homeParticipants: storedGame.bookkeeperState?.homeParticipants
+        ? [...storedGame.bookkeeperState.homeParticipants].sort((a, b) => a.localeCompare(b))
+        : [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b)),
+      awayParticipants: storedGame.bookkeeperState?.awayParticipants
+        ? [...storedGame.bookkeeperState.awayParticipants].sort((a, b) => a.localeCompare(b))
+        : [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b)),
+    };
+
+    const initialSerializedData: SerializedGameData = {
+      league_id: storedGame.league_id,
+      week: storedGame.week,
+      homeTeamName: storedGame.homeTeam,
+      awayTeamName: storedGame.awayTeam,
+      homeTeamId: storedGame.homeTeamId,
+      awayTeamId: storedGame.awayTeamId,
+      game: { points: transformedGamePoints.map(p => p.toJSON()) },
+      bookkeeperState: bookkeeperStateForHydration,
+      mementos: storedGame.mementos || [],
+    };
+
+    return new Bookkeeper(
+      leagueForBk,
+      storedGame.week,
+      homeTeamForBk,
+      awayTeamForBk,
+      initialSerializedData,
+      gameId
+    );
   }
 
   private hydrate(data: SerializedGameData): void {
@@ -253,6 +359,36 @@ export class Bookkeeper {
   public recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.homePlayers = [...activeHomePlayers];
     this.awayPlayers = [...activeAwayPlayers];
+  }
+
+  // New: Unified action method that handles persistence
+  async performAction(action: (bk: Bookkeeper) => void, options: ActionOptions = {}): Promise<void> {
+    const actionName = action.name || action.toString();
+    
+    // Track state for view transitions
+    if (actionName.includes('recordPoint')) {
+      this.lastPlayedLine = {
+        home: [...(this.homePlayers || [])],
+        away: [...(this.awayPlayers || [])]
+      };
+      this.isResumingPointMode = false;
+    }
+
+    // Execute the action
+    action(this);
+    
+    // Auto-save unless explicitly skipped
+    if (!options.skipSave) {
+      await this.saveToDatabase(options.newStatus);
+    }
+    
+    // Update view state
+    if (!options.skipViewChange) {
+      this.updateViewState();
+    }
+    
+    // Notify React components
+    this.notifyListeners();
   }
 
   public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
@@ -595,6 +731,160 @@ export class Bookkeeper {
         this.pointsAtHalf = data.previousPointsAtHalf;
       },
     };
+  }
+
+  // New: Automatic view state management
+  private determineInitialView(): void {
+    if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
+      this.isResumingPointMode = false;
+      this.currentView = 'selectLines';
+    } else {
+      this.isResumingPointMode = true;
+      this.lastPlayedLine = null;
+      this.currentView = 'recordStats';
+    }
+  }
+
+  private updateViewState(): void {
+    if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
+      this.currentView = 'selectLines';
+    } else {
+      this.currentView = 'recordStats';
+    }
+  }
+
+  // New: Persistence built into bookkeeper
+  private async saveToDatabase(newStatus?: StoredGame['status']): Promise<void> {
+    if (!this.gameId) {
+      throw new Error('Cannot save: no game ID');
+    }
+
+    const serializedData = this.serialize();
+    const dbData = this.transformForDatabase(serializedData, newStatus);
+    
+    try {
+      await db.games.update(this.gameId, dbData);
+    } catch (error) {
+      this.localError = `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      this.notifyListeners();
+      throw error;
+    }
+  }
+
+  private transformForDatabase(serializedData: SerializedGameData, newStatus?: StoredGame['status']): Partial<StoredGame> {
+    const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
+      offensePlayers: [...modelPointJson.offensePlayers],
+      defensePlayers: [...modelPointJson.defensePlayers],
+      events: modelPointJson.events.map(mapModelEventToApiPointEvent),
+    }));
+
+    const bookkeeperStateForStorage: BookkeeperVolatileState = {
+      ...serializedData.bookkeeperState,
+      homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      awayParticipants: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+    };
+
+    return {
+      homeScore: serializedData.bookkeeperState.homeScore,
+      awayScore: serializedData.bookkeeperState.awayScore,
+      points: pointsForStorage,
+      bookkeeperState: bookkeeperStateForStorage,
+      mementos: serializedData.mementos,
+      homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      awayRoster: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      lastModified: new Date(),
+      status: newStatus || 'in-progress',
+    };
+  }
+
+  // New: Game submission
+  async submitGame(): Promise<void> {
+    if (!this.gameId) {
+      throw new Error('Cannot submit: no game ID');
+    }
+    
+    try {
+      await this.saveToDatabase('submitted');
+      const apiPayload = this.transformForAPI();
+      const response = await uploadCompleteGame(apiPayload);
+      
+      if (response.ok) {
+        await this.saveToDatabase('uploaded');
+      } else {
+        await this.saveToDatabase('sync-error');
+        const errorText = await response.text();
+        let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
+        try {
+          const errorData = JSON.parse(errorText);
+          errorMessage += ` - ${errorData.message || errorData.detail || 'Server error'}`;
+        } catch {
+          errorMessage += ` - ${errorText || 'Server error with no JSON body'}`;
+        }
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      this.localError = `Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      this.notifyListeners();
+      throw error;
+    }
+  }
+
+  private transformForAPI(): UploadedGamePayload {
+    const bkState = this.serialize();
+    return {
+      league_id: bkState.league_id,
+      week: bkState.week,
+      homeTeam: bkState.homeTeamName,
+      homeScore: bkState.bookkeeperState.homeScore,
+      homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      awayTeam: bkState.awayTeamName,
+      awayScore: bkState.bookkeeperState.awayScore,
+      awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a, b) =>
+        a.localeCompare(b)
+      ),
+      points: bkState.game.points.map(pJson => ({
+        offensePlayers: pJson.offensePlayers,
+        defensePlayers: pJson.defensePlayers,
+        events: pJson.events.map(mapModelEventToApiPointEvent),
+      })),
+    };
+  }
+
+  // New: React integration
+  subscribe(listener: () => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  private notifyListeners(): void {
+    this.listeners.forEach(listener => listener());
+  }
+
+  // New: State getters for React
+  getCurrentView(): GameView { return this.currentView; }
+  getError(): string | null { return this.localError; }
+  getIsResumingPointMode(): boolean { return this.isResumingPointMode; }
+  getLastPlayedLine(): { home: string[]; away: string[] } | null { return this.lastPlayedLine; }
+  getHomeParticipants(): string[] { return Array.from(this.homeParticipants).sort((a, b) => a.localeCompare(b)); }
+  getAwayParticipants(): string[] { return Array.from(this.awayParticipants).sort((a, b) => a.localeCompare(b)); }
+  getGameStatus(): StoredGame['status'] { return 'in-progress'; } // TODO: Track actual status
+  setIsResumingPointMode(value: boolean): void { 
+    this.isResumingPointMode = value; 
+    this.notifyListeners();
+  }
+  setLastPlayedLine(value: { home: string[]; away: string[] } | null): void { 
+    this.lastPlayedLine = value; 
+    this.notifyListeners();
   }
 
   // Getter for tests
