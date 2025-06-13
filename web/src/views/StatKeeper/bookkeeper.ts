@@ -751,7 +751,11 @@ export class Bookkeeper {
   }
 
   private updateViewState(): void {
-    if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
+    // Transition to selectLines if we need to select players
+    // This happens when:
+    // 1. No active point AND no players selected (start of game/after point)
+    // 2. Players have been cleared (mid-point line change)
+    if (this.homePlayers === null || this.awayPlayers === null) {
       this.currentView = 'selectLines';
     } else {
       this.currentView = 'recordStats';
