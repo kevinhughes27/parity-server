@@ -60,6 +60,16 @@ function LocalGame() {
   };
 
   const handleChangeLine = async () => {
+    // Preserve current line before clearing it
+    const currentLine = {
+      home: [...(bookkeeper.homePlayers || [])],
+      away: [...(bookkeeper.awayPlayers || [])]
+    };
+    
+    // Set the resuming mode and preserved line BEFORE clearing players
+    bookkeeper.setIsResumingPointMode(true);
+    bookkeeper.setLastPlayedLine(currentLine);
+    
     // Force transition to selectLines view even with an active point
     await bookkeeper.performAction(
       (bk) => {
@@ -69,8 +79,6 @@ function LocalGame() {
       }
       // Don't skip view change - we want the view to update to selectLines
     );
-    bookkeeper.setIsResumingPointMode(true);
-    bookkeeper.setLastPlayedLine(null);
   };
 
   return (
