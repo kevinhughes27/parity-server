@@ -26,6 +26,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   useEffect(() => {
     if (isResumingPointMode) {
+      // When resuming/changing lines mid-point, keep current line selected
       setSelectedHomePlayers(bookkeeper.homePlayers || []);
       setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
     } else if (lastPlayedLine) {
@@ -157,7 +158,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({
 
   // Base help text without undo information
   let helpText = isResumingPointMode
-    ? "Adjust the current line if needed, then click 'Resume Point'."
+    ? "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
     : lastPlayedLine
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
       : 'Select players for the first point.';
