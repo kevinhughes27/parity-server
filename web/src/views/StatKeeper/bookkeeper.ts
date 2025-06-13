@@ -875,8 +875,12 @@ export class Bookkeeper {
     const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
       // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
       // Fall back to regular players for legacy data
-      offensePlayers: modelPointJson.allOffensePlayers ? Array.from(modelPointJson.allOffensePlayers).sort() : [...modelPointJson.offensePlayers],
-      defensePlayers: modelPointJson.allDefensePlayers ? Array.from(modelPointJson.allDefensePlayers).sort() : [...modelPointJson.defensePlayers],
+      offensePlayers: (modelPointJson.allOffensePlayers && modelPointJson.allOffensePlayers.length > 0) 
+        ? [...modelPointJson.allOffensePlayers].sort() 
+        : [...modelPointJson.offensePlayers].sort(),
+      defensePlayers: (modelPointJson.allDefensePlayers && modelPointJson.allDefensePlayers.length > 0) 
+        ? [...modelPointJson.allDefensePlayers].sort() 
+        : [...modelPointJson.defensePlayers].sort(),
       events: modelPointJson.events.map(mapModelEventToApiPointEvent),
     }));
 
@@ -957,8 +961,12 @@ export class Bookkeeper {
       points: bkState.game.points.map(pJson => ({
         // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
         // Fall back to regular players for legacy data
-        offensePlayers: pJson.allOffensePlayers ? Array.from(pJson.allOffensePlayers).sort() : pJson.offensePlayers,
-        defensePlayers: pJson.allDefensePlayers ? Array.from(pJson.allDefensePlayers).sort() : pJson.defensePlayers,
+        offensePlayers: (pJson.allOffensePlayers && pJson.allOffensePlayers.length > 0) 
+          ? [...pJson.allOffensePlayers].sort() 
+          : [...pJson.offensePlayers].sort(),
+        defensePlayers: (pJson.allDefensePlayers && pJson.allDefensePlayers.length > 0) 
+          ? [...pJson.allDefensePlayers].sort() 
+          : [...pJson.defensePlayers].sort(),
         events: pJson.events.map(mapModelEventToApiPointEvent),
       })),
     };
