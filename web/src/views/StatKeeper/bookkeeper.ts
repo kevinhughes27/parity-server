@@ -971,7 +971,7 @@ export class Bookkeeper {
     }
   }
 
-  private transformForAPI(): UploadedGamePayload {
+  public transformForAPI(): UploadedGamePayload {
     const bkState = this.serialize();
     return {
       league_id: bkState.league_id,
