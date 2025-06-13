@@ -1031,4 +1031,203 @@ export class Bookkeeper {
   public getMementosCount(): number {
     return this.mementos.length;
   }
+
+  // New: Button state management methods
+  public getPlayerButtonState(playerName: string, isHomeTeam: boolean): {
+    enabled: boolean;
+    variant: 'active' | 'enabled' | 'disabled-possession' | 'disabled-no-possession' | 'not-on-line';
+    reason?: string;
+  } {
+    const homePlayersOnActiveLine = this.homePlayers || [];
+    const awayPlayersOnActiveLine = this.awayPlayers || [];
+    const isPlayerOnActiveLine = isHomeTeam 
+      ? homePlayersOnActiveLine.includes(playerName)
+      : awayPlayersOnActiveLine.includes(playerName);
+
+    if (!isPlayerOnActiveLine) {
+      return {
+        enabled: false,
+        variant: 'not-on-line',
+        reason: 'Player not on active line'
+      };
+    }
+
+    const currentGameState = this.gameState();
+    const isActivePlayer = this.firstActor === playerName;
+    const isTeamInPossession = isHomeTeam === this.homePossession;
+    const isFirstPointAfterHalftime = this.firstPointOfGameOrHalf() && this.pointsAtHalf > 0;
+
+    // Special case: after halftime, both teams can select who pulls
+    if (currentGameState === GameState.Start && isFirstPointAfterHalftime) {
+      return {
+        enabled: true,
+        variant: isActivePlayer ? 'active' : 'enabled',
+        reason: 'Select puller for second half'
+      };
+    }
+
+    // Game state specific logic
+    if (currentGameState === GameState.Start) {
+      return {
+        enabled: true,
+        variant: isActivePlayer ? 'active' : 'enabled',
+        reason: 'Select starting player'
+      };
+    }
+
+    if (currentGameState === GameState.WhoPickedUpDisc) {
+      if (!isTeamInPossession) {
+        return {
+          enabled: false,
+          variant: 'disabled-no-possession',
+          reason: 'Other team picks up disc'
+        };
+      }
+      return {
+        enabled: true,
+        variant: isActivePlayer ? 'active' : 'enabled',
+        reason: 'Select player who picked up disc'
+      };
+    }
+
+    if (currentGameState === GameState.Pull) {
+      return {
+        enabled: false,
+        variant: 'disabled-possession',
+        reason: 'Pull in progress'
+      };
+    }
+
+    // When someone has the disc
+    if (this.firstActor !== null) {
+      if (isTeamInPossession) {
+        if (isActivePlayer && this.shouldRecordNewPass()) {
+          return {
+            enabled: false,
+            variant: 'active',
+            reason: 'Player has disc - use action buttons'
+          };
+        } else {
+          return {
+            enabled: true,
+            variant: isActivePlayer ? 'active' : 'enabled',
+            reason: isActivePlayer ? 'Player has disc' : 'Select pass target'
+          };
+        }
+      } else {
+        return {
+          enabled: false,
+          variant: 'disabled-no-possession',
+          reason: 'Other team has possession'
+        };
+      }
+    }
+
+    // Default case
+    if (!isTeamInPossession) {
+      return {
+        enabled: false,
+        variant: 'disabled-no-possession',
+        reason: 'Other team has possession'
+      };
+    }
+
+    return {
+      enabled: true,
+      variant: 'enabled',
+      reason: 'Available for selection'
+    };
+  }
+
+  public getActionButtonState(action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'): {
+    enabled: boolean;
+    reason?: string;
+  } {
+    const currentGameState = this.gameState();
+
+    switch (action) {
+      case 'pull':
+        return {
+          enabled: currentGameState === GameState.Pull && this.firstActor !== null,
+          reason: currentGameState !== GameState.Pull 
+            ? 'Not in pull state' 
+            : this.firstActor === null 
+              ? 'No puller selected' 
+              : undefined
+        };
+
+      case 'point':
+        return {
+          enabled: (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) && 
+                   this.firstActor !== null,
+          reason: this.firstActor === null 
+            ? 'No player selected' 
+            : (currentGameState !== GameState.Normal && currentGameState !== GameState.SecondD)
+              ? 'Cannot score in current state'
+              : undefined
+        };
+
+      case 'drop':
+        const canDrop = (currentGameState === GameState.Normal ||
+                        currentGameState === GameState.FirstThrowQuebecVariant ||
+                        currentGameState === GameState.FirstD ||
+                        currentGameState === GameState.SecondD) &&
+                       this.firstActor !== null &&
+                       // Disable drop for picking up disc after a point (but not after a pull)
+                       !(this.activePoint?.getEventCount() === 0 && 
+                         !this.firstPointOfGameOrHalf() && 
+                         this.activePoint?.getLastEventType() !== EventType.PULL);
+        return {
+          enabled: canDrop,
+          reason: this.firstActor === null 
+            ? 'No player selected'
+            : !canDrop
+              ? 'Cannot drop in current state'
+              : undefined
+        };
+
+      case 'throwaway':
+        return {
+          enabled: (currentGameState === GameState.Normal ||
+                   currentGameState === GameState.FirstThrowQuebecVariant ||
+                   currentGameState === GameState.FirstD ||
+                   currentGameState === GameState.SecondD) &&
+                   this.firstActor !== null,
+          reason: this.firstActor === null 
+            ? 'No player selected'
+            : 'Cannot throw away in current state'
+        };
+
+      case 'd':
+        return {
+          enabled: this.firstActor !== null &&
+                   (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+          reason: this.firstActor === null 
+            ? 'No player selected'
+            : (currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD)
+              ? 'Can only get D after turnover or another D'
+              : undefined
+        };
+
+      case 'catchD':
+        return {
+          enabled: this.firstActor !== null &&
+                   (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+          reason: this.firstActor === null 
+            ? 'No player selected'
+            : (currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD)
+              ? 'Can only get catch D after turnover or another D'
+              : undefined
+        };
+
+      case 'undo':
+        return {
+          enabled: this.getMementosCount() > 0,
+          reason: this.getMementosCount() === 0 ? 'No actions to undo' : undefined
+        };
+
+      default:
+        return { enabled: false, reason: 'Unknown action' };
+    }
+  }
 }
