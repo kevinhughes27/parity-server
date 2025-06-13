@@ -7,10 +7,11 @@ import {
   Team,
   Event,
   SerializedGameData,
-  BookkeeperVolatileState, // Added for explicit typing
-  SerializedMemento, // Added for explicit typing
+  BookkeeperVolatileState,
+  SerializedMemento,
 } from '../models';
-import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api'; // For typing points stored in DB
+import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api';
+import { db, StoredGame } from '../db';
 
 const PLAYER1 = 'Kevin Hughes';
 const PLAYER2 = 'Allan Godding';
@@ -121,17 +122,17 @@ describe('Bookkeeper', () => {
     expect(typeof event.timestamp).toBe('string');
   }
 
-  test('testUndoRecordFirstActor', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true); // Home player starts with disc
-    bookkeeper.undo();
+  test('testUndoRecordFirstActor', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true)); // Home player starts with disc
+    await bookkeeper.performAction(bk => bk.undo());
     expect(bookkeeper.firstActor).toBeNull();
     expect(bookkeeper.activePoint).toBeNull();
   });
 
-  test('testUndoPull', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordPull();
-    bookkeeper.undo();
+  test('testUndoPull', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordPull());
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(0);
@@ -139,22 +140,22 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.homePossession).toBe(true);
   });
 
-  test('testUndoPass', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordPass(PLAYER3);
-    bookkeeper.undo();
+  test('testUndoPass', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER3));
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(0);
     expect(bookkeeper.firstActor).toBe(PLAYER1);
   });
 
-  test('testUndoPoint', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordPass(PLAYER3);
-    bookkeeper.recordPoint();
+  test('testUndoPoint', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER3));
+    await bookkeeper.performAction(bk => bk.recordPoint());
     expect(bookkeeper.homeScore).toBe(1);
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1);
@@ -162,11 +163,11 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.homeScore).toBe(0);
   });
 
-  test('testUndoThrowAway', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordThrowAway();
+  test('testUndoThrowAway', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordThrowAway());
     expect(bookkeeper.homePossession).toBe(false);
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(0);
@@ -174,12 +175,12 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.homePossession).toBe(true);
   });
 
-  test('testUndoThrowAwayAfterPass', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordPass(PLAYER3);
-    bookkeeper.recordThrowAway();
+  test('testUndoThrowAwayAfterPass', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER3));
+    await bookkeeper.performAction(bk => bk.recordThrowAway());
     expect(bookkeeper.homePossession).toBe(false);
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1);
@@ -187,103 +188,103 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.homePossession).toBe(true);
   });
 
-  test('testUndoD', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordThrowAway();
-    bookkeeper.recordFirstActor(PLAYER2, false);
-    bookkeeper.recordD();
-    bookkeeper.undo();
+  test('testUndoD', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordThrowAway());
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false));
+    await bookkeeper.performAction(bk => bk.recordD());
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1); // The THROW AWAY event
     expect(bookkeeper.firstActor).toBe(PLAYER2); // D undos to player having disc before D
   });
 
-  test('testUndoCatchD', () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordThrowAway();
-    bookkeeper.recordFirstActor(PLAYER2, false);
-    bookkeeper.recordCatchD();
-    bookkeeper.undo();
+  test('testUndoCatchD', async () => {
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordThrowAway());
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false));
+    await bookkeeper.performAction(bk => bk.recordCatchD());
+    await bookkeeper.performAction(bk => bk.undo());
 
     expect(bookkeeper.activePoint).not.toBeNull();
     verifyEventCount(1); // The THROW AWAY event
     expect(bookkeeper.firstActor).toBe(PLAYER2); // CatchD undos to player having disc before CatchD
   });
 
-  test('testComplexScenario', () => {
+  test('testComplexScenario', async () => {
     const initialGameData = createInitialGameData(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, initialGameData);
-    bookkeeper.recordActivePlayers(homeLine, awayLine);
+    await bookkeeper.performAction(bk => bk.recordActivePlayers(homeLine, awayLine), { skipSave: true });
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.
-    bookkeeper.recordFirstActor(PLAYER2, false); // isHomeTeamStartingWithDisc = false
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false), { skipSave: true }); // isHomeTeamStartingWithDisc = false
     expect(bookkeeper.homePossession).toBe(false);
     expect(bookkeeper.firstActor).toBe(PLAYER2);
 
     //2. P2 (Away) pulls. Home possession. firstActor is null.
-    bookkeeper.recordPull();
+    await bookkeeper.performAction(bk => bk.recordPull(), { skipSave: true });
     expect(bookkeeper.homePossession).toBe(true);
     expect(bookkeeper.firstActor).toBe(null);
 
     //3. P1 (Home) picks up. firstActor is P1
-    bookkeeper.recordFirstActor(PLAYER1, true);
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER1);
 
     //4. Undo P1 picks up. firstActor is null.
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo(), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(null);
 
     //5. P3 (Home) picks up instead. firstActor is P3.
-    bookkeeper.recordFirstActor(PLAYER3, true);
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER3, true), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER3);
 
     //6. P3 (Home) passes to P1. firstActor is P1
-    bookkeeper.recordPass(PLAYER1);
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER1), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER1);
 
     //7. P1 (Home) throws away. Away possession. firstActor is null.
-    bookkeeper.recordThrowAway();
+    await bookkeeper.performAction(bk => bk.recordThrowAway(), { skipSave: true });
     expect(bookkeeper.homePossession).toBe(false);
     expect(bookkeeper.firstActor).toBe(null);
 
     //8. firstActor is P2 (Away).
-    bookkeeper.recordFirstActor(PLAYER2, false);
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER2);
 
     //9. P2 (Away) got a Catch D firstActor is P2.
-    bookkeeper.recordCatchD();
+    await bookkeeper.performAction(bk => bk.recordCatchD(), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER2);
 
     //10. Undo CatchD. Event removed. firstActor is P2.
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo(), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER2);
 
     //11. Undo P2 picks up. firstActor is null. Disc is loose after throwaway.
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo(), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(null);
 
     //12. P4 (Away) gets a D on the loose disc.
-    bookkeeper.recordFirstActor(PLAYER4, false); // P4 (Away) is about to act
-    bookkeeper.recordD(); // P4 (Away) gets a D. firstActor becomes null.
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER4, false), { skipSave: true }); // P4 (Away) is about to act
+    await bookkeeper.performAction(bk => bk.recordD(), { skipSave: true }); // P4 (Away) gets a D. firstActor becomes null.
     expect(bookkeeper.firstActor).toBe(null);
 
     //13. P2 (Away) picks up after P4's D. firstActor is P2. Away possession.
-    bookkeeper.recordFirstActor(PLAYER2, false);
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false), { skipSave: true });
     expect(bookkeeper.homePossession).toBe(false);
     expect(bookkeeper.firstActor).toBe(PLAYER2);
 
     //14. P2 (Away) passes to P4 (Away). firstActor is P4.
-    bookkeeper.recordPass(PLAYER4);
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER4), { skipSave: true });
     expect(bookkeeper.firstActor).toBe(PLAYER4);
 
     //15. P4 (Away) scores. Away score = 1.
-    bookkeeper.recordPoint();
+    await bookkeeper.performAction(bk => bk.recordPoint(), { skipSave: true });
     expect(bookkeeper.awayScore).toBe(1);
     expect(bookkeeper.firstActor).toBe(null);
 
     //16. Undo point. P4 (Away) has disc. Away score = 0.
-    bookkeeper.undo();
+    await bookkeeper.performAction(bk => bk.undo(), { skipSave: true });
     expect(bookkeeper.awayScore).toBe(0);
     expect(bookkeeper.firstActor).toBe(PLAYER4);
 
@@ -299,9 +300,9 @@ describe('Bookkeeper', () => {
   });
 
   test('should save and load game state with mementos via Dexie', async () => {
-    bookkeeper.recordFirstActor(PLAYER1, true);
-    bookkeeper.recordPass(PLAYER3);
-    bookkeeper.recordThrowAway();
+    await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER1, true));
+    await bookkeeper.performAction(bk => bk.recordPass(PLAYER3));
+    await bookkeeper.performAction(bk => bk.recordThrowAway());
 
     const mementosCountBeforeSave = bookkeeper.getMementosCount();
     const homeScoreBeforeSave = bookkeeper.homeScore;
@@ -338,8 +339,8 @@ describe('Bookkeeper', () => {
       league_id: serializedDataFromBk.league_id,
       week: serializedDataFromBk.week,
       homeTeam: serializedDataFromBk.homeTeamName,
-      homeTeamId: mockHomeTeam.id, // Added
-      awayTeamId: mockAwayTeam.id, // Added
+      homeTeamId: mockHomeTeam.id,
+      awayTeamId: mockAwayTeam.id,
       homeScore: serializedDataFromBk.bookkeeperState.homeScore,
       homeRoster: serializedDataFromBk.bookkeeperState.homeParticipants,
       awayTeam: serializedDataFromBk.awayTeamName,
@@ -354,56 +355,7 @@ describe('Bookkeeper', () => {
     const storedId = await db.games.add(gameToStore);
     expect(storedId).toBeDefined();
 
-    const retrievedGame = await db.games.get(storedId!);
-    expect(retrievedGame).toBeDefined();
-    expect(retrievedGame!.mementos).toBeDefined();
-    expect(retrievedGame!.bookkeeperState).toBeDefined();
-
-    // Transform points from storage for Bookkeeper hydration (ApiPointEvent string -> ModelEvent enum)
-    const gamePointsForHydration = retrievedGame!.points.map(apiPoint => ({
-      offensePlayers: [...apiPoint.offensePlayers],
-      defensePlayers: [...apiPoint.defensePlayers],
-      events: apiPoint.events.map(mapApiPointEventToModelEvent),
-    }));
-
-    let activePointForHydration: {
-      offensePlayers: string[];
-      defensePlayers: string[];
-      events: Event[];
-    } | null = null;
-    if (retrievedGame!.bookkeeperState?.activePoint) {
-      const storedActivePoint = retrievedGame!.bookkeeperState.activePoint as unknown as ApiPoint;
-      activePointForHydration = {
-        offensePlayers: [...storedActivePoint.offensePlayers],
-        defensePlayers: [...storedActivePoint.defensePlayers],
-        events: storedActivePoint.events.map(mapApiPointEventToModelEvent),
-      };
-    }
-
-    const bookkeeperStateForHydration: BookkeeperVolatileState = {
-      ...retrievedGame!.bookkeeperState!,
-      activePoint: activePointForHydration,
-    };
-
-    const hydratedSerializedData: SerializedGameData = {
-      league_id: retrievedGame!.league_id,
-      week: retrievedGame!.week,
-      homeTeamName: retrievedGame!.homeTeam,
-      awayTeamName: retrievedGame!.awayTeam,
-      homeTeamId: retrievedGame!.homeTeamId || mockHomeTeam.id, // Handle optional from DB
-      awayTeamId: retrievedGame!.awayTeamId || mockAwayTeam.id, // Handle optional from DB
-      game: { points: gamePointsForHydration },
-      bookkeeperState: bookkeeperStateForHydration,
-      mementos: retrievedGame!.mementos as SerializedMemento[],
-    };
-
-    const newBookkeeper = new Bookkeeper(
-      mockLeague,
-      mockWeek,
-      mockHomeTeam,
-      mockAwayTeam,
-      hydratedSerializedData
-    );
+    const newBookkeeper = await Bookkeeper.loadFromDatabase(storedId!);
 
     expect(newBookkeeper.homeScore).toBe(homeScoreBeforeSave);
     expect(newBookkeeper.awayScore).toBe(awayScoreBeforeSave);
@@ -416,7 +368,7 @@ describe('Bookkeeper', () => {
       newBookkeeper.serialize().bookkeeperState.activePoint?.events;
     expect(activePointEventsAfterLoad?.length).toBe(activePointEventsBeforeSave?.length);
 
-    newBookkeeper.undo();
+    await newBookkeeper.performAction(bk => bk.undo());
     expect(newBookkeeper.firstActor).toBe(PLAYER3);
     expect(newBookkeeper.homePossession).toBe(true);
     expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave - 1);
