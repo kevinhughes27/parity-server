@@ -219,7 +219,11 @@ export class Bookkeeper {
           }
         );
       case MementoType.RecordHalf:
-        return this.createRecordHalfMemento(mData as { previousPointsAtHalf: number });
+        return this.createRecordHalfMemento(mData as { 
+          previousPointsAtHalf: number;
+          savedHomePlayers: string[] | null;
+          savedAwayPlayers: string[] | null;
+        });
       case MementoType.RecordSubstitution:
         return this.createRecordSubstitutionMemento(mData as {
           savedHomePlayers: string[] | null;
@@ -645,9 +649,17 @@ export class Bookkeeper {
   public recordHalf(): void {
     if (this.pointsAtHalf > 0) return; // Half already recorded
 
-    const mementoData = { previousPointsAtHalf: this.pointsAtHalf };
+    const mementoData = { 
+      previousPointsAtHalf: this.pointsAtHalf,
+      savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
+      savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
+    };
     this.mementos.push(this.createRecordHalfMemento(mementoData));
     this.pointsAtHalf = this.activeGame.getPointCount();
+    
+    // Reset line selection for second half
+    this.homePlayers = null;
+    this.awayPlayers = null;
   }
 
   public undo(): void {
@@ -786,12 +798,19 @@ export class Bookkeeper {
     };
   }
 
-  private createRecordHalfMemento(data: { previousPointsAtHalf: number }): InternalMemento {
+  private createRecordHalfMemento(data: { 
+    previousPointsAtHalf: number;
+    savedHomePlayers: string[] | null;
+    savedAwayPlayers: string[] | null;
+  }): InternalMemento {
     return {
       type: MementoType.RecordHalf,
       data: data,
       apply: () => {
         this.pointsAtHalf = data.previousPointsAtHalf;
+        // Restore line selection when undoing halftime
+        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
+        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
       },
     };
   }
