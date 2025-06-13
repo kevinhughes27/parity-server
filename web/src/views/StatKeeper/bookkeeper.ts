@@ -223,6 +223,8 @@ export class Bookkeeper {
           previousPointsAtHalf: number;
           savedHomePlayers: string[] | null;
           savedAwayPlayers: string[] | null;
+          savedLastPlayedLine: { home: string[]; away: string[] } | null;
+          savedIsResumingPointMode: boolean;
         });
       case MementoType.RecordSubstitution:
         return this.createRecordSubstitutionMemento(mData as {
@@ -653,13 +655,17 @@ export class Bookkeeper {
       previousPointsAtHalf: this.pointsAtHalf,
       savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
       savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
+      savedLastPlayedLine: this.lastPlayedLine,
+      savedIsResumingPointMode: this.isResumingPointMode,
     };
     this.mementos.push(this.createRecordHalfMemento(mementoData));
     this.pointsAtHalf = this.activeGame.getPointCount();
     
-    // Reset line selection for second half
+    // Reset line selection and UI state for second half
     this.homePlayers = null;
     this.awayPlayers = null;
+    this.lastPlayedLine = null;
+    this.isResumingPointMode = false;
   }
 
   public undo(): void {
@@ -802,15 +808,19 @@ export class Bookkeeper {
     previousPointsAtHalf: number;
     savedHomePlayers: string[] | null;
     savedAwayPlayers: string[] | null;
+    savedLastPlayedLine: { home: string[]; away: string[] } | null;
+    savedIsResumingPointMode: boolean;
   }): InternalMemento {
     return {
       type: MementoType.RecordHalf,
       data: data,
       apply: () => {
         this.pointsAtHalf = data.previousPointsAtHalf;
-        // Restore line selection when undoing halftime
+        // Restore line selection and UI state when undoing halftime
         this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
         this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
+        this.lastPlayedLine = data.savedLastPlayedLine;
+        this.isResumingPointMode = data.savedIsResumingPointMode;
       },
     };
   }
