@@ -59,7 +59,16 @@ function LocalGame() {
     }
   };
 
-  const handleChangeLine = () => {
+  const handleChangeLine = async () => {
+    // Force transition to selectLines view even with an active point
+    await bookkeeper.performAction(
+      (bk) => {
+        // Clear the current line selection to allow re-selection
+        bk.homePlayers = null;
+        bk.awayPlayers = null;
+      },
+      { skipSave: true } // Don't save this intermediate state
+    );
     bookkeeper.setIsResumingPointMode(true);
     bookkeeper.setLastPlayedLine(null);
   };
