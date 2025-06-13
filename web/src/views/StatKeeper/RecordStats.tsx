@@ -34,7 +34,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({
   };
 
   const handlePointClick = async () => {
-    await bookkeeper.performAction(bk => bk.recordPoint(), { skipViewChange: true });
+    await bookkeeper.performAction(bk => bk.recordPoint());
   };
 
   const renderPlayerButton = (
