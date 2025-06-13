@@ -1,4 +1,5 @@
 import { describe, expect, beforeEach, afterAll, test } from 'vitest';
+import 'fake-indexeddb/auto';
 import { Bookkeeper } from '../bookkeeper';
 import {
   EventType,
@@ -9,8 +10,6 @@ import {
   BookkeeperVolatileState, // Added for explicit typing
   SerializedMemento, // Added for explicit typing
 } from '../models';
-import 'fake-indexeddb/auto';
-import { db, StoredGame } from '../db';
 import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api'; // For typing points stored in DB
 
 const PLAYER1 = 'Kevin Hughes';
