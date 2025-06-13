@@ -220,6 +220,15 @@ export class Bookkeeper {
         );
       case MementoType.RecordHalf:
         return this.createRecordHalfMemento(mData as { previousPointsAtHalf: number });
+      case MementoType.RecordSubstitution:
+        return this.createRecordSubstitutionMemento(mData as {
+          savedHomePlayers: string[] | null;
+          savedAwayPlayers: string[] | null;
+          savedOffensePlayers: string[];
+          savedDefensePlayers: string[];
+          savedAllOffensePlayers: Set<string>;
+          savedAllDefensePlayers: Set<string>;
+        });
       default:
         console.warn('Unknown memento type during hydration:', sm.type);
         return { type: sm.type, data: mData, apply: () => {} };
@@ -359,6 +368,55 @@ export class Bookkeeper {
   public recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.homePlayers = [...activeHomePlayers];
     this.awayPlayers = [...activeAwayPlayers];
+  }
+
+  public recordSubstitution(
+    newHomePlayers: string[], 
+    newAwayPlayers: string[], 
+    substitutedOutPlayers: string[], 
+    substitutedInPlayers: string[]
+  ): void {
+    if (!this.activePoint) return;
+
+    // Create memento for undo
+    const mementoData = {
+      savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
+      savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
+      savedOffensePlayers: [...this.activePoint.offensePlayers],
+      savedDefensePlayers: [...this.activePoint.defensePlayers],
+      savedAllOffensePlayers: new Set(this.activePoint.allOffensePlayers),
+      savedAllDefensePlayers: new Set(this.activePoint.allDefensePlayers),
+    };
+    this.mementos.push(this.createRecordSubstitutionMemento(mementoData));
+
+    // Update current line
+    this.homePlayers = [...newHomePlayers];
+    this.awayPlayers = [...newAwayPlayers];
+
+    // Determine which team's players to update in the point
+    let newOffensePlayers: string[];
+    let newDefensePlayers: string[];
+    
+    if (this.homePossession) {
+      newOffensePlayers = [...newHomePlayers];
+      newDefensePlayers = [...newAwayPlayers];
+    } else {
+      newOffensePlayers = [...newAwayPlayers];
+      newDefensePlayers = [...newHomePlayers];
+    }
+
+    // Update the active point with new players
+    this.activePoint.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
+
+    // Record substitution events
+    for (let i = 0; i < substitutedOutPlayers.length && i < substitutedInPlayers.length; i++) {
+      this.activePoint.addEvent({
+        type: EventType.SUBSTITUTION,
+        firstActor: substitutedInPlayers[i], // Player coming in
+        secondActor: substitutedOutPlayers[i], // Player going out
+        timestamp: new Date().toISOString(),
+      });
+    }
   }
 
   public updateParticipants(homeParticipants: string[], awayParticipants: string[]): void {
@@ -734,6 +792,39 @@ export class Bookkeeper {
       data: data,
       apply: () => {
         this.pointsAtHalf = data.previousPointsAtHalf;
+      },
+    };
+  }
+
+  private createRecordSubstitutionMemento(data: {
+    savedHomePlayers: string[] | null;
+    savedAwayPlayers: string[] | null;
+    savedOffensePlayers: string[];
+    savedDefensePlayers: string[];
+    savedAllOffensePlayers: Set<string>;
+    savedAllDefensePlayers: Set<string>;
+  }): InternalMemento {
+    return {
+      type: MementoType.RecordSubstitution,
+      data: data,
+      apply: () => {
+        // Restore line players
+        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
+        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
+        
+        if (this.activePoint) {
+          // Restore point players
+          this.activePoint.offensePlayers = [...data.savedOffensePlayers];
+          this.activePoint.defensePlayers = [...data.savedDefensePlayers];
+          this.activePoint.allOffensePlayers = new Set(data.savedAllOffensePlayers);
+          this.activePoint.allDefensePlayers = new Set(data.savedAllDefensePlayers);
+          
+          // Remove substitution events that were added
+          while (this.activePoint.events.length > 0 && 
+                 this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION) {
+            this.activePoint.removeLastEvent();
+          }
+        }
       },
     };
   }

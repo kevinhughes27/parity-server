@@ -81,15 +81,20 @@ const SelectLines: React.FC<SelectLinesProps> = ({
     const leftCorrectNumPlayers = leftPlayerCount === leagueLineSize;
     const rightCorrectNumPlayers = rightPlayerCount === leagueLineSize;
 
+    const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
+    const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
+
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-      await bookkeeper.performAction(
-        bk =>
-          bk.recordActivePlayers(
-            [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
-            [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
-          ),
-        { skipViewChange: true }
-      );
+      if (isResumingPointMode && bookkeeper.activePoint) {
+        // This is a mid-point substitution
+        await handleSubstitution(newHomePlayers, newAwayPlayers);
+      } else {
+        // Normal line selection
+        await bookkeeper.performAction(
+          bk => bk.recordActivePlayers(newHomePlayers, newAwayPlayers),
+          { skipViewChange: true }
+        );
+      }
       await handleLinesSelected();
     } else {
       let message = 'Incorrect number of players:';
@@ -102,17 +107,38 @@ const SelectLines: React.FC<SelectLinesProps> = ({
       message += '\n\nContinue with these players anyway?';
 
       if (window.confirm(message)) {
-        await bookkeeper.performAction(
-          bk =>
-            bk.recordActivePlayers(
-              [...selectedHomePlayers].sort((a, b) => a.localeCompare(b)),
-              [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b))
-            ),
-          { skipViewChange: true }
-        );
+        if (isResumingPointMode && bookkeeper.activePoint) {
+          // This is a mid-point substitution
+          await handleSubstitution(newHomePlayers, newAwayPlayers);
+        } else {
+          // Normal line selection
+          await bookkeeper.performAction(
+            bk => bk.recordActivePlayers(newHomePlayers, newAwayPlayers),
+            { skipViewChange: true }
+          );
+        }
         await handleLinesSelected();
       }
     }
+  };
+
+  const handleSubstitution = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
+    const oldHomePlayers = lastPlayedLine?.home || [];
+    const oldAwayPlayers = lastPlayedLine?.away || [];
+
+    // Find players who were substituted out and in
+    const homePlayersOut = oldHomePlayers.filter(p => !newHomePlayers.includes(p));
+    const homePlayersIn = newHomePlayers.filter(p => !oldHomePlayers.includes(p));
+    const awayPlayersOut = oldAwayPlayers.filter(p => !newAwayPlayers.includes(p));
+    const awayPlayersIn = newAwayPlayers.filter(p => !oldAwayPlayers.includes(p));
+
+    const allPlayersOut = [...homePlayersOut, ...awayPlayersOut];
+    const allPlayersIn = [...homePlayersIn, ...awayPlayersIn];
+
+    await bookkeeper.performAction(
+      bk => bk.recordSubstitution(newHomePlayers, newAwayPlayers, allPlayersOut, allPlayersIn),
+      { skipViewChange: true }
+    );
   };
 
   const handleLinesSelected = async () => {

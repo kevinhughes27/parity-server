@@ -6,6 +6,7 @@ export enum EventType {
   DEFENSE = 'DEFENSE',
   THROWAWAY = 'THROWAWAY',
   DROP = 'DROP',
+  SUBSTITUTION = 'SUBSTITUTION',
 }
 
 export enum GameState {
@@ -30,6 +31,7 @@ export enum MementoType {
   RecordCatchD,
   RecordPoint,
   RecordHalf,
+  RecordSubstitution,
 }
 
 // Interfaces
@@ -61,11 +63,17 @@ export class PointModel {
   offensePlayers: string[];
   defensePlayers: string[];
   events: Event[];
+  // Track all players who participated in this point for stats purposes
+  allOffensePlayers: Set<string>;
+  allDefensePlayers: Set<string>;
 
   constructor(offensePlayers: string[], defensePlayers: string[], events: Event[] = []) {
     this.offensePlayers = [...offensePlayers];
     this.defensePlayers = [...defensePlayers];
     this.events = events.map(e => ({ ...e })); // Deep copy events
+    // Initialize with starting players
+    this.allOffensePlayers = new Set(offensePlayers);
+    this.allDefensePlayers = new Set(defensePlayers);
   }
 
   getEventCount(): number {
@@ -94,6 +102,17 @@ export class PointModel {
 
   swapOffenseAndDefense(): void {
     [this.offensePlayers, this.defensePlayers] = [this.defensePlayers, this.offensePlayers];
+    // Also swap the all-players sets
+    [this.allOffensePlayers, this.allDefensePlayers] = [this.allDefensePlayers, this.allOffensePlayers];
+  }
+
+  updateCurrentPlayers(newOffensePlayers: string[], newDefensePlayers: string[]): void {
+    // Update current players
+    this.offensePlayers = [...newOffensePlayers];
+    this.defensePlayers = [...newDefensePlayers];
+    // Add new players to the all-players sets
+    newOffensePlayers.forEach(player => this.allOffensePlayers.add(player));
+    newDefensePlayers.forEach(player => this.allDefensePlayers.add(player));
   }
 
   prettyPrint(): string[] {
@@ -111,6 +130,8 @@ export class PointModel {
           return `${event.firstActor} threw it away`;
         case EventType.DROP:
           return `${event.firstActor} dropped it`;
+        case EventType.SUBSTITUTION:
+          return `${event.firstActor} substituted for ${event.secondActor}`;
         default: {
           // This exhaustive check helps ensure all event types are handled.
           // If a new EventType is added without a case here, TypeScript will error.
@@ -122,11 +143,19 @@ export class PointModel {
     });
   }
 
-  toJSON(): { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } {
+  toJSON(): { 
+    offensePlayers: string[]; 
+    defensePlayers: string[]; 
+    events: Event[];
+    allOffensePlayers?: string[];
+    allDefensePlayers?: string[];
+  } {
     return {
       offensePlayers: [...this.offensePlayers],
       defensePlayers: [...this.defensePlayers],
       events: this.events.map(e => ({ ...e })), // Event.type is EventType enum
+      allOffensePlayers: Array.from(this.allOffensePlayers),
+      allDefensePlayers: Array.from(this.allDefensePlayers),
     };
   }
 
@@ -134,8 +163,16 @@ export class PointModel {
     offensePlayers: string[];
     defensePlayers: string[];
     events: Event[]; // Expects Event with EventType enum
+    allOffensePlayers?: string[];
+    allDefensePlayers?: string[];
   }): PointModel {
-    return new PointModel(json.offensePlayers, json.defensePlayers, json.events);
+    const point = new PointModel(json.offensePlayers, json.defensePlayers, json.events);
+    // Handle legacy data that doesn't have allPlayers sets
+    if (json.allOffensePlayers && json.allDefensePlayers) {
+      point.allOffensePlayers = new Set(json.allOffensePlayers);
+      point.allDefensePlayers = new Set(json.allDefensePlayers);
+    }
+    return point;
   }
 }
 
