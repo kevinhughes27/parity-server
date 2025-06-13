@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
@@ -16,9 +16,9 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   const isResumingPointMode = bookkeeper.getIsResumingPointMode();
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   
-  // Get sorted rosters from bookkeeper's participants
-  const homeRoster = bookkeeper.getHomeParticipants();
-  const awayRoster = bookkeeper.getAwayParticipants();
+  // Memoize rosters to prevent infinite re-renders
+  const homeRoster = useMemo(() => bookkeeper.getHomeParticipants(), [bookkeeper]);
+  const awayRoster = useMemo(() => bookkeeper.getAwayParticipants(), [bookkeeper]);
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
