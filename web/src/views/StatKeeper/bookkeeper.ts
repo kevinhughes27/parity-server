@@ -280,7 +280,7 @@ export class Bookkeeper {
       if (this.firstActor === null) {
         // Waiting for player to initiate
         if (this.firstPointOfGameOrHalf()) {
-          return GameState.Start; // Select puller
+          return GameState.Start; // Select puller (both teams enabled after halftime)
         } else {
           return GameState.WhoPickedUpDisc; // Receiving team picks up
         }

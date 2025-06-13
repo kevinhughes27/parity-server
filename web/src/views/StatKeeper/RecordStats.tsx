@@ -71,9 +71,15 @@ const RecordStats: React.FC<RecordStatsProps> = ({
     let isDisabledByGameState = false;
     const isActivePlayer = bookkeeper.firstActor === playerName;
     const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
+    const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
 
     if (currentGameState === GameState.Start) {
-      isDisabledByGameState = false;
+      // Special case: after halftime, both teams can select who pulls
+      if (isFirstPointAfterHalftime) {
+        isDisabledByGameState = false; // Both teams enabled
+      } else {
+        isDisabledByGameState = false; // Normal start behavior
+      }
     } else if (currentGameState === GameState.WhoPickedUpDisc) {
       isDisabledByGameState = !isTeamInPossession;
     } else if (currentGameState === GameState.Pull) {
