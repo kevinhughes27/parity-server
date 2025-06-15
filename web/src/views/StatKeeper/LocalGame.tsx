@@ -18,38 +18,21 @@ function LoadingState() {
   );
 }
 
-function ErrorState({ errorMessage }: { errorMessage: string }) {
-  return (
-    <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-      <p style={{ color: 'red' }}>Error: {errorMessage}</p>
-      <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
-        <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
-      </Link>
-    </div>
-  );
-}
-
 function LocalGame() {
+  useFullscreen();
   const navigate = useNavigate();
   const { localGameId } = useParams<{ localGameId: string }>();
   const bookkeeper = useBookkeeper(localGameId!);
 
-  useFullscreen();
-
   if (!bookkeeper) {
     return <LoadingState />;
-  }
-
-  if (bookkeeper.getError()) {
-    return <ErrorState errorMessage={bookkeeper.getError()} />;
   }
 
   const currentView = bookkeeper.getCurrentView();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
   const handleRecordHalf = async () => {
-    // should pull this logic into bookkeeper as well)
-    if (bookkeeper.pointsAtHalf > 0) {
+    if (isHalfRecorded) {
       alert('Half has already been recorded.');
       return;
     }
@@ -100,36 +83,36 @@ function LocalGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      <TopBar 
+      <TopBar
         bookkeeper={bookkeeper}
-        localGameId={localGameId}
+        localGameId={localGameId!}
         isHalfRecorded={isHalfRecorded}
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
         onChangeLine={handleChangeLine}
       />
-      <MainContent 
-        bookkeeper={bookkeeper} 
-        currentView={currentView} 
+      <MainContent
+        bookkeeper={bookkeeper}
+        currentView={currentView}
       />
     </Box>
   );
 }
 
-function TopBar({ 
-  bookkeeper, 
-  localGameId, 
-  isHalfRecorded, 
-  onRecordHalf, 
-  onSubmitGame, 
-  onChangeLine 
-}: { 
-  bookkeeper: any; 
-  localGameId: string; 
-  isHalfRecorded: boolean; 
-  onRecordHalf: () => Promise<void>; 
-  onSubmitGame: () => Promise<void>; 
-  onChangeLine: () => Promise<void>; 
+function TopBar({
+  bookkeeper,
+  localGameId,
+  isHalfRecorded,
+  onRecordHalf,
+  onSubmitGame,
+  onChangeLine
+}: {
+  bookkeeper: any;
+  localGameId: string;
+  isHalfRecorded: boolean;
+  onRecordHalf: () => Promise<void>;
+  onSubmitGame: () => Promise<void>;
+  onChangeLine: () => Promise<void>;
 }) {
   return (
     <AppBar position="static" color="default" elevation={1}>

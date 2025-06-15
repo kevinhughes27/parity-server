@@ -59,7 +59,6 @@ export class Bookkeeper {
   // New: UI state management
   private gameId: number | null = null;
   private currentView: GameView = 'loading';
-  private localError: string | null = null;
   private isResumingPointMode: boolean = false;
   private lastPlayedLine: { home: string[]; away: string[] } | null = null;
 
@@ -1040,9 +1039,6 @@ export class Bookkeeper {
   // New: State getters for React
   getCurrentView(): GameView {
     return this.currentView;
-  }
-  getError(): string | null {
-    return this.localError;
   }
   getIsResumingPointMode(): boolean {
     return this.isResumingPointMode;
