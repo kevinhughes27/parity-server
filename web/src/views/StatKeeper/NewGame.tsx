@@ -29,8 +29,339 @@ interface CurrentLeague {
   };
 }
 
+interface TeamPickerProps {
+  label: string;
+  teamIdStr: string;
+  setTeamIdStr: (id: string) => void;
+  availableTeams: any[];
+  selectedTeamObj: any;
+  disabled: boolean;
+}
+
 // ToDo - can this be moved inside the Actionbar? feels like it should be
 const ACTION_BAR_HEIGHT = '70px';
+
+// Component for team selection dropdown
+const TeamPicker: React.FC<TeamPickerProps> = ({
+  label,
+  teamIdStr,
+  setTeamIdStr,
+  availableTeams,
+  selectedTeamObj,
+  disabled,
+}) => {
+  return (
+    <FormControl fullWidth>
+      <InputLabel id={`${label.toLowerCase()}-team-select-label`}>{label} Team</InputLabel>
+      <Select
+        labelId={`${label.toLowerCase()}-team-select-label`}
+        id={`${label.toLowerCase()}-team-select`}
+        value={teamIdStr}
+        onChange={e => setTeamIdStr(e.target.value)}
+        label={`${label} Team`}
+        disabled={disabled}
+      >
+        <MenuItem value="">Select {label} Team</MenuItem>
+        {availableTeams.map(team => (
+          <MenuItem key={team.id} value={team.id.toString()}>
+            {team.name}
+          </MenuItem>
+        ))}
+        {teamIdStr &&
+          !availableTeams.find(t => t.id.toString() === teamIdStr) &&
+          selectedTeamObj && (
+            <MenuItem key={selectedTeamObj.id} value={selectedTeamObj.id.toString()}>
+              {selectedTeamObj.name}
+            </MenuItem>
+          )}
+      </Select>
+    </FormControl>
+  );
+};
+
+// Component for empty roster placeholder
+const EmptyRosterPlaceholder: React.FC<{ teamType: string }> = ({ teamType }) => {
+  return (
+    <Paper
+      elevation={1}
+      sx={{
+        p: 3,
+        textAlign: 'center',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        bgcolor: '#f9f9f9',
+        borderRadius: 1,
+        border: '1px dashed #ccc',
+      }}
+    >
+      <Typography color="text.secondary">Select {teamType} Team to edit roster.</Typography>
+    </Paper>
+  );
+};
+
+// Component for the top navigation bar
+const TopBar: React.FC = () => {
+  return (
+    <AppBar position="static" color="default" elevation={1}>
+      <Toolbar sx={{ position: 'relative' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', zIndex: 2 }}>
+          <Link
+            to={'/stat_keeper'}
+            style={{
+              fontSize: '0.9em',
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
+          </Link>
+        </Box>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: '1.5em',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            textAlign: 'center',
+            zIndex: 1,
+          }}
+        >
+          New Game
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+// Component for league info and week selector
+const LeagueInfoSection: React.FC<{
+  loadingLeague: boolean;
+  errorLeague: string | null;
+  currentLeague: CurrentLeague | null;
+  week: number;
+  setWeek: (week: number) => void;
+}> = ({ loadingLeague, errorLeague, currentLeague, week, setWeek }) => {
+  return (
+    <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {loadingLeague ? (
+          <Typography>Loading current league...</Typography>
+        ) : errorLeague ? (
+          <Typography color="error">{errorLeague}</Typography>
+        ) : currentLeague ? (
+          <Typography variant="h6">League: {currentLeague.league.name}</Typography>
+        ) : (
+          <Typography color="error">No league data available</Typography>
+        )}
+
+        <TextField
+          id="week-select"
+          label="Week"
+          type="number"
+          value={week}
+          onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
+          inputProps={{ min: 1 }}
+          sx={{ width: '120px' }}
+        />
+      </Box>
+    </Paper>
+  );
+};
+
+// Component for team selection section
+const TeamSelectionSection: React.FC<{
+  homeTeamIdStr: string;
+  setHomeTeamIdStr: (id: string) => void;
+  awayTeamIdStr: string;
+  setAwayTeamIdStr: (id: string) => void;
+  availableHomeTeams: any[];
+  availableAwayTeams: any[];
+  selectedHomeTeamObj: any;
+  selectedAwayTeamObj: any;
+}> = ({
+  homeTeamIdStr,
+  setHomeTeamIdStr,
+  awayTeamIdStr,
+  setAwayTeamIdStr,
+  availableHomeTeams,
+  availableAwayTeams,
+  selectedHomeTeamObj,
+  selectedAwayTeamObj,
+}) => {
+  return (
+    <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
+      <Box sx={{ display: 'flex', gap: 2 }}>
+        <TeamPicker
+          label="Home"
+          teamIdStr={homeTeamIdStr}
+          setTeamIdStr={setHomeTeamIdStr}
+          availableTeams={availableHomeTeams}
+          selectedTeamObj={selectedHomeTeamObj}
+          disabled={availableHomeTeams.length === 0 && !homeTeamIdStr}
+        />
+
+        <TeamPicker
+          label="Away"
+          teamIdStr={awayTeamIdStr}
+          setTeamIdStr={setAwayTeamIdStr}
+          availableTeams={availableAwayTeams}
+          selectedTeamObj={selectedAwayTeamObj}
+          disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
+        />
+      </Box>
+    </Paper>
+  );
+};
+
+// Component for roster editing section
+const RosterEditingSection: React.FC<{
+  selectedHomeTeamObj: any;
+  selectedAwayTeamObj: any;
+  homeRosterNames: string[];
+  awayRosterNames: string[];
+  sortAndSetHomeRoster: (roster: string[]) => void;
+  sortAndSetAwayRoster: (roster: string[]) => void;
+  allLeaguePlayers: any[];
+}> = ({
+  selectedHomeTeamObj,
+  selectedAwayTeamObj,
+  homeRosterNames,
+  awayRosterNames,
+  sortAndSetHomeRoster,
+  sortAndSetAwayRoster,
+  allLeaguePlayers,
+}) => {
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        gap: 2,
+        flexGrow: 1,
+        overflow: 'hidden',
+      }}
+    >
+      {/* Home Roster Column */}
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        {selectedHomeTeamObj ? (
+          <EditRoster
+            teamName={selectedHomeTeamObj.name}
+            allLeaguePlayers={allLeaguePlayers}
+            currentRosterNames={homeRosterNames}
+            onRosterChange={sortAndSetHomeRoster}
+          />
+        ) : (
+          <EmptyRosterPlaceholder teamType="Home" />
+        )}
+      </Box>
+
+      {/* Away Roster Column */}
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        {selectedAwayTeamObj ? (
+          <EditRoster
+            teamName={selectedAwayTeamObj.name}
+            allLeaguePlayers={allLeaguePlayers}
+            currentRosterNames={awayRosterNames}
+            onRosterChange={sortAndSetAwayRoster}
+          />
+        ) : (
+          <EmptyRosterPlaceholder teamType="Away" />
+        )}
+      </Box>
+    </Box>
+  );
+};
+
+// Component for the bottom action bar
+const ActionBar: React.FC<{
+  handleCreateGame: () => Promise<void>;
+  homeRosterNames: string[];
+  awayRosterNames: string[];
+}> = ({ handleCreateGame, homeRosterNames, awayRosterNames }) => {
+  return (
+    <Box
+      sx={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: ACTION_BAR_HEIGHT,
+        p: '10px 15px',
+        backgroundColor: 'white',
+        borderTop: '1px solid #ccc',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxSizing: 'border-box',
+        zIndex: 100,
+      }}
+    >
+      <Button
+        onClick={handleCreateGame}
+        variant="contained"
+        color="success"
+        disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+        sx={{ fontSize: '1em', px: 3 }}
+      >
+        Start
+      </Button>
+    </Box>
+  );
+};
+
+// Helper function to sort roster names
+const sortRoster = (roster: string[]): string[] => {
+  return [...roster].sort((a, b) => a.localeCompare(b));
+};
+
+// Helper function to create initial game data
+const createInitialGameData = (
+  currentLeague: CurrentLeague,
+  week: number,
+  selectedHomeTeamObj: any,
+  selectedAwayTeamObj: any,
+  homeRosterNames: string[],
+  awayRosterNames: string[]
+): Omit<StoredGame, 'localId'> => {
+  const sortedHomeRoster = sortRoster(homeRosterNames);
+  const sortedAwayRoster = sortRoster(awayRosterNames);
+
+  const initialBookkeeperState: BookkeeperVolatileState = {
+    activePoint: null,
+    firstActor: null,
+    homePossession: true,
+    pointsAtHalf: 0,
+    homePlayers: null,
+    awayPlayers: null,
+    homeScore: 0,
+    awayScore: 0,
+    homeParticipants: sortedHomeRoster,
+    awayParticipants: sortedAwayRoster,
+  };
+
+  return {
+    league_id: currentLeague.league.id,
+    week: week,
+    homeTeam: selectedHomeTeamObj.name,
+    homeTeamId: selectedHomeTeamObj.id,
+    homeScore: 0,
+    homeRoster: sortedHomeRoster,
+    awayTeam: selectedAwayTeamObj.name,
+    awayTeamId: selectedAwayTeamObj.id,
+    awayScore: 0,
+    awayRoster: sortedAwayRoster,
+    points: [],
+    status: 'new',
+    lastModified: new Date(),
+    bookkeeperState: initialBookkeeperState,
+    mementos: [],
+  };
+};
 
 function NewGame() {
   const navigate = useNavigate();
@@ -51,11 +382,11 @@ function NewGame() {
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
   const sortAndSetHomeRoster = (roster: string[]) => {
-    setHomeRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+    setHomeRosterNames(sortRoster(roster));
   };
 
   const sortAndSetAwayRoster = (roster: string[]) => {
-    setAwayRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+    setAwayRosterNames(sortRoster(roster));
   };
 
   useEffect(() => {
@@ -109,38 +440,14 @@ function NewGame() {
 
     // ToDo this should move to a bookeeper new method
     // also this code here highlights the overlap and duplication that remains between game and bookeeper state
-    const initialBookkeeperState: BookkeeperVolatileState = {
-      activePoint: null,
-      firstActor: null,
-      homePossession: true,
-      pointsAtHalf: 0,
-      homePlayers: null,
-      awayPlayers: null,
-      homeScore: 0,
-      awayScore: 0,
-      homeParticipants: [...homeRosterNames].sort((a, b) => a.localeCompare(b)),
-      awayParticipants: [...awayRosterNames].sort((a, b) => a.localeCompare(b)),
-    };
-
-    const initialMementos: SerializedMemento[] = [];
-
-    const newGameData: Omit<StoredGame, 'localId'> = {
-      league_id: currentLeague.league.id,
-      week: week,
-      homeTeam: selectedHomeTeamObj.name,
-      homeTeamId: selectedHomeTeamObj.id,
-      homeScore: 0,
-      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)),
-      awayTeam: selectedAwayTeamObj.name,
-      awayTeamId: selectedAwayTeamObj.id,
-      awayScore: 0,
-      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)),
-      points: [],
-      status: 'new',
-      lastModified: new Date(),
-      bookkeeperState: initialBookkeeperState,
-      mementos: initialMementos,
-    };
+    const newGameData = createInitialGameData(
+      currentLeague,
+      week,
+      selectedHomeTeamObj,
+      selectedAwayTeamObj,
+      homeRosterNames,
+      awayRosterNames
+    );
 
     try {
       const id = await db.games.add(newGameData as StoredGame);
@@ -157,38 +464,7 @@ function NewGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar with AppBar */}
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ position: 'relative' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', zIndex: 2 }}>
-            <Link
-              to={'/stat_keeper'}
-              style={{
-                fontSize: '0.9em',
-                textDecoration: 'none',
-                color: 'inherit',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
-            </Link>
-          </Box>
-          <Typography
-            variant="h5"
-            sx={{
-              fontSize: '1.5em',
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              textAlign: 'center',
-              zIndex: 1,
-            }}
-          >
-            New Game
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <TopBar />
 
       <Box
         sx={{
@@ -200,30 +476,13 @@ function NewGame() {
           pb: `calc(${ACTION_BAR_HEIGHT} + 16px)`,
         }}
       >
-        {/* Section 1: League Info and Week Selector */}
-        <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            {loadingLeague ? (
-              <Typography>Loading current league...</Typography>
-            ) : errorLeague ? (
-              <Typography color="error">{errorLeague}</Typography>
-            ) : currentLeague ? (
-              <Typography variant="h6">League: {currentLeague.league.name}</Typography>
-            ) : (
-              <Typography color="error">No league data available</Typography>
-            )}
-
-            <TextField
-              id="week-select"
-              label="Week"
-              type="number"
-              value={week}
-              onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
-              inputProps={{ min: 1 }}
-              sx={{ width: '120px' }}
-            />
-          </Box>
-        </Paper>
+        <LeagueInfoSection
+          loadingLeague={loadingLeague}
+          errorLeague={errorLeague}
+          currentLeague={currentLeague}
+          week={week}
+          setWeek={setWeek}
+        />
 
         {/* Loading/Error Messages */}
         {loadingTeams && <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>}
@@ -243,138 +502,26 @@ function NewGame() {
               overflow: 'hidden',
             }}
           >
-            {/* Team Selection Dropdowns */}
-            <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
-              <Box sx={{ display: 'flex', gap: 2 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="home-team-select-label">Home Team</InputLabel>
-                  <Select
-                    labelId="home-team-select-label"
-                    id="home-team-select"
-                    value={homeTeamIdStr}
-                    onChange={e => setHomeTeamIdStr(e.target.value)}
-                    label="Home Team"
-                    disabled={availableHomeTeams.length === 0 && !homeTeamIdStr}
-                  >
-                    <MenuItem value="">Select Home Team</MenuItem>
-                    {availableHomeTeams.map(team => (
-                      <MenuItem key={team.id} value={team.id.toString()}>
-                        {team.name}
-                      </MenuItem>
-                    ))}
-                    {homeTeamIdStr &&
-                      !availableHomeTeams.find(t => t.id.toString() === homeTeamIdStr) &&
-                      selectedHomeTeamObj && (
-                        <MenuItem
-                          key={selectedHomeTeamObj.id}
-                          value={selectedHomeTeamObj.id.toString()}
-                        >
-                          {selectedHomeTeamObj.name}
-                        </MenuItem>
-                      )}
-                  </Select>
-                </FormControl>
+            <TeamSelectionSection
+              homeTeamIdStr={homeTeamIdStr}
+              setHomeTeamIdStr={setHomeTeamIdStr}
+              awayTeamIdStr={awayTeamIdStr}
+              setAwayTeamIdStr={setAwayTeamIdStr}
+              availableHomeTeams={availableHomeTeams}
+              availableAwayTeams={availableAwayTeams}
+              selectedHomeTeamObj={selectedHomeTeamObj}
+              selectedAwayTeamObj={selectedAwayTeamObj}
+            />
 
-                <FormControl fullWidth>
-                  <InputLabel id="away-team-select-label">Away Team</InputLabel>
-                  <Select
-                    labelId="away-team-select-label"
-                    id="away-team-select"
-                    value={awayTeamIdStr}
-                    onChange={e => setAwayTeamIdStr(e.target.value)}
-                    label="Away Team"
-                    disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
-                  >
-                    <MenuItem value="">Select Away Team</MenuItem>
-                    {availableAwayTeams.map(team => (
-                      <MenuItem key={team.id} value={team.id.toString()}>
-                        {team.name}
-                      </MenuItem>
-                    ))}
-                    {awayTeamIdStr &&
-                      !availableAwayTeams.find(t => t.id.toString() === awayTeamIdStr) &&
-                      selectedAwayTeamObj && (
-                        <MenuItem
-                          key={selectedAwayTeamObj.id}
-                          value={selectedAwayTeamObj.id.toString()}
-                        >
-                          {selectedAwayTeamObj.name}
-                        </MenuItem>
-                      )}
-                  </Select>
-                </FormControl>
-              </Box>
-            </Paper>
-
-            {/* Roster Editing Columns */}
-            <Box
-              sx={{
-                display: 'flex',
-                gap: 2,
-                flexGrow: 1,
-                overflow: 'hidden',
-              }}
-            >
-              {/* Home Roster Column */}
-              <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                {selectedHomeTeamObj ? (
-                  <EditRoster
-                    teamName={selectedHomeTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers}
-                    currentRosterNames={homeRosterNames}
-                    onRosterChange={sortAndSetHomeRoster}
-                  />
-                ) : (
-                  <Paper
-                    elevation={1}
-                    sx={{
-                      p: 3,
-                      textAlign: 'center',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      bgcolor: '#f9f9f9',
-                      borderRadius: 1,
-                      border: '1px dashed #ccc',
-                    }}
-                  >
-                    <Typography color="text.secondary">Select Home Team to edit roster.</Typography>
-                  </Paper>
-                )}
-              </Box>
-
-              {/* Away Roster Column */}
-              <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                {selectedAwayTeamObj ? (
-                  <EditRoster
-                    teamName={selectedAwayTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers}
-                    currentRosterNames={awayRosterNames}
-                    onRosterChange={sortAndSetAwayRoster}
-                  />
-                ) : (
-                  <Paper
-                    elevation={1}
-                    sx={{
-                      p: 3,
-                      textAlign: 'center',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      bgcolor: '#f9f9f9',
-                      borderRadius: 1,
-                      border: '1px dashed #ccc',
-                    }}
-                  >
-                    <Typography color="text.secondary">Select Away Team to edit roster.</Typography>
-                  </Paper>
-                )}
-              </Box>
-            </Box>
+            <RosterEditingSection
+              selectedHomeTeamObj={selectedHomeTeamObj}
+              selectedAwayTeamObj={selectedAwayTeamObj}
+              homeRosterNames={homeRosterNames}
+              awayRosterNames={awayRosterNames}
+              sortAndSetHomeRoster={sortAndSetHomeRoster}
+              sortAndSetAwayRoster={sortAndSetAwayRoster}
+              allLeaguePlayers={allLeaguePlayers}
+            />
           </Box>
         )}
 
@@ -392,33 +539,11 @@ function NewGame() {
         leagueTeams.length > 0 &&
         selectedHomeTeamObj &&
         selectedAwayTeamObj && (
-          <Box
-            sx={{
-              position: 'fixed',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: ACTION_BAR_HEIGHT,
-              p: '10px 15px',
-              backgroundColor: 'white',
-              borderTop: '1px solid #ccc',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxSizing: 'border-box',
-              zIndex: 100,
-            }}
-          >
-            <Button
-              onClick={handleCreateGame}
-              variant="contained"
-              color="success"
-              disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
-              sx={{ fontSize: '1em', px: 3 }}
-            >
-              Start
-            </Button>
-          </Box>
+          <ActionBar
+            handleCreateGame={handleCreateGame}
+            homeRosterNames={homeRosterNames}
+            awayRosterNames={awayRosterNames}
+          />
         )}
     </Box>
   );
