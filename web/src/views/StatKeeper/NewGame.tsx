@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { db, StoredGame } from './db';
 import { useTeams, useFullscreen } from './hooks';
-import { BookkeeperVolatileState, SerializedMemento } from './models';
 import { Bookkeeper } from './bookkeeper';
 import {
   AppBar,
@@ -40,7 +38,6 @@ interface TeamPickerProps {
 }
 
 
-// Component for team selection dropdown
 const TeamPicker: React.FC<TeamPickerProps> = ({
   label,
   teamIdStr,
@@ -78,7 +75,6 @@ const TeamPicker: React.FC<TeamPickerProps> = ({
   );
 };
 
-// Component for empty roster placeholder
 const EmptyRosterPlaceholder: React.FC<{ teamType: string }> = ({ teamType }) => {
   return (
     <Paper
@@ -101,7 +97,6 @@ const EmptyRosterPlaceholder: React.FC<{ teamType: string }> = ({ teamType }) =>
   );
 };
 
-// Component for the top navigation bar
 const TopBar: React.FC = () => {
   return (
     <AppBar position="static" color="default" elevation={1}>
@@ -138,8 +133,7 @@ const TopBar: React.FC = () => {
   );
 };
 
-// Component for league info and week selector
-const LeagueInfoSection: React.FC<{
+const LeagueInfo: React.FC<{
   loadingLeague: boolean;
   errorLeague: string | null;
   currentLeague: CurrentLeague | null;
@@ -173,8 +167,7 @@ const LeagueInfoSection: React.FC<{
   );
 };
 
-// Component for team selection section
-const TeamSelectionSection: React.FC<{
+const TeamSelection: React.FC<{
   homeTeamIdStr: string;
   setHomeTeamIdStr: (id: string) => void;
   awayTeamIdStr: string;
@@ -218,8 +211,7 @@ const TeamSelectionSection: React.FC<{
   );
 };
 
-// Component for roster editing section
-const RosterEditingSection: React.FC<{
+const RosterEditing: React.FC<{
   selectedHomeTeamObj: any;
   selectedAwayTeamObj: any;
   homeRosterNames: string[];
@@ -276,7 +268,6 @@ const RosterEditingSection: React.FC<{
   );
 };
 
-// Component for the bottom action bar
 const ActionBar: React.FC<{
   handleCreateGame: () => Promise<void>;
   homeRosterNames: string[];
@@ -313,11 +304,9 @@ const ActionBar: React.FC<{
   );
 };
 
-// Helper function to sort roster names
 const sortRoster = (roster: string[]): string[] => {
   return [...roster].sort((a, b) => a.localeCompare(b));
 };
-
 
 function NewGame() {
   const navigate = useNavigate();
@@ -331,9 +320,9 @@ function NewGame() {
     currentLeague?.league?.id.toString()
   );
 
+  const [week, setWeek] = useState<number>(1);
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
-  const [week, setWeek] = useState<number>(1);
   const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
   const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
 
@@ -428,7 +417,7 @@ function NewGame() {
           pb: '86px', // 70px for action bar + 16px padding
         }}
       >
-        <LeagueInfoSection
+        <LeagueInfo
           loadingLeague={loadingLeague}
           errorLeague={errorLeague}
           currentLeague={currentLeague}
@@ -444,7 +433,7 @@ function NewGame() {
           </Typography>
         )}
 
-        {/* Section 2: Team Selectors and Roster Editors */}
+        {/* Team Selectors and Roster Editors */}
         {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
           <Box
             sx={{
@@ -454,7 +443,7 @@ function NewGame() {
               overflow: 'hidden',
             }}
           >
-            <TeamSelectionSection
+            <TeamSelection
               homeTeamIdStr={homeTeamIdStr}
               setHomeTeamIdStr={setHomeTeamIdStr}
               awayTeamIdStr={awayTeamIdStr}
@@ -465,7 +454,7 @@ function NewGame() {
               selectedAwayTeamObj={selectedAwayTeamObj}
             />
 
-            <RosterEditingSection
+            <RosterEditing
               selectedHomeTeamObj={selectedHomeTeamObj}
               selectedAwayTeamObj={selectedAwayTeamObj}
               homeRosterNames={homeRosterNames}
