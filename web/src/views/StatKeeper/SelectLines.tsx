@@ -10,7 +10,9 @@ interface SelectLinesProps {
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }) => {
+  // this whole state can always be inferred by checking if the active point is not done
   const isResumingPointMode = bookkeeper.getIsResumingPointMode();
+
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
 
   // Memoize rosters to prevent infinite re-renders
@@ -24,6 +26,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
   useEffect(() => {
     if (isResumingPointMode) {
       // When resuming/changing lines mid-point, use the preserved line data
+      // awkward wording. this is current line when changing mid point
+      // but maybe I am not re-using the components properly for SelectLines and ChangeLines
       if (lastPlayedLine) {
         setSelectedHomePlayers(lastPlayedLine.home || []);
         setSelectedAwayPlayers(lastPlayedLine.away || []);
