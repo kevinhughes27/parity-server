@@ -73,10 +73,21 @@ function StatKeeper() {
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
 
-  // Component to render game metadata
-  const GameMetadata = ({ game }: { game: StoredGame }) => {
-    return (
-      <>
+  // Component to render a single game card
+  const renderGameCard = (game: StoredGame, actionButton: React.ReactNode) => (
+    <Card
+      key={game.localId}
+      sx={{
+        mb: 2,
+        boxShadow: 2,
+        position: 'relative',
+      }}
+    >
+      <CardContent>
+        <Typography variant="h6" component="div">
+          {game.homeTeam} vs {game.awayTeam}
+        </Typography>
+
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
           <Typography variant="body2" color="text.secondary">
             <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
@@ -98,26 +109,6 @@ function StatKeeper() {
         <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
           <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
         </Typography>
-      </>
-    );
-  };
-
-  // Component to render a single game card
-  const renderGameCard = (game: StoredGame, actionButton: React.ReactNode) => (
-    <Card
-      key={game.localId}
-      sx={{
-        mb: 2,
-        boxShadow: 2,
-        position: 'relative',
-      }}
-    >
-      <CardContent>
-        <Typography variant="h6" component="div">
-          {game.homeTeam} vs {game.awayTeam}
-        </Typography>
-
-        <GameMetadata game={game} />
       </CardContent>
 
       <CardActions>
