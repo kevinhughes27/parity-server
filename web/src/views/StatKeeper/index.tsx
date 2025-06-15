@@ -154,7 +154,7 @@ function StatKeeper() {
           In Progress
         </Typography>
         <Box>
-          {games.map(game => 
+          {games.map(game =>
             renderGameCard(
               game,
               game.localId && (
@@ -185,7 +185,7 @@ function StatKeeper() {
           Local Games
         </Typography>
         <Box>
-          {games.map(game => 
+          {games.map(game =>
             renderGameCard(
               game,
               game.localId && (
