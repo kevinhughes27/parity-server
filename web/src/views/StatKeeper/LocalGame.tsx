@@ -10,6 +10,25 @@ import GameActionsMenu from './GameActionsMenu';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
+function LoadingState() {
+  return (
+    <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
+      <p>Loading game data...</p>
+    </div>
+  );
+}
+
+function ErrorState({ errorMessage }: { errorMessage: string }) {
+  return (
+    <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
+      <p style={{ color: 'red' }}>Error: {errorMessage}</p>
+      <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
+        <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
+      </Link>
+    </div>
+  );
+}
+
 function LocalGame() {
   const navigate = useNavigate();
   const { localGameId } = useParams<{ localGameId: string }>();
@@ -18,23 +37,11 @@ function LocalGame() {
   useFullscreen();
 
   if (!bookkeeper) {
-    return (
-      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p>Loading game data...</p>
-      </div>
-    );
+    return <LoadingState />;
   }
 
-  // what is getError?
   if (bookkeeper.getError()) {
-    return (
-      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p style={{ color: 'red' }}>Error: {bookkeeper.getError()}</p>
-        <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
-          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
-        </Link>
-      </div>
-    );
+    return <ErrorState errorMessage={bookkeeper.getError()} />;
   }
 
   const currentView = bookkeeper.getCurrentView();
@@ -93,60 +100,92 @@ function LocalGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar with AppBar */}
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Link
-            to="/stat_keeper"
-            style={{
-              fontSize: '0.9em',
-              textDecoration: 'none',
-              color: 'inherit',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
-          </Link>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <GameActionsMenu
-              numericGameId={parseInt(localGameId!)}
-              gameStatus={bookkeeper.getGameStatus()}
-              isHalfRecorded={isHalfRecorded}
-              onRecordHalf={handleRecordHalf}
-              onSubmitGame={handleSubmitGame}
-              onChangeLine={handleChangeLine}
-            />
-          </Box>
-        </Toolbar>
-        <Box sx={{ textAlign: 'center', pb: 1 }}>
-          <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-            {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
-          </Typography>
-          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-            <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
-          </Typography>
+      <TopBar 
+        bookkeeper={bookkeeper}
+        localGameId={localGameId}
+        isHalfRecorded={isHalfRecorded}
+        onRecordHalf={handleRecordHalf}
+        onSubmitGame={handleSubmitGame}
+        onChangeLine={handleChangeLine}
+      />
+      <MainContent 
+        bookkeeper={bookkeeper} 
+        currentView={currentView} 
+      />
+    </Box>
+  );
+}
+
+function TopBar({ 
+  bookkeeper, 
+  localGameId, 
+  isHalfRecorded, 
+  onRecordHalf, 
+  onSubmitGame, 
+  onChangeLine 
+}: { 
+  bookkeeper: any; 
+  localGameId: string; 
+  isHalfRecorded: boolean; 
+  onRecordHalf: () => Promise<void>; 
+  onSubmitGame: () => Promise<void>; 
+  onChangeLine: () => Promise<void>; 
+}) {
+  return (
+    <AppBar position="static" color="default" elevation={1}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Link
+          to="/stat_keeper"
+          style={{
+            fontSize: '0.9em',
+            textDecoration: 'none',
+            color: 'inherit',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
+        </Link>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <GameActionsMenu
+            numericGameId={parseInt(localGameId)}
+            gameStatus={bookkeeper.getGameStatus()}
+            isHalfRecorded={isHalfRecorded}
+            onRecordHalf={onRecordHalf}
+            onSubmitGame={onSubmitGame}
+            onChangeLine={onChangeLine}
+          />
         </Box>
-      </AppBar>
-
-      {/* Main Content Area (Scrollable) */}
-      <Box
-        sx={{
-          flexGrow: 1,
-          overflowY: 'auto',
-          pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
-          position: 'relative',
-        }}
-      >
-        {currentView === 'selectLines' && (
-          <SelectLines bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
-        )}
-
-        {currentView === 'recordStats' && (
-          <RecordStats bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
-        )}
+      </Toolbar>
+      <Box sx={{ textAlign: 'center', pb: 1 }}>
+        <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
+          {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
+        </Typography>
+        <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
+          <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
+        </Typography>
       </Box>
-      {/* The fixed action bar is now rendered by SelectLines/RecordStats */}
+    </AppBar>
+  );
+}
+
+function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView: string }) {
+  return (
+    <Box
+      sx={{
+        flexGrow: 1,
+        overflowY: 'auto',
+        pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
+        position: 'relative',
+      }}
+    >
+      {currentView === 'selectLines' && (
+        <SelectLines bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+      )}
+
+      {currentView === 'recordStats' && (
+        <RecordStats bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+      )}
     </Box>
   );
 }
