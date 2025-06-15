@@ -38,8 +38,6 @@ interface TeamPickerProps {
   disabled: boolean;
 }
 
-// ToDo - can this be moved inside the Actionbar? feels like it should be
-const ACTION_BAR_HEIGHT = '70px';
 
 // Component for team selection dropdown
 const TeamPicker: React.FC<TeamPickerProps> = ({
@@ -290,7 +288,7 @@ const ActionBar: React.FC<{
         bottom: 0,
         left: 0,
         right: 0,
-        height: ACTION_BAR_HEIGHT,
+        height: '70px',
         p: '10px 15px',
         backgroundColor: 'white',
         borderTop: '1px solid #ccc',
@@ -473,7 +471,7 @@ function NewGame() {
           flexDirection: 'column',
           overflowY: 'auto',
           p: 2,
-          pb: `calc(${ACTION_BAR_HEIGHT} + 16px)`,
+          pb: '86px', // 70px for action bar + 16px padding
         }}
       >
         <LeagueInfoSection
