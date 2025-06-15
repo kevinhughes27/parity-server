@@ -394,33 +394,15 @@ function NewGame() {
       return;
     }
 
-    const newGameData = Bookkeeper.newGame(
-      currentLeague,
-      week,
-      selectedHomeTeamObj,
-      selectedAwayTeamObj,
-      homeRosterNames,
-      awayRosterNames
-    );
-
     try {
-      const id = await db.games.add({
-        league_id: newGameData.league_id,
-        week: newGameData.week,
-        homeTeam: newGameData.homeTeamName,
-        homeTeamId: newGameData.homeTeamId,
-        homeScore: 0,
-        homeRoster: [...newGameData.bookkeeperState.homeParticipants],
-        awayTeam: newGameData.awayTeamName,
-        awayTeamId: newGameData.awayTeamId,
-        awayScore: 0,
-        awayRoster: [...newGameData.bookkeeperState.awayParticipants],
-        points: [],
-        status: 'new',
-        lastModified: new Date(),
-        bookkeeperState: newGameData.bookkeeperState,
-        mementos: newGameData.mementos,
-      } as StoredGame);
+      const id = await Bookkeeper.newGame(
+        currentLeague,
+        week,
+        selectedHomeTeamObj,
+        selectedAwayTeamObj,
+        homeRosterNames,
+        awayRosterNames
+      );
       console.log(`New game added with localId: ${id}`);
       navigate(`/stat_keeper/game/${id}`);
     } catch (error) {
