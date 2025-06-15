@@ -1068,6 +1068,44 @@ export class Bookkeeper {
     this.notifyListeners();
   }
 
+  // Static method to create a new game
+  public static newGame(
+    currentLeague: { league: { id: string; name: string; lineSize: number } },
+    week: number,
+    homeTeam: { id: number; name: string },
+    awayTeam: { id: number; name: string },
+    homeRoster: string[],
+    awayRoster: string[]
+  ): SerializedGameData {
+    const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
+    const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
+
+    const initialBookkeeperState: BookkeeperVolatileState = {
+      activePoint: null,
+      firstActor: null,
+      homePossession: true,
+      pointsAtHalf: 0,
+      homePlayers: null,
+      awayPlayers: null,
+      homeScore: 0,
+      awayScore: 0,
+      homeParticipants: sortedHomeRoster,
+      awayParticipants: sortedAwayRoster,
+    };
+
+    return {
+      league_id: currentLeague.league.id,
+      week: week,
+      homeTeamName: homeTeam.name,
+      homeTeamId: homeTeam.id,
+      awayTeamName: awayTeam.name,
+      awayTeamId: awayTeam.id,
+      game: { points: [] },
+      bookkeeperState: initialBookkeeperState,
+      mementos: [],
+    };
+  }
+
   // Getter for tests
   public getMementosCount(): number {
     return this.mementos.length;
