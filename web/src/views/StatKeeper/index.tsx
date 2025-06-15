@@ -72,47 +72,6 @@ function StatKeeper() {
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
-  // Component to render game action buttons
-  const GameActions = ({ game }: { game: StoredGame }) => {
-    return (
-      <CardActions>
-        {(game.status === 'new' ||
-          game.status === 'in-progress') &&
-          game.localId && (
-            <Button
-              size="small"
-              variant="contained"
-              color="primary"
-              component={Link}
-              to={`/stat_keeper/game/${game.localId}`}
-            >
-              Resume Game
-            </Button>
-          )}
-        {(game.status === 'submitted' ||
-          game.status === 'uploaded' ||
-          game.status === 'sync-error') &&
-          game.localId && (
-            <Button
-              size="small"
-              variant="outlined"
-              component={Link}
-              to={`/stat_keeper/view_game/${game.localId}`}
-            >
-              View Game
-            </Button>
-          )}
-        <Button
-          size="small"
-          variant="outlined"
-          color="error"
-          onClick={() => handleDeleteGame(game.localId)}
-        >
-          Delete
-        </Button>
-      </CardActions>
-    );
-  };
 
   // Component to render game metadata
   const GameMetadata = ({ game }: { game: StoredGame }) => {
@@ -144,7 +103,7 @@ function StatKeeper() {
   };
 
   // Component to render a single game card
-  const renderGameItem = (game: StoredGame) => (
+  const renderGameCard = (game: StoredGame, actionButton: React.ReactNode) => (
     <Card
       key={game.localId}
       sx={{
@@ -161,7 +120,17 @@ function StatKeeper() {
         <GameMetadata game={game} />
       </CardContent>
 
-      <GameActions game={game} />
+      <CardActions>
+        {actionButton}
+        <Button
+          size="small"
+          variant="outlined"
+          color="error"
+          onClick={() => handleDeleteGame(game.localId)}
+        >
+          Delete
+        </Button>
+      </CardActions>
     </Card>
   );
 
@@ -184,16 +153,63 @@ function StatKeeper() {
     </AppBar>
   );
 
-  // Component to render a section of games
-  const GameSection = ({ title, games }: { title: string; games: StoredGame[] }) => {
+  // Component to render a section of in-progress games
+  const InProgressGamesSection = ({ games }: { games: StoredGame[] }) => {
     if (games.length === 0) return null;
 
     return (
       <>
         <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-          {title}
+          In Progress
         </Typography>
-        <Box>{games.map(renderGameItem)}</Box>
+        <Box>
+          {games.map(game => 
+            renderGameCard(
+              game,
+              game.localId && (
+                <Button
+                  size="small"
+                  variant="contained"
+                  color="primary"
+                  component={Link}
+                  to={`/stat_keeper/game/${game.localId}`}
+                >
+                  Resume Game
+                </Button>
+              )
+            )
+          )}
+        </Box>
+      </>
+    );
+  };
+
+  // Component to render a section of completed games
+  const CompletedGamesSection = ({ games }: { games: StoredGame[] }) => {
+    if (games.length === 0) return null;
+
+    return (
+      <>
+        <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
+          Local Games
+        </Typography>
+        <Box>
+          {games.map(game => 
+            renderGameCard(
+              game,
+              game.localId && (
+                <Button
+                  size="small"
+                  variant="outlined"
+                  component={Link}
+                  to={`/stat_keeper/view_game/${game.localId}`}
+                >
+                  View Game
+                </Button>
+              )
+            )
+          )}
+        </Box>
       </>
     );
   };
@@ -212,8 +228,8 @@ function StatKeeper() {
       <AppHeader />
 
       <Container sx={{ mt: 3 }}>
-        <GameSection title="In Progress" games={resumableGames} />
-        <GameSection title="Local Games" games={otherGames} />
+        <InProgressGamesSection games={resumableGames} />
+        <CompletedGamesSection games={otherGames} />
         {games.length === 0 && <EmptyState />}
       </Container>
     </Box>
