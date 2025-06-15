@@ -11,10 +11,10 @@ import GameActionsMenu from './GameActionsMenu';
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
 function LocalGame() {
-  const { localGameId } = useParams<{ localGameId: string }>();
   const navigate = useNavigate();
+  const { localGameId } = useParams<{ localGameId: string }>();
   const bookkeeper = useBookkeeper(localGameId!);
-  
+
   useFullscreen();
 
   if (!bookkeeper) {
@@ -54,25 +54,32 @@ function LocalGame() {
       alert('Game submitted and uploaded successfully!');
       navigate('/stat_keeper');
     } catch (error) {
-      alert(`An error occurred during game submission: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      alert(
+        `An error occurred during game submission: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
       console.error('Submission error:', error);
     }
   };
 
   const handleChangeLine = async () => {
+    // no-op if already selecting lines
+    if (currentView == 'selectLines') {
+      return;
+    }
+
     // Preserve current line before clearing it
     const currentLine = {
       home: [...(bookkeeper.homePlayers || [])],
-      away: [...(bookkeeper.awayPlayers || [])]
+      away: [...(bookkeeper.awayPlayers || [])],
     };
-    
+
     // Set the resuming mode and preserved line BEFORE clearing players
     bookkeeper.setIsResumingPointMode(true);
     bookkeeper.setLastPlayedLine(currentLine);
-    
+
     // Force transition to selectLines view even with an active point
     await bookkeeper.performAction(
-      (bk) => {
+      bk => {
         // Clear the current line selection to allow re-selection
         bk.homePlayers = null;
         bk.awayPlayers = null;
@@ -106,7 +113,6 @@ function LocalGame() {
               onRecordHalf={handleRecordHalf}
               onSubmitGame={handleSubmitGame}
               onChangeLine={handleChangeLine}
-              showChangeLineOption={currentView === 'recordStats'}
             />
           </Box>
         </Toolbar>
@@ -130,17 +136,11 @@ function LocalGame() {
         }}
       >
         {currentView === 'selectLines' && (
-          <SelectLines
-            bookkeeper={bookkeeper}
-            actionBarHeight={ACTION_BAR_HEIGHT}
-          />
+          <SelectLines bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
         )}
 
         {currentView === 'recordStats' && (
-          <RecordStats
-            bookkeeper={bookkeeper}
-            actionBarHeight={ACTION_BAR_HEIGHT}
-          />
+          <RecordStats bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
         )}
       </Box>
       {/* The fixed action bar is now rendered by SelectLines/RecordStats */}

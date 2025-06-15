@@ -1,3 +1,5 @@
+import { type PointEvent as ApiPointEvent } from '../../api';
+
 // Enums
 export enum EventType {
   PULL = 'PULL',
@@ -38,7 +40,7 @@ export enum MementoType {
 export interface League {
   id: string;
   name: string;
-  lineSize: number; // Added lineSize
+  lineSize: number;
 }
 
 export interface Team {
@@ -49,13 +51,38 @@ export interface Team {
 export interface Event {
   type: EventType;
   firstActor: string;
-  secondActor?: string | null;
+  secondActor: string | null;
   timestamp: string; // ISO 8601 format
+}
+
+export function mapApiEventToEvent(apiEvent: ApiPointEvent): Event {
+  const eventTypeString = apiEvent.type.toUpperCase();
+  const eventType = EventType[eventTypeString as keyof typeof EventType];
+
+  if (!eventType) {
+    throw new Error(`Unknown API event type string encountered: ${apiEvent.type}`);
+  }
+
+  return {
+    type: eventType,
+    firstActor: apiEvent.firstActor,
+    secondActor: apiEvent.secondActor,
+    timestamp: apiEvent.timestamp,
+  };
+}
+
+export function mapEventToApiEvent(event: Event): ApiPointEvent {
+  return {
+    type: event.type.toString(), // Converts enum to string e.g. EventType.PASS -> "PASS"
+    firstActor: event.firstActor,
+    secondActor: event.secondActor,
+    timestamp: event.timestamp,
+  };
 }
 
 export interface SerializedMemento {
   type: MementoType;
-  data: any; // Specific data captured by the memento
+  data: any; // specific data captured by the memento
 }
 
 // Model Classes
@@ -64,6 +91,8 @@ export class PointModel {
   defensePlayers: string[];
   events: Event[];
   // Track all players who participated in this point for stats purposes
+  // TODO to the point event should be able to store the full list.
+  // the active line state is elsewhere
   allOffensePlayers: Set<string>;
   allDefensePlayers: Set<string>;
 
@@ -103,7 +132,10 @@ export class PointModel {
   swapOffenseAndDefense(): void {
     [this.offensePlayers, this.defensePlayers] = [this.defensePlayers, this.offensePlayers];
     // Also swap the all-players sets
-    [this.allOffensePlayers, this.allDefensePlayers] = [this.allDefensePlayers, this.allOffensePlayers];
+    [this.allOffensePlayers, this.allDefensePlayers] = [
+      this.allDefensePlayers,
+      this.allOffensePlayers,
+    ];
   }
 
   updateCurrentPlayers(newOffensePlayers: string[], newDefensePlayers: string[]): void {
@@ -143,9 +175,9 @@ export class PointModel {
     });
   }
 
-  toJSON(): { 
-    offensePlayers: string[]; 
-    defensePlayers: string[]; 
+  toJSON(): {
+    offensePlayers: string[];
+    defensePlayers: string[];
     events: Event[];
     allOffensePlayers?: string[];
     allDefensePlayers?: string[];
@@ -229,24 +261,24 @@ export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state'
 export interface ActionOptions {
   skipViewChange?: boolean;
   skipSave?: boolean;
-  newStatus?: 'new' | 'in-progress' | 'paused' | 'completed' | 'submitted' | 'sync-error' | 'uploaded';
+  newStatus?:
+    | 'new'
+    | 'in-progress'
+    | 'submitted'
+    | 'sync-error'
+    | 'uploaded';
 }
 
 export interface SerializedGameData {
-  // Game metadata from original Bookkeeper.serialize
   league_id: string;
   week: number;
   homeTeamName: string;
-  awayTeamName: string;
   homeTeamId: number;
+  awayTeamName: string;
   awayTeamId: number;
 
-  // Core game data (points)
   game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }> }; // Event.type is EventType enum
 
-  // Bookkeeper's volatile operational state
   bookkeeperState: BookkeeperVolatileState;
-
-  // Mementos for undo stack
   mementos: SerializedMemento[];
 }

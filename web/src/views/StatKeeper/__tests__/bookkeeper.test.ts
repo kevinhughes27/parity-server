@@ -8,9 +8,9 @@ import {
   Event,
   SerializedGameData,
   BookkeeperVolatileState,
-  SerializedMemento,
+  mapEventToApiEvent,
 } from '../models';
-import { Point as ApiPoint, PointEvent as ApiPointEvent } from '../../../api';
+import { Point as ApiPoint } from '../../../api';
 import { db, StoredGame } from '../db';
 
 // Mock the API leagues
@@ -25,7 +25,7 @@ vi.mock('../../../api', async () => {
         lineSize: 7,
       },
     ],
-    getLeagueName: (id: string) => id === '101' ? 'OCUA' : 'Unknown League',
+    getLeagueName: (id: string) => (id === '101' ? 'OCUA' : 'Unknown League'),
   };
 });
 
@@ -41,34 +41,6 @@ const mockWeek = 1;
 
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
 const awayLine = [PLAYER2, PLAYER4, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
-
-// Helper to map Model Event (enum type) to API PointEvent (string type) for storage
-function mapModelEventToApiPointEvent(modelEvent: Event): ApiPointEvent {
-  return {
-    type: modelEvent.type.toString(),
-    firstActor: modelEvent.firstActor,
-    secondActor: modelEvent.secondActor || '',
-    timestamp: modelEvent.timestamp,
-  };
-}
-
-// Helper to map API PointEvent (string type) to Model Event (enum type) for Bookkeeper
-function mapApiPointEventToModelEvent(apiEvent: ApiPointEvent): Event {
-  const eventTypeString = apiEvent.type.toUpperCase();
-  const eventType = EventType[eventTypeString as keyof typeof EventType];
-
-  if (!eventType) {
-    console.warn(`Unknown event type string during test hydration: ${apiEvent.type}`);
-    throw new Error(`Unknown event type string: ${apiEvent.type}`);
-  }
-
-  return {
-    type: eventType,
-    firstActor: apiEvent.firstActor,
-    secondActor: apiEvent.secondActor,
-    timestamp: apiEvent.timestamp,
-  };
-}
 
 // Helper to create initial SerializedGameData for a new game
 const createInitialGameData = (
@@ -231,7 +203,9 @@ describe('Bookkeeper', () => {
   test('testComplexScenario', async () => {
     const initialGameData = createInitialGameData(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
     bookkeeper = new Bookkeeper(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam, initialGameData);
-    await bookkeeper.performAction(bk => bk.recordActivePlayers(homeLine, awayLine), { skipSave: true });
+    await bookkeeper.performAction(bk => bk.recordActivePlayers(homeLine, awayLine), {
+      skipSave: true,
+    });
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.
     await bookkeeper.performAction(bk => bk.recordFirstActor(PLAYER2, false), { skipSave: true }); // isHomeTeamStartingWithDisc = false
@@ -331,7 +305,7 @@ describe('Bookkeeper', () => {
     const pointsForStorage: ApiPoint[] = serializedDataFromBk.game.points.map(modelPoint => ({
       offensePlayers: [...modelPoint.offensePlayers],
       defensePlayers: [...modelPoint.defensePlayers],
-      events: modelPoint.events.map(mapModelEventToApiPointEvent),
+      events: modelPoint.events.map(mapEventToApiEvent),
     }));
 
     // Transform activePoint for storage
@@ -340,9 +314,7 @@ describe('Bookkeeper', () => {
       activePointForStorage = {
         offensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.offensePlayers],
         defensePlayers: [...serializedDataFromBk.bookkeeperState.activePoint.defensePlayers],
-        events: serializedDataFromBk.bookkeeperState.activePoint.events.map(
-          mapModelEventToApiPointEvent
-        ),
+        events: serializedDataFromBk.bookkeeperState.activePoint.events.map(mapEventToApiEvent),
       };
     }
 

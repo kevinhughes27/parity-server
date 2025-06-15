@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
-import { fetchCurrentLeague, CurrentLeagueResponse } from '../../api';
 import { useTeams, useFullscreen } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
 import {
@@ -21,15 +20,23 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import EditRoster from './EditRoster';
 
-const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
+interface CurrentLeague {
+  league: {
+    id: string;
+    zuluru_id: number;
+    name: string;
+    lineSize: number;
+  };
+}
 
-// Removed placeholderRosterStyle as it's now defined inline with MUI sx prop
+// ToDo - can this be moved inside the Actionbar? feels like it should be
+const ACTION_BAR_HEIGHT = '70px';
 
 function NewGame() {
   const navigate = useNavigate();
   useFullscreen();
 
-  const [currentLeague, setCurrentLeague] = useState<CurrentLeagueResponse | null>(null);
+  const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
 
@@ -56,8 +63,9 @@ function NewGame() {
       setLoadingLeague(true);
       setErrorLeague(null);
       try {
-        const response = await fetchCurrentLeague();
-        setCurrentLeague(response);
+        const response = await fetch('/current_league');
+        const league = await response.json();
+        setCurrentLeague(league);
       } catch (error) {
         console.error('Failed to fetch current league:', error);
         setErrorLeague(error instanceof Error ? error.message : 'Failed to load current league');
@@ -99,6 +107,8 @@ function NewGame() {
       return;
     }
 
+    // ToDo this should move to a bookeeper new method
+    // also this code here highlights the overlap and duplication that remains between game and bookeeper state
     const initialBookkeeperState: BookkeeperVolatileState = {
       activePoint: null,
       firstActor: null,
@@ -108,24 +118,23 @@ function NewGame() {
       awayPlayers: null,
       homeScore: 0,
       awayScore: 0,
-      homeParticipants: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
-      awayParticipants: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
+      homeParticipants: [...homeRosterNames].sort((a, b) => a.localeCompare(b)),
+      awayParticipants: [...awayRosterNames].sort((a, b) => a.localeCompare(b)),
     };
 
     const initialMementos: SerializedMemento[] = [];
 
     const newGameData: Omit<StoredGame, 'localId'> = {
-      serverId: undefined,
       league_id: currentLeague.league.id,
       week: week,
       homeTeam: selectedHomeTeamObj.name,
       homeTeamId: selectedHomeTeamObj.id,
       homeScore: 0,
-      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
+      homeRoster: [...homeRosterNames].sort((a, b) => a.localeCompare(b)),
       awayTeam: selectedAwayTeamObj.name,
       awayTeamId: selectedAwayTeamObj.id,
       awayScore: 0,
-      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)), // Ensure sorted on save
+      awayRoster: [...awayRosterNames].sort((a, b) => a.localeCompare(b)),
       points: [],
       status: 'new',
       lastModified: new Date(),
@@ -145,9 +154,6 @@ function NewGame() {
 
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamIdStr);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamIdStr);
-
-  const pageTitle = 'Create Game';
-  const buttonText = 'Start';
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
@@ -179,12 +185,11 @@ function NewGame() {
               zIndex: 1,
             }}
           >
-            {pageTitle}
+            New Game
           </Typography>
         </Toolbar>
       </AppBar>
 
-      {/* Main Content Area */}
       <Box
         sx={{
           flexGrow: 1,
@@ -315,9 +320,9 @@ function NewGame() {
                 {selectedHomeTeamObj ? (
                   <EditRoster
                     teamName={selectedHomeTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
-                    currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
-                    onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
+                    allLeaguePlayers={allLeaguePlayers}
+                    currentRosterNames={homeRosterNames}
+                    onRosterChange={sortAndSetHomeRoster}
                   />
                 ) : (
                   <Paper
@@ -345,9 +350,9 @@ function NewGame() {
                 {selectedAwayTeamObj ? (
                   <EditRoster
                     teamName={selectedAwayTeamObj.name}
-                    allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
-                    currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
-                    onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
+                    allLeaguePlayers={allLeaguePlayers}
+                    currentRosterNames={awayRosterNames}
+                    onRosterChange={sortAndSetAwayRoster}
                   />
                 ) : (
                   <Paper
@@ -411,7 +416,7 @@ function NewGame() {
               disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
               sx={{ fontSize: '1em', px: 3 }}
             >
-              {buttonText}
+              Start
             </Button>
           </Box>
         )}
