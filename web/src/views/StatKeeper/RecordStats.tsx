@@ -10,7 +10,6 @@ interface RecordStatsProps {
 }
 
 const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }) => {
-  // Get sorted rosters from bookkeeper's participants
   const fullHomeRoster = bookkeeper.getHomeParticipants();
   const fullAwayRoster = bookkeeper.getAwayParticipants();
 
@@ -24,10 +23,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
 
   const handleActionClick = async (actionFunc: (bk: Bookkeeper) => void) => {
     await bookkeeper.performAction(actionFunc);
-  };
-
-  const handlePointClick = async () => {
-    await bookkeeper.performAction(bk => bk.recordPoint());
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
@@ -142,7 +137,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
           },
           {
             label: 'Point!',
-            onClick: handlePointClick,
+            onClick: () => handleActionClick(bk => bk.recordPoint()),
             disabled: !pointState.enabled,
             color: 'success',
             variant: 'contained',
@@ -163,6 +158,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
             label: 'D (Block)',
             onClick: () => {
               if (!bookkeeper.firstActor) {
+                // we never see this and we don't want to.
+                // and at least for me the confusing part is to do the throwaway first
                 alert('Select the player who got the D first.');
                 return;
               }
@@ -175,6 +172,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
             label: 'Catch D',
             onClick: () => {
               if (!bookkeeper.firstActor) {
+                // we never see this and we don't want to.
+                // and at least for me the confusing part is to do the throwaway first
                 alert('Select the player who got the Catch D first.');
                 return;
               }
