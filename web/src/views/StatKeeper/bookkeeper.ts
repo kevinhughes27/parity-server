@@ -1068,15 +1068,15 @@ export class Bookkeeper {
     this.notifyListeners();
   }
 
-  // Static method to create a new game
-  public static newGame(
+  // Static method to create a new game and save it to the database
+  public static async newGame(
     currentLeague: { league: { id: string; name: string; lineSize: number } },
     week: number,
     homeTeam: { id: number; name: string },
     awayTeam: { id: number; name: string },
     homeRoster: string[],
     awayRoster: string[]
-  ): SerializedGameData {
+  ): Promise<number> {
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
 
@@ -1093,7 +1093,7 @@ export class Bookkeeper {
       awayParticipants: sortedAwayRoster,
     };
 
-    return {
+    const gameData: SerializedGameData = {
       league_id: currentLeague.league.id,
       week: week,
       homeTeamName: homeTeam.name,
@@ -1104,6 +1104,27 @@ export class Bookkeeper {
       bookkeeperState: initialBookkeeperState,
       mementos: [],
     };
+
+    // Create the StoredGame object and save it to the database
+    const id = await db.games.add({
+      league_id: gameData.league_id,
+      week: gameData.week,
+      homeTeam: gameData.homeTeamName,
+      homeTeamId: gameData.homeTeamId,
+      homeScore: 0,
+      homeRoster: [...gameData.bookkeeperState.homeParticipants],
+      awayTeam: gameData.awayTeamName,
+      awayTeamId: gameData.awayTeamId,
+      awayScore: 0,
+      awayRoster: [...gameData.bookkeeperState.awayParticipants],
+      points: [],
+      status: 'new',
+      lastModified: new Date(),
+      bookkeeperState: gameData.bookkeeperState,
+      mementos: gameData.mementos,
+    } as StoredGame);
+
+    return id;
   }
 
   // Getter for tests
