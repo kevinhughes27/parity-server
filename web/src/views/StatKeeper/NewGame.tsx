@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { db, StoredGame } from './db';
 import { useTeams, useFullscreen } from './hooks';
 import { BookkeeperVolatileState, SerializedMemento } from './models';
+import { Bookkeeper } from './bookkeeper';
 import {
   AppBar,
   Toolbar,
@@ -317,49 +318,6 @@ const sortRoster = (roster: string[]): string[] => {
   return [...roster].sort((a, b) => a.localeCompare(b));
 };
 
-// Helper function to create initial game data
-const createInitialGameData = (
-  currentLeague: CurrentLeague,
-  week: number,
-  selectedHomeTeamObj: any,
-  selectedAwayTeamObj: any,
-  homeRosterNames: string[],
-  awayRosterNames: string[]
-): Omit<StoredGame, 'localId'> => {
-  const sortedHomeRoster = sortRoster(homeRosterNames);
-  const sortedAwayRoster = sortRoster(awayRosterNames);
-
-  const initialBookkeeperState: BookkeeperVolatileState = {
-    activePoint: null,
-    firstActor: null,
-    homePossession: true,
-    pointsAtHalf: 0,
-    homePlayers: null,
-    awayPlayers: null,
-    homeScore: 0,
-    awayScore: 0,
-    homeParticipants: sortedHomeRoster,
-    awayParticipants: sortedAwayRoster,
-  };
-
-  return {
-    league_id: currentLeague.league.id,
-    week: week,
-    homeTeam: selectedHomeTeamObj.name,
-    homeTeamId: selectedHomeTeamObj.id,
-    homeScore: 0,
-    homeRoster: sortedHomeRoster,
-    awayTeam: selectedAwayTeamObj.name,
-    awayTeamId: selectedAwayTeamObj.id,
-    awayScore: 0,
-    awayRoster: sortedAwayRoster,
-    points: [],
-    status: 'new',
-    lastModified: new Date(),
-    bookkeeperState: initialBookkeeperState,
-    mementos: [],
-  };
-};
 
 function NewGame() {
   const navigate = useNavigate();
@@ -436,9 +394,7 @@ function NewGame() {
       return;
     }
 
-    // ToDo this should move to a bookeeper new method
-    // also this code here highlights the overlap and duplication that remains between game and bookeeper state
-    const newGameData = createInitialGameData(
+    const newGameData = Bookkeeper.newGame(
       currentLeague,
       week,
       selectedHomeTeamObj,
@@ -448,7 +404,23 @@ function NewGame() {
     );
 
     try {
-      const id = await db.games.add(newGameData as StoredGame);
+      const id = await db.games.add({
+        league_id: newGameData.league_id,
+        week: newGameData.week,
+        homeTeam: newGameData.homeTeamName,
+        homeTeamId: newGameData.homeTeamId,
+        homeScore: 0,
+        homeRoster: [...newGameData.bookkeeperState.homeParticipants],
+        awayTeam: newGameData.awayTeamName,
+        awayTeamId: newGameData.awayTeamId,
+        awayScore: 0,
+        awayRoster: [...newGameData.bookkeeperState.awayParticipants],
+        points: [],
+        status: 'new',
+        lastModified: new Date(),
+        bookkeeperState: newGameData.bookkeeperState,
+        mementos: newGameData.mementos,
+      } as StoredGame);
       console.log(`New game added with localId: ${id}`);
       navigate(`/stat_keeper/game/${id}`);
     } catch (error) {
