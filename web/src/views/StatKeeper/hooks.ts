@@ -1,7 +1,5 @@
 import { useState, useEffect, useReducer } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
-import { useLiveQuery } from 'dexie-react-hooks';
-import { db, StoredGame } from './db';
+import { useLocation } from 'react-router-dom';
 import { fetchTeams, Team, TeamPlayer, leagues as apiLeagues } from '../../api';
 import { Bookkeeper } from './bookkeeper';
 
@@ -12,7 +10,7 @@ export function useBookkeeper(gameId: string) {
   useEffect(() => {
     let mounted = true;
     let unsubscribe: (() => void) | null = null;
-    
+
     Bookkeeper.loadFromDatabase(parseInt(gameId))
       .then(bk => {
         if (mounted) {
@@ -29,7 +27,7 @@ export function useBookkeeper(gameId: string) {
         }
       });
 
-    return () => { 
+    return () => {
       mounted = false;
       if (unsubscribe) {
         unsubscribe();

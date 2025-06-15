@@ -1,5 +1,4 @@
 import React from 'react';
-import { EventType } from './models';
 import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
@@ -10,10 +9,7 @@ interface RecordStatsProps {
   actionBarHeight: string;
 }
 
-const RecordStats: React.FC<RecordStatsProps> = ({
-  bookkeeper,
-  actionBarHeight,
-}) => {
+const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }) => {
   // Get sorted rosters from bookkeeper's participants
   const fullHomeRoster = bookkeeper.getHomeParticipants();
   const fullAwayRoster = bookkeeper.getAwayParticipants();
@@ -36,7 +32,8 @@ const RecordStats: React.FC<RecordStatsProps> = ({
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
     const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
-    
+    const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
+
     const getButtonStyles = () => {
       switch (buttonState.variant) {
         case 'not-on-line':
@@ -54,7 +51,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({
             fontWeight: 'bold',
           };
         case 'enabled':
-          const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
           return {
             color: '#000',
             backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',

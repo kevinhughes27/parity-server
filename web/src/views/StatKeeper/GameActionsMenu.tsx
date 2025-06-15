@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { StoredGame } from './db'; // For gameStatus type
-import { Box, IconButton, Menu, MenuItem, Tooltip, Divider } from '@mui/material';
+import { StoredGame } from './db';
+import { Box, IconButton, Menu, MenuItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 interface GameActionsMenuProps {
@@ -11,7 +11,6 @@ interface GameActionsMenuProps {
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
-  showChangeLineOption: boolean;
 }
 
 const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
@@ -21,7 +20,6 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
-  showChangeLineOption,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -50,6 +48,7 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
       </IconButton>
 
       <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+        {/* ToDo probably better to make edit rosters a mode like select lines */}
         <MenuItem
           component={Link}
           to={`/stat_keeper/edit_game/${numericGameId}`}
@@ -58,33 +57,25 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
           Edit Rosters
         </MenuItem>
 
-        {showChangeLineOption && (
-          <MenuItem onClick={() => handleAction(onChangeLine)}>Change Line</MenuItem>
-        )}
+        <MenuItem onClick={() => handleAction(onChangeLine)}>Change Line</MenuItem>
 
         <Divider />
 
-        <Tooltip
-          title={isHalfRecorded ? 'Half time has already been recorded' : 'Record Half Time'}
+        <MenuItem
+          onClick={() => handleAction(onRecordHalf)}
+          disabled={isHalfRecorded}
+          sx={{ color: isHalfRecorded ? '#999' : 'inherit' }}
         >
-          <MenuItem
-            onClick={() => handleAction(onRecordHalf)}
-            disabled={isHalfRecorded}
-            sx={{ color: isHalfRecorded ? '#999' : 'inherit' }}
-          >
-            Record Half
-          </MenuItem>
-        </Tooltip>
+          Record Half
+        </MenuItem>
 
-        <Tooltip title={canSubmitGame ? 'Submit game to server' : `Game status: ${gameStatus}`}>
-          <MenuItem
-            onClick={() => handleAction(onSubmitGame)}
-            disabled={!canSubmitGame}
-            sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
-          >
-            Submit Game
-          </MenuItem>
-        </Tooltip>
+        <MenuItem
+          onClick={() => handleAction(onSubmitGame)}
+          disabled={!canSubmitGame}
+          sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
+        >
+          Submit Game
+        </MenuItem>
       </Menu>
     </Box>
   );

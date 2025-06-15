@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useBookkeeper, useFullscreen } from './hooks';
+import { useBookkeeper } from './hooks';
 import JsonViewer from './JsonViewer';
 import {
   AppBar,
@@ -10,7 +10,7 @@ import {
   Button,
   Paper,
   Alert,
-  CircularProgress
+  CircularProgress,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -52,7 +52,9 @@ function ViewGame() {
       await bookkeeper.submitGame();
       setResyncMessage('Game successfully uploaded to server!');
     } catch (error) {
-      setResyncMessage(`Re-sync failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      setResyncMessage(
+        `Re-sync failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     } finally {
       setIsResyncing(false);
     }
@@ -60,7 +62,9 @@ function ViewGame() {
 
   if (!bookkeeper) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
+      >
         <CircularProgress />
         <Typography sx={{ ml: 2 }}>Loading game data...</Typography>
       </Box>
@@ -133,8 +137,7 @@ function ViewGame() {
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
             <strong>Score:</strong> {apiPayload.homeScore} - {apiPayload.awayScore} |
-            <strong> Week:</strong> {apiPayload.week} |
-            <strong> Status:</strong> {gameStatus}
+            <strong> Week:</strong> {apiPayload.week} |<strong> Status:</strong> {gameStatus}
           </Typography>
         </Box>
       </AppBar>
@@ -153,7 +156,9 @@ function ViewGame() {
 
         {/* API Payload */}
         <Paper elevation={1} sx={{ p: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>API Payload</Typography>
+          <Typography variant="h6" sx={{ mb: 1 }}>
+            API Payload
+          </Typography>
           <JsonViewer data={apiPayload} defaultExpanded={true} />
         </Paper>
       </Box>

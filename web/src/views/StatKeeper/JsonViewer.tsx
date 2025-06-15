@@ -11,11 +11,11 @@ interface JsonViewerProps {
   defaultExpanded?: boolean;
 }
 
-const JsonViewer: React.FC<JsonViewerProps> = ({ 
-  data, 
-  name, 
-  level = 0, 
-  defaultExpanded = false 
+const JsonViewer: React.FC<JsonViewerProps> = ({
+  data,
+  name,
+  level = 0,
+  defaultExpanded = false,
 }) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded || level < 2);
 
@@ -59,15 +59,25 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
 
     if (Array.isArray(value)) {
       if (value.length === 0) {
-        return <Box component="span" sx={{ color: '#333' }}>[]</Box>;
+        return (
+          <Box component="span" sx={{ color: '#333' }}>
+            []
+          </Box>
+        );
       }
 
       return (
         <Box sx={{ ml: level * 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} 
-               onClick={() => setIsExpanded(!isExpanded)}>
+          <Box
+            sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
             <IconButton size="small" sx={{ p: 0, mr: 0.5 }}>
-              {isExpanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
+              {isExpanded ? (
+                <ExpandMoreIcon fontSize="small" />
+              ) : (
+                <ChevronRightIcon fontSize="small" />
+              )}
             </IconButton>
             <Typography variant="body2" sx={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
               {key && `${key}: `}[{value.length} items]
@@ -77,10 +87,10 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
             <Box sx={{ ml: 2, borderLeft: '1px solid #ddd', pl: 1 }}>
               {value.map((item, index) => (
                 <Box key={index} sx={{ mb: 0.5 }}>
-                  <JsonViewer 
-                    data={item} 
-                    name={`[${index}]`} 
-                    level={level + 1} 
+                  <JsonViewer
+                    data={item}
+                    name={`[${index}]`}
+                    level={level + 1}
                     defaultExpanded={false}
                   />
                 </Box>
@@ -94,28 +104,39 @@ const JsonViewer: React.FC<JsonViewerProps> = ({
     if (typeof value === 'object') {
       const keys = Object.keys(value);
       if (keys.length === 0) {
-        return <Box component="span" sx={{ color: '#333' }}>{'{}'}</Box>;
+        return (
+          <Box component="span" sx={{ color: '#333' }}>
+            {'{}'}
+          </Box>
+        );
       }
 
       return (
         <Box sx={{ ml: level * 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} 
-               onClick={() => setIsExpanded(!isExpanded)}>
+          <Box
+            sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
             <IconButton size="small" sx={{ p: 0, mr: 0.5 }}>
-              {isExpanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
+              {isExpanded ? (
+                <ExpandMoreIcon fontSize="small" />
+              ) : (
+                <ChevronRightIcon fontSize="small" />
+              )}
             </IconButton>
             <Typography variant="body2" sx={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
-              {key && `${key}: `}{'{'}...{'}'}
+              {key && `${key}: `}
+              {'{'}...{'}'}
             </Typography>
           </Box>
           {isExpanded && (
             <Box sx={{ ml: 2, borderLeft: '1px solid #ddd', pl: 1 }}>
-              {keys.map((objKey) => (
+              {keys.map(objKey => (
                 <Box key={objKey} sx={{ mb: 0.5 }}>
-                  <JsonViewer 
-                    data={value[objKey]} 
-                    name={objKey} 
-                    level={level + 1} 
+                  <JsonViewer
+                    data={value[objKey]}
+                    name={objKey}
+                    level={level + 1}
                     defaultExpanded={false}
                   />
                 </Box>
