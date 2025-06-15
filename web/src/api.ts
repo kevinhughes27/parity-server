@@ -1,5 +1,22 @@
 import 'whatwg-fetch';
-import leagues from './leagues.json';
+import rawLeagues from './leagues.json';
+
+export interface LeagueFromJson {
+  id: string;
+  name: string;
+  lineSize: number;
+}
+
+// Type the imported leagues data and sort by numeric id
+// ToDo should just fix the typing here.
+export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort(
+  (a, b) => parseInt(b.id) - parseInt(a.id)
+);
+
+export const getLeagueName = (leagueId: string): string => {
+  const league = leagues.find(l => l.id === leagueId);
+  return league ? league.name : `Unknown League (${leagueId})`;
+};
 
 interface IDataCache {
   [key: string]: string;
@@ -65,21 +82,21 @@ export interface Point {
 export interface PointEvent {
   type: string;
   firstActor: string;
-  secondActor: string;
+  secondActor: string | null;
   timestamp: string;
 }
 
-const fetchGames = async (leagueId: string): Promise<Game[]> => {
+export const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
   return await response.json();
 };
 
-const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
+export const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   const response = await cachedFetch(`/api/${leagueId}/games/${gameId}`);
   return await response.json();
 };
 
-const saveGame = async (
+export const saveGame = async (
   gameId: string,
   leagueId: string,
   json: string,
@@ -100,7 +117,7 @@ const saveGame = async (
   });
 };
 
-const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
+export const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
 
   // clear cache
@@ -121,12 +138,32 @@ export interface Player {
   salary: number;
 }
 
-const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
+export interface TeamPlayer {
+  name: string;
+  team: string;
+  is_male: boolean;
+}
+
+export interface Team {
+  id: number;
+  name: string;
+  players: TeamPlayer[];
+}
+
+export const fetchTeams = async (leagueId: string): Promise<Team[]> => {
+  const response = await cachedFetch(`/api/${leagueId}/teams`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch teams for league ${leagueId}: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
+export const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
   const response = await cachedFetch(`/api/${leagueId}/players`);
   return await response.json();
 };
 
-const fetchWeeks = async (leagueId: string): Promise<number[]> => {
+export const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   const response = await cachedFetch(`/api/${leagueId}/weeks`);
   return await response.json();
 };
@@ -156,7 +193,7 @@ export interface StatLine {
   [key: string]: number | string;
 }
 
-const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => {
+export const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => {
   let url = `/api/${leagueId}/weeks/${weekNum}`;
   if (weekNum === 0) url = `/api/${leagueId}/stats`;
 
@@ -164,15 +201,4 @@ const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => 
   const json = await response.json();
   const data = json.stats || {};
   return data;
-};
-
-export {
-  leagues,
-  fetchGames,
-  fetchGame,
-  fetchPlayers,
-  fetchWeeks,
-  fetchStats,
-  saveGame,
-  deleteGame,
 };

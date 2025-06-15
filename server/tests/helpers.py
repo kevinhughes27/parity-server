@@ -2,6 +2,8 @@ from pathlib import Path
 from sqlalchemy import event
 import json
 
+from server.api import CURRENT_LEAGUE_ID
+
 
 def upload_game(client, data_file):
     fixture_path = Path(__file__).parent / "data" / data_file
@@ -10,13 +12,14 @@ def upload_game(client, data_file):
         game_str = f.read()
 
     game = json.loads(game_str)
+    game["league_id"] = CURRENT_LEAGUE_ID
 
     response = client.post("/submit_game", json=game)
     assert response.status_code == 201
 
 
 def get_stats(client):
-    response = client.get("/api/1/stats")
+    response = client.get(f"/api/{CURRENT_LEAGUE_ID}/stats")
     assert response.status_code == 200
     stats = response.json()
     return stats
