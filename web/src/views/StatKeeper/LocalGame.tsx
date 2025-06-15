@@ -25,6 +25,7 @@ function LocalGame() {
     );
   }
 
+  // what is getError?
   if (bookkeeper.getError()) {
     return (
       <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
@@ -40,6 +41,7 @@ function LocalGame() {
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
   const handleRecordHalf = async () => {
+    // should pull this logic into bookkeeper as well)
     if (bookkeeper.pointsAtHalf > 0) {
       alert('Half has already been recorded.');
       return;
@@ -61,6 +63,7 @@ function LocalGame() {
     }
   };
 
+  // this logic should all be in the bookkeeper really
   const handleChangeLine = async () => {
     // no-op if already selecting lines
     if (currentView == 'selectLines') {
