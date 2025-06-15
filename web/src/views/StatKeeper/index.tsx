@@ -157,7 +157,7 @@ function StatKeeper() {
         <Typography variant="h6" component="div">
           {game.homeTeam} vs {game.awayTeam}
         </Typography>
-        
+
         <GameMetadata game={game} />
       </CardContent>
 
@@ -187,7 +187,7 @@ function StatKeeper() {
   // Component to render a section of games
   const GameSection = ({ title, games }: { title: string; games: StoredGame[] }) => {
     if (games.length === 0) return null;
-    
+
     return (
       <>
         <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
