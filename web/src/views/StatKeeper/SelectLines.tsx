@@ -9,13 +9,10 @@ interface SelectLinesProps {
   actionBarHeight: string;
 }
 
-const SelectLines: React.FC<SelectLinesProps> = ({
-  bookkeeper,
-  actionBarHeight,
-}) => {
+const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }) => {
   const isResumingPointMode = bookkeeper.getIsResumingPointMode();
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
-  
+
   // Memoize rosters to prevent infinite re-renders
   const homeRoster = useMemo(() => bookkeeper.getHomeParticipants(), [bookkeeper]);
   const awayRoster = useMemo(() => bookkeeper.getAwayParticipants(), [bookkeeper]);
@@ -146,15 +143,10 @@ const SelectLines: React.FC<SelectLinesProps> = ({
   const handleLinesSelected = async () => {
     if (bookkeeper.homePlayers && bookkeeper.awayPlayers) {
       if (bookkeeper.activePoint === null && !bookkeeper.firstPointOfGameOrHalf()) {
-        await bookkeeper.performAction(
-          bk => bk.prepareNewPointAfterScore()
-        );
+        await bookkeeper.performAction(bk => bk.prepareNewPointAfterScore());
       } else {
-        // Force view transition to recordStats
-        await bookkeeper.performAction(
-          bk => {}, // No-op action
-          { skipSave: true }
-        );
+        // No-op action to force view transition
+        await bookkeeper.performAction(bk => bk.resumePoint(), { skipSave: true });
       }
     }
   };

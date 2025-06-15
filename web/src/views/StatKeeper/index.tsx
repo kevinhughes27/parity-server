@@ -3,6 +3,8 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { Link, useNavigate } from 'react-router-dom';
 import { getLeagueName } from '../../api';
+import Loading from '../../components/Loading';
+
 import {
   AppBar,
   Toolbar,
@@ -20,6 +22,9 @@ function StatKeeper() {
   const navigate = useNavigate();
 
   const games = useLiveQuery(() => db.games.orderBy('lastModified').reverse().toArray(), []);
+  if (games === undefined) {
+    return <Loading />;
+  }
 
   const handleStartNewGame = () => {
     navigate('/stat_keeper/new_game');
@@ -35,11 +40,9 @@ function StatKeeper() {
       ? `${gameToDelete.homeTeam} vs ${gameToDelete.awayTeam}`
       : `Game ID ${localId}`;
 
-    if (
-      window.confirm(
-        `Are you sure you want to delete the game: ${gameName}? This action cannot be undone.`
-      )
-    ) {
+    const message = `Are you sure you want to delete the game: ${gameName}? This action cannot be undone.`;
+
+    if (window.confirm(message)) {
       try {
         await db.games.delete(localId);
         console.log(`Game with localId: ${localId} deleted successfully.`);
@@ -50,11 +53,7 @@ function StatKeeper() {
     }
   };
 
-  if (games === undefined) {
-    return <p style={{ padding: '20px' }}>Loading local games...</p>;
-  }
-
-  const resumableStatuses: StoredGame['status'][] = ['new', 'in-progress', 'paused', 'sync-error'];
+  const resumableStatuses: StoredGame['status'][] = ['new', 'in-progress'];
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
@@ -78,6 +77,7 @@ function StatKeeper() {
             {game.week}
           </Typography>
 
+          {/* ToDo extract a color helper here */}
           <Chip
             label={game.status}
             size="small"
@@ -105,9 +105,7 @@ function StatKeeper() {
 
       <CardActions>
         {(game.status === 'new' ||
-          game.status === 'in-progress' ||
-          game.status === 'paused' ||
-          game.status === 'sync-error') &&
+          game.status === 'in-progress') &&
           game.localId && (
             <Button
               size="small"
@@ -116,12 +114,12 @@ function StatKeeper() {
               component={Link}
               to={`/stat_keeper/game/${game.localId}`}
             >
-              {game.status === 'sync-error' ? 'Retry/View Game' : 'Resume Game'}
+              Resume Game
             </Button>
           )}
         {(game.status === 'submitted' ||
           game.status === 'uploaded' ||
-          game.status === 'completed') &&
+          game.status === 'sync-error') &&
           game.localId && (
             <Button
               size="small"
@@ -166,7 +164,7 @@ function StatKeeper() {
         {resumableGames.length > 0 && (
           <>
             <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-              Resumable Games
+              In Progress
             </Typography>
             <Box>{resumableGames.map(renderGameItem)}</Box>
           </>
@@ -175,7 +173,7 @@ function StatKeeper() {
         {otherGames.length > 0 && (
           <>
             <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-              Other Local Games
+              Local Games
             </Typography>
             <Box>{otherGames.map(renderGameItem)}</Box>
           </>

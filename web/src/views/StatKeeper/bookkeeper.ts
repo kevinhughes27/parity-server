@@ -11,14 +11,28 @@ import {
   SerializedGameData,
   GameView,
   ActionOptions,
+  mapApiEventToEvent,
+  mapEventToApiEvent,
 } from './models';
-import { db, StoredGame, mapApiPointEventToModelEvent, mapModelEventToApiPointEvent } from './db';
-import { getLeagueName, uploadCompleteGame, UploadedGamePayload, leagues as apiLeagues } from '../../api';
+import { db, StoredGame } from './db';
+import { getLeagueName, type Point as ApiPoint, leagues as apiLeagues } from '../../api';
 
 interface InternalMemento {
   type: MementoType;
   data: any;
   apply: () => void;
+}
+
+interface UploadedGamePayload {
+  league_id: string;
+  week: number;
+  homeTeam: string;
+  awayTeam: string;
+  homeRoster: string[];
+  awayRoster: string[];
+  points: ApiPoint[];
+  homeScore: number;
+  awayScore: number;
 }
 
 export class Bookkeeper {
@@ -27,7 +41,7 @@ export class Bookkeeper {
   public awayTeam: Team;
   public week: number;
 
-  public activeGame: GameModel = new GameModel(); // Made public for easier access in LocalGame
+  public activeGame: GameModel = new GameModel();
   private mementos: InternalMemento[];
 
   // Volatile state - needs to be serialized/deserialized
@@ -52,9 +66,6 @@ export class Bookkeeper {
   // New: Observer pattern for React integration
   private listeners: Set<() => void> = new Set();
 
-  // I still think we need to streamline this constructor and persistence logic.
-  // the responsibilities between this and the db.ts overlap in a new way in the typescript version
-  // lets see how the UI integration changes things and revisit later.
   constructor(
     league: League,
     week: number,
@@ -77,24 +88,19 @@ export class Bookkeeper {
     this.determineInitialView();
   }
 
-  // New: Static factory method to replace the complex initialization logic
   static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
     const storedGame = await db.games.get(gameId);
     if (!storedGame) {
       throw new Error(`Game ${gameId} not found`);
     }
 
-    if (!storedGame.homeTeamId || !storedGame.awayTeamId) {
-      throw new Error('Game data is missing team IDs. Cannot initialize Bookkeeper.');
-    }
-
-    // Use statically imported leagues
+    // I don't think we should need all of this league state here,
+    // this should all be basic data that lives right in bookeeper
+    // and gets serialized / deserialized
     const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
-
     if (!apiLeague) {
       throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
     }
-
     const leagueForBk: League = {
       id: storedGame.league_id,
       name: getLeagueName(storedGame.league_id) || 'Unknown League',
@@ -108,7 +114,7 @@ export class Bookkeeper {
       return PointModel.fromJSON({
         offensePlayers: [...apiPoint.offensePlayers],
         defensePlayers: [...apiPoint.defensePlayers],
-        events: apiPoint.events.map(mapApiPointEventToModelEvent),
+        events: apiPoint.events.map(mapApiEventToEvent),
       });
     });
 
@@ -218,22 +224,26 @@ export class Bookkeeper {
           }
         );
       case MementoType.RecordHalf:
-        return this.createRecordHalfMemento(mData as { 
-          previousPointsAtHalf: number;
-          savedHomePlayers: string[] | null;
-          savedAwayPlayers: string[] | null;
-          savedLastPlayedLine: { home: string[]; away: string[] } | null;
-          savedIsResumingPointMode: boolean;
-        });
+        return this.createRecordHalfMemento(
+          mData as {
+            previousPointsAtHalf: number;
+            savedHomePlayers: string[] | null;
+            savedAwayPlayers: string[] | null;
+            savedLastPlayedLine: { home: string[]; away: string[] } | null;
+            savedIsResumingPointMode: boolean;
+          }
+        );
       case MementoType.RecordSubstitution:
-        return this.createRecordSubstitutionMemento(mData as {
-          savedHomePlayers: string[] | null;
-          savedAwayPlayers: string[] | null;
-          savedOffensePlayers: string[];
-          savedDefensePlayers: string[];
-          savedAllOffensePlayers: Set<string>;
-          savedAllDefensePlayers: Set<string>;
-        });
+        return this.createRecordSubstitutionMemento(
+          mData as {
+            savedHomePlayers: string[] | null;
+            savedAwayPlayers: string[] | null;
+            savedOffensePlayers: string[];
+            savedDefensePlayers: string[];
+            savedAllOffensePlayers: Set<string>;
+            savedAllDefensePlayers: Set<string>;
+          }
+        );
       default:
         console.warn('Unknown memento type during hydration:', sm.type);
         return { type: sm.type, data: mData, apply: () => {} };
@@ -376,9 +386,9 @@ export class Bookkeeper {
   }
 
   public recordSubstitution(
-    newHomePlayers: string[], 
-    newAwayPlayers: string[], 
-    substitutedOutPlayers: string[], 
+    newHomePlayers: string[],
+    newAwayPlayers: string[],
+    substitutedOutPlayers: string[],
     substitutedInPlayers: string[]
   ): void {
     if (!this.activePoint) return;
@@ -401,7 +411,7 @@ export class Bookkeeper {
     // Determine which team's players to update in the point
     let newOffensePlayers: string[];
     let newDefensePlayers: string[];
-    
+
     if (this.homePossession) {
       newOffensePlayers = [...newHomePlayers];
       newDefensePlayers = [...newAwayPlayers];
@@ -430,14 +440,17 @@ export class Bookkeeper {
   }
 
   // New: Unified action method that handles persistence
-  async performAction(action: (bk: Bookkeeper) => void, options: ActionOptions = {}): Promise<void> {
+  async performAction(
+    action: (bk: Bookkeeper) => void,
+    options: ActionOptions = {}
+  ): Promise<void> {
     const actionName = action.name || action.toString();
 
     // Track state for view transitions
     if (actionName.includes('recordPoint')) {
       this.lastPlayedLine = {
         home: [...(this.homePlayers || [])],
-        away: [...(this.awayPlayers || [])]
+        away: [...(this.awayPlayers || [])],
       };
       this.isResumingPointMode = false;
     }
@@ -513,6 +526,10 @@ export class Bookkeeper {
     // NO MEMENTO for this automatic setup step, as it's an intermediate state.
     // Undoing the subsequent recordFirstActor will handle reverting firstActor,
     // and if further undos occur, they will revert actions before this point.
+  }
+
+  public resumePoint(): void {
+    return;
   }
 
   public recordPull(): void {
@@ -650,7 +667,7 @@ export class Bookkeeper {
   public recordHalf(): void {
     if (this.pointsAtHalf > 0) return; // Half already recorded
 
-    const mementoData = { 
+    const mementoData = {
       previousPointsAtHalf: this.pointsAtHalf,
       savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
       savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
@@ -659,7 +676,7 @@ export class Bookkeeper {
     };
     this.mementos.push(this.createRecordHalfMemento(mementoData));
     this.pointsAtHalf = this.activeGame.getPointCount();
-    
+
     // Reset line selection and UI state for second half
     this.homePlayers = null;
     this.awayPlayers = null;
@@ -803,7 +820,7 @@ export class Bookkeeper {
     };
   }
 
-  private createRecordHalfMemento(data: { 
+  private createRecordHalfMemento(data: {
     previousPointsAtHalf: number;
     savedHomePlayers: string[] | null;
     savedAwayPlayers: string[] | null;
@@ -839,17 +856,19 @@ export class Bookkeeper {
         // Restore line players
         this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
         this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
-        
+
         if (this.activePoint) {
           // Restore point players
           this.activePoint.offensePlayers = [...data.savedOffensePlayers];
           this.activePoint.defensePlayers = [...data.savedDefensePlayers];
           this.activePoint.allOffensePlayers = new Set(data.savedAllOffensePlayers);
           this.activePoint.allDefensePlayers = new Set(data.savedAllDefensePlayers);
-          
+
           // Remove substitution events that were added
-          while (this.activePoint.events.length > 0 && 
-                 this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION) {
+          while (
+            this.activePoint.events.length > 0 &&
+            this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION
+          ) {
             this.activePoint.removeLastEvent();
           }
         }
@@ -899,17 +918,22 @@ export class Bookkeeper {
     }
   }
 
-  private transformForDatabase(serializedData: SerializedGameData, newStatus?: StoredGame['status']): Partial<StoredGame> {
+  private transformForDatabase(
+    serializedData: SerializedGameData,
+    newStatus?: StoredGame['status']
+  ): Partial<StoredGame> {
     const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
       // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
       // Fall back to regular players for legacy data
-      offensePlayers: (modelPointJson.allOffensePlayers && modelPointJson.allOffensePlayers.length > 0) 
-        ? [...modelPointJson.allOffensePlayers].sort() 
-        : [...modelPointJson.offensePlayers].sort(),
-      defensePlayers: (modelPointJson.allDefensePlayers && modelPointJson.allDefensePlayers.length > 0) 
-        ? [...modelPointJson.allDefensePlayers].sort() 
-        : [...modelPointJson.defensePlayers].sort(),
-      events: modelPointJson.events.map(mapModelEventToApiPointEvent),
+      offensePlayers:
+        modelPointJson.allOffensePlayers && modelPointJson.allOffensePlayers.length > 0
+          ? [...modelPointJson.allOffensePlayers].sort()
+          : [...modelPointJson.offensePlayers].sort(),
+      defensePlayers:
+        modelPointJson.allDefensePlayers && modelPointJson.allDefensePlayers.length > 0
+          ? [...modelPointJson.allDefensePlayers].sort()
+          : [...modelPointJson.defensePlayers].sort(),
+      events: modelPointJson.events.map(mapEventToApiEvent),
     }));
 
     const bookkeeperStateForStorage: BookkeeperVolatileState = {
@@ -939,7 +963,6 @@ export class Bookkeeper {
     };
   }
 
-  // New: Game submission
   async submitGame(): Promise<void> {
     if (!this.gameId) {
       throw new Error('Cannot submit: no game ID');
@@ -947,8 +970,14 @@ export class Bookkeeper {
 
     try {
       await this.saveToDatabase('submitted');
-      const apiPayload = this.transformForAPI();
-      const response = await uploadCompleteGame(apiPayload);
+      const payload = this.transformForAPI();
+      const response = await fetch(`/submit_game`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
 
       if (response.ok) {
         await this.saveToDatabase('uploaded');
@@ -978,24 +1007,22 @@ export class Bookkeeper {
       week: bkState.week,
       homeTeam: bkState.homeTeamName,
       homeScore: bkState.bookkeeperState.homeScore,
-      homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
+      homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a, b) => a.localeCompare(b)),
       awayTeam: bkState.awayTeamName,
       awayScore: bkState.bookkeeperState.awayScore,
-      awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
+      awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a, b) => a.localeCompare(b)),
       points: bkState.game.points.map(pJson => ({
         // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
         // Fall back to regular players for legacy data
-        offensePlayers: (pJson.allOffensePlayers && pJson.allOffensePlayers.length > 0) 
-          ? [...pJson.allOffensePlayers].sort() 
-          : [...pJson.offensePlayers].sort(),
-        defensePlayers: (pJson.allDefensePlayers && pJson.allDefensePlayers.length > 0) 
-          ? [...pJson.allDefensePlayers].sort() 
-          : [...pJson.defensePlayers].sort(),
-        events: pJson.events.map(mapModelEventToApiPointEvent),
+        offensePlayers:
+          pJson.allOffensePlayers && pJson.allOffensePlayers.length > 0
+            ? [...pJson.allOffensePlayers].sort()
+            : [...pJson.offensePlayers].sort(),
+        defensePlayers:
+          pJson.allDefensePlayers && pJson.allDefensePlayers.length > 0
+            ? [...pJson.allDefensePlayers].sort()
+            : [...pJson.defensePlayers].sort(),
+        events: pJson.events.map(mapEventToApiEvent),
       })),
     };
   }
@@ -1011,13 +1038,27 @@ export class Bookkeeper {
   }
 
   // New: State getters for React
-  getCurrentView(): GameView { return this.currentView; }
-  getError(): string | null { return this.localError; }
-  getIsResumingPointMode(): boolean { return this.isResumingPointMode; }
-  getLastPlayedLine(): { home: string[]; away: string[] } | null { return this.lastPlayedLine; }
-  getHomeParticipants(): string[] { return Array.from(this.homeParticipants).sort((a, b) => a.localeCompare(b)); }
-  getAwayParticipants(): string[] { return Array.from(this.awayParticipants).sort((a, b) => a.localeCompare(b)); }
-  getGameStatus(): StoredGame['status'] { return 'in-progress'; } // TODO: Track actual status
+  getCurrentView(): GameView {
+    return this.currentView;
+  }
+  getError(): string | null {
+    return this.localError;
+  }
+  getIsResumingPointMode(): boolean {
+    return this.isResumingPointMode;
+  }
+  getLastPlayedLine(): { home: string[]; away: string[] } | null {
+    return this.lastPlayedLine;
+  }
+  getHomeParticipants(): string[] {
+    return Array.from(this.homeParticipants).sort((a, b) => a.localeCompare(b));
+  }
+  getAwayParticipants(): string[] {
+    return Array.from(this.awayParticipants).sort((a, b) => a.localeCompare(b));
+  }
+  getGameStatus(): StoredGame['status'] {
+    return 'in-progress';
+  } // TODO: Track actual status
   setIsResumingPointMode(value: boolean): void {
     this.isResumingPointMode = value;
     this.notifyListeners();
@@ -1033,14 +1074,22 @@ export class Bookkeeper {
   }
 
   // New: Button state management methods
-  public getPlayerButtonState(playerName: string, isHomeTeam: boolean): {
+  public getPlayerButtonState(
+    playerName: string,
+    isHomeTeam: boolean
+  ): {
     enabled: boolean;
-    variant: 'active' | 'enabled' | 'disabled-possession' | 'disabled-no-possession' | 'not-on-line';
+    variant:
+      | 'active'
+      | 'enabled'
+      | 'disabled-possession'
+      | 'disabled-no-possession'
+      | 'not-on-line';
     reason?: string;
   } {
     const homePlayersOnActiveLine = this.homePlayers || [];
     const awayPlayersOnActiveLine = this.awayPlayers || [];
-    const isPlayerOnActiveLine = isHomeTeam 
+    const isPlayerOnActiveLine = isHomeTeam
       ? homePlayersOnActiveLine.includes(playerName)
       : awayPlayersOnActiveLine.includes(playerName);
 
@@ -1048,7 +1097,7 @@ export class Bookkeeper {
       return {
         enabled: false,
         variant: 'not-on-line',
-        reason: 'Player not on active line'
+        reason: 'Player not on active line',
       };
     }
 
@@ -1062,7 +1111,7 @@ export class Bookkeeper {
       return {
         enabled: true,
         variant: isActivePlayer ? 'active' : 'enabled',
-        reason: 'Select puller for second half'
+        reason: 'Select puller for second half',
       };
     }
 
@@ -1071,7 +1120,7 @@ export class Bookkeeper {
       return {
         enabled: true,
         variant: isActivePlayer ? 'active' : 'enabled',
-        reason: 'Select starting player'
+        reason: 'Select starting player',
       };
     }
 
@@ -1080,13 +1129,13 @@ export class Bookkeeper {
         return {
           enabled: false,
           variant: 'disabled-no-possession',
-          reason: 'Other team picks up disc'
+          reason: 'Other team picks up disc',
         };
       }
       return {
         enabled: true,
         variant: isActivePlayer ? 'active' : 'enabled',
-        reason: 'Select player who picked up disc'
+        reason: 'Select player who picked up disc',
       };
     }
 
@@ -1094,7 +1143,7 @@ export class Bookkeeper {
       return {
         enabled: false,
         variant: 'disabled-possession',
-        reason: 'Pull in progress'
+        reason: 'Pull in progress',
       };
     }
 
@@ -1105,20 +1154,20 @@ export class Bookkeeper {
           return {
             enabled: false,
             variant: 'active',
-            reason: 'Player has disc - use action buttons'
+            reason: 'Player has disc - use action buttons',
           };
         } else {
           return {
             enabled: true,
             variant: isActivePlayer ? 'active' : 'enabled',
-            reason: isActivePlayer ? 'Player has disc' : 'Select pass target'
+            reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
           };
         }
       } else {
         return {
           enabled: false,
           variant: 'disabled-no-possession',
-          reason: 'Other team has possession'
+          reason: 'Other team has possession',
         };
       }
     }
@@ -1128,102 +1177,115 @@ export class Bookkeeper {
       return {
         enabled: false,
         variant: 'disabled-no-possession',
-        reason: 'Other team has possession'
+        reason: 'Other team has possession',
       };
     }
 
     return {
       enabled: true,
       variant: 'enabled',
-      reason: 'Available for selection'
+      reason: 'Available for selection',
     };
   }
 
-  public getActionButtonState(action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'): {
+  public getActionButtonState(
+    action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'
+  ): {
     enabled: boolean;
     reason?: string;
   } {
     const currentGameState = this.gameState();
+    const canDrop =
+      (currentGameState === GameState.Normal ||
+        currentGameState === GameState.FirstThrowQuebecVariant ||
+        currentGameState === GameState.FirstD ||
+        currentGameState === GameState.SecondD) &&
+      this.firstActor !== null &&
+      // Disable drop for picking up disc after a point (but not after a pull)
+      !(
+        this.activePoint?.getEventCount() === 0 &&
+        !this.firstPointOfGameOrHalf() &&
+        this.activePoint?.getLastEventType() !== EventType.PULL
+      );
 
     switch (action) {
       case 'pull':
         return {
           enabled: currentGameState === GameState.Pull && this.firstActor !== null,
-          reason: currentGameState !== GameState.Pull 
-            ? 'Not in pull state' 
-            : this.firstActor === null 
-              ? 'No puller selected' 
-              : undefined
+          reason:
+            currentGameState !== GameState.Pull
+              ? 'Not in pull state'
+              : this.firstActor === null
+                ? 'No puller selected'
+                : undefined,
         };
 
       case 'point':
         return {
-          enabled: (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) && 
-                   this.firstActor !== null,
-          reason: this.firstActor === null 
-            ? 'No player selected' 
-            : (currentGameState !== GameState.Normal && currentGameState !== GameState.SecondD)
-              ? 'Cannot score in current state'
-              : undefined
+          enabled:
+            (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) &&
+            this.firstActor !== null,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.Normal && currentGameState !== GameState.SecondD
+                ? 'Cannot score in current state'
+                : undefined,
         };
 
       case 'drop':
-        const canDrop = (currentGameState === GameState.Normal ||
-                        currentGameState === GameState.FirstThrowQuebecVariant ||
-                        currentGameState === GameState.FirstD ||
-                        currentGameState === GameState.SecondD) &&
-                       this.firstActor !== null &&
-                       // Disable drop for picking up disc after a point (but not after a pull)
-                       !(this.activePoint?.getEventCount() === 0 && 
-                         !this.firstPointOfGameOrHalf() && 
-                         this.activePoint?.getLastEventType() !== EventType.PULL);
         return {
           enabled: canDrop,
-          reason: this.firstActor === null 
-            ? 'No player selected'
-            : !canDrop
-              ? 'Cannot drop in current state'
-              : undefined
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : !canDrop
+                ? 'Cannot drop in current state'
+                : undefined,
         };
 
       case 'throwaway':
         return {
-          enabled: (currentGameState === GameState.Normal ||
-                   currentGameState === GameState.FirstThrowQuebecVariant ||
-                   currentGameState === GameState.FirstD ||
-                   currentGameState === GameState.SecondD) &&
-                   this.firstActor !== null,
-          reason: this.firstActor === null 
-            ? 'No player selected'
-            : 'Cannot throw away in current state'
+          enabled:
+            (currentGameState === GameState.Normal ||
+              currentGameState === GameState.FirstThrowQuebecVariant ||
+              currentGameState === GameState.FirstD ||
+              currentGameState === GameState.SecondD) &&
+            this.firstActor !== null,
+          reason:
+            this.firstActor === null ? 'No player selected' : 'Cannot throw away in current state',
         };
 
       case 'd':
         return {
-          enabled: this.firstActor !== null &&
-                   (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
-          reason: this.firstActor === null 
-            ? 'No player selected'
-            : (currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD)
-              ? 'Can only get D after turnover or another D'
-              : undefined
+          enabled:
+            this.firstActor !== null &&
+            (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
+                ? 'Can only get D after turnover or another D'
+                : undefined,
         };
 
       case 'catchD':
         return {
-          enabled: this.firstActor !== null &&
-                   (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
-          reason: this.firstActor === null 
-            ? 'No player selected'
-            : (currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD)
-              ? 'Can only get catch D after turnover or another D'
-              : undefined
+          enabled:
+            this.firstActor !== null &&
+            (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
+                ? 'Can only get catch D after turnover or another D'
+                : undefined,
         };
 
       case 'undo':
         return {
           enabled: this.getMementosCount() > 0,
-          reason: this.getMementosCount() === 0 ? 'No actions to undo' : undefined
+          reason: this.getMementosCount() === 0 ? 'No actions to undo' : undefined,
         };
 
       default:

@@ -54,7 +54,7 @@ function EditGame() {
     try {
       // Update the bookkeeper's participants and save
       await bookkeeper.performAction(
-        (bk) => {
+        bk => {
           bk.updateParticipants(homeRosterNames, awayRosterNames);
         },
         { skipViewChange: true }

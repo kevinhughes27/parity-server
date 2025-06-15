@@ -22,12 +22,12 @@ def start_stats_keeper(page: Page):
     expect(page.get_by_role("paragraph")).to_contain_text(blank_slate)
 
     page.get_by_role("button", name="Start New Game").click()
-    expect(page.locator("h5")).to_contain_text("Create Game")
+    expect(page.locator("h5")).to_contain_text("New Game")
 
 
 def select_teams(page: Page, home: str, away: str):
     # initial state
-    expect(page.locator("h5")).to_contain_text("Create Game")
+    expect(page.locator("h5")).to_contain_text("New Game")
     expect(page.locator("#root")).to_contain_text("Select Home Team to edit roster.")
     expect(page.locator("#root")).to_contain_text("Select Away Team to edit roster.")
 
@@ -102,10 +102,10 @@ def open_hamburger_menu(page: Page):
 def submit_game(page: Page):
     open_hamburger_menu(page)
     page.once("dialog", lambda dialog: dialog.accept())
-    page.get_by_role("menuitem", name="Submit game to server").click()
+    page.get_by_role("menuitem", name="Submit Game").click()
 
     page.wait_for_url("**/stat_keeper")
-    expect(page.locator("#root")).to_contain_text("Other Local Games")
+    expect(page.locator("#root")).to_contain_text("Local Games")
     expect(page.locator("#root")).to_contain_text("uploaded")
 
 
@@ -722,9 +722,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Christopher Keates").click()
     # no pull for other points
     expect(page.get_by_role("button", name="pull")).to_be_disabled()
-    expect(
-        page.get_by_role("button", name="drop")
-    ).to_be_disabled()
+    expect(page.get_by_role("button", name="drop")).to_be_disabled()
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
 
 
@@ -763,7 +761,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     expect_next_line_text(page)
     open_hamburger_menu(page)
     page.once("dialog", lambda dialog: dialog.accept())
-    page.get_by_role("menuitem", name="Record Half Time").click()
+    page.get_by_role("menuitem", name="Record Half").click()
 
     # select lines again
     select_lines(page, home_line, away_line)
@@ -995,7 +993,9 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
 
-    expect(page.locator("#root")).to_contain_text("Current line is selected. Make any adjustments needed, then click 'Resume Point'.")
+    expect(page.locator("#root")).to_contain_text(
+        "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
+    )
     expect_players_enabled(page, home_line)
     expect_players_enabled(page, away_line)
 
@@ -1022,6 +1022,4 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     # verify point
     game = get_game(1)
     assert "Kevin Barford" in game["points"][0]["offensePlayers"]
-    assert (
-        "Kyle Sprysa" in game["points"][0]["offensePlayers"]
-    )
+    assert "Kyle Sprysa" in game["points"][0]["offensePlayers"]

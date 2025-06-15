@@ -35,6 +35,7 @@ export default [
         HTMLDivElement: 'readonly',
         HTMLElement: 'readonly',
         HTMLButtonElement: 'readonly',
+        URL: 'readonly',
         MouseEvent: 'readonly',
         Node: 'readonly',
       }
