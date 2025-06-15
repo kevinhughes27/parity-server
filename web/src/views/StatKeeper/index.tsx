@@ -18,6 +18,21 @@ import {
   Chip,
 } from '@mui/material';
 
+// Helper function to determine chip color based on game status
+const getStatusColor = (status: StoredGame['status']) => {
+  switch (status) {
+    case 'uploaded':
+      return 'success';
+    case 'sync-error':
+      return 'error';
+    case 'new':
+    case 'in-progress':
+      return 'primary';
+    default:
+      return 'default';
+  }
+};
+
 function StatKeeper() {
   const navigate = useNavigate();
 
@@ -57,52 +72,9 @@ function StatKeeper() {
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
-  const renderGameItem = (game: StoredGame) => (
-    <Card
-      key={game.localId}
-      sx={{
-        mb: 2,
-        boxShadow: 2,
-        position: 'relative',
-      }}
-    >
-      <CardContent>
-        <Typography variant="h6" component="div">
-          {game.homeTeam} vs {game.awayTeam}
-        </Typography>
-
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
-          <Typography variant="body2" color="text.secondary">
-            <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
-            {game.week}
-          </Typography>
-
-          {/* ToDo extract a color helper here */}
-          <Chip
-            label={game.status}
-            size="small"
-            color={
-              game.status === 'uploaded'
-                ? 'success'
-                : game.status === 'sync-error'
-                  ? 'error'
-                  : game.status === 'new' || game.status === 'in-progress'
-                    ? 'primary'
-                    : 'default'
-            }
-          />
-        </Box>
-
-        <Typography variant="body1" sx={{ mt: 1 }}>
-          <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
-          {game.awayTeam}
-        </Typography>
-
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-          <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
-        </Typography>
-      </CardContent>
-
+  // Component to render game action buttons
+  const GameActions = ({ game }: { game: StoredGame }) => {
+    return (
       <CardActions>
         {(game.status === 'new' ||
           game.status === 'in-progress') &&
@@ -139,53 +111,110 @@ function StatKeeper() {
           Delete
         </Button>
       </CardActions>
+    );
+  };
+
+  // Component to render game metadata
+  const GameMetadata = ({ game }: { game: StoredGame }) => {
+    return (
+      <>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
+          <Typography variant="body2" color="text.secondary">
+            <strong>League:</strong> {getLeagueName(game.league_id)} | <strong>Week:</strong>{' '}
+            {game.week}
+          </Typography>
+
+          <Chip
+            label={game.status}
+            size="small"
+            color={getStatusColor(game.status)}
+          />
+        </Box>
+
+        <Typography variant="body1" sx={{ mt: 1 }}>
+          <strong>Score:</strong> {game.homeTeam} {game.homeScore} - {game.awayScore}{' '}
+          {game.awayTeam}
+        </Typography>
+
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          <strong>Last Modified:</strong> {game.lastModified.toLocaleString()}
+        </Typography>
+      </>
+    );
+  };
+
+  // Component to render a single game card
+  const renderGameItem = (game: StoredGame) => (
+    <Card
+      key={game.localId}
+      sx={{
+        mb: 2,
+        boxShadow: 2,
+        position: 'relative',
+      }}
+    >
+      <CardContent>
+        <Typography variant="h6" component="div">
+          {game.homeTeam} vs {game.awayTeam}
+        </Typography>
+        
+        <GameMetadata game={game} />
+      </CardContent>
+
+      <GameActions game={game} />
     </Card>
+  );
+
+  // Component for the app header
+  const AppHeader = () => (
+    <AppBar position="static" color="primary" elevation={1}>
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
+          StatKeeper
+        </Typography>
+        <Button
+          color="inherit"
+          variant="outlined"
+          onClick={handleStartNewGame}
+          sx={{ ml: 2, color: 'white' }}
+        >
+          Start New Game
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
+
+  // Component to render a section of games
+  const GameSection = ({ title, games }: { title: string; games: StoredGame[] }) => {
+    if (games.length === 0) return null;
+    
+    return (
+      <>
+        <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
+          {title}
+        </Typography>
+        <Box>{games.map(renderGameItem)}</Box>
+      </>
+    );
+  };
+
+  // Component for empty state
+  const EmptyState = () => (
+    <Box sx={{ mt: 4, textAlign: 'center' }}>
+      <Typography variant="body1">
+        No games stored locally. Click "Start New Game" to begin.
+      </Typography>
+    </Box>
   );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="primary" elevation={1}>
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
-            StatKeeper
-          </Typography>
-          <Button
-            color="inherit"
-            variant="outlined"
-            onClick={handleStartNewGame}
-            sx={{ ml: 2, color: 'white' }}
-          >
-            Start New Game
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <AppHeader />
 
       <Container sx={{ mt: 3 }}>
-        {resumableGames.length > 0 && (
-          <>
-            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-              In Progress
-            </Typography>
-            <Box>{resumableGames.map(renderGameItem)}</Box>
-          </>
-        )}
-
-        {otherGames.length > 0 && (
-          <>
-            <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-              Local Games
-            </Typography>
-            <Box>{otherGames.map(renderGameItem)}</Box>
-          </>
-        )}
-
-        {games.length === 0 && (
-          <Box sx={{ mt: 4, textAlign: 'center' }}>
-            <Typography variant="body1">
-              No games stored locally. Click "Start New Game" to begin.
-            </Typography>
-          </Box>
-        )}
+        <GameSection title="In Progress" games={resumableGames} />
+        <GameSection title="Local Games" games={otherGames} />
+        {games.length === 0 && <EmptyState />}
       </Container>
     </Box>
   );
