@@ -622,9 +622,13 @@ export class Bookkeeper {
   public recordPoint(): void {
     if (!this.activePoint || !this.firstActor) return;
 
+    // Store the possession state for this point before flipping it
     this.undoStack.push({
       type: 'recordPoint',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      data: {
+        wasHomePossession: this.homePossession
+      }
     });
 
     this.activePoint.addEvent({
@@ -695,7 +699,7 @@ export class Bookkeeper {
         this.undoRecordCatchD();
         break;
       case 'recordPoint':
-        this.undoRecordPoint();
+        this.undoRecordPoint(command);
         break;
       case 'recordHalf':
         this.undoRecordHalf();
@@ -776,26 +780,25 @@ export class Bookkeeper {
     this.firstActor = catchDEvent?.firstActor || null; // Restore player who got the catch D
   }
 
-  private undoRecordPoint(): void {
-    // Restore activePoint from completed points first
+  private undoRecordPoint(command: UndoCommand): void {
+    const data = command.data;
+    
+    // Restore activePoint from completed points
     const lastPoint = this.points.pop();
     if (!lastPoint) return;
     
     this.activePoint = lastPoint;
     this.activePoint.removeLastEvent(); // Remove the POINT event
     
-    // Determine the correct possession for this point
-    const pointWasHomePossession = this.determinePointPossession(lastPoint);
-    
-    // Decrement the correct team's score
-    if (pointWasHomePossession) {
+    // Decrement the correct team's score using stored possession data
+    if (data.wasHomePossession) {
       this.homeScore--;
     } else {
       this.awayScore--;
     }
     
-    // Set possession to match the point that was being played
-    this.homePossession = pointWasHomePossession;
+    // Restore possession to what it was during the point
+    this.homePossession = data.wasHomePossession;
     
     // Restore firstActor from the last event
     const lastEvent = this.activePoint.getLastEvent();
@@ -873,21 +876,6 @@ export class Bookkeeper {
     }
   }
 
-  private determinePointPossession(point: PointModel): boolean {
-    // Look at the first event to determine who started with possession
-    const firstEvent = point.events[0];
-    
-    if (firstEvent?.type === EventType.PULL) {
-      // If it starts with a pull, the puller's team was on offense initially
-      const puller = firstEvent.firstActor;
-      return this.homeParticipants.has(puller);
-    }
-    
-    // For other cases, we can infer from the offense/defense player lists
-    // Check if the first offensive player is on the home team
-    const firstOffensePlayer = point.offensePlayers[0];
-    return this.homeParticipants.has(firstOffensePlayer);
-  }
 
   // New: Automatic view state management
   private determineInitialView(): void {
