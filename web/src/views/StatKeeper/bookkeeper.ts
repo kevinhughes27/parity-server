@@ -812,6 +812,10 @@ export class Bookkeeper {
     if (this.lastPlayedLine) {
       this.homePlayers = [...this.lastPlayedLine.home];
       this.awayPlayers = [...this.lastPlayedLine.away];
+      
+      // Also update participants sets so the UI shows the correct roster
+      this.lastPlayedLine.home.forEach(p => this.homeParticipants.add(p));
+      this.lastPlayedLine.away.forEach(p => this.awayParticipants.add(p));
     }
     
     // Set UI state to resume the point
