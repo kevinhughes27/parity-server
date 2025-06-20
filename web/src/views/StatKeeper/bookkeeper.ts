@@ -51,6 +51,8 @@ interface BookkeeperState {
   awayScore: number;
   homeParticipants: string[];
   awayParticipants: string[];
+  lastPlayedLine: { home: string[]; away: string[] } | null;
+  isResumingPointMode: boolean;
 }
 
 interface SerializedGameData {
@@ -199,7 +201,11 @@ export class Bookkeeper {
       homeTeamId: storedGame.homeTeamId,
       awayTeamId: storedGame.awayTeamId,
       game: { points: transformedGamePoints.map(p => p.toJSON()) },
-      bookkeeperState: bookkeeperStateForHydration,
+      bookkeeperState: {
+        ...bookkeeperStateForHydration,
+        lastPlayedLine: storedGame.bookkeeperState?.lastPlayedLine || null,
+        isResumingPointMode: storedGame.bookkeeperState?.isResumingPointMode || false,
+      },
       undoStack: storedGame.undoStack || [],
     };
 
@@ -227,6 +233,8 @@ export class Bookkeeper {
     this.awayScore = state.awayScore;
     this.homeParticipants = new Set(state.homeParticipants);
     this.awayParticipants = new Set(state.awayParticipants);
+    this.lastPlayedLine = state.lastPlayedLine || null;
+    this.isResumingPointMode = state.isResumingPointMode || false;
 
     this.undoStack = data.undoStack || [];
   }
@@ -244,6 +252,8 @@ export class Bookkeeper {
       awayScore: this.awayScore,
       homeParticipants: Array.from(this.homeParticipants),
       awayParticipants: Array.from(this.awayParticipants),
+      lastPlayedLine: this.lastPlayedLine,
+      isResumingPointMode: this.isResumingPointMode,
     };
 
     return {
@@ -1098,6 +1108,8 @@ export class Bookkeeper {
       awayScore: 0,
       homeParticipants: sortedHomeRoster,
       awayParticipants: sortedAwayRoster,
+      lastPlayedLine: null,
+      isResumingPointMode: false,
     };
 
     const gameData: SerializedGameData = {
