@@ -798,9 +798,15 @@ export class Bookkeeper {
       }
     }
     
-    // Clear line selection (recordPoint cleared these)
-    this.homePlayers = null;
-    this.awayPlayers = null;
+    // Restore line selection from the lastPlayedLine (which was set when the point was scored)
+    if (this.lastPlayedLine) {
+      this.homePlayers = [...this.lastPlayedLine.home];
+      this.awayPlayers = [...this.lastPlayedLine.away];
+    }
+    
+    // Set UI state to resume the point
+    this.isResumingPointMode = true;
+    this.currentView = 'recordStats';
   }
 
   private undoRecordHalf(): void {
