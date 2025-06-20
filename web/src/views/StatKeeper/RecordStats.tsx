@@ -1,9 +1,9 @@
 import React from 'react';
-import { Bookkeeper } from './bookkeeper';
+import { Bookkeeper, GameState } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button } from '@mui/material';
-import { GameState, EventType } from './models';
+import { EventType } from './models';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
