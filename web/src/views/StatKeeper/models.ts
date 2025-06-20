@@ -21,18 +21,7 @@ export enum GameState {
   SecondD = 7,
 }
 
-// Public interfaces for React components
-export interface League {
-  id: string;
-  name: string;
-  lineSize: number;
-}
-
-export interface Team {
-  id: number;
-  name: string;
-}
-
+// Event interface for internal use
 export interface Event {
   type: EventType;
   firstActor: string;
@@ -186,45 +175,3 @@ export class PointModel {
   }
 }
 
-export class GameModel {
-  points: PointModel[];
-
-  constructor(points: PointModel[] = []) {
-    this.points = points;
-  }
-
-  getPointCount(): number {
-    return this.points.length;
-  }
-
-  addPoint(point: PointModel): void {
-    this.points.push(point);
-  }
-
-  popPoint(): PointModel | undefined {
-    return this.points.pop();
-  }
-
-  toJSON(): {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
-  } {
-    return {
-      points: this.points.map(p => p.toJSON()),
-    };
-  }
-
-  static fromJSON(json: {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
-  }): GameModel {
-    return new GameModel(json.points.map(pJson => PointModel.fromJSON(pJson)));
-  }
-}
-
-// Public types for React components
-export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
-
-export interface ActionOptions {
-  skipViewChange?: boolean;
-  skipSave?: boolean;
-  newStatus?: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
-}

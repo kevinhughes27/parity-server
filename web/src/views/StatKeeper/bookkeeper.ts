@@ -1,17 +1,18 @@
 import {
   EventType,
   GameState,
-  League,
-  Team,
   PointModel,
-  GameModel,
-  GameView,
-  ActionOptions,
   mapApiEventToEvent,
   mapEventToApiEvent,
 } from './models';
 import { db, StoredGame } from './db';
-import { getLeagueName, type Point as ApiPoint, leagues as apiLeagues } from '../../api';
+import { 
+  getLeagueName, 
+  type Point as ApiPoint, 
+  type LeagueFromJson as League,
+  type Team,
+  leagues as apiLeagues 
+} from '../../api';
 
 // Private types for Bookkeeper internal use
 enum MementoType {
@@ -27,6 +28,14 @@ enum MementoType {
   RecordPoint,
   RecordHalf,
   RecordSubstitution,
+}
+
+type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
+
+interface ActionOptions {
+  skipViewChange?: boolean;
+  skipSave?: boolean;
+  newStatus?: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
 }
 
 interface SerializedMemento {
@@ -83,7 +92,7 @@ export class Bookkeeper {
   public awayTeam: Team;
   public week: number;
 
-  public activeGame: GameModel = new GameModel();
+  public activeGame: PointModel[] = [];
   private mementos: InternalMemento[];
 
   // Volatile state - needs to be serialized/deserialized
@@ -106,6 +115,7 @@ export class Bookkeeper {
 
   // New: Observer pattern for React integration
   private listeners: Set<() => void> = new Set();
+  private localError: string | null = null;
 
   constructor(
     league: League,
@@ -213,7 +223,7 @@ export class Bookkeeper {
   }
 
   private hydrate(data: SerializedGameData): void {
-    this.activeGame = GameModel.fromJSON(data.game);
+    this.activeGame = data.game.points.map(pJson => PointModel.fromJSON(pJson));
 
     const state = data.bookkeeperState;
     this.activePoint = state.activePoint ? PointModel.fromJSON(state.activePoint) : null;
@@ -317,7 +327,7 @@ export class Bookkeeper {
       awayTeamName: this.awayTeam.name,
       homeTeamId: this.homeTeam.id,
       awayTeamId: this.awayTeam.id,
-      game: this.activeGame.toJSON(),
+      game: { points: this.activeGame.map(p => p.toJSON()) },
       bookkeeperState: bookkeeperState,
       mementos: serializedMementos,
     };
@@ -414,7 +424,7 @@ export class Bookkeeper {
   }
 
   public firstPointOfGameOrHalf(): boolean {
-    return this.activeGame.getPointCount() === this.pointsAtHalf;
+    return this.activeGame.length === this.pointsAtHalf;
   }
 
   private changePossession(): void {
@@ -686,7 +696,7 @@ export class Bookkeeper {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    this.activeGame.addPoint(this.activePoint);
+    this.activeGame.push(this.activePoint);
 
     if (this.homePossession) {
       this.homeScore++;
@@ -716,7 +726,7 @@ export class Bookkeeper {
       savedIsResumingPointMode: this.isResumingPointMode,
     };
     this.mementos.push(this.createRecordHalfMemento(mementoData));
-    this.pointsAtHalf = this.activeGame.getPointCount();
+    this.pointsAtHalf = this.activeGame.length;
 
     // Reset line selection and UI state for second half
     this.homePlayers = null;
@@ -743,8 +753,8 @@ export class Bookkeeper {
   }
 
   public getLastCompletedPointPrettyPrint(): string[] {
-    if (this.activeGame.getPointCount() > 0) {
-      const lastPoint = this.activeGame.points[this.activeGame.getPointCount() - 1];
+    if (this.activeGame.length > 0) {
+      const lastPoint = this.activeGame[this.activeGame.length - 1];
       return lastPoint.prettyPrint();
     }
     return [];
@@ -846,7 +856,7 @@ export class Bookkeeper {
         this.changePossession();
 
         // Restore activePoint from game history
-        const undonePoint = this.activeGame.popPoint();
+        const undonePoint = this.activeGame.pop();
         if (undonePoint) {
           this.activePoint = undonePoint;
           this.activePoint.removeLastEvent(); // Remove the POINT event itself
