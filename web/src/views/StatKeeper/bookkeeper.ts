@@ -5,10 +5,6 @@ import {
   Team,
   PointModel,
   GameModel,
-  SerializedMemento,
-  MementoType,
-  BookkeeperVolatileState,
-  SerializedGameData,
   GameView,
   ActionOptions,
   mapApiEventToEvent,
@@ -17,10 +13,56 @@ import {
 import { db, StoredGame } from './db';
 import { getLeagueName, type Point as ApiPoint, leagues as apiLeagues } from '../../api';
 
+// Private types for Bookkeeper internal use
+enum MementoType {
+  GenericUndoLastEvent,
+  UndoTurnover,
+  RecordFirstActor,
+  RecordPull,
+  RecordPass,
+  RecordDrop,
+  RecordThrowAway,
+  RecordD,
+  RecordCatchD,
+  RecordPoint,
+  RecordHalf,
+  RecordSubstitution,
+}
+
+interface SerializedMemento {
+  type: MementoType;
+  data: any;
+}
+
 interface InternalMemento {
   type: MementoType;
   data: any;
   apply: () => void;
+}
+
+interface BookkeeperState {
+  activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: any[] } | null;
+  firstActor: string | null;
+  homePossession: boolean;
+  pointsAtHalf: number;
+  homePlayers: string[] | null;
+  awayPlayers: string[] | null;
+  homeScore: number;
+  awayScore: number;
+  homeParticipants: string[];
+  awayParticipants: string[];
+}
+
+interface SerializedGameData {
+  league_id: string;
+  week: number;
+  homeTeamName: string;
+  homeTeamId: number;
+  awayTeamName: string;
+  awayTeamId: number;
+  game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: any[] }> };
+  bookkeeperState: BookkeeperState;
+  mementos: SerializedMemento[];
 }
 
 interface UploadedGamePayload {
@@ -122,7 +164,7 @@ export class Bookkeeper {
       activePointForHydration = PointModel.fromJSON(storedGame.bookkeeperState.activePoint);
     }
 
-    const bookkeeperStateForHydration: BookkeeperVolatileState = {
+    const bookkeeperStateForHydration: BookkeeperState = {
       ...(storedGame.bookkeeperState || {
         activePoint: null,
         firstActor: null,
@@ -250,7 +292,7 @@ export class Bookkeeper {
   }
 
   public serialize(): SerializedGameData {
-    const bookkeeperState: BookkeeperVolatileState = {
+    const bookkeeperState: BookkeeperState = {
       activePoint: this.activePoint ? this.activePoint.toJSON() : null,
       firstActor: this.firstActor,
       homePossession: this.homePossession,
@@ -935,7 +977,7 @@ export class Bookkeeper {
       events: modelPointJson.events.map(mapEventToApiEvent),
     }));
 
-    const bookkeeperStateForStorage: BookkeeperVolatileState = {
+    const bookkeeperStateForStorage: BookkeeperState = {
       ...serializedData.bookkeeperState,
       homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
         a.localeCompare(b)
@@ -1076,7 +1118,7 @@ export class Bookkeeper {
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
 
-    const initialBookkeeperState: BookkeeperVolatileState = {
+    const initialBookkeeperState: BookkeeperState = {
       activePoint: null,
       firstActor: null,
       homePossession: true,

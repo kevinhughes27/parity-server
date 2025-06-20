@@ -1,7 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 // probably would be better and simpler to use the PointModel here
 import { type Point } from '../../api';
-import { type SerializedMemento, type BookkeeperVolatileState } from './models';
 
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
@@ -21,8 +20,8 @@ export interface StoredGame {
   status: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
   lastModified: Date;
 
-  bookkeeperState?: BookkeeperVolatileState;
-  mementos?: SerializedMemento[];
+  bookkeeperState?: any; // Internal bookkeeper state
+  mementos?: any[]; // Internal memento data
 }
 
 const db = new Dexie('StatKeeperDB') as Dexie & {
