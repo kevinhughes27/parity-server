@@ -21,7 +21,7 @@ export interface StoredGame {
   lastModified: Date;
 
   bookkeeperState?: any; // Internal bookkeeper state
-  mementos?: any[]; // Internal memento data
+  undoStack?: any[]; // Internal undo command data
 }
 
 const db = new Dexie('StatKeeperDB') as Dexie & {
@@ -34,7 +34,7 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 // Define the database schema and versioning
 db.version(1).stores({
   games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, bookkeeperState, *mementos',
+    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, bookkeeperState, *undoStack',
 });
 
 export { db };

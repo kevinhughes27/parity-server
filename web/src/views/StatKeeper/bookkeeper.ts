@@ -14,19 +14,11 @@ import {
 } from '../../api';
 
 // Private types for Bookkeeper internal use
-enum MementoType {
-  GenericUndoLastEvent,
-  UndoTurnover,
-  RecordFirstActor,
-  RecordPull,
-  RecordPass,
-  RecordDrop,
-  RecordThrowAway,
-  RecordD,
-  RecordCatchD,
-  RecordPoint,
-  RecordHalf,
-  RecordSubstitution,
+interface UndoCommand {
+  type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' | 
+        'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf' | 'recordSubstitution';
+  timestamp: string;
+  data?: any; // Minimal data only when we can't infer
 }
 
 type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
@@ -47,16 +39,6 @@ interface ActionOptions {
   newStatus?: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
 }
 
-interface SerializedMemento {
-  type: MementoType;
-  data: any;
-}
-
-interface InternalMemento {
-  type: MementoType;
-  data: any;
-  apply: () => void;
-}
 
 interface BookkeeperState {
   activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: any[] } | null;
@@ -80,7 +62,7 @@ interface SerializedGameData {
   awayTeamId: number;
   game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: any[] }> };
   bookkeeperState: BookkeeperState;
-  mementos: SerializedMemento[];
+  undoStack: UndoCommand[];
 }
 
 interface UploadedGamePayload {
@@ -102,7 +84,7 @@ export class Bookkeeper {
   public week: number;
 
   public points: PointModel[] = [];
-  private mementos: InternalMemento[];
+  private undoStack: UndoCommand[] = [];
 
   // Volatile state - needs to be serialized/deserialized
   public activePoint: PointModel | null = null;
@@ -140,7 +122,7 @@ export class Bookkeeper {
     this.awayTeam = awayTeam;
     this.gameId = gameId || null;
 
-    this.mementos = [];
+    this.undoStack = [];
     this.homeParticipants = new Set<string>();
     this.awayParticipants = new Set<string>();
 
@@ -218,7 +200,7 @@ export class Bookkeeper {
       awayTeamId: storedGame.awayTeamId,
       game: { points: transformedGamePoints.map(p => p.toJSON()) },
       bookkeeperState: bookkeeperStateForHydration,
-      mementos: storedGame.mementos || [],
+      undoStack: storedGame.undoStack || [],
     };
 
     return new Bookkeeper(
@@ -246,69 +228,9 @@ export class Bookkeeper {
     this.homeParticipants = new Set(state.homeParticipants);
     this.awayParticipants = new Set(state.awayParticipants);
 
-    this.mementos = data.mementos.map(sm => this.recreateInternalMemento(sm));
+    this.undoStack = data.undoStack || [];
   }
 
-  private recreateInternalMemento(sm: SerializedMemento): InternalMemento {
-    const mData = sm.data;
-    switch (sm.type) {
-      case MementoType.RecordFirstActor:
-        return this.createRecordFirstActorMemento(
-          mData as { savedFirstActor: string | null; pointJustCreated: boolean }
-        );
-      case MementoType.RecordPull:
-        return this.createRecordPullMemento(mData as { savedFirstActor: string | null });
-      case MementoType.RecordPass:
-      case MementoType.RecordD:
-      case MementoType.GenericUndoLastEvent:
-        return this.createUndoLastEventStyleMemento(
-          sm.type,
-          mData as { savedFirstActor: string | null }
-        );
-      case MementoType.RecordDrop:
-      case MementoType.RecordThrowAway:
-      case MementoType.UndoTurnover:
-        return this.createTurnoverStyleMemento(
-          sm.type,
-          mData as { savedFirstActor: string | null }
-        );
-      case MementoType.RecordCatchD:
-        return this.createRecordCatchDMemento(mData as { savedFirstActor: string | null });
-      case MementoType.RecordPoint:
-        return this.createRecordPointMemento(
-          mData as {
-            savedFirstActor: string | null;
-            savedHomePlayers: string[] | null;
-            savedAwayPlayers: string[] | null;
-            wasHomePossession: boolean;
-          }
-        );
-      case MementoType.RecordHalf:
-        return this.createRecordHalfMemento(
-          mData as {
-            previousPointsAtHalf: number;
-            savedHomePlayers: string[] | null;
-            savedAwayPlayers: string[] | null;
-            savedLastPlayedLine: { home: string[]; away: string[] } | null;
-            savedIsResumingPointMode: boolean;
-          }
-        );
-      case MementoType.RecordSubstitution:
-        return this.createRecordSubstitutionMemento(
-          mData as {
-            savedHomePlayers: string[] | null;
-            savedAwayPlayers: string[] | null;
-            savedOffensePlayers: string[];
-            savedDefensePlayers: string[];
-            savedAllOffensePlayers: Set<string>;
-            savedAllDefensePlayers: Set<string>;
-          }
-        );
-      default:
-        console.warn('Unknown memento type during hydration:', sm.type);
-        return { type: sm.type, data: mData, apply: () => {} };
-    }
-  }
 
   public serialize(): SerializedGameData {
     const bookkeeperState: BookkeeperState = {
@@ -324,11 +246,6 @@ export class Bookkeeper {
       awayParticipants: Array.from(this.awayParticipants),
     };
 
-    const serializedMementos: SerializedMemento[] = this.mementos.map(m => ({
-      type: m.type,
-      data: m.data,
-    }));
-
     return {
       league_id: this.league.id,
       week: this.week,
@@ -338,7 +255,7 @@ export class Bookkeeper {
       awayTeamId: this.awayTeam.id,
       game: { points: this.points.map(p => p.toJSON()) },
       bookkeeperState: bookkeeperState,
-      mementos: serializedMementos,
+      undoStack: this.undoStack,
     };
   }
 
@@ -453,16 +370,19 @@ export class Bookkeeper {
   ): void {
     if (!this.activePoint) return;
 
-    // Create memento for undo
-    const mementoData = {
-      savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
-      savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
-      savedOffensePlayers: [...this.activePoint.offensePlayers],
-      savedDefensePlayers: [...this.activePoint.defensePlayers],
-      savedAllOffensePlayers: new Set(this.activePoint.allOffensePlayers),
-      savedAllDefensePlayers: new Set(this.activePoint.allDefensePlayers),
-    };
-    this.mementos.push(this.createRecordSubstitutionMemento(mementoData));
+    // Store undo data for substitution
+    this.undoStack.push({
+      type: 'recordSubstitution',
+      timestamp: new Date().toISOString(),
+      data: {
+        savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
+        savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
+        savedOffensePlayers: [...this.activePoint.offensePlayers],
+        savedDefensePlayers: [...this.activePoint.defensePlayers],
+        savedAllOffensePlayers: new Set(this.activePoint.allOffensePlayers),
+        savedAllDefensePlayers: new Set(this.activePoint.allDefensePlayers),
+      }
+    });
 
     // Update current line
     this.homePlayers = [...newHomePlayers];
@@ -533,11 +453,10 @@ export class Bookkeeper {
   }
 
   public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
-    const mementoData = {
-      savedFirstActor: this.firstActor,
-      pointJustCreated: this.activePoint === null,
-    };
-    this.mementos.push(this.createRecordFirstActorMemento(mementoData));
+    this.undoStack.push({
+      type: 'recordFirstActor',
+      timestamp: new Date().toISOString()
+    });
 
     if (this.activePoint === null) {
       // This implies the point is starting from scratch (e.g. first point of game/half)
@@ -595,8 +514,10 @@ export class Bookkeeper {
   public recordPull(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createRecordPullMemento(mementoData));
+    this.undoStack.push({
+      type: 'recordPull',
+      timestamp: new Date().toISOString()
+    });
 
     this.activePoint.swapOffenseAndDefense();
     this.changePossession();
@@ -612,8 +533,10 @@ export class Bookkeeper {
   public recordThrowAway(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createTurnoverStyleMemento(MementoType.RecordThrowAway, mementoData));
+    this.undoStack.push({
+      type: 'recordThrowAway',
+      timestamp: new Date().toISOString()
+    });
 
     this.changePossession();
     this.activePoint.addEvent({
@@ -628,8 +551,10 @@ export class Bookkeeper {
   public recordPass(receiver: string): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createUndoLastEventStyleMemento(MementoType.RecordPass, mementoData));
+    this.undoStack.push({
+      type: 'recordPass',
+      timestamp: new Date().toISOString()
+    });
 
     this.activePoint.addEvent({
       type: EventType.PASS,
@@ -643,8 +568,10 @@ export class Bookkeeper {
   public recordDrop(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createTurnoverStyleMemento(MementoType.RecordDrop, mementoData));
+    this.undoStack.push({
+      type: 'recordDrop',
+      timestamp: new Date().toISOString()
+    });
 
     this.changePossession();
     this.activePoint.addEvent({
@@ -659,8 +586,10 @@ export class Bookkeeper {
   public recordD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createUndoLastEventStyleMemento(MementoType.RecordD, mementoData));
+    this.undoStack.push({
+      type: 'recordD',
+      timestamp: new Date().toISOString()
+    });
 
     this.activePoint.addEvent({
       type: EventType.DEFENSE,
@@ -674,8 +603,10 @@ export class Bookkeeper {
   public recordCatchD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = { savedFirstActor: this.firstActor };
-    this.mementos.push(this.createRecordCatchDMemento(mementoData));
+    this.undoStack.push({
+      type: 'recordCatchD',
+      timestamp: new Date().toISOString()
+    });
 
     this.activePoint.addEvent({
       type: EventType.DEFENSE, // Still a DEFENSE event type
@@ -691,13 +622,10 @@ export class Bookkeeper {
   public recordPoint(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    const mementoData = {
-      savedFirstActor: this.firstActor,
-      savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
-      savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
-      wasHomePossession: this.homePossession,
-    };
-    this.mementos.push(this.createRecordPointMemento(mementoData));
+    this.undoStack.push({
+      type: 'recordPoint',
+      timestamp: new Date().toISOString()
+    });
 
     this.activePoint.addEvent({
       type: EventType.POINT,
@@ -727,14 +655,11 @@ export class Bookkeeper {
   public recordHalf(): void {
     if (this.pointsAtHalf > 0) return; // Half already recorded
 
-    const mementoData = {
-      previousPointsAtHalf: this.pointsAtHalf,
-      savedHomePlayers: this.homePlayers ? [...this.homePlayers] : null,
-      savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
-      savedLastPlayedLine: this.lastPlayedLine,
-      savedIsResumingPointMode: this.isResumingPointMode,
-    };
-    this.mementos.push(this.createRecordHalfMemento(mementoData));
+    this.undoStack.push({
+      type: 'recordHalf',
+      timestamp: new Date().toISOString()
+    });
+
     this.pointsAtHalf = this.points.length;
 
     // Reset line selection and UI state for second half
@@ -745,11 +670,39 @@ export class Bookkeeper {
   }
 
   public undo(): void {
-    if (this.mementos.length > 0) {
-      const lastMemento = this.mementos.pop();
-      if (lastMemento) {
-        lastMemento.apply();
-      }
+    if (this.undoStack.length === 0) return;
+    
+    const command = this.undoStack.pop()!;
+    
+    switch (command.type) {
+      case 'recordFirstActor':
+        this.undoRecordFirstActor();
+        break;
+      case 'recordPull':
+        this.undoRecordPull();
+        break;
+      case 'recordPass':
+        this.undoRecordPass();
+        break;
+      case 'recordDrop':
+      case 'recordThrowAway':
+        this.undoRecordTurnover();
+        break;
+      case 'recordD':
+        this.undoRecordD();
+        break;
+      case 'recordCatchD':
+        this.undoRecordCatchD();
+        break;
+      case 'recordPoint':
+        this.undoRecordPoint();
+        break;
+      case 'recordHalf':
+        this.undoRecordHalf();
+        break;
+      case 'recordSubstitution':
+        this.undoRecordSubstitution(command);
+        break;
     }
   }
 
@@ -769,171 +722,158 @@ export class Bookkeeper {
     return [];
   }
 
-  // Memento Creation Helpers
-  private createRecordFirstActorMemento(data: {
-    savedFirstActor: string | null;
-    pointJustCreated: boolean;
-  }): InternalMemento {
-    return {
-      type: MementoType.RecordFirstActor,
-      data: data,
-      apply: () => {
-        this.firstActor = data.savedFirstActor;
-        if (
-          data.pointJustCreated && // True if activePoint was null when recordFirstActor was called
-          this.activePoint && // activePoint was created by startPointAndSetPossession
-          this.activePoint.getEventCount() === 0 // No events added yet by recordFirstActor itself
-        ) {
-          // This implies we are undoing the very first action that created this activePoint.
-          this.activePoint = null;
-        }
-      },
-    };
+  // Undo Implementation Methods
+  private undoRecordFirstActor(): void {
+    // Can infer if point was created by checking if it has no events
+    const pointWasCreated = this.activePoint && this.activePoint.getEventCount() === 0;
+    
+    this.firstActor = null; // Reset firstActor
+    
+    if (pointWasCreated) {
+      this.activePoint = null;
+    }
   }
 
-  private createRecordPullMemento(data: { savedFirstActor: string | null }): InternalMemento {
-    return {
-      type: MementoType.RecordPull,
-      data: data,
-      apply: () => {
-        this.activePoint!.removeLastEvent(); // Remove PULL event
-        this.changePossession(); // Revert possession flip from pull
-        this.activePoint!.swapOffenseAndDefense(); // Revert player swap
-        this.firstActor = data.savedFirstActor;
-      },
-    };
+  private undoRecordPull(): void {
+    if (!this.activePoint) return;
+    
+    const pullEvent = this.activePoint.removeLastEvent(); // Remove PULL event
+    this.changePossession(); // Revert possession flip from pull
+    this.activePoint.swapOffenseAndDefense(); // Revert player swap
+    this.firstActor = pullEvent?.firstActor || null; // Restore the puller as firstActor
   }
 
-  private createUndoLastEventStyleMemento(
-    type: MementoType,
-    data: { savedFirstActor: string | null }
-  ): InternalMemento {
-    // For Pass, D (non-turnover D)
-    return {
-      type: type,
-      data: data,
-      apply: () => {
-        this.activePoint!.removeLastEvent();
-        this.firstActor = data.savedFirstActor;
-      },
-    };
+  private undoRecordPass(): void {
+    if (!this.activePoint) return;
+    
+    const passEvent = this.activePoint.removeLastEvent(); // Remove PASS event
+    this.firstActor = passEvent?.firstActor || null; // Restore passer as firstActor
   }
 
-  private createTurnoverStyleMemento(
-    type: MementoType, // For ThrowAway, Drop
-    data: { savedFirstActor: string | null }
-  ): InternalMemento {
-    return {
-      type: type,
-      data: data,
-      apply: () => {
-        this.activePoint!.removeLastEvent();
-        this.firstActor = data.savedFirstActor;
-        this.changePossession(); // Revert possession flip from turnover
-      },
-    };
+  private undoRecordTurnover(): void {
+    if (!this.activePoint) return;
+    
+    const turnoverEvent = this.activePoint.removeLastEvent(); // Remove DROP/THROWAWAY event
+    this.firstActor = turnoverEvent?.firstActor || null; // Restore player who had disc
+    this.changePossession(); // Revert possession flip from turnover
   }
 
-  private createRecordCatchDMemento(data: { savedFirstActor: string | null }): InternalMemento {
-    return {
-      type: MementoType.RecordCatchD,
-      data: data,
-      apply: () => {
-        this.activePoint!.removeLastEvent();
-        this.firstActor = data.savedFirstActor;
-      },
-    };
+  private undoRecordD(): void {
+    if (!this.activePoint) return;
+    
+    const dEvent = this.activePoint.removeLastEvent(); // Remove DEFENSE event
+    this.firstActor = dEvent?.firstActor || null; // Restore player who got the D
   }
 
-  private createRecordPointMemento(data: {
-    savedFirstActor: string | null;
-    savedHomePlayers: string[] | null;
-    savedAwayPlayers: string[] | null;
-    wasHomePossession: boolean;
-  }): InternalMemento {
-    return {
-      type: MementoType.RecordPoint,
-      data: data,
-      apply: () => {
-        // Revert score
-        if (data.wasHomePossession) {
-          this.homeScore--;
-        } else {
-          this.awayScore--;
-        }
-        // Revert possession for the *next* point (which was flipped by recordPoint)
-        this.changePossession();
-
-        // Restore activePoint from game history
-        const undonePoint = this.points.pop();
-        if (undonePoint) {
-          this.activePoint = undonePoint;
-          this.activePoint.removeLastEvent(); // Remove the POINT event itself
-        }
-        // Restore players on line and firstActor for the point that was just undone
-        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
-        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
-        this.firstActor = data.savedFirstActor;
-        // Possession for the *current undone point* is restored
-        this.homePossession = data.wasHomePossession;
-      },
-    };
+  private undoRecordCatchD(): void {
+    if (!this.activePoint) return;
+    
+    const catchDEvent = this.activePoint.removeLastEvent(); // Remove DEFENSE event
+    this.firstActor = catchDEvent?.firstActor || null; // Restore player who got the catch D
   }
 
-  private createRecordHalfMemento(data: {
-    previousPointsAtHalf: number;
-    savedHomePlayers: string[] | null;
-    savedAwayPlayers: string[] | null;
-    savedLastPlayedLine: { home: string[]; away: string[] } | null;
-    savedIsResumingPointMode: boolean;
-  }): InternalMemento {
-    return {
-      type: MementoType.RecordHalf,
-      data: data,
-      apply: () => {
-        this.pointsAtHalf = data.previousPointsAtHalf;
-        // Restore line selection and UI state when undoing halftime
-        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
-        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
-        this.lastPlayedLine = data.savedLastPlayedLine;
-        this.isResumingPointMode = data.savedIsResumingPointMode;
-      },
-    };
+  private undoRecordPoint(): void {
+    // Infer who scored from current possession
+    if (this.homePossession) {
+      this.homeScore--;
+    } else {
+      this.awayScore--;
+    }
+    
+    // Flip possession back (recordPoint flipped it for next point)
+    this.changePossession();
+    
+    // Restore activePoint from completed points
+    const lastPoint = this.points.pop();
+    if (lastPoint) {
+      this.activePoint = lastPoint;
+      this.activePoint.removeLastEvent(); // Remove the POINT event
+      
+      // Restore firstActor from the last event
+      const lastEvent = this.activePoint.getLastEvent();
+      if (lastEvent?.type === EventType.PASS) {
+        this.firstActor = lastEvent.secondActor; // The receiver who scored
+      } else {
+        this.firstActor = lastEvent?.firstActor || null;
+      }
+    }
+    
+    // Clear line selection (recordPoint cleared these)
+    this.homePlayers = null;
+    this.awayPlayers = null;
   }
 
-  private createRecordSubstitutionMemento(data: {
-    savedHomePlayers: string[] | null;
-    savedAwayPlayers: string[] | null;
-    savedOffensePlayers: string[];
-    savedDefensePlayers: string[];
-    savedAllOffensePlayers: Set<string>;
-    savedAllDefensePlayers: Set<string>;
-  }): InternalMemento {
-    return {
-      type: MementoType.RecordSubstitution,
-      data: data,
-      apply: () => {
-        // Restore line players
-        this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
-        this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
+  private undoRecordHalf(): void {
+    this.pointsAtHalf = 0; // Reset to "no half recorded"
+    
+    // Restore line state from the last completed point
+    if (this.points.length > 0) {
+      const lastPoint = this.points[this.points.length - 1];
+      
+      // Determine which team had possession for that point
+      const lastPointWasHomePossession = this.determinePointPossession(lastPoint);
+      
+      if (lastPointWasHomePossession) {
+        this.homePlayers = [...lastPoint.offensePlayers];
+        this.awayPlayers = [...lastPoint.defensePlayers];
+      } else {
+        this.homePlayers = [...lastPoint.defensePlayers];
+        this.awayPlayers = [...lastPoint.offensePlayers];
+      }
+      
+      // Restore lastPlayedLine
+      this.lastPlayedLine = {
+        home: [...this.homePlayers],
+        away: [...this.awayPlayers]
+      };
+    } else {
+      // No points played yet, clear everything
+      this.homePlayers = null;
+      this.awayPlayers = null;
+      this.lastPlayedLine = null;
+    }
+    
+    this.isResumingPointMode = false; // Always false when undoing half
+  }
 
-        if (this.activePoint) {
-          // Restore point players
-          this.activePoint.offensePlayers = [...data.savedOffensePlayers];
-          this.activePoint.defensePlayers = [...data.savedDefensePlayers];
-          this.activePoint.allOffensePlayers = new Set(data.savedAllOffensePlayers);
-          this.activePoint.allDefensePlayers = new Set(data.savedAllDefensePlayers);
+  private undoRecordSubstitution(command: UndoCommand): void {
+    const data = command.data;
+    
+    // Restore line players
+    this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
+    this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
 
-          // Remove substitution events that were added
-          while (
-            this.activePoint.events.length > 0 &&
-            this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION
-          ) {
-            this.activePoint.removeLastEvent();
-          }
-        }
-      },
-    };
+    if (this.activePoint) {
+      // Restore point players
+      this.activePoint.offensePlayers = [...data.savedOffensePlayers];
+      this.activePoint.defensePlayers = [...data.savedDefensePlayers];
+      this.activePoint.allOffensePlayers = new Set(data.savedAllOffensePlayers);
+      this.activePoint.allDefensePlayers = new Set(data.savedAllDefensePlayers);
+
+      // Remove substitution events that were added
+      while (
+        this.activePoint.events.length > 0 &&
+        this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION
+      ) {
+        this.activePoint.removeLastEvent();
+      }
+    }
+  }
+
+  private determinePointPossession(point: PointModel): boolean {
+    // Look at the first event to determine who started with possession
+    const firstEvent = point.events[0];
+    
+    if (firstEvent?.type === EventType.PULL) {
+      // If it starts with a pull, the puller's team was on offense initially
+      const puller = firstEvent.firstActor;
+      return this.homeParticipants.has(puller);
+    }
+    
+    // For other cases, we can infer from the offense/defense player lists
+    // Check if the first offensive player is on the home team
+    const firstOffensePlayer = point.offensePlayers[0];
+    return this.homeParticipants.has(firstOffensePlayer);
   }
 
   // New: Automatic view state management
@@ -1011,7 +951,7 @@ export class Bookkeeper {
       awayScore: serializedData.bookkeeperState.awayScore,
       points: pointsForStorage,
       bookkeeperState: bookkeeperStateForStorage,
-      mementos: serializedData.mementos,
+      undoStack: serializedData.undoStack,
       homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
         a.localeCompare(b)
       ),
@@ -1159,7 +1099,7 @@ export class Bookkeeper {
       awayTeamId: awayTeam.id,
       game: { points: [] },
       bookkeeperState: initialBookkeeperState,
-      mementos: [],
+      undoStack: [],
     };
 
     // Create the StoredGame object and save it to the database
@@ -1178,7 +1118,7 @@ export class Bookkeeper {
       status: 'new',
       lastModified: new Date(),
       bookkeeperState: gameData.bookkeeperState,
-      mementos: gameData.mementos,
+      undoStack: gameData.undoStack,
     } as StoredGame);
 
     return id;
@@ -1186,6 +1126,6 @@ export class Bookkeeper {
 
   // Getter for tests
   public getMementosCount(): number {
-    return this.mementos.length;
+    return this.undoStack.length;
   }
 }
