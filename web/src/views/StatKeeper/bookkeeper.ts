@@ -92,7 +92,7 @@ export class Bookkeeper {
   public awayTeam: Team;
   public week: number;
 
-  public activeGame: PointModel[] = [];
+  public points: PointModel[] = [];
   private mementos: InternalMemento[];
 
   // Volatile state - needs to be serialized/deserialized
@@ -223,7 +223,7 @@ export class Bookkeeper {
   }
 
   private hydrate(data: SerializedGameData): void {
-    this.activeGame = data.game.points.map(pJson => PointModel.fromJSON(pJson));
+    this.points = data.game.points.map(pJson => PointModel.fromJSON(pJson));
 
     const state = data.bookkeeperState;
     this.activePoint = state.activePoint ? PointModel.fromJSON(state.activePoint) : null;
@@ -327,7 +327,7 @@ export class Bookkeeper {
       awayTeamName: this.awayTeam.name,
       homeTeamId: this.homeTeam.id,
       awayTeamId: this.awayTeam.id,
-      game: { points: this.activeGame.map(p => p.toJSON()) },
+      game: { points: this.points.map(p => p.toJSON()) },
       bookkeeperState: bookkeeperState,
       mementos: serializedMementos,
     };
@@ -424,7 +424,7 @@ export class Bookkeeper {
   }
 
   public firstPointOfGameOrHalf(): boolean {
-    return this.activeGame.length === this.pointsAtHalf;
+    return this.points.length === this.pointsAtHalf;
   }
 
   private changePossession(): void {
@@ -696,7 +696,7 @@ export class Bookkeeper {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    this.activeGame.push(this.activePoint);
+    this.points.push(this.activePoint);
 
     if (this.homePossession) {
       this.homeScore++;
@@ -726,7 +726,7 @@ export class Bookkeeper {
       savedIsResumingPointMode: this.isResumingPointMode,
     };
     this.mementos.push(this.createRecordHalfMemento(mementoData));
-    this.pointsAtHalf = this.activeGame.length;
+    this.pointsAtHalf = this.points.length;
 
     // Reset line selection and UI state for second half
     this.homePlayers = null;
@@ -753,8 +753,8 @@ export class Bookkeeper {
   }
 
   public getLastCompletedPointPrettyPrint(): string[] {
-    if (this.activeGame.length > 0) {
-      const lastPoint = this.activeGame[this.activeGame.length - 1];
+    if (this.points.length > 0) {
+      const lastPoint = this.points[this.points.length - 1];
       return lastPoint.prettyPrint();
     }
     return [];
@@ -856,7 +856,7 @@ export class Bookkeeper {
         this.changePossession();
 
         // Restore activePoint from game history
-        const undonePoint = this.activeGame.pop();
+        const undonePoint = this.points.pop();
         if (undonePoint) {
           this.activePoint = undonePoint;
           this.activePoint.removeLastEvent(); // Remove the POINT event itself
