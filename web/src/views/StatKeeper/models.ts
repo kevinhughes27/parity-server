@@ -11,16 +11,6 @@ export enum EventType {
   SUBSTITUTION = 'SUBSTITUTION',
 }
 
-export enum GameState {
-  Normal = 1,
-  FirstD = 2,
-  Start = 3,
-  Pull = 4,
-  WhoPickedUpDisc = 5,
-  FirstThrowQuebecVariant = 6,
-  SecondD = 7,
-}
-
 // Event interface for internal use
 export interface Event {
   type: EventType;

@@ -1,17 +1,16 @@
 import {
   EventType,
-  GameState,
   PointModel,
   mapApiEventToEvent,
   mapEventToApiEvent,
 } from './models';
 import { db, StoredGame } from './db';
-import { 
-  getLeagueName, 
-  type Point as ApiPoint, 
+import {
+  getLeagueName,
+  type Point as ApiPoint,
   type LeagueFromJson as League,
   type Team,
-  leagues as apiLeagues 
+  leagues as apiLeagues
 } from '../../api';
 
 // Private types for Bookkeeper internal use
@@ -31,6 +30,16 @@ enum MementoType {
 }
 
 type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
+
+export enum GameState {
+  Normal = 1,
+  FirstD = 2,
+  Start = 3,
+  Pull = 4,
+  WhoPickedUpDisc = 5,
+  FirstThrowQuebecVariant = 6,
+  SecondD = 7,
+}
 
 interface ActionOptions {
   skipViewChange?: boolean;

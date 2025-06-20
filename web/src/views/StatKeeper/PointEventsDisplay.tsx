@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Box, Typography, List, ListItem, Paper } from '@mui/material';
-import { Bookkeeper } from './bookkeeper';
-import { GameState } from './models';
+import { Bookkeeper, GameState } from './bookkeeper';
 
 interface PointEventsDisplayProps {
   bookkeeper: Bookkeeper;
