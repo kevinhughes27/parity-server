@@ -78,17 +78,6 @@ function EditGame() {
     );
   }
 
-  if (bookkeeper.getError()) {
-    return (
-      <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-        <p style={{ color: 'red' }}>{bookkeeper.getError()}</p>
-        <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
-          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
-        </Link>
-      </div>
-    );
-  }
-
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       {/* Top Bar with AppBar */}
