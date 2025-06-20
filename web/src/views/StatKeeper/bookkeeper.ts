@@ -777,29 +777,32 @@ export class Bookkeeper {
   }
 
   private undoRecordPoint(): void {
-    // Infer who scored from current possession
-    if (this.homePossession) {
+    // Restore activePoint from completed points first
+    const lastPoint = this.points.pop();
+    if (!lastPoint) return;
+    
+    this.activePoint = lastPoint;
+    this.activePoint.removeLastEvent(); // Remove the POINT event
+    
+    // Determine the correct possession for this point
+    const pointWasHomePossession = this.determinePointPossession(lastPoint);
+    
+    // Decrement the correct team's score
+    if (pointWasHomePossession) {
       this.homeScore--;
     } else {
       this.awayScore--;
     }
     
-    // Flip possession back (recordPoint flipped it for next point)
-    this.changePossession();
+    // Set possession to match the point that was being played
+    this.homePossession = pointWasHomePossession;
     
-    // Restore activePoint from completed points
-    const lastPoint = this.points.pop();
-    if (lastPoint) {
-      this.activePoint = lastPoint;
-      this.activePoint.removeLastEvent(); // Remove the POINT event
-      
-      // Restore firstActor from the last event
-      const lastEvent = this.activePoint.getLastEvent();
-      if (lastEvent?.type === EventType.PASS) {
-        this.firstActor = lastEvent.secondActor; // The receiver who scored
-      } else {
-        this.firstActor = lastEvent?.firstActor || null;
-      }
+    // Restore firstActor from the last event
+    const lastEvent = this.activePoint.getLastEvent();
+    if (lastEvent?.type === EventType.PASS) {
+      this.firstActor = lastEvent.secondActor; // The receiver who scored
+    } else {
+      this.firstActor = lastEvent?.firstActor || null;
     }
     
     // Restore line selection from the lastPlayedLine (which was set when the point was scored)
