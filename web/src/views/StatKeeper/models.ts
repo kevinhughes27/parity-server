@@ -21,22 +21,7 @@ export enum GameState {
   SecondD = 7,
 }
 
-export enum MementoType {
-  GenericUndoLastEvent,
-  UndoTurnover,
-  RecordFirstActor,
-  RecordPull,
-  RecordPass,
-  RecordDrop,
-  RecordThrowAway,
-  RecordD,
-  RecordCatchD,
-  RecordPoint,
-  RecordHalf,
-  RecordSubstitution,
-}
-
-// Interfaces
+// Public interfaces for React components
 export interface League {
   id: string;
   name: string;
@@ -80,19 +65,12 @@ export function mapEventToApiEvent(event: Event): ApiPointEvent {
   };
 }
 
-export interface SerializedMemento {
-  type: MementoType;
-  data: any; // specific data captured by the memento
-}
-
-// Model Classes
+// Model Classes - keep these as they're used by React components
 export class PointModel {
   offensePlayers: string[];
   defensePlayers: string[];
   events: Event[];
   // Track all players who participated in this point for stats purposes
-  // TODO to the point event should be able to store the full list.
-  // the active line state is elsewhere
   allOffensePlayers: Set<string>;
   allDefensePlayers: Set<string>;
 
@@ -185,7 +163,7 @@ export class PointModel {
     return {
       offensePlayers: [...this.offensePlayers],
       defensePlayers: [...this.defensePlayers],
-      events: this.events.map(e => ({ ...e })), // Event.type is EventType enum
+      events: this.events.map(e => ({ ...e })),
       allOffensePlayers: Array.from(this.allOffensePlayers),
       allDefensePlayers: Array.from(this.allDefensePlayers),
     };
@@ -194,7 +172,7 @@ export class PointModel {
   static fromJSON(json: {
     offensePlayers: string[];
     defensePlayers: string[];
-    events: Event[]; // Expects Event with EventType enum
+    events: Event[];
     allOffensePlayers?: string[];
     allDefensePlayers?: string[];
   }): PointModel {
@@ -228,7 +206,7 @@ export class GameModel {
   }
 
   toJSON(): {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>; // Event.type is EventType enum
+    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
   } {
     return {
       points: this.points.map(p => p.toJSON()),
@@ -236,49 +214,17 @@ export class GameModel {
   }
 
   static fromJSON(json: {
-    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>; // Expects Event with EventType enum
+    points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }>;
   }): GameModel {
     return new GameModel(json.points.map(pJson => PointModel.fromJSON(pJson)));
   }
 }
 
-// For Bookkeeper state serialization
-export interface BookkeeperVolatileState {
-  activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: Event[] } | null; // Event.type is EventType enum
-  firstActor: string | null;
-  homePossession: boolean;
-  pointsAtHalf: number;
-  homePlayers: string[] | null;
-  awayPlayers: string[] | null;
-  homeScore: number;
-  awayScore: number;
-  homeParticipants: string[];
-  awayParticipants: string[];
-}
-
+// Public types for React components
 export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
 
 export interface ActionOptions {
   skipViewChange?: boolean;
   skipSave?: boolean;
-  newStatus?:
-    | 'new'
-    | 'in-progress'
-    | 'submitted'
-    | 'sync-error'
-    | 'uploaded';
-}
-
-export interface SerializedGameData {
-  league_id: string;
-  week: number;
-  homeTeamName: string;
-  homeTeamId: number;
-  awayTeamName: string;
-  awayTeamId: number;
-
-  game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: Event[] }> }; // Event.type is EventType enum
-
-  bookkeeperState: BookkeeperVolatileState;
-  mementos: SerializedMemento[];
+  newStatus?: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
 }
