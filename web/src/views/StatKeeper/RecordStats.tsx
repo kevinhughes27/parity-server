@@ -18,7 +18,9 @@ const getPlayerButtonState = (
   enabled: boolean;
   variant: 'active' | 'enabled' | 'disabled-possession' | 'disabled-no-possession' | 'not-on-line';
   reason?: string;
+  style: React.CSSProperties;
 } => {
+  const isTeamInPossession = isHomeTeam === bookkeeper.homePossession;
   const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
   const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
   const isPlayerOnActiveLine = isHomeTeam
@@ -30,12 +32,17 @@ const getPlayerButtonState = (
       enabled: false,
       variant: 'not-on-line',
       reason: 'Player not on active line',
+      style: {
+        color: '#adb5bd',
+        backgroundColor: '#f8f9fa',
+        border: '1px solid #eee',
+        fontWeight: 'normal',
+      },
     };
   }
 
   const currentGameState = bookkeeper.gameState();
   const isActivePlayer = bookkeeper.firstActor === playerName;
-  const isTeamInPossession = isHomeTeam === bookkeeper.homePossession;
   const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
 
   // Special case: after halftime, both teams can select who pulls
@@ -44,6 +51,19 @@ const getPlayerButtonState = (
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
       reason: 'Select puller for second half',
+      style: isActivePlayer
+        ? {
+            color: '#000',
+            backgroundColor: '#a7d7f5',
+            border: '1px solid #2196f3',
+            fontWeight: 'bold',
+          }
+        : {
+            color: '#000',
+            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+            fontWeight: 'normal',
+          },
     };
   }
 
@@ -53,6 +73,19 @@ const getPlayerButtonState = (
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
       reason: 'Select starting player',
+      style: isActivePlayer
+        ? {
+            color: '#000',
+            backgroundColor: '#a7d7f5',
+            border: '1px solid #2196f3',
+            fontWeight: 'bold',
+          }
+        : {
+            color: '#000',
+            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+            fontWeight: 'normal',
+          },
     };
   }
 
@@ -62,12 +95,31 @@ const getPlayerButtonState = (
         enabled: false,
         variant: 'disabled-no-possession',
         reason: 'Other team picks up disc',
+        style: {
+          color: '#999',
+          backgroundColor: '#e0e0e0',
+          border: '1px solid #ccc',
+          fontWeight: 'normal',
+        },
       };
     }
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
       reason: 'Select player who picked up disc',
+      style: isActivePlayer
+        ? {
+            color: '#000',
+            backgroundColor: '#a7d7f5',
+            border: '1px solid #2196f3',
+            fontWeight: 'bold',
+          }
+        : {
+            color: '#000',
+            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+            fontWeight: 'normal',
+          },
     };
   }
 
@@ -76,6 +128,12 @@ const getPlayerButtonState = (
       enabled: false,
       variant: 'disabled-possession',
       reason: 'Pull in progress',
+      style: {
+        color: '#000',
+        backgroundColor: '#90caf9',
+        border: '1px solid #2196f3',
+        fontWeight: 'normal',
+      },
     };
   }
 
@@ -87,12 +145,31 @@ const getPlayerButtonState = (
           enabled: false,
           variant: 'active',
           reason: 'Player has disc - use action buttons',
+          style: {
+            color: '#000',
+            backgroundColor: '#a7d7f5',
+            border: '1px solid #2196f3',
+            fontWeight: 'bold',
+          },
         };
       } else {
         return {
           enabled: true,
           variant: isActivePlayer ? 'active' : 'enabled',
           reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
+          style: isActivePlayer
+            ? {
+                color: '#000',
+                backgroundColor: '#a7d7f5',
+                border: '1px solid #2196f3',
+                fontWeight: 'bold',
+              }
+            : {
+                color: '#000',
+                backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+                border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+                fontWeight: 'normal',
+              },
         };
       }
     } else {
@@ -100,6 +177,12 @@ const getPlayerButtonState = (
         enabled: false,
         variant: 'disabled-no-possession',
         reason: 'Other team has possession',
+        style: {
+          color: '#999',
+          backgroundColor: '#e0e0e0',
+          border: '1px solid #ccc',
+          fontWeight: 'normal',
+        },
       };
     }
   }
@@ -110,6 +193,12 @@ const getPlayerButtonState = (
       enabled: false,
       variant: 'disabled-no-possession',
       reason: 'Other team has possession',
+      style: {
+        color: '#999',
+        backgroundColor: '#e0e0e0',
+        border: '1px solid #ccc',
+        fontWeight: 'normal',
+      },
     };
   }
 
@@ -117,6 +206,12 @@ const getPlayerButtonState = (
     enabled: true,
     variant: 'enabled',
     reason: 'Available for selection',
+    style: {
+      color: '#000',
+      backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
+      border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
+      fontWeight: 'normal',
+    },
   };
 };
 
@@ -244,54 +339,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
     const buttonState = getPlayerButtonState(bookkeeper, playerName, isHomeTeamButton);
-    const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
-
-    const getButtonStyles = () => {
-      switch (buttonState.variant) {
-        case 'not-on-line':
-          return {
-            color: '#adb5bd',
-            backgroundColor: '#f8f9fa',
-            border: '1px solid #eee',
-            fontWeight: 'normal',
-          };
-        case 'active':
-          return {
-            color: '#000',
-            backgroundColor: '#a7d7f5',
-            border: '1px solid #2196f3',
-            fontWeight: 'bold',
-          };
-        case 'enabled':
-          return {
-            color: '#000',
-            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-            fontWeight: 'normal',
-          };
-        case 'disabled-possession':
-          return {
-            color: '#000',
-            backgroundColor: '#90caf9',
-            border: '1px solid #2196f3',
-            fontWeight: 'normal',
-          };
-        case 'disabled-no-possession':
-          return {
-            color: '#999',
-            backgroundColor: '#e0e0e0',
-            border: '1px solid #ccc',
-            fontWeight: 'normal',
-          };
-        default:
-          return {
-            color: '#000',
-            backgroundColor: '#f0f0f0',
-            border: '1px solid #ccc',
-            fontWeight: 'normal',
-          };
-      }
-    };
 
     return (
       <Button
@@ -309,7 +356,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
           borderRadius: 1,
           fontSize: '0.9em',
           textTransform: 'none',
-          ...getButtonStyles(),
+          ...buttonState.style,
         }}
       >
         {playerName}
