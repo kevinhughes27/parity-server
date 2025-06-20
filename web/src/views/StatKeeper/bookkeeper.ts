@@ -704,6 +704,10 @@ export class Bookkeeper {
         this.undoRecordSubstitution(command);
         break;
     }
+    
+    // Update view state and notify React components
+    this.updateViewState();
+    this.notifyListeners();
   }
 
   public getCurrentPointPrettyPrint(): string[] {
