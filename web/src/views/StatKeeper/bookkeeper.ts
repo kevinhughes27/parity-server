@@ -1127,6 +1127,4 @@ export class Bookkeeper {
   public getMementosCount(): number {
     return this.mementos.length;
   }
-
-  // Button state management methods have been moved to RecordStats.tsx
 }
