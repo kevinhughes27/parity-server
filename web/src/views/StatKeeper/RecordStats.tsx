@@ -3,11 +3,228 @@ import { Bookkeeper } from './bookkeeper';
 import PointEventsDisplay from './PointEventsDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button } from '@mui/material';
+import { GameState, EventType } from './models';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
   actionBarHeight: string;
 }
+
+const getPlayerButtonState = (
+  bookkeeper: Bookkeeper,
+  playerName: string,
+  isHomeTeam: boolean
+): {
+  enabled: boolean;
+  variant: 'active' | 'enabled' | 'disabled-possession' | 'disabled-no-possession' | 'not-on-line';
+  reason?: string;
+} => {
+  const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
+  const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
+  const isPlayerOnActiveLine = isHomeTeam
+    ? homePlayersOnActiveLine.includes(playerName)
+    : awayPlayersOnActiveLine.includes(playerName);
+
+  if (!isPlayerOnActiveLine) {
+    return {
+      enabled: false,
+      variant: 'not-on-line',
+      reason: 'Player not on active line',
+    };
+  }
+
+  const currentGameState = bookkeeper.gameState();
+  const isActivePlayer = bookkeeper.firstActor === playerName;
+  const isTeamInPossession = isHomeTeam === bookkeeper.homePossession;
+  const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
+
+  // Special case: after halftime, both teams can select who pulls
+  if (currentGameState === GameState.Start && isFirstPointAfterHalftime) {
+    return {
+      enabled: true,
+      variant: isActivePlayer ? 'active' : 'enabled',
+      reason: 'Select puller for second half',
+    };
+  }
+
+  // Game state specific logic
+  if (currentGameState === GameState.Start) {
+    return {
+      enabled: true,
+      variant: isActivePlayer ? 'active' : 'enabled',
+      reason: 'Select starting player',
+    };
+  }
+
+  if (currentGameState === GameState.WhoPickedUpDisc) {
+    if (!isTeamInPossession) {
+      return {
+        enabled: false,
+        variant: 'disabled-no-possession',
+        reason: 'Other team picks up disc',
+      };
+    }
+    return {
+      enabled: true,
+      variant: isActivePlayer ? 'active' : 'enabled',
+      reason: 'Select player who picked up disc',
+    };
+  }
+
+  if (currentGameState === GameState.Pull) {
+    return {
+      enabled: false,
+      variant: 'disabled-possession',
+      reason: 'Pull in progress',
+    };
+  }
+
+  // When someone has the disc
+  if (bookkeeper.firstActor !== null) {
+    if (isTeamInPossession) {
+      if (isActivePlayer && bookkeeper.shouldRecordNewPass()) {
+        return {
+          enabled: false,
+          variant: 'active',
+          reason: 'Player has disc - use action buttons',
+        };
+      } else {
+        return {
+          enabled: true,
+          variant: isActivePlayer ? 'active' : 'enabled',
+          reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
+        };
+      }
+    } else {
+      return {
+        enabled: false,
+        variant: 'disabled-no-possession',
+        reason: 'Other team has possession',
+      };
+    }
+  }
+
+  // Default case
+  if (!isTeamInPossession) {
+    return {
+      enabled: false,
+      variant: 'disabled-no-possession',
+      reason: 'Other team has possession',
+    };
+  }
+
+  return {
+    enabled: true,
+    variant: 'enabled',
+    reason: 'Available for selection',
+  };
+};
+
+const getActionButtonState = (
+  bookkeeper: Bookkeeper,
+  action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'
+): {
+  enabled: boolean;
+  reason?: string;
+} => {
+  const currentGameState = bookkeeper.gameState();
+  const canDrop =
+    (currentGameState === GameState.Normal ||
+      currentGameState === GameState.FirstThrowQuebecVariant ||
+      currentGameState === GameState.FirstD ||
+      currentGameState === GameState.SecondD) &&
+    bookkeeper.firstActor !== null &&
+    // Disable drop for picking up disc after a point (but not after a pull)
+    !(
+      bookkeeper.activePoint?.getEventCount() === 0 &&
+      !bookkeeper.firstPointOfGameOrHalf() &&
+      bookkeeper.activePoint?.getLastEventType() !== EventType.PULL
+    );
+
+  switch (action) {
+    case 'pull':
+      return {
+        enabled: currentGameState === GameState.Pull && bookkeeper.firstActor !== null,
+        reason:
+          currentGameState !== GameState.Pull
+            ? 'Not in pull state'
+            : bookkeeper.firstActor === null
+              ? 'No puller selected'
+              : undefined,
+      };
+
+    case 'point':
+      return {
+        enabled:
+          (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) &&
+          bookkeeper.firstActor !== null,
+        reason:
+          bookkeeper.firstActor === null
+            ? 'No player selected'
+            : currentGameState !== GameState.Normal && currentGameState !== GameState.SecondD
+              ? 'Cannot score in current state'
+              : undefined,
+      };
+
+    case 'drop':
+      return {
+        enabled: canDrop,
+        reason:
+          bookkeeper.firstActor === null
+            ? 'No player selected'
+            : !canDrop
+              ? 'Cannot drop in current state'
+              : undefined,
+      };
+
+    case 'throwaway':
+      return {
+        enabled:
+          (currentGameState === GameState.Normal ||
+            currentGameState === GameState.FirstThrowQuebecVariant ||
+            currentGameState === GameState.FirstD ||
+            currentGameState === GameState.SecondD) &&
+          bookkeeper.firstActor !== null,
+        reason:
+          bookkeeper.firstActor === null ? 'No player selected' : 'Cannot throw away in current state',
+      };
+
+    case 'd':
+      return {
+        enabled:
+          bookkeeper.firstActor !== null &&
+          (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+        reason:
+          bookkeeper.firstActor === null
+            ? 'No player selected'
+            : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
+              ? 'Can only get D after turnover or another D'
+              : undefined,
+      };
+
+    case 'catchD':
+      return {
+        enabled:
+          bookkeeper.firstActor !== null &&
+          (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+        reason:
+          bookkeeper.firstActor === null
+            ? 'No player selected'
+            : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
+              ? 'Can only get catch D after turnover or another D'
+              : undefined,
+      };
+
+    case 'undo':
+      return {
+        enabled: bookkeeper.getMementosCount() > 0,
+        reason: bookkeeper.getMementosCount() === 0 ? 'No actions to undo' : undefined,
+      };
+
+    default:
+      return { enabled: false, reason: 'Unknown action' };
+  }
+};
 
 const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }) => {
   const fullHomeRoster = bookkeeper.getHomeParticipants();
@@ -26,7 +243,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
-    const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
+    const buttonState = getPlayerButtonState(bookkeeper, playerName, isHomeTeamButton);
     const isTeamInPossession = isHomeTeamButton === bookkeeper.homePossession;
 
     const getButtonStyles = () => {
@@ -100,13 +317,13 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
     );
   };
 
-  const pullState = bookkeeper.getActionButtonState('pull');
-  const pointState = bookkeeper.getActionButtonState('point');
-  const dropState = bookkeeper.getActionButtonState('drop');
-  const throwawayState = bookkeeper.getActionButtonState('throwaway');
-  const dState = bookkeeper.getActionButtonState('d');
-  const catchDState = bookkeeper.getActionButtonState('catchD');
-  const undoState = bookkeeper.getActionButtonState('undo');
+  const pullState = getActionButtonState(bookkeeper, 'pull');
+  const pointState = getActionButtonState(bookkeeper, 'point');
+  const dropState = getActionButtonState(bookkeeper, 'drop');
+  const throwawayState = getActionButtonState(bookkeeper, 'throwaway');
+  const dState = getActionButtonState(bookkeeper, 'd');
+  const catchDState = getActionButtonState(bookkeeper, 'catchD');
+  const undoState = getActionButtonState(bookkeeper, 'undo');
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
