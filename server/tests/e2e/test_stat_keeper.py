@@ -845,7 +845,8 @@ def test_resume(
     )
     expect(page.locator("#root")).to_contain_text("in-progress")
     page.get_by_role("link", name="Resume Game").click()
-    expect(page.locator("#root")).to_contain_text("Select players for the next point.")
+    # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
+    expect(page.locator("#root")).to_contain_text("Players not on the previous line are pre-selected. Adjust and confirm.")
 
     # test undo after resume
     page.get_by_role("button", name="Undo Last Action").click()
@@ -952,7 +953,8 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Update Rosters").click()
 
     # select lines
-    expect(page.locator("#root")).to_contain_text("Select players for the next point.")
+    # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
+    expect(page.locator("#root")).to_contain_text("Players not on the previous line are pre-selected. Adjust and confirm.")
     select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
