@@ -899,6 +899,11 @@ export class Bookkeeper {
   }
 
   private updateViewState(): void {
+    // Don't override view if it was explicitly set (e.g., by undoRecordPoint)
+    if (this.currentView === 'recordStats' && this.activePoint !== null) {
+      return; // Keep the explicitly set view
+    }
+    
     // Transition to selectLines if we need to select players
     // This happens when:
     // 1. No active point AND no players selected (start of game/after point)
