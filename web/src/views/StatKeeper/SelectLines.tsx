@@ -24,7 +24,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
   const leagueLineSize = bookkeeper.league.lineSize;
 
   useEffect(() => {
-    if (isResumingPointMode) {
+    if (isEditingLine) {
       // When resuming/changing lines mid-point, use the preserved line data
       // awkward wording. this is current line when changing mid point
       // but maybe I am not re-using the components properly for SelectLines and ChangeLines
@@ -48,7 +48,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       setSelectedAwayPlayers([]);
     }
   }, [
-    isResumingPointMode,
+    isEditingLine,
     lastPlayedLine,
     bookkeeper.homePlayers,
     bookkeeper.awayPlayers,
@@ -88,7 +88,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
 
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-      if (isResumingPointMode && bookkeeper.activePoint) {
+      if (isEditingLine && bookkeeper.activePoint) {
         // This is a mid-point substitution
         await handleSubstitution(newHomePlayers, newAwayPlayers);
       } else {
@@ -110,7 +110,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       message += '\n\nContinue with these players anyway?';
 
       if (window.confirm(message)) {
-        if (isResumingPointMode && bookkeeper.activePoint) {
+        if (isEditingLine && bookkeeper.activePoint) {
           // This is a mid-point substitution
           await handleSubstitution(newHomePlayers, newAwayPlayers);
         } else {
@@ -184,10 +184,10 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     );
   };
 
-  const buttonText = isResumingPointMode ? 'Resume Point' : 'Start Point';
+  const buttonText = isEditingLine ? 'Resume Point' : 'Start Point';
 
   // Base help text without undo information
-  let helpText = isResumingPointMode
+  let helpText = isEditingLine
     ? "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
     : lastPlayedLine
       ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
@@ -222,7 +222,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
         <Typography variant="body2" color="text.secondary">
           {helpText}
-          {lastPlayedLine && !isResumingPointMode && (
+          {lastPlayedLine && !isEditingLine && (
             <>
               <br />
               If a point was just scored, 'Undo Last Action' will revert the score and take you back
@@ -244,7 +244,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
           },
         ]}
         secondaryActions={
-          bookkeeper.getMementosCount() > 0 && !isResumingPointMode
+          bookkeeper.getMementosCount() > 0 && !isEditingLine
             ? [
                 {
                   label: 'Undo Last Action',
