@@ -1047,9 +1047,6 @@ export class Bookkeeper {
   getCurrentView(): GameView {
     return this.currentView;
   }
-  getIsResumingPointMode(): boolean {
-    return this.isResumingPointMode;
-  }
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.lastPlayedLine;
   }

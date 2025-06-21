@@ -10,8 +10,8 @@ interface SelectLinesProps {
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }) => {
-  // this whole state can always be inferred by checking if the active point is not done
-  const isResumingPointMode = bookkeeper.getIsResumingPointMode();
+  // Infer if we're editing an existing line or selecting a new one
+  const isEditingLine = bookkeeper.activePoint !== null;
 
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
 
