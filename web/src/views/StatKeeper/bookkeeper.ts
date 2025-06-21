@@ -390,8 +390,7 @@ export class Bookkeeper {
         savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
         savedOffensePlayers: [...this.activePoint.offensePlayers],
         savedDefensePlayers: [...this.activePoint.defensePlayers],
-        savedAllOffensePlayers: new Set(this.activePoint.allOffensePlayers),
-        savedAllDefensePlayers: new Set(this.activePoint.allDefensePlayers),
+        savedAllPlayers: Array.from(this.activePoint.allPlayers)
       }
     });
 
@@ -836,10 +835,6 @@ export class Bookkeeper {
     if (this.lastPlayedLine) {
       this.homePlayers = [...this.lastPlayedLine.home];
       this.awayPlayers = [...this.lastPlayedLine.away];
-
-      // Also update participants sets so the UI shows the correct roster
-      this.lastPlayedLine.home.forEach(p => this.homeParticipants.add(p));
-      this.lastPlayedLine.away.forEach(p => this.awayParticipants.add(p));
     }
 
     // Set UI state to resume the point
@@ -891,8 +886,11 @@ export class Bookkeeper {
       // Restore point players
       this.activePoint.offensePlayers = [...data.savedOffensePlayers];
       this.activePoint.defensePlayers = [...data.savedDefensePlayers];
-      this.activePoint.allOffensePlayers = new Set(data.savedAllOffensePlayers);
-      this.activePoint.allDefensePlayers = new Set(data.savedAllDefensePlayers);
+      
+      // Restore the allPlayers set from the saved data
+      if (data.savedAllPlayers) {
+        this.activePoint.allPlayers = new Set(data.savedAllPlayers);
+      }
 
       // Remove substitution events that were added
       while (
