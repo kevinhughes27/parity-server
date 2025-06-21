@@ -322,8 +322,8 @@ const getActionButtonState = (
 };
 
 const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }) => {
-  const fullHomeRoster = bookkeeper.getHomeParticipants();
-  const fullAwayRoster = bookkeeper.getAwayParticipants();
+  const fullHomeRoster = bookkeeper.getHomeRoster();
+  const fullAwayRoster = bookkeeper.getAwayRoster();
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
