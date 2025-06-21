@@ -50,7 +50,6 @@ interface BookkeeperState {
   homeScore: number;
   awayScore: number;
   lastPlayedLine: { home: string[]; away: string[] } | null;
-  isResumingPointMode: boolean;
 }
 
 interface SerializedGameData {
@@ -103,7 +102,6 @@ export class Bookkeeper {
   // New: UI state management
   private gameId: number | null = null;
   private currentView: GameView = 'loading';
-  private isResumingPointMode: boolean = false;
   private lastPlayedLine: { home: string[]; away: string[] } | null = null;
 
   // New: Observer pattern for React integration
@@ -205,7 +203,6 @@ export class Bookkeeper {
       bookkeeperState: {
         ...bookkeeperStateForHydration,
         lastPlayedLine: storedGame.bookkeeperState?.lastPlayedLine || null,
-        isResumingPointMode: storedGame.bookkeeperState?.isResumingPointMode || false,
       },
       undoStack: storedGame.undoStack || [],
     };
@@ -233,7 +230,6 @@ export class Bookkeeper {
     this.homeScore = state.homeScore;
     this.awayScore = state.awayScore;
     this.lastPlayedLine = state.lastPlayedLine || null;
-    this.isResumingPointMode = state.isResumingPointMode || false;
 
     // Initialize rosters from team objects
     this.homeRoster = new Set(this.homeTeam.players.map(p => p.name));
@@ -254,7 +250,6 @@ export class Bookkeeper {
       homeScore: this.homeScore,
       awayScore: this.awayScore,
       lastPlayedLine: this.lastPlayedLine,
-      isResumingPointMode: this.isResumingPointMode,
     };
 
     return {
@@ -456,7 +451,6 @@ export class Bookkeeper {
         home: [...(this.homePlayers || [])],
         away: [...(this.awayPlayers || [])],
       };
-      this.isResumingPointMode = false;
     }
 
     // Execute the action
@@ -838,7 +832,6 @@ export class Bookkeeper {
     }
 
     // Set UI state to resume the point
-    this.isResumingPointMode = true;
     this.currentView = 'recordStats';
   }
 
@@ -872,7 +865,7 @@ export class Bookkeeper {
       this.lastPlayedLine = null;
     }
 
-    this.isResumingPointMode = false; // Always false when undoing half
+    // No need to set any additional state when undoing half
   }
 
   private undoRecordSubstitution(command: UndoCommand): void {
@@ -906,10 +899,8 @@ export class Bookkeeper {
   // New: Automatic view state management
   private determineInitialView(): void {
     if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
-      this.isResumingPointMode = false;
       this.currentView = 'selectLines';
     } else {
-      this.isResumingPointMode = true;
       this.lastPlayedLine = null;
       this.currentView = 'recordStats';
     }
@@ -1071,10 +1062,6 @@ export class Bookkeeper {
   getGameStatus(): StoredGame['status'] {
     return 'in-progress';
   } // TODO: Track actual status
-  setIsResumingPointMode(value: boolean): void {
-    this.isResumingPointMode = value;
-    this.notifyListeners();
-  }
   setLastPlayedLine(value: { home: string[]; away: string[] } | null): void {
     this.lastPlayedLine = value;
     this.notifyListeners();
@@ -1121,7 +1108,6 @@ export class Bookkeeper {
       homeScore: 0,
       awayScore: 0,
       lastPlayedLine: null,
-      isResumingPointMode: false,
     };
 
     const gameData: SerializedGameData = {
