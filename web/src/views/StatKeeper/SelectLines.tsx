@@ -16,8 +16,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
 
   // Memoize rosters to prevent infinite re-renders
-  const homeRoster = useMemo(() => bookkeeper.getHomeParticipants(), [bookkeeper]);
-  const awayRoster = useMemo(() => bookkeeper.getAwayParticipants(), [bookkeeper]);
+  const homeRoster = useMemo(() => bookkeeper.getHomeRoster(), [bookkeeper]);
+  const awayRoster = useMemo(() => bookkeeper.getAwayRoster(), [bookkeeper]);
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 

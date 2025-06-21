@@ -49,8 +49,6 @@ interface BookkeeperState {
   awayPlayers: string[] | null;
   homeScore: number;
   awayScore: number;
-  homeParticipants: string[];
-  awayParticipants: string[];
   lastPlayedLine: { home: string[]; away: string[] } | null;
   isResumingPointMode: boolean;
 }
@@ -98,10 +96,9 @@ export class Bookkeeper {
   public homePlayers: string[] | null = null;
   public awayPlayers: string[] | null = null;
 
-  // this is just the rosters named poorly...
-  // it could be using Team.players
-  private homeParticipants: Set<string>;
-  private awayParticipants: Set<string>;
+  // Team rosters - will be initialized from Team objects
+  private homeRoster: Set<string>;
+  private awayRoster: Set<string>;
 
   // New: UI state management
   private gameId: number | null = null;
@@ -128,8 +125,8 @@ export class Bookkeeper {
     this.gameId = gameId || null;
 
     this.undoStack = [];
-    this.homeParticipants = new Set<string>();
-    this.awayParticipants = new Set<string>();
+    this.homeRoster = new Set<string>();
+    this.awayRoster = new Set<string>();
 
     this.hydrate(initialData);
     this.determineInitialView();
@@ -180,21 +177,22 @@ export class Bookkeeper {
         awayPlayers: null,
         homeScore: 0,
         awayScore: 0,
-        homeParticipants: storedGame.homeRoster
-          ? [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b))
-          : [],
-        awayParticipants: storedGame.awayRoster
-          ? [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b))
-          : [],
       }),
       activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
-      homeParticipants: storedGame.bookkeeperState?.homeParticipants
-        ? [...storedGame.bookkeeperState.homeParticipants].sort((a, b) => a.localeCompare(b))
-        : [...storedGame.homeRoster].sort((a, b) => a.localeCompare(b)),
-      awayParticipants: storedGame.bookkeeperState?.awayParticipants
-        ? [...storedGame.bookkeeperState.awayParticipants].sort((a, b) => a.localeCompare(b))
-        : [...storedGame.awayRoster].sort((a, b) => a.localeCompare(b)),
     };
+
+    // Initialize team objects with rosters
+    homeTeamForBk.players = storedGame.homeRoster.map(name => ({ 
+      name, 
+      team: storedGame.homeTeam,
+      is_male: true // Default, will be updated when proper team data is loaded
+    }));
+    
+    awayTeamForBk.players = storedGame.awayRoster.map(name => ({ 
+      name, 
+      team: storedGame.awayTeam,
+      is_male: true // Default, will be updated when proper team data is loaded
+    }));
 
     const initialSerializedData: SerializedGameData = {
       league_id: storedGame.league_id,
@@ -234,10 +232,12 @@ export class Bookkeeper {
     this.awayPlayers = state.awayPlayers ? [...state.awayPlayers] : null;
     this.homeScore = state.homeScore;
     this.awayScore = state.awayScore;
-    this.homeParticipants = new Set(state.homeParticipants);
-    this.awayParticipants = new Set(state.awayParticipants);
     this.lastPlayedLine = state.lastPlayedLine || null;
     this.isResumingPointMode = state.isResumingPointMode || false;
+
+    // Initialize rosters from team objects
+    this.homeRoster = new Set(this.homeTeam.players.map(p => p.name));
+    this.awayRoster = new Set(this.awayTeam.players.map(p => p.name));
 
     this.undoStack = data.undoStack || [];
   }
@@ -253,8 +253,6 @@ export class Bookkeeper {
       awayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
       homeScore: this.homeScore,
       awayScore: this.awayScore,
-      homeParticipants: Array.from(this.homeParticipants),
-      awayParticipants: Array.from(this.awayParticipants),
       lastPlayedLine: this.lastPlayedLine,
       isResumingPointMode: this.isResumingPointMode,
     };
@@ -427,9 +425,23 @@ export class Bookkeeper {
     }
   }
 
-  public updateParticipants(homeParticipants: string[], awayParticipants: string[]): void {
-    this.homeParticipants = new Set(homeParticipants);
-    this.awayParticipants = new Set(awayParticipants);
+  public updateRosters(homeRoster: string[], awayRoster: string[]): void {
+    // Update the team objects with new rosters
+    this.homeTeam.players = homeRoster.map(name => ({
+      name,
+      team: this.homeTeam.name,
+      is_male: true // Default, will be updated when proper team data is loaded
+    }));
+    
+    this.awayTeam.players = awayRoster.map(name => ({
+      name,
+      team: this.awayTeam.name,
+      is_male: true // Default, will be updated when proper team data is loaded
+    }));
+    
+    // Update the roster sets
+    this.homeRoster = new Set(homeRoster);
+    this.awayRoster = new Set(awayRoster);
   }
 
   // New: Unified action method that handles persistence
@@ -658,8 +670,7 @@ export class Bookkeeper {
       this.awayScore++;
     }
 
-    if (this.homePlayers) this.homePlayers.forEach(p => this.homeParticipants.add(p));
-    if (this.awayPlayers) this.awayPlayers.forEach(p => this.awayParticipants.add(p));
+    // No need to update homeRoster/awayRoster here as they're already set from Team objects
 
     this.activePoint = null;
     this.homePlayers = null;
@@ -946,41 +957,26 @@ export class Bookkeeper {
     newStatus?: StoredGame['status']
   ): Partial<StoredGame> {
     const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
-      // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
+      // Use allPlayers if available (for tracking all participants)
       // Fall back to regular players for legacy data
-      offensePlayers:
-        modelPointJson.allOffensePlayers && modelPointJson.allOffensePlayers.length > 0
-          ? [...modelPointJson.allOffensePlayers].sort()
-          : [...modelPointJson.offensePlayers].sort(),
-      defensePlayers:
-        modelPointJson.allDefensePlayers && modelPointJson.allDefensePlayers.length > 0
-          ? [...modelPointJson.allDefensePlayers].sort()
-          : [...modelPointJson.defensePlayers].sort(),
+      offensePlayers: [...modelPointJson.offensePlayers].sort(),
+      defensePlayers: [...modelPointJson.defensePlayers].sort(),
       events: modelPointJson.events.map(mapEventToApiEvent),
+      allPlayers: modelPointJson.allPlayers ? [...modelPointJson.allPlayers].sort() : undefined
     }));
 
-    const bookkeeperStateForStorage: BookkeeperState = {
-      ...serializedData.bookkeeperState,
-      homeParticipants: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
-      awayParticipants: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
-    };
+    // Get sorted rosters from team objects
+    const homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+    const awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
 
     return {
       homeScore: serializedData.bookkeeperState.homeScore,
       awayScore: serializedData.bookkeeperState.awayScore,
       points: pointsForStorage,
-      bookkeeperState: bookkeeperStateForStorage,
+      bookkeeperState: serializedData.bookkeeperState,
       undoStack: serializedData.undoStack,
-      homeRoster: [...serializedData.bookkeeperState.homeParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
-      awayRoster: [...serializedData.bookkeeperState.awayParticipants].sort((a, b) =>
-        a.localeCompare(b)
-      ),
+      homeRoster: homeRoster,
+      awayRoster: awayRoster,
       lastModified: new Date(),
       status: newStatus || 'in-progress',
     };
@@ -1025,26 +1021,24 @@ export class Bookkeeper {
 
   public transformForAPI(): UploadedGamePayload {
     const bkState = this.serialize();
+    
+    // Get sorted rosters from team objects
+    const homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+    const awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+    
     return {
       league_id: bkState.league_id,
       week: bkState.week,
       homeTeam: bkState.homeTeamName,
       homeScore: bkState.bookkeeperState.homeScore,
-      homeRoster: [...bkState.bookkeeperState.homeParticipants].sort((a, b) => a.localeCompare(b)),
+      homeRoster: homeRoster,
       awayTeam: bkState.awayTeamName,
       awayScore: bkState.bookkeeperState.awayScore,
-      awayRoster: [...bkState.bookkeeperState.awayParticipants].sort((a, b) => a.localeCompare(b)),
+      awayRoster: awayRoster,
       points: bkState.game.points.map(pJson => ({
-        // Use allOffensePlayers and allDefensePlayers if available (for substitution tracking)
-        // Fall back to regular players for legacy data
-        offensePlayers:
-          pJson.allOffensePlayers && pJson.allOffensePlayers.length > 0
-            ? [...pJson.allOffensePlayers].sort()
-            : [...pJson.offensePlayers].sort(),
-        defensePlayers:
-          pJson.allDefensePlayers && pJson.allDefensePlayers.length > 0
-            ? [...pJson.allDefensePlayers].sort()
-            : [...pJson.defensePlayers].sort(),
+        // Use allPlayers if available for tracking all participants
+        offensePlayers: [...pJson.offensePlayers].sort(),
+        defensePlayers: [...pJson.defensePlayers].sort(),
         events: pJson.events.map(mapEventToApiEvent),
       })),
     };
@@ -1060,7 +1054,7 @@ export class Bookkeeper {
     this.listeners.forEach(listener => listener());
   }
 
-  // New: State getters for React
+  // State getters for React
   getCurrentView(): GameView {
     return this.currentView;
   }
@@ -1070,11 +1064,11 @@ export class Bookkeeper {
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.lastPlayedLine;
   }
-  getHomeParticipants(): string[] {
-    return Array.from(this.homeParticipants).sort((a, b) => a.localeCompare(b));
+  getHomeRoster(): string[] {
+    return this.homeTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
   }
-  getAwayParticipants(): string[] {
-    return Array.from(this.awayParticipants).sort((a, b) => a.localeCompare(b));
+  getAwayRoster(): string[] {
+    return this.awayTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
   }
   getGameStatus(): StoredGame['status'] {
     return 'in-progress';
@@ -1100,6 +1094,25 @@ export class Bookkeeper {
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
 
+    // Create team objects with rosters
+    const homeTeamWithRoster = {
+      ...homeTeam,
+      players: sortedHomeRoster.map(name => ({
+        name,
+        team: homeTeam.name,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
+    };
+    
+    const awayTeamWithRoster = {
+      ...awayTeam,
+      players: sortedAwayRoster.map(name => ({
+        name,
+        team: awayTeam.name,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
+    };
+
     const initialBookkeeperState: BookkeeperState = {
       activePoint: null,
       firstActor: null,
@@ -1109,8 +1122,6 @@ export class Bookkeeper {
       awayPlayers: null,
       homeScore: 0,
       awayScore: 0,
-      homeParticipants: sortedHomeRoster,
-      awayParticipants: sortedAwayRoster,
       lastPlayedLine: null,
       isResumingPointMode: false,
     };
@@ -1134,11 +1145,11 @@ export class Bookkeeper {
       homeTeam: gameData.homeTeamName,
       homeTeamId: gameData.homeTeamId,
       homeScore: 0,
-      homeRoster: [...gameData.bookkeeperState.homeParticipants],
+      homeRoster: sortedHomeRoster,
       awayTeam: gameData.awayTeamName,
       awayTeamId: gameData.awayTeamId,
       awayScore: 0,
-      awayRoster: [...gameData.bookkeeperState.awayParticipants],
+      awayRoster: sortedAwayRoster,
       points: [],
       status: 'new',
       lastModified: new Date(),

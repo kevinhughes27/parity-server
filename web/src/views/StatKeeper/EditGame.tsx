@@ -33,8 +33,8 @@ function EditGame() {
 
   useEffect(() => {
     if (bookkeeper) {
-      sortAndSetHomeRoster(bookkeeper.getHomeParticipants());
-      sortAndSetAwayRoster(bookkeeper.getAwayParticipants());
+      sortAndSetHomeRoster(bookkeeper.getHomeRoster());
+      sortAndSetAwayRoster(bookkeeper.getAwayRoster());
     } else {
       sortAndSetHomeRoster([]);
       sortAndSetAwayRoster([]);
@@ -52,10 +52,10 @@ function EditGame() {
     }
 
     try {
-      // Update the bookkeeper's participants and save
+      // Update the bookkeeper's rosters and save
       await bookkeeper.performAction(
         bk => {
-          bk.updateParticipants(homeRosterNames, awayRosterNames);
+          bk.updateRosters(homeRosterNames, awayRosterNames);
         },
         { skipViewChange: true }
       );

@@ -49,17 +49,15 @@ export class PointModel {
   offensePlayers: string[];
   defensePlayers: string[];
   events: Event[];
-  // Track all players who participated in this point for stats purposes
-  allOffensePlayers: Set<string>;
-  allDefensePlayers: Set<string>;
+  // Single set to track all players who participated in this point for stats purposes
+  allPlayers: Set<string>;
 
   constructor(offensePlayers: string[], defensePlayers: string[], events: Event[] = []) {
     this.offensePlayers = [...offensePlayers];
     this.defensePlayers = [...defensePlayers];
     this.events = events.map(e => ({ ...e })); // Deep copy events
-    // Initialize with starting players
-    this.allOffensePlayers = new Set(offensePlayers);
-    this.allDefensePlayers = new Set(defensePlayers);
+    // Initialize with all players
+    this.allPlayers = new Set([...offensePlayers, ...defensePlayers]);
   }
 
   getEventCount(): number {
@@ -88,20 +86,15 @@ export class PointModel {
 
   swapOffenseAndDefense(): void {
     [this.offensePlayers, this.defensePlayers] = [this.defensePlayers, this.offensePlayers];
-    // Also swap the all-players sets
-    [this.allOffensePlayers, this.allDefensePlayers] = [
-      this.allDefensePlayers,
-      this.allOffensePlayers,
-    ];
+    // No need to swap anything in allPlayers since it contains both offense and defense
   }
 
   updateCurrentPlayers(newOffensePlayers: string[], newDefensePlayers: string[]): void {
     // Update current players
     this.offensePlayers = [...newOffensePlayers];
     this.defensePlayers = [...newDefensePlayers];
-    // Add new players to the all-players sets
-    newOffensePlayers.forEach(player => this.allOffensePlayers.add(player));
-    newDefensePlayers.forEach(player => this.allDefensePlayers.add(player));
+    // Add new players to the all-players set
+    [...newOffensePlayers, ...newDefensePlayers].forEach(player => this.allPlayers.add(player));
   }
 
   prettyPrint(): string[] {
@@ -136,15 +129,13 @@ export class PointModel {
     offensePlayers: string[];
     defensePlayers: string[];
     events: Event[];
-    allOffensePlayers?: string[];
-    allDefensePlayers?: string[];
+    allPlayers?: string[];
   } {
     return {
       offensePlayers: [...this.offensePlayers],
       defensePlayers: [...this.defensePlayers],
       events: this.events.map(e => ({ ...e })),
-      allOffensePlayers: Array.from(this.allOffensePlayers),
-      allDefensePlayers: Array.from(this.allDefensePlayers),
+      allPlayers: Array.from(this.allPlayers),
     };
   }
 
@@ -152,14 +143,20 @@ export class PointModel {
     offensePlayers: string[];
     defensePlayers: string[];
     events: Event[];
+    allPlayers?: string[];
+    // Support legacy format
     allOffensePlayers?: string[];
     allDefensePlayers?: string[];
   }): PointModel {
     const point = new PointModel(json.offensePlayers, json.defensePlayers, json.events);
-    // Handle legacy data that doesn't have allPlayers sets
-    if (json.allOffensePlayers && json.allDefensePlayers) {
-      point.allOffensePlayers = new Set(json.allOffensePlayers);
-      point.allDefensePlayers = new Set(json.allDefensePlayers);
+    
+    // Handle different data formats
+    if (json.allPlayers) {
+      // New format with single allPlayers set
+      point.allPlayers = new Set(json.allPlayers);
+    } else if (json.allOffensePlayers && json.allDefensePlayers) {
+      // Legacy format with separate offense/defense sets
+      point.allPlayers = new Set([...json.allOffensePlayers, ...json.allDefensePlayers]);
     }
     return point;
   }
