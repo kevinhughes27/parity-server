@@ -15,7 +15,7 @@ import {
 
 // Private types for Bookkeeper internal use
 interface UndoCommand {
-  type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' | 
+  type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' |
         'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf' | 'recordSubstitution';
   timestamp: string;
   data?: any; // Minimal data only when we can't infer
@@ -97,6 +97,9 @@ export class Bookkeeper {
   public pointsAtHalf: number = 0;
   public homePlayers: string[] | null = null;
   public awayPlayers: string[] | null = null;
+
+  // this is just the rosters named poorly...
+  // it could be using Team.players
   private homeParticipants: Set<string>;
   private awayParticipants: Set<string>;
 
@@ -685,9 +688,9 @@ export class Bookkeeper {
 
   public undo(): void {
     if (this.undoStack.length === 0) return;
-    
+
     const command = this.undoStack.pop()!;
-    
+
     switch (command.type) {
       case 'recordFirstActor':
         this.undoRecordFirstActor();
@@ -718,7 +721,7 @@ export class Bookkeeper {
         this.undoRecordSubstitution(command);
         break;
     }
-    
+
     // Update view state and notify React components
     this.updateViewState();
     this.notifyListeners();
@@ -744,9 +747,9 @@ export class Bookkeeper {
   private undoRecordFirstActor(): void {
     // Can infer if point was created by checking if it has no events
     const pointWasCreated = this.activePoint && this.activePoint.getEventCount() === 0;
-    
+
     this.firstActor = null; // Reset firstActor
-    
+
     if (pointWasCreated) {
       this.activePoint = null;
     }
@@ -754,7 +757,7 @@ export class Bookkeeper {
 
   private undoRecordPull(): void {
     if (!this.activePoint) return;
-    
+
     const pullEvent = this.activePoint.removeLastEvent(); // Remove PULL event
     this.changePossession(); // Revert possession flip from pull
     this.activePoint.swapOffenseAndDefense(); // Revert player swap
@@ -763,14 +766,14 @@ export class Bookkeeper {
 
   private undoRecordPass(): void {
     if (!this.activePoint) return;
-    
+
     const passEvent = this.activePoint.removeLastEvent(); // Remove PASS event
     this.firstActor = passEvent?.firstActor || null; // Restore passer as firstActor
   }
 
   private undoRecordTurnover(): void {
     if (!this.activePoint) return;
-    
+
     const turnoverEvent = this.activePoint.removeLastEvent(); // Remove DROP/THROWAWAY event
     this.firstActor = turnoverEvent?.firstActor || null; // Restore player who had disc
     this.changePossession(); // Revert possession flip from turnover
@@ -778,38 +781,38 @@ export class Bookkeeper {
 
   private undoRecordD(): void {
     if (!this.activePoint) return;
-    
+
     const dEvent = this.activePoint.removeLastEvent(); // Remove DEFENSE event
     this.firstActor = dEvent?.firstActor || null; // Restore player who got the D
   }
 
   private undoRecordCatchD(): void {
     if (!this.activePoint) return;
-    
+
     const catchDEvent = this.activePoint.removeLastEvent(); // Remove DEFENSE event
     this.firstActor = catchDEvent?.firstActor || null; // Restore player who got the catch D
   }
 
   private undoRecordPoint(command: UndoCommand): void {
     const data = command.data;
-    
+
     // Restore activePoint from completed points
     const lastPoint = this.points.pop();
     if (!lastPoint) return;
-    
+
     this.activePoint = lastPoint;
     this.activePoint.removeLastEvent(); // Remove the POINT event
-    
+
     // Decrement the correct team's score using stored possession data
     if (data.wasHomePossession) {
       this.homeScore--;
     } else {
       this.awayScore--;
     }
-    
+
     // Restore possession to what it was during the point
     this.homePossession = data.wasHomePossession;
-    
+
     // Restore firstActor from the last event
     const lastEvent = this.activePoint.getLastEvent();
     if (lastEvent?.type === EventType.PASS) {
@@ -817,17 +820,17 @@ export class Bookkeeper {
     } else {
       this.firstActor = lastEvent?.firstActor || null;
     }
-    
+
     // Restore line selection from the lastPlayedLine (which was set when the point was scored)
     if (this.lastPlayedLine) {
       this.homePlayers = [...this.lastPlayedLine.home];
       this.awayPlayers = [...this.lastPlayedLine.away];
-      
+
       // Also update participants sets so the UI shows the correct roster
       this.lastPlayedLine.home.forEach(p => this.homeParticipants.add(p));
       this.lastPlayedLine.away.forEach(p => this.awayParticipants.add(p));
     }
-    
+
     // Set UI state to resume the point
     this.isResumingPointMode = true;
     this.currentView = 'recordStats';
@@ -835,14 +838,14 @@ export class Bookkeeper {
 
   private undoRecordHalf(): void {
     this.pointsAtHalf = 0; // Reset to "no half recorded"
-    
+
     // Restore line state from the last completed point
     if (this.points.length > 0) {
       const lastPoint = this.points[this.points.length - 1];
-      
+
       // Determine which team had possession for that point
       const lastPointWasHomePossession = this.determinePointPossession(lastPoint);
-      
+
       if (lastPointWasHomePossession) {
         this.homePlayers = [...lastPoint.offensePlayers];
         this.awayPlayers = [...lastPoint.defensePlayers];
@@ -850,7 +853,7 @@ export class Bookkeeper {
         this.homePlayers = [...lastPoint.defensePlayers];
         this.awayPlayers = [...lastPoint.offensePlayers];
       }
-      
+
       // Restore lastPlayedLine
       this.lastPlayedLine = {
         home: [...this.homePlayers],
@@ -862,13 +865,13 @@ export class Bookkeeper {
       this.awayPlayers = null;
       this.lastPlayedLine = null;
     }
-    
+
     this.isResumingPointMode = false; // Always false when undoing half
   }
 
   private undoRecordSubstitution(command: UndoCommand): void {
     const data = command.data;
-    
+
     // Restore line players
     this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
     this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
@@ -908,7 +911,7 @@ export class Bookkeeper {
     if (this.currentView === 'recordStats' && this.activePoint !== null) {
       return; // Keep the explicitly set view
     }
-    
+
     // Transition to selectLines if we need to select players
     // This happens when:
     // 1. No active point AND no players selected (start of game/after point)
