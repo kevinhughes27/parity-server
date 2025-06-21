@@ -15,8 +15,12 @@ def browser_context_args(browser_context_args, playwright):
     return {"viewport": {"width": 768, "height": 900}, "is_mobile": True}
 
 
+# base_url = "http://localhost:8000"
+base_url = "http://localhost:5173"
+
+
 def start_stats_keeper(page: Page):
-    page.goto("http://localhost:8000/stat_keeper")
+    page.goto(f"{base_url}/stat_keeper")
 
     blank_slate = 'No games stored locally. Click "Start New Game" to begin.'
     expect(page.get_by_role("paragraph")).to_contain_text(blank_slate)
@@ -834,7 +838,7 @@ def test_resume(
     # playwright can spawn a new browser but they are isolated
     # it can be configured to share state but extra config kind of
     # defeats the purpose and this is sufficient
-    page.goto("http://localhost:8000/stat_keeper")
+    page.goto(f"{base_url}/stat_keeper")
 
     # resume game
     expect(page.locator("#root")).to_contain_text(
