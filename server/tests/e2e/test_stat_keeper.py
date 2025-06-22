@@ -78,6 +78,16 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
         page.get_by_role("button", name=player).click()
 
 
+def expect_players_selected(page: Page, players: list[str]):
+    for player in players:
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-colorPrimary")
+
+
+def expect_players_not_selected(page: Page, players: list[str]):
+    for player in players:
+        expect(page.get_by_role("button", name=player)).not_to_contain_class("MuiButton-colorPrimary")
+
+
 def expect_lines_selected(page: Page, home: str, away: str):
     expect(page.locator("#root")).to_contain_text(f"{home} (6/6)")
     expect(page.locator("#root")).to_contain_text(f"{away} (6/6)")
@@ -160,8 +170,10 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
     expect_players_enabled(page, away_line)
 
     # players who are off
-    expect_players_disabled(page, [p for p in rosters[home] if p not in home_line])
-    expect_players_disabled(page, [p for p in rosters[away] if p not in away_line])
+    home_bench = [p for p in rosters[home] if p not in home_line]
+    away_bench = [p for p in rosters[away] if p not in away_line]
+    expect_players_disabled(page, home_bench)
+    expect_players_disabled(page, away_bench)
 
     # record stats
     page.get_by_role("button", name="Brian Kells").click()
@@ -180,7 +192,13 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
         ]
     )
     expect(page.get_by_role("list")).to_contain_text(play_by_play)
+
+    # lines are swapped automatically
     expect_next_line_text(page)
+    expect_players_not_selected(page, home_line)
+    expect_players_not_selected(page, away_line)
+    expect_players_selected(page, home_bench)
+    expect_players_selected(page, away_bench)
 
     # submit
     submit_game(page)
