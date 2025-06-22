@@ -1021,11 +1021,25 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     assert stats["Brian Kells"]["pulls"] == 1
     assert stats["Kyle Sprysa"]["goals"] == 1
 
+    # the player subbed off does not get stats for points played or +/-
+    # no plus minus makes sense but technically they should get a point played
+    #
+    # fixing this is not straight forward and is an exisiting bug in android too
+    # * if we add players to the point then undo gets hard with re-selecting the correct line
+    # * we could use a substitution event that records them leaving then we can update the backend
+    #   to calculate points_played by any activity on the point (because there will always be one)
+    #   instead of just using the final line for the point. Then we would need to store two "denominators"
+    #   one for averaging their salaray per point which includes points they subbbed off from and another
+    #   to properly calculate their efficiencies. If you sub off you shouldn't get a point scored against you
+    # * since there isn't an easy way to "get everything" right now. Lets keep it like it is now
+    #   have which means your salaray per point is slightly higher since it contains events for points
+    #   where you were subbed off but those points don't contribute to the denominator
+
     # verify points played
-    assert stats["Kevin Barford"]["points_played"] == 1
     assert stats["Kyle Sprysa"]["points_played"] == 1
+    assert "Kevin Barford" not in stats
 
     # verify point
     game = get_game(1)
-    assert "Kevin Barford" in game["points"][0]["offensePlayers"]
     assert "Kyle Sprysa" in game["points"][0]["offensePlayers"]
+    assert "Kevin Barford" not in game["points"][0]["offensePlayers"]
