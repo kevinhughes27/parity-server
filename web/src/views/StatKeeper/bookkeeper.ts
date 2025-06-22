@@ -180,14 +180,14 @@ export class Bookkeeper {
     };
 
     // Initialize team objects with rosters
-    homeTeamForBk.players = storedGame.homeRoster.map(name => ({ 
-      name, 
+    homeTeamForBk.players = storedGame.homeRoster.map(name => ({
+      name,
       team: storedGame.homeTeam,
       is_male: true // Default, will be updated when proper team data is loaded
     }));
-    
-    awayTeamForBk.players = storedGame.awayRoster.map(name => ({ 
-      name, 
+
+    awayTeamForBk.players = storedGame.awayRoster.map(name => ({
+      name,
       team: storedGame.awayTeam,
       is_male: true // Default, will be updated when proper team data is loaded
     }));
@@ -371,12 +371,11 @@ export class Bookkeeper {
   public recordSubstitution(
     newHomePlayers: string[],
     newAwayPlayers: string[],
-    substitutedOutPlayers: string[],
-    substitutedInPlayers: string[]
   ): void {
     if (!this.activePoint) return;
 
     // Store undo data for substitution
+    // do we need undo here? we can just re-edit the lines if needed
     this.undoStack.push({
       type: 'recordSubstitution',
       timestamp: new Date().toISOString(),
@@ -385,7 +384,6 @@ export class Bookkeeper {
         savedAwayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
         savedOffensePlayers: [...this.activePoint.offensePlayers],
         savedDefensePlayers: [...this.activePoint.defensePlayers],
-        savedAllPlayers: Array.from(this.activePoint.allPlayers)
       }
     });
 
@@ -407,16 +405,6 @@ export class Bookkeeper {
 
     // Update the active point with new players
     this.activePoint.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
-
-    // Record substitution events
-    for (let i = 0; i < substitutedOutPlayers.length && i < substitutedInPlayers.length; i++) {
-      this.activePoint.addEvent({
-        type: EventType.SUBSTITUTION,
-        firstActor: substitutedInPlayers[i], // Player coming in
-        secondActor: substitutedOutPlayers[i], // Player going out
-        timestamp: new Date().toISOString(),
-      });
-    }
   }
 
   public updateRosters(homeRoster: string[], awayRoster: string[]): void {
@@ -426,13 +414,13 @@ export class Bookkeeper {
       team: this.homeTeam.name,
       is_male: true // Default, will be updated when proper team data is loaded
     }));
-    
+
     this.awayTeam.players = awayRoster.map(name => ({
       name,
       team: this.awayTeam.name,
       is_male: true // Default, will be updated when proper team data is loaded
     }));
-    
+
     // Update the roster sets
     this.homeRoster = new Set(homeRoster);
     this.awayRoster = new Set(awayRoster);
@@ -687,7 +675,6 @@ export class Bookkeeper {
     this.homePlayers = null;
     this.awayPlayers = null;
     this.lastPlayedLine = null;
-    this.isResumingPointMode = false;
   }
 
   public undo(): void {
@@ -871,32 +858,16 @@ export class Bookkeeper {
   private undoRecordSubstitution(command: UndoCommand): void {
     const data = command.data;
 
-    // Restore line players
     this.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
     this.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
 
     if (this.activePoint) {
-      // Restore point players
       this.activePoint.offensePlayers = [...data.savedOffensePlayers];
       this.activePoint.defensePlayers = [...data.savedDefensePlayers];
-      
-      // Restore the allPlayers set from the saved data
-      if (data.savedAllPlayers) {
-        this.activePoint.allPlayers = new Set(data.savedAllPlayers);
-      }
-
-      // Remove substitution events that were added
-      while (
-        this.activePoint.events.length > 0 &&
-        this.activePoint.getLastEvent()?.type === EventType.SUBSTITUTION
-      ) {
-        this.activePoint.removeLastEvent();
-      }
     }
   }
 
 
-  // New: Automatic view state management
   private determineInitialView(): void {
     if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
       this.currentView = 'selectLines';
@@ -906,7 +877,6 @@ export class Bookkeeper {
     }
   }
 
-  // Make currentView accessible for direct manipulation
   set currentView(view: GameView) {
     this._currentView = view;
   }
@@ -928,7 +898,6 @@ export class Bookkeeper {
     }
   }
 
-  // New: Persistence built into bookkeeper
   private async saveToDatabase(newStatus?: StoredGame['status']): Promise<void> {
     if (!this.gameId) {
       throw new Error('Cannot save: no game ID');
@@ -951,12 +920,9 @@ export class Bookkeeper {
     newStatus?: StoredGame['status']
   ): Partial<StoredGame> {
     const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
-      // Use allPlayers if available (for tracking all participants)
-      // Fall back to regular players for legacy data
       offensePlayers: [...modelPointJson.offensePlayers].sort(),
       defensePlayers: [...modelPointJson.defensePlayers].sort(),
       events: modelPointJson.events.map(mapEventToApiEvent),
-      allPlayers: modelPointJson.allPlayers ? [...modelPointJson.allPlayers].sort() : undefined
     }));
 
     // Get sorted rosters from team objects
@@ -1015,11 +981,10 @@ export class Bookkeeper {
 
   public transformForAPI(): UploadedGamePayload {
     const bkState = this.serialize();
-    
-    // Get sorted rosters from team objects
+
     const homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
     const awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-    
+
     return {
       league_id: bkState.league_id,
       week: bkState.week,
@@ -1030,7 +995,6 @@ export class Bookkeeper {
       awayScore: bkState.bookkeeperState.awayScore,
       awayRoster: awayRoster,
       points: bkState.game.points.map(pJson => ({
-        // Use allPlayers if available for tracking all participants
         offensePlayers: [...pJson.offensePlayers].sort(),
         defensePlayers: [...pJson.defensePlayers].sort(),
         events: pJson.events.map(mapEventToApiEvent),
@@ -1038,7 +1002,6 @@ export class Bookkeeper {
     };
   }
 
-  // New: React integration
   subscribe(listener: () => void): () => void {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
@@ -1048,22 +1011,26 @@ export class Bookkeeper {
     this.listeners.forEach(listener => listener());
   }
 
-  // State getters for React
   getCurrentView(): GameView {
     return this._currentView;
   }
+
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.lastPlayedLine;
   }
+
   getHomeRoster(): string[] {
     return this.homeTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
   }
+
   getAwayRoster(): string[] {
     return this.awayTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
   }
+
   getGameStatus(): StoredGame['status'] {
     return 'in-progress';
   } // TODO: Track actual status
+
   setLastPlayedLine(value: { home: string[]; away: string[] } | null): void {
     this.lastPlayedLine = value;
     this.notifyListeners();
@@ -1090,7 +1057,7 @@ export class Bookkeeper {
         is_male: true // Default, will be updated when proper team data is loaded
       }))
     };
-    
+
     const awayTeamWithRoster = {
       ...awayTeam,
       players: sortedAwayRoster.map(name => ({
@@ -1146,7 +1113,6 @@ export class Bookkeeper {
     return id;
   }
 
-  // Getter for tests
   public getMementosCount(): number {
     return this.undoStack.length;
   }

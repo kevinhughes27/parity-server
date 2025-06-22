@@ -126,20 +126,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
   };
 
   const handleSubstitution = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
-    const oldHomePlayers = lastPlayedLine?.home || [];
-    const oldAwayPlayers = lastPlayedLine?.away || [];
-
-    // Find players who were substituted out and in
-    const homePlayersOut = oldHomePlayers.filter(p => !newHomePlayers.includes(p));
-    const homePlayersIn = newHomePlayers.filter(p => !oldHomePlayers.includes(p));
-    const awayPlayersOut = oldAwayPlayers.filter(p => !newAwayPlayers.includes(p));
-    const awayPlayersIn = newAwayPlayers.filter(p => !oldAwayPlayers.includes(p));
-
-    const allPlayersOut = [...homePlayersOut, ...awayPlayersOut];
-    const allPlayersIn = [...homePlayersIn, ...awayPlayersIn];
-
     await bookkeeper.performAction(
-      bk => bk.recordSubstitution(newHomePlayers, newAwayPlayers, allPlayersOut, allPlayersIn),
+      bk => bk.recordSubstitution(newHomePlayers, newAwayPlayers),
       { skipViewChange: true }
     );
   };

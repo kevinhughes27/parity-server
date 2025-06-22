@@ -53,14 +53,11 @@ function LocalGame() {
     }
   };
 
-  // Simple handler to change the view to select lines
   const handleChangeLine = async () => {
-    // no-op if already selecting lines
     if (currentView === 'selectLines') {
       return;
     }
 
-    // Force transition to selectLines view
     bookkeeper.currentView = 'selectLines';
     bookkeeper.notifyListeners();
   };
