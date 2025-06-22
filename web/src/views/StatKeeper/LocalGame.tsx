@@ -53,32 +53,16 @@ function LocalGame() {
     }
   };
 
-  // this logic should all be in the bookkeeper really
+  // Simple handler to change the view to select lines
   const handleChangeLine = async () => {
     // no-op if already selecting lines
-    if (currentView == 'selectLines') {
+    if (currentView === 'selectLines') {
       return;
     }
 
-    // Preserve current line before clearing it
-    const currentLine = {
-      home: [...(bookkeeper.homePlayers || [])],
-      away: [...(bookkeeper.awayPlayers || [])],
-    };
-
-    // Set the resuming mode and preserved line BEFORE clearing players
-    bookkeeper.setIsResumingPointMode(true);
-    bookkeeper.setLastPlayedLine(currentLine);
-
-    // Force transition to selectLines view even with an active point
-    await bookkeeper.performAction(
-      bk => {
-        // Clear the current line selection to allow re-selection
-        bk.homePlayers = null;
-        bk.awayPlayers = null;
-      }
-      // Don't skip view change - we want the view to update to selectLines
-    );
+    // Force transition to selectLines view
+    bookkeeper.currentView = 'selectLines';
+    bookkeeper.notifyListeners();
   };
 
   return (
