@@ -101,7 +101,7 @@ export class Bookkeeper {
 
   // New: UI state management
   private gameId: number | null = null;
-  private currentView: GameView = 'loading';
+  private _currentView: GameView = 'loading';
   private lastPlayedLine: { home: string[]; away: string[] } | null = null;
 
   // New: Observer pattern for React integration
@@ -906,9 +906,14 @@ export class Bookkeeper {
     }
   }
 
+  // Make currentView accessible for direct manipulation
+  set currentView(view: GameView) {
+    this._currentView = view;
+  }
+
   private updateViewState(): void {
     // Don't override view if it was explicitly set (e.g., by undoRecordPoint)
-    if (this.currentView === 'recordStats' && this.activePoint !== null) {
+    if (this._currentView === 'recordStats' && this.activePoint !== null) {
       return; // Keep the explicitly set view
     }
 
@@ -917,9 +922,9 @@ export class Bookkeeper {
     // 1. No active point AND no players selected (start of game/after point)
     // 2. Players have been cleared (mid-point line change)
     if (this.homePlayers === null || this.awayPlayers === null) {
-      this.currentView = 'selectLines';
+      this._currentView = 'selectLines';
     } else {
-      this.currentView = 'recordStats';
+      this._currentView = 'recordStats';
     }
   }
 
@@ -1039,13 +1044,13 @@ export class Bookkeeper {
     return () => this.listeners.delete(listener);
   }
 
-  private notifyListeners(): void {
+  notifyListeners(): void {
     this.listeners.forEach(listener => listener());
   }
 
   // State getters for React
   getCurrentView(): GameView {
-    return this.currentView;
+    return this._currentView;
   }
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.lastPlayedLine;
