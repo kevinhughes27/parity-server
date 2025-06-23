@@ -1137,7 +1137,6 @@ def test_perf(server, league, rosters, page: Page) -> None:
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
 
-    # define two distinct lines that will alternate
     home_line_1 = rosters[home][:6]
     home_line_2 = rosters[home][6:]
     away_line_1 = rosters[away][:6]
@@ -1154,7 +1153,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # first half - 20 points
     for point_num in range(20):
         start_time = time.time()
-        
+
         # select lines (auto-selected after first point)
         if point_num == 0:
             expect(page.locator("#root")).to_contain_text("Select players for the first point.")
@@ -1162,7 +1161,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
             expect_lines_selected(page, home, away)
         else:
             expect_next_line_text(page)
-        
+
         start_point(page)
 
         # determine which team has possession and whether to pull
@@ -1170,18 +1169,16 @@ def test_perf(server, league, rosters, page: Page) -> None:
             # first point - away team pulls
             puller = away_line_1[0]  # Owen Lumley
             receiving_team = home_line_1
-            
+
             # record the pull
             page.get_by_role("button", name=puller).click()
             page.get_by_role("button", name="Pull").click()
-            
+
             # pass to each player on the receiving team, with the last one scoring
             for i, player in enumerate(receiving_team):
                 page.get_by_role("button", name=player).click()
                 if i == len(receiving_team) - 1:
-                    # last player scores
                     page.get_by_role("button", name="Point!").click()
-                # else it's automatically a pass to the next player
         else:
             # subsequent points - team that was scored on starts with possession
             # determine which line is currently active (alternates each point)
@@ -1191,14 +1188,12 @@ def test_perf(server, league, rosters, page: Page) -> None:
             else:
                 # line 1 is active, home team starts with possession (they were scored on)
                 possessing_team = home_line_1
-            
+
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
                 page.get_by_role("button", name=player).click()
                 if i == len(possessing_team) - 1:
-                    # last player scores
                     page.get_by_role("button", name="Point!").click()
-                # else it's automatically a pass to the next player
 
         end_time = time.time()
         point_times.append(end_time - start_time)
@@ -1211,36 +1206,34 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # second half - 20 more points
     for point_num in range(20, 40):
         start_time = time.time()
-        
+
         # select lines for first point of second half
         if point_num == 20:
             select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:
             expect_next_line_text(page)
-        
+
         start_point(page)
 
         # determine which team has possession and whether to pull
         # use same logic as first half but offset by 20
         adjusted_point_num = point_num - 20
-        
+
         if adjusted_point_num == 0:
             # first point of second half - home team pulls (opposite of first half)
             puller = home_line_1[0]  # Brian Kells
             receiving_team = away_line_1
-            
+
             # record the pull
             page.get_by_role("button", name=puller).click()
             page.get_by_role("button", name="Pull").click()
-            
+
             # pass to each player on the receiving team, with the last one scoring
             for i, player in enumerate(receiving_team):
                 page.get_by_role("button", name=player).click()
                 if i == len(receiving_team) - 1:
-                    # last player scores
                     page.get_by_role("button", name="Point!").click()
-                # else it's automatically a pass to the next player
         else:
             # subsequent points - team that was scored on starts with possession
             # determine which line is currently active (alternates each point)
@@ -1250,14 +1243,12 @@ def test_perf(server, league, rosters, page: Page) -> None:
             else:
                 # line 1 is active, away team starts with possession (they were scored on)
                 possessing_team = away_line_1
-            
+
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
                 page.get_by_role("button", name=player).click()
                 if i == len(possessing_team) - 1:
-                    # last player scores
                     page.get_by_role("button", name="Point!").click()
-                # else it's automatically a pass to the next player
 
         end_time = time.time()
         point_times.append(end_time - start_time)
@@ -1265,38 +1256,44 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # submit game
     submit_game(page)
 
-    # verify some basic stats to ensure the game was recorded correctly
+    # verify stats
     stats = get_stats()
+
     # Each team should have scored 20 points (40 total)
     total_goals = sum(player_stats.get("goals", 0) for player_stats in stats.values())
     assert total_goals == 40
 
+    # last player on each line should have 10 goals
+    assert stats[home_line_1[-1]]["goals"] == 10
+    assert stats[home_line_2[-1]]["goals"] == 10
+    assert stats[away_line_1[-1]]["goals"] == 10
+    assert stats[away_line_2[-1]]["goals"] == 10
+
     # analyze performance - compute slope to ensure no exponential slowdown
     n = len(point_times)
     x_values = list(range(n))
-    
+
     # calculate means
     x_mean = sum(x_values) / n
     y_mean = sum(point_times) / n
-    
+
     # calculate slope using least squares formula
     numerator = sum((x - x_mean) * (y - y_mean) for x, y in zip(x_values, point_times))
     denominator = sum((x - x_mean) ** 2 for x in x_values)
     slope = numerator / denominator if denominator != 0 else 0
-    
+
     # the slope should be very small (close to 0) indicating no significant slowdown
     # allow for some variance but fail if there's a clear exponential trend
     # a slope > 0.1 seconds per point would indicate serious performance degradation
     assert slope < 0.1, f"Performance degradation detected: slope = {slope:.4f} seconds per point"
-    
+
     # also check that no individual point took an unreasonably long time
     max_time = max(point_times)
-    assert max_time < 10.0, f"Individual point took too long: {max_time:.2f} seconds"
-    
-    print(f"Performance test completed:")
+    assert max_time < 5.0, f"Individual point took too long: {max_time:.2f} seconds"
+
+    # use `-s` argument to pytest to view
+    print("Performance test completed:")
     print(f"  Total points: {len(point_times)}")
     print(f"  Average time per point: {y_mean:.3f} seconds")
     print(f"  Max time per point: {max_time:.3f} seconds")
     print(f"  Performance slope: {slope:.6f} seconds per point")
-
-
