@@ -1,4 +1,4 @@
-import { StoredGame, UndoCommand } from './db';
+import { StoredGame, UndoCommand, type GameView } from './db';
 import { PointModel, EventType, mapApiEventToEvent, mapEventToApiEvent } from './models';
 
 // GameState enum - moved from bookkeeper
