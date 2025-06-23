@@ -2,6 +2,8 @@ from playwright.sync_api import Browser, Page, expect
 import pytest
 import re
 import requests
+import time
+import numpy as np
 
 from server.api import CURRENT_LEAGUE_ID
 
@@ -1129,5 +1131,149 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     game = get_game(1)
     assert "Kyle Sprysa" in game["points"][0]["offensePlayers"]
     assert "Kevin Barford" not in game["points"][0]["offensePlayers"]
+
+
+def test_perf(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # track timing for each point
+    point_times = []
+
+    # first half - 20 points
+    for point_num in range(20):
+        start_time = time.time()
+        
+        # select lines (auto-selected after first point)
+        if point_num == 0:
+            expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+            home_line = rosters[home][:6]
+            away_line = rosters[away][:6]
+            select_lines(page, home_line, away_line)
+            expect_lines_selected(page, home, away)
+        else:
+            expect_next_line_text(page)
+        
+        start_point(page)
+
+        # determine which team is pulling (alternates each point)
+        if point_num == 0:
+            # first point - away team pulls
+            puller = rosters[away][0]  # Owen Lumley
+            receiving_team = rosters[home][:6]
+        else:
+            # subsequent points - team that was scored on pulls
+            # since we always score for the receiving team, the pulling team alternates
+            if point_num % 2 == 1:
+                # home team pulls
+                puller = rosters[home][0]  # Brian Kells
+                receiving_team = rosters[away][:6]
+            else:
+                # away team pulls
+                puller = rosters[away][0]  # Owen Lumley
+                receiving_team = rosters[home][:6]
+
+        # record the pull
+        page.get_by_role("button", name=puller).click()
+        page.get_by_role("button", name="Pull").click()
+
+        # pass to each player on the receiving team, with the last one scoring
+        for i, player in enumerate(receiving_team):
+            page.get_by_role("button", name=player).click()
+            if i == len(receiving_team) - 1:
+                # last player scores
+                page.get_by_role("button", name="Point!").click()
+            # else it's automatically a pass to the next player
+
+        end_time = time.time()
+        point_times.append(end_time - start_time)
+
+    # record half
+    open_hamburger_menu(page)
+    page.once("dialog", lambda dialog: dialog.accept())
+    page.get_by_role("menuitem", name="Record Half").click()
+
+    # second half - 20 more points
+    for point_num in range(20, 40):
+        start_time = time.time()
+        
+        # select lines for first point of second half
+        if point_num == 20:
+            home_line = rosters[home][:6]
+            away_line = rosters[away][:6]
+            select_lines(page, home_line, away_line)
+            expect_lines_selected(page, home, away)
+        else:
+            expect_next_line_text(page)
+        
+        start_point(page)
+
+        # determine which team is pulling
+        if point_num == 20:
+            # first point of second half - home team pulls (opposite of first half)
+            puller = rosters[home][0]  # Brian Kells
+            receiving_team = rosters[away][:6]
+        else:
+            # subsequent points - team that was scored on pulls
+            if point_num % 2 == 0:
+                # away team pulls
+                puller = rosters[away][0]  # Owen Lumley
+                receiving_team = rosters[home][:6]
+            else:
+                # home team pulls
+                puller = rosters[home][0]  # Brian Kells
+                receiving_team = rosters[away][:6]
+
+        # record the pull
+        page.get_by_role("button", name=puller).click()
+        page.get_by_role("button", name="Pull").click()
+
+        # pass to each player on the receiving team, with the last one scoring
+        for i, player in enumerate(receiving_team):
+            page.get_by_role("button", name=player).click()
+            if i == len(receiving_team) - 1:
+                # last player scores
+                page.get_by_role("button", name="Point!").click()
+            # else it's automatically a pass to the next player
+
+        end_time = time.time()
+        point_times.append(end_time - start_time)
+
+    # submit game
+    submit_game(page)
+
+    # verify some basic stats to ensure the game was recorded correctly
+    stats = get_stats()
+    # Each team should have scored 20 points (40 total)
+    total_goals = sum(player_stats.get("goals", 0) for player_stats in stats.values())
+    assert total_goals == 40
+
+    # analyze performance - compute slope to ensure no exponential slowdown
+    x = np.array(range(len(point_times)))
+    y = np.array(point_times)
+    
+    # fit a linear regression line
+    slope, intercept = np.polyfit(x, y, 1)
+    
+    # the slope should be very small (close to 0) indicating no significant slowdown
+    # allow for some variance but fail if there's a clear exponential trend
+    # a slope > 0.1 seconds per point would indicate serious performance degradation
+    assert slope < 0.1, f"Performance degradation detected: slope = {slope:.4f} seconds per point"
+    
+    # also check that no individual point took an unreasonably long time
+    max_time = max(point_times)
+    assert max_time < 10.0, f"Individual point took too long: {max_time:.2f} seconds"
+    
+    print(f"Performance test completed:")
+    print(f"  Total points: {len(point_times)}")
+    print(f"  Average time per point: {np.mean(point_times):.3f} seconds")
+    print(f"  Max time per point: {max_time:.3f} seconds")
+    print(f"  Performance slope: {slope:.6f} seconds per point")
 
 
