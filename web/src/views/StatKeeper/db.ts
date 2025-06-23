@@ -55,6 +55,38 @@ export interface StoredGame {
   // undoStack?: any[]; // Internal undo command data - REMOVED, now typed above
 }
 
+// Game logic methods that will be added to StoredGame instances
+export interface StoredGameMethods {
+  // State query methods
+  gameState(): number; // GameState enum
+  shouldRecordNewPass(): boolean;
+  firstPointOfGameOrHalf(): boolean;
+  
+  // Action methods
+  recordFirstActor(player: string, isHomeTeamPlayer: boolean): void;
+  recordPull(): void;
+  recordPass(receiver: string): void;
+  recordDrop(): void;
+  recordThrowAway(): void;
+  recordD(): void;
+  recordCatchD(): void;
+  recordPoint(): void;
+  recordHalf(): void;
+  recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void;
+  recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void;
+  
+  // Undo methods
+  undo(): void;
+  
+  // View management
+  updateViewAfterAction(): void;
+  
+  // Utility methods
+  changePossession(): void;
+  prepareNewPointAfterScore(): void;
+  resumePoint(): void;
+}
+
 const db = new Dexie('StatKeeperDB') as Dexie & {
   games: EntityTable<
     StoredGame,
