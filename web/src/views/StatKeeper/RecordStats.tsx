@@ -327,14 +327,46 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
-      await bookkeeper.performAction(bk => bk.recordPass(playerName));
+      await bookkeeper.recordPass(playerName);
     } else {
-      await bookkeeper.performAction(bk => bk.recordFirstActor(playerName, isHomeTeamPlayer));
+      await bookkeeper.recordFirstActor(playerName, isHomeTeamPlayer);
     }
   };
 
-  const handleActionClick = async (actionFunc: (bk: Bookkeeper) => void) => {
-    await bookkeeper.performAction(actionFunc);
+  const handlePull = async () => {
+    await bookkeeper.recordPull();
+  };
+
+  const handlePoint = async () => {
+    await bookkeeper.recordPoint();
+  };
+
+  const handleDrop = async () => {
+    await bookkeeper.recordDrop();
+  };
+
+  const handleThrowaway = async () => {
+    await bookkeeper.recordThrowAway();
+  };
+
+  const handleD = async () => {
+    if (!bookkeeper.firstActor) {
+      alert('Select the player who got the D first.');
+      return;
+    }
+    await bookkeeper.recordD();
+  };
+
+  const handleCatchD = async () => {
+    if (!bookkeeper.firstActor) {
+      alert('Select the player who got the Catch D first.');
+      return;
+    }
+    await bookkeeper.recordCatchD();
+  };
+
+  const handleUndo = async () => {
+    await bookkeeper.undo();
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
@@ -395,54 +427,38 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
         primaryActions={[
           {
             label: 'Pull',
-            onClick: () => handleActionClick(bk => bk.recordPull()),
+            onClick: handlePull,
             disabled: !pullState.enabled,
             variant: 'outlined',
           },
           {
             label: 'Point!',
-            onClick: () => handleActionClick(bk => bk.recordPoint()),
+            onClick: handlePoint,
             disabled: !pointState.enabled,
             color: 'success',
             variant: 'contained',
           },
           {
             label: 'Drop',
-            onClick: () => handleActionClick(bk => bk.recordDrop()),
+            onClick: handleDrop,
             disabled: !dropState.enabled,
             variant: 'outlined',
           },
           {
             label: 'Throwaway',
-            onClick: () => handleActionClick(bk => bk.recordThrowAway()),
+            onClick: handleThrowaway,
             disabled: !throwawayState.enabled,
             variant: 'outlined',
           },
           {
             label: 'D (Block)',
-            onClick: () => {
-              if (!bookkeeper.firstActor) {
-                // we never see this and we don't want to.
-                // and at least for me the confusing part is to do the throwaway first
-                alert('Select the player who got the D first.');
-                return;
-              }
-              handleActionClick(bk => bk.recordD());
-            },
+            onClick: handleD,
             disabled: !dState.enabled,
             variant: 'outlined',
           },
           {
             label: 'Catch D',
-            onClick: () => {
-              if (!bookkeeper.firstActor) {
-                // we never see this and we don't want to.
-                // and at least for me the confusing part is to do the throwaway first
-                alert('Select the player who got the Catch D first.');
-                return;
-              }
-              handleActionClick(bk => bk.recordCatchD());
-            },
+            onClick: handleCatchD,
             disabled: !catchDState.enabled,
             variant: 'outlined',
           },
@@ -450,7 +466,7 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
         secondaryActions={[
           {
             label: 'Undo',
-            onClick: () => handleActionClick(bk => bk.undo()),
+            onClick: handleUndo,
             disabled: !undoState.enabled,
             color: 'warning',
             variant: 'contained',

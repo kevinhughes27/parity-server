@@ -36,7 +36,7 @@ function LocalGame() {
       alert('Half has already been recorded.');
       return;
     }
-    await bookkeeper.performAction(bk => bk.recordHalf());
+    await bookkeeper.recordHalf();
     alert('Half time recorded.');
   };
 
