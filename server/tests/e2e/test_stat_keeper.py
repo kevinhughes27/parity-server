@@ -1162,34 +1162,40 @@ def test_perf(server, league, rosters, page: Page) -> None:
         
         start_point(page)
 
-        # determine which team is pulling (alternates each point)
+        # determine which team has possession and whether to pull
         if point_num == 0:
             # first point - away team pulls
             puller = rosters[away][0]  # Owen Lumley
             receiving_team = rosters[home][:6]
+            
+            # record the pull
+            page.get_by_role("button", name=puller).click()
+            page.get_by_role("button", name="Pull").click()
+            
+            # pass to each player on the receiving team, with the last one scoring
+            for i, player in enumerate(receiving_team):
+                page.get_by_role("button", name=player).click()
+                if i == len(receiving_team) - 1:
+                    # last player scores
+                    page.get_by_role("button", name="Point!").click()
+                # else it's automatically a pass to the next player
         else:
-            # subsequent points - team that was scored on pulls
-            # since we always score for the receiving team, the pulling team alternates
+            # subsequent points - team that was scored on starts with possession
+            # since we always score for the receiving team, possession alternates
             if point_num % 2 == 1:
-                # home team pulls
-                puller = rosters[home][0]  # Brian Kells
-                receiving_team = rosters[away][:6]
+                # home team starts with possession
+                possessing_team = rosters[home][:6]
             else:
-                # away team pulls
-                puller = rosters[away][0]  # Owen Lumley
-                receiving_team = rosters[home][:6]
-
-        # record the pull
-        page.get_by_role("button", name=puller).click()
-        page.get_by_role("button", name="Pull").click()
-
-        # pass to each player on the receiving team, with the last one scoring
-        for i, player in enumerate(receiving_team):
-            page.get_by_role("button", name=player).click()
-            if i == len(receiving_team) - 1:
-                # last player scores
-                page.get_by_role("button", name="Point!").click()
-            # else it's automatically a pass to the next player
+                # away team starts with possession  
+                possessing_team = rosters[away][:6]
+            
+            # pass to each player on the possessing team, with the last one scoring
+            for i, player in enumerate(possessing_team):
+                page.get_by_role("button", name=player).click()
+                if i == len(possessing_team) - 1:
+                    # last player scores
+                    page.get_by_role("button", name="Point!").click()
+                # else it's automatically a pass to the next player
 
         end_time = time.time()
         point_times.append(end_time - start_time)
@@ -1214,33 +1220,39 @@ def test_perf(server, league, rosters, page: Page) -> None:
         
         start_point(page)
 
-        # determine which team is pulling
+        # determine which team has possession and whether to pull
         if point_num == 20:
             # first point of second half - home team pulls (opposite of first half)
             puller = rosters[home][0]  # Brian Kells
             receiving_team = rosters[away][:6]
+            
+            # record the pull
+            page.get_by_role("button", name=puller).click()
+            page.get_by_role("button", name="Pull").click()
+            
+            # pass to each player on the receiving team, with the last one scoring
+            for i, player in enumerate(receiving_team):
+                page.get_by_role("button", name=player).click()
+                if i == len(receiving_team) - 1:
+                    # last player scores
+                    page.get_by_role("button", name="Point!").click()
+                # else it's automatically a pass to the next player
         else:
-            # subsequent points - team that was scored on pulls
+            # subsequent points - team that was scored on starts with possession
             if point_num % 2 == 0:
-                # away team pulls
-                puller = rosters[away][0]  # Owen Lumley
-                receiving_team = rosters[home][:6]
+                # away team starts with possession
+                possessing_team = rosters[away][:6]
             else:
-                # home team pulls
-                puller = rosters[home][0]  # Brian Kells
-                receiving_team = rosters[away][:6]
-
-        # record the pull
-        page.get_by_role("button", name=puller).click()
-        page.get_by_role("button", name="Pull").click()
-
-        # pass to each player on the receiving team, with the last one scoring
-        for i, player in enumerate(receiving_team):
-            page.get_by_role("button", name=player).click()
-            if i == len(receiving_team) - 1:
-                # last player scores
-                page.get_by_role("button", name="Point!").click()
-            # else it's automatically a pass to the next player
+                # home team starts with possession
+                possessing_team = rosters[home][:6]
+            
+            # pass to each player on the possessing team, with the last one scoring
+            for i, player in enumerate(possessing_team):
+                page.get_by_role("button", name=player).click()
+                if i == len(possessing_team) - 1:
+                    # last player scores
+                    page.get_by_role("button", name="Point!").click()
+                # else it's automatically a pass to the next player
 
         end_time = time.time()
         point_times.append(end_time - start_time)
