@@ -21,7 +21,7 @@ export { GameState };
 interface ActionOptions {
   skipViewChange?: boolean;
   skipSave?: boolean;
-  newStatus?: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
+  newStatus?: 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
 }
 
 
@@ -42,7 +42,7 @@ export class Bookkeeper {
   private game: StoredGame;
   // Game methods - separate from data
   private gameMethods: StoredGameMethods;
-  
+
   // Derived/computed data for convenience
   public league: League;
   public homeTeam: Team;
@@ -112,13 +112,13 @@ export class Bookkeeper {
 
   // View state management (components can modify these)
   get currentView(): GameView { return this.game.currentView; }
-  set currentView(value: GameView) { 
+  set currentView(value: GameView) {
     this.game.currentView = value;
     this.notifyListeners();
   }
 
   get lastPlayedLine(): { home: string[]; away: string[] } | null { return this.game.lastPlayedLine; }
-  set lastPlayedLine(value: { home: string[]; away: string[] } | null) { 
+  set lastPlayedLine(value: { home: string[]; away: string[] } | null) {
     this.game.lastPlayedLine = value;
   }
 
@@ -147,7 +147,7 @@ export class Bookkeeper {
     if (!apiLeague) {
       throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
     }
-    
+
     const leagueForBk: League = {
       id: storedGame.league_id,
       name: getLeagueName(storedGame.league_id) || 'Unknown League',
@@ -155,8 +155,8 @@ export class Bookkeeper {
     };
 
     // Initialize team objects with rosters
-    const homeTeamForBk: Team = { 
-      id: storedGame.homeTeamId, 
+    const homeTeamForBk: Team = {
+      id: storedGame.homeTeamId,
       name: storedGame.homeTeam,
       players: storedGame.homeRoster.map(name => ({
         name,
@@ -165,8 +165,8 @@ export class Bookkeeper {
       }))
     };
 
-    const awayTeamForBk: Team = { 
-      id: storedGame.awayTeamId, 
+    const awayTeamForBk: Team = {
+      id: storedGame.awayTeamId,
       name: storedGame.awayTeam,
       players: storedGame.awayRoster.map(name => ({
         name,
@@ -182,12 +182,12 @@ export class Bookkeeper {
       awayTeamForBk,
       gameId
     );
-    
+
     // Initialize view state if needed
     if (gameWithDefaults.currentView === 'loading') {
       bookkeeper.determineInitialView();
     }
-    
+
     return bookkeeper;
   }
 
@@ -213,7 +213,7 @@ export class Bookkeeper {
   ): Promise<void> {
     // Track state for view transitions (for point scoring)
     const wasRecordingPoint = this.homePlayers !== null && this.awayPlayers !== null;
-    
+
     // Execute the action
     action();
 
@@ -351,7 +351,7 @@ export class Bookkeeper {
       if (newStatus) {
         this.game.status = newStatus;
       }
-      
+
       // Update rosters from team objects
       this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
       this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
@@ -485,7 +485,7 @@ export class Bookkeeper {
       awayTeamId: awayTeam.id,
       homeRoster: sortedHomeRoster,
       awayRoster: sortedAwayRoster,
-      
+
       // Game state
       points: [],
       activePoint: null,
@@ -494,21 +494,21 @@ export class Bookkeeper {
       homePossession: true,
       firstActor: null,
       pointsAtHalf: 0,
-      
+
       // Line selection state
       homePlayers: null,
       awayPlayers: null,
       lastPlayedLine: null,
-      
+
       // UI state
       currentView: 'selectLines',
       localError: null,
-      
+
       // Undo system
       undoStack: [],
-      
+
       // Persistence metadata
-      status: 'new',
+      status: 'in-progress',
       lastModified: new Date(),
     };
 
