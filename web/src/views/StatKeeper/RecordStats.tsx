@@ -43,10 +43,11 @@ const getPlayerButtonState = (
 
   const currentGameState = bookkeeper.gameState();
   const isActivePlayer = bookkeeper.firstActor === playerName;
+  const isFirstPointOfGame = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf === 0;
   const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
 
-  // Special case: after halftime, both teams can select who pulls
-  if (currentGameState === GameState.Start && isFirstPointAfterHalftime) {
+  // Special case: first point of game or after halftime, both teams can select who pulls
+  if (currentGameState === GameState.Start && (isFirstPointOfGame || isFirstPointAfterHalftime)) {
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
@@ -87,7 +88,7 @@ const getPlayerButtonState = (
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
-      reason: isFirstPointAfterHalftime ? 'Select starting player' : 'Select receiving player',
+      reason: (isFirstPointOfGame || isFirstPointAfterHalftime) ? 'Select starting player' : 'Select receiving player',
       style: isActivePlayer
         ? {
             color: '#000',
