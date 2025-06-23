@@ -3,9 +3,9 @@ import 'fake-indexeddb/auto';
 import { Bookkeeper } from '../bookkeeper';
 import {
   EventType,
-  mapEventToApiEvent,
+  type Event,
 } from '../models';
-import { Point as ApiPoint, type LeagueFromJson as League, type Team } from '../../../api';
+import { type LeagueFromJson as League, type Team } from '../../../api';
 import { db, StoredGame } from '../db';
 
 // Mock the API leagues

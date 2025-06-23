@@ -1,5 +1,4 @@
 import {
-  EventType,
   PointModel,
   mapApiEventToEvent,
   mapEventToApiEvent,
@@ -12,8 +11,8 @@ import {
   type Team,
   leagues as apiLeagues
 } from '../../api';
-import { type UndoCommand, type GameView } from './db';
-import { StoredGameMethods, GameState, type IStoredGameMethods } from './storedGameMethods';
+import { type GameView } from './db';
+import { StoredGameMethods, GameState } from './storedGameMethods';
 
 // Export GameState for components
 export { GameState };
