@@ -306,6 +306,14 @@ export function addStoredGameMethods(game: StoredGame): StoredGame & StoredGameM
     const activePoint = getActivePointModel();
     if (!activePoint || !this.firstActor) return;
 
+    // Store the last played line before clearing it
+    if (this.homePlayers && this.awayPlayers) {
+      this.lastPlayedLine = {
+        home: [...this.homePlayers],
+        away: [...this.awayPlayers]
+      };
+    }
+
     // Store the possession state for this point before flipping it
     this.undoStack.push({
       type: 'recordPoint',
@@ -335,12 +343,16 @@ export function addStoredGameMethods(game: StoredGame): StoredGame & StoredGameM
       this.awayScore++;
     }
 
+    // Clear game state for next point
     this.activePoint = null;
     this.homePlayers = null;
     this.awayPlayers = null;
     this.firstActor = null;
 
     this.changePossession(); // Flip possession for the next point
+    
+    // Explicitly transition to line selection for next point
+    this.currentView = 'selectLines';
   };
 
   enhancedGame.recordHalf = function(): void {
@@ -357,11 +369,23 @@ export function addStoredGameMethods(game: StoredGame): StoredGame & StoredGameM
     this.homePlayers = null;
     this.awayPlayers = null;
     this.lastPlayedLine = null;
+    
+    // Explicitly transition to line selection for second half
+    this.currentView = 'selectLines';
   };
 
   enhancedGame.recordActivePlayers = function(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.homePlayers = [...activeHomePlayers];
     this.awayPlayers = [...activeAwayPlayers];
+    
+    // If we have players selected and no active point, we might need to prepare for the next point
+    if (this.activePoint === null && !this.firstPointOfGameOrHalf()) {
+      // This is after a point was scored, prepare the new point
+      this.prepareNewPointAfterScore();
+    }
+    
+    // Transition to record stats view since we now have players selected
+    this.currentView = 'recordStats';
   };
 
   enhancedGame.recordSubstitution = function(newHomePlayers: string[], newAwayPlayers: string[]): void {
@@ -431,20 +455,34 @@ export function addStoredGameMethods(game: StoredGame): StoredGame & StoredGameM
   };
 
   enhancedGame.updateViewAfterAction = function(): void {
-    // Don't override view if it was explicitly set (e.g., by undoRecordPoint)
-    if (this.currentView === 'recordStats' && this.activePoint !== null) {
-      return; // Keep the explicitly set view
+    // Determine the correct view based on current game state
+    const newView = this.determineCorrectView();
+    
+    // Only update if the view actually needs to change
+    if (this.currentView !== newView) {
+      this.currentView = newView;
+    }
+  };
+
+  enhancedGame.determineCorrectView = function(): GameView {
+    // Error state takes precedence
+    if (this.localError !== null) {
+      return 'error_state';
     }
 
-    // Transition to selectLines if we need to select players
-    // This happens when:
-    // 1. No active point AND no players selected (start of game/after point)
-    // 2. Players have been cleared (mid-point line change)
+    // If no players are selected, we need to select lines
     if (this.homePlayers === null || this.awayPlayers === null) {
-      this.currentView = 'selectLines';
-    } else {
-      this.currentView = 'recordStats';
+      return 'selectLines';
     }
+
+    // If players are selected but no active point, we're between points
+    if (this.activePoint === null) {
+      // After a point is scored, we stay in selectLines until new lines are chosen
+      return 'selectLines';
+    }
+
+    // If we have an active point and players selected, we're recording stats
+    return 'recordStats';
   };
 
   enhancedGame.undo = function(): void {
@@ -642,6 +680,20 @@ export function addStoredGameMethods(game: StoredGame): StoredGame & StoredGameM
     return offensePlayersFromHome.length > 0;
   };
 
+  enhancedGame.setError = function(error: string | null): void {
+    this.localError = error;
+    if (error !== null) {
+      this.currentView = 'error_state';
+    } else {
+      // Clear error and determine correct view
+      this.currentView = this.determineCorrectView();
+    }
+  };
+
+  enhancedGame.clearError = function(): void {
+    this.setError(null);
+  };
+
   return enhancedGame;
 }
 
@@ -670,6 +722,7 @@ export interface StoredGameMethods {
   
   // View management
   updateViewAfterAction(): void;
+  determineCorrectView(): GameView;
   
   // Utility methods
   changePossession(): void;
@@ -688,4 +741,6 @@ export interface StoredGameMethods {
   undoRecordHalf(): void;
   undoRecordSubstitution(command: UndoCommand): void;
   determinePointPossession(point: any): boolean;
+  setError(error: string | null): void;
+  clearError(): void;
 }

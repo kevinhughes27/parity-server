@@ -326,7 +326,8 @@ export class Bookkeeper {
 
 
   private determineInitialView(): void {
-    this.game.updateViewAfterAction();
+    // Set initial view based on game state
+    this.currentView = this.game.determineCorrectView();
   }
 
   private updateViewState(): void {
@@ -351,7 +352,7 @@ export class Bookkeeper {
 
       await db.games.update(this.gameId, this.game);
     } catch (error) {
-      this.game.localError = `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      this.game.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       this.notifyListeners();
       throw error;
     }
@@ -393,7 +394,7 @@ export class Bookkeeper {
         throw new Error(errorMessage);
       }
     } catch (error) {
-      this.localError = `Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      this.game.setError(`Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       this.notifyListeners();
       throw error;
     }
@@ -449,6 +450,11 @@ export class Bookkeeper {
 
   getMementosCount(): number {
     return this.game.undoStack.length;
+  }
+
+  clearError(): void {
+    this.game.clearError();
+    this.notifyListeners();
   }
 
   // Static method to create a new game and save it to the database

@@ -94,8 +94,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       } else {
         // Normal line selection
         await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
-        // Update view state manually since recordActivePlayers doesn't change view
-        bookkeeper.currentView = 'recordStats';
       }
     } else {
       let message = 'Incorrect number of players:';
@@ -115,8 +113,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
           // Normal line selection
           await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
         }
-        // Update view state manually
-        bookkeeper.currentView = 'recordStats';
       }
     }
   };
@@ -132,8 +128,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       } else {
         bookkeeper.resumePoint();
       }
-      // Manually trigger view update
-      bookkeeper.currentView = 'recordStats';
+      // View will be updated automatically by the bookkeeper
     }
   };
 
