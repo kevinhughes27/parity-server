@@ -1138,6 +1138,12 @@ def test_perf(server, league, rosters, page: Page) -> None:
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
 
+    # define two distinct lines that will alternate
+    home_line_1 = rosters[home][:6]
+    home_line_2 = rosters[home][6:]
+    away_line_1 = rosters[away][:6]
+    away_line_2 = rosters[away][6:]
+
     # create game
     select_teams(page, home, away)
     expect_rosters(page, rosters[home], rosters[away])
@@ -1153,9 +1159,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
         # select lines (auto-selected after first point)
         if point_num == 0:
             expect(page.locator("#root")).to_contain_text("Select players for the first point.")
-            home_line = rosters[home][:6]
-            away_line = rosters[away][:6]
-            select_lines(page, home_line, away_line)
+            select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:
             expect_next_line_text(page)
@@ -1165,8 +1169,8 @@ def test_perf(server, league, rosters, page: Page) -> None:
         # determine which team has possession and whether to pull
         if point_num == 0:
             # first point - away team pulls
-            puller = rosters[away][0]  # Owen Lumley
-            receiving_team = rosters[home][:6]
+            puller = away_line_1[0]  # Owen Lumley
+            receiving_team = home_line_1
             
             # record the pull
             page.get_by_role("button", name=puller).click()
@@ -1181,13 +1185,13 @@ def test_perf(server, league, rosters, page: Page) -> None:
                 # else it's automatically a pass to the next player
         else:
             # subsequent points - team that was scored on starts with possession
-            # since we always score for the receiving team, possession alternates
+            # determine which line is currently active (alternates each point)
             if point_num % 2 == 1:
-                # home team starts with possession
-                possessing_team = rosters[home][:6]
+                # line 2 is active, home team starts with possession
+                possessing_team = home_line_2
             else:
-                # away team starts with possession  
-                possessing_team = rosters[away][:6]
+                # line 1 is active, away team starts with possession  
+                possessing_team = away_line_1
             
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
@@ -1211,9 +1215,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
         
         # select lines for first point of second half
         if point_num == 20:
-            home_line = rosters[home][:6]
-            away_line = rosters[away][:6]
-            select_lines(page, home_line, away_line)
+            select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:
             expect_next_line_text(page)
@@ -1223,8 +1225,8 @@ def test_perf(server, league, rosters, page: Page) -> None:
         # determine which team has possession and whether to pull
         if point_num == 20:
             # first point of second half - home team pulls (opposite of first half)
-            puller = rosters[home][0]  # Brian Kells
-            receiving_team = rosters[away][:6]
+            puller = home_line_1[0]  # Brian Kells
+            receiving_team = away_line_1
             
             # record the pull
             page.get_by_role("button", name=puller).click()
@@ -1239,12 +1241,13 @@ def test_perf(server, league, rosters, page: Page) -> None:
                 # else it's automatically a pass to the next player
         else:
             # subsequent points - team that was scored on starts with possession
+            # determine which line is currently active (continues alternating from first half)
             if point_num % 2 == 0:
-                # away team starts with possession
-                possessing_team = rosters[away][:6]
+                # line 1 is active, away team starts with possession
+                possessing_team = away_line_1
             else:
-                # home team starts with possession
-                possessing_team = rosters[home][:6]
+                # line 2 is active, home team starts with possession
+                possessing_team = home_line_2
             
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
