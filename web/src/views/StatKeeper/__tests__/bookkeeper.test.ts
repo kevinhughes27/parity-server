@@ -30,8 +30,8 @@ const PLAYER3 = 'Patrick Kenzie';
 const PLAYER4 = 'Player 4';
 
 const mockLeague: League = { name: 'OCUA', id: '101', lineSize: 7 }; // Added lineSize
-const mockHomeTeam: Team = { name: 'Team A', id: 1 };
-const mockAwayTeam: Team = { name: 'Team B', id: 2 };
+const mockHomeTeam: Team = { name: 'Team A', id: 1, players: [] };
+const mockAwayTeam: Team = { name: 'Team B', id: 2, players: [] };
 const mockWeek = 1;
 
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
