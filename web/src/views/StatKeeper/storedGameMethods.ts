@@ -378,12 +378,6 @@ export class StoredGameMethods {
     this.game.homePlayers = [...activeHomePlayers];
     this.game.awayPlayers = [...activeAwayPlayers];
     
-    // If we have players selected and no active point, we might need to prepare for the next point
-    if (this.game.activePoint === null && !this.firstPointOfGameOrHalf()) {
-      // This is after a point was scored, prepare the new point
-      this.prepareNewPointAfterScore();
-    }
-    
     // Transition to record stats view since we now have players selected
     this.game.currentView = 'recordStats';
   }
@@ -475,13 +469,8 @@ export class StoredGameMethods {
       return 'selectLines';
     }
 
-    // If players are selected but no active point, we're between points
-    if (this.game.activePoint === null) {
-      // After a point is scored, we stay in selectLines until new lines are chosen
-      return 'selectLines';
-    }
-
-    // If we have an active point and players selected, we're recording stats
+    // If we have players selected, we can record stats (even without an active point)
+    // The active point will be created when the first action is taken
     return 'recordStats';
   }
 
