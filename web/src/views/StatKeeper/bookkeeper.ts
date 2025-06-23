@@ -373,7 +373,7 @@ export class Bookkeeper {
 
     try {
       await this.saveToDatabase('submitted');
-      
+
       const response = await fetch(`/submit_game`, {
         method: 'POST',
         headers: {
@@ -392,7 +392,7 @@ export class Bookkeeper {
     } catch (error) {
       // Ensure we always save as sync-error if something went wrong
       await this.saveToDatabase('sync-error');
-      
+
       // Re-throw the error with a clean message
       if (error instanceof Error) {
         throw error;

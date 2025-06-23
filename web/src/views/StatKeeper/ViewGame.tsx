@@ -113,9 +113,6 @@ function TopBar({
 function GameDataViewer({ apiPayload }: { apiPayload: any }) {
   return (
     <Paper elevation={1} sx={{ p: 2 }}>
-      <Typography variant="h6" sx={{ mb: 2 }}>
-        API Payload
-      </Typography>
       <ReactJson
         src={apiPayload}
         theme="rjv-default"

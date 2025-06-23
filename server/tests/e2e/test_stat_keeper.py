@@ -113,14 +113,18 @@ def open_hamburger_menu(page: Page):
     page.get_by_role("button").filter(has_text=re.compile(r"^$")).click()
 
 
-def submit_game(page: Page):
+def submit_game(page: Page, *, failed: bool = False):
     open_hamburger_menu(page)
     page.once("dialog", lambda dialog: dialog.accept())
     page.get_by_role("menuitem", name="Submit Game").click()
 
     page.wait_for_url("**/stat_keeper")
     expect(page.locator("#root")).to_contain_text("Local Games")
-    expect(page.locator("#root")).to_contain_text("uploaded")
+
+    if failed:
+        expect(page.locator("#root")).to_contain_text("sync-error")
+    else:
+        expect(page.locator("#root")).to_contain_text("uploaded")
 
 
 def get_stats():
@@ -899,6 +903,69 @@ def test_resume(
     assert stats["Owen Lumley"]["goals"] == 1
 
 
+def test_resubmit(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+    page.get_by_role("button", name="Kevin Barford").click()
+    page.get_by_role("button", name="Point!").click()
+
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Heather McCabe",
+            "3.Heather McCabe passed to Kevin Barford",
+            "4.Kevin Barford scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+
+    # simluate network failure
+    page.route("**/submit_game", lambda route: route.abort())
+
+    # submit
+    submit_game(page, failed=True)
+
+    # view game
+    page.get_by_role("link", name="View Game").click()
+    expect(page.locator("h5")).to_contain_text("Kells Angels Bicycle Club vs lumleysexuals")
+
+    # fix network failure
+    page.route("**/submit_game", lambda route: route.continue_())
+
+    # re-submit the game
+    page.get_by_role("button", name="Re-sync").click()
+
+    # success
+    expect(page.get_by_role("alert")).to_contain_text("Game successfully uploaded to server!")
+    expect(page.locator("#root")).not_to_contain_text("Re-sync")
+
+    # verify submitted stats
+    stats = get_stats()
+    assert stats["Brian Kells"]["pulls"] == 1
+    assert stats["Heather McCabe"]["assists"] == 1
+    assert stats["Kevin Barford"]["goals"] == 1
+
+
 def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
@@ -987,6 +1054,7 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
 
 # test_edit_rosters_mid_point?
 # and change line after?
+# test change line undo
 
 
 def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
@@ -1061,3 +1129,5 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     game = get_game(1)
     assert "Kyle Sprysa" in game["points"][0]["offensePlayers"]
     assert "Kevin Barford" not in game["points"][0]["offensePlayers"]
+
+
