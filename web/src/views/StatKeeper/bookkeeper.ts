@@ -351,10 +351,15 @@ export class Bookkeeper {
 
       await db.games.update(this.gameId, this.game);
     } catch (error) {
-      this.localError = `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      this.game.localError = `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
       this.notifyListeners();
       throw error;
     }
+  }
+
+  // Public method for external saves (like roster updates)
+  public async saveChanges(): Promise<void> {
+    await this.saveToDatabase();
   }
 
   async submitGame(): Promise<void> {

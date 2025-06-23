@@ -71,11 +71,11 @@ function ViewGame() {
     );
   }
 
-  if (bookkeeper.getError()) {
+  if (bookkeeper.localError) {
     return (
       <Box sx={{ p: 3 }}>
         <Alert severity="error" sx={{ mb: 2 }}>
-          Error: {bookkeeper.getError()}
+          Error: {bookkeeper.localError}
         </Alert>
         <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
           <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
