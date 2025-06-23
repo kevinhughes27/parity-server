@@ -93,39 +93,28 @@ export class Bookkeeper {
     }
   }
 
+  // Read-only getters for game state (components should not directly modify these)
   get firstActor(): string | null { return this.game.firstActor; }
-  set firstActor(value: string | null) { this.game.firstActor = value; }
-
   get homePossession(): boolean { return this.game.homePossession; }
-  set homePossession(value: boolean) { this.game.homePossession = value; }
-
   get homeScore(): number { return this.game.homeScore; }
-  set homeScore(value: number) { this.game.homeScore = value; }
-
   get awayScore(): number { return this.game.awayScore; }
-  set awayScore(value: number) { this.game.awayScore = value; }
-
   get pointsAtHalf(): number { return this.game.pointsAtHalf; }
-  set pointsAtHalf(value: number) { this.game.pointsAtHalf = value; }
-
   get homePlayers(): string[] | null { return this.game.homePlayers; }
-  set homePlayers(value: string[] | null) { this.game.homePlayers = value; }
-
   get awayPlayers(): string[] | null { return this.game.awayPlayers; }
-  set awayPlayers(value: string[] | null) { this.game.awayPlayers = value; }
-
-  get currentView(): GameView { return this.game.currentView; }
-  set currentView(value: GameView) { this.game.currentView = value; }
-
   get localError(): string | null { return this.game.localError; }
-  set localError(value: string | null) { this.game.localError = value; }
+  get week(): number { return this.game.week; }
+
+  // View state management (components can modify these)
+  get currentView(): GameView { return this.game.currentView; }
+  set currentView(value: GameView) { 
+    this.game.currentView = value;
+    this.notifyListeners();
+  }
 
   get lastPlayedLine(): { home: string[]; away: string[] } | null { return this.game.lastPlayedLine; }
-  set lastPlayedLine(value: { home: string[]; away: string[] } | null) { this.game.lastPlayedLine = value; }
-
-  get undoStack(): UndoCommand[] { return this.game.undoStack; }
-
-  get week(): number { return this.game.week; }
+  set lastPlayedLine(value: { home: string[]; away: string[] } | null) { 
+    this.game.lastPlayedLine = value;
+  }
 
   static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
     const storedGame = await db.games.get(gameId);
@@ -197,6 +186,7 @@ export class Bookkeeper {
   }
 
 
+  // Delegate common game state queries directly to the game
   public gameState(): GameState {
     return this.game.gameState();
   }
@@ -209,53 +199,23 @@ export class Bookkeeper {
     return this.game.firstPointOfGameOrHalf();
   }
 
-  public recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
-    this.game.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
-  }
 
-  public recordSubstitution(
-    newHomePlayers: string[],
-    newAwayPlayers: string[],
-  ): void {
-    this.game.recordSubstitution(newHomePlayers, newAwayPlayers);
-  }
-
-  public updateRosters(homeRoster: string[], awayRoster: string[]): void {
-    // Update the team objects with new rosters
-    this.homeTeam.players = homeRoster.map(name => ({
-      name,
-      team: this.homeTeam.name,
-      is_male: true // Default, will be updated when proper team data is loaded
-    }));
-
-    this.awayTeam.players = awayRoster.map(name => ({
-      name,
-      team: this.awayTeam.name,
-      is_male: true // Default, will be updated when proper team data is loaded
-    }));
-
-    // Update the roster sets
-    this.homeRoster = new Set(homeRoster);
-    this.awayRoster = new Set(awayRoster);
-  }
-
-  // New: Unified action method that handles persistence
-  async performAction(
-    action: (bk: Bookkeeper) => void,
+  // Simplified action method that handles persistence and notifications
+  private async performAction(
+    action: () => void,
     options: ActionOptions = {}
   ): Promise<void> {
-    const actionName = action.name || action.toString();
-
-    // Track state for view transitions
-    if (actionName.includes('recordPoint')) {
-      this.lastPlayedLine = {
-        home: [...(this.homePlayers || [])],
-        away: [...(this.awayPlayers || [])],
-      };
-    }
-
+    // Track state for view transitions (for point scoring)
+    const wasRecordingPoint = this.homePlayers !== null && this.awayPlayers !== null;
+    
     // Execute the action
-    action(this);
+    action();
+
+    // Track last played line if a point was just scored
+    if (wasRecordingPoint && this.homePlayers === null && this.awayPlayers === null) {
+      // Point was scored, preserve the line that was playing
+      // This will be handled by the recordPoint method in StoredGame
+    }
 
     // Auto-save unless explicitly skipped or no game ID (for tests)
     if (!options.skipSave && this.gameId !== null) {
@@ -271,10 +231,80 @@ export class Bookkeeper {
     this.notifyListeners();
   }
 
-  public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
-    this.game.recordFirstActor(player, isHomeTeamPlayer);
+  // Simplified action methods that handle persistence and notifications
+  public async recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
+    });
   }
 
+  public async recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordSubstitution(newHomePlayers, newAwayPlayers);
+    });
+  }
+
+  public async recordFirstActor(player: string, isHomeTeamPlayer: boolean): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordFirstActor(player, isHomeTeamPlayer);
+    });
+  }
+
+  public async recordPull(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordPull();
+    });
+  }
+
+  public async recordPass(receiver: string): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordPass(receiver);
+    });
+  }
+
+  public async recordDrop(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordDrop();
+    });
+  }
+
+  public async recordThrowAway(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordThrowAway();
+    });
+  }
+
+  public async recordD(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordD();
+    });
+  }
+
+  public async recordCatchD(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordCatchD();
+    });
+  }
+
+  public async recordPoint(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordPoint();
+    });
+  }
+
+  public async recordHalf(): Promise<void> {
+    await this.performAction(() => {
+      this.game.recordHalf();
+    });
+  }
+
+  public async undo(): Promise<void> {
+    await this.performAction(() => {
+      this.game.undo();
+    });
+  }
+
+  // Utility methods that don't need persistence
   public prepareNewPointAfterScore(): void {
     this.game.prepareNewPointAfterScore();
   }
@@ -283,67 +313,20 @@ export class Bookkeeper {
     this.game.resumePoint();
   }
 
-  public recordPull(): void {
-    this.game.recordPull();
-  }
-
-  public recordThrowAway(): void {
-    this.game.recordThrowAway();
-  }
-
-  public recordPass(receiver: string): void {
-    this.game.recordPass(receiver);
-  }
-
-  public recordDrop(): void {
-    this.game.recordDrop();
-  }
-
-  public recordD(): void {
-    this.game.recordD();
-  }
-
-  public recordCatchD(): void {
-    this.game.recordCatchD();
-  }
-
-  public recordPoint(): void {
-    this.game.recordPoint();
-  }
-
-  public recordHalf(): void {
-    this.game.recordHalf();
-  }
-
-  public undo(): void {
-    this.game.undo();
-  }
-
+  // Point display methods
   public getCurrentPointPrettyPrint(): string[] {
-    if (this.activePoint !== null) {
-      return this.activePoint.prettyPrint();
-    } else {
-      return [];
-    }
+    return this.activePoint?.prettyPrint() || [];
   }
 
   public getLastCompletedPointPrettyPrint(): string[] {
-    if (this.points.length > 0) {
-      const lastPoint = this.points[this.points.length - 1];
-      return lastPoint.prettyPrint();
-    }
-    return [];
+    const lastPoint = this.points[this.points.length - 1];
+    return lastPoint?.prettyPrint() || [];
   }
 
 
 
   private determineInitialView(): void {
-    if (this.activePoint === null && (this.homePlayers === null || this.awayPlayers === null)) {
-      this.currentView = 'selectLines';
-    } else {
-      this.lastPlayedLine = null;
-      this.currentView = 'recordStats';
-    }
+    this.game.updateViewAfterAction();
   }
 
   private updateViewState(): void {
@@ -438,6 +421,7 @@ export class Bookkeeper {
     this.listeners.forEach(listener => listener());
   }
 
+  // Convenience methods for React components
   getCurrentView(): GameView {
     return this.currentView;
   }
@@ -455,12 +439,11 @@ export class Bookkeeper {
   }
 
   getGameStatus(): StoredGame['status'] {
-    return 'in-progress';
-  } // TODO: Track actual status
+    return this.game.status;
+  }
 
-  setLastPlayedLine(value: { home: string[]; away: string[] } | null): void {
-    this.lastPlayedLine = value;
-    this.notifyListeners();
+  getMementosCount(): number {
+    return this.game.undoStack.length;
   }
 
   // Static method to create a new game and save it to the database
@@ -516,7 +499,4 @@ export class Bookkeeper {
     return id;
   }
 
-  public getMementosCount(): number {
-    return this.game.undoStack.length;
-  }
 }

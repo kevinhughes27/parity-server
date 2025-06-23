@@ -93,10 +93,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
         await handleSubstitution(newHomePlayers, newAwayPlayers);
       } else {
         // Normal line selection
-        await bookkeeper.performAction(
-          bk => bk.recordActivePlayers(newHomePlayers, newAwayPlayers),
-          { skipViewChange: true }
-        );
+        await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
       }
       await handleLinesSelected();
     } else {
@@ -115,10 +112,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
           await handleSubstitution(newHomePlayers, newAwayPlayers);
         } else {
           // Normal line selection
-          await bookkeeper.performAction(
-            bk => bk.recordActivePlayers(newHomePlayers, newAwayPlayers),
-            { skipViewChange: true }
-          );
+          await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
         }
         await handleLinesSelected();
       }
@@ -126,25 +120,23 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
   };
 
   const handleSubstitution = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
-    await bookkeeper.performAction(
-      bk => bk.recordSubstitution(newHomePlayers, newAwayPlayers),
-      { skipViewChange: true }
-    );
+    await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
   };
 
   const handleLinesSelected = async () => {
     if (bookkeeper.homePlayers && bookkeeper.awayPlayers) {
       if (bookkeeper.activePoint === null && !bookkeeper.firstPointOfGameOrHalf()) {
-        await bookkeeper.performAction(bk => bk.prepareNewPointAfterScore());
+        bookkeeper.prepareNewPointAfterScore();
       } else {
-        // No-op action to force view transition
-        await bookkeeper.performAction(bk => bk.resumePoint(), { skipSave: true });
+        bookkeeper.resumePoint();
       }
+      // Manually trigger view update
+      bookkeeper.currentView = 'recordStats';
     }
   };
 
   const handleUndoLastAction = async () => {
-    await bookkeeper.performAction(bk => bk.undo());
+    await bookkeeper.undo();
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
