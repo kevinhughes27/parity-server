@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import ReactJson from 'react-json-view';
 import { useBookkeeper } from './hooks';
-import JsonViewer from './JsonViewer';
 import {
   AppBar,
   Toolbar,
@@ -15,6 +15,126 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DownloadIcon from '@mui/icons-material/Download';
 import SyncIcon from '@mui/icons-material/Sync';
+
+function LoadingState() {
+  return (
+    <Box
+      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
+    >
+      <CircularProgress />
+      <Typography sx={{ ml: 2 }}>Loading game data...</Typography>
+    </Box>
+  );
+}
+
+function ErrorState({ error }: { error: string }) {
+  return (
+    <Box sx={{ p: 3 }}>
+      <Alert severity="error" sx={{ mb: 2 }}>
+        Error: {error}
+      </Alert>
+      <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
+        <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
+      </Link>
+    </Box>
+  );
+}
+
+function TopBar({
+  bookkeeper,
+  isResyncing,
+  canResync,
+  onDownloadJson,
+  onResync,
+}: {
+  bookkeeper: any;
+  isResyncing: boolean;
+  canResync: boolean;
+  onDownloadJson: () => void;
+  onResync: () => void;
+}) {
+  const apiPayload = bookkeeper.transformForAPI();
+  const gameStatus = bookkeeper.getGameStatus();
+
+  return (
+    <AppBar position="static" color="default" elevation={1}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Link
+          to="/stat_keeper"
+          style={{
+            fontSize: '0.9em',
+            textDecoration: 'none',
+            color: 'inherit',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
+        </Link>
+
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Button
+            variant="outlined"
+            startIcon={<DownloadIcon />}
+            onClick={onDownloadJson}
+            size="small"
+          >
+            Download JSON
+          </Button>
+
+          {canResync && (
+            <Button
+              variant="contained"
+              startIcon={isResyncing ? <CircularProgress size={16} /> : <SyncIcon />}
+              onClick={onResync}
+              disabled={isResyncing}
+              size="small"
+              color="warning"
+            >
+              {isResyncing ? 'Syncing...' : 'Re-sync'}
+            </Button>
+          )}
+        </Box>
+      </Toolbar>
+
+      <Box sx={{ textAlign: 'center', pb: 1 }}>
+        <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
+          {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
+        </Typography>
+        <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
+          <strong>Score:</strong> {apiPayload.homeScore} - {apiPayload.awayScore} |
+          <strong> Week:</strong> {apiPayload.week} |<strong> Status:</strong> {gameStatus}
+        </Typography>
+      </Box>
+    </AppBar>
+  );
+}
+
+function GameDataViewer({ apiPayload }: { apiPayload: any }) {
+  return (
+    <Paper elevation={1} sx={{ p: 2 }}>
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        API Payload
+      </Typography>
+      <ReactJson
+        src={apiPayload}
+        theme="rjv-default"
+        collapsed={false}
+        displayDataTypes={false}
+        displayObjectSize={false}
+        enableClipboard={true}
+        indentWidth={2}
+        name={false}
+        style={{
+          backgroundColor: '#f5f5f5',
+          padding: '12px',
+          borderRadius: '4px',
+          fontSize: '13px',
+        }}
+      />
+    </Paper>
+  );
+}
 
 function ViewGame() {
   const { localGameId } = useParams<{ localGameId: string }>();
@@ -61,27 +181,11 @@ function ViewGame() {
   };
 
   if (!bookkeeper) {
-    return (
-      <Box
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
-      >
-        <CircularProgress />
-        <Typography sx={{ ml: 2 }}>Loading game data...</Typography>
-      </Box>
-    );
+    return <LoadingState />;
   }
 
   if (bookkeeper.localError) {
-    return (
-      <Box sx={{ p: 3 }}>
-        <Alert severity="error" sx={{ mb: 2 }}>
-          Error: {bookkeeper.localError}
-        </Alert>
-        <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
-          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
-        </Link>
-      </Box>
-    );
+    return <ErrorState error={bookkeeper.localError} />;
   }
 
   const gameStatus = bookkeeper.getGameStatus();
@@ -90,59 +194,14 @@ function ViewGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      {/* Top Bar */}
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Link
-            to="/stat_keeper"
-            style={{
-              fontSize: '0.9em',
-              textDecoration: 'none',
-              color: 'inherit',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
-          </Link>
+      <TopBar
+        bookkeeper={bookkeeper}
+        isResyncing={isResyncing}
+        canResync={canResync}
+        onDownloadJson={handleDownloadJson}
+        onResync={handleResync}
+      />
 
-          <Box sx={{ display: 'flex', gap: 1 }}>
-            <Button
-              variant="outlined"
-              startIcon={<DownloadIcon />}
-              onClick={handleDownloadJson}
-              size="small"
-            >
-              Download JSON
-            </Button>
-
-            {canResync && (
-              <Button
-                variant="contained"
-                startIcon={isResyncing ? <CircularProgress size={16} /> : <SyncIcon />}
-                onClick={handleResync}
-                disabled={isResyncing}
-                size="small"
-                color="warning"
-              >
-                {isResyncing ? 'Syncing...' : 'Re-sync'}
-              </Button>
-            )}
-          </Box>
-        </Toolbar>
-
-        <Box sx={{ textAlign: 'center', pb: 1 }}>
-          <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-            {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
-          </Typography>
-          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-            <strong>Score:</strong> {apiPayload.homeScore} - {apiPayload.awayScore} |
-            <strong> Week:</strong> {apiPayload.week} |<strong> Status:</strong> {gameStatus}
-          </Typography>
-        </Box>
-      </AppBar>
-
-      {/* Main Content */}
       <Box sx={{ flexGrow: 1, overflow: 'auto', p: 2 }}>
         {resyncMessage && (
           <Alert
@@ -154,13 +213,7 @@ function ViewGame() {
           </Alert>
         )}
 
-        {/* API Payload */}
-        <Paper elevation={1} sx={{ p: 2 }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>
-            API Payload
-          </Typography>
-          <JsonViewer data={apiPayload} defaultExpanded={true} />
-        </Paper>
+        <GameDataViewer apiPayload={apiPayload} />
       </Box>
     </Box>
   );
