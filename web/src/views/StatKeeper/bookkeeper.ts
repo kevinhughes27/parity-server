@@ -15,6 +15,9 @@ import {
 import { type UndoCommand, type GameView } from './db';
 import { addStoredGameMethods, GameState, type StoredGameMethods } from './storedGameMethods';
 
+// Export GameState for components
+export { GameState };
+
 interface ActionOptions {
   skipViewChange?: boolean;
   skipSave?: boolean;
