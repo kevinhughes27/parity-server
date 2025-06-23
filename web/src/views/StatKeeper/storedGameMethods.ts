@@ -148,10 +148,10 @@ export class StoredGameMethods {
 
   changePossession(): void {
     this.game.homePossession = !this.game.homePossession;
-  };
+  }
 
-  enhancedGame.recordFirstActor = function(player: string, isHomeTeamPlayer: boolean): void {
-    this.undoStack.push({
+  recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
+    this.game.undoStack.push({
       type: 'recordFirstActor',
       timestamp: new Date().toISOString()
     });
