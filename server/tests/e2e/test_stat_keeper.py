@@ -1223,7 +1223,10 @@ def test_perf(server, league, rosters, page: Page) -> None:
         start_point(page)
 
         # determine which team has possession and whether to pull
-        if point_num == 20:
+        # use same logic as first half but offset by 20
+        adjusted_point_num = point_num - 20
+        
+        if adjusted_point_num == 0:
             # first point of second half - home team pulls (opposite of first half)
             puller = home_line_1[0]  # Brian Kells
             receiving_team = away_line_1
@@ -1241,13 +1244,13 @@ def test_perf(server, league, rosters, page: Page) -> None:
                 # else it's automatically a pass to the next player
         else:
             # subsequent points - team that was scored on starts with possession
-            # determine which line is currently active (continues alternating from first half)
-            if point_num % 2 == 0:
-                # line 1 is active, home team starts with possession (they were scored on)
-                possessing_team = home_line_1
+            # determine which line is currently active (alternates each point)
+            if adjusted_point_num % 2 == 1:
+                # line 2 is active, home team starts with possession (they were scored on)
+                possessing_team = home_line_2
             else:
-                # line 2 is active, away team starts with possession (they were scored on)
-                possessing_team = away_line_2
+                # line 1 is active, away team starts with possession (they were scored on)
+                possessing_team = away_line_1
             
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
