@@ -3,7 +3,6 @@ import pytest
 import re
 import requests
 import time
-import numpy as np
 
 from server.api import CURRENT_LEAGUE_ID
 
@@ -1273,11 +1272,17 @@ def test_perf(server, league, rosters, page: Page) -> None:
     assert total_goals == 40
 
     # analyze performance - compute slope to ensure no exponential slowdown
-    x = np.array(range(len(point_times)))
-    y = np.array(point_times)
+    n = len(point_times)
+    x_values = list(range(n))
     
-    # fit a linear regression line
-    slope, intercept = np.polyfit(x, y, 1)
+    # calculate means
+    x_mean = sum(x_values) / n
+    y_mean = sum(point_times) / n
+    
+    # calculate slope using least squares formula
+    numerator = sum((x - x_mean) * (y - y_mean) for x, y in zip(x_values, point_times))
+    denominator = sum((x - x_mean) ** 2 for x in x_values)
+    slope = numerator / denominator if denominator != 0 else 0
     
     # the slope should be very small (close to 0) indicating no significant slowdown
     # allow for some variance but fail if there's a clear exponential trend
@@ -1290,7 +1295,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
     
     print(f"Performance test completed:")
     print(f"  Total points: {len(point_times)}")
-    print(f"  Average time per point: {np.mean(point_times):.3f} seconds")
+    print(f"  Average time per point: {y_mean:.3f} seconds")
     print(f"  Max time per point: {max_time:.3f} seconds")
     print(f"  Performance slope: {slope:.6f} seconds per point")
 
