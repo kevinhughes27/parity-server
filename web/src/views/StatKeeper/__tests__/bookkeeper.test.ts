@@ -66,7 +66,7 @@ const createInitialStoredGame = (
     currentView: 'selectLines',
     localError: null,
     undoStack: [],
-    status: 'new',
+    status: 'in-progress',
     lastModified: new Date(),
   };
 };
