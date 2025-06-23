@@ -47,7 +47,7 @@ export interface StoredGame {
   undoStack: UndoCommand[];
 
   // Persistence metadata
-  status: 'new' | 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
+  status: 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
   lastModified: Date;
 
   // Remove the old generic state fields

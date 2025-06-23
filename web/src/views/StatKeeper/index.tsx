@@ -25,7 +25,6 @@ const getStatusColor = (status: StoredGame['status']) => {
       return 'success';
     case 'sync-error':
       return 'error';
-    case 'new':
     case 'in-progress':
       return 'primary';
     default:
@@ -68,7 +67,7 @@ function StatKeeper() {
     }
   };
 
-  const resumableStatuses: StoredGame['status'][] = ['new', 'in-progress'];
+  const resumableStatuses: StoredGame['status'][] = ['in-progress'];
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
