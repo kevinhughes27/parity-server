@@ -69,10 +69,25 @@ const getPlayerButtonState = (
 
   // Game state specific logic
   if (currentGameState === GameState.Start) {
+    // For the start of a point (not first point of game/half), only the receiving team should be enabled
+    if (!isFirstPointAfterHalftime && !isTeamInPossession) {
+      return {
+        enabled: false,
+        variant: 'disabled-no-possession',
+        reason: 'Other team receives after point scored',
+        style: {
+          color: '#999',
+          backgroundColor: '#e0e0e0',
+          border: '1px solid #ccc',
+          fontWeight: 'normal',
+        },
+      };
+    }
+    
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
-      reason: 'Select starting player',
+      reason: isFirstPointAfterHalftime ? 'Select starting player' : 'Select receiving player',
       style: isActivePlayer
         ? {
             color: '#000',
