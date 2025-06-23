@@ -44,12 +44,14 @@ function LocalGame() {
     try {
       await bookkeeper.submitGame();
       alert('Game submitted and uploaded successfully!');
-      navigate('/stat_keeper');
     } catch (error) {
       alert(
-        `An error occurred during game submission: ${error instanceof Error ? error.message : 'Unknown error'}`
+        `Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`
       );
       console.error('Submission error:', error);
+    } finally {
+      // Always redirect to StatKeeper home regardless of success or failure
+      navigate('/stat_keeper');
     }
   };
 
