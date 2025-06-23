@@ -121,16 +121,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
   };
 
-  const handleLinesSelected = async () => {
-    if (bookkeeper.homePlayers && bookkeeper.awayPlayers) {
-      if (bookkeeper.activePoint === null && !bookkeeper.firstPointOfGameOrHalf()) {
-        bookkeeper.prepareNewPointAfterScore();
-      } else {
-        bookkeeper.resumePoint();
-      }
-      // View will be updated automatically by the bookkeeper
-    }
-  };
 
   const handleUndoLastAction = async () => {
     await bookkeeper.undo();
