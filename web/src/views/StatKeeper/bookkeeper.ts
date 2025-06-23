@@ -12,16 +12,10 @@ import {
   type Team,
   leagues as apiLeagues
 } from '../../api';
+import { type UndoCommand, type GameView } from './db';
 
-// Private types for Bookkeeper internal use
-interface UndoCommand {
-  type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' |
-        'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf' | 'recordSubstitution';
-  timestamp: string;
-  data?: any; // Minimal data only when we can't infer
-}
-
-type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
+// Import types from db.ts instead of defining them here
+import { type UndoCommand, type GameView } from './db';
 
 export enum GameState {
   Normal = 1,
@@ -40,30 +34,6 @@ interface ActionOptions {
 }
 
 
-interface BookkeeperState {
-  activePoint: { offensePlayers: string[]; defensePlayers: string[]; events: any[] } | null;
-  firstActor: string | null;
-  homePossession: boolean;
-  pointsAtHalf: number;
-  homePlayers: string[] | null;
-  awayPlayers: string[] | null;
-  homeScore: number;
-  awayScore: number;
-  lastPlayedLine: { home: string[]; away: string[] } | null;
-}
-
-interface SerializedGameData {
-  league_id: string;
-  week: number;
-  homeTeamName: string;
-  homeTeamId: number;
-  awayTeamName: string;
-  awayTeamId: number;
-  game: { points: Array<{ offensePlayers: string[]; defensePlayers: string[]; events: any[] }> };
-  bookkeeperState: BookkeeperState;
-  undoStack: UndoCommand[];
-}
-
 interface UploadedGamePayload {
   league_id: string;
   week: number;
@@ -77,58 +47,97 @@ interface UploadedGamePayload {
 }
 
 export class Bookkeeper {
+  // Core game data - now stored in StoredGame
+  private game: StoredGame;
+  
+  // Derived/computed data for convenience
   public league: League;
   public homeTeam: Team;
   public awayTeam: Team;
-  public week: number;
 
-  public points: PointModel[] = [];
-  private undoStack: UndoCommand[] = [];
-
-  // Volatile state - needs to be serialized/deserialized
-  public activePoint: PointModel | null = null;
-  public firstActor: string | null = null;
-  public homePossession: boolean = true;
-  public homeScore: number = 0;
-  public awayScore: number = 0;
-  public pointsAtHalf: number = 0;
-  public homePlayers: string[] | null = null;
-  public awayPlayers: string[] | null = null;
-
-  // Team rosters - will be initialized from Team objects
-  private homeRoster: Set<string>;
-  private awayRoster: Set<string>;
-
-  // New: UI state management
+  // Infrastructure
   private gameId: number | null = null;
-  private _currentView: GameView = 'loading';
-  private lastPlayedLine: { home: string[]; away: string[] } | null = null;
-
-  // New: Observer pattern for React integration
   private listeners: Set<() => void> = new Set();
-  private localError: string | null = null;
 
   constructor(
+    game: StoredGame,
     league: League,
-    week: number,
     homeTeam: Team,
     awayTeam: Team,
-    initialData: SerializedGameData,
     gameId?: number
   ) {
+    this.game = game;
     this.league = league;
-    this.week = week;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
     this.gameId = gameId || null;
-
-    this.undoStack = [];
-    this.homeRoster = new Set<string>();
-    this.awayRoster = new Set<string>();
-
-    this.hydrate(initialData);
-    this.determineInitialView();
   }
+
+  // Getters for state that's now in StoredGame
+  get points(): PointModel[] {
+    return this.game.points.map(apiPoint => {
+      return PointModel.fromJSON({
+        offensePlayers: [...apiPoint.offensePlayers],
+        defensePlayers: [...apiPoint.defensePlayers],
+        events: apiPoint.events.map(mapApiEventToEvent),
+      });
+    });
+  }
+
+  get activePoint(): PointModel | null {
+    if (!this.game.activePoint) return null;
+    return PointModel.fromJSON({
+      offensePlayers: [...this.game.activePoint.offensePlayers],
+      defensePlayers: [...this.game.activePoint.defensePlayers],
+      events: this.game.activePoint.events.map(mapApiEventToEvent),
+    });
+  }
+
+  set activePoint(point: PointModel | null) {
+    if (point === null) {
+      this.game.activePoint = null;
+    } else {
+      this.game.activePoint = {
+        offensePlayers: [...point.offensePlayers],
+        defensePlayers: [...point.defensePlayers],
+        events: point.events.map(mapEventToApiEvent),
+      };
+    }
+  }
+
+  get firstActor(): string | null { return this.game.firstActor; }
+  set firstActor(value: string | null) { this.game.firstActor = value; }
+
+  get homePossession(): boolean { return this.game.homePossession; }
+  set homePossession(value: boolean) { this.game.homePossession = value; }
+
+  get homeScore(): number { return this.game.homeScore; }
+  set homeScore(value: number) { this.game.homeScore = value; }
+
+  get awayScore(): number { return this.game.awayScore; }
+  set awayScore(value: number) { this.game.awayScore = value; }
+
+  get pointsAtHalf(): number { return this.game.pointsAtHalf; }
+  set pointsAtHalf(value: number) { this.game.pointsAtHalf = value; }
+
+  get homePlayers(): string[] | null { return this.game.homePlayers; }
+  set homePlayers(value: string[] | null) { this.game.homePlayers = value; }
+
+  get awayPlayers(): string[] | null { return this.game.awayPlayers; }
+  set awayPlayers(value: string[] | null) { this.game.awayPlayers = value; }
+
+  get currentView(): GameView { return this.game.currentView; }
+  set currentView(value: GameView) { this.game.currentView = value; }
+
+  get localError(): string | null { return this.game.localError; }
+  set localError(value: string | null) { this.game.localError = value; }
+
+  get lastPlayedLine(): { home: string[]; away: string[] } | null { return this.game.lastPlayedLine; }
+  set lastPlayedLine(value: { home: string[]; away: string[] } | null) { this.game.lastPlayedLine = value; }
+
+  get undoStack(): UndoCommand[] { return this.game.undoStack; }
+
+  get week(): number { return this.game.week; }
 
   static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
     const storedGame = await db.games.get(gameId);
@@ -136,134 +145,62 @@ export class Bookkeeper {
       throw new Error(`Game ${gameId} not found`);
     }
 
-    // I don't think we should need all of this league state here,
-    // this should all be basic data that lives right in bookeeper
-    // and gets serialized / deserialized
+    // Ensure all required fields have defaults if missing (for backward compatibility)
+    const gameWithDefaults: StoredGame = {
+      ...storedGame,
+      activePoint: storedGame.activePoint || null,
+      homePossession: storedGame.homePossession ?? true,
+      firstActor: storedGame.firstActor || null,
+      pointsAtHalf: storedGame.pointsAtHalf || 0,
+      homePlayers: storedGame.homePlayers || null,
+      awayPlayers: storedGame.awayPlayers || null,
+      lastPlayedLine: storedGame.lastPlayedLine || null,
+      currentView: storedGame.currentView || 'loading',
+      localError: storedGame.localError || null,
+      undoStack: storedGame.undoStack || [],
+    };
+
     const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
     if (!apiLeague) {
       throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
     }
+    
     const leagueForBk: League = {
       id: storedGame.league_id,
       name: getLeagueName(storedGame.league_id) || 'Unknown League',
       lineSize: apiLeague.lineSize,
     };
 
-    const homeTeamForBk: Team = { id: storedGame.homeTeamId, name: storedGame.homeTeam };
-    const awayTeamForBk: Team = { id: storedGame.awayTeamId, name: storedGame.awayTeam };
-
-    const transformedGamePoints = storedGame.points.map(apiPoint => {
-      return PointModel.fromJSON({
-        offensePlayers: [...apiPoint.offensePlayers],
-        defensePlayers: [...apiPoint.defensePlayers],
-        events: apiPoint.events.map(mapApiEventToEvent),
-      });
-    });
-
-    let activePointForHydration: PointModel | null = null;
-    if (storedGame.bookkeeperState?.activePoint) {
-      activePointForHydration = PointModel.fromJSON(storedGame.bookkeeperState.activePoint);
-    }
-
-    const bookkeeperStateForHydration: BookkeeperState = {
-      ...(storedGame.bookkeeperState || {
-        activePoint: null,
-        firstActor: null,
-        homePossession: true,
-        pointsAtHalf: 0,
-        homePlayers: null,
-        awayPlayers: null,
-        homeScore: 0,
-        awayScore: 0,
-      }),
-      activePoint: activePointForHydration ? activePointForHydration.toJSON() : null,
+    // Initialize team objects with rosters
+    const homeTeamForBk: Team = { 
+      id: storedGame.homeTeamId, 
+      name: storedGame.homeTeam,
+      players: storedGame.homeRoster.map(name => ({
+        name,
+        team: storedGame.homeTeam,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
     };
 
-    // Initialize team objects with rosters
-    homeTeamForBk.players = storedGame.homeRoster.map(name => ({
-      name,
-      team: storedGame.homeTeam,
-      is_male: true // Default, will be updated when proper team data is loaded
-    }));
-
-    awayTeamForBk.players = storedGame.awayRoster.map(name => ({
-      name,
-      team: storedGame.awayTeam,
-      is_male: true // Default, will be updated when proper team data is loaded
-    }));
-
-    const initialSerializedData: SerializedGameData = {
-      league_id: storedGame.league_id,
-      week: storedGame.week,
-      homeTeamName: storedGame.homeTeam,
-      awayTeamName: storedGame.awayTeam,
-      homeTeamId: storedGame.homeTeamId,
-      awayTeamId: storedGame.awayTeamId,
-      game: { points: transformedGamePoints.map(p => p.toJSON()) },
-      bookkeeperState: {
-        ...bookkeeperStateForHydration,
-        lastPlayedLine: storedGame.bookkeeperState?.lastPlayedLine || null,
-      },
-      undoStack: storedGame.undoStack || [],
+    const awayTeamForBk: Team = { 
+      id: storedGame.awayTeamId, 
+      name: storedGame.awayTeam,
+      players: storedGame.awayRoster.map(name => ({
+        name,
+        team: storedGame.awayTeam,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
     };
 
     return new Bookkeeper(
+      gameWithDefaults,
       leagueForBk,
-      storedGame.week,
       homeTeamForBk,
       awayTeamForBk,
-      initialSerializedData,
       gameId
     );
   }
 
-  private hydrate(data: SerializedGameData): void {
-    this.points = data.game.points.map(pJson => PointModel.fromJSON(pJson));
-
-    const state = data.bookkeeperState;
-    this.activePoint = state.activePoint ? PointModel.fromJSON(state.activePoint) : null;
-    this.firstActor = state.firstActor;
-    this.homePossession = state.homePossession;
-    this.pointsAtHalf = state.pointsAtHalf;
-    this.homePlayers = state.homePlayers ? [...state.homePlayers] : null;
-    this.awayPlayers = state.awayPlayers ? [...state.awayPlayers] : null;
-    this.homeScore = state.homeScore;
-    this.awayScore = state.awayScore;
-    this.lastPlayedLine = state.lastPlayedLine || null;
-
-    // Initialize rosters from team objects
-    this.homeRoster = new Set(this.homeTeam.players.map(p => p.name));
-    this.awayRoster = new Set(this.awayTeam.players.map(p => p.name));
-
-    this.undoStack = data.undoStack || [];
-  }
-
-
-  public serialize(): SerializedGameData {
-    const bookkeeperState: BookkeeperState = {
-      activePoint: this.activePoint ? this.activePoint.toJSON() : null,
-      firstActor: this.firstActor,
-      homePossession: this.homePossession,
-      pointsAtHalf: this.pointsAtHalf,
-      homePlayers: this.homePlayers ? [...this.homePlayers] : null,
-      awayPlayers: this.awayPlayers ? [...this.awayPlayers] : null,
-      homeScore: this.homeScore,
-      awayScore: this.awayScore,
-      lastPlayedLine: this.lastPlayedLine,
-    };
-
-    return {
-      league_id: this.league.id,
-      week: this.week,
-      homeTeamName: this.homeTeam.name,
-      awayTeamName: this.awayTeam.name,
-      homeTeamId: this.homeTeam.id,
-      awayTeamId: this.awayTeam.id,
-      game: { points: this.points.map(p => p.toJSON()) },
-      bookkeeperState: bookkeeperState,
-      undoStack: this.undoStack,
-    };
-  }
 
   public gameState(): GameState {
     if (this.activePoint === null) {
@@ -376,7 +313,7 @@ export class Bookkeeper {
 
     // Store undo data for substitution
     // do we need undo here? we can just re-edit the lines if needed
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordSubstitution',
       timestamp: new Date().toISOString(),
       data: {
@@ -459,7 +396,7 @@ export class Bookkeeper {
   }
 
   public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordFirstActor',
       timestamp: new Date().toISOString()
     });
@@ -520,7 +457,7 @@ export class Bookkeeper {
   public recordPull(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordPull',
       timestamp: new Date().toISOString()
     });
@@ -539,7 +476,7 @@ export class Bookkeeper {
   public recordThrowAway(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordThrowAway',
       timestamp: new Date().toISOString()
     });
@@ -557,7 +494,7 @@ export class Bookkeeper {
   public recordPass(receiver: string): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordPass',
       timestamp: new Date().toISOString()
     });
@@ -574,7 +511,7 @@ export class Bookkeeper {
   public recordDrop(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordDrop',
       timestamp: new Date().toISOString()
     });
@@ -592,7 +529,7 @@ export class Bookkeeper {
   public recordD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordD',
       timestamp: new Date().toISOString()
     });
@@ -609,7 +546,7 @@ export class Bookkeeper {
   public recordCatchD(): void {
     if (!this.activePoint || !this.firstActor) return;
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordCatchD',
       timestamp: new Date().toISOString()
     });
@@ -629,7 +566,7 @@ export class Bookkeeper {
     if (!this.activePoint || !this.firstActor) return;
 
     // Store the possession state for this point before flipping it
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordPoint',
       timestamp: new Date().toISOString(),
       data: {
@@ -643,7 +580,12 @@ export class Bookkeeper {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    this.points.push(this.activePoint);
+    // Convert PointModel to API format and add to game.points
+    this.game.points.push({
+      offensePlayers: [...this.activePoint.offensePlayers],
+      defensePlayers: [...this.activePoint.defensePlayers],
+      events: this.activePoint.events.map(mapEventToApiEvent),
+    });
 
     if (this.homePossession) {
       this.homeScore++;
@@ -664,7 +606,7 @@ export class Bookkeeper {
   public recordHalf(): void {
     if (this.pointsAtHalf > 0) return; // Half already recorded
 
-    this.undoStack.push({
+    this.game.undoStack.push({
       type: 'recordHalf',
       timestamp: new Date().toISOString()
     });
@@ -678,9 +620,9 @@ export class Bookkeeper {
   }
 
   public undo(): void {
-    if (this.undoStack.length === 0) return;
+    if (this.game.undoStack.length === 0) return;
 
-    const command = this.undoStack.pop()!;
+    const command = this.game.undoStack.pop()!;
 
     switch (command.type) {
       case 'recordFirstActor':
@@ -877,13 +819,9 @@ export class Bookkeeper {
     }
   }
 
-  set currentView(view: GameView) {
-    this._currentView = view;
-  }
-
   private updateViewState(): void {
     // Don't override view if it was explicitly set (e.g., by undoRecordPoint)
-    if (this._currentView === 'recordStats' && this.activePoint !== null) {
+    if (this.currentView === 'recordStats' && this.activePoint !== null) {
       return; // Keep the explicitly set view
     }
 
@@ -892,9 +830,9 @@ export class Bookkeeper {
     // 1. No active point AND no players selected (start of game/after point)
     // 2. Players have been cleared (mid-point line change)
     if (this.homePlayers === null || this.awayPlayers === null) {
-      this._currentView = 'selectLines';
+      this.currentView = 'selectLines';
     } else {
-      this._currentView = 'recordStats';
+      this.currentView = 'recordStats';
     }
   }
 
@@ -903,43 +841,23 @@ export class Bookkeeper {
       throw new Error('Cannot save: no game ID');
     }
 
-    const serializedData = this.serialize();
-    const dbData = this.transformForDatabase(serializedData, newStatus);
-
     try {
-      await db.games.update(this.gameId, dbData);
+      // Update the game object directly
+      this.game.lastModified = new Date();
+      if (newStatus) {
+        this.game.status = newStatus;
+      }
+      
+      // Update rosters from team objects
+      this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+      this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+
+      await db.games.update(this.gameId, this.game);
     } catch (error) {
       this.localError = `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
       this.notifyListeners();
       throw error;
     }
-  }
-
-  private transformForDatabase(
-    serializedData: SerializedGameData,
-    newStatus?: StoredGame['status']
-  ): Partial<StoredGame> {
-    const pointsForStorage = serializedData.game.points.map(modelPointJson => ({
-      offensePlayers: [...modelPointJson.offensePlayers].sort(),
-      defensePlayers: [...modelPointJson.defensePlayers].sort(),
-      events: modelPointJson.events.map(mapEventToApiEvent),
-    }));
-
-    // Get sorted rosters from team objects
-    const homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-    const awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-
-    return {
-      homeScore: serializedData.bookkeeperState.homeScore,
-      awayScore: serializedData.bookkeeperState.awayScore,
-      points: pointsForStorage,
-      bookkeeperState: serializedData.bookkeeperState,
-      undoStack: serializedData.undoStack,
-      homeRoster: homeRoster,
-      awayRoster: awayRoster,
-      lastModified: new Date(),
-      status: newStatus || 'in-progress',
-    };
   }
 
   async submitGame(): Promise<void> {
@@ -980,24 +898,19 @@ export class Bookkeeper {
   }
 
   public transformForAPI(): UploadedGamePayload {
-    const bkState = this.serialize();
-
-    const homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-    const awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-
     return {
-      league_id: bkState.league_id,
-      week: bkState.week,
-      homeTeam: bkState.homeTeamName,
-      homeScore: bkState.bookkeeperState.homeScore,
-      homeRoster: homeRoster,
-      awayTeam: bkState.awayTeamName,
-      awayScore: bkState.bookkeeperState.awayScore,
-      awayRoster: awayRoster,
-      points: bkState.game.points.map(pJson => ({
-        offensePlayers: [...pJson.offensePlayers].sort(),
-        defensePlayers: [...pJson.defensePlayers].sort(),
-        events: pJson.events.map(mapEventToApiEvent),
+      league_id: this.game.league_id,
+      week: this.game.week,
+      homeTeam: this.game.homeTeam,
+      homeScore: this.game.homeScore,
+      homeRoster: [...this.game.homeRoster].sort((a, b) => a.localeCompare(b)),
+      awayTeam: this.game.awayTeam,
+      awayScore: this.game.awayScore,
+      awayRoster: [...this.game.awayRoster].sort((a, b) => a.localeCompare(b)),
+      points: this.game.points.map(point => ({
+        offensePlayers: [...point.offensePlayers].sort(),
+        defensePlayers: [...point.defensePlayers].sort(),
+        events: [...point.events],
       })),
     };
   }
@@ -1012,7 +925,7 @@ export class Bookkeeper {
   }
 
   getCurrentView(): GameView {
-    return this._currentView;
+    return this.currentView;
   }
 
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
@@ -1048,72 +961,48 @@ export class Bookkeeper {
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
 
-    // Create team objects with rosters
-    const homeTeamWithRoster = {
-      ...homeTeam,
-      players: sortedHomeRoster.map(name => ({
-        name,
-        team: homeTeam.name,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
-    };
-
-    const awayTeamWithRoster = {
-      ...awayTeam,
-      players: sortedAwayRoster.map(name => ({
-        name,
-        team: awayTeam.name,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
-    };
-
-    const initialBookkeeperState: BookkeeperState = {
-      activePoint: null,
-      firstActor: null,
-      homePossession: true,
-      pointsAtHalf: 0,
-      homePlayers: null,
-      awayPlayers: null,
-      homeScore: 0,
-      awayScore: 0,
-      lastPlayedLine: null,
-    };
-
-    const gameData: SerializedGameData = {
+    // Create the StoredGame object and save it to the database
+    const newGame: StoredGame = {
       league_id: currentLeague.league.id,
       week: week,
-      homeTeamName: homeTeam.name,
+      homeTeam: homeTeam.name,
       homeTeamId: homeTeam.id,
-      awayTeamName: awayTeam.name,
+      awayTeam: awayTeam.name,
       awayTeamId: awayTeam.id,
-      game: { points: [] },
-      bookkeeperState: initialBookkeeperState,
-      undoStack: [],
-    };
-
-    // Create the StoredGame object and save it to the database
-    const id = await db.games.add({
-      league_id: gameData.league_id,
-      week: gameData.week,
-      homeTeam: gameData.homeTeamName,
-      homeTeamId: gameData.homeTeamId,
-      homeScore: 0,
       homeRoster: sortedHomeRoster,
-      awayTeam: gameData.awayTeamName,
-      awayTeamId: gameData.awayTeamId,
-      awayScore: 0,
       awayRoster: sortedAwayRoster,
+      
+      // Game state
       points: [],
+      activePoint: null,
+      homeScore: 0,
+      awayScore: 0,
+      homePossession: true,
+      firstActor: null,
+      pointsAtHalf: 0,
+      
+      // Line selection state
+      homePlayers: null,
+      awayPlayers: null,
+      lastPlayedLine: null,
+      
+      // UI state
+      currentView: 'selectLines',
+      localError: null,
+      
+      // Undo system
+      undoStack: [],
+      
+      // Persistence metadata
       status: 'new',
       lastModified: new Date(),
-      bookkeeperState: gameData.bookkeeperState,
-      undoStack: gameData.undoStack,
-    } as StoredGame);
+    };
 
+    const id = await db.games.add(newGame);
     return id;
   }
 
   public getMementosCount(): number {
-    return this.undoStack.length;
+    return this.game.undoStack.length;
   }
 }
