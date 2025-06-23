@@ -2,6 +2,7 @@ from playwright.sync_api import Browser, Page, expect
 import pytest
 import re
 import requests
+import socket
 import time
 
 from server.api import CURRENT_LEAGUE_ID
@@ -16,8 +17,19 @@ def browser_context_args(browser_context_args, playwright):
     return {"viewport": {"width": 768, "height": 900}, "is_mobile": True}
 
 
-# base_url = "http://localhost:8000"
-base_url = "http://localhost:5173"
+def _is_port_open(port):
+    """Check if a port is open on localhost."""
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(1)
+            result = sock.connect_ex(("localhost", port))
+            return result == 0
+    except:  # noqa: E722
+        return False
+
+
+# use vite dev server if available, otherwise fallback to static asserts
+base_url = "http://localhost:5173" if _is_port_open(5173) else "http://localhost:8000"
 
 
 def start_stats_keeper(page: Page):
@@ -81,12 +93,16 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
 
 def expect_players_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-colorPrimary")
+        expect(page.get_by_role("button", name=player)).to_contain_class(
+            "MuiButton-colorPrimary"
+        )
 
 
 def expect_players_not_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).not_to_contain_class("MuiButton-colorPrimary")
+        expect(page.get_by_role("button", name=player)).not_to_contain_class(
+            "MuiButton-colorPrimary"
+        )
 
 
 def expect_lines_selected(page: Page, home: str, away: str):
@@ -873,7 +889,9 @@ def test_resume(
     expect(page.locator("#root")).to_contain_text("in-progress")
     page.get_by_role("link", name="Resume Game").click()
     # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
-    expect(page.locator("#root")).to_contain_text("Players not on the previous line are pre-selected. Adjust and confirm.")
+    expect(page.locator("#root")).to_contain_text(
+        "Players not on the previous line are pre-selected. Adjust and confirm."
+    )
 
     # test undo after resume
     page.get_by_role("button", name="Undo Last Action").click()
@@ -948,7 +966,9 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
 
     # view game
     page.get_by_role("link", name="View Game").click()
-    expect(page.locator("h5")).to_contain_text("Kells Angels Bicycle Club vs lumleysexuals")
+    expect(page.locator("h5")).to_contain_text(
+        "Kells Angels Bicycle Club vs lumleysexuals"
+    )
 
     # fix network failure
     page.route("**/submit_game", lambda route: route.continue_())
@@ -957,7 +977,9 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Re-sync").click()
 
     # success
-    expect(page.get_by_role("alert")).to_contain_text("Game successfully uploaded to server!")
+    expect(page.get_by_role("alert")).to_contain_text(
+        "Game successfully uploaded to server!"
+    )
     expect(page.locator("#root")).not_to_contain_text("Re-sync")
 
     # verify submitted stats
@@ -1044,7 +1066,9 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
 
     # select lines
     # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
-    expect(page.locator("#root")).to_contain_text("Players not on the previous line are pre-selected. Adjust and confirm.")
+    expect(page.locator("#root")).to_contain_text(
+        "Players not on the previous line are pre-selected. Adjust and confirm."
+    )
     select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1156,7 +1180,9 @@ def test_perf(server, league, rosters, page: Page) -> None:
 
         # select lines (auto-selected after first point)
         if point_num == 0:
-            expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+            expect(page.locator("#root")).to_contain_text(
+                "Select players for the first point."
+            )
             select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:
@@ -1285,7 +1311,9 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # the slope should be very small (close to 0) indicating no significant slowdown
     # allow for some variance but fail if there's a clear exponential trend
     # a slope > 0.1 seconds per point would indicate serious performance degradation
-    assert slope < 0.1, f"Performance degradation detected: slope = {slope:.4f} seconds per point"
+    assert slope < 0.1, (
+        f"Performance degradation detected: slope = {slope:.4f} seconds per point"
+    )
 
     # also check that no individual point took an unreasonably long time
     max_time = max(point_times)
