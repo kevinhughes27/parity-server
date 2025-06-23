@@ -52,13 +52,21 @@ function EditGame() {
     }
 
     try {
-      // Update the bookkeeper's rosters and save
-      await bookkeeper.performAction(
-        bk => {
-          bk.updateRosters(homeRosterNames, awayRosterNames);
-        },
-        { skipViewChange: true }
-      );
+      // Update the team objects with new rosters
+      bookkeeper.homeTeam.players = homeRosterNames.map(name => ({
+        name,
+        team: bookkeeper.homeTeam.name,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }));
+
+      bookkeeper.awayTeam.players = awayRosterNames.map(name => ({
+        name,
+        team: bookkeeper.awayTeam.name,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }));
+
+      // Save the changes
+      await bookkeeper.saveChanges();
 
       console.log(`Rosters for game updated successfully.`);
       navigate(`/stat_keeper/game/${localGameId}`);
