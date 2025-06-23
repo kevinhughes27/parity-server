@@ -1187,11 +1187,11 @@ def test_perf(server, league, rosters, page: Page) -> None:
             # subsequent points - team that was scored on starts with possession
             # determine which line is currently active (alternates each point)
             if point_num % 2 == 1:
-                # line 2 is active, home team starts with possession
-                possessing_team = home_line_2
+                # line 2 is active, away team starts with possession (they were scored on)
+                possessing_team = away_line_2
             else:
-                # line 1 is active, away team starts with possession  
-                possessing_team = away_line_1
+                # line 1 is active, home team starts with possession (they were scored on)
+                possessing_team = home_line_1
             
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
@@ -1243,11 +1243,11 @@ def test_perf(server, league, rosters, page: Page) -> None:
             # subsequent points - team that was scored on starts with possession
             # determine which line is currently active (continues alternating from first half)
             if point_num % 2 == 0:
-                # line 1 is active, away team starts with possession
-                possessing_team = away_line_1
+                # line 1 is active, home team starts with possession (they were scored on)
+                possessing_team = home_line_1
             else:
-                # line 2 is active, home team starts with possession
-                possessing_team = home_line_2
+                # line 2 is active, away team starts with possession (they were scored on)
+                possessing_team = away_line_2
             
             # pass to each player on the possessing team, with the last one scoring
             for i, player in enumerate(possessing_team):
