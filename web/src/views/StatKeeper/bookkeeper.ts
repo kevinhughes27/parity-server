@@ -355,7 +355,7 @@ export class Bookkeeper {
       this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
       this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
 
-      await db.games.update(this.gameId, this.game);
+      await db.games.update(this.gameId, { ...this.game });
     } catch (error) {
       this.gameMethods.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       this.notifyListeners();
@@ -512,7 +512,7 @@ export class Bookkeeper {
     };
 
     const id = await db.games.add(newGame);
-    return id;
+    return id as number;
   }
 
 }
