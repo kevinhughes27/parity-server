@@ -13,7 +13,7 @@ import {
   leagues as apiLeagues
 } from '../../api';
 import { type UndoCommand, type GameView } from './db';
-import { addStoredGameMethods, GameState, type StoredGameMethods } from './storedGameMethods';
+import { StoredGameMethods, GameState, type IStoredGameMethods } from './storedGameMethods';
 
 // Export GameState for components
 export { GameState };
@@ -38,8 +38,10 @@ interface UploadedGamePayload {
 }
 
 export class Bookkeeper {
-  // Core game data - now stored in StoredGame with methods
-  private game: StoredGame & StoredGameMethods;
+  // Core game data - now stored in StoredGame
+  private game: StoredGame;
+  // Game methods - separate from data
+  private gameMethods: StoredGameMethods;
   
   // Derived/computed data for convenience
   public league: League;
@@ -57,7 +59,8 @@ export class Bookkeeper {
     awayTeam: Team,
     gameId?: number
   ) {
-    this.game = addStoredGameMethods(game);
+    this.game = game;
+    this.gameMethods = new StoredGameMethods(game);
     this.league = league;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
@@ -191,15 +194,15 @@ export class Bookkeeper {
 
   // Delegate common game state queries directly to the game
   public gameState(): GameState {
-    return this.game.gameState();
+    return this.gameMethods.gameState();
   }
 
   public shouldRecordNewPass(): boolean {
-    return this.game.shouldRecordNewPass();
+    return this.gameMethods.shouldRecordNewPass();
   }
 
   public firstPointOfGameOrHalf(): boolean {
-    return this.game.firstPointOfGameOrHalf();
+    return this.gameMethods.firstPointOfGameOrHalf();
   }
 
 
@@ -237,83 +240,83 @@ export class Bookkeeper {
   // Simplified action methods that handle persistence and notifications
   public async recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): Promise<void> {
     await this.performAction(() => {
-      this.game.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
+      this.gameMethods.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
     });
   }
 
   public async recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): Promise<void> {
     await this.performAction(() => {
-      this.game.recordSubstitution(newHomePlayers, newAwayPlayers);
+      this.gameMethods.recordSubstitution(newHomePlayers, newAwayPlayers);
     });
   }
 
   public async recordFirstActor(player: string, isHomeTeamPlayer: boolean): Promise<void> {
     await this.performAction(() => {
-      this.game.recordFirstActor(player, isHomeTeamPlayer);
+      this.gameMethods.recordFirstActor(player, isHomeTeamPlayer);
     });
   }
 
   public async recordPull(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordPull();
+      this.gameMethods.recordPull();
     });
   }
 
   public async recordPass(receiver: string): Promise<void> {
     await this.performAction(() => {
-      this.game.recordPass(receiver);
+      this.gameMethods.recordPass(receiver);
     });
   }
 
   public async recordDrop(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordDrop();
+      this.gameMethods.recordDrop();
     });
   }
 
   public async recordThrowAway(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordThrowAway();
+      this.gameMethods.recordThrowAway();
     });
   }
 
   public async recordD(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordD();
+      this.gameMethods.recordD();
     });
   }
 
   public async recordCatchD(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordCatchD();
+      this.gameMethods.recordCatchD();
     });
   }
 
   public async recordPoint(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordPoint();
+      this.gameMethods.recordPoint();
     });
   }
 
   public async recordHalf(): Promise<void> {
     await this.performAction(() => {
-      this.game.recordHalf();
+      this.gameMethods.recordHalf();
     });
   }
 
   public async undo(): Promise<void> {
     await this.performAction(() => {
-      this.game.undo();
+      this.gameMethods.undo();
     });
   }
 
   // Utility methods that don't need persistence
   public prepareNewPointAfterScore(): void {
-    this.game.prepareNewPointAfterScore();
+    this.gameMethods.prepareNewPointAfterScore();
   }
 
   public resumePoint(): void {
-    this.game.resumePoint();
+    this.gameMethods.resumePoint();
   }
 
   // Point display methods
@@ -330,11 +333,11 @@ export class Bookkeeper {
 
   private determineInitialView(): void {
     // Set initial view based on game state
-    this.currentView = this.game.determineCorrectView();
+    this.currentView = this.gameMethods.determineCorrectView();
   }
 
   private updateViewState(): void {
-    this.game.updateViewAfterAction();
+    this.gameMethods.updateViewAfterAction();
   }
 
   private async saveToDatabase(newStatus?: StoredGame['status']): Promise<void> {
@@ -355,7 +358,7 @@ export class Bookkeeper {
 
       await db.games.update(this.gameId, this.game);
     } catch (error) {
-      this.game.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      this.gameMethods.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       this.notifyListeners();
       throw error;
     }
@@ -397,7 +400,7 @@ export class Bookkeeper {
         throw new Error(errorMessage);
       }
     } catch (error) {
-      this.game.setError(`Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      this.gameMethods.setError(`Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       this.notifyListeners();
       throw error;
     }
@@ -456,7 +459,7 @@ export class Bookkeeper {
   }
 
   clearError(): void {
-    this.game.clearError();
+    this.gameMethods.clearError();
     this.notifyListeners();
   }
 
