@@ -58,8 +58,8 @@ function LocalGame() {
       return;
     }
 
+    // Force transition to line selection view
     bookkeeper.currentView = 'selectLines';
-    bookkeeper.notifyListeners();
   };
 
   return (
