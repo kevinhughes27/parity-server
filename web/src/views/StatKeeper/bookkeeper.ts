@@ -369,39 +369,21 @@ export class Bookkeeper {
   }
 
   async submitGame(): Promise<void> {
-    if (!this.gameId) {
-      throw new Error('Cannot submit: no game ID');
-    }
+    const payload = this.transformForAPI();
 
-    try {
-      await this.saveToDatabase('submitted');
-      const payload = this.transformForAPI();
-      const response = await fetch(`/submit_game`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
+    await this.saveToDatabase('submitted');
+    const response = await fetch(`/submit_game`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
 
-      if (response.ok) {
-        await this.saveToDatabase('uploaded');
-      } else {
-        await this.saveToDatabase('sync-error');
-        const errorText = await response.text();
-        let errorMessage = `Failed to submit game: ${response.status} ${response.statusText}`;
-        try {
-          const errorData = JSON.parse(errorText);
-          errorMessage += ` - ${errorData.message || errorData.detail || 'Server error'}`;
-        } catch {
-          errorMessage += ` - ${errorText || 'Server error with no JSON body'}`;
-        }
-        throw new Error(errorMessage);
-      }
-    } catch (error) {
-      this.gameMethods.setError(`Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-      this.notifyListeners();
-      throw error;
+    if (response.ok) {
+      await this.saveToDatabase('uploaded');
+    } else {
+      await this.saveToDatabase('sync-error');
     }
   }
 
