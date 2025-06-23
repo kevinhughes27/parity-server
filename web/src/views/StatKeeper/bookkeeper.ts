@@ -371,19 +371,34 @@ export class Bookkeeper {
   async submitGame(): Promise<void> {
     const payload = this.transformForAPI();
 
-    await this.saveToDatabase('submitted');
-    const response = await fetch(`/submit_game`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
+    try {
+      await this.saveToDatabase('submitted');
+      
+      const response = await fetch(`/submit_game`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
 
-    if (response.ok) {
-      await this.saveToDatabase('uploaded');
-    } else {
+      if (response.ok) {
+        await this.saveToDatabase('uploaded');
+      } else {
+        const errorText = await response.text();
+        await this.saveToDatabase('sync-error');
+        throw new Error(`Server error (${response.status}): ${errorText || 'Unknown server error'}`);
+      }
+    } catch (error) {
+      // Ensure we always save as sync-error if something went wrong
       await this.saveToDatabase('sync-error');
+      
+      // Re-throw the error with a clean message
+      if (error instanceof Error) {
+        throw error;
+      } else {
+        throw new Error(`Submission failed: ${String(error)}`);
+      }
     }
   }
 
