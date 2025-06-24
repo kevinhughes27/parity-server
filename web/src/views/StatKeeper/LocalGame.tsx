@@ -83,6 +83,7 @@ function LocalGame() {
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
         onChangeLine={handleChangeLine}
+        onEditRosters={handleEditRosters}
       />
       <MainContent
         bookkeeper={bookkeeper}
@@ -98,7 +99,8 @@ function TopBar({
   isHalfRecorded,
   onRecordHalf,
   onSubmitGame,
-  onChangeLine
+  onChangeLine,
+  onEditRosters
 }: {
   bookkeeper: any;
   localGameId: string;
@@ -106,6 +108,7 @@ function TopBar({
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => Promise<void>;
+  onEditRosters: () => Promise<void>;
 }) {
   return (
     <AppBar position="static" color="default" elevation={1}>
@@ -130,7 +133,7 @@ function TopBar({
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}
             onChangeLine={onChangeLine}
-            onEditRosters={handleEditRosters}
+            onEditRosters={onEditRosters}
           />
         </Box>
       </Toolbar>
