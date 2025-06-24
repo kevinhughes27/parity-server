@@ -6,6 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useBookkeeper, useFullscreen } from './hooks';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
+import EditRosters from './EditRosters';
 import GameActionsMenu from './GameActionsMenu';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
@@ -64,6 +65,15 @@ function LocalGame() {
     bookkeeper.currentView = 'selectLines';
   };
 
+  const handleEditRosters = async () => {
+    if (currentView === 'editRosters') {
+      return;
+    }
+
+    // Force transition to edit rosters view
+    bookkeeper.currentView = 'editRosters';
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       <TopBar
@@ -120,6 +130,7 @@ function TopBar({
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}
             onChangeLine={onChangeLine}
+            onEditRosters={handleEditRosters}
           />
         </Box>
       </Toolbar>
@@ -151,6 +162,10 @@ function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView
 
       {currentView === 'recordStats' && (
         <RecordStats bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+      )}
+
+      {currentView === 'editRosters' && (
+        <EditRosters bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
       )}
     </Box>
   );

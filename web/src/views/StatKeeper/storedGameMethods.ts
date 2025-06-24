@@ -382,6 +382,11 @@ export class StoredGameMethods {
     this.game.currentView = 'recordStats';
   }
 
+  updateRosters(homeRoster: string[], awayRoster: string[]): void {
+    this.game.homeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
+    this.game.awayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
+  }
+
   recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void {
     const activePoint = this.getActivePointModel();
     if (!activePoint) return;
@@ -462,6 +467,11 @@ export class StoredGameMethods {
     // Error state takes precedence
     if (this.game.localError !== null) {
       return 'error_state';
+    }
+
+    // If explicitly in edit rosters mode, stay there
+    if (this.game.currentView === 'editRosters') {
+      return 'editRosters';
     }
 
     // If no players are selected, we need to select lines
@@ -710,6 +720,9 @@ export interface IStoredGameMethods {
   // View management
   updateViewAfterAction(): void;
   determineCorrectView(): GameView;
+  
+  // Roster management
+  updateRosters(homeRoster: string[], awayRoster: string[]): void;
   
   // Utility methods
   changePossession(): void;
