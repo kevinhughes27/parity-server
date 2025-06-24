@@ -9,6 +9,171 @@ interface EditRosterProps {
   onRosterChange: (newRosterNames: string[]) => void; // Parent will handle sorting after update
 }
 
+// Component for a single player row in the roster list
+const PlayerListItem: React.FC<{
+  playerName: string;
+  onRemove: (playerName: string) => void;
+}> = ({ playerName, onRemove }) => {
+  return (
+    <Box
+      component="li"
+      key={playerName}
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        p: '6px 4px',
+        fontSize: '0.9em',
+        borderBottom: '1px solid #f0f0f0',
+      }}
+    >
+      <Typography variant="body2">{playerName}</Typography>
+      <Button
+        onClick={() => onRemove(playerName)}
+        color="error"
+        size="small"
+        sx={{
+          minWidth: 'auto',
+          p: '2px 4px',
+          fontSize: '0.8em',
+        }}
+      >
+        Remove
+      </Button>
+    </Box>
+  );
+};
+
+// Component for the empty roster state
+const EmptyRosterMessage: React.FC = () => (
+  <Box component="li" sx={{ textAlign: 'center', color: 'text.secondary', p: 1.25 }}>
+    <Typography variant="body2">No players on roster.</Typography>
+  </Box>
+);
+
+// Component for the player list section
+const PlayerList: React.FC<{
+  currentRosterNames: string[];
+  onRemovePlayer: (playerName: string) => void;
+}> = ({ currentRosterNames, onRemovePlayer }) => {
+  return (
+    <Box
+      component="ul"
+      sx={{
+        listStyleType: 'none',
+        pl: 0,
+        m: 0,
+        flexGrow: 1,
+        overflowY: 'auto',
+        border: '1px solid #ddd',
+        borderRadius: 1,
+        p: 0.5,
+        mb: 1,
+      }}
+    >
+      {currentRosterNames.length > 0 ? (
+        currentRosterNames.map(playerName => (
+          <PlayerListItem 
+            key={playerName} 
+            playerName={playerName} 
+            onRemove={onRemovePlayer} 
+          />
+        ))
+      ) : (
+        <EmptyRosterMessage />
+      )}
+    </Box>
+  );
+};
+
+// Component for adding a league player
+const AddLeaguePlayerForm: React.FC<{
+  availablePlayers: TeamPlayer[];
+  selectedPlayer: string;
+  onSelectPlayer: (player: string) => void;
+  onAddPlayer: () => void;
+}> = ({ availablePlayers, selectedPlayer, onSelectPlayer, onAddPlayer }) => {
+  return (
+    <Box sx={{ mb: 1.25 }}>
+      <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
+        Add Player from League
+      </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+        <Box
+          component="select"
+          value={selectedPlayer}
+          onChange={e => onSelectPlayer(e.target.value)}
+          sx={{
+            flexGrow: 1,
+            p: '6px',
+            fontSize: '0.9em',
+            minWidth: '100px',
+            borderRadius: 1,
+            border: '1px solid #ccc',
+          }}
+        >
+          <option value="">Select Player</option>
+          {availablePlayers.map(player => (
+            <option key={player.name} value={player.name}>
+              {player.name} ({player.team})
+            </option>
+          ))}
+        </Box>
+        <Button
+          onClick={onAddPlayer}
+          disabled={!selectedPlayer}
+          variant="outlined"
+          size="small"
+          sx={{ fontSize: '0.9em', flexShrink: 0 }}
+        >
+          Add
+        </Button>
+      </Box>
+    </Box>
+  );
+};
+
+// Component for adding a custom substitute
+const AddSubstituteForm: React.FC<{
+  newSubName: string;
+  onSubNameChange: (name: string) => void;
+  onAddSub: () => void;
+}> = ({ newSubName, onSubNameChange, onAddSub }) => {
+  return (
+    <Box>
+      <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
+        Add Custom Substitute
+      </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+        <Box
+          component="input"
+          type="text"
+          value={newSubName}
+          onChange={e => onSubNameChange(e.target.value)}
+          placeholder="Substitute name"
+          sx={{
+            flexGrow: 1,
+            p: '6px',
+            fontSize: '0.9em',
+            minWidth: '100px',
+            borderRadius: 1,
+            border: '1px solid #ccc',
+          }}
+        />
+        <Button
+          onClick={onAddSub}
+          disabled={!newSubName.trim()}
+          variant="outlined"
+          size="small"
+          sx={{ fontSize: '0.9em', flexShrink: 0 }}
+        >
+          Add Sub
+        </Button>
+      </Box>
+    </Box>
+  );
+};
+
 const EditRoster: React.FC<EditRosterProps> = ({
   allLeaguePlayers,
   currentRosterNames,
@@ -18,12 +183,9 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
 
   // Filter out players already on the current roster for the dropdown
-  // allLeaguePlayers is already sorted, so this will maintain a semblance of that order
-  // or could be re-sorted if desired, but the parent sorts the final list.
   const availableLeaguePlayersForDropdown = allLeaguePlayers.filter(
     p => !currentRosterNames.includes(p.name)
   );
-  // The dropdown itself will be sorted by name if allLeaguePlayers is sorted.
 
   const handleRemovePlayer = (playerName: string) => {
     onRosterChange(currentRosterNames.filter(name => name !== playerName));
@@ -64,126 +226,25 @@ const EditRoster: React.FC<EditRosterProps> = ({
         {currentRosterNames.length} players
       </Typography>
 
-      {/* Scrollable Player List - currentRosterNames is already sorted by parent */}
-      <Box
-        component="ul"
-        sx={{
-          listStyleType: 'none',
-          pl: 0,
-          m: 0,
-          flexGrow: 1,
-          overflowY: 'auto',
-          border: '1px solid #ddd',
-          borderRadius: 1,
-          p: 0.5,
-          mb: 1,
-        }}
-      >
-        {currentRosterNames.map(playerName => (
-          <Box
-            component="li"
-            key={playerName}
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              p: '6px 4px',
-              fontSize: '0.9em',
-              borderBottom: '1px solid #f0f0f0',
-            }}
-          >
-            <Typography variant="body2">{playerName}</Typography>
-            <Button
-              onClick={() => handleRemovePlayer(playerName)}
-              color="error"
-              size="small"
-              sx={{
-                minWidth: 'auto',
-                p: '2px 4px',
-                fontSize: '0.8em',
-              }}
-            >
-              Remove
-            </Button>
-          </Box>
-        ))}
-        {currentRosterNames.length === 0 && (
-          <Box component="li" sx={{ textAlign: 'center', color: 'text.secondary', p: 1.25 }}>
-            <Typography variant="body2">No players on roster.</Typography>
-          </Box>
-        )}
-      </Box>
+      {/* Scrollable Player List */}
+      <PlayerList 
+        currentRosterNames={currentRosterNames} 
+        onRemovePlayer={handleRemovePlayer} 
+      />
 
       {/* Add Player Sections */}
       <Box sx={{ flexShrink: 0 }}>
-        <Box sx={{ mb: 1.25 }}>
-          <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
-            Add Player from League
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-            <Box
-              component="select"
-              value={selectedLeaguePlayer}
-              onChange={e => setSelectedLeaguePlayer(e.target.value)}
-              sx={{
-                flexGrow: 1,
-                p: '6px',
-                fontSize: '0.9em',
-                minWidth: '100px',
-                borderRadius: 1,
-                border: '1px solid #ccc',
-              }}
-            >
-              <option value="">Select Player</option>
-              {/* availableLeaguePlayersForDropdown is derived from sorted allLeaguePlayers */}
-              {availableLeaguePlayersForDropdown.map(player => (
-                <option key={player.name} value={player.name}>
-                  {player.name} ({player.team})
-                </option>
-              ))}
-            </Box>
-            <Button
-              onClick={handleAddLeaguePlayer}
-              disabled={!selectedLeaguePlayer}
-              variant="outlined"
-              size="small"
-              sx={{ fontSize: '0.9em', flexShrink: 0 }}
-            >
-              Add
-            </Button>
-          </Box>
-        </Box>
-        <Box>
-          <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
-            Add Custom Substitute
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-            <Box
-              component="input"
-              type="text"
-              value={newSubName}
-              onChange={e => setNewSubName(e.target.value)}
-              placeholder="Substitute name"
-              sx={{
-                flexGrow: 1,
-                p: '6px',
-                fontSize: '0.9em',
-                minWidth: '100px',
-                borderRadius: 1,
-                border: '1px solid #ccc',
-              }}
-            />
-            <Button
-              onClick={handleAddSubByName}
-              disabled={!newSubName.trim()}
-              variant="outlined"
-              size="small"
-              sx={{ fontSize: '0.9em', flexShrink: 0 }}
-            >
-              Add Sub
-            </Button>
-          </Box>
-        </Box>
+        <AddLeaguePlayerForm
+          availablePlayers={availableLeaguePlayersForDropdown}
+          selectedPlayer={selectedLeaguePlayer}
+          onSelectPlayer={setSelectedLeaguePlayer}
+          onAddPlayer={handleAddLeaguePlayer}
+        />
+        <AddSubstituteForm
+          newSubName={newSubName}
+          onSubNameChange={setNewSubName}
+          onAddSub={handleAddSubByName}
+        />
       </Box>
     </Box>
   );
