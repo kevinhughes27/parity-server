@@ -1176,8 +1176,6 @@ def test_perf(server, league, rosters, page: Page) -> None:
 
     # first half - 20 points
     for point_num in range(20):
-        start_time = time.time()
-
         # select lines (auto-selected after first point)
         if point_num == 0:
             expect(page.locator("#root")).to_contain_text(
@@ -1188,6 +1186,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
         else:
             expect_next_line_text(page)
 
+        start_time = time.time()
         start_point(page)
 
         # determine which team has possession and whether to pull
@@ -1231,8 +1230,6 @@ def test_perf(server, league, rosters, page: Page) -> None:
 
     # second half - 20 more points
     for point_num in range(20, 40):
-        start_time = time.time()
-
         # select lines for first point of second half
         if point_num == 20:
             select_lines(page, home_line_1, away_line_1)
@@ -1240,6 +1237,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
         else:
             expect_next_line_text(page)
 
+        start_time = time.time()
         start_point(page)
 
         # determine which team has possession and whether to pull
