@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { StoredGame } from './db';
 import { Box, IconButton, Menu, MenuItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,6 +10,7 @@ interface GameActionsMenuProps {
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
+  onEditRosters: () => void;
 }
 
 const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
@@ -20,6 +20,7 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
+  onEditRosters,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -48,14 +49,7 @@ const GameActionsMenu: React.FC<GameActionsMenuProps> = ({
       </IconButton>
 
       <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
-        {/* ToDo probably better to make edit rosters a mode like select lines */}
-        <MenuItem
-          component={Link}
-          to={`/stat_keeper/edit_game/${numericGameId}`}
-          onClick={handleClose}
-        >
-          Edit Rosters
-        </MenuItem>
+        <MenuItem onClick={() => handleAction(onEditRosters)}>Edit Rosters</MenuItem>
 
         <MenuItem onClick={() => handleAction(onChangeLine)}>Change Line</MenuItem>
 

@@ -309,6 +309,12 @@ export class Bookkeeper {
     });
   }
 
+  public async updateRosters(homeRoster: string[], awayRoster: string[]): Promise<void> {
+    await this.performAction(() => {
+      this.gameMethods.updateRosters(homeRoster, awayRoster);
+    });
+  }
+
   // Utility methods that don't need persistence
   public prepareNewPointAfterScore(): void {
     this.gameMethods.prepareNewPointAfterScore();

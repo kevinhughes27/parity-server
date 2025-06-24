@@ -3,7 +3,7 @@ import Dexie, { type EntityTable } from 'dexie';
 import { type Point } from '../../api';
 
 // Types for game state
-export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'error_state' | 'initializing';
+export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'editRosters' | 'error_state' | 'initializing';
 
 export interface UndoCommand {
   type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' |
