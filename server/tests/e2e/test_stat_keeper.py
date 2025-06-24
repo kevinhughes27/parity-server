@@ -1079,7 +1079,10 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
 
 # test_edit_rosters_mid_point?
 # and change line after?
-# test change line undo
+
+# ~~test change line undo~~
+# we can undo this but I think it is actually more confusing that it works having tried it.
+# re-edit is a better solution and staying separate from the undo stack
 
 
 def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
@@ -1110,12 +1113,18 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
 
+    # help text
     expect(page.locator("#root")).to_contain_text(
         "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
     )
+    # undo is not available
+    expect(page.locator("#root")).not_to_contain_text("Undo")
+
+    # original line selected
     expect_players_enabled(page, home_line)
     expect_players_enabled(page, away_line)
 
+    # sub kevin for kyle
     page.get_by_role("button", name="Kevin Barford").click()
     page.get_by_role("button", name="Kyle Sprysa").click()
     page.get_by_role("button", name="Resume Point").click()
