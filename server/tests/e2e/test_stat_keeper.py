@@ -1077,8 +1077,68 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="Kevin Hughes")).to_be_visible()
 
 
-# test_edit_rosters_mid_point?
-# and change line after?
+def test_edit_rosters_mid_point_and_change_line(
+    server, league, rosters, page: Page
+) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    select_lines(page, rosters[home][:6], rosters[away][:6])
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+
+    # edit rosters
+    open_hamburger_menu(page)
+    page.get_by_role("menuitem", name="Edit Rosters").click()
+
+    # add sub
+    page.get_by_role("textbox", name="Substitute name").first.click()
+    page.get_by_role("textbox", name="Substitute name").first.fill("Kevin Hughes")
+    page.get_by_role("button", name="Add Sub").first.click()
+    page.get_by_role("button", name="Update Rosters").click()
+
+    # change line
+    open_hamburger_menu(page)
+    page.get_by_role("menuitem", name="Change Line").click()
+    expect(page.locator("#root")).to_contain_text("Resume Point")
+
+    # sub brian for kevin
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Kevin Hughes").click()
+    page.get_by_role("button", name="Resume Point").click()
+
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Kevin Hughes").click()
+    page.get_by_role("button", name="Catch D").click()
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    page.get_by_role("button", name="Point!").click()
+
+    # submit
+    submit_game(page)
+
+    # verify stats
+    stats = get_stats()
+    assert stats["Kevin Hughes"]["assists"] == 1
+
+    # verify game
+    game = get_game(1)
+    assert "Kevin Hughes" in game["homeRoster"]
+    assert "Kevin Hughes" in game["points"][0]["defensePlayers"]
+
 
 # ~~test change line undo~~
 # we can undo this but I think it is actually more confusing that it works having tried it.
