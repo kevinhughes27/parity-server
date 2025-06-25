@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Box, Typography, AppBar, Toolbar } from '@mui/material';
+import { Box, Typography, AppBar, Toolbar, IconButton, Menu, MenuItem, Divider } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Bookkeeper } from './bookkeeper';
+import { StoredGame } from './db';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
-import GameActionsMenu from './GameActionsMenu';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
@@ -14,6 +15,78 @@ interface EditGameProps {
   bookkeeper: Bookkeeper;
   localGameId: string;
 }
+
+interface ActionsMenuProps {
+  numericGameId: number | undefined;
+  gameStatus: StoredGame['status'] | undefined;
+  isHalfRecorded: boolean;
+  onRecordHalf: () => Promise<void>;
+  onSubmitGame: () => Promise<void>;
+  onChangeLine: () => void;
+  onEditRosters: () => void;
+}
+
+const ActionsMenu: React.FC<ActionsMenuProps> = ({
+  numericGameId,
+  gameStatus,
+  isHalfRecorded,
+  onRecordHalf,
+  onSubmitGame,
+  onChangeLine,
+  onEditRosters,
+}) => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleAction = async (action: () => Promise<void> | void) => {
+    await action();
+    handleClose();
+  };
+
+  if (!numericGameId) return null;
+
+  return (
+    <Box>
+      <IconButton onClick={handleClick} size="medium" sx={{ border: '1px solid #ccc' }}>
+        <MenuIcon />
+      </IconButton>
+
+      <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+        <MenuItem onClick={() => handleAction(onEditRosters)}>Edit Rosters</MenuItem>
+
+        <MenuItem onClick={() => handleAction(onChangeLine)}>Change Line</MenuItem>
+
+        <Divider />
+
+        <MenuItem
+          onClick={() => handleAction(onRecordHalf)}
+          disabled={isHalfRecorded}
+          sx={{ color: isHalfRecorded ? '#999' : 'inherit' }}
+        >
+          Record Half
+        </MenuItem>
+
+        <MenuItem
+          onClick={() => handleAction(onSubmitGame)}
+          disabled={!canSubmitGame}
+          sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
+        >
+          Submit Game
+        </MenuItem>
+      </Menu>
+    </Box>
+  );
+};
 
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
@@ -114,7 +187,7 @@ function TopBar({
           <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
         </Link>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <GameActionsMenu
+          <ActionsMenu
             numericGameId={parseInt(localGameId)}
             gameStatus={bookkeeper.getGameStatus()}
             isHalfRecorded={isHalfRecorded}

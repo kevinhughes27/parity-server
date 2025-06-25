@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Bookkeeper } from './bookkeeper';
-import PointEventsDisplay from './PointEventsDisplay';
+import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
@@ -160,7 +160,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
           </Box>
 
           <Box sx={{ width: '40%' }}>
-            <PointEventsDisplay bookkeeper={bookkeeper} />
+            <PointDisplay bookkeeper={bookkeeper} />
           </Box>
 
           <Box sx={{ width: '30%', pl: 1 }}>
