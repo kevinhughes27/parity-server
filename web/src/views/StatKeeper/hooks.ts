@@ -100,7 +100,7 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
     setLeagueTeams([]);
     setAllLeaguePlayers([]);
 
-    const foundApiLeague = apiLeagues.find(l => l.id === leagueId);
+    const foundApiLeague = apiLeagues.find(l => l.id === parseInt(leagueId, 10));
     setApiLeague(foundApiLeague);
 
     if (!foundApiLeague) {

@@ -11,12 +11,12 @@ vi.mock('../../../api', async () => {
     ...actual,
     leagues: [
       {
-        id: '101',
+        id: 101,
         name: 'OCUA',
         lineSize: 7,
       },
     ],
-    getLeagueName: (id: string) => (id === '101' ? 'OCUA' : 'Unknown League'),
+    getLeagueName: (id: number | string) => (id === 101 || id === '101' ? 'OCUA' : 'Unknown League'),
   };
 });
 
@@ -25,7 +25,7 @@ const PLAYER2 = 'Allan Godding';
 const PLAYER3 = 'Patrick Kenzie';
 const PLAYER4 = 'Player 4';
 
-const mockLeague: League = { name: 'OCUA', id: '101', lineSize: 7 };
+const mockLeague: League = { name: 'OCUA', id: 101, lineSize: 7 };
 const mockHomeTeam: Team = { name: 'Team A', id: 1, players: [] };
 const mockAwayTeam: Team = { name: 'Team B', id: 2, players: [] };
 const mockWeek = 1;
