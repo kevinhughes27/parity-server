@@ -73,6 +73,10 @@ export class PointMethods {
     return lastEvent ? lastEvent.type : null;
   }
 
+  getEvents(): Event[] {
+    return this.point.events.map(mapApiEventToEvent);
+  }
+
   removeLastEvent(): Event | undefined {
     const removedApiEvent = this.point.events.pop();
     return removedApiEvent ? mapApiEventToEvent(removedApiEvent) : undefined;

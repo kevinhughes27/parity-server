@@ -1202,7 +1202,9 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     # after undo play by play
     expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
     # this fails because we still push a sub undo stack.
-    expect(page.get_by_role("list")).not_to_contain_text("2.Owen Lumley passed to Heather McCabe")
+    expect(page.get_by_role("list")).not_to_contain_text(
+        "2.Owen Lumley passed to Heather McCabe"
+    )
 
     # resume stats
     page.get_by_role("button", name="Kyle Sprysa").click()
