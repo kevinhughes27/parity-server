@@ -8,7 +8,6 @@ import {
 import { type LeagueFromJson as League, type Team } from '../../../api';
 import { db, StoredGame } from '../db';
 
-// Mock the API leagues
 vi.mock('../../../api', async () => {
   const actual = await vi.importActual('../../../api');
   return {
@@ -29,7 +28,7 @@ const PLAYER2 = 'Allan Godding';
 const PLAYER3 = 'Patrick Kenzie';
 const PLAYER4 = 'Player 4';
 
-const mockLeague: League = { name: 'OCUA', id: '101', lineSize: 7 }; // Added lineSize
+const mockLeague: League = { name: 'OCUA', id: '101', lineSize: 7 };
 const mockHomeTeam: Team = { name: 'Team A', id: 1, players: [] };
 const mockAwayTeam: Team = { name: 'Team B', id: 2, players: [] };
 const mockWeek = 1;
@@ -37,7 +36,6 @@ const mockWeek = 1;
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
 const awayLine = [PLAYER2, PLAYER4, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
 
-// Helper to create initial StoredGame for a new game
 const createInitialStoredGame = (
   league: League,
   week: number,
@@ -77,7 +75,7 @@ describe('Bookkeeper', () => {
   beforeEach(async () => {
     await db.games.clear();
     const initialStoredGame = createInitialStoredGame(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
-    
+
     // Create team objects with rosters
     const homeTeamWithRoster: Team = {
       ...mockHomeTeam,
@@ -97,7 +95,9 @@ describe('Bookkeeper', () => {
       }))
     };
 
-    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster);
+    const gameId = 1;
+
+    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster, gameId);
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
   });
 
@@ -219,8 +219,9 @@ describe('Bookkeeper', () => {
   });
 
   test('testComplexScenario', async () => {
+    const gameId = 1;
     const initialStoredGame = createInitialStoredGame(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
-    
+
     // Create team objects with rosters
     const homeTeamWithRoster: Team = {
       ...mockHomeTeam,
@@ -240,7 +241,7 @@ describe('Bookkeeper', () => {
       }))
     };
 
-    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster);
+    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster, gameId);
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.
@@ -330,7 +331,7 @@ describe('Bookkeeper', () => {
     await bookkeeper.recordPass(PLAYER3);
     await bookkeeper.recordThrowAway();
 
-    const mementosCountBeforeSave = bookkeeper.getMementosCount();
+    const undoCountBeforeSave = bookkeeper.getUndoCount();
     const homeScoreBeforeSave = bookkeeper.homeScore;
     const awayScoreBeforeSave = bookkeeper.awayScore;
     const firstActorBeforeSave = bookkeeper.firstActor;
@@ -357,13 +358,13 @@ describe('Bookkeeper', () => {
     expect(newBookkeeper.homeScore).toBe(homeScoreBeforeSave);
     expect(newBookkeeper.awayScore).toBe(awayScoreBeforeSave);
     expect(newBookkeeper.firstActor).toBe(firstActorBeforeSave);
-    expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave);
+    expect(newBookkeeper.getUndoCount()).toBe(undoCountBeforeSave);
     expect(newBookkeeper.activePoint).not.toBeNull();
 
     await newBookkeeper.undo();
     expect(newBookkeeper.firstActor).toBe(PLAYER3);
     expect(newBookkeeper.homePossession).toBe(true);
-    expect(newBookkeeper.getMementosCount()).toBe(mementosCountBeforeSave - 1);
+    expect(newBookkeeper.getUndoCount()).toBe(undoCountBeforeSave - 1);
 
     const currentPointEvents = newBookkeeper.activePoint?.events;
     expect(currentPointEvents?.length).toBe(1); // PASS event remains
