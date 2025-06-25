@@ -13,7 +13,7 @@ export enum GameState {
 }
 
 // StoredGame methods implementation - operates on a StoredGame object without modifying it
-export class StoredGameMethods {
+export class GameMethods {
   constructor(private game: StoredGame) {}
 
   // Helper method to get active point as PointModel
@@ -622,7 +622,7 @@ export class StoredGameMethods {
 }
 
 // Type definition for the StoredGame methods interface
-export interface IStoredGameMethods {
+export interface IGameMethods {
   // State query methods
   gameState(): GameState;
   shouldRecordNewPass(): boolean;
