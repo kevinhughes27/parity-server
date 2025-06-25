@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import { Box, Typography, List, ListItem, Paper } from '@mui/material';
 import { Bookkeeper, GameState } from './bookkeeper';
 
-interface PointEventsDisplayProps {
+interface PointDisplayProps {
   bookkeeper: Bookkeeper;
 }
 
-const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) => {
+const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
   const hasActivePoint = bookkeeper.activePoint !== null;
   const eventsContainerRef = useRef<HTMLDivElement>(null);
@@ -113,4 +113,4 @@ const PointEventsDisplay: React.FC<PointEventsDisplayProps> = ({ bookkeeper }) =
   );
 };
 
-export default PointEventsDisplay;
+export default PointDisplay;
