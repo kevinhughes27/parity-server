@@ -39,20 +39,9 @@ export class StoredGameMethods {
     }
   }
 
-  // Helper method to get points as PointModel array
-  private getPointsModels(): PointModel[] {
-    return this.game.points.map(apiPoint => {
-      return PointModel.fromJSON({
-        offensePlayers: [...apiPoint.offensePlayers],
-        defensePlayers: [...apiPoint.defensePlayers],
-        events: apiPoint.events.map(mapApiEventToEvent),
-      });
-    });
-  }
-
   gameState(): GameState {
     const activePoint = this.getActivePointModel();
-    
+
     if (activePoint === null) {
       return GameState.Start;
     }
@@ -177,7 +166,7 @@ export class StoredGameMethods {
       offensePlayers = this.game.awayPlayers || [];
       defensePlayers = this.game.homePlayers || [];
     }
-    
+
     const newPoint = new PointModel(offensePlayers, defensePlayers);
     this.setActivePointModel(newPoint);
   }
@@ -329,7 +318,7 @@ export class StoredGameMethods {
       secondActor: null,
       timestamp: new Date().toISOString(),
     });
-    
+
     // Convert PointModel to API format and add to game.points
     this.game.points.push({
       offensePlayers: [...activePoint.offensePlayers],
@@ -350,7 +339,7 @@ export class StoredGameMethods {
     this.game.firstActor = null;
 
     this.changePossession(); // Flip possession for the next point
-    
+
     // Explicitly transition to line selection for next point
     this.game.currentView = 'selectLines';
   }
@@ -369,7 +358,7 @@ export class StoredGameMethods {
     this.game.homePlayers = null;
     this.game.awayPlayers = null;
     this.game.lastPlayedLine = null;
-    
+
     // Explicitly transition to line selection for second half
     this.game.currentView = 'selectLines';
   }
@@ -377,7 +366,7 @@ export class StoredGameMethods {
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.game.homePlayers = [...activeHomePlayers];
     this.game.awayPlayers = [...activeAwayPlayers];
-    
+
     // Transition to record stats view since we now have players selected
     this.game.currentView = 'recordStats';
   }
@@ -424,39 +413,10 @@ export class StoredGameMethods {
     this.setActivePointModel(activePoint);
   }
 
-  prepareNewPointAfterScore(): void {
-    if (this.game.activePoint !== null || this.game.homePlayers === null || this.game.awayPlayers === null) {
-      // Only proceed if point is null (just scored) and lines are set for the new point.
-      return;
-    }
-    // homePossession should have been flipped by recordPoint already.
-    // This method sets up activePoint for the receiving team.
-    let offensePlayers: string[];
-    let defensePlayers: string[];
-
-    if (this.game.homePossession) {
-      // This is the team receiving
-      offensePlayers = this.game.homePlayers;
-      defensePlayers = this.game.awayPlayers;
-    } else {
-      offensePlayers = this.game.awayPlayers;
-      defensePlayers = this.game.homePlayers;
-    }
-    
-    const newPoint = new PointModel(offensePlayers, defensePlayers);
-    this.setActivePointModel(newPoint);
-    // DO NOT set firstActor here.
-    // NO MEMENTO for this automatic setup step, as it's an intermediate state.
-  }
-
-  resumePoint(): void {
-    return;
-  }
-
   updateViewAfterAction(): void {
     // Determine the correct view based on current game state
     const newView = this.determineCorrectView();
-    
+
     // Only update if the view actually needs to change
     if (this.game.currentView !== newView) {
       this.game.currentView = newView;
@@ -594,7 +554,7 @@ export class StoredGameMethods {
     this.game.activePoint = lastPoint;
     const activePoint = this.getActivePointModel();
     if (!activePoint) return;
-    
+
     activePoint.removeLastEvent(); // Remove the POINT event
 
     // Decrement the correct team's score using stored possession data
@@ -688,10 +648,6 @@ export class StoredGameMethods {
       this.game.currentView = this.determineCorrectView();
     }
   }
-
-  clearError(): void {
-    this.setError(null);
-  }
 }
 
 // Type definition for the StoredGame methods interface
@@ -700,7 +656,7 @@ export interface IStoredGameMethods {
   gameState(): GameState;
   shouldRecordNewPass(): boolean;
   firstPointOfGameOrHalf(): boolean;
-  
+
   // Action methods
   recordFirstActor(player: string, isHomeTeamPlayer: boolean): void;
   recordPull(): void;
@@ -713,23 +669,21 @@ export interface IStoredGameMethods {
   recordHalf(): void;
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void;
   recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void;
-  
+
   // Undo methods
   undo(): void;
-  
+
   // View management
   updateViewAfterAction(): void;
   determineCorrectView(): GameView;
-  
+
   // Roster management
   updateRosters(homeRoster: string[], awayRoster: string[]): void;
-  
+
   // Utility methods
   changePossession(): void;
-  prepareNewPointAfterScore(): void;
-  resumePoint(): void;
   startPointAndSetPossession(isHomeTeamStartingWithDisc: boolean): void;
-  
+
   // Undo helper methods
   undoRecordFirstActor(): void;
   undoRecordPull(): void;
@@ -742,5 +696,4 @@ export interface IStoredGameMethods {
   undoRecordSubstitution(command: UndoCommand): void;
   determinePointPossession(point: any): boolean;
   setError(error: string | null): void;
-  clearError(): void;
 }

@@ -43,11 +43,11 @@ const getPlayerButtonState = (
 
   const currentGameState = bookkeeper.gameState();
   const isActivePlayer = bookkeeper.firstActor === playerName;
-  const isFirstPointOfGame = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf === 0;
-  const isFirstPointAfterHalftime = bookkeeper.firstPointOfGameOrHalf() && bookkeeper.pointsAtHalf > 0;
+  const isFirstPoint = bookkeeper.firstPoint();
+  const isFirstPointAfterHalftime = bookkeeper.firstPointAfterHalf();
 
   // Special case: first point of game or after halftime, both teams can select who pulls
-  if (currentGameState === GameState.Start && (isFirstPointOfGame || isFirstPointAfterHalftime)) {
+  if (currentGameState === GameState.Start && (isFirstPoint || isFirstPointAfterHalftime)) {
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
@@ -84,11 +84,11 @@ const getPlayerButtonState = (
         },
       };
     }
-    
+
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
-      reason: (isFirstPointOfGame || isFirstPointAfterHalftime) ? 'Select starting player' : 'Select receiving player',
+      reason: (isFirstPoint || isFirstPointAfterHalftime) ? 'Select starting player' : 'Select receiving player',
       style: isActivePlayer
         ? {
             color: '#000',
@@ -328,8 +328,8 @@ const getActionButtonState = (
 
     case 'undo':
       return {
-        enabled: bookkeeper.getMementosCount() > 0,
-        reason: bookkeeper.getMementosCount() === 0 ? 'No actions to undo' : undefined,
+        enabled: bookkeeper.getUndoCount() > 0,
+        reason: bookkeeper.getUndoCount() === 0 ? 'No actions to undo' : undefined,
       };
 
     default:

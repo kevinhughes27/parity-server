@@ -42,8 +42,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
       setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
     } else {
-      // Default case: reset to blank slate
-      // This handles: start of game, after halftime, after point scored
+      // Default case: blank slate
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
     }
@@ -121,8 +120,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
   };
 
-
-  const handleUndoLastAction = async () => {
+  const handleUndo = async () => {
     await bookkeeper.undo();
   };
 
@@ -153,14 +151,21 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
 
   const buttonText = isEditingLine ? 'Resume Point' : 'Start Point';
 
-  // Base help text without undo information
-  let helpText = isEditingLine
-    ? "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
-    : lastPlayedLine
-      ? 'Players not on the previous line are pre-selected. Adjust and confirm.'
-      : bookkeeper.points.length === 0 && bookkeeper.pointsAtHalf === 0
-        ? 'Select players for the first point.'
-        : 'Select players for the next point.';
+  const helpText = () => {
+    if (isEditingLine) {
+      return "Tap player names to Edit the active line, then click 'Resume Point'."
+    }
+
+    if (bookkeeper.firstPoint()) {
+      return "Select players for the first point."
+    }
+
+    if (bookkeeper.firstPointAfterHalf()) {
+      return "Select players for the next point."
+    }
+
+    return "Players not on the previous line are pre-selected. Adjust and confirm."
+  }
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
@@ -188,14 +193,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
 
       <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
         <Typography variant="body2" color="text.secondary">
-          {helpText}
-          {lastPlayedLine && !isEditingLine && (
-            <>
-              <br />
-              If a point was just scored, 'Undo Last Action' will revert the score and take you back
-              to editing the last event of that point.
-            </>
-          )}
+          {helpText()}
         </Typography>
       </Paper>
 
@@ -211,11 +209,11 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
           },
         ]}
         secondaryActions={
-          bookkeeper.getMementosCount() > 0 && !isEditingLine
+          bookkeeper.getUndoCount() > 0 && !isEditingLine
             ? [
                 {
-                  label: 'Undo Last Action',
-                  onClick: handleUndoLastAction,
+                  label: 'Undo Point',
+                  onClick: handleUndo,
                   color: 'warning',
                   variant: 'contained',
                 },

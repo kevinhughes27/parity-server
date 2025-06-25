@@ -121,9 +121,8 @@ def expect_players_disabled(page: Page, players: list[str]):
 
 
 def expect_next_line_text(page: Page):
-    message1 = "Players not on the previous line are pre-selected."
-    message2 = "Adjust and confirm.If a point was just scored, 'Undo Last Action' will revert the score and take you back to editing the last event of that point."
-    expect(page.locator("#root")).to_contain_text(f"{message1} {message2}")
+    help_text = "Players not on the previous line are pre-selected. Adjust and confirm."
+    expect(page.locator("#root")).to_contain_text(f"{help_text}")
 
 
 def open_hamburger_menu(page: Page):
@@ -566,7 +565,7 @@ def test_undo(server, league, rosters, page: Page) -> None:
     # undo point
     page.get_by_role("button", name="Point!").click()
     expect(page.get_by_role("list")).to_contain_text("Kevin Barford scored!")
-    page.get_by_role("button", name="Undo Last").click()
+    page.get_by_role("button", name="Undo Point").click()
     expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford scored!")
 
     # finish point
@@ -594,7 +593,7 @@ def test_undo(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Kyle Sprysa").click()
     page.get_by_role("button", name="Catch D").click()
     page.get_by_role("button", name="Point!").click()
-    page.get_by_role("button", name="Undo Last Action").click()
+    page.get_by_role("button", name="Undo Point").click()
     page.get_by_role("button", name="Kirsten Querbach").click()
     page.get_by_role("button", name="Point!").click()
 
@@ -807,6 +806,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Record Half").click()
 
     # select lines again
+    expect(page.locator("#root")).to_contain_text("Select players for the next point.")
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -888,13 +888,13 @@ def test_resume(
     )
     expect(page.locator("#root")).to_contain_text("in-progress")
     page.get_by_role("link", name="Resume Game").click()
-    # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
-    expect(page.locator("#root")).to_contain_text(
-        "Players not on the previous line are pre-selected. Adjust and confirm."
-    )
+
+    # right back where we left off
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
 
     # test undo after resume
-    page.get_by_role("button", name="Undo Last Action").click()
+    page.get_by_role("button", name="Undo Point").click()
     expect(
         page.get_by_role("button", name="Kevin Barford")
     ).to_be_disabled()  # has possession
@@ -1175,7 +1175,7 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # help text
     expect(page.locator("#root")).to_contain_text(
-        "Current line is selected. Make any adjustments needed, then click 'Resume Point'."
+        "Tap player names to Edit the active line, then click 'Resume Point'."
     )
     # undo is not available
     expect(page.locator("#root")).not_to_contain_text("Undo")

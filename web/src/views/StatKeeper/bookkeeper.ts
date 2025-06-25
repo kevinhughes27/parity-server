@@ -14,16 +14,6 @@ import {
 import { type GameView } from './db';
 import { StoredGameMethods, GameState } from './storedGameMethods';
 
-// Export GameState for components
-export { GameState };
-
-interface ActionOptions {
-  skipViewChange?: boolean;
-  skipSave?: boolean;
-  newStatus?: 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
-}
-
-
 interface UploadedGamePayload {
   league_id: string;
   week: number;
@@ -36,19 +26,17 @@ interface UploadedGamePayload {
   awayScore: number;
 }
 
-export class Bookkeeper {
-  // Core game data - now stored in StoredGame
-  private game: StoredGame;
-  // Game methods - separate from data
-  private gameMethods: StoredGameMethods;
+export { GameState };
 
-  // Derived/computed data for convenience
+export class Bookkeeper {
   public league: League;
   public homeTeam: Team;
   public awayTeam: Team;
 
-  // Infrastructure
   private gameId: number | null = null;
+  private game: StoredGame;
+  private gameMethods: StoredGameMethods;
+
   private listeners: Set<() => void> = new Set();
 
   constructor(
@@ -66,16 +54,202 @@ export class Bookkeeper {
     this.gameId = gameId || null;
   }
 
-  // Getters for state that's now in StoredGame
-  get points(): PointModel[] {
-    return this.game.points.map(apiPoint => {
-      return PointModel.fromJSON({
-        offensePlayers: [...apiPoint.offensePlayers],
-        defensePlayers: [...apiPoint.defensePlayers],
-        events: apiPoint.events.map(mapApiEventToEvent),
-      });
-    });
+  // Create a new game and save it to IndexedDb
+  public static async newGame(
+    currentLeague: { league: { id: string; name: string; lineSize: number } },
+    week: number,
+    homeTeam: { id: number; name: string },
+    awayTeam: { id: number; name: string },
+    homeRoster: string[],
+    awayRoster: string[]
+  ): Promise<number> {
+    const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
+    const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
+
+    const newGame: StoredGame = {
+      league_id: currentLeague.league.id,
+      week: week,
+      homeTeam: homeTeam.name,
+      homeTeamId: homeTeam.id,
+      awayTeam: awayTeam.name,
+      awayTeamId: awayTeam.id,
+      homeRoster: sortedHomeRoster,
+      awayRoster: sortedAwayRoster,
+
+      // Game state
+      points: [],
+      activePoint: null,
+      homeScore: 0,
+      awayScore: 0,
+      homePossession: true,
+      firstActor: null,
+      pointsAtHalf: 0,
+
+      // Line selection state
+      homePlayers: null,
+      awayPlayers: null,
+      lastPlayedLine: null,
+
+      // UI state
+      currentView: 'selectLines',
+      localError: null,
+
+      // Undo system
+      undoStack: [],
+
+      // Persistence metadata
+      status: 'in-progress',
+      lastModified: new Date(),
+    };
+
+    const id = await db.games.add(newGame);
+    return id as number;
   }
+
+  // Save to IndexedDb
+  private async saveToDatabase(newStatus?: StoredGame['status']): Promise<void> {
+    if (!this.gameId) {
+      throw new Error('Cannot save: no game ID');
+    }
+
+    try {
+      this.game.lastModified = new Date();
+      if (newStatus) {
+        this.game.status = newStatus;
+      }
+
+      // update rosters from team objects
+      this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+      this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+
+      // save
+      await db.games.update(this.gameId, { ...this.game });
+    } catch (error) {
+      this.gameMethods.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      this.notifyListeners();
+      throw error;
+    }
+  }
+
+  // Load from IndexedDb
+  static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
+    const storedGame = await db.games.get(gameId);
+    if (!storedGame) {
+      throw new Error(`Game ${gameId} not found`);
+    }
+
+    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
+    if (!apiLeague) {
+      throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
+    }
+
+    const league: League = {
+      id: storedGame.league_id,
+      name: getLeagueName(storedGame.league_id) || 'Unknown League',
+      lineSize: apiLeague.lineSize,
+    };
+
+    const homeTeam: Team = {
+      id: storedGame.homeTeamId,
+      name: storedGame.homeTeam,
+      players: storedGame.homeRoster.map(name => ({
+        name,
+        team: storedGame.homeTeam,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
+    };
+
+    const awayTeam: Team = {
+      id: storedGame.awayTeamId,
+      name: storedGame.awayTeam,
+      players: storedGame.awayRoster.map(name => ({
+        name,
+        team: storedGame.awayTeam,
+        is_male: true // Default, will be updated when proper team data is loaded
+      }))
+    };
+
+    return new Bookkeeper(
+      storedGame,
+      league,
+      homeTeam,
+      awayTeam,
+      gameId
+    );
+  }
+
+  // Upload Game
+  async submitGame(): Promise<void> {
+    const payload = this.transformForAPI();
+
+    try {
+      await this.saveToDatabase('submitted');
+
+      const response = await fetch(`/submit_game`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        await this.saveToDatabase('uploaded');
+      } else {
+        const errorText = await response.text();
+        await this.saveToDatabase('sync-error');
+        throw new Error(`Server error (${response.status}): ${errorText || 'Unknown server error'}`);
+      }
+    } catch (error) {
+      // Ensure we always save as sync-error if something went wrong
+      await this.saveToDatabase('sync-error');
+
+      // Re-throw the error
+      if (error instanceof Error) {
+        throw error;
+      } else {
+        throw new Error(`Submission failed: ${String(error)}`);
+      }
+    }
+  }
+
+  public transformForAPI(): UploadedGamePayload {
+    return {
+      league_id: this.game.league_id,
+      week: this.game.week,
+      homeTeam: this.game.homeTeam,
+      homeScore: this.game.homeScore,
+      homeRoster: [...this.game.homeRoster].sort((a, b) => a.localeCompare(b)),
+      awayTeam: this.game.awayTeam,
+      awayScore: this.game.awayScore,
+      awayRoster: [...this.game.awayRoster].sort((a, b) => a.localeCompare(b)),
+      points: this.game.points.map(point => ({
+        offensePlayers: [...point.offensePlayers].sort(),
+        defensePlayers: [...point.defensePlayers].sort(),
+        events: [...point.events],
+      })),
+    };
+  }
+
+  // React listeners
+  subscribe(listener: () => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  notifyListeners(): void {
+    this.listeners.forEach(listener => listener());
+  }
+
+  // get points(): PointModel[] {
+  //   return this.game.points.map(apiPoint => {
+  //     return PointModel.fromJSON({
+  //       offensePlayers: [...apiPoint.offensePlayers],
+  //       defensePlayers: [...apiPoint.defensePlayers],
+  //       events: apiPoint.events.map(mapApiEventToEvent),
+  //     });
+  //   });
+  // }
 
   get activePoint(): PointModel | null {
     if (!this.game.activePoint) return null;
@@ -121,76 +295,6 @@ export class Bookkeeper {
     this.game.lastPlayedLine = value;
   }
 
-  static async loadFromDatabase(gameId: number): Promise<Bookkeeper> {
-    const storedGame = await db.games.get(gameId);
-    if (!storedGame) {
-      throw new Error(`Game ${gameId} not found`);
-    }
-
-    // Ensure all required fields have defaults if missing (for backward compatibility)
-    const gameWithDefaults: StoredGame = {
-      ...storedGame,
-      activePoint: storedGame.activePoint || null,
-      homePossession: storedGame.homePossession ?? true,
-      firstActor: storedGame.firstActor || null,
-      pointsAtHalf: storedGame.pointsAtHalf || 0,
-      homePlayers: storedGame.homePlayers || null,
-      awayPlayers: storedGame.awayPlayers || null,
-      lastPlayedLine: storedGame.lastPlayedLine || null,
-      currentView: storedGame.currentView || 'loading',
-      localError: storedGame.localError || null,
-      undoStack: storedGame.undoStack || [],
-    };
-
-    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
-    if (!apiLeague) {
-      throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
-    }
-
-    const leagueForBk: League = {
-      id: storedGame.league_id,
-      name: getLeagueName(storedGame.league_id) || 'Unknown League',
-      lineSize: apiLeague.lineSize,
-    };
-
-    // Initialize team objects with rosters
-    const homeTeamForBk: Team = {
-      id: storedGame.homeTeamId,
-      name: storedGame.homeTeam,
-      players: storedGame.homeRoster.map(name => ({
-        name,
-        team: storedGame.homeTeam,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
-    };
-
-    const awayTeamForBk: Team = {
-      id: storedGame.awayTeamId,
-      name: storedGame.awayTeam,
-      players: storedGame.awayRoster.map(name => ({
-        name,
-        team: storedGame.awayTeam,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
-    };
-
-    const bookkeeper = new Bookkeeper(
-      gameWithDefaults,
-      leagueForBk,
-      homeTeamForBk,
-      awayTeamForBk,
-      gameId
-    );
-
-    // Initialize view state if needed
-    if (gameWithDefaults.currentView === 'loading') {
-      bookkeeper.determineInitialView();
-    }
-
-    return bookkeeper;
-  }
-
-
   // Delegate common game state queries directly to the game
   public gameState(): GameState {
     return this.gameMethods.gameState();
@@ -200,43 +304,33 @@ export class Bookkeeper {
     return this.gameMethods.shouldRecordNewPass();
   }
 
+  public firstPoint(): boolean {
+    return this.game.points.length === 0;
+  }
+
+  public firstPointAfterHalf(): boolean {
+    const hasPoints = this.game.points.length >= 0
+    return hasPoints && this.gameMethods.firstPointOfGameOrHalf();
+  }
+
   public firstPointOfGameOrHalf(): boolean {
     return this.gameMethods.firstPointOfGameOrHalf();
   }
 
-
-  // Simplified action method that handles persistence and notifications
-  private async performAction(
-    action: () => void,
-    options: ActionOptions = {}
-  ): Promise<void> {
-    // Track state for view transitions (for point scoring)
-    const wasRecordingPoint = this.homePlayers !== null && this.awayPlayers !== null;
-
-    // Execute the action
+  private async performAction(action: () => void): Promise<void> {
+    // Action
     action();
 
-    // Track last played line if a point was just scored
-    if (wasRecordingPoint && this.homePlayers === null && this.awayPlayers === null) {
-      // Point was scored, preserve the line that was playing
-      // This will be handled by the recordPoint method in StoredGame
-    }
-
-    // Auto-save unless explicitly skipped or no game ID (for tests)
-    if (!options.skipSave && this.gameId !== null) {
-      await this.saveToDatabase(options.newStatus);
-    }
+    // Save to IndexedDb
+    await this.saveToDatabase();
 
     // Update view state
-    if (!options.skipViewChange) {
-      this.updateViewState();
-    }
+    this.gameMethods.updateViewAfterAction();
 
     // Notify React components
     this.notifyListeners();
   }
 
-  // Simplified action methods that handle persistence and notifications
   public async recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): Promise<void> {
     await this.performAction(() => {
       this.gameMethods.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
@@ -315,124 +409,25 @@ export class Bookkeeper {
     });
   }
 
-  // Utility methods that don't need persistence
-  public prepareNewPointAfterScore(): void {
-    this.gameMethods.prepareNewPointAfterScore();
-  }
-
-  public resumePoint(): void {
-    this.gameMethods.resumePoint();
-  }
-
   // Point display methods
   public getCurrentPointPrettyPrint(): string[] {
     return this.activePoint?.prettyPrint() || [];
   }
 
   public getLastCompletedPointPrettyPrint(): string[] {
-    const lastPoint = this.points[this.points.length - 1];
-    return lastPoint?.prettyPrint() || [];
-  }
+    const numPoints = this.game.points.length;
+    const lastPoint = this.game.points[numPoints - 1];
 
-
-
-  private determineInitialView(): void {
-    // Set initial view based on game state
-    this.currentView = this.gameMethods.determineCorrectView();
-  }
-
-  private updateViewState(): void {
-    this.gameMethods.updateViewAfterAction();
-  }
-
-  private async saveToDatabase(newStatus?: StoredGame['status']): Promise<void> {
-    if (!this.gameId) {
-      throw new Error('Cannot save: no game ID');
-    }
-
-    try {
-      // Update the game object directly
-      this.game.lastModified = new Date();
-      if (newStatus) {
-        this.game.status = newStatus;
-      }
-
-      // Update rosters from team objects
-      this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-      this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-
-      await db.games.update(this.gameId, { ...this.game });
-    } catch (error) {
-      this.gameMethods.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-      this.notifyListeners();
-      throw error;
-    }
-  }
-
-  // Public method for external saves (like roster updates)
-  public async saveChanges(): Promise<void> {
-    await this.saveToDatabase();
-  }
-
-  async submitGame(): Promise<void> {
-    const payload = this.transformForAPI();
-
-    try {
-      await this.saveToDatabase('submitted');
-
-      const response = await fetch(`/submit_game`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+    if (lastPoint) {
+      const model = PointModel.fromJSON({
+        offensePlayers: [...lastPoint.offensePlayers],
+        defensePlayers: [...lastPoint.defensePlayers],
+        events: lastPoint.events.map(mapApiEventToEvent),
       });
-
-      if (response.ok) {
-        await this.saveToDatabase('uploaded');
-      } else {
-        const errorText = await response.text();
-        await this.saveToDatabase('sync-error');
-        throw new Error(`Server error (${response.status}): ${errorText || 'Unknown server error'}`);
-      }
-    } catch (error) {
-      // Ensure we always save as sync-error if something went wrong
-      await this.saveToDatabase('sync-error');
-
-      // Re-throw the error with a clean message
-      if (error instanceof Error) {
-        throw error;
-      } else {
-        throw new Error(`Submission failed: ${String(error)}`);
-      }
+      return model.prettyPrint()
+    } else {
+      return []
     }
-  }
-
-  public transformForAPI(): UploadedGamePayload {
-    return {
-      league_id: this.game.league_id,
-      week: this.game.week,
-      homeTeam: this.game.homeTeam,
-      homeScore: this.game.homeScore,
-      homeRoster: [...this.game.homeRoster].sort((a, b) => a.localeCompare(b)),
-      awayTeam: this.game.awayTeam,
-      awayScore: this.game.awayScore,
-      awayRoster: [...this.game.awayRoster].sort((a, b) => a.localeCompare(b)),
-      points: this.game.points.map(point => ({
-        offensePlayers: [...point.offensePlayers].sort(),
-        defensePlayers: [...point.defensePlayers].sort(),
-        events: [...point.events],
-      })),
-    };
-  }
-
-  subscribe(listener: () => void): () => void {
-    this.listeners.add(listener);
-    return () => this.listeners.delete(listener);
-  }
-
-  notifyListeners(): void {
-    this.listeners.forEach(listener => listener());
   }
 
   // Convenience methods for React components
@@ -456,66 +451,7 @@ export class Bookkeeper {
     return this.game.status;
   }
 
-  getMementosCount(): number {
+  getUndoCount(): number {
     return this.game.undoStack.length;
   }
-
-  clearError(): void {
-    this.gameMethods.clearError();
-    this.notifyListeners();
-  }
-
-  // Static method to create a new game and save it to the database
-  public static async newGame(
-    currentLeague: { league: { id: string; name: string; lineSize: number } },
-    week: number,
-    homeTeam: { id: number; name: string },
-    awayTeam: { id: number; name: string },
-    homeRoster: string[],
-    awayRoster: string[]
-  ): Promise<number> {
-    const sortedHomeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
-    const sortedAwayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
-
-    // Create the StoredGame object and save it to the database
-    const newGame: StoredGame = {
-      league_id: currentLeague.league.id,
-      week: week,
-      homeTeam: homeTeam.name,
-      homeTeamId: homeTeam.id,
-      awayTeam: awayTeam.name,
-      awayTeamId: awayTeam.id,
-      homeRoster: sortedHomeRoster,
-      awayRoster: sortedAwayRoster,
-
-      // Game state
-      points: [],
-      activePoint: null,
-      homeScore: 0,
-      awayScore: 0,
-      homePossession: true,
-      firstActor: null,
-      pointsAtHalf: 0,
-
-      // Line selection state
-      homePlayers: null,
-      awayPlayers: null,
-      lastPlayedLine: null,
-
-      // UI state
-      currentView: 'selectLines',
-      localError: null,
-
-      // Undo system
-      undoStack: [],
-
-      // Persistence metadata
-      status: 'in-progress',
-      lastModified: new Date(),
-    };
-
-    const id = await db.games.add(newGame);
-    return id as number;
-  }
-
 }
