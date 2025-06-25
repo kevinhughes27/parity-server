@@ -44,13 +44,13 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       bookkeeper.homeTeam.players = homeRosterNames.map(name => ({
         name,
         team: bookkeeper.homeTeam.name,
-        is_male: true // Default, will be updated when proper team data is loaded
+        is_male: true, // Default, will be updated when proper team data is loaded
       }));
 
       bookkeeper.awayTeam.players = awayRosterNames.map(name => ({
         name,
         team: bookkeeper.awayTeam.name,
-        is_male: true // Default, will be updated when proper team data is loaded
+        is_male: true, // Default, will be updated when proper team data is loaded
       }));
 
       // Update the stored game rosters
@@ -78,9 +78,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   if (loadingLeaguePlayers) {
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
-        <Typography sx={{ textAlign: 'center', mt: 4 }}>
-          Loading league player data...
-        </Typography>
+        <Typography sx={{ textAlign: 'center', mt: 4 }}>Loading league player data...</Typography>
       </Box>
     );
   }

@@ -32,5 +32,4 @@ function LocalGame() {
   return <EditGame bookkeeper={bookkeeper} localGameId={localGameId!} />;
 }
 
-
 export default LocalGame;

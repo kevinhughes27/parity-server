@@ -4,14 +4,10 @@ import {
   type Point as ApiPoint,
   type LeagueFromJson as League,
   type Team,
-  leagues as apiLeagues
+  leagues as apiLeagues,
 } from '../../api';
 import { type GameView } from './db';
-import {
-  GameMethods,
-  GameState,
-  PointMethods,
-} from './gameLogic';
+import { GameMethods, GameState, PointMethods } from './gameLogic';
 
 interface UploadedGamePayload {
   league_id: number;
@@ -38,13 +34,7 @@ export class Bookkeeper {
 
   private listeners: Set<() => void> = new Set();
 
-  constructor(
-    game: StoredGame,
-    league: League,
-    homeTeam: Team,
-    awayTeam: Team,
-    gameId?: number
-  ) {
+  constructor(game: StoredGame, league: League, homeTeam: Team, awayTeam: Team, gameId?: number) {
     this.game = game;
     this.gameMethods = new GameMethods(game);
     this.league = league;
@@ -118,13 +108,19 @@ export class Bookkeeper {
       }
 
       // update rosters from team objects
-      this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
-      this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) => a.localeCompare(b));
+      this.game.homeRoster = [...this.homeTeam.players.map(p => p.name)].sort((a, b) =>
+        a.localeCompare(b)
+      );
+      this.game.awayRoster = [...this.awayTeam.players.map(p => p.name)].sort((a, b) =>
+        a.localeCompare(b)
+      );
 
       // save
       await db.games.update(this.gameId, { ...this.game });
     } catch (error) {
-      this.gameMethods.setError(`Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      this.gameMethods.setError(
+        `Save failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
       this.notifyListeners();
       throw error;
     }
@@ -154,8 +150,8 @@ export class Bookkeeper {
       players: storedGame.homeRoster.map(name => ({
         name,
         team: storedGame.homeTeam,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
+        is_male: true, // Default, will be updated when proper team data is loaded
+      })),
     };
 
     const awayTeam: Team = {
@@ -164,17 +160,11 @@ export class Bookkeeper {
       players: storedGame.awayRoster.map(name => ({
         name,
         team: storedGame.awayTeam,
-        is_male: true // Default, will be updated when proper team data is loaded
-      }))
+        is_male: true, // Default, will be updated when proper team data is loaded
+      })),
     };
 
-    return new Bookkeeper(
-      storedGame,
-      league,
-      homeTeam,
-      awayTeam,
-      gameId
-    );
+    return new Bookkeeper(storedGame, league, homeTeam, awayTeam, gameId);
   }
 
   // Upload Game
@@ -197,7 +187,9 @@ export class Bookkeeper {
       } else {
         const errorText = await response.text();
         await this.saveToDatabase('sync-error');
-        throw new Error(`Server error (${response.status}): ${errorText || 'Unknown server error'}`);
+        throw new Error(
+          `Server error (${response.status}): ${errorText || 'Unknown server error'}`
+        );
       }
     } catch (error) {
       // Ensure we always save as sync-error if something went wrong
@@ -254,24 +246,46 @@ export class Bookkeeper {
   }
 
   // Read-only getters for game state (components should not directly modify these)
-  get firstActor(): string | null { return this.game.firstActor; }
-  get homePossession(): boolean { return this.game.homePossession; }
-  get homeScore(): number { return this.game.homeScore; }
-  get awayScore(): number { return this.game.awayScore; }
-  get pointsAtHalf(): number { return this.game.pointsAtHalf; }
-  get homePlayers(): string[] | null { return this.game.homePlayers; }
-  get awayPlayers(): string[] | null { return this.game.awayPlayers; }
-  get localError(): string | null { return this.game.localError; }
-  get week(): number { return this.game.week; }
+  get firstActor(): string | null {
+    return this.game.firstActor;
+  }
+  get homePossession(): boolean {
+    return this.game.homePossession;
+  }
+  get homeScore(): number {
+    return this.game.homeScore;
+  }
+  get awayScore(): number {
+    return this.game.awayScore;
+  }
+  get pointsAtHalf(): number {
+    return this.game.pointsAtHalf;
+  }
+  get homePlayers(): string[] | null {
+    return this.game.homePlayers;
+  }
+  get awayPlayers(): string[] | null {
+    return this.game.awayPlayers;
+  }
+  get localError(): string | null {
+    return this.game.localError;
+  }
+  get week(): number {
+    return this.game.week;
+  }
 
   // View state management (components can modify these)
-  get currentView(): GameView { return this.game.currentView; }
+  get currentView(): GameView {
+    return this.game.currentView;
+  }
   set currentView(value: GameView) {
     this.game.currentView = value;
     this.notifyListeners();
   }
 
-  get lastPlayedLine(): { home: string[]; away: string[] } | null { return this.game.lastPlayedLine; }
+  get lastPlayedLine(): { home: string[]; away: string[] } | null {
+    return this.game.lastPlayedLine;
+  }
   set lastPlayedLine(value: { home: string[]; away: string[] } | null) {
     this.game.lastPlayedLine = value;
   }
@@ -290,7 +304,7 @@ export class Bookkeeper {
   }
 
   public firstPointAfterHalf(): boolean {
-    const hasPoints = this.game.points.length >= 0
+    const hasPoints = this.game.points.length >= 0;
     return hasPoints && this.gameMethods.firstPointOfGameOrHalf();
   }
 
@@ -312,13 +326,19 @@ export class Bookkeeper {
     this.notifyListeners();
   }
 
-  public async recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): Promise<void> {
+  public async recordActivePlayers(
+    activeHomePlayers: string[],
+    activeAwayPlayers: string[]
+  ): Promise<void> {
     await this.performAction(() => {
       this.gameMethods.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
     });
   }
 
-  public async recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): Promise<void> {
+  public async recordSubstitution(
+    newHomePlayers: string[],
+    newAwayPlayers: string[]
+  ): Promise<void> {
     await this.performAction(() => {
       this.gameMethods.recordSubstitution(newHomePlayers, newAwayPlayers);
     });

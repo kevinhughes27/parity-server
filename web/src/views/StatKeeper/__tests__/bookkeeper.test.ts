@@ -16,7 +16,8 @@ vi.mock('../../../api', async () => {
         lineSize: 7,
       },
     ],
-    getLeagueName: (id: number | string) => (id === 101 || id === '101' ? 'OCUA' : 'Unknown League'),
+    getLeagueName: (id: number | string) =>
+      id === 101 || id === '101' ? 'OCUA' : 'Unknown League',
   };
 });
 
@@ -71,7 +72,12 @@ describe('Bookkeeper', () => {
 
   beforeEach(async () => {
     await db.games.clear();
-    const initialStoredGame = createInitialStoredGame(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
+    const initialStoredGame = createInitialStoredGame(
+      mockLeague,
+      mockWeek,
+      mockHomeTeam,
+      mockAwayTeam
+    );
 
     // Create team objects with rosters
     const homeTeamWithRoster: Team = {
@@ -79,8 +85,8 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
-        is_male: true
-      }))
+        is_male: true,
+      })),
     };
 
     const awayTeamWithRoster: Team = {
@@ -88,13 +94,19 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
-        is_male: true
-      }))
+        is_male: true,
+      })),
     };
 
     const gameId = 1;
 
-    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster, gameId);
+    bookkeeper = new Bookkeeper(
+      initialStoredGame,
+      mockLeague,
+      homeTeamWithRoster,
+      awayTeamWithRoster,
+      gameId
+    );
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
   });
 
@@ -217,7 +229,12 @@ describe('Bookkeeper', () => {
 
   test('testComplexScenario', async () => {
     const gameId = 1;
-    const initialStoredGame = createInitialStoredGame(mockLeague, mockWeek, mockHomeTeam, mockAwayTeam);
+    const initialStoredGame = createInitialStoredGame(
+      mockLeague,
+      mockWeek,
+      mockHomeTeam,
+      mockAwayTeam
+    );
 
     // Create team objects with rosters
     const homeTeamWithRoster: Team = {
@@ -225,8 +242,8 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
-        is_male: true
-      }))
+        is_male: true,
+      })),
     };
 
     const awayTeamWithRoster: Team = {
@@ -234,11 +251,17 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
-        is_male: true
-      }))
+        is_male: true,
+      })),
     };
 
-    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, homeTeamWithRoster, awayTeamWithRoster, gameId);
+    bookkeeper = new Bookkeeper(
+      initialStoredGame,
+      mockLeague,
+      homeTeamWithRoster,
+      awayTeamWithRoster,
+      gameId
+    );
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.

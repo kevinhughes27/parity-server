@@ -83,7 +83,10 @@ const getPlayerButtonState = (
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
-      reason: (isFirstPoint || isFirstPointAfterHalftime) ? 'Select starting player' : 'Select receiving player',
+      reason:
+        isFirstPoint || isFirstPointAfterHalftime
+          ? 'Select starting player'
+          : 'Select receiving player',
       style: isActivePlayer
         ? {
             color: '#000',
@@ -292,7 +295,9 @@ const getActionButtonState = (
             currentGameState === GameState.SecondD) &&
           bookkeeper.firstActor !== null,
         reason:
-          bookkeeper.firstActor === null ? 'No player selected' : 'Cannot throw away in current state',
+          bookkeeper.firstActor === null
+            ? 'No player selected'
+            : 'Cannot throw away in current state',
       };
 
     case 'd':
@@ -332,7 +337,7 @@ const getActionButtonState = (
   }
 };
 
-const RecordStats: React.FC<{bookkeeper: Bookkeeper}> = ({ bookkeeper }) => {
+const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
   const fullAwayRoster = bookkeeper.getAwayRoster();
 

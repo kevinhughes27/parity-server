@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Box, Typography, AppBar, Toolbar, IconButton, Menu, MenuItem, Divider } from '@mui/material';
+import {
+  Box,
+  Typography,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Menu,
+  MenuItem,
+  Divider,
+} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Bookkeeper } from './bookkeeper';
 import { StoredGame } from './db';
@@ -105,9 +114,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       await bookkeeper.submitGame();
       alert('Game submitted and uploaded successfully!');
     } catch (error) {
-      alert(
-        `Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`
-      );
+      alert(`Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       console.error('Submission error:', error);
     } finally {
       // Always redirect to StatKeeper home regardless of success or failure
@@ -144,10 +151,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onChangeLine={handleChangeLine}
         onEditRosters={handleEditRosters}
       />
-      <MainContent
-        bookkeeper={bookkeeper}
-        currentView={currentView}
-      />
+      <MainContent bookkeeper={bookkeeper} currentView={currentView} />
     </Box>
   );
 }
@@ -159,7 +163,7 @@ function TopBar({
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
-  onEditRosters
+  onEditRosters,
 }: {
   bookkeeper: any;
   localGameId: string;
@@ -214,21 +218,15 @@ function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView
       sx={{
         flexGrow: 1,
         overflowY: 'auto',
-        pb: '78px',  // 70 for action bar + 8
+        pb: '78px', // 70 for action bar + 8
         position: 'relative',
       }}
     >
-      {currentView === 'selectLines' && (
-        <SelectLines bookkeeper={bookkeeper} />
-      )}
+      {currentView === 'selectLines' && <SelectLines bookkeeper={bookkeeper} />}
 
-      {currentView === 'recordStats' && (
-        <RecordStats bookkeeper={bookkeeper} />
-      )}
+      {currentView === 'recordStats' && <RecordStats bookkeeper={bookkeeper} />}
 
-      {currentView === 'editRosters' && (
-        <EditRosters bookkeeper={bookkeeper} />
-      )}
+      {currentView === 'editRosters' && <EditRosters bookkeeper={bookkeeper} />}
     </Box>
   );
 }
