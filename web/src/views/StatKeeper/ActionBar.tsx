@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
 
 interface ActionBarProps {
-  actionBarHeight: string;
   primaryActions: {
     label: string;
     onClick: () => void;
@@ -20,7 +19,6 @@ interface ActionBarProps {
 }
 
 const ActionBar: React.FC<ActionBarProps> = ({
-  actionBarHeight,
   primaryActions,
   secondaryActions,
 }) => {
@@ -31,7 +29,7 @@ const ActionBar: React.FC<ActionBarProps> = ({
         bottom: 0,
         left: 0,
         right: 0,
-        height: actionBarHeight,
+        height: '70px',
         p: '10px 15px',
         backgroundColor: 'white',
         borderTop: '1px solid #ccc',

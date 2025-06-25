@@ -9,8 +9,6 @@ import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
-
 interface EditGameProps {
   bookkeeper: Bookkeeper;
   localGameId: string;
@@ -216,20 +214,20 @@ function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView
       sx={{
         flexGrow: 1,
         overflowY: 'auto',
-        pb: `calc(${ACTION_BAR_HEIGHT} + 8px)`,
+        pb: '78px',  // 70 for action bar + 8
         position: 'relative',
       }}
     >
       {currentView === 'selectLines' && (
-        <SelectLines bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+        <SelectLines bookkeeper={bookkeeper} />
       )}
 
       {currentView === 'recordStats' && (
-        <RecordStats bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+        <RecordStats bookkeeper={bookkeeper} />
       )}
 
       {currentView === 'editRosters' && (
-        <EditRosters bookkeeper={bookkeeper} actionBarHeight={ACTION_BAR_HEIGHT} />
+        <EditRosters bookkeeper={bookkeeper} />
       )}
     </Box>
   );

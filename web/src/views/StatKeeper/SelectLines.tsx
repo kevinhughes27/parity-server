@@ -6,10 +6,9 @@ import { Box, Button, Typography, Paper } from '@mui/material';
 
 interface SelectLinesProps {
   bookkeeper: Bookkeeper;
-  actionBarHeight: string;
 }
 
-const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }) => {
+const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper }) => {
   const isEditingLine = bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   const lineSize = bookkeeper.league.lineSize;
@@ -179,7 +178,6 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
       </Paper>
 
       <ActionBar
-        actionBarHeight={actionBarHeight}
         primaryActions={[
           {
             label: buttonText,
