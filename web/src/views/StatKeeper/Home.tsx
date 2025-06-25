@@ -32,7 +32,7 @@ const getStatusColor = (status: StoredGame['status']) => {
   }
 };
 
-function StatKeeper() {
+function Home() {
   const navigate = useNavigate();
 
   const games = useLiveQuery(() => db.games.orderBy('lastModified').reverse().toArray(), []);
@@ -226,4 +226,4 @@ function StatKeeper() {
   );
 }
 
-export default StatKeeper;
+export default Home;
