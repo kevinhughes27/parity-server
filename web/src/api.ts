@@ -2,18 +2,14 @@ import 'whatwg-fetch';
 import rawLeagues from './leagues.json';
 
 export interface LeagueFromJson {
-  id: string;
+  id: number;
   name: string;
   lineSize: number;
 }
 
-// Type the imported leagues data and sort by numeric id
-// ToDo should just fix the typing here.
-export const leagues: LeagueFromJson[] = (rawLeagues as LeagueFromJson[]).sort(
-  (a, b) => parseInt(b.id) - parseInt(a.id)
-);
+export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
 
-export const getLeagueName = (leagueId: string): string => {
+export const getLeagueName = (leagueId: number): string => {
   const league = leagues.find(l => l.id === leagueId);
   return league ? league.name : `Unknown League (${leagueId})`;
 };
