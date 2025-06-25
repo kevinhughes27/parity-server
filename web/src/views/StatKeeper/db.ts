@@ -1,31 +1,45 @@
 import Dexie, { type EntityTable } from 'dexie';
-// probably would be better and simpler to use the PointModel here
 import { type Point } from '../../api';
 
-// Types for game state
-export type GameView = 'selectLines' | 'recordStats' | 'editRosters' | 'error_state';
+export type GameView =
+  | 'selectLines'
+  | 'recordStats'
+  | 'editRosters'
+  | 'error_state';
+
+type UndoCommandType =
+  | 'recordFirstActor'
+  | 'recordPull'
+  | 'recordPass'
+  | 'recordDrop'
+  | 'recordThrowAway'
+  | 'recordD'
+  | 'recordCatchD'
+  | 'recordPoint'
+  | 'recordHalf';
 
 export interface UndoCommand {
-  type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' |
-        'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf';
+  type: UndoCommandType;
   timestamp: string;
-  data?: any; // Minimal data only when we can't infer
+  data?: any; // minimal data only when we can't infer
 }
 
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
-
-  // Basic game identity
   league_id: string;
   week: number;
+
+  // homeTeam
   homeTeam: string; // This is homeTeamName
   homeTeamId: number;
+  homeRoster: string[];
+
+  // awayTeam
   awayTeam: string; // This is awayTeamName
   awayTeamId: number;
-  homeRoster: string[];
   awayRoster: string[];
 
-  // Game state - moved from Bookkeeper
+  // Game state
   points: Point[];
   activePoint: Point | null;
   homeScore: number;
@@ -34,23 +48,22 @@ export interface StoredGame {
   firstActor: string | null;
   pointsAtHalf: number;
 
-  // Line selection state - moved from Bookkeeper
+  // Line selection state
   homePlayers: string[] | null;
   awayPlayers: string[] | null;
   lastPlayedLine: { home: string[]; away: string[] } | null;
 
-  // UI state - moved from Bookkeeper
+  // UI state
   currentView: GameView;
   localError: string | null;
 
-  // Undo system - moved from Bookkeeper
+  // Undo system
   undoStack: UndoCommand[];
 
   // Persistence metadata
   status: 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
   lastModified: Date;
 }
-
 
 const db = new Dexie('StatKeeperDB') as Dexie & {
   games: EntityTable<

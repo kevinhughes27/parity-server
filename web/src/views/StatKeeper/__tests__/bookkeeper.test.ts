@@ -313,9 +313,10 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.firstActor).toBe(PLAYER4);
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    const eventsCount = bookkeeper.activePoint!.getEventCount();
-    expect(eventsCount).toBe(5); // Pull, Pass(H), ThrowAway(H), D(A), Pass(A)
 
+    // Get the events from the active point
+    const events = bookkeeper.activePoint!.getEvents();
+    expect(events.length).toBe(5); // Pull, Pass(H), ThrowAway(H), D(A), Pass(A)
     verifyEvent(events[0], EventType.PULL, PLAYER2, null);
     verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER1);
     verifyEvent(events[2], EventType.THROWAWAY, PLAYER1, null);
@@ -363,7 +364,7 @@ describe('Bookkeeper', () => {
     expect(newBookkeeper.homePossession).toBe(true);
     expect(newBookkeeper.getUndoCount()).toBe(undoCountBeforeSave - 1);
 
-    const currentPointEvents = newBookkeeper.activePoint?.events;
+    const currentPointEvents = newBookkeeper.activePoint?.getEvents();
     expect(currentPointEvents?.length).toBe(1); // PASS event remains
     expect(currentPointEvents?.[0].type).toBe(EventType.PASS);
   });
