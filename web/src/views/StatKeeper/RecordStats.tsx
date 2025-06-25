@@ -3,7 +3,7 @@ import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button } from '@mui/material';
-import { EventType } from './models';
+import { EventType } from './gameLogic';
 
 const getPlayerButtonState = (
   bookkeeper: Bookkeeper,
