@@ -21,7 +21,7 @@ import EditRoster from './EditRoster';
 
 interface CurrentLeague {
   league: {
-    id: string;
+    id: number;
     zuluru_id: number;
     name: string;
     lineSize: number;
@@ -317,7 +317,7 @@ function NewGame() {
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
 
   const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(
-    currentLeague?.league?.id.toString()
+    currentLeague?.league?.id?.toString()
   );
 
   const [week, setWeek] = useState<number>(1);

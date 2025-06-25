@@ -9,8 +9,9 @@ export interface LeagueFromJson {
 
 export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
 
-export const getLeagueName = (leagueId: number): string => {
-  const league = leagues.find(l => l.id === leagueId);
+export const getLeagueName = (leagueId: number | string): string => {
+  const id = typeof leagueId === 'string' ? parseInt(leagueId, 10) : leagueId;
+  const league = leagues.find(l => l.id === id);
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 

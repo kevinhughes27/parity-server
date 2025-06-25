@@ -14,7 +14,7 @@ import {
 } from './gameLogic';
 
 interface UploadedGamePayload {
-  league_id: string;
+  league_id: number;
   week: number;
   homeTeam: string;
   awayTeam: string;
@@ -55,7 +55,7 @@ export class Bookkeeper {
 
   // Create a new game and save it to IndexedDb
   public static async newGame(
-    currentLeague: { league: { id: string; name: string; lineSize: number } },
+    currentLeague: { league: { id: number; name: string; lineSize: number } },
     week: number,
     homeTeam: { id: number; name: string },
     awayTeam: { id: number; name: string },
@@ -137,7 +137,7 @@ export class Bookkeeper {
       throw new Error(`Game ${gameId} not found`);
     }
 
-    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id.toString());
+    const apiLeague = apiLeagues.find(l => l.id === storedGame.league_id);
     if (!apiLeague) {
       throw new Error(`League configuration for ID ${storedGame.league_id} not found.`);
     }

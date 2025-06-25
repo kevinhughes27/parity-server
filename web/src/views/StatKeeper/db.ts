@@ -26,7 +26,7 @@ export interface UndoCommand {
 
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
-  league_id: string;
+  league_id: number;
   week: number;
 
   // homeTeam
