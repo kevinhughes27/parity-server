@@ -12,7 +12,7 @@ import ComparePlayers from './views/ComparePlayers';
 import SalaryPage from './views/SalaryPage';
 import StatsTable from './views/StatsTable';
 import TeamDashboard from './views/TeamDashboard';
-import StatKeeper from './views/StatKeeper';
+import StatKeeper from './views/StatKeeper/Home';
 import LocalGame from './views/StatKeeper/LocalGame';
 import NewGame from './views/StatKeeper/NewGame';
 
