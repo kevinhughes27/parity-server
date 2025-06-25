@@ -4,7 +4,7 @@ import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
-const SelectLines: React.FC<{bookkeeper: Bookkeeper}> = ({ bookkeeper }) => {
+const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const isEditingLine = bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   const lineSize = bookkeeper.league.lineSize;
@@ -129,19 +129,19 @@ const SelectLines: React.FC<{bookkeeper: Bookkeeper}> = ({ bookkeeper }) => {
 
   const helpText = () => {
     if (isEditingLine) {
-      return "Tap player names to Edit the active line, then click 'Resume Point'."
+      return "Tap player names to Edit the active line, then click 'Resume Point'.";
     }
 
     if (bookkeeper.firstPoint()) {
-      return "Select players for the first point."
+      return 'Select players for the first point.';
     }
 
     if (bookkeeper.firstPointAfterHalf()) {
-      return "Select players for the next point."
+      return 'Select players for the next point.';
     }
 
-    return "Players not on the previous line are pre-selected. Adjust and confirm."
-  }
+    return 'Players not on the previous line are pre-selected. Adjust and confirm.';
+  };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>

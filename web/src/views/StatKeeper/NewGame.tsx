@@ -37,7 +37,6 @@ interface TeamPickerProps {
   disabled: boolean;
 }
 
-
 const TeamPicker: React.FC<TeamPickerProps> = ({
   label,
   teamIdStr,

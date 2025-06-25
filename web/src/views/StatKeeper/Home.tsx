@@ -71,7 +71,6 @@ function Home() {
   const resumableGames = games.filter(game => resumableStatuses.includes(game.status));
   const otherGames = games.filter(game => !resumableStatuses.includes(game.status));
 
-
   // Component to render a single game card
   const renderGameCard = (game: StoredGame, actionButton: React.ReactNode) => (
     <Card
@@ -93,11 +92,7 @@ function Home() {
             {game.week}
           </Typography>
 
-          <Chip
-            label={game.status}
-            size="small"
-            color={getStatusColor(game.status)}
-          />
+          <Chip label={game.status} size="small" color={getStatusColor(game.status)} />
         </Box>
 
         <Typography variant="body1" sx={{ mt: 1 }}>

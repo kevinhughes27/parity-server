@@ -87,7 +87,10 @@ export class PointMethods {
   }
 
   swapOffenseAndDefense(): void {
-    [this.point.offensePlayers, this.point.defensePlayers] = [this.point.defensePlayers, this.point.offensePlayers];
+    [this.point.offensePlayers, this.point.defensePlayers] = [
+      this.point.defensePlayers,
+      this.point.offensePlayers,
+    ];
   }
 
   updateCurrentPlayers(newOffensePlayers: string[], newDefensePlayers: string[]): void {
@@ -260,7 +263,7 @@ export class GameMethods {
   recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
     this.game.undoStack.push({
       type: 'recordFirstActor',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     if (this.game.activePoint === null) {
@@ -298,7 +301,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordPull',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     activePointMethods.swapOffenseAndDefense();
@@ -318,7 +321,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordPass',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     activePointMethods.addEvent({
@@ -336,7 +339,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordDrop',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     this.changePossession();
@@ -355,7 +358,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordThrowAway',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     this.changePossession();
@@ -374,7 +377,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordD',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     activePointMethods.addEvent({
@@ -392,7 +395,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordCatchD',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     activePointMethods.addEvent({
@@ -414,7 +417,7 @@ export class GameMethods {
     if (this.game.homePlayers && this.game.awayPlayers) {
       this.game.lastPlayedLine = {
         home: [...this.game.homePlayers],
-        away: [...this.game.awayPlayers]
+        away: [...this.game.awayPlayers],
       };
     }
 
@@ -423,8 +426,8 @@ export class GameMethods {
       type: 'recordPoint',
       timestamp: new Date().toISOString(),
       data: {
-        wasHomePossession: this.game.homePossession
-      }
+        wasHomePossession: this.game.homePossession,
+      },
     });
 
     activePointMethods.addEvent({
@@ -460,7 +463,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordHalf',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     this.game.pointsAtHalf = this.game.points.length;
@@ -696,7 +699,7 @@ export class GameMethods {
       // Restore lastPlayedLine
       this.game.lastPlayedLine = {
         home: [...this.game.homePlayers],
-        away: [...this.game.awayPlayers]
+        away: [...this.game.awayPlayers],
       };
     } else {
       // No points played yet, clear everything

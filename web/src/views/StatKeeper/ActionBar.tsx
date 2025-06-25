@@ -18,10 +18,7 @@ interface ActionBarProps {
   }[];
 }
 
-const ActionBar: React.FC<ActionBarProps> = ({
-  primaryActions,
-  secondaryActions,
-}) => {
+const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
   return (
     <Box
       sx={{

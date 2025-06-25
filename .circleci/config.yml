@@ -59,9 +59,9 @@ jobs:
           name: "tsc check"
           command: cd web && yarn type-check
 
-      # - run:
-      #     name: "check formatting"
-      #     command: cd web && yarn format:check
+      - run:
+          name: "check formatting"
+          command: cd web && yarn format:check
 
       - run:
           name: "vitest"

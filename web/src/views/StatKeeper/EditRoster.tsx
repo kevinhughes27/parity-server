@@ -73,11 +73,7 @@ const PlayerList: React.FC<{
     >
       {currentRosterNames.length > 0 ? (
         currentRosterNames.map(playerName => (
-          <PlayerListItem 
-            key={playerName} 
-            playerName={playerName} 
-            onRemove={onRemovePlayer} 
-          />
+          <PlayerListItem key={playerName} playerName={playerName} onRemove={onRemovePlayer} />
         ))
       ) : (
         <EmptyRosterMessage />
@@ -227,10 +223,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
       </Typography>
 
       {/* Scrollable Player List */}
-      <PlayerList 
-        currentRosterNames={currentRosterNames} 
-        onRemovePlayer={handleRemovePlayer} 
-      />
+      <PlayerList currentRosterNames={currentRosterNames} onRemovePlayer={handleRemovePlayer} />
 
       {/* Add Player Sections */}
       <Box sx={{ flexShrink: 0 }}>
