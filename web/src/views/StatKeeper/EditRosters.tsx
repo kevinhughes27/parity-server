@@ -7,10 +7,9 @@ import { Box, Typography } from '@mui/material';
 
 interface EditRostersProps {
   bookkeeper: Bookkeeper;
-  actionBarHeight: string;
 }
 
-const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper, actionBarHeight }) => {
+const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper }) => {
   const {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
@@ -97,7 +96,6 @@ const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper, actionBarHeight }
           Error loading league players: {errorLeaguePlayers}
         </Typography>
         <ActionBar
-          actionBarHeight={actionBarHeight}
           primaryActions={[]}
           secondaryActions={[
             {
@@ -119,7 +117,6 @@ const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper, actionBarHeight }
           No players found for the league: {bookkeeper.league.name}.
         </Typography>
         <ActionBar
-          actionBarHeight={actionBarHeight}
           primaryActions={[]}
           secondaryActions={[
             {
@@ -158,7 +155,6 @@ const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper, actionBarHeight }
       </Box>
 
       <ActionBar
-        actionBarHeight={actionBarHeight}
         primaryActions={[
           {
             label: 'Update Rosters',

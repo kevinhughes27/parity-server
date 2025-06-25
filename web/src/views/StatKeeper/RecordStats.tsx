@@ -7,7 +7,6 @@ import { EventType } from './models';
 
 interface RecordStatsProps {
   bookkeeper: Bookkeeper;
-  actionBarHeight: string;
 }
 
 const getPlayerButtonState = (
@@ -337,7 +336,7 @@ const getActionButtonState = (
   }
 };
 
-const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }) => {
+const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
   const fullAwayRoster = bookkeeper.getAwayRoster();
 
@@ -439,7 +438,6 @@ const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper, actionBarHeight }
       </Box>
 
       <ActionBar
-        actionBarHeight={actionBarHeight}
         primaryActions={[
           {
             label: 'Pull',
