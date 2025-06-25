@@ -5,10 +5,6 @@ import ActionBar from './ActionBar';
 import { Box, Button } from '@mui/material';
 import { EventType } from './models';
 
-interface RecordStatsProps {
-  bookkeeper: Bookkeeper;
-}
-
 const getPlayerButtonState = (
   bookkeeper: Bookkeeper,
   playerName: string,
@@ -336,7 +332,7 @@ const getActionButtonState = (
   }
 };
 
-const RecordStats: React.FC<RecordStatsProps> = ({ bookkeeper }) => {
+const RecordStats: React.FC<{bookkeeper: Bookkeeper}> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
   const fullAwayRoster = bookkeeper.getAwayRoster();
 
