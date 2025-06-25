@@ -391,4 +391,127 @@ describe('Bookkeeper', () => {
     expect(currentPointEvents?.length).toBe(1); // PASS event remains
     expect(currentPointEvents?.[0].type).toBe(EventType.PASS);
   });
+
+  test('should handle undo when stack is empty', async () => {
+    expect(bookkeeper.getUndoCount()).toBe(0);
+    await bookkeeper.undo(); // Should be no-op
+    expect(bookkeeper.getUndoCount()).toBe(0);
+    expect(bookkeeper.firstActor).toBeNull();
+    expect(bookkeeper.activePoint).toBeNull();
+  });
+
+  test('should handle recordHalf and undo', async () => {
+    // Score a point first
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    await bookkeeper.recordPoint();
+    expect(bookkeeper.homeScore).toBe(1);
+    
+    // Record half
+    await bookkeeper.recordHalf();
+    expect(bookkeeper.pointsAtHalf).toBe(1);
+    expect(bookkeeper.homePlayers).toBeNull();
+    expect(bookkeeper.awayPlayers).toBeNull();
+    expect(bookkeeper.currentView).toBe('selectLines');
+    
+    // Undo half
+    await bookkeeper.undo();
+    expect(bookkeeper.pointsAtHalf).toBe(0);
+    expect(bookkeeper.homePlayers).toEqual(homeLine);
+    expect(bookkeeper.awayPlayers).toEqual(awayLine);
+  });
+
+  test('should handle substitution during active point', async () => {
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    expect(bookkeeper.activePoint).not.toBeNull();
+    
+    const newHomeLine = ['NewPlayer1', 'NewPlayer2', ...homeLine.slice(2)];
+    const newAwayLine = ['NewAwayPlayer1', ...awayLine.slice(1)];
+    
+    await bookkeeper.recordSubstitution(newHomeLine, newAwayLine);
+    
+    expect(bookkeeper.homePlayers).toEqual(newHomeLine);
+    expect(bookkeeper.awayPlayers).toEqual(newAwayLine);
+    
+    // Verify the active point was updated with new players
+    const activePoint = bookkeeper.activePoint!;
+    expect(activePoint.toJSON().offensePlayers).toEqual(newHomeLine);
+    expect(activePoint.toJSON().defensePlayers).toEqual(newAwayLine);
+  });
+
+  test('should return correct game states throughout point progression', async () => {
+    // Initial state - no players selected
+    expect(bookkeeper.gameState()).toBe(bookkeeper.gameState()); // Just verify it doesn't crash
+    
+    // First point of game - should be Start state when player selected
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    expect(bookkeeper.gameState()).toBe(3); // GameState.Start = 3 (first point, puller selected)
+    
+    // After pull - should be WhoPickedUpDisc
+    await bookkeeper.recordPull();
+    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    
+    // After pickup - should be FirstThrowQuebecVariant
+    await bookkeeper.recordFirstActor(PLAYER2, false);
+    expect(bookkeeper.gameState()).toBe(6); // GameState.FirstThrowQuebecVariant = 6
+    
+    // After pass - should be Normal
+    await bookkeeper.recordPass(PLAYER4);
+    expect(bookkeeper.gameState()).toBe(1); // GameState.Normal = 1
+    
+    // After throwaway - should be WhoPickedUpDisc (disc is loose)
+    await bookkeeper.recordThrowAway();
+    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    
+    // After pickup following turnover - should be FirstD
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    expect(bookkeeper.gameState()).toBe(2); // GameState.FirstD = 2
+    
+    // After D - should be WhoPickedUpDisc again
+    await bookkeeper.recordD();
+    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    
+    // After pickup following D - should be SecondD
+    await bookkeeper.recordFirstActor(PLAYER2, false);
+    expect(bookkeeper.gameState()).toBe(7); // GameState.SecondD = 7
+  });
+
+  test('should handle multiple undos in sequence', async () => {
+    // Build up a sequence of actions
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    await bookkeeper.recordPull();
+    await bookkeeper.recordFirstActor(PLAYER2, false);
+    await bookkeeper.recordPass(PLAYER4);
+    await bookkeeper.recordThrowAway();
+    
+    expect(bookkeeper.getUndoCount()).toBe(5);
+    expect(bookkeeper.homePossession).toBe(true); // Possession flipped after throwaway
+    
+    // Undo throwaway
+    await bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBe(PLAYER4);
+    expect(bookkeeper.homePossession).toBe(false);
+    expect(bookkeeper.getUndoCount()).toBe(4);
+    
+    // Undo pass
+    await bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBe(PLAYER2);
+    expect(bookkeeper.getUndoCount()).toBe(3);
+    
+    // Undo pickup
+    await bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBeNull();
+    expect(bookkeeper.getUndoCount()).toBe(2);
+    
+    // Undo pull
+    await bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBe(PLAYER1);
+    expect(bookkeeper.homePossession).toBe(true); // Back to original possession
+    expect(bookkeeper.getUndoCount()).toBe(1);
+    
+    // Undo first actor
+    await bookkeeper.undo();
+    expect(bookkeeper.firstActor).toBeNull();
+    expect(bookkeeper.activePoint).toBeNull();
+    expect(bookkeeper.getUndoCount()).toBe(0);
+  });
 });
