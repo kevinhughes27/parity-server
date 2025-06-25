@@ -1,10 +1,7 @@
 import { describe, expect, beforeEach, afterAll, test, vi } from 'vitest';
 import 'fake-indexeddb/auto';
 import { Bookkeeper } from '../bookkeeper';
-import {
-  EventType,
-  type Event,
-} from '../models';
+import { EventType, type Event } from '../gameLogic';
 import { type LeagueFromJson as League, type Team } from '../../../api';
 import { db, StoredGame } from '../db';
 
@@ -316,8 +313,8 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.firstActor).toBe(PLAYER4);
 
     expect(bookkeeper.activePoint).not.toBeNull();
-    const events = bookkeeper.activePoint!.events;
-    expect(events.length).toBe(5); // Pull, Pass(H), ThrowAway(H), D(A), Pass(A)
+    const eventsCount = bookkeeper.activePoint!.getEventCount();
+    expect(eventsCount).toBe(5); // Pull, Pass(H), ThrowAway(H), D(A), Pass(A)
 
     verifyEvent(events[0], EventType.PULL, PLAYER2, null);
     verifyEvent(events[1], EventType.PASS, PLAYER3, PLAYER1);

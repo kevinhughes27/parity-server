@@ -7,12 +7,10 @@ import {
   leagues as apiLeagues
 } from '../../api';
 import { type GameView } from './db';
-import { 
-  GameMethods, 
-  GameState, 
+import {
+  GameMethods,
+  GameState,
   PointMethods,
-  mapApiEventToEvent,
-  mapEventToApiEvent 
 } from './gameLogic';
 
 interface UploadedGamePayload {
@@ -241,16 +239,6 @@ export class Bookkeeper {
   notifyListeners(): void {
     this.listeners.forEach(listener => listener());
   }
-
-  // get points(): PointModel[] {
-  //   return this.game.points.map(apiPoint => {
-  //     return PointModel.fromJSON({
-  //       offensePlayers: [...apiPoint.offensePlayers],
-  //       defensePlayers: [...apiPoint.defensePlayers],
-  //       events: apiPoint.events.map(mapApiEventToEvent),
-  //     });
-  //   });
-  // }
 
   get activePoint(): PointMethods | null {
     if (!this.game.activePoint) return null;

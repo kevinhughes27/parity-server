@@ -1,7 +1,6 @@
 import { StoredGame, UndoCommand, type GameView } from './db';
 import { type PointEvent as ApiPointEvent, type Point as ApiPoint } from '../../api';
 
-// Enums
 export enum EventType {
   PULL = 'PULL',
   PASS = 'PASS',
@@ -21,7 +20,6 @@ export enum GameState {
   SecondD = 7,
 }
 
-// Event interface for internal use
 export interface Event {
   type: EventType;
   firstActor: string;
@@ -29,7 +27,6 @@ export interface Event {
   timestamp: string; // ISO 8601 format
 }
 
-// Utility Functions
 export function mapApiEventToEvent(apiEvent: ApiPointEvent): Event {
   const eventTypeString = apiEvent.type.toUpperCase();
   const eventType = EventType[eventTypeString as keyof typeof EventType];
@@ -151,7 +148,6 @@ export class PointMethods {
 export class GameMethods {
   constructor(private game: StoredGame) {}
 
-  // Helper method to get active point as PointMethods
   private getActivePointMethods(): PointMethods | null {
     if (!this.game.activePoint) return null;
     return new PointMethods(this.game.activePoint);
