@@ -31,13 +31,13 @@ function LocalGame() {
   }
 
   const gameStatus = bookkeeper.getGameStatus();
-  
-  // If game is completed/submitted, show ViewGame mode
+
+  // viewer
   if (['submitted', 'uploaded', 'sync-error'].includes(gameStatus)) {
     return <ViewGame bookkeeper={bookkeeper} />;
   }
 
-  // Otherwise show in-progress game UI
+  // editor
   const currentView = bookkeeper.getCurrentView();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
