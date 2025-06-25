@@ -192,7 +192,7 @@ function StatKeeper() {
                   size="small"
                   variant="outlined"
                   component={Link}
-                  to={`/stat_keeper/view_game/${game.localId}`}
+                  to={`/stat_keeper/game/${game.localId}`}
                 >
                   View Game
                 </Button>

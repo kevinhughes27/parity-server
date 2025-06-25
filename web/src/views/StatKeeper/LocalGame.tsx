@@ -8,6 +8,7 @@ import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
 import GameActionsMenu from './GameActionsMenu';
+import ViewGame from './ViewGame';
 
 const ACTION_BAR_HEIGHT = '70px'; // Consistent height for the bottom action bar
 
@@ -29,6 +30,14 @@ function LocalGame() {
     return <LoadingState />;
   }
 
+  const gameStatus = bookkeeper.getGameStatus();
+  
+  // If game is completed/submitted, show ViewGame mode
+  if (['submitted', 'uploaded', 'sync-error'].includes(gameStatus)) {
+    return <ViewGame bookkeeper={bookkeeper} />;
+  }
+
+  // Otherwise show in-progress game UI
   const currentView = bookkeeper.getCurrentView();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
