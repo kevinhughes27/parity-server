@@ -14,7 +14,6 @@ import StatsTable from './views/StatsTable';
 import TeamDashboard from './views/TeamDashboard';
 import StatKeeper from './views/StatKeeper';
 import LocalGame from './views/StatKeeper/LocalGame';
-import ViewGame from './views/StatKeeper/ViewGame';
 import NewGame from './views/StatKeeper/NewGame';
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
         <Route path="/stat_keeper" element={<StatKeeper />} />
         <Route path="/stat_keeper/new_game" element={<NewGame />} />
         <Route path="/stat_keeper/game/:localGameId" element={<LocalGame />} />
-        <Route path="/stat_keeper/view_game/:localGameId" element={<ViewGame />} />
       </Routes>
     </BrowserRouter>
   );
