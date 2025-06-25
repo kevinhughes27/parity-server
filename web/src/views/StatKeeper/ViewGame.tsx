@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReactJson from 'react-json-view';
-import { useBookkeeper } from './hooks';
+import { Bookkeeper } from './bookkeeper';
 import {
   AppBar,
   Toolbar,
@@ -16,30 +16,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DownloadIcon from '@mui/icons-material/Download';
 import SyncIcon from '@mui/icons-material/Sync';
 
-function LoadingState() {
-  return (
-    <Box
-      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
-    >
-      <CircularProgress />
-      <Typography sx={{ ml: 2 }}>Loading game data...</Typography>
-    </Box>
-  );
-}
-
-function ErrorState({ error }: { error: string }) {
-  return (
-    <Box sx={{ p: 3 }}>
-      <Alert severity="error" sx={{ mb: 2 }}>
-        Error: {error}
-      </Alert>
-      <Link to="/stat_keeper" style={{ display: 'flex', alignItems: 'center' }}>
-        <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> Back to StatKeeper Home
-      </Link>
-    </Box>
-  );
-}
-
 function TopBar({
   bookkeeper,
   isResyncing,
@@ -47,7 +23,7 @@ function TopBar({
   onDownloadJson,
   onResync,
 }: {
-  bookkeeper: any;
+  bookkeeper: Bookkeeper;
   isResyncing: boolean;
   canResync: boolean;
   onDownloadJson: () => void;
@@ -133,15 +109,15 @@ function GameDataViewer({ apiPayload }: { apiPayload: any }) {
   );
 }
 
-function ViewGame() {
-  const { localGameId } = useParams<{ localGameId: string }>();
-  const bookkeeper = useBookkeeper(localGameId!);
+interface ViewGameProps {
+  bookkeeper: Bookkeeper;
+}
+
+function ViewGame({ bookkeeper }: ViewGameProps) {
   const [isResyncing, setIsResyncing] = useState(false);
   const [resyncMessage, setResyncMessage] = useState<string | null>(null);
 
   const handleDownloadJson = () => {
-    if (!bookkeeper) return;
-
     const apiPayload = bookkeeper.transformForAPI();
     const jsonString = JSON.stringify(apiPayload, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
@@ -160,8 +136,6 @@ function ViewGame() {
   };
 
   const handleResync = async () => {
-    if (!bookkeeper) return;
-
     setIsResyncing(true);
     setResyncMessage(null);
 
@@ -176,14 +150,6 @@ function ViewGame() {
       setIsResyncing(false);
     }
   };
-
-  if (!bookkeeper) {
-    return <LoadingState />;
-  }
-
-  if (bookkeeper.localError) {
-    return <ErrorState error={bookkeeper.localError} />;
-  }
 
   const gameStatus = bookkeeper.getGameStatus();
   const canResync = gameStatus === 'sync-error';
