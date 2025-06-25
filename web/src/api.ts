@@ -21,7 +21,7 @@ interface IDataCache {
 
 const dataCache: IDataCache = {};
 
-const cachedFetch = (url: string, _options = {}) => {
+const cachedFetch = async (url: string, _options = {}) => {
   const cacheKey = url;
 
   const cached = dataCache[cacheKey];
@@ -29,21 +29,18 @@ const cachedFetch = (url: string, _options = {}) => {
   // return the cache if possible
   if (cached !== undefined) {
     const response = new Response(new Blob([cached]));
-    return Promise.resolve(response);
+    return response;
   }
 
-  return fetch(url).then(response => {
-    // cache the response
-    if (response.status === 200) {
-      response
-        .clone()
-        .text()
-        .then(content => {
-          dataCache[cacheKey] = content;
-        });
-    }
-    return response;
-  });
+  const response = await fetch(url);
+  
+  // cache the response
+  if (response.status === 200) {
+    const content = await response.clone().text();
+    dataCache[cacheKey] = content;
+  }
+  
+  return response;
 };
 
 // to save an API call round trip to get the leagues instead we
