@@ -12,7 +12,7 @@ import {
   leagues as apiLeagues
 } from '../../api';
 import { type GameView } from './db';
-import { StoredGameMethods, GameState } from './storedGameMethods';
+import { GameMethods, GameState } from './gameMethods';
 
 interface UploadedGamePayload {
   league_id: string;
@@ -35,7 +35,7 @@ export class Bookkeeper {
 
   private gameId: number | null = null;
   private game: StoredGame;
-  private gameMethods: StoredGameMethods;
+  private gameMethods: GameMethods;
 
   private listeners: Set<() => void> = new Set();
 
@@ -47,7 +47,7 @@ export class Bookkeeper {
     gameId?: number
   ) {
     this.game = game;
-    this.gameMethods = new StoredGameMethods(game);
+    this.gameMethods = new GameMethods(game);
     this.league = league;
     this.homeTeam = homeTeam;
     this.awayTeam = awayTeam;
