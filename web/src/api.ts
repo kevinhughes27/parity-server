@@ -23,7 +23,6 @@ const dataCache: IDataCache = {};
 
 const cachedFetch = async (url: string, _options = {}) => {
   const cacheKey = url;
-
   const cached = dataCache[cacheKey];
 
   // return the cache if possible
@@ -33,13 +32,13 @@ const cachedFetch = async (url: string, _options = {}) => {
   }
 
   const response = await fetch(url);
-  
+
   // cache the response
   if (response.status === 200) {
     const content = await response.clone().text();
     dataCache[cacheKey] = content;
   }
-  
+
   return response;
 };
 
