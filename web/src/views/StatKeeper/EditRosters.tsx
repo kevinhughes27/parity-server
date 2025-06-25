@@ -5,11 +5,7 @@ import EditRoster from './EditRoster';
 import ActionBar from './ActionBar';
 import { Box, Typography } from '@mui/material';
 
-interface EditRostersProps {
-  bookkeeper: Bookkeeper;
-}
-
-const EditRosters: React.FC<EditRostersProps> = ({ bookkeeper }) => {
+const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,

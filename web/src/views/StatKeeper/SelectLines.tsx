@@ -4,11 +4,7 @@ import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
-interface SelectLinesProps {
-  bookkeeper: Bookkeeper;
-}
-
-const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper }) => {
+const SelectLines: React.FC<{bookkeeper: Bookkeeper}> = ({ bookkeeper }) => {
   const isEditingLine = bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   const lineSize = bookkeeper.league.lineSize;
