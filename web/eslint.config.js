@@ -36,8 +36,6 @@ export default [
         HTMLElement: 'readonly',
         HTMLButtonElement: 'readonly',
         URL: 'readonly',
-        MouseEvent: 'readonly',
-        Node: 'readonly',
       }
     },
     plugins: {
