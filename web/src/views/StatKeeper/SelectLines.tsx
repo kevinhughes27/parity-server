@@ -10,39 +10,26 @@ interface SelectLinesProps {
 }
 
 const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }) => {
-  // Infer if we're editing an existing line or selecting a new one
   const isEditingLine = bookkeeper.activePoint !== null;
-
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
+  const lineSize = bookkeeper.league.lineSize;
 
   // Memoize rosters to prevent infinite re-renders
   const homeRoster = useMemo(() => bookkeeper.getHomeRoster(), [bookkeeper]);
   const awayRoster = useMemo(() => bookkeeper.getAwayRoster(), [bookkeeper]);
+
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
-  const leagueLineSize = bookkeeper.league.lineSize;
-
   useEffect(() => {
     if (isEditingLine) {
-      // When resuming/changing lines mid-point, use the preserved line data
-      // awkward wording. this is current line when changing mid point
-      // but maybe I am not re-using the components properly for SelectLines and ChangeLines
-      if (lastPlayedLine) {
-        setSelectedHomePlayers(lastPlayedLine.home || []);
-        setSelectedAwayPlayers(lastPlayedLine.away || []);
-      } else {
-        // Fallback to current bookkeeper players if no preserved line
-        setSelectedHomePlayers(bookkeeper.homePlayers || []);
-        setSelectedAwayPlayers(bookkeeper.awayPlayers || []);
-      }
+      setSelectedHomePlayers(bookkeeper.homePlayers!);
+      setSelectedAwayPlayers(bookkeeper.awayPlayers!);
     } else if (lastPlayedLine) {
-      // Pre-select players NOT on the last played line.
-      // homeRoster and awayRoster are already sorted.
+      // pre-select players not on the last played line.
       setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
       setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
     } else {
-      // Default case: blank slate
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
     }
@@ -64,15 +51,13 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     if (currentSelection.includes(playerName)) {
       newSelection = currentSelection.filter(p => p !== playerName);
     } else {
-      if (currentSelection.length < leagueLineSize) {
+      if (currentSelection.length < lineSize) {
         newSelection = [...currentSelection, playerName];
       } else {
-        alert(`Cannot select more than ${leagueLineSize} players for ${teamName}.`);
-        return; // Do not update selection
+        alert(`Cannot select more than ${lineSize} players for ${teamName}.`);
+        return;
       }
     }
-    // Sort the selection before setting state, though this is mainly for internal consistency
-    // as the display order is driven by the main roster lists.
     setter(newSelection.sort((a, b) => a.localeCompare(b)));
   };
 
@@ -80,8 +65,8 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     const leftPlayerCount = selectedHomePlayers.length;
     const rightPlayerCount = selectedAwayPlayers.length;
 
-    const leftCorrectNumPlayers = leftPlayerCount === leagueLineSize;
-    const rightCorrectNumPlayers = rightPlayerCount === leagueLineSize;
+    const leftCorrectNumPlayers = leftPlayerCount === lineSize;
+    const rightCorrectNumPlayers = rightPlayerCount === lineSize;
 
     const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
     const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
@@ -89,7 +74,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
       if (isEditingLine && bookkeeper.activePoint) {
         // This is a mid-point substitution
-        await handleSubstitution(newHomePlayers, newAwayPlayers);
+        await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
       } else {
         // Normal line selection
         await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
@@ -97,27 +82,23 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
     } else {
       let message = 'Incorrect number of players:';
       if (!leftCorrectNumPlayers) {
-        message += `\n${bookkeeper.homeTeam.name}: ${leftPlayerCount}/${leagueLineSize} selected`;
+        message += `\n${bookkeeper.homeTeam.name}: ${leftPlayerCount}/${lineSize} selected`;
       }
       if (!rightCorrectNumPlayers) {
-        message += `\n${bookkeeper.awayTeam.name}: ${rightPlayerCount}/${leagueLineSize} selected`;
+        message += `\n${bookkeeper.awayTeam.name}: ${rightPlayerCount}/${lineSize} selected`;
       }
       message += '\n\nContinue with these players anyway?';
 
       if (window.confirm(message)) {
         if (isEditingLine && bookkeeper.activePoint) {
           // This is a mid-point substitution
-          await handleSubstitution(newHomePlayers, newAwayPlayers);
+          await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
         } else {
           // Normal line selection
           await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
         }
       }
     }
-  };
-
-  const handleSubstitution = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
-    await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
   };
 
   const handleUndo = async () => {
@@ -173,7 +154,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{leagueLineSize})
+              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{lineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -184,7 +165,7 @@ const SelectLines: React.FC<SelectLinesProps> = ({ bookkeeper, actionBarHeight }
 
           <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{leagueLineSize})
+              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{lineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
