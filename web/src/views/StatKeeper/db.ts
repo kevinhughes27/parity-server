@@ -3,11 +3,11 @@ import Dexie, { type EntityTable } from 'dexie';
 import { type Point } from '../../api';
 
 // Types for game state
-export type GameView = 'loading' | 'selectLines' | 'recordStats' | 'editRosters' | 'error_state' | 'initializing';
+export type GameView = 'selectLines' | 'recordStats' | 'editRosters' | 'error_state';
 
 export interface UndoCommand {
   type: 'recordFirstActor' | 'recordPull' | 'recordPass' | 'recordDrop' | 'recordThrowAway' |
-        'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf' | 'recordSubstitution';
+        'recordD' | 'recordCatchD' | 'recordPoint' | 'recordHalf';
   timestamp: string;
   data?: any; // Minimal data only when we can't infer
 }
@@ -49,10 +49,6 @@ export interface StoredGame {
   // Persistence metadata
   status: 'in-progress' | 'submitted' | 'sync-error' | 'uploaded';
   lastModified: Date;
-
-  // Remove the old generic state fields
-  // bookkeeperState?: any; // Internal bookkeeper state - REMOVED
-  // undoStack?: any[]; // Internal undo command data - REMOVED, now typed above
 }
 
 

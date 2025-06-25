@@ -380,18 +380,6 @@ export class StoredGameMethods {
     const activePoint = this.getActivePointModel();
     if (!activePoint) return;
 
-    // Store undo data for substitution
-    this.game.undoStack.push({
-      type: 'recordSubstitution',
-      timestamp: new Date().toISOString(),
-      data: {
-        savedHomePlayers: this.game.homePlayers ? [...this.game.homePlayers] : null,
-        savedAwayPlayers: this.game.awayPlayers ? [...this.game.awayPlayers] : null,
-        savedOffensePlayers: [...activePoint.offensePlayers],
-        savedDefensePlayers: [...activePoint.defensePlayers],
-      }
-    });
-
     // Update current line
     this.game.homePlayers = [...newHomePlayers];
     this.game.awayPlayers = [...newAwayPlayers];
@@ -474,9 +462,6 @@ export class StoredGameMethods {
         break;
       case 'recordHalf':
         this.undoRecordHalf();
-        break;
-      case 'recordSubstitution':
-        this.undoRecordSubstitution(command);
         break;
     }
 
@@ -617,20 +602,6 @@ export class StoredGameMethods {
     }
   }
 
-  undoRecordSubstitution(command: UndoCommand): void {
-    const data = command.data;
-
-    this.game.homePlayers = data.savedHomePlayers ? [...data.savedHomePlayers] : null;
-    this.game.awayPlayers = data.savedAwayPlayers ? [...data.savedAwayPlayers] : null;
-
-    const activePoint = this.getActivePointModel();
-    if (activePoint) {
-      activePoint.offensePlayers = [...data.savedOffensePlayers];
-      activePoint.defensePlayers = [...data.savedDefensePlayers];
-      this.setActivePointModel(activePoint);
-    }
-  }
-
   determinePointPossession(point: any): boolean {
     // Simple heuristic: if home team players are in offense, it was home possession
     // This is a simplified version - in practice you might need more sophisticated logic
@@ -693,7 +664,7 @@ export interface IStoredGameMethods {
   undoRecordCatchD(): void;
   undoRecordPoint(command: UndoCommand): void;
   undoRecordHalf(): void;
-  undoRecordSubstitution(command: UndoCommand): void;
+
   determinePointPossession(point: any): boolean;
   setError(error: string | null): void;
 }

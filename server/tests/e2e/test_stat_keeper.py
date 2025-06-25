@@ -1140,11 +1140,6 @@ def test_edit_rosters_mid_point_and_change_line(
     assert "Kevin Hughes" in game["points"][0]["defensePlayers"]
 
 
-# ~~test change line undo~~
-# we can undo this but I think it is actually more confusing that it works having tried it.
-# re-edit is a better solution and staying separate from the undo stack
-
-
 def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
@@ -1187,7 +1182,27 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     # sub kevin for kyle
     page.get_by_role("button", name="Kevin Barford").click()
     page.get_by_role("button", name="Kyle Sprysa").click()
+
+    # resume
     page.get_by_role("button", name="Resume Point").click()
+
+    # play by play
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Heather McCabe",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+
+    # undo here removes the last action
+    # changing the line is not an un-doable action. just change it again
+    page.get_by_role("button", name="Undo").click()
+
+    # after undo play by play
+    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+    # this fails because we still push a sub undo stack.
+    expect(page.get_by_role("list")).not_to_contain_text("2.Owen Lumley passed to Heather McCabe")
 
     # resume stats
     page.get_by_role("button", name="Kyle Sprysa").click()
