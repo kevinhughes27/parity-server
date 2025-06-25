@@ -1,8 +1,3 @@
-import {
-  PointModel,
-  mapApiEventToEvent,
-  mapEventToApiEvent,
-} from './models';
 import { db, StoredGame } from './db';
 import {
   getLeagueName,
@@ -12,7 +7,13 @@ import {
   leagues as apiLeagues
 } from '../../api';
 import { type GameView } from './db';
-import { GameMethods, GameState } from './gameMethods';
+import { 
+  GameMethods, 
+  GameState, 
+  PointMethods,
+  mapApiEventToEvent,
+  mapEventToApiEvent 
+} from './gameLogic';
 
 interface UploadedGamePayload {
   league_id: string;
@@ -251,24 +252,16 @@ export class Bookkeeper {
   //   });
   // }
 
-  get activePoint(): PointModel | null {
+  get activePoint(): PointMethods | null {
     if (!this.game.activePoint) return null;
-    return PointModel.fromJSON({
-      offensePlayers: [...this.game.activePoint.offensePlayers],
-      defensePlayers: [...this.game.activePoint.defensePlayers],
-      events: this.game.activePoint.events.map(mapApiEventToEvent),
-    });
+    return new PointMethods(this.game.activePoint);
   }
 
-  set activePoint(point: PointModel | null) {
-    if (point === null) {
+  set activePoint(pointMethods: PointMethods | null) {
+    if (pointMethods === null) {
       this.game.activePoint = null;
     } else {
-      this.game.activePoint = {
-        offensePlayers: [...point.offensePlayers],
-        defensePlayers: [...point.defensePlayers],
-        events: point.events.map(mapEventToApiEvent),
-      };
+      this.game.activePoint = pointMethods.toJSON();
     }
   }
 
@@ -419,14 +412,10 @@ export class Bookkeeper {
     const lastPoint = this.game.points[numPoints - 1];
 
     if (lastPoint) {
-      const model = PointModel.fromJSON({
-        offensePlayers: [...lastPoint.offensePlayers],
-        defensePlayers: [...lastPoint.defensePlayers],
-        events: lastPoint.events.map(mapApiEventToEvent),
-      });
-      return model.prettyPrint()
+      const pointMethods = new PointMethods(lastPoint);
+      return pointMethods.prettyPrint();
     } else {
-      return []
+      return [];
     }
   }
 
