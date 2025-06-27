@@ -2,8 +2,35 @@ import React from 'react';
 import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { EventType } from './gameLogic';
+
+const playerButtonStyles = {
+  enabled: {
+    color: '#000',
+    backgroundColor: '#e3f2fd',
+    border: '1px solid #2196f3',
+    fontWeight: 'normal',
+  },
+  active: {
+    color: '#000',
+    backgroundColor: '#a7d7f5',
+    border: '1px solid #2196f3',
+    fontWeight: 'bold',
+  },
+  'not-on-line': {
+    color: '#adb5bd',
+    backgroundColor: '#f8f9fa',
+    border: '1px solid #eee',
+    fontWeight: 'normal',
+  },
+  'disabled-no-possession': {
+    color: '#999',
+    backgroundColor: '#e0e0e0',
+    border: '1px solid #ccc',
+    fontWeight: 'normal',
+  },
+};
 
 const getPlayerButtonState = (
   bookkeeper: Bookkeeper,
@@ -11,9 +38,8 @@ const getPlayerButtonState = (
   isHomeTeam: boolean
 ): {
   enabled: boolean;
-  variant: 'active' | 'enabled' | 'disabled-possession' | 'disabled-no-possession' | 'not-on-line';
+  variant: 'active' | 'enabled' | 'disabled-no-possession' | 'not-on-line';
   reason?: string;
-  style: React.CSSProperties;
 } => {
   const isTeamInPossession = isHomeTeam === bookkeeper.homePossession;
   const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
@@ -22,17 +48,12 @@ const getPlayerButtonState = (
     ? homePlayersOnActiveLine.includes(playerName)
     : awayPlayersOnActiveLine.includes(playerName);
 
+  // Bench
   if (!isPlayerOnActiveLine) {
     return {
       enabled: false,
       variant: 'not-on-line',
       reason: 'Player not on active line',
-      style: {
-        color: '#adb5bd',
-        backgroundColor: '#f8f9fa',
-        border: '1px solid #eee',
-        fontWeight: 'normal',
-      },
     };
   }
 
@@ -41,65 +62,26 @@ const getPlayerButtonState = (
   const isFirstPoint = bookkeeper.firstPoint();
   const isFirstPointAfterHalftime = bookkeeper.firstPointAfterHalf();
 
+  // why does variant not imply a style...?
+  // also not sure we need reason although it is kind of interesting
+
   // Special case: first point of game or after halftime, both teams can select who pulls
   if (currentGameState === GameState.Start && (isFirstPoint || isFirstPointAfterHalftime)) {
     return {
       enabled: true,
-      variant: isActivePlayer ? 'active' : 'enabled',
-      reason: 'Select puller for second half',
-      style: isActivePlayer
-        ? {
-            color: '#000',
-            backgroundColor: '#a7d7f5',
-            border: '1px solid #2196f3',
-            fontWeight: 'bold',
-          }
-        : {
-            color: '#000',
-            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-            fontWeight: 'normal',
-          },
+      variant: 'enabled',
+      reason: 'Select puller',
     };
   }
 
-  // Game state specific logic
-  if (currentGameState === GameState.Start) {
-    // For the start of a point (not first point of game/half), only the receiving team should be enabled
-    if (!isFirstPointAfterHalftime && !isTeamInPossession) {
-      return {
-        enabled: false,
-        variant: 'disabled-no-possession',
-        reason: 'Other team receives after point scored',
-        style: {
-          color: '#999',
-          backgroundColor: '#e0e0e0',
-          border: '1px solid #ccc',
-          fontWeight: 'normal',
-        },
-      };
-    }
-
+  // Pull state.
+  // It is a bit weird, because only the pull button is enabled but if you think
+  // about it, it sort of sets up the proper workflow for stat keeping
+  if (currentGameState === GameState.Pull) {
     return {
-      enabled: true,
-      variant: isActivePlayer ? 'active' : 'enabled',
-      reason:
-        isFirstPoint || isFirstPointAfterHalftime
-          ? 'Select starting player'
-          : 'Select receiving player',
-      style: isActivePlayer
-        ? {
-            color: '#000',
-            backgroundColor: '#a7d7f5',
-            border: '1px solid #2196f3',
-            fontWeight: 'bold',
-          }
-        : {
-            color: '#000',
-            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-            fontWeight: 'normal',
-          },
+      enabled: false,
+      variant: isActivePlayer ? 'active' : 'disabled-no-possession',
+      reason: 'Must click Pull or undo',
     };
   }
 
@@ -109,45 +91,12 @@ const getPlayerButtonState = (
         enabled: false,
         variant: 'disabled-no-possession',
         reason: 'Other team picks up disc',
-        style: {
-          color: '#999',
-          backgroundColor: '#e0e0e0',
-          border: '1px solid #ccc',
-          fontWeight: 'normal',
-        },
       };
     }
     return {
       enabled: true,
       variant: isActivePlayer ? 'active' : 'enabled',
       reason: 'Select player who picked up disc',
-      style: isActivePlayer
-        ? {
-            color: '#000',
-            backgroundColor: '#a7d7f5',
-            border: '1px solid #2196f3',
-            fontWeight: 'bold',
-          }
-        : {
-            color: '#000',
-            backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-            border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-            fontWeight: 'normal',
-          },
-    };
-  }
-
-  if (currentGameState === GameState.Pull) {
-    return {
-      enabled: false,
-      variant: 'disabled-possession',
-      reason: 'Pull in progress',
-      style: {
-        color: '#000',
-        backgroundColor: '#90caf9',
-        border: '1px solid #2196f3',
-        fontWeight: 'normal',
-      },
     };
   }
 
@@ -159,47 +108,27 @@ const getPlayerButtonState = (
           enabled: false,
           variant: 'active',
           reason: 'Player has disc - use action buttons',
-          style: {
-            color: '#000',
-            backgroundColor: '#a7d7f5',
-            border: '1px solid #2196f3',
-            fontWeight: 'bold',
-          },
         };
       } else {
         return {
           enabled: true,
           variant: isActivePlayer ? 'active' : 'enabled',
           reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
-          style: isActivePlayer
-            ? {
-                color: '#000',
-                backgroundColor: '#a7d7f5',
-                border: '1px solid #2196f3',
-                fontWeight: 'bold',
-              }
-            : {
-                color: '#000',
-                backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-                border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-                fontWeight: 'normal',
-              },
         };
       }
+      // team not in possession
     } else {
       return {
         enabled: false,
         variant: 'disabled-no-possession',
         reason: 'Other team has possession',
-        style: {
-          color: '#999',
-          backgroundColor: '#e0e0e0',
-          border: '1px solid #ccc',
-          fontWeight: 'normal',
-        },
       };
     }
   }
+
+  // this doesn't seem like the best way to represent.
+  // I think I need to pull the D state up explicitly
+  // Handle the team not in possesion simply
 
   // Default case
   if (!isTeamInPossession) {
@@ -207,12 +136,6 @@ const getPlayerButtonState = (
       enabled: false,
       variant: 'disabled-no-possession',
       reason: 'Other team has possession',
-      style: {
-        color: '#999',
-        backgroundColor: '#e0e0e0',
-        border: '1px solid #ccc',
-        fontWeight: 'normal',
-      },
     };
   }
 
@@ -220,12 +143,6 @@ const getPlayerButtonState = (
     enabled: true,
     variant: 'enabled',
     reason: 'Available for selection',
-    style: {
-      color: '#000',
-      backgroundColor: isTeamInPossession ? '#e3f2fd' : '#f0f0f0',
-      border: isTeamInPossession ? '1px solid #2196f3' : '1px solid #ccc',
-      fontWeight: 'normal',
-    },
   };
 };
 
@@ -237,6 +154,8 @@ const getActionButtonState = (
   reason?: string;
 } => {
   const currentGameState = bookkeeper.gameState();
+
+  // wat
   const canDrop =
     (currentGameState === GameState.Normal ||
       currentGameState === GameState.FirstThrowQuebecVariant ||
@@ -387,6 +306,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
     const buttonState = getPlayerButtonState(bookkeeper, playerName, isHomeTeamButton);
+    const buttonStyle = playerButtonStyles[buttonState.variant];
 
     return (
       <Button
@@ -398,13 +318,14 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         size="small"
         title={buttonState.reason}
         sx={{
+          my: 0.2,
+          py: 1.2,
+          pl: 2,
           justifyContent: 'flex-start',
-          mb: 0.5,
-          py: 1,
-          borderRadius: 1,
+          whiteSpace: 'nowrap',
           fontSize: '0.9em',
           textTransform: 'none',
-          ...buttonState.style,
+          ...buttonStyle,
         }}
       >
         {playerName}
@@ -424,7 +345,10 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
-          <Box sx={{ width: '30%', pr: 1, overflow: 'auto' }}>
+          <Box sx={{ width: '30%', pr: 1, overflowX: 'hidden' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+              {bookkeeper.homeTeam.name}
+            </Typography>
             {fullHomeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
 
@@ -432,7 +356,10 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             <PointDisplay bookkeeper={bookkeeper} />
           </Box>
 
-          <Box sx={{ width: '30%', pl: 1, overflow: 'auto' }}>
+          <Box sx={{ width: '30%', pl: 1, overflowX: 'hidden' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+              {bookkeeper.awayTeam.name}
+            </Typography>
             {fullAwayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
         </Box>
@@ -444,6 +371,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             label: 'Pull',
             onClick: handlePull,
             disabled: !pullState.enabled,
+            color: 'info',
             variant: 'outlined',
           },
           {
@@ -457,24 +385,28 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             label: 'Drop',
             onClick: handleDrop,
             disabled: !dropState.enabled,
+            color: 'warning',
             variant: 'outlined',
           },
           {
             label: 'Throwaway',
             onClick: handleThrowaway,
             disabled: !throwawayState.enabled,
+            color: 'warning',
             variant: 'outlined',
           },
           {
             label: 'D (Block)',
             onClick: handleD,
             disabled: !dState.enabled,
+            color: 'warning',
             variant: 'outlined',
           },
           {
             label: 'Catch D',
             onClick: handleCatchD,
             disabled: !catchDState.enabled,
+            color: 'warning',
             variant: 'outlined',
           },
         ]}

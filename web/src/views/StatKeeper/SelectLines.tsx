@@ -82,17 +82,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       if (!rightCorrectNumPlayers) {
         message += `\n${bookkeeper.awayTeam.name}: ${rightPlayerCount}/${lineSize} selected`;
       }
-      message += '\n\nContinue with these players anyway?';
-
-      if (window.confirm(message)) {
-        if (isEditingLine && bookkeeper.activePoint) {
-          // This is a mid-point substitution
-          await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
-        } else {
-          // Normal line selection
-          await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
-        }
-      }
+      window.alert(message);
     }
   };
 
@@ -110,14 +100,15 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
         fullWidth
         variant={isSelected ? 'contained' : 'outlined'}
-        color={isSelected ? 'primary' : 'inherit'}
+        color={isSelected ? 'info' : 'inherit'}
         sx={{
-          mb: 0.5,
-          py: 1,
+          my: 0.2,
+          py: 1.2,
           justifyContent: 'flex-start',
+          whiteSpace: 'nowrap',
           textTransform: 'none',
-          fontWeight: isSelected ? 'bold' : 'normal',
           fontSize: '0.9em',
+          fontWeight: isSelected ? 'bold' : 'normal',
         }}
       >
         {playerName}
@@ -145,7 +136,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
-      <Box sx={{ flexGrow: 1, overflow: 'auto', mb: 1.25 }}>
+      <Box sx={{ flexGrow: 1, overflowX: 'hidden', mb: 1.25 }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
