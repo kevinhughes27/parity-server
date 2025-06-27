@@ -43,30 +43,28 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
       <Box sx={{ flexShrink: 0 }}>
         {' '}
         {/* This box won't shrink */}
-        {hasActivePoint && (
-          <Paper
-            elevation={0}
-            sx={{
-              p: 1,
-              backgroundColor: '#f9f9f9',
-              borderRadius: 1,
-              textAlign: 'center',
-              mb: 1.25,
-              fontSize: '0.9em',
-            }}
-          >
-            <Typography variant="body2">
-              <strong>Game State:</strong> {GameState[currentGameState]}
-            </Typography>
-          </Paper>
-        )}
+        <Paper
+          elevation={0}
+          sx={{
+            p: 1,
+            backgroundColor: '#f9f9f9',
+            borderRadius: 1,
+            textAlign: 'center',
+            mb: 1.25,
+            fontSize: '0.9em',
+          }}
+        >
+          <Typography variant="body2">
+            <strong>Game State:</strong> {GameState[currentGameState]}
+          </Typography>
+        </Paper>
         <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
           {title}
         </Typography>
       </Box>
 
       {/* Scrollable Event List */}
-      <Box ref={eventsContainerRef} sx={{ flexGrow: 1, overflow: 'auto' }}>
+      <Box ref={eventsContainerRef} sx={{ flexGrow: 1, overflowX: 'hidden', overflowY: 'auto' }}>
         {!events || events.length === 0 ? (
           <Typography variant="body2" color="text.secondary">
             No events to display.

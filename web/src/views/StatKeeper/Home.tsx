@@ -26,7 +26,7 @@ const getStatusColor = (status: StoredGame['status']) => {
     case 'sync-error':
       return 'error';
     case 'in-progress':
-      return 'primary';
+      return 'info';
     default:
       return 'default';
   }
@@ -155,7 +155,7 @@ function Home() {
                 <Button
                   size="small"
                   variant="contained"
-                  color="primary"
+                  color="info"
                   component={Link}
                   to={`/stat_keeper/game/${game.localId}`}
                 >
@@ -186,6 +186,7 @@ function Home() {
                 <Button
                   size="small"
                   variant="outlined"
+                  color="info"
                   component={Link}
                   to={`/stat_keeper/game/${game.localId}`}
                 >

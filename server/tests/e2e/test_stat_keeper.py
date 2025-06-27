@@ -94,14 +94,14 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
 def expect_players_selected(page: Page, players: list[str]):
     for player in players:
         expect(page.get_by_role("button", name=player)).to_contain_class(
-            "MuiButton-colorPrimary"
+            "MuiButton-colorInfo"
         )
 
 
 def expect_players_not_selected(page: Page, players: list[str]):
     for player in players:
         expect(page.get_by_role("button", name=player)).not_to_contain_class(
-            "MuiButton-colorPrimary"
+            "MuiButton-colorInfo"
         )
 
 

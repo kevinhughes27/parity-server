@@ -27,7 +27,15 @@ const PlayerListItem: React.FC<{
         borderBottom: '1px solid #f0f0f0',
       }}
     >
-      <Typography variant="body2">{playerName}</Typography>
+      <Typography
+        variant="body2"
+        sx={{
+          whiteSpace: 'nowrap',
+          overflowX: 'hidden',
+        }}
+      >
+        {playerName}
+      </Typography>
       <Button
         onClick={() => onRemove(playerName)}
         color="error"
