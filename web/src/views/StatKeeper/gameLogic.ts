@@ -11,15 +11,15 @@ export enum EventType {
 }
 
 export enum GameState {
-  SelectingLines = 0,
-  EditingLines = 8,
-  Normal = 1,
-  FirstD = 2,
-  Start = 3,
-  Pull = 4,
-  WhoPickedUpDisc = 5,
-  FirstThrowQuebecVariant = 6,
-  SecondD = 7,
+  SelectingLines,
+  EditingLines,
+  Start,
+  Pull,
+  WhoPickedUpDisc,
+  FirstThrowQuebecVariant,
+  Normal,
+  FirstD,
+  SecondD,
 }
 
 export interface Event {

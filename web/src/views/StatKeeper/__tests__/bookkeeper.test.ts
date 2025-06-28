@@ -1,6 +1,6 @@
 import { describe, expect, beforeEach, afterAll, test, vi } from 'vitest';
 import 'fake-indexeddb/auto';
-import { Bookkeeper } from '../bookkeeper';
+import { Bookkeeper, GameState } from '../bookkeeper';
 import { EventType, type Event } from '../gameLogic';
 import { type LeagueFromJson as League, type Team } from '../../../api';
 import { db, StoredGame } from '../db';
@@ -443,37 +443,37 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.gameState()).toBe(bookkeeper.gameState()); // Just verify it doesn't crash
 
     // First point of game - should be Start state when player selected
-    expect(bookkeeper.gameState()).toBe(3); // GameState.Start = 3 (first point, no puller selected)
+    expect(bookkeeper.gameState()).toBe(GameState.Start);
     await bookkeeper.recordFirstActor(PLAYER1, true);
-    expect(bookkeeper.gameState()).toBe(4); // GameState.Pull = 4 (first point, puller selected)
+    expect(bookkeeper.gameState()).toBe(GameState.Pull);
 
     // After pull - should be WhoPickedUpDisc
     await bookkeeper.recordPull();
-    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
     // After pickup - should be FirstThrowQuebecVariant
     await bookkeeper.recordFirstActor(PLAYER2, false);
-    expect(bookkeeper.gameState()).toBe(6); // GameState.FirstThrowQuebecVariant = 6
+    expect(bookkeeper.gameState()).toBe(GameState.FirstThrowQuebecVariant);
 
     // After pass - should be Normal
     await bookkeeper.recordPass(PLAYER4);
-    expect(bookkeeper.gameState()).toBe(1); // GameState.Normal = 1
+    expect(bookkeeper.gameState()).toBe(GameState.Normal);
 
     // After throwaway - should be WhoPickedUpDisc (disc is loose)
     await bookkeeper.recordThrowAway();
-    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
     // After pickup following turnover - should be FirstD
     await bookkeeper.recordFirstActor(PLAYER1, true);
-    expect(bookkeeper.gameState()).toBe(2); // GameState.FirstD = 2
+    expect(bookkeeper.gameState()).toBe(GameState.FirstD);
 
     // After D - should be WhoPickedUpDisc again
     await bookkeeper.recordD();
-    expect(bookkeeper.gameState()).toBe(5); // GameState.WhoPickedUpDisc = 5
+    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
     // After pickup following D - should be SecondD
     await bookkeeper.recordFirstActor(PLAYER2, false);
-    expect(bookkeeper.gameState()).toBe(7); // GameState.SecondD = 7
+    expect(bookkeeper.gameState()).toBe(GameState.SecondD);
   });
 
   test('should handle multiple undos in sequence', async () => {
