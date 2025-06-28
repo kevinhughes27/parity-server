@@ -11,6 +11,7 @@ export enum EventType {
 }
 
 export enum GameState {
+  SelectingLines = 0,
   Normal = 1,
   FirstD = 2,
   Start = 3,
@@ -161,6 +162,11 @@ export class GameMethods {
   }
 
   gameState(): GameState {
+    // Check if we're in line selection mode
+    if (this.game.currentView === 'selectLines') {
+      return GameState.SelectingLines;
+    }
+
     const activePointMethods = this.getActivePointMethods();
 
     if (activePointMethods === null) {

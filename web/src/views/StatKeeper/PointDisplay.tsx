@@ -55,7 +55,7 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
           }}
         >
           <Typography variant="body2">
-            <strong>Game State:</strong> {GameState[currentGameState]}
+            <strong>Game State:</strong> {GameState[currentGameState] || 'SelectingLines'}
           </Typography>
         </Paper>
         <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
