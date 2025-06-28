@@ -522,13 +522,8 @@ export class GameMethods {
   }
 
   updateViewAfterAction(): void {
-    // Determine the correct view based on current game state
-    const newView = this.determineCorrectView();
-
-    // Only update if the view actually needs to change
-    if (this.game.currentView !== newView) {
-      this.game.currentView = newView;
-    }
+    // View state is now determined dynamically by determineCorrectView()
+    // No need to store or update view state in the game object
   }
 
   determineCorrectView(): GameView {
