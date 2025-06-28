@@ -71,7 +71,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         // This is a mid-point substitution
         await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
       } else {
-        // Normal line selection
+        // Normal line selection - this will transition us out of SelectingLines state
         await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
       }
     } else {
