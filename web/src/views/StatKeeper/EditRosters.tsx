@@ -56,8 +56,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       // Update the stored game rosters
       await bookkeeper.updateRosters(homeRosterNames, awayRosterNames);
 
-      // Return to the previous view (likely selectLines or recordStats)
-      bookkeeper.currentView = bookkeeper.homePlayers ? 'recordStats' : 'selectLines';
+      // View will automatically update based on game state
 
       console.log('Rosters updated successfully.');
     } catch (error) {
@@ -69,10 +68,10 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const handleCancel = () => {
-    // Reset to original rosters and return to previous view
+    // Reset to original rosters
     sortAndSetHomeRoster(bookkeeper.getHomeRoster());
     sortAndSetAwayRoster(bookkeeper.getAwayRoster());
-    bookkeeper.currentView = bookkeeper.homePlayers ? 'recordStats' : 'selectLines';
+    bookkeeper.notifyListeners();
   };
 
   if (loadingLeaguePlayers) {

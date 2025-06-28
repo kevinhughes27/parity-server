@@ -137,8 +137,10 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // Force transition to line selection view
-    bookkeeper.currentView = 'selectLines';
+    // Force transition to line selection by clearing players
+    bookkeeper.homePlayers = null;
+    bookkeeper.awayPlayers = null;
+    bookkeeper.notifyListeners();
   };
 
   const handleEditRosters = async () => {
@@ -146,8 +148,9 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // Force transition to edit rosters view
-    bookkeeper.currentView = 'editRosters';
+    // TODO: Implement roster editing state management
+    // For now, this will be handled in Phase 4
+    alert('Roster editing will be implemented in the next phase');
   };
 
   return (
