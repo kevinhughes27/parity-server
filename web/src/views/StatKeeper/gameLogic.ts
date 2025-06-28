@@ -516,7 +516,7 @@ export class GameMethods {
 
     // Update the active point with new players
     activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
-    
+
     // Clear editing state
     this.game.isEditingLines = false;
   }
@@ -531,7 +531,7 @@ export class GameMethods {
     if (this.game.localError === 'editRosters') {
       return 'editRosters';
     }
-    
+
     if (this.game.localError !== null) {
       return 'error_state';
     }
