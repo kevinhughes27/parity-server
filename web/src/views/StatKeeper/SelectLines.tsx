@@ -6,7 +6,8 @@ import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
-  const isEditingLine = currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
+  const isEditingLine =
+    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   const lineSize = bookkeeper.league.lineSize;
 
@@ -192,15 +193,15 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
                 },
               ]
             : bookkeeper.getUndoCount() > 0 && !isEditingLine
-            ? [
-                {
-                  label: 'Undo Point',
-                  onClick: handleUndo,
-                  color: 'warning',
-                  variant: 'contained',
-                },
-              ]
-            : []
+              ? [
+                  {
+                    label: 'Undo Point',
+                    onClick: handleUndo,
+                    color: 'warning',
+                    variant: 'contained',
+                  },
+                ]
+              : []
         }
       />
     </Box>

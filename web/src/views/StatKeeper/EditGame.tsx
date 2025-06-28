@@ -73,10 +73,19 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
       <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={() => handleAction(onEditRosters)}>Edit Rosters</MenuItem>
 
-        <MenuItem 
+        <MenuItem
           onClick={() => handleAction(onChangeLine)}
-          disabled={currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines}
-          sx={{ color: (currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines) ? '#999' : 'inherit' }}
+          disabled={
+            currentGameState === GameState.SelectingLines ||
+            currentGameState === GameState.EditingLines
+          }
+          sx={{
+            color:
+              currentGameState === GameState.SelectingLines ||
+              currentGameState === GameState.EditingLines
+                ? '#999'
+                : 'inherit',
+          }}
         >
           Change Line
         </MenuItem>
@@ -133,7 +142,10 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
 
   const handleChangeLine = async () => {
     const currentGameState = bookkeeper.gameState();
-    if (currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines) {
+    if (
+      currentGameState === GameState.SelectingLines ||
+      currentGameState === GameState.EditingLines
+    ) {
       return;
     }
 
