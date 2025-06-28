@@ -137,14 +137,9 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // If no active point exists, clear players to force line selection
-    if (!bookkeeper.activePoint) {
-      bookkeeper.homePlayers = null;
-      bookkeeper.awayPlayers = null;
-    } else {
-      // Start editing lines mode (keeps current players for editing)
-      bookkeeper.startEditingLines();
-    }
+    // Always start editing lines mode (keeps current players for editing)
+    // This works whether there's an active point or just selected players
+    bookkeeper.startEditingLines();
     bookkeeper.notifyListeners();
   };
 
