@@ -412,6 +412,18 @@ export class Bookkeeper {
     });
   }
 
+  public setError(error: string | null): void {
+    this.gameMethods.setError(error);
+  }
+
+  public startEditingLines(): void {
+    this.gameMethods.startEditingLines();
+  }
+
+  public cancelEditingLines(): void {
+    this.gameMethods.cancelEditingLines();
+  }
+
   // Point display methods
   public getCurrentPointPrettyPrint(): string[] {
     return this.activePoint?.prettyPrint() || [];
