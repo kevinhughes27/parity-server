@@ -522,7 +522,11 @@ export class GameMethods {
   }
 
   determineCorrectView(): GameView {
-    // Error state takes precedence
+    // Error state takes precedence - check for special "editRosters" hack
+    if (this.game.localError === 'editRosters') {
+      return 'editRosters';
+    }
+    
     if (this.game.localError !== null) {
       return 'error_state';
     }
@@ -709,7 +713,7 @@ export class GameMethods {
   }
 
   setError(error: string | null): void {
-    this.game.localError = error;
+    this.gameMethods.setError(error);
   }
 }
 

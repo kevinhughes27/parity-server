@@ -429,9 +429,6 @@ export class Bookkeeper {
   }
 
   // Convenience methods for React components
-  getCurrentView(): GameView {
-    return this.currentView;
-  }
 
   getLastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.lastPlayedLine;

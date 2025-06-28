@@ -148,9 +148,10 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // TODO: Implement roster editing state management
-    // For now, this will be handled in Phase 4
-    alert('Roster editing will be implemented in the next phase');
+    // Force transition to edit rosters by setting error state temporarily
+    // This is a temporary solution until we implement proper roster editing state
+    bookkeeper.setError('editRosters'); // Use error state as a hack for now
+    bookkeeper.notifyListeners();
   };
 
   return (
