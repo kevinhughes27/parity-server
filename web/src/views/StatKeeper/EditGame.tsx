@@ -137,8 +137,14 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // Start editing lines mode (keeps current players for editing)
-    bookkeeper.startEditingLines();
+    // If no active point exists, clear players to force line selection
+    if (!bookkeeper.activePoint) {
+      bookkeeper.homePlayers = null;
+      bookkeeper.awayPlayers = null;
+    } else {
+      // Start editing lines mode (keeps current players for editing)
+      bookkeeper.startEditingLines();
+    }
     bookkeeper.notifyListeners();
   };
 
