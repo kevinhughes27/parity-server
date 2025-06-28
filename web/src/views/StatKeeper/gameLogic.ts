@@ -12,6 +12,7 @@ export enum EventType {
 
 export enum GameState {
   SelectingLines = 0,
+  EditingLines = 8,
   Normal = 1,
   FirstD = 2,
   Start = 3,
@@ -163,6 +164,11 @@ export class GameMethods {
 
   gameState(): GameState {
     const activePointMethods = this.getActivePointMethods();
+
+    // Check if we're explicitly editing lines (mid-point line change)
+    if (this.game.isEditingLines) {
+      return GameState.EditingLines;
+    }
 
     // If no players are selected, we're in line selection mode
     if (this.game.homePlayers === null || this.game.awayPlayers === null) {
@@ -480,6 +486,7 @@ export class GameMethods {
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.game.homePlayers = [...activeHomePlayers];
     this.game.awayPlayers = [...activeAwayPlayers];
+    this.game.isEditingLines = false; // Clear editing state
   }
 
   updateRosters(homeRoster: string[], awayRoster: string[]): void {
@@ -529,6 +536,11 @@ export class GameMethods {
     
     if (this.game.localError !== null) {
       return 'error_state';
+    }
+
+    // Check if we're editing lines (mid-point line change)
+    if (this.game.isEditingLines) {
+      return 'selectLines';
     }
 
     // If no players are selected, we need to select lines
@@ -656,21 +668,28 @@ export class GameMethods {
     // Restore possession to what it was during the point
     this.game.homePossession = data.wasHomePossession;
 
-    // Restore firstActor from the last event
-    const lastEvent = activePointMethods.getLastEvent();
-    if (lastEvent?.type === EventType.PASS) {
-      this.game.firstActor = lastEvent.secondActor; // The receiver who scored
+    // Check if this was a fresh point (no events after removing POINT)
+    if (activePointMethods.getEventCount() === 0) {
+      // Fresh point - return to line selection
+      this.game.activePoint = null;
+      this.game.homePlayers = null;
+      this.game.awayPlayers = null;
+      this.game.firstActor = null;
     } else {
-      this.game.firstActor = lastEvent?.firstActor || null;
-    }
+      // Point had events - restore firstActor from the last event
+      const lastEvent = activePointMethods.getLastEvent();
+      if (lastEvent?.type === EventType.PASS) {
+        this.game.firstActor = lastEvent.secondActor; // The receiver who scored
+      } else {
+        this.game.firstActor = lastEvent?.firstActor || null;
+      }
 
-    // Restore line selection from the lastPlayedLine (which was set when the point was scored)
-    if (this.game.lastPlayedLine) {
-      this.game.homePlayers = [...this.game.lastPlayedLine.home];
-      this.game.awayPlayers = [...this.game.lastPlayedLine.away];
+      // Restore line selection from the lastPlayedLine (which was set when the point was scored)
+      if (this.game.lastPlayedLine) {
+        this.game.homePlayers = [...this.game.lastPlayedLine.home];
+        this.game.awayPlayers = [...this.game.lastPlayedLine.away];
+      }
     }
-
-    // Point is now active and ready to resume
   }
 
   undoRecordHalf(): void {
@@ -713,7 +732,15 @@ export class GameMethods {
   }
 
   setError(error: string | null): void {
-    this.gameMethods.setError(error);
+    this.game.localError = error;
+  }
+
+  startEditingLines(): void {
+    this.game.isEditingLines = true;
+  }
+
+  cancelEditingLines(): void {
+    this.game.isEditingLines = false;
   }
 }
 

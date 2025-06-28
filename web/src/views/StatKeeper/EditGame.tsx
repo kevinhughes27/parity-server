@@ -75,8 +75,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 
         <MenuItem 
           onClick={() => handleAction(onChangeLine)}
-          disabled={currentGameState === GameState.SelectingLines}
-          sx={{ color: currentGameState === GameState.SelectingLines ? '#999' : 'inherit' }}
+          disabled={currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines}
+          sx={{ color: (currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines) ? '#999' : 'inherit' }}
         >
           Change Line
         </MenuItem>
@@ -133,13 +133,12 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
 
   const handleChangeLine = async () => {
     const currentGameState = bookkeeper.gameState();
-    if (currentGameState === GameState.SelectingLines) {
+    if (currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines) {
       return;
     }
 
-    // Force transition to line selection by clearing players
-    bookkeeper.homePlayers = null;
-    bookkeeper.awayPlayers = null;
+    // Start editing lines mode (keeps current players for editing)
+    bookkeeper.startEditingLines();
     bookkeeper.notifyListeners();
   };
 

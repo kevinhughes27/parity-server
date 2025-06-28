@@ -81,6 +81,7 @@ export class Bookkeeper {
 
       // UI state
       localError: null,
+      isEditingLines: false,
 
       // Undo system
       undoStack: [],
