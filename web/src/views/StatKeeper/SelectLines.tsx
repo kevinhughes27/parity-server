@@ -68,7 +68,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
 
     if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
-      if (isEditingLine && bookkeeper.activePoint) {
+      if (currentGameState === GameState.EditingLines) {
         // This is a mid-point substitution
         await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
       } else {
