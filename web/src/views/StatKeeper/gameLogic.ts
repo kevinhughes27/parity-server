@@ -516,6 +516,9 @@ export class GameMethods {
 
     // Update the active point with new players
     activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
+    
+    // Clear editing state
+    this.game.isEditingLines = false;
   }
 
   updateViewAfterAction(): void {
