@@ -55,7 +55,6 @@ export interface StoredGame {
   lastPlayedLine: { home: string[]; away: string[] } | null;
 
   // UI state
-  currentView: GameView;
   localError: string | null;
 
   // Undo system
@@ -76,7 +75,7 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 // Define the database schema and versioning
 db.version(1).stores({
   games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, currentView, homePossession, firstActor, pointsAtHalf, *undoStack',
+    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, *undoStack',
 });
 
 export { db };

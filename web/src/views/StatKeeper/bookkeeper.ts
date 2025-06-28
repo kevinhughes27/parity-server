@@ -80,7 +80,6 @@ export class Bookkeeper {
       lastPlayedLine: null,
 
       // UI state
-      currentView: 'selectLines',
       localError: null,
 
       // Undo system
@@ -267,6 +266,12 @@ export class Bookkeeper {
   get awayPlayers(): string[] | null {
     return this.game.awayPlayers;
   }
+  set homePlayers(value: string[] | null) {
+    this.game.homePlayers = value;
+  }
+  set awayPlayers(value: string[] | null) {
+    this.game.awayPlayers = value;
+  }
   get localError(): string | null {
     return this.game.localError;
   }
@@ -274,13 +279,9 @@ export class Bookkeeper {
     return this.game.week;
   }
 
-  // View state management (components can modify these)
-  get currentView(): GameView {
-    return this.game.currentView;
-  }
-  set currentView(value: GameView) {
-    this.game.currentView = value;
-    this.notifyListeners();
+  // View state management
+  getCurrentView(): GameView {
+    return this.gameMethods.determineCorrectView();
   }
 
   get lastPlayedLine(): { home: string[]; away: string[] } | null {

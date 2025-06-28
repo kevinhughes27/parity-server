@@ -162,12 +162,12 @@ export class GameMethods {
   }
 
   gameState(): GameState {
-    // Check if we're in line selection mode
-    if (this.game.currentView === 'selectLines') {
+    const activePointMethods = this.getActivePointMethods();
+
+    // If no players are selected, we're in line selection mode
+    if (this.game.homePlayers === null || this.game.awayPlayers === null) {
       return GameState.SelectingLines;
     }
-
-    const activePointMethods = this.getActivePointMethods();
 
     if (activePointMethods === null) {
       return GameState.Start;
@@ -459,9 +459,6 @@ export class GameMethods {
     this.game.firstActor = null;
 
     this.changePossession(); // Flip possession for the next point
-
-    // Explicitly transition to line selection for next point
-    this.game.currentView = 'selectLines';
   }
 
   recordHalf(): void {
@@ -478,17 +475,11 @@ export class GameMethods {
     this.game.homePlayers = null;
     this.game.awayPlayers = null;
     this.game.lastPlayedLine = null;
-
-    // Explicitly transition to line selection for second half
-    this.game.currentView = 'selectLines';
   }
 
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.game.homePlayers = [...activeHomePlayers];
     this.game.awayPlayers = [...activeAwayPlayers];
-
-    // Transition to record stats view since we now have players selected
-    this.game.currentView = 'recordStats';
   }
 
   updateRosters(homeRoster: string[], awayRoster: string[]): void {
@@ -534,11 +525,6 @@ export class GameMethods {
     // Error state takes precedence
     if (this.game.localError !== null) {
       return 'error_state';
-    }
-
-    // If explicitly in edit rosters mode, stay there
-    if (this.game.currentView === 'editRosters') {
-      return 'editRosters';
     }
 
     // If no players are selected, we need to select lines
@@ -680,8 +666,7 @@ export class GameMethods {
       this.game.awayPlayers = [...this.game.lastPlayedLine.away];
     }
 
-    // Set UI state to resume the point
-    this.game.currentView = 'recordStats';
+    // Point is now active and ready to resume
   }
 
   undoRecordHalf(): void {
@@ -725,12 +710,6 @@ export class GameMethods {
 
   setError(error: string | null): void {
     this.game.localError = error;
-    if (error !== null) {
-      this.game.currentView = 'error_state';
-    } else {
-      // Clear error and determine correct view
-      this.game.currentView = this.determineCorrectView();
-    }
   }
 }
 
