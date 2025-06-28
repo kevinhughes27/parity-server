@@ -59,8 +59,8 @@ const createInitialStoredGame = (
     homePlayers: null,
     awayPlayers: null,
     lastPlayedLine: null,
-    currentView: 'selectLines',
     localError: null,
+    isEditingLines: false,
     undoStack: [],
     status: 'in-progress',
     lastModified: new Date(),
@@ -411,7 +411,7 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.pointsAtHalf).toBe(1);
     expect(bookkeeper.homePlayers).toBeNull();
     expect(bookkeeper.awayPlayers).toBeNull();
-    expect(bookkeeper.currentView).toBe('selectLines');
+    expect(bookkeeper.getCurrentView()).toBe('selectLines');
 
     // Undo half
     await bookkeeper.undo();
