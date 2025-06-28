@@ -11,7 +11,7 @@ import {
   Divider,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Bookkeeper } from './bookkeeper';
+import { Bookkeeper, GameState } from './bookkeeper';
 import { StoredGame } from './db';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
@@ -27,6 +27,7 @@ interface ActionsMenuProps {
   numericGameId: number | undefined;
   gameStatus: StoredGame['status'] | undefined;
   isHalfRecorded: boolean;
+  currentGameState: GameState;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
@@ -37,6 +38,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   numericGameId,
   gameStatus,
   isHalfRecorded,
+  currentGameState,
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
@@ -71,7 +73,13 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
       <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={() => handleAction(onEditRosters)}>Edit Rosters</MenuItem>
 
-        <MenuItem onClick={() => handleAction(onChangeLine)}>Change Line</MenuItem>
+        <MenuItem 
+          onClick={() => handleAction(onChangeLine)}
+          disabled={currentGameState === GameState.SelectingLines}
+          sx={{ color: currentGameState === GameState.SelectingLines ? '#999' : 'inherit' }}
+        >
+          Change Line
+        </MenuItem>
 
         <Divider />
 
@@ -98,6 +106,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const currentView = bookkeeper.getCurrentView();
+  const currentGameState = bookkeeper.gameState();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
   const handleRecordHalf = async () => {
@@ -123,7 +132,8 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   };
 
   const handleChangeLine = async () => {
-    if (currentView === 'selectLines') {
+    const currentGameState = bookkeeper.gameState();
+    if (currentGameState === GameState.SelectingLines) {
       return;
     }
 
@@ -145,6 +155,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       <TopBar
         bookkeeper={bookkeeper}
         localGameId={localGameId}
+        currentGameState={currentGameState}
         isHalfRecorded={isHalfRecorded}
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
@@ -159,6 +170,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
 function TopBar({
   bookkeeper,
   localGameId,
+  currentGameState,
   isHalfRecorded,
   onRecordHalf,
   onSubmitGame,
@@ -167,6 +179,7 @@ function TopBar({
 }: {
   bookkeeper: any;
   localGameId: string;
+  currentGameState: GameState;
   isHalfRecorded: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
@@ -192,6 +205,7 @@ function TopBar({
           <ActionsMenu
             numericGameId={parseInt(localGameId)}
             gameStatus={bookkeeper.getGameStatus()}
+            currentGameState={currentGameState}
             isHalfRecorded={isHalfRecorded}
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}
