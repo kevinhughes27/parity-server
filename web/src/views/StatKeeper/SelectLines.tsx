@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Bookkeeper } from './bookkeeper';
+import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
-  const isEditingLine = bookkeeper.activePoint !== null;
+  const currentGameState = bookkeeper.gameState();
+  const isEditingLine = currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.getLastPlayedLine();
   const lineSize = bookkeeper.league.lineSize;
 
@@ -17,9 +18,9 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
   useEffect(() => {
-    if (isEditingLine) {
-      setSelectedHomePlayers(bookkeeper.homePlayers!);
-      setSelectedAwayPlayers(bookkeeper.awayPlayers!);
+    if (isEditingLine && bookkeeper.homePlayers && bookkeeper.awayPlayers) {
+      setSelectedHomePlayers(bookkeeper.homePlayers);
+      setSelectedAwayPlayers(bookkeeper.awayPlayers);
     } else if (lastPlayedLine) {
       // pre-select players not on the last played line.
       setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
@@ -87,7 +88,13 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const handleUndo = async () => {
-    await bookkeeper.undo();
+    if (currentGameState === GameState.EditingLines) {
+      // Cancel editing and return to previous state
+      bookkeeper.cancelEditingLines();
+      bookkeeper.notifyListeners();
+    } else {
+      await bookkeeper.undo();
+    }
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
@@ -175,7 +182,16 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           },
         ]}
         secondaryActions={
-          bookkeeper.getUndoCount() > 0 && !isEditingLine
+          currentGameState === GameState.EditingLines
+            ? [
+                {
+                  label: 'Cancel',
+                  onClick: handleUndo,
+                  color: 'warning',
+                  variant: 'contained',
+                },
+              ]
+            : bookkeeper.getUndoCount() > 0 && !isEditingLine
             ? [
                 {
                   label: 'Undo Point',
