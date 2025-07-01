@@ -19,6 +19,7 @@ export enum GameState {
   FirstThrowQuebecVariant,
   Normal,
   AfterTurnover,
+  AfterPull,
 }
 
 export interface Event {
@@ -208,7 +209,7 @@ export class GameMethods {
     }
 
     if (lastEventType === EventType.PULL) {
-      return GameState.FirstThrowQuebecVariant;
+      return GameState.AfterPull;
     }
 
     if (lastEventType === EventType.PASS || lastEventType === EventType.DEFENSE) {

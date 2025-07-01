@@ -451,9 +451,9 @@ describe('Bookkeeper', () => {
     await bookkeeper.recordPull();
     expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
-    // After pickup - should be FirstThrowQuebecVariant
+    // After pickup - should be AfterPull
     await bookkeeper.recordFirstActor(PLAYER2, false);
-    expect(bookkeeper.gameState()).toBe(GameState.FirstThrowQuebecVariant);
+    expect(bookkeeper.gameState()).toBe(GameState.AfterPull);
 
     // After pass - should be Normal
     await bookkeeper.recordPass(PLAYER4);
