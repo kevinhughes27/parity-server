@@ -152,7 +152,6 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     // Always start editing lines mode (keeps current players for editing)
     // This works whether there's an active point or just selected players
     bookkeeper.startEditingLines();
-    bookkeeper.notifyListeners();
   };
 
   const handleEditRosters = async () => {
@@ -163,7 +162,6 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     // Force transition to edit rosters by setting error state temporarily
     // This is a temporary solution until we implement proper roster editing state
     bookkeeper.setError('editRosters'); // Use error state as a hack for now
-    bookkeeper.notifyListeners();
   };
 
   return (

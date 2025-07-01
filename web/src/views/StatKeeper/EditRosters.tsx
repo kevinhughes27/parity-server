@@ -73,7 +73,6 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     sortAndSetHomeRoster(bookkeeper.getHomeRoster());
     sortAndSetAwayRoster(bookkeeper.getAwayRoster());
     bookkeeper.setError(null); // Clear the editRosters hack
-    bookkeeper.notifyListeners();
   };
 
   if (loadingLeaguePlayers) {
