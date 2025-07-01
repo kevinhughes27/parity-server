@@ -3,7 +3,6 @@ import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography } from '@mui/material';
-import { EventType } from './gameLogic';
 
 const playerButtonStyles = {
   enabled: {
@@ -32,242 +31,7 @@ const playerButtonStyles = {
   },
 };
 
-const getPlayerButtonState = (
-  bookkeeper: Bookkeeper,
-  playerName: string,
-  isHomeTeam: boolean
-): {
-  enabled: boolean;
-  variant: 'active' | 'enabled' | 'disabled-no-possession' | 'not-on-line';
-  reason?: string;
-} => {
-  const isTeamInPossession = isHomeTeam === bookkeeper.homePossession;
-  const homePlayersOnActiveLine = bookkeeper.homePlayers || [];
-  const awayPlayersOnActiveLine = bookkeeper.awayPlayers || [];
-  const isPlayerOnActiveLine = isHomeTeam
-    ? homePlayersOnActiveLine.includes(playerName)
-    : awayPlayersOnActiveLine.includes(playerName);
 
-  // Bench
-  if (!isPlayerOnActiveLine) {
-    return {
-      enabled: false,
-      variant: 'not-on-line',
-      reason: 'Player not on active line',
-    };
-  }
-
-  const currentGameState = bookkeeper.gameState();
-  const isActivePlayer = bookkeeper.firstActor === playerName;
-  const isFirstPoint = bookkeeper.firstPoint();
-  const isFirstPointAfterHalftime = bookkeeper.firstPointAfterHalf();
-
-  // why does variant not imply a style...?
-  // also not sure we need reason although it is kind of interesting
-
-  // Special case: first point of game or after halftime, both teams can select who pulls
-  if (currentGameState === GameState.Start && (isFirstPoint || isFirstPointAfterHalftime)) {
-    return {
-      enabled: true,
-      variant: 'enabled',
-      reason: 'Select puller',
-    };
-  }
-
-  // Pull state.
-  // It is a bit weird, because only the pull button is enabled but if you think
-  // about it, it sort of sets up the proper workflow for stat keeping
-  if (currentGameState === GameState.Pull) {
-    return {
-      enabled: false,
-      variant: isActivePlayer ? 'active' : 'disabled-no-possession',
-      reason: 'Must click Pull or undo',
-    };
-  }
-
-  if (currentGameState === GameState.WhoPickedUpDisc) {
-    if (!isTeamInPossession) {
-      return {
-        enabled: false,
-        variant: 'disabled-no-possession',
-        reason: 'Other team picks up disc',
-      };
-    }
-    return {
-      enabled: true,
-      variant: isActivePlayer ? 'active' : 'enabled',
-      reason: 'Select player who picked up disc',
-    };
-  }
-
-  // When someone has the disc
-  if (bookkeeper.firstActor !== null) {
-    if (isTeamInPossession) {
-      if (isActivePlayer && bookkeeper.shouldRecordNewPass()) {
-        return {
-          enabled: false,
-          variant: 'active',
-          reason: 'Player has disc - use action buttons',
-        };
-      } else {
-        return {
-          enabled: true,
-          variant: isActivePlayer ? 'active' : 'enabled',
-          reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
-        };
-      }
-      // team not in possession
-    } else {
-      return {
-        enabled: false,
-        variant: 'disabled-no-possession',
-        reason: 'Other team has possession',
-      };
-    }
-  }
-
-  // this doesn't seem like the best way to represent.
-  // I think I need to pull the D state up explicitly
-  // Handle the team not in possesion simply
-
-  // Default case
-  if (!isTeamInPossession) {
-    return {
-      enabled: false,
-      variant: 'disabled-no-possession',
-      reason: 'Other team has possession',
-    };
-  }
-
-  return {
-    enabled: true,
-    variant: 'enabled',
-    reason: 'Available for selection',
-  };
-};
-
-const getActionButtonState = (
-  bookkeeper: Bookkeeper,
-  action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'
-): {
-  enabled: boolean;
-  reason?: string;
-} => {
-  const currentGameState = bookkeeper.gameState();
-
-  const canTurnover =
-    (currentGameState === GameState.Normal ||
-      currentGameState === GameState.FirstThrowQuebecVariant ||
-      currentGameState === GameState.AfterTurnover) &&
-    bookkeeper.firstActor !== null;
-
-  const isPickupAfterScore =
-    currentGameState === GameState.FirstThrowQuebecVariant &&
-    bookkeeper.activePoint?.getLastEventType() !== EventType.PULL;
-
-  const canDrop =
-    canTurnover &&
-    // Disable drop for picking up disc after a point (but not after a pull)
-    !isPickupAfterScore;
-
-  switch (action) {
-    case 'pull':
-      return {
-        enabled: currentGameState === GameState.Pull && bookkeeper.firstActor !== null,
-        reason:
-          currentGameState !== GameState.Pull
-            ? 'Not in pull state'
-            : bookkeeper.firstActor === null
-              ? 'No puller selected'
-              : undefined,
-      };
-
-    case 'point':
-      const activePoint = bookkeeper.activePoint;
-      let isFirstPass = false;
-      if (activePoint) {
-        const eventCount = activePoint.getEventCount();
-        const lastEvent = activePoint.getLastEvent();
-
-        if (lastEvent?.type === EventType.PASS) {
-          // Case 1: Point doesn't start with a pull. First event is a pass.
-          if (eventCount === 1 && !bookkeeper.firstPointOfGameOrHalf()) {
-            isFirstPass = true;
-          } else {
-            // Case 2: Point starts with a pull. The event before the pass is a pull.
-            const secondToLastEvent = activePoint.getSecondToLastEvent();
-            if (secondToLastEvent?.type === EventType.PULL) {
-              isFirstPass = true;
-            }
-          }
-        }
-      }
-
-      return {
-        enabled:
-          currentGameState === GameState.Normal && bookkeeper.firstActor !== null && !isFirstPass,
-        reason:
-          bookkeeper.firstActor === null
-            ? 'No player selected'
-            : currentGameState !== GameState.Normal
-              ? 'Cannot score in current state'
-              : isFirstPass
-                ? 'Cannot score on first pass'
-                : undefined,
-      };
-
-    case 'drop':
-      return {
-        enabled: canDrop,
-        reason:
-          bookkeeper.firstActor === null
-            ? 'No player selected'
-            : !canDrop
-              ? 'Cannot drop in current state'
-              : undefined,
-      };
-
-    case 'throwaway':
-      return {
-        enabled: canTurnover,
-        reason:
-          bookkeeper.firstActor === null
-            ? 'No player selected'
-            : 'Cannot throw away in current state',
-      };
-
-    case 'd':
-      return {
-        enabled: currentGameState === GameState.AfterTurnover && bookkeeper.firstActor !== null,
-        reason:
-          bookkeeper.firstActor === null
-            ? 'No player selected'
-            : currentGameState !== GameState.AfterTurnover
-              ? 'Can only get D after turnover'
-              : undefined,
-      };
-
-    case 'catchD':
-      return {
-        enabled: currentGameState === GameState.AfterTurnover && bookkeeper.firstActor !== null,
-        reason:
-          bookkeeper.firstActor === null
-            ? 'No player selected'
-            : currentGameState !== GameState.AfterTurnover
-              ? 'Can only get catch D after turnover'
-              : undefined,
-      };
-
-    case 'undo':
-      return {
-        enabled: bookkeeper.getUndoCount() > 0,
-        reason: bookkeeper.getUndoCount() === 0 ? 'No actions to undo' : undefined,
-      };
-
-    default:
-      return { enabled: false, reason: 'Unknown action' };
-  }
-};
 
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
@@ -318,7 +82,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
-    const buttonState = getPlayerButtonState(bookkeeper, playerName, isHomeTeamButton);
+    const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
     const buttonStyle = playerButtonStyles[buttonState.variant];
 
     return (
@@ -346,13 +110,13 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     );
   };
 
-  const pullState = getActionButtonState(bookkeeper, 'pull');
-  const pointState = getActionButtonState(bookkeeper, 'point');
-  const dropState = getActionButtonState(bookkeeper, 'drop');
-  const throwawayState = getActionButtonState(bookkeeper, 'throwaway');
-  const dState = getActionButtonState(bookkeeper, 'd');
-  const catchDState = getActionButtonState(bookkeeper, 'catchD');
-  const undoState = getActionButtonState(bookkeeper, 'undo');
+  const pullState = bookkeeper.getActionButtonState('pull');
+  const pointState = bookkeeper.getActionButtonState('point');
+  const dropState = bookkeeper.getActionButtonState('drop');
+  const throwawayState = bookkeeper.getActionButtonState('throwaway');
+  const dState = bookkeeper.getActionButtonState('d');
+  const catchDState = bookkeeper.getActionButtonState('catchD');
+  const undoState = bookkeeper.getActionButtonState('undo');
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>

@@ -7,7 +7,7 @@ import {
   leagues as apiLeagues,
 } from '../../api';
 import { type GameView } from './db';
-import { GameMethods, GameState, PointMethods } from './gameLogic';
+import { EventType, GameMethods, GameState, PointMethods } from './gameLogic';
 
 interface UploadedGamePayload {
   league_id: number;
@@ -422,6 +422,242 @@ export class Bookkeeper {
 
   public cancelEditingLines(): void {
     this.gameMethods.cancelEditingLines();
+  }
+
+  // UI State methods
+  public getPlayerButtonState(
+    playerName: string,
+    isHomeTeam: boolean
+  ): {
+    enabled: boolean;
+    variant: 'active' | 'enabled' | 'disabled-no-possession' | 'not-on-line';
+    reason?: string;
+  } {
+    const isTeamInPossession = isHomeTeam === this.homePossession;
+    const homePlayersOnActiveLine = this.homePlayers || [];
+    const awayPlayersOnActiveLine = this.awayPlayers || [];
+    const isPlayerOnActiveLine = isHomeTeam
+      ? homePlayersOnActiveLine.includes(playerName)
+      : awayPlayersOnActiveLine.includes(playerName);
+
+    // Bench
+    if (!isPlayerOnActiveLine) {
+      return {
+        enabled: false,
+        variant: 'not-on-line',
+        reason: 'Player not on active line',
+      };
+    }
+
+    const currentGameState = this.gameState();
+    const isActivePlayer = this.firstActor === playerName;
+    const isFirstPoint = this.firstPoint();
+    const isFirstPointAfterHalftime = this.firstPointAfterHalf();
+
+    // why does variant not imply a style...?
+    // also not sure we need reason although it is kind of interesting
+
+    // Special case: first point of game or after halftime, both teams can select who pulls
+    if (currentGameState === GameState.Start && (isFirstPoint || isFirstPointAfterHalftime)) {
+      return {
+        enabled: true,
+        variant: 'enabled',
+        reason: 'Select puller',
+      };
+    }
+
+    // Pull state.
+    // It is a bit weird, because only the pull button is enabled but if you think
+    // about it, it sort of sets up the proper workflow for stat keeping
+    if (currentGameState === GameState.Pull) {
+      return {
+        enabled: false,
+        variant: isActivePlayer ? 'active' : 'disabled-no-possession',
+        reason: 'Must click Pull or undo',
+      };
+    }
+
+    if (currentGameState === GameState.WhoPickedUpDisc) {
+      if (!isTeamInPossession) {
+        return {
+          enabled: false,
+          variant: 'disabled-no-possession',
+          reason: 'Other team picks up disc',
+        };
+      }
+      return {
+        enabled: true,
+        variant: isActivePlayer ? 'active' : 'enabled',
+        reason: 'Select player who picked up disc',
+      };
+    }
+
+    // When someone has the disc
+    if (this.firstActor !== null) {
+      if (isTeamInPossession) {
+        if (isActivePlayer && this.shouldRecordNewPass()) {
+          return {
+            enabled: false,
+            variant: 'active',
+            reason: 'Player has disc - use action buttons',
+          };
+        } else {
+          return {
+            enabled: true,
+            variant: isActivePlayer ? 'active' : 'enabled',
+            reason: isActivePlayer ? 'Player has disc' : 'Select pass target',
+          };
+        }
+        // team not in possession
+      } else {
+        return {
+          enabled: false,
+          variant: 'disabled-no-possession',
+          reason: 'Other team has possession',
+        };
+      }
+    }
+
+    // this doesn't seem like the best way to represent.
+    // I think I need to pull the D state up explicitly
+    // Handle the team not in possesion simply
+
+    // Default case
+    if (!isTeamInPossession) {
+      return {
+        enabled: false,
+        variant: 'disabled-no-possession',
+        reason: 'Other team has possession',
+      };
+    }
+
+    return {
+      enabled: true,
+      variant: 'enabled',
+      reason: 'Available for selection',
+    };
+  }
+
+  public getActionButtonState(
+    action: 'pull' | 'point' | 'drop' | 'throwaway' | 'd' | 'catchD' | 'undo'
+  ): {
+    enabled: boolean;
+    reason?: string;
+  } {
+    const currentGameState = this.gameState();
+
+    const canTurnover =
+      (currentGameState === GameState.Normal ||
+        currentGameState === GameState.FirstThrowQuebecVariant ||
+        currentGameState === GameState.AfterTurnover) &&
+      this.firstActor !== null;
+
+    const isPickupAfterScore =
+      currentGameState === GameState.FirstThrowQuebecVariant &&
+      this.activePoint?.getLastEventType() !== EventType.PULL;
+
+    const canDrop =
+      canTurnover &&
+      // Disable drop for picking up disc after a point (but not after a pull)
+      !isPickupAfterScore;
+
+    switch (action) {
+      case 'pull':
+        return {
+          enabled: currentGameState === GameState.Pull && this.firstActor !== null,
+          reason:
+            currentGameState !== GameState.Pull
+              ? 'Not in pull state'
+              : this.firstActor === null
+                ? 'No puller selected'
+                : undefined,
+        };
+
+      case 'point':
+        const activePoint = this.activePoint;
+        let isFirstPass = false;
+        if (activePoint) {
+          const eventCount = activePoint.getEventCount();
+          const lastEvent = activePoint.getLastEvent();
+
+          if (lastEvent?.type === EventType.PASS) {
+            // Case 1: Point doesn't start with a pull. First event is a pass.
+            if (eventCount === 1 && !this.firstPointOfGameOrHalf()) {
+              isFirstPass = true;
+            } else {
+              // Case 2: Point starts with a pull. The event before the pass is a pull.
+              const secondToLastEvent = activePoint.getSecondToLastEvent();
+              if (secondToLastEvent?.type === EventType.PULL) {
+                isFirstPass = true;
+              }
+            }
+          }
+        }
+
+        return {
+          enabled:
+            currentGameState === GameState.Normal && this.firstActor !== null && !isFirstPass,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.Normal
+                ? 'Cannot score in current state'
+                : isFirstPass
+                  ? 'Cannot score on first pass'
+                  : undefined,
+        };
+
+      case 'drop':
+        return {
+          enabled: canDrop,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : !canDrop
+                ? 'Cannot drop in current state'
+                : undefined,
+        };
+
+      case 'throwaway':
+        return {
+          enabled: canTurnover,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : 'Cannot throw away in current state',
+        };
+
+      case 'd':
+        return {
+          enabled: currentGameState === GameState.AfterTurnover && this.firstActor !== null,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.AfterTurnover
+                ? 'Can only get D after turnover'
+                : undefined,
+        };
+
+      case 'catchD':
+        return {
+          enabled: currentGameState === GameState.AfterTurnover && this.firstActor !== null,
+          reason:
+            this.firstActor === null
+              ? 'No player selected'
+              : currentGameState !== GameState.AfterTurnover
+                ? 'Can only get catch D after turnover'
+                : undefined,
+        };
+
+      case 'undo':
+        return {
+          enabled: this.getUndoCount() > 0,
+          reason: this.getUndoCount() === 0 ? 'No actions to undo' : undefined,
+        };
+
+      default:
+        return { enabled: false, reason: 'Unknown action' };
+    }
   }
 
   // Point display methods
