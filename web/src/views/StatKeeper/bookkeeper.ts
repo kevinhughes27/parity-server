@@ -664,6 +664,10 @@ export class Bookkeeper {
     }
   }
 
+  public getAPIPayload(): UploadedGamePayload {
+    return this.transformForAPI();
+  }
+
   // Point display methods
   public getCurrentPointPrettyPrint(): string[] {
     return this.activePoint?.prettyPrint() || [];
