@@ -18,8 +18,7 @@ export enum GameState {
   WhoPickedUpDisc,
   FirstThrowQuebecVariant,
   Normal,
-  FirstD,
-  SecondD,
+  AfterTurnover,
 }
 
 export interface Event {
@@ -165,12 +164,10 @@ export class GameMethods {
   gameState(): GameState {
     const activePointMethods = this.getActivePointMethods();
 
-    // Check if we're explicitly editing lines (mid-point line change)
     if (this.game.isEditingLines) {
       return GameState.EditingLines;
     }
 
-    // If no players are selected, we're in line selection mode
     if (this.game.homePlayers === null || this.game.awayPlayers === null) {
       return GameState.SelectingLines;
     }
@@ -183,81 +180,38 @@ export class GameMethods {
     const lastEventType = activePointMethods.getLastEventType();
 
     if (eventCount === 0) {
-      // New point, no events yet
       if (this.game.firstActor === null) {
-        // Waiting for player to initiate
-        if (this.firstPointOfGameOrHalf()) {
-          return GameState.Start; // Select puller (both teams enabled after halftime)
-        } else {
-          return GameState.WhoPickedUpDisc; // Receiving team picks up
-        }
+        return this.firstPointOfGameOrHalf() ? GameState.Start : GameState.WhoPickedUpDisc;
       } else {
-        // Player selected, ready for first action
-        if (this.firstPointOfGameOrHalf()) {
-          return GameState.Pull; // Puller selected, ready to pull
-        } else {
-          return GameState.FirstThrowQuebecVariant; // Player picked up, ready for first throw
-        }
+        return this.firstPointOfGameOrHalf() ? GameState.Pull : GameState.FirstThrowQuebecVariant;
       }
     }
 
     // Point has events from here
 
+    if (this.game.firstActor === null) {
+      // Disc is loose after pull, turnover, or block
+      return GameState.WhoPickedUpDisc;
+    }
+
+    // Player has possession
+    if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP) {
+      return GameState.AfterTurnover;
+    }
+
     if (lastEventType === EventType.PULL) {
-      if (this.game.firstActor === null) return GameState.WhoPickedUpDisc; // Pull in air/landed
-      // If firstActor is set after a PULL, it means they picked up the pull.
       return GameState.FirstThrowQuebecVariant;
     }
 
-    // Logic for states when firstActor is set vs. null, after the initial events (pull/pickup)
-    if (this.game.firstActor === null) {
-      // Disc is loose or action just completed that made it loose
-      if (
-        lastEventType === EventType.THROWAWAY ||
-        lastEventType === EventType.DROP ||
-        lastEventType === EventType.DEFENSE
-      ) {
-        // After a turnover (Throwaway, Drop) or a D (where disc is loose, not a catch D),
-        // the new offense needs to pick up the disc.
-        return GameState.WhoPickedUpDisc;
-      }
-      // Fallback for other cases where firstActor might be null with events.
-      // This could happen if an undo operation leads to an unexpected state.
-      console.warn(
-        'GameState: firstActor is null with events, but not a standard turnover/D/pull state. Defaulting to WhoPickedUpDisc.'
-      );
-      return GameState.WhoPickedUpDisc;
-    } else {
-      // firstActor is set (player has the disc)
-
-      // Case 1: Disc was turned over (Throwaway/Drop by OTHER team), and THIS player (firstActor) picked it up.
-      // This is the "First D" opportunity. Player can throw, or make an immediate D.
-      if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP) {
-        return GameState.FirstD;
-      }
-
-      // Case 2: A D just occurred (last event was DEFENSE), and THIS player (firstActor) now has the disc.
-      // This could be because they made a catch D, or picked up after a block by self/teammate.
-      // This is the "Second D" opportunity. Player can throw, or make another D.
-      if (lastEventType === EventType.DEFENSE) {
-        return GameState.SecondD;
-      }
-
-      // Case 3: Player has the disc after a pass.
-      // (Picking up a pull is handled by eventCount=0 or lastEvent=PULL logic above).
-      // This is normal ongoing play.
-      if (lastEventType === EventType.PASS) {
-        return GameState.Normal;
-      }
-
-      // Fallback for any other combination where firstActor is set and point has events.
-      // This might include scenarios like the very first throw of a point if not covered by FirstThrowQuebecVariant,
-      // or if an undo leads to an unusual state.
-      console.warn(
-        `GameState: Unhandled state with firstActor=${this.game.firstActor}, lastEvent=${lastEventType}. Defaulting to Normal.`
-      );
+    if (lastEventType === EventType.PASS || lastEventType === EventType.DEFENSE) {
       return GameState.Normal;
     }
+
+    // Fallback
+    console.warn(
+      `GameState: Unhandled state with firstActor=${this.game.firstActor}, lastEvent=${lastEventType}. Defaulting to Normal.`
+    );
+    return GameState.Normal;
   }
 
   shouldRecordNewPass(): boolean {

@@ -155,19 +155,20 @@ const getActionButtonState = (
 } => {
   const currentGameState = bookkeeper.gameState();
 
-  // wat
-  const canDrop =
+  const canTurnover =
     (currentGameState === GameState.Normal ||
       currentGameState === GameState.FirstThrowQuebecVariant ||
-      currentGameState === GameState.FirstD ||
-      currentGameState === GameState.SecondD) &&
-    bookkeeper.firstActor !== null &&
+      currentGameState === GameState.AfterTurnover) &&
+    bookkeeper.firstActor !== null;
+
+  const isPickupAfterScore =
+    currentGameState === GameState.FirstThrowQuebecVariant &&
+    bookkeeper.activePoint?.getLastEventType() !== EventType.PULL;
+
+  const canDrop =
+    canTurnover &&
     // Disable drop for picking up disc after a point (but not after a pull)
-    !(
-      bookkeeper.activePoint?.getEventCount() === 0 &&
-      !bookkeeper.firstPointOfGameOrHalf() &&
-      bookkeeper.activePoint?.getLastEventType() !== EventType.PULL
-    );
+    !isPickupAfterScore;
 
   switch (action) {
     case 'pull':
@@ -181,16 +182,13 @@ const getActionButtonState = (
               : undefined,
       };
 
-    // so this is where the quebec variant should be checked and this button disabled
     case 'point':
       return {
-        enabled:
-          (currentGameState === GameState.Normal || currentGameState === GameState.SecondD) &&
-          bookkeeper.firstActor !== null,
+        enabled: currentGameState === GameState.Normal && bookkeeper.firstActor !== null,
         reason:
           bookkeeper.firstActor === null
             ? 'No player selected'
-            : currentGameState !== GameState.Normal && currentGameState !== GameState.SecondD
+            : currentGameState !== GameState.Normal
               ? 'Cannot score in current state'
               : undefined,
       };
@@ -208,12 +206,7 @@ const getActionButtonState = (
 
     case 'throwaway':
       return {
-        enabled:
-          (currentGameState === GameState.Normal ||
-            currentGameState === GameState.FirstThrowQuebecVariant ||
-            currentGameState === GameState.FirstD ||
-            currentGameState === GameState.SecondD) &&
-          bookkeeper.firstActor !== null,
+        enabled: canTurnover,
         reason:
           bookkeeper.firstActor === null
             ? 'No player selected'
@@ -222,27 +215,23 @@ const getActionButtonState = (
 
     case 'd':
       return {
-        enabled:
-          bookkeeper.firstActor !== null &&
-          (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+        enabled: currentGameState === GameState.AfterTurnover && bookkeeper.firstActor !== null,
         reason:
           bookkeeper.firstActor === null
             ? 'No player selected'
-            : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
-              ? 'Can only get D after turnover or another D'
+            : currentGameState !== GameState.AfterTurnover
+              ? 'Can only get D after turnover'
               : undefined,
       };
 
     case 'catchD':
       return {
-        enabled:
-          bookkeeper.firstActor !== null &&
-          (currentGameState === GameState.FirstD || currentGameState === GameState.SecondD),
+        enabled: currentGameState === GameState.AfterTurnover && bookkeeper.firstActor !== null,
         reason:
           bookkeeper.firstActor === null
             ? 'No player selected'
-            : currentGameState !== GameState.FirstD && currentGameState !== GameState.SecondD
-              ? 'Can only get catch D after turnover or another D'
+            : currentGameState !== GameState.AfterTurnover
+              ? 'Can only get catch D after turnover'
               : undefined,
       };
 

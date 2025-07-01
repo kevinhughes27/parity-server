@@ -802,8 +802,8 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     # catch d is now disabled
     # This is the bug right here.
     # you are currently allowed to loop record D's and Catch D's
-    # expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
-    # expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+    expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
     # a callahan is possible from a catch d
     expect(page.get_by_role("button", name="point!")).to_be_enabled()
