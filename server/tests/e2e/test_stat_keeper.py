@@ -563,16 +563,16 @@ def test_undo(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
 
     # undo point
-    page.get_by_role("button", name="Point!").click()
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford scored!")
-    page.get_by_role("button", name="Undo Point").click()
-    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford scored!")
-
-    # finish point
+    # first we need another pass.
     page.get_by_role("button", name="Owen Lumley").click()
     page.get_by_role("button", name="Point!").click()
+    expect(page.get_by_role("list")).to_contain_text("Owen Lumley scored!")
+    page.get_by_role("button", name="Undo Point").click()
+    expect(page.get_by_role("list")).not_to_contain_text("Owen Lumley scored!")
 
-    page.get_by_role("button", name="Kevin Barford").click()
+    # finish point
+    page.get_by_role("button", name="Point!").click()
+
     play_by_play = "".join(
         [
             "1.Brian Kells pulled",
@@ -854,6 +854,8 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Pull").click()
 
     # first point
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Ashlin Kelly").click()
     page.get_by_role("button", name="Brian Kells").click()
     page.get_by_role("button", name="Ashlin Kelly").click()
     page.get_by_role("button", name="Point!").click()
@@ -1261,12 +1263,13 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # after undo play by play
     expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
-    # this fails because we still push a sub undo stack.
     expect(page.get_by_role("list")).not_to_contain_text(
         "2.Owen Lumley passed to Heather McCabe"
     )
 
     # resume stats
+    page.get_by_role("button", name="Kyle Sprysa").click()
+    page.get_by_role("button", name="Heather McCabe").click()
     page.get_by_role("button", name="Kyle Sprysa").click()
     page.get_by_role("button", name="Point!").click()
 
