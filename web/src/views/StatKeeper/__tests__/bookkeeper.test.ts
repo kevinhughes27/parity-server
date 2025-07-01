@@ -463,17 +463,17 @@ describe('Bookkeeper', () => {
     await bookkeeper.recordThrowAway();
     expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
-    // After pickup following turnover - should be FirstD
+    // After pickup following turnover - should be AfterTurnover
     await bookkeeper.recordFirstActor(PLAYER1, true);
-    expect(bookkeeper.gameState()).toBe(GameState.FirstD);
+    expect(bookkeeper.gameState()).toBe(GameState.AfterTurnover);
 
     // After D - should be WhoPickedUpDisc again
     await bookkeeper.recordD();
     expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
 
-    // After pickup following D - should be SecondD
+    // After pickup following D - should be Normal (no more D opportunity)
     await bookkeeper.recordFirstActor(PLAYER2, false);
-    expect(bookkeeper.gameState()).toBe(GameState.SecondD);
+    expect(bookkeeper.gameState()).toBe(GameState.Normal);
   });
 
   test('should handle multiple undos in sequence', async () => {
