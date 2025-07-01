@@ -397,10 +397,12 @@ export class Bookkeeper {
 
   public setError(error: string | null): void {
     this.gameMethods.setError(error);
+    this.notifyListeners();
   }
 
   public startEditingLines(): void {
     this.gameMethods.startEditingLines();
+    this.notifyListeners();
   }
 
   public cancelEditingLines(): void {
