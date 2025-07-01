@@ -183,37 +183,14 @@ const getActionButtonState = (
       };
 
     case 'point':
-      const activePoint = bookkeeper.activePoint;
-      let isFirstPass = false;
-      if (activePoint) {
-        const eventCount = activePoint.getEventCount();
-        const lastEvent = activePoint.getLastEvent();
-
-        if (lastEvent?.type === EventType.PASS) {
-          // Case 1: Point doesn't start with a pull. First event is a pass.
-          if (eventCount === 1 && !bookkeeper.firstPointOfGameOrHalf()) {
-            isFirstPass = true;
-          } else {
-            // Case 2: Point starts with a pull. The event before the pass is a pull.
-            const secondToLastEvent = activePoint.getSecondToLastEvent();
-            if (secondToLastEvent?.type === EventType.PULL) {
-              isFirstPass = true;
-            }
-          }
-        }
-      }
-
       return {
-        enabled:
-          currentGameState === GameState.Normal && bookkeeper.firstActor !== null && !isFirstPass,
+        enabled: currentGameState === GameState.Normal && bookkeeper.firstActor !== null,
         reason:
           bookkeeper.firstActor === null
             ? 'No player selected'
             : currentGameState !== GameState.Normal
               ? 'Cannot score in current state'
-              : isFirstPass
-                ? 'Cannot score on first pass'
-                : undefined,
+              : undefined,
       };
 
     case 'drop':
