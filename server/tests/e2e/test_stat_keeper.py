@@ -230,7 +230,7 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
     assert stats["Kevin Barford"]["goals"] == 1
 
 
-def test_turnovers(server, league, rosters, page: Page) -> None:
+def test_throwaway(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
@@ -619,6 +619,51 @@ def test_undo(server, league, rosters, page: Page) -> None:
     assert stats["Kirsten Querbach"]["goals"] == 1
 
 
+def test_undo_pull(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # select player
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Undo").click()
+
+    # at the begining again. nothing more to undo
+    expect(page.get_by_role("button", name="Undo")).to_be_disabled()
+
+    # select player (opposite team as before now) and pull
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+
+    # receive
+    page.get_by_role("button", name="Owen Lumley").click()
+
+    # undo twice
+    page.get_by_role("button", name="Undo").click()
+    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+
+    page.get_by_role("button", name="Undo").click()
+    expect(page.locator("#root")).not_to_contain_text("1.Brian Kells pulled")
+
+    # pull again
+    page.get_by_role("button", name="Pull").click()
+    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+
+
 def test_button_states(server, league, rosters, page: Page) -> None:
     # coverage for this logic is sprinkled around in other tests as well
     # it is still nice to have one test explicitly focusing on this
@@ -659,15 +704,15 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="Throwaway")).to_be_disabled()
     expect(page.get_by_role("button", name="D (Block)")).to_be_disabled()
     expect(page.get_by_role("button", name="Catch D")).to_be_disabled()
-    expect(
-        page.get_by_role("button", name="Undo")
-    ).to_be_disabled()  # nothing has happened yet
+    # nothing has happened yet. nothing to undo
+    expect(page.get_by_role("button", name="Undo")).to_be_disabled()
 
     # player is chosen
     # away is pulling
     page.get_by_role("button", name="Owen Lumley").click()
     expect_players_disabled(page, home_line)
     expect_players_disabled(page, away_line)
+    # only pull and undo enabled
     expect(page.get_by_role("button", name="Pull")).to_be_enabled()
     expect(page.get_by_role("button", name="Point!")).to_be_disabled()
     expect(page.get_by_role("button", name="Drop")).to_be_disabled()
@@ -676,7 +721,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="Catch D")).to_be_disabled()
     expect(page.get_by_role("button", name="Undo")).to_be_enabled()
 
-    # Pull has to be next (or undo)
+    # pull has to be next (or undo)
     page.get_by_role("button", name="Pull").click()
     expect_players_enabled(page, home_line)
     expect_players_disabled(page, away_line)
@@ -688,6 +733,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
     # player receives the pull or picks it up
+    # they can drop it or throw it away
     page.get_by_role("button", name="Brian Kells").click()
     expect_players_enabled(page, [p for p in home_line if p != "Brian Kells"])
     expect_players_disabled(page, away_line)
@@ -699,6 +745,8 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
     # pass
+    # point shouldn't be available here should it? first pass rule? current app probably allows though
+    # maybe something to tweak later
     page.get_by_role("button", name="Ashlin Kelly").click()
     expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
     expect_players_disabled(page, away_line)
@@ -721,14 +769,16 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
     # player is selected next then a D or Catch D can be recorded or not for a pick up
+    # a player is technically able to drop it although it would be rare. this would
+    # result in an immediate turnover with the only offense recording being a drop
+    #
+    # in this case we proceed with a pick-up from a plain throwaway
     page.get_by_role("button", name="Owen Lumley").click()
     expect_players_disabled(page, home_line)
     expect_players_enabled(page, [p for p in away_line if p != "Owen Lumley"])
     expect(page.get_by_role("button", name="pull")).to_be_disabled()
     expect(page.get_by_role("button", name="point!")).to_be_disabled()
-    expect(
-        page.get_by_role("button", name="drop")
-    ).to_be_enabled()  # ToDo the player who picks it up should not be able to drop it
+    expect(page.get_by_role("button", name="drop")).to_be_enabled()
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
     expect(page.get_by_role("button", name="d (block)")).to_be_enabled()
     expect(page.get_by_role("button", name="catch d")).to_be_enabled()
@@ -742,9 +792,21 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
-    # undo pass, make it a catch d to show callahan button state
+    # undo pass, make it a catch d
     page.get_by_role("button", name="Undo").click()
     page.get_by_role("button", name="Catch D").click()
+
+    # can pass
+    expect_players_disabled(page, home_line)
+    expect_players_enabled(page, [p for p in away_line if p != "Owen Lumley"])
+
+    # catch d is now disabled
+    # This is the bug right here.
+    # you are currently allowed to loop record D's and Catch D's
+    # expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
+    # expect(page.get_by_role("button", name="catch d")).to_be_disabled()
+
+    # a callahan is possible from a catch d
     expect(page.get_by_role("button", name="point!")).to_be_enabled()
     page.get_by_role("button", name="Point!").click()
 
@@ -812,6 +874,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     start_point(page)
 
     # after half state (both teams enabled)
+    # ideally it should force the correct team to pull after half
     expect_players_enabled(page, home_line)
     expect_players_enabled(page, away_line)
 
