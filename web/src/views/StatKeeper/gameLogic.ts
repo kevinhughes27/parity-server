@@ -69,6 +69,14 @@ export class PointMethods {
     return mapApiEventToEvent(lastApiEvent);
   }
 
+  getSecondToLastEvent(): Event | null {
+    if (this.point.events.length < 2) {
+      return null;
+    }
+    const secondToLastApiEvent = this.point.events[this.point.events.length - 2];
+    return mapApiEventToEvent(secondToLastApiEvent);
+  }
+
   getLastEventType(): EventType | null {
     const lastEvent = this.getLastEvent();
     return lastEvent ? lastEvent.type : null;
