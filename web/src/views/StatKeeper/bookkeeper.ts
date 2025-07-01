@@ -565,12 +565,13 @@ export class Bookkeeper {
     const isNormalState = currentGameState === GameState.Normal;
     const isAfterTurnoverState = currentGameState === GameState.AfterTurnover;
     const isFirstThrowQuebec = currentGameState === GameState.FirstThrowQuebecVariant;
+    const isAfterPullState = currentGameState === GameState.AfterPull;
 
     // Complex conditions
     const canTurnover =
-      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState) && hasFirstActor;
-    const isPickupAfterScore =
-      isFirstThrowQuebec && this.activePoint?.getLastEventType() !== EventType.PULL;
+      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState || isAfterPullState) &&
+      hasFirstActor;
+    const isPickupAfterScore = isFirstThrowQuebec;
     const canDrop = canTurnover && !isPickupAfterScore;
     const isFirstPass = this._isFirstPass();
     const canUndo = this.getUndoCount() > 0;
