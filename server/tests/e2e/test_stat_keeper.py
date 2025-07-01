@@ -745,8 +745,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
     # pass
-    # point shouldn't be available here should it? first pass rule? current app probably allows though
-    # maybe something to tweak later
+    # point shouldn't be available here (QuebecVariant)
     page.get_by_role("button", name="Ashlin Kelly").click()
     expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
     expect_players_disabled(page, away_line)

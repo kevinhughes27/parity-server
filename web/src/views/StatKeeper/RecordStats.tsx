@@ -181,6 +181,7 @@ const getActionButtonState = (
               : undefined,
       };
 
+    // so this is where the quebec variant should be checked and this button disabled
     case 'point':
       return {
         enabled:
