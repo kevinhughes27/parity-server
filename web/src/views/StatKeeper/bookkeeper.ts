@@ -424,6 +424,33 @@ export class Bookkeeper {
     this.gameMethods.cancelEditingLines();
   }
 
+  private _isFirstPass(): boolean {
+    const activePoint = this.activePoint;
+    if (!activePoint) {
+      return false;
+    }
+
+    const eventCount = activePoint.getEventCount();
+    const lastEvent = activePoint.getLastEvent();
+
+    if (lastEvent?.type !== EventType.PASS) {
+      return false;
+    }
+
+    // Case 1: Point doesn't start with a pull. First event is a pass.
+    if (eventCount === 1 && !this.firstPointOfGameOrHalf()) {
+      return true;
+    }
+
+    // Case 2: Point starts with a pull. The event before the pass is a pull.
+    const secondToLastEvent = activePoint.getSecondToLastEvent();
+    if (secondToLastEvent?.type === EventType.PULL) {
+      return true;
+    }
+
+    return false;
+  }
+
   // UI State methods
   public getPlayerButtonState(
     playerName: string,
@@ -545,62 +572,51 @@ export class Bookkeeper {
     reason?: string;
   } {
     const currentGameState = this.gameState();
+    const hasFirstActor = this.firstActor !== null;
 
+    // State-based conditions
+    const isPullState = currentGameState === GameState.Pull;
+    const isNormalState = currentGameState === GameState.Normal;
+    const isAfterTurnoverState = currentGameState === GameState.AfterTurnover;
+    const isFirstThrowQuebec = currentGameState === GameState.FirstThrowQuebecVariant;
+
+    // Complex conditions
     const canTurnover =
-      (currentGameState === GameState.Normal ||
-        currentGameState === GameState.FirstThrowQuebecVariant ||
-        currentGameState === GameState.AfterTurnover) &&
-      this.firstActor !== null;
-
+      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState) && hasFirstActor;
     const isPickupAfterScore =
-      currentGameState === GameState.FirstThrowQuebecVariant &&
-      this.activePoint?.getLastEventType() !== EventType.PULL;
+      isFirstThrowQuebec && this.activePoint?.getLastEventType() !== EventType.PULL;
+    const canDrop = canTurnover && !isPickupAfterScore;
+    const isFirstPass = this._isFirstPass();
+    const canUndo = this.getUndoCount() > 0;
 
-    const canDrop =
-      canTurnover &&
-      // Disable drop for picking up disc after a point (but not after a pull)
-      !isPickupAfterScore;
+    // Action-specific enabled states
+    const pullEnabled = isPullState && hasFirstActor;
+    const pointEnabled = isNormalState && hasFirstActor && !isFirstPass;
+    const dropEnabled = canDrop;
+    const throwawayEnabled = canTurnover;
+    const dEnabled = isAfterTurnoverState && hasFirstActor;
+    const catchDEnabled = isAfterTurnoverState && hasFirstActor;
+    const undoEnabled = canUndo;
 
     switch (action) {
       case 'pull':
         return {
-          enabled: currentGameState === GameState.Pull && this.firstActor !== null,
+          enabled: pullEnabled,
           reason:
-            currentGameState !== GameState.Pull
+            !isPullState
               ? 'Not in pull state'
-              : this.firstActor === null
+              : !hasFirstActor
                 ? 'No puller selected'
                 : undefined,
         };
 
       case 'point':
-        const activePoint = this.activePoint;
-        let isFirstPass = false;
-        if (activePoint) {
-          const eventCount = activePoint.getEventCount();
-          const lastEvent = activePoint.getLastEvent();
-
-          if (lastEvent?.type === EventType.PASS) {
-            // Case 1: Point doesn't start with a pull. First event is a pass.
-            if (eventCount === 1 && !this.firstPointOfGameOrHalf()) {
-              isFirstPass = true;
-            } else {
-              // Case 2: Point starts with a pull. The event before the pass is a pull.
-              const secondToLastEvent = activePoint.getSecondToLastEvent();
-              if (secondToLastEvent?.type === EventType.PULL) {
-                isFirstPass = true;
-              }
-            }
-          }
-        }
-
         return {
-          enabled:
-            currentGameState === GameState.Normal && this.firstActor !== null && !isFirstPass,
+          enabled: pointEnabled,
           reason:
-            this.firstActor === null
+            !hasFirstActor
               ? 'No player selected'
-              : currentGameState !== GameState.Normal
+              : !isNormalState
                 ? 'Cannot score in current state'
                 : isFirstPass
                   ? 'Cannot score on first pass'
@@ -609,50 +625,52 @@ export class Bookkeeper {
 
       case 'drop':
         return {
-          enabled: canDrop,
+          enabled: dropEnabled,
           reason:
-            this.firstActor === null
+            !hasFirstActor
               ? 'No player selected'
-              : !canDrop
+              : !dropEnabled
                 ? 'Cannot drop in current state'
                 : undefined,
         };
 
       case 'throwaway':
         return {
-          enabled: canTurnover,
+          enabled: throwawayEnabled,
           reason:
-            this.firstActor === null
+            !hasFirstActor
               ? 'No player selected'
-              : 'Cannot throw away in current state',
+              : !throwawayEnabled
+                ? 'Cannot throw away in current state'
+                : undefined,
         };
 
       case 'd':
         return {
-          enabled: currentGameState === GameState.AfterTurnover && this.firstActor !== null,
+          enabled: dEnabled,
           reason:
-            this.firstActor === null
+            !hasFirstActor
               ? 'No player selected'
-              : currentGameState !== GameState.AfterTurnover
+              : !isAfterTurnoverState
                 ? 'Can only get D after turnover'
                 : undefined,
         };
 
       case 'catchD':
         return {
-          enabled: currentGameState === GameState.AfterTurnover && this.firstActor !== null,
+          enabled: catchDEnabled,
           reason:
-            this.firstActor === null
+            !hasFirstActor
               ? 'No player selected'
-              : currentGameState !== GameState.AfterTurnover
+              : !isAfterTurnoverState
                 ? 'Can only get catch D after turnover'
                 : undefined,
         };
 
       case 'undo':
         return {
-          enabled: this.getUndoCount() > 0,
-          reason: this.getUndoCount() === 0 ? 'No actions to undo' : undefined,
+          enabled: undoEnabled,
+          reason: !undoEnabled ? 'No actions to undo' : undefined,
         };
 
       default:
