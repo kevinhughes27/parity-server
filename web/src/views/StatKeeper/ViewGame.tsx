@@ -29,7 +29,7 @@ function TopBar({
   onDownloadJson: () => void;
   onResync: () => void;
 }) {
-  const apiPayload = bookkeeper.transformForAPI();
+  const apiPayload = bookkeeper.getAPIPayload();
   const gameStatus = bookkeeper.getGameStatus();
 
   return (
@@ -118,7 +118,7 @@ function ViewGame({ bookkeeper }: ViewGameProps) {
   const [resyncMessage, setResyncMessage] = useState<string | null>(null);
 
   const handleDownloadJson = () => {
-    const apiPayload = bookkeeper.transformForAPI();
+    const apiPayload = bookkeeper.getAPIPayload();
     const jsonString = JSON.stringify(apiPayload, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -153,7 +153,7 @@ function ViewGame({ bookkeeper }: ViewGameProps) {
 
   const gameStatus = bookkeeper.getGameStatus();
   const canResync = gameStatus === 'sync-error';
-  const apiPayload = bookkeeper.transformForAPI();
+  const apiPayload = bookkeeper.getAPIPayload();
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
