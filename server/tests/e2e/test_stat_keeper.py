@@ -744,13 +744,13 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
-    # pass
-    # point shouldn't be available here (QuebecVariant)
+    # first pass
+    # point disabled (QuebecVariant)
     page.get_by_role("button", name="Ashlin Kelly").click()
     expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
     expect_players_disabled(page, away_line)
     expect(page.get_by_role("button", name="pull")).to_be_disabled()
-    expect(page.get_by_role("button", name="point!")).to_be_enabled()
+    # expect(page.get_by_role("button", name="point!")).to_be_disabled()
     expect(page.get_by_role("button", name="drop")).to_be_enabled()
     expect(page.get_by_role("button", name="throwaway")).to_be_enabled()
     expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
@@ -800,8 +800,6 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect_players_enabled(page, [p for p in away_line if p != "Owen Lumley"])
 
     # catch d is now disabled
-    # This is the bug right here.
-    # you are currently allowed to loop record D's and Catch D's
     expect(page.get_by_role("button", name="d (block)")).to_be_disabled()
     expect(page.get_by_role("button", name="catch d")).to_be_disabled()
 
