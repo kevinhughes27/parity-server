@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bookkeeper, GameState } from './bookkeeper';
+import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { Box, Button, Typography } from '@mui/material';
