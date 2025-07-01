@@ -204,7 +204,7 @@ export class Bookkeeper {
     }
   }
 
-  public transformForAPI(): UploadedGamePayload {
+  private transformForAPI(): UploadedGamePayload {
     return {
       league_id: this.game.league_id,
       week: this.game.week,
@@ -228,21 +228,13 @@ export class Bookkeeper {
     return () => this.listeners.delete(listener);
   }
 
-  notifyListeners(): void {
+  private notifyListeners(): void {
     this.listeners.forEach(listener => listener());
   }
 
   get activePoint(): PointMethods | null {
     if (!this.game.activePoint) return null;
     return new PointMethods(this.game.activePoint);
-  }
-
-  set activePoint(pointMethods: PointMethods | null) {
-    if (pointMethods === null) {
-      this.game.activePoint = null;
-    } else {
-      this.game.activePoint = pointMethods.toJSON();
-    }
   }
 
   // Read-only getters for game state (components should not directly modify these)
@@ -267,12 +259,6 @@ export class Bookkeeper {
   get awayPlayers(): string[] | null {
     return this.game.awayPlayers;
   }
-  set homePlayers(value: string[] | null) {
-    this.game.homePlayers = value;
-  }
-  set awayPlayers(value: string[] | null) {
-    this.game.awayPlayers = value;
-  }
   get localError(): string | null {
     return this.game.localError;
   }
@@ -287,9 +273,6 @@ export class Bookkeeper {
 
   get lastPlayedLine(): { home: string[]; away: string[] } | null {
     return this.game.lastPlayedLine;
-  }
-  set lastPlayedLine(value: { home: string[]; away: string[] } | null) {
-    this.game.lastPlayedLine = value;
   }
 
   // Delegate common game state queries directly to the game
@@ -422,6 +405,7 @@ export class Bookkeeper {
 
   public cancelEditingLines(): void {
     this.gameMethods.cancelEditingLines();
+    this.notifyListeners();
   }
 
   private _isFirstPass(): boolean {
@@ -696,10 +680,6 @@ export class Bookkeeper {
   }
 
   // Convenience methods for React components
-
-  getLastPlayedLine(): { home: string[]; away: string[] } | null {
-    return this.lastPlayedLine;
-  }
 
   getHomeRoster(): string[] {
     return this.homeTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));

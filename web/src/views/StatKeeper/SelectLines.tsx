@@ -8,7 +8,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
   const isEditingLine =
     currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
-  const lastPlayedLine = bookkeeper.getLastPlayedLine();
+  const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
 
   // Memoize rosters to prevent infinite re-renders
@@ -92,7 +92,6 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     if (currentGameState === GameState.EditingLines) {
       // Cancel editing and return to previous state
       bookkeeper.cancelEditingLines();
-      bookkeeper.notifyListeners();
     } else {
       await bookkeeper.undo();
     }
