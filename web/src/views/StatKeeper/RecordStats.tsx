@@ -31,8 +31,6 @@ const playerButtonStyles = {
   },
 };
 
-
-
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
   const fullAwayRoster = bookkeeper.getAwayRoster();
