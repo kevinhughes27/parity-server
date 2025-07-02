@@ -20,6 +20,8 @@ dependencies = [
     "types-requests>=2.32.0.20250515",
     "ruff>=0.11.11",
     "pytest-mock>=3.14.0",
+    "playwright>=1.52.0",
+    "pytest-playwright>=0.7.0",
 ]
 
 [build-system]
