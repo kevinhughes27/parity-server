@@ -568,6 +568,7 @@ export class Bookkeeper {
     const isAfterPullState = currentGameState === GameState.AfterPull;
 
     // Complex conditions
+    // seems a bit off but tests are passing. I should be able to express this better
     const canTurnover =
       (isNormalState || isFirstThrowQuebec || isAfterTurnoverState || isAfterPullState) &&
       hasFirstActor;
@@ -589,69 +590,63 @@ export class Bookkeeper {
       case 'pull':
         return {
           enabled: pullEnabled,
-          reason:
-            !isPullState
-              ? 'Not in pull state'
-              : !hasFirstActor
-                ? 'No puller selected'
-                : undefined,
+          reason: !isPullState
+            ? 'Not in pull state'
+            : !hasFirstActor
+              ? 'No puller selected'
+              : undefined,
         };
 
       case 'point':
         return {
           enabled: pointEnabled,
-          reason:
-            !hasFirstActor
-              ? 'No player selected'
-              : !isNormalState
-                ? 'Cannot score in current state'
-                : isFirstPass
-                  ? 'Cannot score on first pass'
-                  : undefined,
+          reason: !hasFirstActor
+            ? 'No player selected'
+            : !isNormalState
+              ? 'Cannot score in current state'
+              : isFirstPass
+                ? 'Cannot score on first pass'
+                : undefined,
         };
 
       case 'drop':
         return {
           enabled: dropEnabled,
-          reason:
-            !hasFirstActor
-              ? 'No player selected'
-              : !dropEnabled
-                ? 'Cannot drop in current state'
-                : undefined,
+          reason: !hasFirstActor
+            ? 'No player selected'
+            : !dropEnabled
+              ? 'Cannot drop in current state'
+              : undefined,
         };
 
       case 'throwaway':
         return {
           enabled: throwawayEnabled,
-          reason:
-            !hasFirstActor
-              ? 'No player selected'
-              : !throwawayEnabled
-                ? 'Cannot throw away in current state'
-                : undefined,
+          reason: !hasFirstActor
+            ? 'No player selected'
+            : !throwawayEnabled
+              ? 'Cannot throw away in current state'
+              : undefined,
         };
 
       case 'd':
         return {
           enabled: dEnabled,
-          reason:
-            !hasFirstActor
-              ? 'No player selected'
-              : !isAfterTurnoverState
-                ? 'Can only get D after turnover'
-                : undefined,
+          reason: !hasFirstActor
+            ? 'No player selected'
+            : !isAfterTurnoverState
+              ? 'Can only get D after turnover'
+              : undefined,
         };
 
       case 'catchD':
         return {
           enabled: catchDEnabled,
-          reason:
-            !hasFirstActor
-              ? 'No player selected'
-              : !isAfterTurnoverState
-                ? 'Can only get catch D after turnover'
-                : undefined,
+          reason: !hasFirstActor
+            ? 'No player selected'
+            : !isAfterTurnoverState
+              ? 'Can only get catch D after turnover'
+              : undefined,
         };
 
       case 'undo':
