@@ -19,9 +19,7 @@ def edit_game(client, league, game_id, data_file):
 
     game = json.loads(game_str)
 
-    response = client.post(
-        f"/api/{league.id}/games/{game_id}", json=game, auth=("admin", "testpw")
-    )
+    response = client.post(f"/api/{league.id}/games/{game_id}", json=game, auth=("admin", "testpw"))
     assert response.status_code == 200, response.json()
     assert response.text == '"OK"'
 
@@ -55,9 +53,7 @@ def test_delete(client, league, rosters, monkeypatch, snapshot):
     monkeypatch.setenv("PARITY_EDIT_PASSWORD", "testpw")
 
     game_id = 1
-    response = client.delete(
-        f"/api/{league.id}/games/{game_id}", auth=("admin", "testpw")
-    )
+    response = client.delete(f"/api/{league.id}/games/{game_id}", auth=("admin", "testpw"))
     assert response.status_code == 200, response.json()
     assert response.text == '"OK"'
 

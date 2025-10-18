@@ -189,15 +189,11 @@ def build_leagues_response(session: Session) -> list[League]:
 
 
 def build_weeks_response(session: Session, league_id: int) -> list[int]:
-    weeks = set(
-        session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all()
-    )
+    weeks = set(session.exec(select(db.Game.week).where(db.Game.league_id == league_id)).all())
     return sorted(weeks)
 
 
-def build_games_response(
-    session: Session, league_id: int, include_points: bool
-) -> list[Game]:
+def build_games_response(session: Session, league_id: int, include_points: bool) -> list[Game]:
     games = session.exec(select(db.Game).where(db.Game.league_id == league_id)).all()
     if include_points:
         return [Game(**g.model_dump()) for g in games]
@@ -205,12 +201,8 @@ def build_games_response(
         return [Game(**g.model_dump(exclude={"points"})) for g in games]
 
 
-def build_game_response(
-    session: Session, league_id: int, game_id: int
-) -> GameWithStats:
-    game = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
-    ).first()
+def build_game_response(session: Session, league_id: int, game_id: int) -> GameWithStats:
+    game = session.exec(select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)).first()
     if not game:
         raise HTTPException(status_code=404, detail="Game not found")
     stats = build_stats(session, league_id, [game])
@@ -227,20 +219,14 @@ def build_stats_response(session: Session, league_id: int, week: int) -> WeekSta
         ).all()
     else:
         games = session.exec(
-            select(db.Game)
-            .where(db.Game.league_id == league_id, db.Game.week == week)
-            .options(selectinload(cast(InstrumentedAttribute, db.Game.stats)))
+            select(db.Game).where(db.Game.league_id == league_id, db.Game.week == week).options(selectinload(cast(InstrumentedAttribute, db.Game.stats)))
         ).all()
     stats = build_stats(session, league_id, games)
     return WeekStats(week=week, stats=stats)
 
 
-def build_stats(
-    session: Session, league_id: int, games: Collection[db.Game]
-) -> dict[str, Stats]:
-    players = session.exec(
-        select(db.Player).where(db.Player.league_id == league_id)
-    ).all()
+def build_stats(session: Session, league_id: int, games: Collection[db.Game]) -> dict[str, Stats]:
+    players = session.exec(select(db.Player).where(db.Player.league_id == league_id)).all()
     teams = session.exec(select(db.Team).where(db.Team.league_id == league_id)).all()
 
     player_stats: dict = {}
@@ -262,9 +248,7 @@ def build_stats(
             # aggregate all stats for the player
             if player.name in player_stats:
                 existing_data = player_stats[player.name]
-                summed_stats = {
-                    s: data.get(s, 0) + existing_data.get(s, 0) for s in data.keys()
-                }
+                summed_stats = {s: data.get(s, 0) + existing_data.get(s, 0) for s in data.keys()}
                 player_stats[player.name].update(summed_stats)
                 player_stats[player.name]["games_played"] += 1
             else:
@@ -294,9 +278,7 @@ def build_stats(
             player_stats[player_name][stat] = value / games_played
 
         player_stats[player_name]["pay"] = round(player_stats[player_name]["pay"])
-        player_stats[player_name]["salary_per_point"] = round(
-            player_stats[player_name]["salary_per_point"]
-        )
+        player_stats[player_name]["salary_per_point"] = round(player_stats[player_name]["salary_per_point"])
         player_stats[player_name].pop("games_played")
 
     return {k: Stats(**v) for k, v in player_stats.items()}
@@ -316,9 +298,7 @@ def build_players_response(session, league_id) -> list[Player]:
             continue
 
         if league.salary_calc == "pro_rate":
-            salaries = [
-                ps.salary_per_point for ps in player_stats if ps.points_played > 3
-            ]
+            salaries = [ps.salary_per_point for ps in player_stats if ps.points_played > 3]
             if len(salaries) == 0:
                 continue
             average_salary_per_point = sum(salaries) / len(salaries)
@@ -361,9 +341,7 @@ def build_teams_response(session: Session, league_id: int) -> list[Team]:
     for team in teams:
         players = []
         for player in team.players:
-            players.append(
-                TeamPlayer(name=player.name, team=team.name, is_male=player.is_male)
-            )
+            players.append(TeamPlayer(name=player.name, team=team.name, is_male=player.is_male))
         teams_response.append(Team(id=team.id, name=team.name, players=players))
     return teams_response
 
@@ -376,10 +354,6 @@ def build_schedule_response(session: Session, league_id: int) -> Schedule:
     local_today = datetime.datetime.now() + datetime.timedelta(hours=league_utc_offset)
     today = local_today.date()
 
-    matchups = session.exec(
-        select(db.Matchup)
-        .where(db.Matchup.league_id == league_id, db.Matchup.game_start >= today)
-        .limit(int(matchup_count))
-    ).all()
+    matchups = session.exec(select(db.Matchup).where(db.Matchup.league_id == league_id, db.Matchup.game_start >= today).limit(int(matchup_count))).all()
 
     return Schedule(teams=teams, matchups=[Matchup(**m.model_dump()) for m in matchups])

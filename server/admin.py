@@ -44,9 +44,7 @@ def edit_game(
     game_id: int,
     edited_game: EditedGame,
 ):
-    game = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
-    ).first()
+    game = session.exec(select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)).first()
     if not game:
         raise HTTPException(status_code=404, detail="Game not found")
 
@@ -61,15 +59,11 @@ def edit_game(
     session.commit()
 
     # loading other games from the same week
-    games = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)
-    ).all()
+    games = session.exec(select(db.Game).where(db.Game.league_id == league_id, db.Game.week == game.week)).all()
     game_ids = [game.id for game in games]
 
     # deleting old stats
-    stats = session.exec(
-        select(db.Stats).where(col(db.Stats.game_id).in_(game_ids))
-    ).all()
+    stats = session.exec(select(db.Stats).where(col(db.Stats.game_id).in_(game_ids))).all()
 
     for stat in stats:
         session.delete(stat)
@@ -85,9 +79,7 @@ def edit_game(
 
 
 def delete_game(session: Session, league_id: int, game_id: int):
-    game = session.exec(
-        select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)
-    ).first()
+    game = session.exec(select(db.Game).where(db.Game.league_id == league_id, db.Game.id == game_id)).first()
     if not game:
         raise HTTPException(status_code=404, detail="Game not found")
 

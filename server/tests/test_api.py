@@ -8,9 +8,7 @@ import server.db as db
 def test_leagues(client, league, snapshot):
     response = client.get("/api/leagues")
     assert response.status_code == 200
-    assert response.json() == [
-        {"id": CURRENT_LEAGUE_ID, "name": "Test", "lineSize": 6, "zuluru_id": 1}
-    ]
+    assert response.json() == [{"id": CURRENT_LEAGUE_ID, "name": "Test", "lineSize": 6, "zuluru_id": 1}]
 
 
 def test_current_league(client, league):
