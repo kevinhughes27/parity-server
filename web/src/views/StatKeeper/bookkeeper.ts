@@ -82,7 +82,7 @@ export class Bookkeeper {
       // UI state
       localError: null,
       isEditingLines: false,
-      isEditingRosters: false,
+      isEditingRosters: true,
 
       // Undo system
       undoStack: [],

@@ -96,3 +96,27 @@ def rosters_fixture(session, league) -> dict[str, list[str]]:
         session.commit()
 
     return rosters
+
+
+@pytest.fixture(name="matchup", scope="function")
+def matchup_fixture(session, league, rosters):
+    """Creates a test matchup for upcoming games."""
+    from datetime import datetime, timedelta
+    from sqlmodel import select
+
+    # Use teams that have distinct rosters (used in other tests)
+    home_team = session.exec(select(db.Team).where(db.Team.name == "Kells Angels Bicycle Club")).first()
+    away_team = session.exec(select(db.Team).where(db.Team.name == "lumleysexuals")).first()
+
+    matchup = db.Matchup(
+        league_id=league.id,
+        home_team_id=home_team.id,
+        away_team_id=away_team.id,
+        week=7,
+        game_start=datetime.now() + timedelta(days=1, hours=19),
+        game_end=datetime.now() + timedelta(days=1, hours=20),
+    )
+    session.add(matchup)
+    session.commit()
+
+    return matchup

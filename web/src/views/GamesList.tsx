@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 import { groupBy } from 'lodash';
 import { useLeague } from '../hooks/league';
 import { fetchGames, Game } from '../api';
+import { homeColors, awayColors } from '../helpers';
 
 const StyledList = styled(List)({
   maxWidth: 800,
@@ -64,17 +65,20 @@ function GamesList() {
   };
 
   const renderGame = (game: Game) => {
-    const styles = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
     return (
       <StyledNavLink key={game.id} to={`/${game.league_id}/games/${game.id}`}>
         <ListItemButton divider>
           <ListItemText
             primary={
-              <div style={styles}>
-                <span>
-                  {game.homeTeam} vs {game.awayTeam}
-                </span>
-                <span>
+              <div
+                style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+              >
+                <div style={{ flex: 1 }}>
+                  <span style={{ color: homeColors[8], fontWeight: 500 }}>{game.homeTeam}</span>
+                  <span style={{ margin: '0 8px', color: '#000' }}>vs</span>
+                  <span style={{ color: awayColors[8], fontWeight: 500 }}>{game.awayTeam}</span>
+                </div>
+                <span style={{ color: '#000' }}>
                   {game.homeScore} - {game.awayScore}
                 </span>
               </div>

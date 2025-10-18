@@ -1,6 +1,13 @@
 import { useState, useEffect, useReducer } from 'react';
 import { useLocation } from 'react-router-dom';
-import { fetchTeams, Team, TeamPlayer, leagues as apiLeagues } from '../../api';
+import {
+  fetchTeams,
+  Team,
+  TeamPlayer,
+  leagues as apiLeagues,
+  fetchSchedule,
+  Schedule,
+} from '../../api';
 import { Bookkeeper } from './bookkeeper';
 
 export function useBookkeeper(gameId: string) {
@@ -138,4 +145,43 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
   }, [leagueId]);
 
   return { leagueTeams, allLeaguePlayers, apiLeague, loadingTeams, errorTeams };
+}
+
+export interface UseScheduleResult {
+  schedule: Schedule | null;
+  loadingSchedule: boolean;
+  errorSchedule: string | null;
+}
+
+export function useSchedule(leagueId: string | undefined): UseScheduleResult {
+  const [schedule, setSchedule] = useState<Schedule | null>(null);
+  const [loadingSchedule, setLoadingSchedule] = useState<boolean>(false);
+  const [errorSchedule, setErrorSchedule] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (leagueId === undefined) {
+      setSchedule(null);
+      setLoadingSchedule(false);
+      setErrorSchedule(null);
+      return;
+    }
+
+    setLoadingSchedule(true);
+    setErrorSchedule(null);
+    setSchedule(null);
+
+    fetchSchedule(leagueId)
+      .then(data => {
+        setSchedule(data);
+      })
+      .catch(err => {
+        setErrorSchedule(err instanceof Error ? err.message : 'Failed to load schedule');
+        setSchedule(null);
+      })
+      .finally(() => {
+        setLoadingSchedule(false);
+      });
+  }, [leagueId]);
+
+  return { schedule, loadingSchedule, errorSchedule };
 }

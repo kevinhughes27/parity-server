@@ -160,6 +160,29 @@ export const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   return await response.json();
 };
 
+export interface Matchup {
+  id: number;
+  league_id: number;
+  homeTeamId: number;
+  awayTeamId: number;
+  week: number;
+  gameStart: string;
+  gameEnd: string;
+}
+
+export interface Schedule {
+  teams: Team[];
+  matchups: Matchup[];
+}
+
+export const fetchSchedule = async (leagueId: string): Promise<Schedule> => {
+  const response = await fetch(`/api/${leagueId}/schedule`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch schedule: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
 export interface Stats {
   [key: string]: StatLine;
 }

@@ -45,8 +45,6 @@ def start_stats_keeper(page: Page):
 def select_teams(page: Page, home: str, away: str):
     # initial state
     expect(page.locator("h5")).to_contain_text("New Game")
-    expect(page.locator("#root")).to_contain_text("Select Home Team to edit roster.")
-    expect(page.locator("#root")).to_contain_text("Select Away Team to edit roster.")
 
     # select teams
     page.get_by_role("combobox", name="Home Team").click()
@@ -54,6 +52,9 @@ def select_teams(page: Page, home: str, away: str):
 
     page.get_by_role("combobox", name="Away Team").click()
     page.get_by_role("option", name=away).click()
+
+    # create game (navigates to game view in edit rosters mode)
+    click_button(page, "Create Game")
 
 
 def expect_rosters(page: Page, home_players: list[str], away_players: list[str]):
@@ -73,7 +74,7 @@ def expect_rosters(page: Page, home_players: list[str], away_players: list[str])
 
 
 def start_game(page: Page):
-    click_button(page, "Start")
+    click_button(page, "Update Rosters")
 
 
 def start_point(page: Page):
@@ -1106,20 +1107,20 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
 
-    # create game
+    # create game (now navigates to roster editing view)
     select_teams(page, home, away)
     expect_rosters(page, rosters[home], rosters[away])
 
-    # add league player
-    page.get_by_role("combobox").nth(2).select_option("Matthew Schijns")
+    # add league player (home team - first combobox)
+    page.get_by_role("combobox").first.select_option("Matthew Schijns")
     page.get_by_role("button", name="Add").first.click()
 
-    # add sub
+    # add sub (away team - second textbox and button)
     page.get_by_role("textbox", name="Substitute name").nth(1).click()
     page.get_by_role("textbox", name="Substitute name").nth(1).fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").nth(1).click()
 
-    # remove player
+    # remove player (away team)
     page.get_by_role("listitem").filter(has_text="Kevin BarfordRemove").get_by_role("button").click()
 
     # check updated rosters
@@ -1130,7 +1131,7 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     away_roster.remove("Kevin Barford")
     expect_rosters(page, home_roster, away_roster)
 
-    # start
+    # start (Update Rosters button)
     start_game(page)
 
     # submit and check game rosters
@@ -1504,6 +1505,63 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     # goal stats
     assert stats["Ashlin Kelly"]["goals"] == 1
     assert stats["Ashlin Kelly"]["d_points_for"] == 1
+
+
+def test_select_scheduled_matchup(server, league, rosters, matchup, page: Page) -> None:
+    start_stats_keeper(page)
+    home_team_name = "Kells Angels Bicycle Club"
+    away_team_name = "lumleysexuals"
+
+    # verify upcoming games section is visible
+    expect(page.locator("#root")).to_contain_text("Upcoming Games")
+
+    # verify matchup is shown with team names
+    expect(page.locator("#root")).to_contain_text(home_team_name)
+    expect(page.locator("#root")).to_contain_text(away_team_name)
+    expect(page.locator("#root")).to_contain_text(f"Week {matchup.week}")
+
+    # click on the matchup to select it
+    page.locator(f"text={home_team_name} vs {away_team_name}").click()
+
+    # verify teams are pre-selected in the Create Game section
+    expect(page.locator("#root")).to_contain_text("Create Game")
+
+    # verify week is pre-filled
+    week_input = page.get_by_label("Week")
+    expect(week_input).to_have_value(str(matchup.week))
+
+    # create game
+    click_button(page, "Create Game")
+
+    # verify we're on the game page with rosters
+    expect_rosters(page, rosters[home_team_name], rosters[away_team_name])
+
+    # start game and verify it works
+    start_game(page)
+
+    # select lines and play a quick point
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home_team_name, away_team_name)
+    start_point(page)
+
+    # quick point
+    click_button(page, home_line[0])
+    click_button(page, "Pull")
+    click_button(page, away_line[0])
+    click_button(page, away_line[1])
+    click_button(page, away_line[2])
+    click_button(page, "Point!")
+
+    # submit
+    submit_game(page)
+
+    # verify game was created with correct teams and week
+    game = get_game(1)
+    assert game["homeTeam"] == home_team_name
+    assert game["awayTeam"] == away_team_name
+    assert game["week"] == matchup.week
 
 
 def test_perf(server, league, rosters, page: Page) -> None:

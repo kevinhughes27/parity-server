@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useTeams, useFullscreen } from './hooks';
+import { useTeams, useFullscreen, useSchedule } from './hooks';
 import { Bookkeeper } from './bookkeeper';
 import {
   AppBar,
@@ -14,10 +14,11 @@ import {
   MenuItem,
   TextField,
   Paper,
+  Alert,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
-import EditRoster from './EditRoster';
+import { Matchup } from '../../api';
+import { homeColors, awayColors } from '../../helpers';
 
 interface CurrentLeague {
   league: {
@@ -74,29 +75,86 @@ const TeamPicker: React.FC<TeamPickerProps> = ({
   );
 };
 
-const EmptyRosterPlaceholder: React.FC<{ teamType: string }> = ({ teamType }) => {
+const UpcomingMatchups: React.FC<{
+  matchups: Matchup[];
+  teams: any[];
+  onSelectMatchup: (matchup: Matchup) => void;
+  selectedMatchupId: number | null;
+}> = ({ matchups, teams, onSelectMatchup, selectedMatchupId }) => {
+  const getTeamName = (teamId: number) => {
+    const team = teams.find(t => t.id === teamId);
+    return team?.name || `Team ${teamId}`;
+  };
+
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  };
+
+  const formatTime = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  };
+
+  if (matchups.length === 0) {
+    return (
+      <Alert severity="info" sx={{ mb: 2 }}>
+        No upcoming games scheduled. Use manual selection below.
+      </Alert>
+    );
+  }
+
+  const sortedMatchups = [...matchups].sort(
+    (a, b) => new Date(a.gameStart).getTime() - new Date(b.gameStart).getTime()
+  );
+
   return (
-    <Paper
-      elevation={1}
-      sx={{
-        p: 3,
-        textAlign: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: '#f9f9f9',
-        borderRadius: 1,
-        border: '1px dashed #ccc',
-      }}
-    >
-      <Typography color="text.secondary">Select {teamType} Team to edit roster.</Typography>
-    </Paper>
+    <Box sx={{ mb: 2 }}>
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        Upcoming Games
+      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+        {sortedMatchups.map(matchup => (
+          <Box
+            key={matchup.id}
+            onClick={() => onSelectMatchup(matchup)}
+            sx={{
+              p: 2,
+              border:
+                selectedMatchupId === matchup.id
+                  ? `2px solid ${homeColors[8]}`
+                  : '1px solid #e0e0e0',
+              borderRadius: 1,
+              bgcolor: selectedMatchupId === matchup.id ? '#f0f7ff' : 'white',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              '&:hover': {
+                bgcolor: selectedMatchupId === matchup.id ? '#f0f7ff' : '#f9f9f9',
+                borderColor: selectedMatchupId === matchup.id ? homeColors[8] : '#999',
+              },
+            }}
+          >
+            <Typography variant="body1">
+              <span style={{ color: homeColors[8], fontWeight: 'bold' }}>
+                {getTeamName(matchup.homeTeamId)}
+              </span>
+              {' vs '}
+              <span style={{ color: awayColors[8], fontWeight: 'bold' }}>
+                {getTeamName(matchup.awayTeamId)}
+              </span>
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+              Week {matchup.week} • {formatDate(matchup.gameStart)} at{' '}
+              {formatTime(matchup.gameStart)}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+    </Box>
   );
 };
 
-const TopBar: React.FC = () => {
+const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeague }) => {
   return (
     <AppBar position="static" color="default" elevation={1}>
       <Toolbar sx={{ position: 'relative' }}>
@@ -114,10 +172,8 @@ const TopBar: React.FC = () => {
             <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
           </Link>
         </Box>
-        <Typography
-          variant="h5"
+        <Box
           sx={{
-            fontSize: '1.5em',
             position: 'absolute',
             left: 0,
             right: 0,
@@ -125,48 +181,21 @@ const TopBar: React.FC = () => {
             zIndex: 1,
           }}
         >
-          New Game
-        </Typography>
+          <Typography variant="h5" sx={{ fontSize: '1.5em' }}>
+            New Game
+          </Typography>
+          {currentLeague && (
+            <Typography variant="body2" sx={{ fontSize: '0.85em', color: 'text.secondary' }}>
+              {currentLeague.league.name}
+            </Typography>
+          )}
+        </Box>
       </Toolbar>
     </AppBar>
   );
 };
 
-const LeagueInfo: React.FC<{
-  loadingLeague: boolean;
-  errorLeague: string | null;
-  currentLeague: CurrentLeague | null;
-  week: number;
-  setWeek: (week: number) => void;
-}> = ({ loadingLeague, errorLeague, currentLeague, week, setWeek }) => {
-  return (
-    <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {loadingLeague ? (
-          <Typography>Loading current league...</Typography>
-        ) : errorLeague ? (
-          <Typography color="error">{errorLeague}</Typography>
-        ) : currentLeague ? (
-          <Typography variant="h6">League: {currentLeague.league.name}</Typography>
-        ) : (
-          <Typography color="error">No league data available</Typography>
-        )}
-
-        <TextField
-          id="week-select"
-          label="Week"
-          type="number"
-          value={week}
-          onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
-          inputProps={{ min: 1 }}
-          sx={{ width: '120px' }}
-        />
-      </Box>
-    </Paper>
-  );
-};
-
-const TeamSelection: React.FC<{
+const CreateGameSection: React.FC<{
   homeTeamIdStr: string;
   setHomeTeamIdStr: (id: string) => void;
   awayTeamIdStr: string;
@@ -175,6 +204,8 @@ const TeamSelection: React.FC<{
   availableAwayTeams: any[];
   selectedHomeTeamObj: any;
   selectedAwayTeamObj: any;
+  week: number;
+  setWeek: (week: number) => void;
 }> = ({
   homeTeamIdStr,
   setHomeTeamIdStr,
@@ -184,10 +215,15 @@ const TeamSelection: React.FC<{
   availableAwayTeams,
   selectedHomeTeamObj,
   selectedAwayTeamObj,
+  week,
+  setWeek,
 }) => {
   return (
     <Paper elevation={1} sx={{ p: 2, mb: 2, flexShrink: 0 }}>
-      <Box sx={{ display: 'flex', gap: 2 }}>
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        Create Game
+      </Typography>
+      <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
         <TeamPicker
           label="Home"
           teamIdStr={homeTeamIdStr}
@@ -206,72 +242,23 @@ const TeamSelection: React.FC<{
           disabled={availableAwayTeams.length === 0 && !awayTeamIdStr}
         />
       </Box>
+      <TextField
+        id="week-select"
+        label="Week"
+        type="number"
+        value={week}
+        onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
+        inputProps={{ min: 1 }}
+        sx={{ width: '120px' }}
+      />
     </Paper>
-  );
-};
-
-const RosterEditing: React.FC<{
-  selectedHomeTeamObj: any;
-  selectedAwayTeamObj: any;
-  homeRosterNames: string[];
-  awayRosterNames: string[];
-  sortAndSetHomeRoster: (roster: string[]) => void;
-  sortAndSetAwayRoster: (roster: string[]) => void;
-  allLeaguePlayers: any[];
-}> = ({
-  selectedHomeTeamObj,
-  selectedAwayTeamObj,
-  homeRosterNames,
-  awayRosterNames,
-  sortAndSetHomeRoster,
-  sortAndSetAwayRoster,
-  allLeaguePlayers,
-}) => {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        gap: 2,
-        flexGrow: 1,
-        overflow: 'hidden',
-      }}
-    >
-      {/* Home Roster Column */}
-      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        {selectedHomeTeamObj ? (
-          <EditRoster
-            teamName={selectedHomeTeamObj.name}
-            allLeaguePlayers={allLeaguePlayers}
-            currentRosterNames={homeRosterNames}
-            onRosterChange={sortAndSetHomeRoster}
-          />
-        ) : (
-          <EmptyRosterPlaceholder teamType="Home" />
-        )}
-      </Box>
-
-      {/* Away Roster Column */}
-      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        {selectedAwayTeamObj ? (
-          <EditRoster
-            teamName={selectedAwayTeamObj.name}
-            allLeaguePlayers={allLeaguePlayers}
-            currentRosterNames={awayRosterNames}
-            onRosterChange={sortAndSetAwayRoster}
-          />
-        ) : (
-          <EmptyRosterPlaceholder teamType="Away" />
-        )}
-      </Box>
-    </Box>
   );
 };
 
 const ActionBar: React.FC<{
   handleCreateGame: () => Promise<void>;
-  homeRosterNames: string[];
-  awayRosterNames: string[];
-}> = ({ handleCreateGame, homeRosterNames, awayRosterNames }) => {
+  canCreateGame: boolean;
+}> = ({ handleCreateGame, canCreateGame }) => {
   return (
     <Box
       sx={{
@@ -294,17 +281,13 @@ const ActionBar: React.FC<{
         onClick={handleCreateGame}
         variant="contained"
         color="success"
-        disabled={homeRosterNames.length === 0 || awayRosterNames.length === 0}
+        disabled={!canCreateGame}
         sx={{ fontSize: '1em', px: 3 }}
       >
-        Start
+        Create Game
       </Button>
     </Box>
   );
-};
-
-const sortRoster = (roster: string[]): string[] => {
-  return [...roster].sort((a, b) => a.localeCompare(b));
 };
 
 function NewGame() {
@@ -315,23 +298,16 @@ function NewGame() {
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
 
-  const { leagueTeams, allLeaguePlayers, loadingTeams, errorTeams } = useTeams(
+  const { leagueTeams, loadingTeams, errorTeams } = useTeams(currentLeague?.league?.id?.toString());
+
+  const { schedule, loadingSchedule, errorSchedule } = useSchedule(
     currentLeague?.league?.id?.toString()
   );
 
   const [week, setWeek] = useState<number>(1);
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
-  const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
-  const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
-
-  const sortAndSetHomeRoster = (roster: string[]) => {
-    setHomeRosterNames(sortRoster(roster));
-  };
-
-  const sortAndSetAwayRoster = (roster: string[]) => {
-    setAwayRosterNames(sortRoster(roster));
-  };
+  const [selectedMatchupId, setSelectedMatchupId] = useState<number | null>(null);
 
   useEffect(() => {
     const loadCurrentLeague = async () => {
@@ -355,41 +331,36 @@ function NewGame() {
   useEffect(() => {
     setHomeTeamIdStr('');
     setAwayTeamIdStr('');
-    sortAndSetHomeRoster([]);
-    sortAndSetAwayRoster([]);
+    setSelectedMatchupId(null);
   }, [currentLeague]);
+
+  const handleSelectMatchup = (matchup: Matchup) => {
+    setSelectedMatchupId(matchup.id);
+    setHomeTeamIdStr(matchup.homeTeamId.toString());
+    setAwayTeamIdStr(matchup.awayTeamId.toString());
+    setWeek(matchup.week);
+  };
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamIdStr);
   const selectedAwayTeamObj = leagueTeams.find(t => t.id.toString() === awayTeamIdStr);
 
-  useEffect(() => {
-    sortAndSetHomeRoster(selectedHomeTeamObj ? selectedHomeTeamObj.players.map(p => p.name) : []);
-  }, [selectedHomeTeamObj]);
-
-  useEffect(() => {
-    sortAndSetAwayRoster(selectedAwayTeamObj ? selectedAwayTeamObj.players.map(p => p.name) : []);
-  }, [selectedAwayTeamObj]);
-
   const handleCreateGame = async () => {
-    if (
-      !currentLeague?.league?.id ||
-      !selectedHomeTeamObj ||
-      !selectedAwayTeamObj ||
-      homeRosterNames.length === 0 ||
-      awayRosterNames.length === 0
-    ) {
-      alert('Please wait for league to load, select both teams, and ensure rosters are not empty.');
+    if (!currentLeague?.league?.id || !selectedHomeTeamObj || !selectedAwayTeamObj) {
+      alert('Please select both teams.');
       return;
     }
 
     try {
+      const homeRoster = selectedHomeTeamObj.players.map(p => p.name);
+      const awayRoster = selectedAwayTeamObj.players.map(p => p.name);
+
       const id = await Bookkeeper.newGame(
         currentLeague,
         week,
         selectedHomeTeamObj,
         selectedAwayTeamObj,
-        homeRosterNames,
-        awayRosterNames
+        homeRoster,
+        awayRoster
       );
       console.log(`New game added with localId: ${id}`);
       navigate(`/stat_keeper/game/${id}`);
@@ -402,9 +373,11 @@ function NewGame() {
   const availableAwayTeams = leagueTeams.filter(t => t.id.toString() !== homeTeamIdStr);
   const availableHomeTeams = leagueTeams.filter(t => t.id.toString() !== awayTeamIdStr);
 
+  const canCreateGame = selectedHomeTeamObj && selectedAwayTeamObj;
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      <TopBar />
+      <TopBar currentLeague={currentLeague} />
 
       <Box
         sx={{
@@ -413,18 +386,21 @@ function NewGame() {
           flexDirection: 'column',
           overflowY: 'auto',
           p: 2,
-          pb: '86px', // 70px for action bar + 16px padding
+          pb: '86px',
         }}
       >
-        <LeagueInfo
-          loadingLeague={loadingLeague}
-          errorLeague={errorLeague}
-          currentLeague={currentLeague}
-          week={week}
-          setWeek={setWeek}
-        />
+        {loadingLeague && <Typography sx={{ p: 2 }}>Loading current league...</Typography>}
+        {errorLeague && (
+          <Alert severity="error" sx={{ mb: 2 }}>
+            {errorLeague}
+          </Alert>
+        )}
+        {!currentLeague && !loadingLeague && !errorLeague && (
+          <Alert severity="error" sx={{ mb: 2 }}>
+            No league data available
+          </Alert>
+        )}
 
-        {/* Loading/Error Messages */}
         {loadingTeams && <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>}
         {errorTeams && (
           <Typography sx={{ color: 'error.main', flexShrink: 0, p: 2 }}>
@@ -432,17 +408,28 @@ function NewGame() {
           </Typography>
         )}
 
-        {/* Team Selectors and Roster Editors */}
         {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-            }}
-          >
-            <TeamSelection
+          <>
+            {loadingSchedule && (
+              <Typography sx={{ flexShrink: 0, p: 2 }}>Loading schedule...</Typography>
+            )}
+
+            {!loadingSchedule && errorSchedule && (
+              <Alert severity="warning" sx={{ mb: 2 }}>
+                Could not load schedule: {errorSchedule}. Use manual selection below.
+              </Alert>
+            )}
+
+            {!loadingSchedule && schedule && (
+              <UpcomingMatchups
+                matchups={schedule.matchups}
+                teams={leagueTeams}
+                onSelectMatchup={handleSelectMatchup}
+                selectedMatchupId={selectedMatchupId}
+              />
+            )}
+
+            <CreateGameSection
               homeTeamIdStr={homeTeamIdStr}
               setHomeTeamIdStr={setHomeTeamIdStr}
               awayTeamIdStr={awayTeamIdStr}
@@ -451,21 +438,12 @@ function NewGame() {
               availableAwayTeams={availableAwayTeams}
               selectedHomeTeamObj={selectedHomeTeamObj}
               selectedAwayTeamObj={selectedAwayTeamObj}
+              week={week}
+              setWeek={setWeek}
             />
-
-            <RosterEditing
-              selectedHomeTeamObj={selectedHomeTeamObj}
-              selectedAwayTeamObj={selectedAwayTeamObj}
-              homeRosterNames={homeRosterNames}
-              awayRosterNames={awayRosterNames}
-              sortAndSetHomeRoster={sortAndSetHomeRoster}
-              sortAndSetAwayRoster={sortAndSetAwayRoster}
-              allLeaguePlayers={allLeaguePlayers}
-            />
-          </Box>
+          </>
         )}
 
-        {/* Message if no teams found */}
         {leagueTeams.length === 0 && !loadingTeams && currentLeague?.league?.id && !errorTeams && (
           <Typography sx={{ flexShrink: 0, p: 2 }}>
             No teams found for the current league.
@@ -473,18 +451,9 @@ function NewGame() {
         )}
       </Box>
 
-      {/* Fixed Bottom Action Bar */}
-      {!loadingTeams &&
-        !errorTeams &&
-        leagueTeams.length > 0 &&
-        selectedHomeTeamObj &&
-        selectedAwayTeamObj && (
-          <ActionBar
-            handleCreateGame={handleCreateGame}
-            homeRosterNames={homeRosterNames}
-            awayRosterNames={awayRosterNames}
-          />
-        )}
+      {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
+        <ActionBar handleCreateGame={handleCreateGame} canCreateGame={!!canCreateGame} />
+      )}
     </Box>
   );
 }
