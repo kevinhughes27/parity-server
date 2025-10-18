@@ -123,6 +123,7 @@ def expect_players_disabled(page: Page, players: list[str]):
 def expect_next_line_text(page: Page):
     help_text = "Players not on the previous line are pre-selected. Adjust and confirm."
     expect(page.locator("#root")).to_contain_text(f"{help_text}")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
 
 
 def open_hamburger_menu(page: Page):
@@ -165,6 +166,7 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = [
         "Brian Kells",
         "Jonathan Champagne",
@@ -242,6 +244,7 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -366,6 +369,7 @@ def test_drop(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -424,6 +428,7 @@ def test_callahan(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -477,6 +482,7 @@ def test_undo(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -631,6 +637,7 @@ def test_undo_pull(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -678,6 +685,7 @@ def test_button_states(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
 
     # all player buttons enabled
     expect_players_enabled(page, rosters[home])
@@ -839,6 +847,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -868,6 +877,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # select lines again
     expect(page.locator("#root")).to_contain_text("Select players for the next point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -910,6 +920,7 @@ def test_resume(
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -996,6 +1007,7 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1104,6 +1116,7 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     select_lines(page, rosters[home][:6], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1153,6 +1166,7 @@ def test_edit_rosters_mid_point_and_change_line(
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     select_lines(page, rosters[home][:6], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1214,6 +1228,7 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1317,6 +1332,7 @@ def test_back_to_back_defense(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1404,6 +1420,7 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1485,6 +1502,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
             expect(page.locator("#root")).to_contain_text(
                 "Select players for the first point."
             )
+            expect(page.locator("#root")).to_contain_text("Game State: SelectingLines")
             select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:
