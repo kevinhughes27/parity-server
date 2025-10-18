@@ -6,6 +6,9 @@ set -euo pipefail
 #
 # This script copies the production database to a local file
 # Then it can be copied over db.sqlite and committed
+#
+# Local edits can be copied back to prod if desired:
+# scp -r ./server/db.sqlite parity-server:/home/ubuntu/parity-server/server/
 
 copy-db() {
   remote="$1"
