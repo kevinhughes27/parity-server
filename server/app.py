@@ -4,10 +4,21 @@ from sqlmodel import Session
 from starlette.responses import FileResponse
 from typing import Annotated
 import logging
+import os
+import sentry_sdk
 
 import server.admin as admin
 import server.api as api
 import server.db as db
+
+# Sentry
+if sentry_dsn := os.getenv("SENTRY_DSN"):
+    sentry_sdk.init(
+        dsn=sentry_dsn,
+        traces_sample_rate=1.0,
+        profiles_sample_rate=1.0,
+        enable_tracing=True,
+    )
 
 # Init
 app = FastAPI(
@@ -71,9 +82,7 @@ async def players(session: SessionDep, league_id: int) -> list[api.Player]:
 
 
 @app.get("/api/{league_id}/games", tags=["api"])
-async def games(
-    session: SessionDep, league_id: int, includePoints: bool = False
-) -> list[api.Game]:
+async def games(session: SessionDep, league_id: int, includePoints: bool = False) -> list[api.Game]:
     return api.build_games_response(session, league_id, includePoints)
 
 
