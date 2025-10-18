@@ -489,33 +489,23 @@ export class GameMethods {
     this.game.isEditingLines = false;
   }
 
-  updateViewAfterAction(): void {
-    // View state is now determined dynamically by determineCorrectView()
-    // No need to store or update view state in the game object
-  }
-
   determineCorrectView(): GameView {
-    // Error state takes precedence - check for special "editRosters" hack
-    if (this.game.localError === 'editRosters') {
-      return 'editRosters';
-    }
-
     if (this.game.localError !== null) {
       return 'error_state';
     }
 
-    // Check if we're editing lines (mid-point line change)
+    if (this.game.isEditingRosters) {
+      return 'editRosters';
+    }
+
     if (this.game.isEditingLines) {
       return 'selectLines';
     }
 
-    // If no players are selected, we need to select lines
     if (this.game.homePlayers === null || this.game.awayPlayers === null) {
       return 'selectLines';
     }
 
-    // If we have players selected, we can record stats (even without an active point)
-    // The active point will be created when the first action is taken
     return 'recordStats';
   }
 
@@ -551,8 +541,6 @@ export class GameMethods {
         this.undoRecordHalf();
         break;
     }
-
-    this.updateViewAfterAction();
   }
 
   // Undo helper methods
@@ -707,5 +695,13 @@ export class GameMethods {
 
   cancelEditingLines(): void {
     this.game.isEditingLines = false;
+  }
+
+  startEditingRosters(): void {
+    this.game.isEditingRosters = true;
+  }
+
+  cancelEditingRosters(): void {
+    this.game.isEditingRosters = false;
   }
 }

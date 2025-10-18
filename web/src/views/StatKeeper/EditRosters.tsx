@@ -54,8 +54,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       // Update the stored game rosters
       await bookkeeper.updateRosters(homeRosterNames, awayRosterNames);
 
-      // Clear the editRosters hack and view will automatically update based on game state
-      bookkeeper.setError(null);
+      bookkeeper.cancelEditingRosters();
 
       console.log('Rosters updated successfully.');
     } catch (error) {
@@ -67,10 +66,9 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const handleCancel = () => {
-    // Reset to original rosters and clear the editRosters hack
     sortAndSetHomeRoster(bookkeeper.getHomeRoster());
     sortAndSetAwayRoster(bookkeeper.getAwayRoster());
-    bookkeeper.setError(null); // Clear the editRosters hack
+    bookkeeper.cancelEditingRosters();
   };
 
   if (loadingLeaguePlayers) {

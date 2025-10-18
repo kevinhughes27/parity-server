@@ -159,9 +159,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // Force transition to edit rosters by setting error state temporarily
-    // This is a temporary solution until we implement proper roster editing state
-    bookkeeper.setError('editRosters'); // Use error state as a hack for now
+    bookkeeper.startEditingRosters();
   };
 
   return (

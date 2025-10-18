@@ -82,6 +82,7 @@ export class Bookkeeper {
       // UI state
       localError: null,
       isEditingLines: false,
+      isEditingRosters: false,
 
       // Undo system
       undoStack: [],
@@ -302,9 +303,6 @@ export class Bookkeeper {
     // Save to IndexedDb
     await this.saveToDatabase();
 
-    // Update view state
-    this.gameMethods.updateViewAfterAction();
-
     // Notify React components
     this.notifyListeners();
   }
@@ -405,6 +403,16 @@ export class Bookkeeper {
 
   public cancelEditingLines(): void {
     this.gameMethods.cancelEditingLines();
+    this.notifyListeners();
+  }
+
+  public startEditingRosters(): void {
+    this.gameMethods.startEditingRosters();
+    this.notifyListeners();
+  }
+
+  public cancelEditingRosters(): void {
+    this.gameMethods.cancelEditingRosters();
     this.notifyListeners();
   }
 

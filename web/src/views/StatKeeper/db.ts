@@ -56,7 +56,8 @@ export interface StoredGame {
 
   // UI state
   localError: string | null;
-  isEditingLines: boolean; // New flag for line editing state
+  isEditingLines: boolean;
+  isEditingRosters: boolean;
 
   // Undo system
   undoStack: UndoCommand[];
@@ -76,7 +77,7 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 // Define the database schema and versioning
 db.version(1).stores({
   games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, *undoStack',
+    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
 });
 
 export { db };
