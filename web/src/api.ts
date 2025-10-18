@@ -134,7 +134,6 @@ export interface Player {
 export interface TeamPlayer {
   name: string;
   team: string;
-  is_male: boolean;
 }
 
 export interface Team {

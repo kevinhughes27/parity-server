@@ -150,7 +150,6 @@ export class Bookkeeper {
       players: storedGame.homeRoster.map(name => ({
         name,
         team: storedGame.homeTeam,
-        is_male: true, // Default, will be updated when proper team data is loaded
       })),
     };
 
@@ -160,7 +159,6 @@ export class Bookkeeper {
       players: storedGame.awayRoster.map(name => ({
         name,
         team: storedGame.awayTeam,
-        is_male: true, // Default, will be updated when proper team data is loaded
       })),
     };
 

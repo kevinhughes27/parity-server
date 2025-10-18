@@ -85,7 +85,6 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
-        is_male: true,
       })),
     };
 
@@ -94,7 +93,6 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
-        is_male: true,
       })),
     };
 
@@ -242,7 +240,6 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
-        is_male: true,
       })),
     };
 
@@ -251,7 +248,6 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
-        is_male: true,
       })),
     };
 
