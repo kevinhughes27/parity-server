@@ -19,6 +19,7 @@ export enum GameState {
   FirstThrow,
   Normal,
   AfterTurnover,
+  AfterDrop,
   AfterPull,
 }
 
@@ -204,8 +205,12 @@ export class GameMethods {
     }
 
     // Player has possession
-    if (lastEventType === EventType.THROWAWAY || lastEventType === EventType.DROP) {
+    if (lastEventType === EventType.THROWAWAY) {
       return GameState.AfterTurnover;
+    }
+
+    if (lastEventType === EventType.DROP) {
+      return GameState.AfterDrop;
     }
 
     if (lastEventType === EventType.PULL) {

@@ -433,7 +433,12 @@ def test_drop(server, league, rosters, page: Page) -> None:
     expect_players_disabled(page, away_line)
 
     click_button(page, "Brian Kells")
-    expect_game_state(page, "AfterTurnover")
+    expect_game_state(page, "AfterDrop")
+
+    # D buttons should be disabled after a drop (no defensive play was made)
+    expect_button_disabled(page, "D (Block)")
+    expect_button_disabled(page, "Catch D")
+
     click_button(page, "Ashlin Kelly")
     expect_game_state(page, "Normal")
     click_button(page, "Point!")

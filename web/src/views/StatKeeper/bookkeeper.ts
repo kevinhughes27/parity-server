@@ -562,13 +562,14 @@ export class Bookkeeper {
     const isPullState = currentGameState === GameState.Pull;
     const isNormalState = currentGameState === GameState.Normal;
     const isAfterTurnoverState = currentGameState === GameState.AfterTurnover;
+    const isAfterDropState = currentGameState === GameState.AfterDrop;
     const isFirstThrowQuebec = currentGameState === GameState.FirstThrow;
     const isAfterPullState = currentGameState === GameState.AfterPull;
 
     // Complex conditions
     // seems a bit off but tests are passing. I should be able to express this better
     const canTurnover =
-      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState || isAfterPullState) &&
+      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState || isAfterDropState || isAfterPullState) &&
       hasFirstActor;
     const isPickupAfterScore = isFirstThrowQuebec;
     const canDrop = canTurnover && !isPickupAfterScore;
