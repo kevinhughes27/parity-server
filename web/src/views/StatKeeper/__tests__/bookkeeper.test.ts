@@ -61,6 +61,7 @@ const createInitialStoredGame = (
     lastPlayedLine: null,
     localError: null,
     isEditingLines: false,
+    isEditingRosters: false,
     undoStack: [],
     status: 'in-progress',
     lastModified: new Date(),
