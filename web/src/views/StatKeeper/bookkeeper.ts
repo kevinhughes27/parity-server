@@ -589,11 +589,12 @@ export class Bookkeeper {
       case 'pull':
         return {
           enabled: pullEnabled,
-          reason: currentGameState !== GameState.Pull
-            ? 'Not in pull state'
-            : !hasFirstActor
-              ? 'No puller selected'
-              : undefined,
+          reason:
+            currentGameState !== GameState.Pull
+              ? 'Not in pull state'
+              : !hasFirstActor
+                ? 'No puller selected'
+                : undefined,
         };
 
       case 'point':
