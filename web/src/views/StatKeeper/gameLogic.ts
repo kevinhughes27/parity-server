@@ -15,8 +15,8 @@ export enum GameState {
   EditingLines,
   Start,
   Pull,
-  WhoPickedUpDisc,
-  FirstThrowQuebecVariant,
+  PickUp,
+  FirstThrow,
   Normal,
   AfterTurnover,
   AfterPull,
@@ -190,9 +190,9 @@ export class GameMethods {
 
     if (eventCount === 0) {
       if (this.game.firstActor === null) {
-        return this.firstPointOfGameOrHalf() ? GameState.Start : GameState.WhoPickedUpDisc;
+        return this.firstPointOfGameOrHalf() ? GameState.Start : GameState.PickUp;
       } else {
-        return this.firstPointOfGameOrHalf() ? GameState.Pull : GameState.FirstThrowQuebecVariant;
+        return this.firstPointOfGameOrHalf() ? GameState.Pull : GameState.FirstThrow;
       }
     }
 
@@ -200,7 +200,7 @@ export class GameMethods {
 
     if (this.game.firstActor === null) {
       // Disc is loose after pull, turnover, or block
-      return GameState.WhoPickedUpDisc;
+      return GameState.PickUp;
     }
 
     // Player has possession

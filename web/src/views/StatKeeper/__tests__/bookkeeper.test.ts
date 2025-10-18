@@ -447,9 +447,9 @@ describe('Bookkeeper', () => {
     await bookkeeper.recordFirstActor(PLAYER1, true);
     expect(bookkeeper.gameState()).toBe(GameState.Pull);
 
-    // After pull - should be WhoPickedUpDisc
+    // After pull - should be PickUp
     await bookkeeper.recordPull();
-    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
+    expect(bookkeeper.gameState()).toBe(GameState.PickUp);
 
     // After pickup - should be AfterPull
     await bookkeeper.recordFirstActor(PLAYER2, false);
@@ -459,17 +459,17 @@ describe('Bookkeeper', () => {
     await bookkeeper.recordPass(PLAYER4);
     expect(bookkeeper.gameState()).toBe(GameState.Normal);
 
-    // After throwaway - should be WhoPickedUpDisc (disc is loose)
+    // After throwaway - should be PickUp (disc is loose)
     await bookkeeper.recordThrowAway();
-    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
+    expect(bookkeeper.gameState()).toBe(GameState.PickUp);
 
     // After pickup following turnover - should be AfterTurnover
     await bookkeeper.recordFirstActor(PLAYER1, true);
     expect(bookkeeper.gameState()).toBe(GameState.AfterTurnover);
 
-    // After D - should be WhoPickedUpDisc again
+    // After D - should be PickUp again
     await bookkeeper.recordD();
-    expect(bookkeeper.gameState()).toBe(GameState.WhoPickedUpDisc);
+    expect(bookkeeper.gameState()).toBe(GameState.PickUp);
 
     // After pickup following D - should be Normal (no more D opportunity)
     await bookkeeper.recordFirstActor(PLAYER2, false);

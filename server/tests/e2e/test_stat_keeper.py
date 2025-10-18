@@ -223,11 +223,23 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
     expect_players_disabled(page, away_bench)
 
     # record stats
+    expect_game_state(page, "Start")
+
     click_button(page, "Brian Kells")
+    expect_game_state(page, "Pull")
+
     click_button(page, "Pull")
+    expect_game_state(page, "PickUp")
+
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "AfterPull")
+
     click_button(page, "Heather McCabe")
+    expect_game_state(page, "Normal")
+
     click_button(page, "Kevin Barford")
+    expect_game_state(page, "Normal")
+
     click_button(page, "Point!")
 
     play_by_play = [
@@ -293,6 +305,7 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # record throwaway (no D)
     click_button(page, "Throwaway")
+    expect_game_state(page, "PickUp")
 
     # other team is enabled now
     expect_players_enabled(page, home_line)
@@ -300,6 +313,7 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # select who picked up the disc to complete
     click_button(page, "Brian Kells")
+    expect_game_state(page, "AfterTurnover")
 
     # D buttons become enabled
     expect_button_enabled(page, "D (Block)")
@@ -307,6 +321,7 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # continue with a pass for a pure throw_away
     click_button(page, "Scott Higgins")  # Pass
+    expect_game_state(page, "Normal")
 
     # D buttons disabled again
     expect_button_disabled(page, "D (Block)")
@@ -314,25 +329,34 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # record D (throwaway -> defender -> D)
     click_button(page, "Throwaway")
+    expect_game_state(page, "PickUp")
     expect_players_disabled(page, home_line)
     expect_players_enabled(page, away_line)
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "AfterTurnover")
     click_button(page, "D (Block)")
+    expect_game_state(page, "PickUp")
 
     # select who picked up the disc to continue
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "Normal")
     click_button(page, "Heather McCabe")  # Pass
+    expect_game_state(page, "Normal")
 
     # record catch D (throwaway -> defender -> Catch D)
     click_button(page, "Throwaway")
+    expect_game_state(page, "PickUp")
     expect_players_enabled(page, home_line)
     expect_players_disabled(page, away_line)
     click_button(page, "Ashlin Kelly")
+    expect_game_state(page, "AfterTurnover")
     click_button(page, "Catch D")
+    expect_game_state(page, "Normal")
 
     # defender already has the disk
     expect_button_disabled(page, "Ashlin Kelly")
     click_button(page, "Scott Higgins")  # Pass
+    expect_game_state(page, "Normal")
     click_button(page, "Point!")
 
     play_by_play = [
@@ -402,13 +426,16 @@ def test_drop(server, league, rosters, page: Page) -> None:
     click_button(page, "Owen Lumley")
     click_button(page, "Heather McCabe")
     click_button(page, "Drop")
+    expect_game_state(page, "PickUp")
 
     # possession flips
     expect_players_enabled(page, home_line)
     expect_players_disabled(page, away_line)
 
     click_button(page, "Brian Kells")
+    expect_game_state(page, "AfterTurnover")
     click_button(page, "Ashlin Kelly")
+    expect_game_state(page, "Normal")
     click_button(page, "Point!")
 
     play_by_play = [
@@ -459,7 +486,9 @@ def test_callahan(server, league, rosters, page: Page) -> None:
     click_button(page, "Owen Lumley")
     click_button(page, "Throwaway")
     click_button(page, "Ashlin Kelly")
+    expect_game_state(page, "AfterTurnover")
     click_button(page, "Catch D")
+    expect_game_state(page, "Normal")
     click_button(page, "Point!")
 
     play_by_play = [
@@ -654,21 +683,27 @@ def test_undo_pull(server, league, rosters, page: Page) -> None:
 
     # select player
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "Pull")
     click_button(page, "Undo")
+    expect_game_state(page, "Start")
 
     # at the begining again. nothing more to undo
     expect_button_disabled(page, "Undo")
 
     # select player (opposite team as before now) and pull
     click_button(page, "Brian Kells")
+    expect_game_state(page, "Pull")
     click_button(page, "Pull")
+    expect_game_state(page, "PickUp")
     expect_play_by_play(page, ["1.Brian Kells pulled"])
 
     # receive
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "AfterPull")
 
     # undo twice
     click_button(page, "Undo")
+    expect_game_state(page, "PickUp")
     expect_play_by_play(page, ["1.Brian Kells pulled"])
 
     click_button(page, "Undo")
@@ -835,8 +870,10 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect_players_enabled(page, home_bench)
     expect_players_disabled(page, away_bench)
 
-    # select home player to start
+    # select home player to start (this creates the active point since possession is known)
     click_button(page, "Christopher Keates")
+    expect_game_state(page, "FirstThrow")
+
     # no pull for other points
     expect_button_disabled(page, "pull")
     expect_button_disabled(page, "drop")
@@ -1413,12 +1450,17 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     start_point(page)
 
     # record pull
+    expect_game_state(page, "Start")
     click_button(page, "Brian Kells")
+    expect_game_state(page, "Pull")
     click_button(page, "Pull")
+    expect_game_state(page, "PickUp")
 
     # receiving player drops the pull
     click_button(page, "Owen Lumley")
+    expect_game_state(page, "AfterPull")
     click_button(page, "Drop")
+    expect_game_state(page, "PickUp")
 
     # verify pull and drop are recorded
     expect_play_by_play(page, ["Brian Kells pulled"])

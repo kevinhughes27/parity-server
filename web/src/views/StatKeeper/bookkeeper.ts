@@ -490,7 +490,7 @@ export class Bookkeeper {
       };
     }
 
-    if (currentGameState === GameState.WhoPickedUpDisc) {
+    if (currentGameState === GameState.PickUp) {
       if (!isTeamInPossession) {
         return {
           enabled: false,
@@ -564,7 +564,7 @@ export class Bookkeeper {
     const isPullState = currentGameState === GameState.Pull;
     const isNormalState = currentGameState === GameState.Normal;
     const isAfterTurnoverState = currentGameState === GameState.AfterTurnover;
-    const isFirstThrowQuebec = currentGameState === GameState.FirstThrowQuebecVariant;
+    const isFirstThrowQuebec = currentGameState === GameState.FirstThrow;
     const isAfterPullState = currentGameState === GameState.AfterPull;
 
     // Complex conditions
