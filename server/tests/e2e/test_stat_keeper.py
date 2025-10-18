@@ -1305,6 +1305,161 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     assert "Kevin Barford" not in game["points"][0]["offensePlayers"]
 
 
+def test_back_to_back_defense(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats: pull and initial pass
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+
+    # first D event - throwaway and block
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    page.get_by_role("button", name="D (Block)").click()
+
+    # verify first D is recorded
+    expect(page.get_by_role("list")).to_contain_text("Heather McCabe threw it away")
+    expect(page.get_by_role("list")).to_contain_text("Ashlin Kelly got a block")
+
+    # Ashlin doesn't have possession (regular D block, not catch D)
+    expect_players_enabled(page, home_line)
+    expect_players_disabled(page, away_line)
+
+    # second D event - pick up disc, throwaway, and another block
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    page.get_by_role("button", name="Throwaway").click()
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="D (Block)").click()
+
+    # verify second D is recorded
+    expect(page.get_by_role("list")).to_contain_text("Ashlin Kelly threw it away")
+    expect(page.get_by_role("list")).to_contain_text("Owen Lumley got a block")
+
+    # finish the point
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Heather McCabe").click()
+    page.get_by_role("button", name="Point!").click()
+
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley passed to Heather McCabe",
+            "3.Heather McCabe threw it away",
+            "4.Ashlin Kelly got a block",
+            "5.Ashlin Kelly threw it away",
+            "6.Owen Lumley got a block",
+            "7.Owen Lumley passed to Heather McCabe",
+            "8.Heather McCabe scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
+
+    # submit
+    submit_game(page)
+
+    # verify submitted stats
+    stats = get_stats()
+
+    # both players got a block
+    assert stats["Ashlin Kelly"]["d_blocks"] == 1
+    assert stats["Owen Lumley"]["d_blocks"] == 1
+
+    # both players threw it away
+    assert stats["Ashlin Kelly"]["throw_aways"] == 1
+    assert stats["Heather McCabe"]["throw_aways"] == 1
+
+    # goal
+    assert stats["Heather McCabe"]["goals"] == 1
+
+
+# this isn't actually a special case if you understand the underlying logic
+# but since that is not always clear having this test is worth it.
+def test_dropped_pull(server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # select lines
+    expect(page.locator("#root")).to_contain_text("Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record pull
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Pull").click()
+
+    # receiving player drops the pull
+    page.get_by_role("button", name="Owen Lumley").click()
+    page.get_by_role("button", name="Drop").click()
+
+    # verify pull and drop are recorded
+    expect(page.get_by_role("list")).to_contain_text("Brian Kells pulled")
+    expect(page.get_by_role("list")).to_contain_text("Owen Lumley dropped it")
+
+    # possession flips to pulling team
+    expect_players_enabled(page, home_line)
+    expect_players_disabled(page, away_line)
+
+    # finish the point
+    page.get_by_role("button", name="Brian Kells").click()
+    page.get_by_role("button", name="Ashlin Kelly").click()
+    page.get_by_role("button", name="Point!").click()
+
+    play_by_play = "".join(
+        [
+            "1.Brian Kells pulled",
+            "2.Owen Lumley dropped it",
+            "3.Brian Kells passed to Ashlin Kelly",
+            "4.Ashlin Kelly scored!",
+        ]
+    )
+    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    expect_next_line_text(page)
+
+    # submit
+    submit_game(page)
+
+    # verify submitted stats
+    stats = get_stats()
+
+    # pull stats
+    assert stats["Brian Kells"]["pulls"] == 1
+
+    # drop stats
+    assert stats["Owen Lumley"]["drops"] == 1
+    assert stats["Owen Lumley"]["o_points_against"] == 1
+
+    # goal stats
+    assert stats["Ashlin Kelly"]["goals"] == 1
+    assert stats["Ashlin Kelly"]["d_points_for"] == 1
+
+
 def test_perf(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
