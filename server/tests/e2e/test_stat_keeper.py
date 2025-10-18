@@ -68,12 +68,8 @@ def expect_rosters(page: Page, home_players: list[str], away_players: list[str])
         expect(page.locator("#root")).to_contain_text(player)
 
     # roster editing now visible
-    expect(
-        page.get_by_role("heading", name="Add Player from League").first
-    ).to_be_visible()
-    expect(
-        page.get_by_role("heading", name="Add Custom Substitute").first
-    ).to_be_visible()
+    expect(page.get_by_role("heading", name="Add Player from League").first).to_be_visible()
+    expect(page.get_by_role("heading", name="Add Custom Substitute").first).to_be_visible()
 
 
 def start_game(page: Page):
@@ -93,16 +89,12 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
 
 def expect_players_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).to_contain_class(
-            "MuiButton-colorInfo"
-        )
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-colorInfo")
 
 
 def expect_players_not_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).not_to_contain_class(
-            "MuiButton-colorInfo"
-        )
+        expect(page.get_by_role("button", name=player)).not_to_contain_class("MuiButton-colorInfo")
 
 
 def expect_lines_selected(page: Page, home: str, away: str):
@@ -140,11 +132,23 @@ def expect_button_disabled(page: Page, name: str):
     expect(page.get_by_role("button", name=name)).to_be_disabled()
 
 
+def expect_play_by_play(page: Page, events: list[str]):
+    play_by_play_text = "".join(events)
+    expect(page.get_by_role("list")).to_contain_text(play_by_play_text)
+
+
+def refute_play_by_play(page: Page, events: list[str]):
+    play_by_play_text = "".join(events)
+    expect(page.get_by_role("list")).not_to_contain_text(play_by_play_text)
+
+
 def expect_next_line_text(page: Page):
-    expect_help_message(
-        page, "Players not on the previous line are pre-selected. Adjust and confirm."
-    )
+    expect_help_message(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
     expect_game_state(page, "SelectingLines")
+
+
+def expect_text(page: Page, text: str):
+    expect(page.locator("#root")).to_contain_text(text)
 
 
 def open_hamburger_menu(page: Page):
@@ -226,15 +230,13 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
     click_button(page, "Kevin Barford")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe passed to Kevin Barford",
-            "4.Kevin Barford scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
 
     # lines are swapped automatically
     expect_next_line_text(page)
@@ -280,9 +282,8 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # pre turnover state
     expect_players_disabled(page, home_line)
-    expect_players_enabled(
-        page, [p for p in away_line if p != "Heather McCabe"]
-    )  # player with the disk is enabled
+    # player with the disk is enabled
+    expect_players_enabled(page, [p for p in away_line if p != "Heather McCabe"])
 
     # button state
     expect_button_enabled(page, "Throwaway")
@@ -334,22 +335,20 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
     click_button(page, "Scott Higgins")  # Pass
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe threw it away",
-            "4.Brian Kells passed to Scott Higgins",
-            "5.Scott Higgins threw it away",
-            "6.Owen Lumley got a block",
-            "7.Owen Lumley passed to Heather McCabe",
-            "8.Heather McCabe threw it away",
-            "9.Ashlin Kelly got a block",
-            "10.Ashlin Kelly passed to Scott Higgins",
-            "11.Scott Higgins scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe threw it away",
+        "4.Brian Kells passed to Scott Higgins",
+        "5.Scott Higgins threw it away",
+        "6.Owen Lumley got a block",
+        "7.Owen Lumley passed to Heather McCabe",
+        "8.Heather McCabe threw it away",
+        "9.Ashlin Kelly got a block",
+        "10.Ashlin Kelly passed to Scott Higgins",
+        "11.Scott Higgins scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -412,16 +411,14 @@ def test_drop(server, league, rosters, page: Page) -> None:
     click_button(page, "Ashlin Kelly")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe dropped it",
-            "4.Brian Kells passed to Ashlin Kelly",
-            "5.Ashlin Kelly scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe dropped it",
+        "4.Brian Kells passed to Ashlin Kelly",
+        "5.Ashlin Kelly scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -465,15 +462,13 @@ def test_callahan(server, league, rosters, page: Page) -> None:
     click_button(page, "Catch D")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley threw it away",
-            "3.Ashlin Kelly got a block",
-            "4.Ashlin Kelly scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley threw it away",
+        "3.Ashlin Kelly got a block",
+        "4.Ashlin Kelly scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -529,86 +524,78 @@ def test_undo(server, league, rosters, page: Page) -> None:
 
     # new pass
     click_button(page, "Kevin Barford")
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Kevin Barford",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Kevin Barford",
+    ]
+    expect_play_by_play(page, play_by_play)
 
     # throw away undo
     click_button(page, "Throwaway")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
+    expect_play_by_play(page, ["Kevin Barford threw it away"])
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+    refute_play_by_play(page, ["Kevin Barford threw it away"])
 
     # drop undo
     click_button(page, "Drop")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford dropped it")
+    expect_play_by_play(page, ["Kevin Barford dropped it"])
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford dropped it")
+    refute_play_by_play(page, ["Kevin Barford dropped it"])
 
     # d undo
     click_button(page, "Throwaway")
     click_button(page, "Scott Higgins")
     click_button(page, "D (Block)")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
-    expect(page.get_by_role("list")).to_contain_text("Scott Higgins got a block")
-    expect(
-        page.get_by_role("button", name="Scott Higgins")
-    ).to_be_enabled()  # not a catch d so no one has possession
+    expect_play_by_play(page, ["Kevin Barford threw it away"])
+    expect_play_by_play(page, ["Scott Higgins got a block"])
+    expect_button_enabled(page, "Scott Higgins")  # not a catch d so no one has possession
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
-    expect(page.get_by_role("list")).not_to_contain_text("Scott Higgins got a block")
+    expect_play_by_play(page, ["Kevin Barford threw it away"])
+    refute_play_by_play(page, ["Scott Higgins got a block"])
     # undo possession
     expect_button_disabled(page, "Scott Higgins")
     click_button(page, "Undo")
     expect_button_enabled(page, "Scott Higgins")
     # undo throw away
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+    refute_play_by_play(page, ["Kevin Barford threw it away"])
 
     # catch d undo
     click_button(page, "Throwaway")
     click_button(page, "Scott Higgins")
     click_button(page, "Catch D")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
-    expect(page.get_by_role("list")).to_contain_text("Scott Higgins got a block")
-    expect(
-        page.get_by_role("button", name="Scott Higgins")
-    ).to_be_disabled()  # catch d so he has possession
+    expect_play_by_play(page, ["Kevin Barford threw it away"])
+    expect_play_by_play(page, ["Scott Higgins got a block"])
+    expect_button_disabled(page, "Scott Higgins")  # catch d so he has possession
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).to_contain_text("Kevin Barford threw it away")
-    expect(page.get_by_role("list")).not_to_contain_text("Scott Higgins got a block")
+    expect_play_by_play(page, ["Kevin Barford threw it away"])
+    refute_play_by_play(page, ["Scott Higgins got a block"])
     # undo possession
     expect_button_disabled(page, "Scott Higgins")
     click_button(page, "Undo")
     expect_button_enabled(page, "Scott Higgins")
     # undo throw away
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).not_to_contain_text("Kevin Barford threw it away")
+    refute_play_by_play(page, ["Kevin Barford threw it away"])
 
     # undo point
     # first we need another pass.
     click_button(page, "Owen Lumley")
     click_button(page, "Point!")
-    expect(page.get_by_role("list")).to_contain_text("Owen Lumley scored!")
+    expect_play_by_play(page, ["Owen Lumley scored!"])
     click_button(page, "Undo Point")
-    expect(page.get_by_role("list")).not_to_contain_text("Owen Lumley scored!")
+    refute_play_by_play(page, ["Owen Lumley scored!"])
 
     # finish point
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Kevin Barford",
-            "3.Kevin Barford passed to Owen Lumley",
-            "4.Owen Lumley scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Kevin Barford",
+        "3.Kevin Barford passed to Owen Lumley",
+        "4.Owen Lumley scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # start second point
@@ -675,21 +662,21 @@ def test_undo_pull(server, league, rosters, page: Page) -> None:
     # select player (opposite team as before now) and pull
     click_button(page, "Brian Kells")
     click_button(page, "Pull")
-    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+    expect_play_by_play(page, ["1.Brian Kells pulled"])
 
     # receive
     click_button(page, "Owen Lumley")
 
     # undo twice
     click_button(page, "Undo")
-    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+    expect_play_by_play(page, ["1.Brian Kells pulled"])
 
     click_button(page, "Undo")
     expect(page.locator("#root")).not_to_contain_text("1.Brian Kells pulled")
 
     # pull again
     click_button(page, "Pull")
-    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
+    expect_play_by_play(page, ["1.Brian Kells pulled"])
 
 
 def test_button_states(server, league, rosters, page: Page) -> None:
@@ -927,9 +914,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     assert stats["Brian Kells"]["pulls"] == 1
 
 
-def test_resume(
-    server, league, rosters, browser_context_args, browser: Browser, page: Page
-) -> None:
+def test_resume(server, league, rosters, browser_context_args, browser: Browser, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
@@ -956,15 +941,13 @@ def test_resume(
     click_button(page, "Kevin Barford")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe passed to Kevin Barford",
-            "4.Kevin Barford scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # reload the app to simulate a crash or restart etc
@@ -974,37 +957,36 @@ def test_resume(
     page.goto(f"{base_url}/stat_keeper")
 
     # resume game
-    expect(page.locator("#root")).to_contain_text(
-        "Kells Angels Bicycle Club vs lumleysexuals"
-    )
-    expect(page.locator("#root")).to_contain_text(
-        "Score: Kells Angels Bicycle Club 0 - 1 lumleysexuals"
-    )
-    expect(page.locator("#root")).to_contain_text("in-progress")
+    expect_text(page, "Kells Angels Bicycle Club vs lumleysexuals")
+    expect_text(page, "Score: Kells Angels Bicycle Club 0 - 1 lumleysexuals")
+
+    expect_text(page, "in-progress")
     page.get_by_role("link", name="Resume Game").click()
 
     # right back where we left off
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # test undo after resume
     click_button(page, "Undo Point")
-    expect(
-        page.get_by_role("button", name="Kevin Barford")
-    ).to_be_disabled()  # has possession
+    expect_button_disabled(page, "Kevin Barford")  # has possession
     click_button(page, "Owen Lumley")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe passed to Kevin Barford",
-            "4.Kevin Barford passed to Owen Lumley",
-            "5.Owen Lumley scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford passed to Owen Lumley",
+        "5.Owen Lumley scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -1043,15 +1025,13 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
     click_button(page, "Kevin Barford")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe passed to Kevin Barford",
-            "4.Kevin Barford scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
 
     # simluate network failure
     page.route("**/submit_game", lambda route: route.abort())
@@ -1061,9 +1041,7 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
 
     # view game
     page.get_by_role("link", name="View Game").click()
-    expect(page.locator("h5")).to_contain_text(
-        "Kells Angels Bicycle Club vs lumleysexuals"
-    )
+    expect_text(page, "Kells Angels Bicycle Club vs lumleysexuals")
 
     # fix network failure
     page.route("**/submit_game", lambda route: route.continue_())
@@ -1072,9 +1050,7 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
     click_button(page, "Re-sync")
 
     # success
-    expect(page.get_by_role("alert")).to_contain_text(
-        "Game successfully uploaded to server!"
-    )
+    expect(page.get_by_role("alert")).to_contain_text("Game successfully uploaded to server!")
     expect(page.locator("#root")).not_to_contain_text("Re-sync")
 
     # verify submitted stats
@@ -1103,9 +1079,7 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Add Sub").nth(1).click()
 
     # remove player
-    page.get_by_role("listitem").filter(has_text="Kevin BarfordRemove").get_by_role(
-        "button"
-    ).click()
+    page.get_by_role("listitem").filter(has_text="Kevin BarfordRemove").get_by_role("button").click()
 
     # check updated rosters
     home_roster = rosters[home]
@@ -1161,10 +1135,8 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     click_button(page, "Update Rosters")
 
     # select lines
-    # expect(page.locator("#root")).to_contain_text("Select players for the next point.")
-    expect(page.locator("#root")).to_contain_text(
-        "Players not on the previous line are pre-selected. Adjust and confirm."
-    )
+    # expect_text(page, "Select players for the next point.")
+    expect_text(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
     select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1173,9 +1145,7 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     expect(page.get_by_role("button", name="Kevin Hughes")).to_be_visible()
 
 
-def test_edit_rosters_mid_point_and_change_line(
-    server, league, rosters, page: Page
-) -> None:
+def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
@@ -1267,10 +1237,9 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Change Line").click()
 
     # help text
-    expect_help_message(
-        page,
-        "Tap player names to Edit the active line, then click 'Resume Point'.",
-    )
+    message = "Tap player names to Edit the active line, then click 'Resume Point'."
+    expect_help_message(page, message)
+
     # undo is not available
     expect(page.locator("#root")).not_to_contain_text("Undo")
 
@@ -1286,23 +1255,19 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     click_button(page, "Resume Point")
 
     # play by play
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+    ]
+    expect_play_by_play(page, play_by_play)
 
     # undo here removes the last action
     # changing the line is not an un-doable action. just change it again
     click_button(page, "Undo")
 
     # after undo play by play
-    expect(page.get_by_role("list")).to_contain_text("1.Brian Kells pulled")
-    expect(page.get_by_role("list")).not_to_contain_text(
-        "2.Owen Lumley passed to Heather McCabe"
-    )
+    expect_play_by_play(page, ["1.Brian Kells pulled"])
+    refute_play_by_play(page, ["2.Owen Lumley passed to Heather McCabe"])
 
     # resume stats
     click_button(page, "Kyle Sprysa")
@@ -1373,8 +1338,8 @@ def test_back_to_back_defense(server, league, rosters, page: Page) -> None:
     click_button(page, "D (Block)")
 
     # verify first D is recorded
-    expect(page.get_by_role("list")).to_contain_text("Heather McCabe threw it away")
-    expect(page.get_by_role("list")).to_contain_text("Ashlin Kelly got a block")
+    expect_play_by_play(page, ["Heather McCabe threw it away"])
+    expect_play_by_play(page, ["Ashlin Kelly got a block"])
 
     # Ashlin doesn't have possession (regular D block, not catch D)
     expect_players_enabled(page, home_line)
@@ -1387,27 +1352,25 @@ def test_back_to_back_defense(server, league, rosters, page: Page) -> None:
     click_button(page, "D (Block)")
 
     # verify second D is recorded
-    expect(page.get_by_role("list")).to_contain_text("Ashlin Kelly threw it away")
-    expect(page.get_by_role("list")).to_contain_text("Owen Lumley got a block")
+    expect_play_by_play(page, ["Ashlin Kelly threw it away"])
+    expect_play_by_play(page, ["Owen Lumley got a block"])
 
     # finish the point
     click_button(page, "Owen Lumley")
     click_button(page, "Heather McCabe")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley passed to Heather McCabe",
-            "3.Heather McCabe threw it away",
-            "4.Ashlin Kelly got a block",
-            "5.Ashlin Kelly threw it away",
-            "6.Owen Lumley got a block",
-            "7.Owen Lumley passed to Heather McCabe",
-            "8.Heather McCabe scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe threw it away",
+        "4.Ashlin Kelly got a block",
+        "5.Ashlin Kelly threw it away",
+        "6.Owen Lumley got a block",
+        "7.Owen Lumley passed to Heather McCabe",
+        "8.Heather McCabe scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -1458,8 +1421,8 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     click_button(page, "Drop")
 
     # verify pull and drop are recorded
-    expect(page.get_by_role("list")).to_contain_text("Brian Kells pulled")
-    expect(page.get_by_role("list")).to_contain_text("Owen Lumley dropped it")
+    expect_play_by_play(page, ["Brian Kells pulled"])
+    expect_play_by_play(page, ["Owen Lumley dropped it"])
 
     # possession flips to pulling team
     expect_players_enabled(page, home_line)
@@ -1470,15 +1433,13 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     click_button(page, "Ashlin Kelly")
     click_button(page, "Point!")
 
-    play_by_play = "".join(
-        [
-            "1.Brian Kells pulled",
-            "2.Owen Lumley dropped it",
-            "3.Brian Kells passed to Ashlin Kelly",
-            "4.Ashlin Kelly scored!",
-        ]
-    )
-    expect(page.get_by_role("list")).to_contain_text(play_by_play)
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley dropped it",
+        "3.Brian Kells passed to Ashlin Kelly",
+        "4.Ashlin Kelly scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
     expect_next_line_text(page)
 
     # submit
@@ -1651,9 +1612,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # the slope should be very small (close to 0) indicating no significant slowdown
     # allow for some variance but fail if there's a clear exponential trend
     # a slope > 0.1 seconds per point would indicate serious performance degradation
-    assert slope < 0.1, (
-        f"Performance degradation detected: slope = {slope:.4f} seconds per point"
-    )
+    assert slope < 0.1, f"Performance degradation detected: slope = {slope:.4f} seconds per point"
 
     # also check that no individual point took an unreasonably long time
     max_time = max(point_times)

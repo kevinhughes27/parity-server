@@ -32,6 +32,9 @@ build-backend = "setuptools.build_meta"
 where = ["."]
 include = ["server*"]
 
+[tool.ruff]
+line-length = 160
+
 [tool.ruff.lint]
 extend-select = ["I"]
 
