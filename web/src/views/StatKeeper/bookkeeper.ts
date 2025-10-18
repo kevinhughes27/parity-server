@@ -558,38 +558,30 @@ export class Bookkeeper {
     const currentGameState = this.gameState();
     const hasFirstActor = this.firstActor !== null;
 
-    // State-based conditions
-    const isPullState = currentGameState === GameState.Pull;
-    const isNormalState = currentGameState === GameState.Normal;
-    const isAfterTurnoverState = currentGameState === GameState.AfterTurnover;
-    const isAfterDropState = currentGameState === GameState.AfterDrop;
-    const isFirstThrowQuebec = currentGameState === GameState.FirstThrow;
-    const isAfterPullState = currentGameState === GameState.AfterPull;
+    // States where player has possession
+    const hasPossession =
+      currentGameState === GameState.Normal ||
+      currentGameState === GameState.AfterTurnover ||
+      currentGameState === GameState.AfterDrop ||
+      currentGameState === GameState.AfterPull ||
+      currentGameState === GameState.FirstThrow;
 
-    // Complex conditions
-    // seems a bit off but tests are passing. I should be able to express this better
-    const canTurnover =
-      (isNormalState || isFirstThrowQuebec || isAfterTurnoverState || isAfterDropState || isAfterPullState) &&
-      hasFirstActor;
-    const isPickupAfterScore = isFirstThrowQuebec;
-    const canDrop = canTurnover && !isPickupAfterScore;
     const isFirstPass = this._isFirstPass();
-    const canUndo = this.getUndoCount() > 0;
 
     // Action-specific enabled states
-    const pullEnabled = isPullState && hasFirstActor;
-    const pointEnabled = isNormalState && hasFirstActor && !isFirstPass;
-    const dropEnabled = canDrop;
-    const throwawayEnabled = canTurnover;
-    const dEnabled = isAfterTurnoverState && hasFirstActor;
-    const catchDEnabled = isAfterTurnoverState && hasFirstActor;
-    const undoEnabled = canUndo;
+    const pullEnabled = currentGameState === GameState.Pull && hasFirstActor;
+    const pointEnabled = currentGameState === GameState.Normal && hasFirstActor && !isFirstPass;
+    const dropEnabled = hasPossession && hasFirstActor && currentGameState !== GameState.FirstThrow;
+    const throwawayEnabled = hasPossession && hasFirstActor;
+    const dEnabled = currentGameState === GameState.AfterTurnover && hasFirstActor;
+    const catchDEnabled = currentGameState === GameState.AfterTurnover && hasFirstActor;
+    const undoEnabled = this.getUndoCount() > 0;
 
     switch (action) {
       case 'pull':
         return {
           enabled: pullEnabled,
-          reason: !isPullState
+          reason: currentGameState !== GameState.Pull
             ? 'Not in pull state'
             : !hasFirstActor
               ? 'No puller selected'
@@ -601,7 +593,7 @@ export class Bookkeeper {
           enabled: pointEnabled,
           reason: !hasFirstActor
             ? 'No player selected'
-            : !isNormalState
+            : currentGameState !== GameState.Normal
               ? 'Cannot score in current state'
               : isFirstPass
                 ? 'Cannot score on first pass'
@@ -633,7 +625,7 @@ export class Bookkeeper {
           enabled: dEnabled,
           reason: !hasFirstActor
             ? 'No player selected'
-            : !isAfterTurnoverState
+            : currentGameState !== GameState.AfterTurnover
               ? 'Can only get D after turnover'
               : undefined,
         };
@@ -643,7 +635,7 @@ export class Bookkeeper {
           enabled: catchDEnabled,
           reason: !hasFirstActor
             ? 'No player selected'
-            : !isAfterTurnoverState
+            : currentGameState !== GameState.AfterTurnover
               ? 'Can only get catch D after turnover'
               : undefined,
         };
