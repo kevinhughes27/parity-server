@@ -796,12 +796,11 @@ def test_button_states(server, league, rosters, page: Page) -> None:
     expect_button_disabled(page, "catch d")
 
     # first pass
-    # point disabled (QuebecVariant)
     click_button(page, "Ashlin Kelly")
     expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
     expect_players_disabled(page, away_line)
     expect_button_disabled(page, "pull")
-    expect_button_disabled(page, "point!")
+    expect_button_disabled(page, "point!")  # point disabled (QuebecVariant)
     expect_button_enabled(page, "drop")
     expect_button_enabled(page, "throwaway")
     expect_button_disabled(page, "d (block)")
