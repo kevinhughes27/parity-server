@@ -67,8 +67,16 @@ describe('GamesList', () => {
     expect(screen.getByText('Test League')).toBeInTheDocument();
 
     // Verify games are rendered
-    expect(screen.getByText(/Red vs Blue/)).toBeInTheDocument();
-    expect(screen.getByText(/Red vs Yellow/)).toBeInTheDocument();
+    expect(
+      screen.getByText((content, element) => {
+        return element?.textContent === 'RedvsBlue';
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText((content, element) => {
+        return element?.textContent === 'RedvsYellow';
+      })
+    ).toBeInTheDocument();
     expect(screen.getByText('10 - 8')).toBeInTheDocument();
     expect(screen.getByText('12 - 10')).toBeInTheDocument();
   });

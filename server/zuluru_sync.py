@@ -25,9 +25,7 @@ class ZuluruSync:
 
         if division:
             self.teams_path = division_path + str(self.league.zuluru_id)
-            self.schedule_path = (
-                f"{self.base_url}/divisions/schedule?division={self.league.zuluru_id}"
-            )
+            self.schedule_path = f"{self.base_url}/divisions/schedule?division={self.league.zuluru_id}"
         else:
             # league
             self.teams_path = league_path + str(self.league.zuluru_id)
@@ -64,9 +62,7 @@ class ZuluruSync:
         tbody = soup.find("div", {"class": "schedule"}).find("tbody")
 
         teams = {}
-        for team in self.session.exec(
-            select(db.Team).where(db.Team.league_id == self.league_id)
-        ).all():
+        for team in self.session.exec(select(db.Team).where(db.Team.league_id == self.league_id)).all():
             teams[team.zuluru_id] = team.id
 
         schedule = []
@@ -89,18 +85,13 @@ class ZuluruSync:
         return schedule
 
     def parse_matchup(self, teams, row, week, date):
-        ids = [
-            int(x.get("id").replace(self.team_id_preamble, ""))
-            for x in row.find_all(id=re.compile(self.team_id_preamble + r"\d+"))
-        ]
+        ids = [int(x.get("id").replace(self.team_id_preamble, "")) for x in row.find_all(id=re.compile(self.team_id_preamble + r"\d+"))]
 
         if len(ids) < 2:
             return None
 
         time_values = row.find(href=re.compile("games/view")).text.split("-")
-        game_times = [
-            datetime.strptime(value, "%I:%M%p").time() for value in time_values
-        ]
+        game_times = [datetime.strptime(value, "%I:%M%p").time() for value in time_values]
 
         matchup = db.Matchup(
             league_id=self.league_id,
@@ -127,10 +118,7 @@ class ZuluruSync:
 
     def get_team_ids(self, session):
         soup = self.get_soup(session, self.teams_path)
-        ids = [
-            int(x.get("id").replace(self.team_id_preamble, ""))
-            for x in soup.findAll(id=re.compile(self.team_id_preamble + r"\d+"))
-        ]
+        ids = [int(x.get("id").replace(self.team_id_preamble, "")) for x in soup.findAll(id=re.compile(self.team_id_preamble + r"\d+"))]
         return ids
 
     def sync_team(self, session, zuluru_id):
@@ -192,9 +180,7 @@ class ZuluruSync:
             self.update_or_create_player(zuluru_id, name, gender, team)
 
     def update_or_create_team(self, zuluru_id, name):
-        statement = select(db.Team).where(
-            db.Team.league_id == self.league_id, db.Team.zuluru_id == zuluru_id
-        )
+        statement = select(db.Team).where(db.Team.league_id == self.league_id, db.Team.zuluru_id == zuluru_id)
         instance = self.session.exec(statement).first()
 
         if instance:
@@ -211,9 +197,7 @@ class ZuluruSync:
         return instance
 
     def update_or_create_player(self, zuluru_id, name, gender, team):
-        statement = select(db.Player).where(
-            db.Player.league_id == self.league_id, db.Player.zuluru_id == zuluru_id
-        )
+        statement = select(db.Player).where(db.Player.league_id == self.league_id, db.Player.zuluru_id == zuluru_id)
         instance = self.session.exec(statement).first()
 
         if instance:

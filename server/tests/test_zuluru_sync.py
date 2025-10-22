@@ -53,16 +53,10 @@ def test_sync_schedule(session, mocker):
     sync_scraper.sync_schedule()
 
     # assert
-    retrieved_matchups = session.exec(
-        select(db.Matchup).where(db.Matchup.league_id == league.id)
-    ).all()
+    retrieved_matchups = session.exec(select(db.Matchup).where(db.Matchup.league_id == league.id)).all()
 
     assert len(retrieved_matchups) == 1
     assert retrieved_matchups[0].home_team_id == team_a.id
     assert retrieved_matchups[0].away_team_id == team_b.id
-    assert retrieved_matchups[0].game_start == datetime.combine(
-        date(2025, 5, 22), time(18, 45)
-    )
-    assert retrieved_matchups[0].game_end == datetime.combine(
-        date(2025, 5, 22), time(20, 35)
-    )
+    assert retrieved_matchups[0].game_start == datetime.combine(date(2025, 5, 22), time(18, 45))
+    assert retrieved_matchups[0].game_end == datetime.combine(date(2025, 5, 22), time(20, 35))

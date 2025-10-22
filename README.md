@@ -41,6 +41,8 @@ To reset your local database you can reset the db file using `git restore`.
 
 There is also an automated test suite which can be run using `uv run pytest`.
 
+By default it will run e2e tests. For quick python only dev work use `uv run pytest -k 'not e2e'`
+
 
 Contributing
 ------------

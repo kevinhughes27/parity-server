@@ -1,11 +1,15 @@
 from fastapi.testclient import TestClient
+from multiprocessing import Process
 from sqlmodel import Session, SQLModel, create_engine
-from sqlmodel.pool import StaticPool
+from typing import Generator
 import json
 import logging
 import pathlib
 import pytest
+import time
+import uvicorn
 
+from server.api import CURRENT_LEAGUE_ID
 from server.app import app
 import server.db as db
 
@@ -16,16 +20,38 @@ logger.setLevel(logging.WARN)
 
 @pytest.fixture(name="session", scope="function")
 def session_fixture():
-    engine = create_engine(
-        "sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool
-    )
+    """Database session with test db injected."""
+    engine = create_engine("sqlite:///test.sqlite")
+    SQLModel.metadata.drop_all(engine)
     SQLModel.metadata.create_all(engine)
     with Session(engine) as session:
         yield session
 
 
+@pytest.fixture(name="server", scope="function")
+def server_process(session: Session) -> Generator[Process, None, None]:
+    """Starts a uvicorn server in a separate process."""
+
+    def get_session_override():
+        return session
+
+    app.dependency_overrides[db.get_session] = get_session_override
+
+    def run_server():
+        uvicorn.run(app, host="127.0.0.1", port=8000)
+
+    process = Process(target=run_server)
+    process.start()
+    time.sleep(1)
+    yield process
+    process.terminate()
+    process.join()
+
+
 @pytest.fixture(name="client", scope="function")
 def client_fixture(session: Session):
+    """Test client for making api requests in tests."""
+
     def get_session_override():
         return session
 
@@ -39,7 +65,7 @@ def client_fixture(session: Session):
 @pytest.fixture(name="league", scope="function")
 def league_fixture(session):
     league = db.League()
-    league.id = 1
+    league.id = CURRENT_LEAGUE_ID
     league.zuluru_id = 1
     league.name = "Test"
     session.add(league)
@@ -52,13 +78,13 @@ def league_fixture(session):
 # players only get teams when created through a zuluru sync
 # otherwise subsitutes etc would change rosters
 @pytest.fixture(name="rosters", scope="function")
-def rosters_fixture(session, league):
+def rosters_fixture(session, league) -> dict[str, list[str]]:
     fixture_path = pathlib.Path(__file__).parent / "./data/rosters.json"
 
     with open(fixture_path) as f:
         rosters_str = f.read()
 
-    rosters = json.loads(rosters_str)
+    rosters: dict[str, list[str]] = json.loads(rosters_str)
 
     for idx, team in enumerate(rosters):
         t = db.Team(league_id=league.id, zuluru_id=idx, name=team)
@@ -68,3 +94,29 @@ def rosters_fixture(session, league):
         for p in players:
             session.add(db.Player(league_id=league.id, name=p, team_id=t.id))
         session.commit()
+
+    return rosters
+
+
+@pytest.fixture(name="matchup", scope="function")
+def matchup_fixture(session, league, rosters):
+    """Creates a test matchup for upcoming games."""
+    from datetime import datetime, timedelta
+    from sqlmodel import select
+
+    # Use teams that have distinct rosters (used in other tests)
+    home_team = session.exec(select(db.Team).where(db.Team.name == "Kells Angels Bicycle Club")).first()
+    away_team = session.exec(select(db.Team).where(db.Team.name == "lumleysexuals")).first()
+
+    matchup = db.Matchup(
+        league_id=league.id,
+        home_team_id=home_team.id,
+        away_team_id=away_team.id,
+        week=7,
+        game_start=datetime.now() + timedelta(days=1, hours=19),
+        game_end=datetime.now() + timedelta(days=1, hours=20),
+    )
+    session.add(matchup)
+    session.commit()
+
+    return matchup

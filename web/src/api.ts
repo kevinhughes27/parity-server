@@ -1,5 +1,19 @@
 import 'whatwg-fetch';
-import leagues from './leagues.json';
+import rawLeagues from './leagues.json';
+
+export interface LeagueFromJson {
+  id: number;
+  name: string;
+  lineSize: number;
+}
+
+export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
+
+export const getLeagueName = (leagueId: number | string): string => {
+  const id = typeof leagueId === 'string' ? parseInt(leagueId, 10) : leagueId;
+  const league = leagues.find(l => l.id === id);
+  return league ? league.name : `Unknown League (${leagueId})`;
+};
 
 interface IDataCache {
   [key: string]: string;
@@ -7,29 +21,25 @@ interface IDataCache {
 
 const dataCache: IDataCache = {};
 
-const cachedFetch = (url: string, _options = {}) => {
+const cachedFetch = async (url: string, _options = {}) => {
   const cacheKey = url;
-
   const cached = dataCache[cacheKey];
 
   // return the cache if possible
   if (cached !== undefined) {
     const response = new Response(new Blob([cached]));
-    return Promise.resolve(response);
+    return response;
   }
 
-  return fetch(url).then(response => {
-    // cache the response
-    if (response.status === 200) {
-      response
-        .clone()
-        .text()
-        .then(content => {
-          dataCache[cacheKey] = content;
-        });
-    }
-    return response;
-  });
+  const response = await fetch(url);
+
+  // cache the response
+  if (response.status === 200) {
+    const content = await response.clone().text();
+    dataCache[cacheKey] = content;
+  }
+
+  return response;
 };
 
 // to save an API call round trip to get the leagues instead we
@@ -65,21 +75,21 @@ export interface Point {
 export interface PointEvent {
   type: string;
   firstActor: string;
-  secondActor: string;
+  secondActor: string | null;
   timestamp: string;
 }
 
-const fetchGames = async (leagueId: string): Promise<Game[]> => {
+export const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
   return await response.json();
 };
 
-const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
+export const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   const response = await cachedFetch(`/api/${leagueId}/games/${gameId}`);
   return await response.json();
 };
 
-const saveGame = async (
+export const saveGame = async (
   gameId: string,
   leagueId: string,
   json: string,
@@ -100,7 +110,7 @@ const saveGame = async (
   });
 };
 
-const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
+export const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
 
   // clear cache
@@ -121,13 +131,55 @@ export interface Player {
   salary: number;
 }
 
-const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
+export interface TeamPlayer {
+  name: string;
+  team: string;
+}
+
+export interface Team {
+  id: number;
+  name: string;
+  players: TeamPlayer[];
+}
+
+export const fetchTeams = async (leagueId: string): Promise<Team[]> => {
+  const response = await cachedFetch(`/api/${leagueId}/teams`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch teams for league ${leagueId}: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
+export const fetchPlayers = async (leagueId: string): Promise<Player[]> => {
   const response = await cachedFetch(`/api/${leagueId}/players`);
   return await response.json();
 };
 
-const fetchWeeks = async (leagueId: string): Promise<number[]> => {
+export const fetchWeeks = async (leagueId: string): Promise<number[]> => {
   const response = await cachedFetch(`/api/${leagueId}/weeks`);
+  return await response.json();
+};
+
+export interface Matchup {
+  id: number;
+  league_id: number;
+  homeTeamId: number;
+  awayTeamId: number;
+  week: number;
+  gameStart: string;
+  gameEnd: string;
+}
+
+export interface Schedule {
+  teams: Team[];
+  matchups: Matchup[];
+}
+
+export const fetchSchedule = async (leagueId: string): Promise<Schedule> => {
+  const response = await fetch(`/api/${leagueId}/schedule`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch schedule: ${response.statusText}`);
+  }
   return await response.json();
 };
 
@@ -156,7 +208,7 @@ export interface StatLine {
   [key: string]: number | string;
 }
 
-const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => {
+export const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => {
   let url = `/api/${leagueId}/weeks/${weekNum}`;
   if (weekNum === 0) url = `/api/${leagueId}/stats`;
 
@@ -164,15 +216,4 @@ const fetchStats = async (weekNum: number, leagueId: string): Promise<Stats> => 
   const json = await response.json();
   const data = json.stats || {};
   return data;
-};
-
-export {
-  leagues,
-  fetchGames,
-  fetchGame,
-  fetchPlayers,
-  fetchWeeks,
-  fetchStats,
-  saveGame,
-  deleteGame,
 };
