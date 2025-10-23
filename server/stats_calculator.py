@@ -100,7 +100,7 @@ class StatsCalculator:
         self.stats[player.name].count_stat(stat)
 
     def get_or_create_player(self, player_name):
-        statement = select(db.Player).where(db.Player.name == player_name)
+        statement = select(db.Player).where(db.Player.league_id == self.league_id, db.Player.name == player_name)
         instance = self.session.exec(statement).first()
 
         if instance:
