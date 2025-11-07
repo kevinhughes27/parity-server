@@ -118,14 +118,14 @@ class ZuluruSync:
 
     def get_team_ids(self, session):
         soup = self.get_soup(session, self.teams_path)
-        ids = [int(x.get("id").replace(self.team_id_preamble, "")) for x in soup.findAll(id=re.compile(self.team_id_preamble + r"\d+"))]
+        ids = [int(x.get("id").replace(self.team_id_preamble, "")) for x in soup.find_all(id=re.compile(self.team_id_preamble + r"\d+"))]
         return ids
 
     def sync_team(self, session, zuluru_id):
         print(f"Syncing Team: {zuluru_id}")
 
         soup = self.fetch_team(session, zuluru_id)
-        name = soup.findAll("h2")[-1].get_text()
+        name = soup.find_all("h2")[-1].get_text()
 
         team = self.update_or_create_team(zuluru_id, name)
 
@@ -149,7 +149,7 @@ class ZuluruSync:
         self.session.commit()
 
     def sync_players(self, soup, team):
-        player_elems = soup.findAll(id=re.compile(self.player_id_preamble + r"\d+"))
+        player_elems = soup.find_all(id=re.compile(self.player_id_preamble + r"\d+"))
 
         if not player_elems:
             print("No players found. Login probably failed.")
@@ -161,13 +161,13 @@ class ZuluruSync:
 
         if zuluru_has_genders:
             genders_regex = "(Open|Woman)"
-            gender_elems = table.findAll(text=re.compile(genders_regex))
+            gender_elems = table.find_all(string=re.compile(genders_regex))
             assert len(player_elems) == len(gender_elems)
         else:
             raise "Zuluru has no genders"
 
         roles_regex = "(Regular player|Substitute player|Rules keeper|Captain$|Assistant captain|Non-playing coach)"
-        role_elems = table.findAll(text=re.compile(roles_regex))
+        role_elems = table.find_all(string=re.compile(roles_regex))
         assert len(player_elems) == len(role_elems)
 
         for p, r, g in zip(player_elems, role_elems, gender_elems):
