@@ -46,16 +46,16 @@ deploy () {
   rsync -avz --delete $thisdir/../web/build/ $remote:~/parity-server/web/build/
 
   # enable timers
-#   ssh "$remote" << EOF
-#   sudo systemctl enable parity-backup.timer;
-#   sudo systemctl start parity-backup.timer;
-#
-#   sudo systemctl enable zuluru-sync.timer;
-#   sudo systemctl start zuluru-sync.timer;
-#
-#   # list timers
-#   systemctl list-timers;
-# EOF
+  ssh "$remote" << EOF
+  sudo systemctl enable parity-backup.timer;
+  sudo systemctl start parity-backup.timer;
+
+  sudo systemctl enable zuluru-sync.timer;
+  sudo systemctl start zuluru-sync.timer;
+
+  # list timers
+  systemctl list-timers;
+EOF
 
   # reload and restart
   ssh "$remote" << EOF
