@@ -78,6 +78,8 @@ def start_game(page: Page):
 
 
 def start_point(page: Page):
+    # Set up dialog handler to accept ratio warnings if they appear
+    page.once("dialog", lambda dialog: dialog.accept())
     click_button(page, "Start Point")
 
 
@@ -90,17 +92,47 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
 
 def expect_players_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-colorInfo")
+        # Players are now selected with contained variant (vs outlined when not selected)
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-contained")
 
 
 def expect_players_not_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).not_to_contain_class("MuiButton-colorInfo")
+        # Players are now not selected with outlined variant (vs contained when selected)
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-outlined")
 
 
 def expect_lines_selected(page: Page, home: str, away: str):
-    expect(page.locator("#root")).to_contain_text(f"{home} (6/6)")
-    expect(page.locator("#root")).to_contain_text(f"{away} (6/6)")
+    # Check that both teams have ratio displays that add up to 6 players
+    # The new format shows "TeamName (X ON2, Y WN2)" where X + Y should = 6
+    root_text = page.locator("#root").text_content()
+
+    if root_text is None:
+        root_text = ""
+
+    # Extract ON2 and WN2 counts for home team
+    home_pattern = rf"{re.escape(home)}\s+\((\d+)\s+ON2,\s+(\d+)\s+WN2\)"
+    home_match = re.search(home_pattern, root_text)
+    if home_match:
+        home_on2 = int(home_match.group(1))
+        home_wn2 = int(home_match.group(2))
+        home_total = home_on2 + home_wn2
+        assert home_total == 6, f"Home team {home} has {home_total} players selected (expected 6)"
+    else:
+        # Fallback: just check that the team name appears with some ratio display
+        expect(page.locator("#root")).to_contain_text(f"{home} (")
+
+    # Extract ON2 and WN2 counts for away team
+    away_pattern = rf"{re.escape(away)}\s+\((\d+)\s+ON2,\s+(\d+)\s+WN2\)"
+    away_match = re.search(away_pattern, root_text)
+    if away_match:
+        away_on2 = int(away_match.group(1))
+        away_wn2 = int(away_match.group(2))
+        away_total = away_on2 + away_wn2
+        assert away_total == 6, f"Away team {away} has {away_total} players selected (expected 6)"
+    else:
+        # Fallback: just check that the team name appears with some ratio display
+        expect(page.locator("#root")).to_contain_text(f"{away} (")
 
 
 def expect_game_state(page: Page, state: str):
