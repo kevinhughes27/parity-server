@@ -16,6 +16,28 @@ export const getLeagueName = (leagueId: number | string): string => {
   return league ? league.name : `Unknown League (${leagueId})`;
 };
 
+// Gender display helpers for stat keeping
+export const getGenderDisplayName = (is_open: boolean): string => {
+  return is_open ? 'ON2' : 'WN2';
+};
+
+export const getPlayerIsOpen = (playerName: string, players: TeamPlayer[]): boolean => {
+  const player = players.find(p => p.name === playerName);
+  return player?.is_open ?? true; // Default to open if not found
+};
+
+// Alias for backwards compatibility
+export const getPlayerGender = getPlayerIsOpen;
+
+// Helper to normalize TeamPlayer from API response
+export const normalizeTeamPlayer = (apiPlayer: any): TeamPlayer => {
+  return {
+    name: apiPlayer.name,
+    team: apiPlayer.team,
+    is_open: apiPlayer.is_male ?? true // Convert from API's is_male to our is_open
+  };
+};
+
 interface IDataCache {
   [key: string]: string;
 }
@@ -137,6 +159,7 @@ export interface Player {
 export interface TeamPlayer {
   name: string;
   team: string;
+  is_open: boolean; // Primary gender field
 }
 
 export interface Team {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
+import { useTeams } from './hooks';
+import { getPlayerGender } from '../../api';
 import { Box, Button, Typography } from '@mui/material';
 
 const playerButtonStyles = {
@@ -34,6 +36,9 @@ const playerButtonStyles = {
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const fullHomeRoster = bookkeeper.getHomeRoster();
   const fullAwayRoster = bookkeeper.getAwayRoster();
+  
+  // Fetch team data to get gender information
+  const { allLeaguePlayers } = useTeams(bookkeeper.league.id.toString());
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -81,7 +86,23 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
     const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
-    const buttonStyle = playerButtonStyles[buttonState.variant];
+    const isOpen = getPlayerGender(playerName, allLeaguePlayers);
+    
+    // Get base style from existing logic
+    const baseStyle = playerButtonStyles[buttonState.variant];
+    
+    // Apply gender-based coloring
+    const genderStyle = isOpen ? {
+      // Open players: blue theme
+      backgroundColor: buttonState.variant === 'active' ? '#1976d2' : '#e3f2fd',
+      borderColor: '#2196f3',
+      color: buttonState.variant === 'active' ? 'white' : '#1976d2',
+    } : {
+      // Women players: purple theme
+      backgroundColor: buttonState.variant === 'active' ? '#9c27b0' : '#f3e5f5',
+      borderColor: '#ce93d8',
+      color: buttonState.variant === 'active' ? 'white' : '#9c27b0',
+    };
 
     return (
       <Button
@@ -100,7 +121,9 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           whiteSpace: 'nowrap',
           fontSize: '0.9em',
           textTransform: 'none',
-          ...buttonStyle,
+          ...baseStyle,
+          // Override with gender colors for enabled states
+          ...(buttonState.enabled ? genderStyle : {}),
         }}
       >
         {playerName}

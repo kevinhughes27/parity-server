@@ -86,6 +86,7 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
+        is_open: true, // Default for tests
       })),
     };
 
@@ -94,6 +95,7 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
+        is_open: true, // Default for tests
       })),
     };
 
@@ -241,6 +243,7 @@ describe('Bookkeeper', () => {
       players: homeLine.map(name => ({
         name,
         team: mockHomeTeam.name,
+        is_open: true, // Default for tests
       })),
     };
 
@@ -249,6 +252,7 @@ describe('Bookkeeper', () => {
       players: awayLine.map(name => ({
         name,
         team: mockAwayTeam.name,
+        is_open: true, // Default for tests
       })),
     };
 
@@ -354,14 +358,31 @@ describe('Bookkeeper', () => {
     const awayScoreBeforeSave = bookkeeper.awayScore;
     const firstActorBeforeSave = bookkeeper.firstActor;
 
+    // Create team objects with rosters for saving
+    const homeTeamForSave = {
+      ...mockHomeTeam,
+      players: homeLine.map(name => ({
+        name,
+        is_open: true, // Default for tests
+      })),
+    };
+
+    const awayTeamForSave = {
+      ...mockAwayTeam,
+      players: awayLine.map(name => ({
+        name,
+        is_open: true, // Default for tests
+      })),
+    };
+
     // Save the current game state to database
     const gameId = await Bookkeeper.newGame(
       { league: mockLeague },
       mockWeek,
-      mockHomeTeam,
-      mockAwayTeam,
-      homeLine,
-      awayLine
+      homeTeamForSave,
+      awayTeamForSave,
+      homeLine.map(name => ({ name, is_open: true })),
+      awayLine.map(name => ({ name, is_open: true }))
     );
 
     // Load a fresh bookkeeper from the database

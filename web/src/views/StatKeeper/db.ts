@@ -25,6 +25,11 @@ export interface UndoCommand {
   data?: any; // minimal data only when we can't infer
 }
 
+export interface StoredPlayer {
+  name: string;
+  is_open: boolean;
+}
+
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
   league_id: number;
@@ -33,12 +38,12 @@ export interface StoredGame {
   // homeTeam
   homeTeam: string; // This is homeTeamName
   homeTeamId: number;
-  homeRoster: string[];
+  homeRoster: StoredPlayer[];
 
   // awayTeam
   awayTeam: string; // This is awayTeamName
   awayTeamId: number;
-  awayRoster: string[];
+  awayRoster: StoredPlayer[];
 
   // Game state
   points: Point[];
@@ -78,6 +83,22 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 db.version(1).stores({
   games:
     '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
+});
+
+// Migration for v2 - handle the roster format change
+db.version(2).stores({
+  games:
+    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
+}).upgrade(tx => {
+  // Migration: Convert string rosters to player objects
+  return tx.table('games').toCollection().modify(game => {
+    if (game.homeRoster && typeof game.homeRoster[0] === 'string') {
+      game.homeRoster = game.homeRoster.map((name: string) => ({ name, is_open: true }));
+    }
+    if (game.awayRoster && typeof game.awayRoster[0] === 'string') {
+      game.awayRoster = game.awayRoster.map((name: string) => ({ name, is_open: true }));
+    }
+  });
 });
 
 export { db };

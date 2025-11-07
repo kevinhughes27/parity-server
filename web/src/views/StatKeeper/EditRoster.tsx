@@ -1,23 +1,32 @@
 import React, { useState } from 'react';
 import { TeamPlayer } from '../../api';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Select, MenuItem, FormControl, InputLabel, TextField } from '@mui/material';
+
+export interface RosterPlayer {
+  name: string;
+  is_open: boolean;
+}
 
 interface EditRosterProps {
   teamName: string;
   allLeaguePlayers: TeamPlayer[]; // Assumed to be pre-sorted by parent
-  currentRosterNames: string[]; // Assumed to be pre-sorted by parent
-  onRosterChange: (newRosterNames: string[]) => void; // Parent will handle sorting after update
+  currentRoster: RosterPlayer[]; // Players with gender info
+  onRosterChange: (newRoster: RosterPlayer[]) => void;
 }
 
 // Component for a single player row in the roster list
 const PlayerListItem: React.FC<{
-  playerName: string;
+  player: RosterPlayer;
   onRemove: (playerName: string) => void;
-}> = ({ playerName, onRemove }) => {
+}> = ({ player, onRemove }) => {
+  // Blue for open players, light purple for women players
+  const backgroundColor = player.is_open ? '#e3f2fd' : '#f3e5f5';
+  const borderColor = player.is_open ? '#2196f3' : '#ce93d8';
+  
   return (
     <Box
       component="li"
-      key={playerName}
+      key={player.name}
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -25,6 +34,8 @@ const PlayerListItem: React.FC<{
         p: '6px 4px',
         fontSize: '0.9em',
         borderBottom: '1px solid #f0f0f0',
+        backgroundColor,
+        borderLeft: `3px solid ${borderColor}`,
       }}
     >
       <Typography
@@ -34,10 +45,10 @@ const PlayerListItem: React.FC<{
           overflowX: 'hidden',
         }}
       >
-        {playerName}
+        {player.name}
       </Typography>
       <Button
-        onClick={() => onRemove(playerName)}
+        onClick={() => onRemove(player.name)}
         color="error"
         size="small"
         sx={{
@@ -61,9 +72,9 @@ const EmptyRosterMessage: React.FC = () => (
 
 // Component for the player list section
 const PlayerList: React.FC<{
-  currentRosterNames: string[];
+  currentRoster: RosterPlayer[];
   onRemovePlayer: (playerName: string) => void;
-}> = ({ currentRosterNames, onRemovePlayer }) => {
+}> = ({ currentRoster, onRemovePlayer }) => {
   return (
     <Box
       component="ul"
@@ -79,9 +90,9 @@ const PlayerList: React.FC<{
         mb: 1,
       }}
     >
-      {currentRosterNames.length > 0 ? (
-        currentRosterNames.map(playerName => (
-          <PlayerListItem key={playerName} playerName={playerName} onRemove={onRemovePlayer} />
+      {currentRoster.length > 0 ? (
+        currentRoster.map(player => (
+          <PlayerListItem key={player.name} player={player} onRemove={onRemovePlayer} />
         ))
       ) : (
         <EmptyRosterMessage />
@@ -140,39 +151,48 @@ const AddLeaguePlayerForm: React.FC<{
 // Component for adding a custom substitute
 const AddSubstituteForm: React.FC<{
   newSubName: string;
+  newSubGender: boolean; // true for open, false for women
   onSubNameChange: (name: string) => void;
+  onSubGenderChange: (isOpen: boolean) => void;
   onAddSub: () => void;
-}> = ({ newSubName, onSubNameChange, onAddSub }) => {
+}> = ({ newSubName, newSubGender, onSubNameChange, onSubGenderChange, onAddSub }) => {
   return (
     <Box>
       <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
         Add Custom Substitute
       </Typography>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-        <Box
-          component="input"
-          type="text"
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+        <TextField
           value={newSubName}
           onChange={e => onSubNameChange(e.target.value)}
           placeholder="Substitute name"
-          sx={{
-            flexGrow: 1,
-            p: '6px',
-            fontSize: '0.9em',
-            minWidth: '100px',
-            borderRadius: 1,
-            border: '1px solid #ccc',
-          }}
-        />
-        <Button
-          onClick={onAddSub}
-          disabled={!newSubName.trim()}
-          variant="outlined"
           size="small"
-          sx={{ fontSize: '0.9em', flexShrink: 0 }}
-        >
-          Add Sub
-        </Button>
+          fullWidth
+          sx={{ fontSize: '0.9em' }}
+        />
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+          <FormControl sx={{ flexGrow: 1 }} size="small">
+            <InputLabel sx={{ fontSize: '0.9em' }}>Gender</InputLabel>
+            <Select
+              value={newSubGender ? 'open' : 'women'}
+              onChange={e => onSubGenderChange(e.target.value === 'open')}
+              label="Gender"
+              sx={{ fontSize: '0.9em' }}
+            >
+              <MenuItem value="open">Open</MenuItem>
+              <MenuItem value="women">Women</MenuItem>
+            </Select>
+          </FormControl>
+          <Button
+            onClick={onAddSub}
+            disabled={!newSubName.trim()}
+            variant="outlined"
+            size="small"
+            sx={{ fontSize: '0.9em', flexShrink: 0 }}
+          >
+            Add Sub
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
@@ -180,11 +200,14 @@ const AddSubstituteForm: React.FC<{
 
 const EditRoster: React.FC<EditRosterProps> = ({
   allLeaguePlayers,
-  currentRosterNames,
+  currentRoster,
   onRosterChange,
 }) => {
   const [newSubName, setNewSubName] = useState('');
+  const [newSubGender, setNewSubGender] = useState(true); // Default to open
   const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
+
+  const currentRosterNames = currentRoster.map(p => p.name);
 
   // Filter out players already on the current roster for the dropdown
   const availableLeaguePlayersForDropdown = allLeaguePlayers.filter(
@@ -192,12 +215,16 @@ const EditRoster: React.FC<EditRosterProps> = ({
   );
 
   const handleRemovePlayer = (playerName: string) => {
-    onRosterChange(currentRosterNames.filter(name => name !== playerName));
+    onRosterChange(currentRoster.filter(player => player.name !== playerName));
   };
 
   const handleAddSubByName = () => {
     if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
-      onRosterChange([...currentRosterNames, newSubName.trim()]);
+      const newPlayer: RosterPlayer = {
+        name: newSubName.trim(),
+        is_open: newSubGender
+      };
+      onRosterChange([...currentRoster, newPlayer]);
       setNewSubName('');
     } else if (currentRosterNames.includes(newSubName.trim())) {
       alert(`${newSubName.trim()} is already on the roster.`);
@@ -206,8 +233,15 @@ const EditRoster: React.FC<EditRosterProps> = ({
 
   const handleAddLeaguePlayer = () => {
     if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
-      onRosterChange([...currentRosterNames, selectedLeaguePlayer]);
-      setSelectedLeaguePlayer('');
+      const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
+      if (leaguePlayer) {
+        const newPlayer: RosterPlayer = {
+          name: leaguePlayer.name,
+          is_open: leaguePlayer.is_open
+        };
+        onRosterChange([...currentRoster, newPlayer]);
+        setSelectedLeaguePlayer('');
+      }
     } else if (currentRosterNames.includes(selectedLeaguePlayer)) {
       alert(`${selectedLeaguePlayer} is already on the roster.`);
     }
@@ -227,11 +261,11 @@ const EditRoster: React.FC<EditRosterProps> = ({
       }}
     >
       <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
-        {currentRosterNames.length} players
+        {currentRoster.length} players
       </Typography>
 
       {/* Scrollable Player List */}
-      <PlayerList currentRosterNames={currentRosterNames} onRemovePlayer={handleRemovePlayer} />
+      <PlayerList currentRoster={currentRoster} onRemovePlayer={handleRemovePlayer} />
 
       {/* Add Player Sections */}
       <Box sx={{ flexShrink: 0 }}>
@@ -243,7 +277,9 @@ const EditRoster: React.FC<EditRosterProps> = ({
         />
         <AddSubstituteForm
           newSubName={newSubName}
+          newSubGender={newSubGender}
           onSubNameChange={setNewSubName}
+          onSubGenderChange={setNewSubGender}
           onAddSub={handleAddSubByName}
         />
       </Box>

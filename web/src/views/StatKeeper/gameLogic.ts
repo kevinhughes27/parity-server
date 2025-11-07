@@ -1,4 +1,4 @@
-import { StoredGame, UndoCommand, type GameView } from './db';
+import { StoredGame, StoredPlayer, UndoCommand, type GameView } from './db';
 import { type PointEvent as ApiPointEvent, type Point as ApiPoint } from '../../api';
 
 export enum EventType {
@@ -457,9 +457,9 @@ export class GameMethods {
     this.game.isEditingLines = false; // Clear editing state
   }
 
-  updateRosters(homeRoster: string[], awayRoster: string[]): void {
-    this.game.homeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
-    this.game.awayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
+  updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): void {
+    this.game.homeRoster = [...homeRoster].sort((a, b) => a.name.localeCompare(b.name));
+    this.game.awayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
   }
 
   recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void {
@@ -680,8 +680,8 @@ export class GameMethods {
   determinePointPossession(point: any): boolean {
     // Simple heuristic: if home team players are in offense, it was home possession
     // This is a simplified version - in practice you might need more sophisticated logic
-    const homeRoster = new Set(this.game.homeRoster);
-    const offensePlayersFromHome = point.offensePlayers.filter((p: string) => homeRoster.has(p));
+    const homeRosterNames = new Set(this.game.homeRoster.map(p => p.name));
+    const offensePlayersFromHome = point.offensePlayers.filter((p: string) => homeRosterNames.has(p));
     return offensePlayersFromHome.length > 0;
   }
 

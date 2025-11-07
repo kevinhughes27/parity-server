@@ -56,8 +56,13 @@ class Player(SQLModel, table=True):
     stats: list["Stats"] = Relationship(back_populates="player")
 
     @property
-    def is_male(self):
+    def is_open(self):
         return self.gender == "male"
+
+    @property
+    def is_male(self):
+        """Legacy property for backward compatibility with Android app"""
+        return self.is_open
 
     @property
     def team_name(self):

@@ -351,14 +351,24 @@ function NewGame() {
     }
 
     try {
-      const homeRoster = selectedHomeTeamObj.players.map(p => p.name);
-      const awayRoster = selectedAwayTeamObj.players.map(p => p.name);
+      const homeRoster = selectedHomeTeamObj.players.map(p => ({ 
+        name: p.name, 
+        is_open: p.is_open 
+      }));
+      const awayRoster = selectedAwayTeamObj.players.map(p => ({ 
+        name: p.name, 
+        is_open: p.is_open 
+      }));
+
+      // The team objects should already have is_open from the normalized data
+      const homeTeamWithGender = selectedHomeTeamObj;
+      const awayTeamWithGender = selectedAwayTeamObj;
 
       const id = await Bookkeeper.newGame(
         currentLeague,
         week,
-        selectedHomeTeamObj,
-        selectedAwayTeamObj,
+        homeTeamWithGender,
+        awayTeamWithGender,
         homeRoster,
         awayRoster
       );
