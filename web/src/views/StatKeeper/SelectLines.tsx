@@ -40,7 +40,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const getRatioWarnings = () => {
     const warnings: string[] = [];
-    
+
     if (selectedHomePlayers.length === lineSize) {
       const homeCompliant = checkRatioCompliance(selectedHomePlayers);
       if (!homeCompliant) {
@@ -66,13 +66,17 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const getIncompleteLinesWarning = () => {
     const warnings: string[] = [];
-    
+
     if (selectedHomePlayers.length > 0 && selectedHomePlayers.length < lineSize) {
-      warnings.push(`${bookkeeper.homeTeam.name}: ${selectedHomePlayers.length}/${lineSize} players selected`);
+      warnings.push(
+        `${bookkeeper.homeTeam.name}: ${selectedHomePlayers.length}/${lineSize} players selected`
+      );
     }
-    
+
     if (selectedAwayPlayers.length > 0 && selectedAwayPlayers.length < lineSize) {
-      warnings.push(`${bookkeeper.awayTeam.name}: ${selectedAwayPlayers.length}/${lineSize} players selected`);
+      warnings.push(
+        `${bookkeeper.awayTeam.name}: ${selectedAwayPlayers.length}/${lineSize} players selected`
+      );
     }
 
     return warnings;
@@ -251,12 +255,12 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name} {selectedHomePlayers.length > 0 && (
+              {bookkeeper.homeTeam.name}{' '}
+              {selectedHomePlayers.length > 0 &&
                 `(${(() => {
                   const { open, women } = getRatioCounts(selectedHomePlayers);
                   return `${open} ON2, ${women} WN2`;
-                })()})`
-              )}
+                })()})`}
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -267,19 +271,17 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name} {selectedAwayPlayers.length > 0 && (
+              {bookkeeper.awayTeam.name}{' '}
+              {selectedAwayPlayers.length > 0 &&
                 `(${(() => {
                   const { open, women } = getRatioCounts(selectedAwayPlayers);
                   return `${open} ON2, ${women} WN2`;
-                })()})`
-              )}
+                })()})`}
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
         </Box>
       </Box>
-
-
 
       <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
         <Typography variant="body2" color="text.secondary">

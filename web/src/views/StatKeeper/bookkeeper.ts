@@ -109,12 +109,12 @@ export class Bookkeeper {
       }
 
       // update rosters from team objects
-      this.game.homeRoster = [...this.homeTeam.players.map(p => ({ name: p.name, is_open: (p as any).is_open ?? true }))].sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
-      this.game.awayRoster = [...this.awayTeam.players.map(p => ({ name: p.name, is_open: (p as any).is_open ?? true }))].sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
+      this.game.homeRoster = [
+        ...this.homeTeam.players.map(p => ({ name: p.name, is_open: (p as any).is_open ?? true })),
+      ].sort((a, b) => a.name.localeCompare(b.name));
+      this.game.awayRoster = [
+        ...this.awayTeam.players.map(p => ({ name: p.name, is_open: (p as any).is_open ?? true })),
+      ].sort((a, b) => a.name.localeCompare(b.name));
 
       // save
       await db.games.update(this.gameId, { ...this.game });
@@ -154,13 +154,13 @@ export class Bookkeeper {
           return {
             name: player,
             team: storedGame.homeTeam,
-            is_open: true // Default for backward compatibility
+            is_open: true, // Default for backward compatibility
           };
         } else {
           return {
             name: player.name,
             team: storedGame.homeTeam,
-            is_open: player.is_open
+            is_open: player.is_open,
           };
         }
       }),
@@ -175,13 +175,13 @@ export class Bookkeeper {
           return {
             name: player,
             team: storedGame.awayTeam,
-            is_open: true // Default for backward compatibility
+            is_open: true, // Default for backward compatibility
           };
         } else {
           return {
             name: player.name,
             team: storedGame.awayTeam,
-            is_open: player.is_open
+            is_open: player.is_open,
           };
         }
       }),
@@ -233,10 +233,14 @@ export class Bookkeeper {
       week: this.game.week,
       homeTeam: this.game.homeTeam,
       homeScore: this.game.homeScore,
-      homeRoster: [...this.game.homeRoster.map(p => typeof p === 'string' ? p : p.name)].sort((a, b) => a.localeCompare(b)),
+      homeRoster: [...this.game.homeRoster.map(p => (typeof p === 'string' ? p : p.name))].sort(
+        (a, b) => a.localeCompare(b)
+      ),
       awayTeam: this.game.awayTeam,
       awayScore: this.game.awayScore,
-      awayRoster: [...this.game.awayRoster.map(p => typeof p === 'string' ? p : p.name)].sort((a, b) => a.localeCompare(b)),
+      awayRoster: [...this.game.awayRoster.map(p => (typeof p === 'string' ? p : p.name))].sort(
+        (a, b) => a.localeCompare(b)
+      ),
       points: this.game.points.map(point => ({
         offensePlayers: [...point.offensePlayers].sort(),
         defensePlayers: [...point.defensePlayers].sort(),
@@ -409,7 +413,10 @@ export class Bookkeeper {
     });
   }
 
-  public async updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): Promise<void> {
+  public async updateRosters(
+    homeRoster: StoredPlayer[],
+    awayRoster: StoredPlayer[]
+  ): Promise<void> {
     await this.performAction(() => {
       this.gameMethods.updateRosters(homeRoster, awayRoster);
     });

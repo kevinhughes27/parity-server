@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { TeamPlayer } from '../../api';
-import { Box, Button, Typography, Select, MenuItem, FormControl, InputLabel, TextField } from '@mui/material';
+import {
+  Box,
+  Button,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  TextField,
+} from '@mui/material';
 
 export interface RosterPlayer {
   name: string;
@@ -22,7 +31,7 @@ const PlayerListItem: React.FC<{
   // Blue for open players, light purple for women players
   const backgroundColor = player.is_open ? '#e3f2fd' : '#f3e5f5';
   const borderColor = player.is_open ? '#2196f3' : '#ce93d8';
-  
+
   return (
     <Box
       component="li"
@@ -222,7 +231,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
     if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
       const newPlayer: RosterPlayer = {
         name: newSubName.trim(),
-        is_open: newSubGender
+        is_open: newSubGender,
       };
       onRosterChange([...currentRoster, newPlayer]);
       setNewSubName('');
@@ -237,7 +246,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
       if (leaguePlayer) {
         const newPlayer: RosterPlayer = {
           name: leaguePlayer.name,
-          is_open: leaguePlayer.is_open
+          is_open: leaguePlayer.is_open,
         };
         onRosterChange([...currentRoster, newPlayer]);
         setSelectedLeaguePlayer('');

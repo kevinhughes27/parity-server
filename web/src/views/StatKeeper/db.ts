@@ -86,19 +86,24 @@ db.version(1).stores({
 });
 
 // Migration for v2 - handle the roster format change
-db.version(2).stores({
-  games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
-}).upgrade(tx => {
-  // Migration: Convert string rosters to player objects
-  return tx.table('games').toCollection().modify(game => {
-    if (game.homeRoster && typeof game.homeRoster[0] === 'string') {
-      game.homeRoster = game.homeRoster.map((name: string) => ({ name, is_open: true }));
-    }
-    if (game.awayRoster && typeof game.awayRoster[0] === 'string') {
-      game.awayRoster = game.awayRoster.map((name: string) => ({ name, is_open: true }));
-    }
+db.version(2)
+  .stores({
+    games:
+      '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
+  })
+  .upgrade(tx => {
+    // Migration: Convert string rosters to player objects
+    return tx
+      .table('games')
+      .toCollection()
+      .modify(game => {
+        if (game.homeRoster && typeof game.homeRoster[0] === 'string') {
+          game.homeRoster = game.homeRoster.map((name: string) => ({ name, is_open: true }));
+        }
+        if (game.awayRoster && typeof game.awayRoster[0] === 'string') {
+          game.awayRoster = game.awayRoster.map((name: string) => ({ name, is_open: true }));
+        }
+      });
   });
-});
 
 export { db };

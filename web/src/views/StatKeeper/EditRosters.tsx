@@ -28,13 +28,13 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       // Convert current team players to RosterPlayer format
       const homeRosterPlayers = bookkeeper.homeTeam.players.map(p => ({
         name: p.name,
-        is_open: p.is_open ?? true
+        is_open: p.is_open ?? true,
       }));
       const awayRosterPlayers = bookkeeper.awayTeam.players.map(p => ({
         name: p.name,
-        is_open: p.is_open ?? true
+        is_open: p.is_open ?? true,
       }));
-      
+
       sortAndSetHomeRoster(homeRosterPlayers);
       sortAndSetAwayRoster(awayRosterPlayers);
     } else {
@@ -54,13 +54,13 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       bookkeeper.homeTeam.players = homeRoster.map(player => ({
         name: player.name,
         team: bookkeeper.homeTeam.name,
-        is_open: player.is_open
+        is_open: player.is_open,
       }));
 
       bookkeeper.awayTeam.players = awayRoster.map(player => ({
         name: player.name,
         team: bookkeeper.awayTeam.name,
-        is_open: player.is_open
+        is_open: player.is_open,
       }));
 
       // Update the stored game rosters (the bookkeeper will handle the roster update)
@@ -82,13 +82,13 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     if (bookkeeper) {
       const homeRosterPlayers = bookkeeper.homeTeam.players.map(p => ({
         name: p.name,
-        is_open: p.is_open ?? true
+        is_open: p.is_open ?? true,
       }));
       const awayRosterPlayers = bookkeeper.awayTeam.players.map(p => ({
         name: p.name,
-        is_open: p.is_open ?? true
+        is_open: p.is_open ?? true,
       }));
-      
+
       sortAndSetHomeRoster(homeRosterPlayers);
       sortAndSetAwayRoster(awayRosterPlayers);
     }

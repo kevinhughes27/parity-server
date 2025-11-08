@@ -351,13 +351,13 @@ function NewGame() {
     }
 
     try {
-      const homeRoster = selectedHomeTeamObj.players.map(p => ({ 
-        name: p.name, 
-        is_open: p.is_open 
+      const homeRoster = selectedHomeTeamObj.players.map(p => ({
+        name: p.name,
+        is_open: p.is_open,
       }));
-      const awayRoster = selectedAwayTeamObj.players.map(p => ({ 
-        name: p.name, 
-        is_open: p.is_open 
+      const awayRoster = selectedAwayTeamObj.players.map(p => ({
+        name: p.name,
+        is_open: p.is_open,
       }));
 
       // The team objects should already have is_open from the normalized data

@@ -681,7 +681,9 @@ export class GameMethods {
     // Simple heuristic: if home team players are in offense, it was home possession
     // This is a simplified version - in practice you might need more sophisticated logic
     const homeRosterNames = new Set(this.game.homeRoster.map(p => p.name));
-    const offensePlayersFromHome = point.offensePlayers.filter((p: string) => homeRosterNames.has(p));
+    const offensePlayersFromHome = point.offensePlayers.filter((p: string) =>
+      homeRosterNames.has(p)
+    );
     return offensePlayersFromHome.length > 0;
   }
 

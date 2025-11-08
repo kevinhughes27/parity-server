@@ -34,7 +34,7 @@ export const normalizeTeamPlayer = (apiPlayer: any): TeamPlayer => {
   return {
     name: apiPlayer.name,
     team: apiPlayer.team,
-    is_open: apiPlayer.is_male ?? true // Convert from API's is_male to our is_open
+    is_open: apiPlayer.is_male ?? true, // Convert from API's is_male to our is_open
   };
 };
 
