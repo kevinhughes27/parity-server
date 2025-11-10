@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+import btoa from 'btoa';
 import rawLeagues from './leagues.json';
 
 export interface LeagueFromJson {
@@ -96,6 +97,7 @@ export const saveGame = async (
   password: string | null
 ) => {
   const url = `/api/${leagueId}/games/${gameId}`;
+  const auth = btoa(`admin:${password}`)
 
   // clear cache
   delete dataCache[url];
@@ -104,7 +106,7 @@ export const saveGame = async (
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `${password}`,
+      Authorization: `Basic ${auth}`,
     },
     body: json,
   });
@@ -112,6 +114,7 @@ export const saveGame = async (
 
 export const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
+  const auth = btoa(`admin:${password}`)
 
   // clear cache
   delete dataCache[url];
@@ -120,7 +123,7 @@ export const deleteGame = async (gameId: string, leagueId: string, password: str
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `${password}`,
+      Authorization: `Basic ${auth}`,
     },
   });
 };
