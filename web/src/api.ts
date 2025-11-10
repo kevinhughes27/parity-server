@@ -1,5 +1,5 @@
+/* global btoa */
 import 'whatwg-fetch';
-import btoa from 'btoa';
 import rawLeagues from './leagues.json';
 
 export interface LeagueFromJson {
@@ -97,7 +97,11 @@ export const saveGame = async (
   password: string | null
 ) => {
   const url = `/api/${leagueId}/games/${gameId}`;
+<<<<<<< HEAD
   const auth = btoa(`admin:${password}`)
+=======
+  const auth = btoa(`admin:${password}`);
+>>>>>>> eeb8d8f (fix admin pages)
 
   // clear cache
   delete dataCache[url];
@@ -114,7 +118,11 @@ export const saveGame = async (
 
 export const deleteGame = async (gameId: string, leagueId: string, password: string | null) => {
   const url = `/api/${leagueId}/games/${gameId}`;
+<<<<<<< HEAD
   const auth = btoa(`admin:${password}`)
+=======
+  const auth = btoa(`admin:${password}`);
+>>>>>>> eeb8d8f (fix admin pages)
 
   // clear cache
   delete dataCache[url];

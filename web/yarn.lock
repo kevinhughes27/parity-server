@@ -1199,13 +1199,6 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
-"@types/btoa@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@types/btoa/-/btoa-1.2.5.tgz#9b2690b224e2bd2a629d0fc5812d19ccd5e781bc"
-  integrity sha512-BItINdjZRlcGdI2efwK4bwxY5vEAT0SnIVfMOZVT18wp4900F1Lurqk/9PNdF9hMP1zgFmWbjVEtAsQKVcbqxA==
-  dependencies:
-    "@types/node" "*"
-
 "@types/capitalize@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/capitalize/-/capitalize-2.0.2.tgz#82ce339f7c2b7e7eccc2b1faf60b33d4e802d8a6"
@@ -1254,13 +1247,6 @@
     "@mui/material" "^5.11.4"
     "@types/react" "*"
     csstype "3.1.1 || 3.1.2"
-
-"@types/node@*":
-  version "24.10.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.10.0.tgz#6b79086b0dfc54e775a34ba8114dcc4e0221f31f"
-  integrity sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==
-  dependencies:
-    undici-types "~7.16.0"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1801,11 +1787,6 @@ browserslist@^4.24.0:
     electron-to-chromium "^1.5.149"
     node-releases "^2.0.19"
     update-browserslist-db "^1.1.3"
-
-btoa@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/btoa/-/btoa-1.2.1.tgz#01a9909f8b2c93f6bf680ba26131eb30f7fa3d73"
-  integrity sha512-SB4/MIGlsiVkMcHmT+pSmIPoNDoHg+7cMzmt3Uxt628MTz2487DKSqK/fuhFBrkuqrYv5UCEnACpF4dTFNKc/g==
 
 cac@^6.7.14:
   version "6.7.14"
@@ -4677,11 +4658,6 @@ unbox-primitive@^1.1.0:
     has-bigints "^1.0.2"
     has-symbols "^1.1.0"
     which-boxed-primitive "^1.1.1"
-
-undici-types@~7.16.0:
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"
-  integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
 update-browserslist-db@^1.1.3:
   version "1.1.3"
