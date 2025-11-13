@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Box, Typography, List, ListItem, Paper } from '@mui/material';
+import { Box, Typography, Paper } from '@mui/material';
 import { Bookkeeper, GameState } from './bookkeeper';
 
 interface PointDisplayProps {
@@ -64,21 +64,32 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
       </Box>
 
       {/* Scrollable Event List */}
-      <Box ref={eventsContainerRef} sx={{ flexGrow: 1, overflowX: 'hidden', overflowY: 'auto' }}>
+      <Box 
+        ref={eventsContainerRef} 
+        sx={{ 
+          flexGrow: 1, 
+          overflowX: 'hidden', 
+          overflowY: 'auto',
+          userSelect: 'none', // Prevent text selection
+          pointerEvents: 'none', // Disable all pointer interactions
+        }}
+      >
         {!events || events.length === 0 ? (
           <Typography variant="body2" color="text.secondary">
             No events to display.
           </Typography>
         ) : (
-          <List dense sx={{ px: 0.5 }}>
+          <Box role="list" sx={{ px: 0.5 }}>
             {events.map((eventStr, index) => (
-              <ListItem
+              <Box
                 key={index}
+                role="listitem"
                 sx={{
                   display: 'flex',
                   py: 0.5,
                   px: 0,
                   color: !hasActivePoint ? 'text.secondary' : 'inherit',
+                  cursor: 'default', // Ensure cursor doesn't suggest interactivity
                 }}
               >
                 <Typography
@@ -102,9 +113,9 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
                 >
                   {eventStr}
                 </Typography>
-              </ListItem>
+              </Box>
             ))}
-          </List>
+          </Box>
         )}
       </Box>
     </Box>
