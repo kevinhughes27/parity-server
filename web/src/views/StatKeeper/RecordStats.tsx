@@ -9,15 +9,11 @@ import { Box, Button, Typography } from '@mui/material';
 const playerButtonStyles = {
   enabled: {
     color: '#000',
-    backgroundColor: '#e3f2fd',
-    border: '1px solid #2196f3',
     fontWeight: 'normal',
   },
   active: {
-    color: '#000',
-    backgroundColor: '#a7d7f5',
-    border: '1px solid #2196f3',
     fontWeight: 'bold',
+    border: '2px solid',
   },
   'not-on-line': {
     color: '#adb5bd',
@@ -95,16 +91,16 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     const genderStyle = isOpen
       ? {
           // Open players: blue theme
-          backgroundColor: buttonState.variant === 'active' ? '#1976d2' : '#e3f2fd',
-          borderColor: '#2196f3',
-          color: buttonState.variant === 'active' ? 'white' : '#1976d2',
+          backgroundColor: buttonState.variant === 'active' ? '#a7d7f5' : '#e3f2fd',
+          borderColor: buttonState.variant === 'active' ? '#1976d2' : '#2196f3',
         }
       : {
           // Women players: purple theme
-          backgroundColor: buttonState.variant === 'active' ? '#9c27b0' : '#f3e5f5',
-          borderColor: '#ce93d8',
-          color: buttonState.variant === 'active' ? 'white' : '#9c27b0',
+          backgroundColor: buttonState.variant === 'active' ? '#ce93d8' : '#f3e5f5',
+          borderColor: buttonState.variant === 'active' ? '#ab47bc' : '#ce93d8',
         };
+
+    const applyGenderStyle = (buttonState.variant === 'active' || buttonState.enabled)
 
     return (
       <Button
@@ -124,8 +120,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           fontSize: '0.9em',
           textTransform: 'none',
           ...baseStyle,
-          // Override with gender colors for enabled states
-          ...(buttonState.enabled ? genderStyle : {}),
+          ...(applyGenderStyle ? genderStyle : {}),
         }}
       >
         {playerName}

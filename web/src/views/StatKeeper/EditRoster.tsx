@@ -19,7 +19,7 @@ export interface RosterPlayer {
 interface EditRosterProps {
   teamName: string;
   allLeaguePlayers: TeamPlayer[]; // Assumed to be pre-sorted by parent
-  currentRoster: RosterPlayer[]; // Players with gender info
+  currentRoster: RosterPlayer[];
   onRosterChange: (newRoster: RosterPlayer[]) => void;
 }
 
@@ -28,8 +28,6 @@ const PlayerListItem: React.FC<{
   player: RosterPlayer;
   onRemove: (playerName: string) => void;
 }> = ({ player, onRemove }) => {
-  // Blue for open players, light purple for women players
-  const backgroundColor = player.is_open ? '#e3f2fd' : '#f3e5f5';
   const borderColor = player.is_open ? '#2196f3' : '#ce93d8';
 
   return (
@@ -43,7 +41,6 @@ const PlayerListItem: React.FC<{
         p: '6px 4px',
         fontSize: '0.9em',
         borderBottom: '1px solid #f0f0f0',
-        backgroundColor,
         borderLeft: `3px solid ${borderColor}`,
       }}
     >
@@ -170,11 +167,11 @@ const AddSubstituteForm: React.FC<{
       <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
         Add Custom Substitute
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.0 }}>
         <TextField
           value={newSubName}
           onChange={e => onSubNameChange(e.target.value)}
-          placeholder="Substitute name"
+          placeholder="Name"
           size="small"
           fullWidth
           sx={{ fontSize: '0.9em' }}
@@ -230,7 +227,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const handleAddSubByName = () => {
     if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
       const newPlayer: RosterPlayer = {
-        name: newSubName.trim(),
+        name: `${newSubName.trim()}(S)`,
         is_open: newSubGender,
       };
       onRosterChange([...currentRoster, newPlayer]);
@@ -245,7 +242,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
       const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
       if (leaguePlayer) {
         const newPlayer: RosterPlayer = {
-          name: leaguePlayer.name,
+          name: `${leaguePlayer.name}(S)`,
           is_open: leaguePlayer.is_open,
         };
         onRosterChange([...currentRoster, newPlayer]);

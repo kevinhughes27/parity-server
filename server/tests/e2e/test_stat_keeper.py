@@ -1159,7 +1159,7 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     home_roster = rosters[home]
     home_roster.append("Matthew Schijns")
     away_roster = rosters[away]
-    away_roster.append("Kevin Hughes")
+    away_roster.append("Kevin Hughes(S)")
     away_roster.remove("Kevin Barford")
     expect_rosters(page, home_roster, away_roster)
 
@@ -1211,12 +1211,12 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     # select lines
     # expect_text(page, "Select players for the next point.")
     expect_text(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
-    select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
+    select_lines(page, rosters[home][:5] + ["Kevin Hughes(S)"], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
 
     expect(page.get_by_role("button", name="Point!")).to_be_visible()
-    expect(page.get_by_role("button", name="Kevin Hughes")).to_be_visible()
+    expect(page.get_by_role("button", name="Kevin Hughes(S)")).to_be_visible()
 
 
 def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: Page) -> None:
@@ -1259,11 +1259,11 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
 
     # sub brian for kevin
     click_button(page, "Brian Kells")
-    click_button(page, "Kevin Hughes")
+    click_button(page, "Kevin Hughes(S)")
     click_button(page, "Resume Point")
 
     click_button(page, "Throwaway")
-    click_button(page, "Kevin Hughes")
+    click_button(page, "Kevin Hughes(S)")
     click_button(page, "Catch D")
     click_button(page, "Ashlin Kelly")
     click_button(page, "Point!")
@@ -1273,12 +1273,12 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
 
     # verify stats
     stats = get_stats()
-    assert stats["Kevin Hughes"]["assists"] == 1
+    assert stats["Kevin Hughes(S)"]["assists"] == 1
 
     # verify game
     game = get_game(1)
-    assert "Kevin Hughes" in game["homeRoster"]
-    assert "Kevin Hughes" in game["points"][0]["defensePlayers"]
+    assert "Kevin Hughes(S)" in game["homeRoster"]
+    assert "Kevin Hughes(S)" in game["points"][0]["defensePlayers"]
 
 
 def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
