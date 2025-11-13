@@ -52,7 +52,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'contained'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '60px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
+            sx={{ minWidth: '120px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>
@@ -68,7 +68,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'outlined'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '60px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
+            sx={{ minWidth: '120px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>

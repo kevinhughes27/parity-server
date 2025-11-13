@@ -93,11 +93,27 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           // Open players: blue theme
           backgroundColor: buttonState.variant === 'active' ? '#a7d7f5' : '#e3f2fd',
           borderColor: buttonState.variant === 'active' ? '#1976d2' : '#2196f3',
+          // Override MUI disabled state for active players
+          ...(buttonState.variant === 'active' && {
+            '&.Mui-disabled': {
+              color: baseStyle.color || '#000',
+              backgroundColor: '#a7d7f5',
+              borderColor: '#1976d2',
+            },
+          }),
         }
       : {
           // Women players: purple theme
           backgroundColor: buttonState.variant === 'active' ? '#ce93d8' : '#f3e5f5',
           borderColor: buttonState.variant === 'active' ? '#ab47bc' : '#ce93d8',
+          // Override MUI disabled state for active players
+          ...(buttonState.variant === 'active' && {
+            '&.Mui-disabled': {
+              color: baseStyle.color || '#000',
+              backgroundColor: '#ce93d8',
+              borderColor: '#ab47bc',
+            },
+          }),
         };
 
     const applyGenderStyle = (buttonState.variant === 'active' || buttonState.enabled)
@@ -181,28 +197,28 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             onClick: handleDrop,
             disabled: !dropState.enabled,
             color: 'warning',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'Throwaway',
             onClick: handleThrowaway,
             disabled: !throwawayState.enabled,
             color: 'warning',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'D (Block)',
             onClick: handleD,
             disabled: !dState.enabled,
-            color: 'warning',
-            variant: 'outlined',
+            color: 'success',
+            variant: 'contained',
           },
           {
             label: 'Catch D',
             onClick: handleCatchD,
             disabled: !catchDState.enabled,
-            color: 'warning',
-            variant: 'outlined',
+            color: 'success',
+            variant: 'contained',
           },
         ]}
         secondaryActions={[
