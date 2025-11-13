@@ -183,7 +183,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             onClick: handlePull,
             disabled: !pullState.enabled,
             color: 'info',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'Point!',
