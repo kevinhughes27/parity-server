@@ -165,7 +165,17 @@ def open_hamburger_menu(page: Page):
 
 def submit_game(page: Page, *, failed: bool = False):
     open_hamburger_menu(page)
-    page.once("dialog", lambda dialog: dialog.accept())
+
+    # handle confirm and complete dialogs
+    def handle_confirm(dialog):
+        assert "Are you sure you want to submit this game?" in dialog.message
+        def handle_complete(dialog):
+            assert "Game submitted and uploaded successfully!" in dialog.message
+            dialog.accept()
+        page.once("dialog", handle_complete)
+        dialog.accept()
+    page.once("dialog", handle_confirm)
+
     page.get_by_role("menuitem", name="Submit Game").click()
 
     page.wait_for_url("**/stat_keeper")
