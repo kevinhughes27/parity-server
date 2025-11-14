@@ -149,14 +149,11 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     try {
       await bookkeeper.submitGame();
       alert('Game submitted and uploaded successfully!');
-      // Navigate immediately after successful submission to prevent multiple attempts
-      navigate('/stat_keeper');
     } catch (error) {
       alert(`Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       console.error('Submission error:', error);
-      // Don't navigate on error - allow user to retry if needed
     } finally {
-      setIsSubmitting(false);
+      navigate('/stat_keeper');
     }
   };
 

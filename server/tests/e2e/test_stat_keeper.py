@@ -170,11 +170,21 @@ def submit_game(page: Page, *, failed: bool = False):
     def handle_confirm(dialog):
         assert "Are you sure you want to submit this game?" in dialog.message
 
+        def handle_failed(dialog):
+            assert "Game submission failed" in dialog.message
+            dialog.accept()
+
         def handle_complete(dialog):
             assert "Game submitted and uploaded successfully!" in dialog.message
             dialog.accept()
 
-        page.once("dialog", handle_complete)
+        # setup second dialog handler
+        if failed:
+            page.once("dialog", handle_failed)
+        else:
+            page.once("dialog", handle_complete)
+
+        # accept first dialog
         dialog.accept()
 
     page.once("dialog", handle_confirm)
