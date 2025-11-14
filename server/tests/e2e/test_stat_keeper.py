@@ -169,11 +169,14 @@ def submit_game(page: Page, *, failed: bool = False):
     # handle confirm and complete dialogs
     def handle_confirm(dialog):
         assert "Are you sure you want to submit this game?" in dialog.message
+
         def handle_complete(dialog):
             assert "Game submitted and uploaded successfully!" in dialog.message
             dialog.accept()
+
         page.once("dialog", handle_complete)
         dialog.accept()
+
     page.once("dialog", handle_confirm)
 
     page.get_by_role("menuitem", name="Submit Game").click()
@@ -1623,17 +1626,23 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     expect_help_message(page, "Select players for the first point.")
     expect_game_state(page, "SelectingLines")
 
+    # Helper function to create dialog handlers for different warning types
+    def expect_dialog_and_dismiss(expected_messages):
+        """Helper to create a dialog handler that checks for expected messages and dismisses"""
+
+        def handler(dialog):
+            for expected in expected_messages:
+                assert expected in dialog.message
+            dialog.dismiss()
+
+        return handler
+
     # not enough left
     home_line = rosters[home_team_name][:5]
     away_line = rosters[away_team_name][:6]
     select_lines(page, home_line, away_line)
 
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"{home_team_name}: 5/6 players selected" in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
     select_lines(page, home_line, away_line)  # reset
 
@@ -1642,12 +1651,7 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:5]
     select_lines(page, home_line, away_line)
 
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"{away_team_name}: 5/6 players selected" in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
     select_lines(page, home_line, away_line)  # reset
 
@@ -1657,23 +1661,12 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
 
     # too many left
     select_lines(page, home_line, away_line)
-
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"Cannot select more than 6 players for {home_team_name}." in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {home_team_name}."]))
     # click 7th player triggers dialog
     click_button(page, rosters[home_team_name][7])
 
     # too many right
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"Cannot select more than 6 players for {away_team_name}." in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {away_team_name}."]))
     click_button(page, rosters[away_team_name][7])
 
     # reset
@@ -1684,13 +1677,7 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
     select_lines(page, home_line, away_line)
 
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"{home_team_name}: 5 ON2, 1 WN2" in warning_text
-        assert f"{away_team_name}: 3 ON2, 3 WN2" in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"]))
     click_button(page, "Start Point")
     select_lines(page, home_line, away_line)  # reset
 
@@ -1699,12 +1686,7 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
     select_lines(page, home_line, away_line)
 
-    def handle_dialog(dialog):
-        warning_text = dialog.message
-        assert f"{home_team_name}: 2 ON2, 4 WN2" in warning_text
-        dialog.dismiss()
-
-    page.once("dialog", handle_dialog)
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"]))
     click_button(page, "Start Point")
     select_lines(page, home_line, away_line)  # reset
 
