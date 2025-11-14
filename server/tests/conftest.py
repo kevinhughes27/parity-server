@@ -6,6 +6,7 @@ import json
 import logging
 import pathlib
 import pytest
+import random
 import time
 import uvicorn
 
@@ -91,8 +92,17 @@ def rosters_fixture(session, league) -> dict[str, list[str]]:
         session.add(t)
         session.commit()
         players = rosters[team]
-        for p in players:
-            session.add(db.Player(league_id=league.id, name=p, team_id=t.id))
+
+        # Create gender list and shuffle
+        # This sort of ensures we exercise both styles in the tests without having to fix the data
+        # Sorry if you get misgendered!
+        num_open = 8
+        num_women = 4
+        genders = ["male"] * num_open + ["female"] * num_women
+        random.shuffle(genders)
+
+        for i, p in enumerate(players):
+            session.add(db.Player(league_id=league.id, name=p, team_id=t.id, gender=genders[i]))
         session.commit()
 
     return rosters

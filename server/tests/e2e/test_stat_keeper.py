@@ -77,9 +77,12 @@ def start_game(page: Page):
     click_button(page, "Update Rosters")
 
 
-def start_point(page: Page):
-    # Set up dialog handler to accept ratio warnings if they appear
+def ignore_ratio_warning(page: Page):
     page.once("dialog", lambda dialog: dialog.accept())
+
+
+def start_point(page: Page):
+    ignore_ratio_warning(page)
     click_button(page, "Start Point")
 
 
@@ -1120,8 +1123,8 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Add").first.click()
 
     # add sub (away team - second textbox and button)
-    page.get_by_role("textbox", name="Substitute name").nth(1).click()
-    page.get_by_role("textbox", name="Substitute name").nth(1).fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").nth(1).click()
+    page.get_by_role("textbox", name="Name").nth(1).fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").nth(1).click()
 
     # remove player (away team)
@@ -1129,7 +1132,7 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
 
     # check updated rosters
     home_roster = rosters[home]
-    home_roster.append("Matthew Schijns")
+    home_roster.append("Matthew Schijns(S)")
     away_roster = rosters[away]
     away_roster.append("Kevin Hughes(S)")
     away_roster.remove("Kevin Barford")
@@ -1175,8 +1178,8 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Substitute name").first.click()
-    page.get_by_role("textbox", name="Substitute name").first.fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").first.click()
+    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").first.click()
     click_button(page, "Update Rosters")
 
@@ -1219,14 +1222,15 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Substitute name").first.click()
-    page.get_by_role("textbox", name="Substitute name").first.fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").first.click()
+    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").first.click()
     click_button(page, "Update Rosters")
 
     # change line
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
+    ignore_ratio_warning(page)
     expect(page.locator("#root")).to_contain_text("Resume Point")
 
     # sub brian for kevin
@@ -1298,6 +1302,7 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     click_button(page, "Kyle Sprysa")
 
     # resume
+    ignore_ratio_warning(page)
     click_button(page, "Resume Point")
 
     # play by play
@@ -1566,6 +1571,141 @@ def test_select_scheduled_matchup(server, league, rosters, matchup, page: Page) 
     assert game["homeTeam"] == home_team_name
     assert game["awayTeam"] == away_team_name
     assert game["week"] == matchup.week
+
+
+def set_player_gender(session, league_id: int, name: str, gender: str) -> None:
+    from sqlmodel import select
+
+    import server.db as db
+
+    player = session.exec(select(db.Player).where(db.Player.league_id == league_id, db.Player.name == name)).first()
+    player.gender = gender
+    session.add(player)
+
+
+def test_select_lines_warnings(session, server, league, rosters, page: Page) -> None:
+    home_team_name = "Kells Angels Bicycle Club"
+    away_team_name = "lumleysexuals"
+
+    # the app will sort players so we sort the list here so we know
+    # what order the genders will be
+    sorted_home_roster = sorted(rosters[home_team_name])
+    sorted_away_roster = sorted(rosters[away_team_name])
+
+    # set player genders in order (the app will sort them) for convience
+    for name in sorted_home_roster[:8]:
+        set_player_gender(session, league.id, name, "male")
+    for name in sorted_home_roster[8:]:
+        set_player_gender(session, league.id, name, "female")
+    for name in sorted_away_roster[:8]:
+        set_player_gender(session, league.id, name, "male")
+    for name in sorted_away_roster[8:]:
+        set_player_gender(session, league.id, name, "female")
+    session.commit()
+
+    # create game
+    start_stats_keeper(page)
+    select_teams(page, home_team_name, away_team_name)
+    expect_rosters(page, rosters[home_team_name], rosters[away_team_name])
+    start_game(page)
+
+    # select lines
+    expect_help_message(page, "Select players for the first point.")
+    expect_game_state(page, "SelectingLines")
+
+    # not enough left
+    home_line = rosters[home_team_name][:5]
+    away_line = rosters[away_team_name][:6]
+    select_lines(page, home_line, away_line)
+
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"{home_team_name}: 5/6 players selected" in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # not enough right
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:5]
+    select_lines(page, home_line, away_line)
+
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"{away_team_name}: 5/6 players selected" in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # too many setup
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:6]
+
+    # too many left
+    select_lines(page, home_line, away_line)
+
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"Cannot select more than 6 players for {home_team_name}." in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    # click 7th player triggers dialog
+    click_button(page, rosters[home_team_name][7])
+
+    # too many right
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"Cannot select more than 6 players for {away_team_name}." in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    click_button(page, rosters[away_team_name][7])
+
+    # reset
+    select_lines(page, home_line, away_line)
+
+    # Ratio error
+    home_line = sorted_home_roster[:5] + sorted_home_roster[9:10]  # 5 ON2 1 WN2
+    away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
+    select_lines(page, home_line, away_line)
+
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"{home_team_name}: 5 ON2, 1 WN2" in warning_text
+        assert f"{away_team_name}: 3 ON2, 3 WN2" in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # Ratio error
+    home_line = sorted_home_roster[:2] + sorted_home_roster[8:]  # 2 ON2 4 WN2
+    away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
+    select_lines(page, home_line, away_line)
+
+    def handle_dialog(dialog):
+        warning_text = dialog.message
+        assert f"{home_team_name}: 2 ON2, 4 WN2" in warning_text
+        dialog.dismiss()
+
+    page.once("dialog", handle_dialog)
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # Valid line
+    home_line = sorted_home_roster[:4] + sorted_home_roster[10:]  # 4 ON2 2 WN2
+    away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
+    select_lines(page, home_line, away_line)
+    click_button(page, "Start Point")
+
+    # game started
+    expect_game_state(page, "Start")
 
 
 def test_perf(server, league, rosters, page: Page) -> None:
