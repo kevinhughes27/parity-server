@@ -4,12 +4,13 @@ import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { useTeams } from './hooks';
 import { getPlayerGender } from '../../api';
-import { Box, Button, Typography, Paper, Alert } from '@mui/material';
+import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
-  const isEditingLine =
-    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
+  const isEditingLine = (
+    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null
+  );
   const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
 
@@ -67,13 +68,13 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const getIncompleteLinesWarning = () => {
     const warnings: string[] = [];
 
-    if (selectedHomePlayers.length > 0 && selectedHomePlayers.length < lineSize) {
+    if (selectedHomePlayers.length !== lineSize) {
       warnings.push(
         `${bookkeeper.homeTeam.name}: ${selectedHomePlayers.length}/${lineSize} players selected`
       );
     }
 
-    if (selectedAwayPlayers.length > 0 && selectedAwayPlayers.length < lineSize) {
+    if (selectedAwayPlayers.length !== lineSize) {
       warnings.push(
         `${bookkeeper.awayTeam.name}: ${selectedAwayPlayers.length}/${lineSize} players selected`
       );
@@ -129,31 +130,25 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     const leftCorrectNumPlayers = leftPlayerCount === lineSize;
     const rightCorrectNumPlayers = rightPlayerCount === lineSize;
 
-    const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
-    const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
+    const enoughPlayers = (leftPlayerCount > 2 && rightPlayerCount > 2)
 
-    // Check for both complete lines and at least some players selected
-    const hasPlayers = leftPlayerCount > 0 && rightPlayerCount > 0;
-    const hasFullLines = leftCorrectNumPlayers && rightCorrectNumPlayers;
+    if (enoughPlayers) {
+      // Get all warnings
+      const ratioWarnings = getRatioWarnings();
+      const incompleteWarnings = getIncompleteLinesWarning();
+      const allWarnings = [...ratioWarnings, ...incompleteWarnings];
 
-    if (hasFullLines || hasPlayers) {
-      // Only show warnings when actually starting a point (not just editing lines)
-      if (currentGameState !== GameState.EditingLines) {
-        // Get all warnings
-        const ratioWarnings = getRatioWarnings();
-        const incompleteWarnings = getIncompleteLinesWarning();
-        const allWarnings = [...ratioWarnings, ...incompleteWarnings];
-
-        // If there are warnings, show them but allow user to continue
-        if (allWarnings.length > 0) {
-          const continueAnyway = window.confirm(
-            `Warning:\n${allWarnings.join('\n')}\n\nExpected ratio: ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2\n\nDo you want to continue anyway?`
-          );
-          if (!continueAnyway) {
-            return;
-          }
+      // If there are warnings, show them but allow user to continue
+      if (allWarnings.length > 0) {
+        const continueAnyway = window.confirm(`Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`);
+        if (!continueAnyway) {
+          return;
         }
       }
+
+      // prepare new line
+      const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
+      const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
 
       if (currentGameState === GameState.EditingLines && bookkeeper.activePoint) {
         // This is a mid-point substitution (active point exists)
@@ -163,7 +158,8 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
       }
     } else {
-      window.alert('Please select at least one player from each team.');
+      // this is a technical limitation. also the submit is disabled with the same criteria
+      window.alert('Please select at least two players from each team.');
     }
   };
 
@@ -255,12 +251,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name}{' '}
-              {selectedHomePlayers.length > 0 &&
-                `(${(() => {
-                  const { open, women } = getRatioCounts(selectedHomePlayers);
-                  return `${open} ON2, ${women} WN2`;
-                })()})`}
+              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{lineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -271,12 +262,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name}{' '}
-              {selectedAwayPlayers.length > 0 &&
-                `(${(() => {
-                  const { open, women } = getRatioCounts(selectedAwayPlayers);
-                  return `${open} ON2, ${women} WN2`;
-                })()})`}
+              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{lineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
@@ -294,7 +280,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           {
             label: buttonText,
             onClick: handleDone,
-            disabled: selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0,
+            disabled: selectedHomePlayers.length < 2 || selectedAwayPlayers.length < 2,
             color: 'success',
             variant: 'contained',
           },
