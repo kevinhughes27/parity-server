@@ -8,9 +8,8 @@ import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const currentGameState = bookkeeper.gameState();
-  const isEditingLine = (
-    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null
-  );
+  const isEditingLine =
+    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
 
@@ -126,11 +125,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const handleDone = async () => {
     const leftPlayerCount = selectedHomePlayers.length;
     const rightPlayerCount = selectedAwayPlayers.length;
-
-    const leftCorrectNumPlayers = leftPlayerCount === lineSize;
-    const rightCorrectNumPlayers = rightPlayerCount === lineSize;
-
-    const enoughPlayers = (leftPlayerCount > 2 && rightPlayerCount > 2)
+    const enoughPlayers = leftPlayerCount > 2 && rightPlayerCount > 2;
 
     if (enoughPlayers) {
       // Get all warnings
@@ -140,7 +135,9 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
       // If there are warnings, show them but allow user to continue
       if (allWarnings.length > 0) {
-        const continueAnyway = window.confirm(`Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`);
+        const continueAnyway = window.confirm(
+          `Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`
+        );
         if (!continueAnyway) {
           return;
         }

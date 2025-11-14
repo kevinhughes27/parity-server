@@ -12,6 +12,7 @@ const playerButtonStyles = {
     fontWeight: 'normal',
   },
   active: {
+    color: '#000',
     fontWeight: 'bold',
     border: '2px solid',
   },
@@ -96,7 +97,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           // Override MUI disabled state for active players
           ...(buttonState.variant === 'active' && {
             '&.Mui-disabled': {
-              color: baseStyle.color || '#000',
+              color: baseStyle.color,
               backgroundColor: '#a7d7f5',
               borderColor: '#1976d2',
             },
@@ -109,14 +110,14 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           // Override MUI disabled state for active players
           ...(buttonState.variant === 'active' && {
             '&.Mui-disabled': {
-              color: baseStyle.color || '#000',
+              color: baseStyle.color,
               backgroundColor: '#ce93d8',
               borderColor: '#ab47bc',
             },
           }),
         };
 
-    const applyGenderStyle = (buttonState.variant === 'active' || buttonState.enabled)
+    const applyGenderStyle = buttonState.variant === 'active' || buttonState.enabled;
 
     return (
       <Button

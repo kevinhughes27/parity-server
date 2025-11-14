@@ -64,11 +64,11 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
       </Box>
 
       {/* Scrollable Event List */}
-      <Box 
-        ref={eventsContainerRef} 
-        sx={{ 
-          flexGrow: 1, 
-          overflowX: 'hidden', 
+      <Box
+        ref={eventsContainerRef}
+        sx={{
+          flexGrow: 1,
+          overflowX: 'hidden',
           overflowY: 'auto',
           userSelect: 'none', // Prevent text selection
           pointerEvents: 'none', // Disable all pointer interactions

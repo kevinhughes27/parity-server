@@ -229,7 +229,7 @@ export class GameMethods {
   }
 
   timestamp(): string {
-    return new Date().toLocaleString('en-US')
+    return new Date().toLocaleString('en-US');
   }
 
   shouldRecordNewPass(): boolean {
